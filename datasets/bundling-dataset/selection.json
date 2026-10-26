@@ -1,0 +1,849 @@
+{
+  "schemaVersion": 1,
+  "id": "bundling-dataset",
+  "title": "bundling dataset",
+  "createdAt": "2026-10-22T02:17:50.741844+00:00",
+  "sourceDatasetRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets",
+  "selectionPolicy": "Representative existing pinned targets: three per well-populated category, one Rspack target, and one Parcel extension subproject. Classification follows the selected production build and recorded log evidence, not mere dependency presence. No new repositories fetched and no builds/models executed.",
+  "sourceLinkPolicy": "Group directories contain source/project symlinks to existing pinned source trees, not new clones or immutable source archives. Snapshot hashes pin inspected metadata/configuration; existing source provenance supplies the recorded commit.",
+  "counts": {
+    "subjects": 11,
+    "buildVerified": 10,
+    "configurationOnly": 1,
+    "byBundler": {
+      "esbuild": 3,
+      "rspack": 1,
+      "rolldown": 3,
+      "turbopack": 3,
+      "parcel": 1
+    }
+  },
+  "subjects": [
+    {
+      "id": "realworld-apps--angular-realworld-example-app",
+      "repo": "realworld-apps/angular-realworld-example-app",
+      "slug": "realworld-apps--angular-realworld-example-app",
+      "commit": "dd99ed2cf39c805d719f943c5d7061a5683d98a8",
+      "cohort": "primary-60",
+      "bundler": "esbuild",
+      "bundlingMechanism": "Angular application builder",
+      "versionEvidence": "@angular/build 21.2.10; esbuild binary version not separately attested",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/realworld-apps--angular-realworld-example-app",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/realworld-apps--angular-realworld-example-app",
+      "directory": "esbuild/realworld-apps--angular-realworld-example-app",
+      "buildCommand": "ng build -c production --source-map=true",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "ng build -c production --source-map=true",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "esbuild/realworld-apps--angular-realworld-example-app/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/realworld-apps--angular-realworld-example-app/package.json",
+          "sha256": "d822151cf71979c3946bfcb50fc3a0f4860401fa749603c8189c9c55888e27c3"
+        },
+        {
+          "path": "esbuild/realworld-apps--angular-realworld-example-app/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/realworld-apps--angular-realworld-example-app/.rq1-provenance.json",
+          "sha256": "4b9e96cbfdcb334c37b17cd7bef6ba47078d2e6ceedbd4c40a7df1e33917757f"
+        },
+        {
+          "path": "esbuild/realworld-apps--angular-realworld-example-app/evidence/angular.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/realworld-apps--angular-realworld-example-app/angular.json",
+          "sha256": "c1b7ad53b91f8e0cd88dc8401ca90995303bf860f56225f33c5ee3aa505965c3"
+        },
+        {
+          "path": "esbuild/realworld-apps--angular-realworld-example-app/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/realworld-apps--angular-realworld-example-app/README.md",
+          "sha256": "fcfb93ffc2e9f5b6165ec1e4a91947bb01590d3a74f8560cc00c625b4bb10dd9"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/results/build-logs/realworld-apps--angular-realworld-example-app.log",
+        "sha256": "5c4cdb048734a70e98c4ca20f241a696a1a44fb66942ceadedc579fd92bd4b7d",
+        "excerpts": [
+          {
+            "line": 241,
+            "text": "#25 3.181 Initial chunk files | Names                       |  Raw size | Estimated transfer size"
+          },
+          {
+            "line": 268,
+            "text": "#25 3.181 Application bundle generation complete. [2.857 seconds] - 2026-09-18T05:53:12.860Z"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [
+        {
+          "kind": "saved-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/realworld-apps--angular-realworld-example-app"
+        }
+      ],
+      "bundleMapPairs": 22,
+      "simulationReadiness": "saved-bundle-map-pairs-available; target/oracle audit still required",
+      "limitations": [
+        "Saved artifacts are links; source-map usability is not established by this organization task."
+      ]
+    },
+    {
+      "id": "Ismaestro--angular-example-app",
+      "repo": "Ismaestro/angular-example-app",
+      "slug": "Ismaestro--angular-example-app",
+      "commit": "ab4072c4c782391c215e01627a0c466a257c4843",
+      "cohort": "primary-60",
+      "bundler": "esbuild",
+      "bundlingMechanism": "Angular application builder",
+      "versionEvidence": "@angular/build 21.2.7; esbuild binary version not separately attested",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/Ismaestro--angular-example-app",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/Ismaestro--angular-example-app",
+      "directory": "esbuild/Ismaestro--angular-example-app",
+      "buildCommand": "ng build --source-map=true",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "ng build --source-map=true",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "esbuild/Ismaestro--angular-example-app/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/Ismaestro--angular-example-app/package.json",
+          "sha256": "28a8cee9ea06acde2e2fe822ca640e7535ae6f95a29cfe3340e16d789f019a90"
+        },
+        {
+          "path": "esbuild/Ismaestro--angular-example-app/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/Ismaestro--angular-example-app/.rq1-provenance.json",
+          "sha256": "3cc3465f0eecf041b078c1b1c9345a67c63e033a69ebca6e02fe53949219fb03"
+        },
+        {
+          "path": "esbuild/Ismaestro--angular-example-app/evidence/angular.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/Ismaestro--angular-example-app/angular.json",
+          "sha256": "ea44592134b6781e689edde4fe72b8de98306e6ad5d5bd45a380e13cea15c9fe"
+        },
+        {
+          "path": "esbuild/Ismaestro--angular-example-app/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/Ismaestro--angular-example-app/README.md",
+          "sha256": "66b8d3e32c5ad1240e4e8d80737396a37b9f1fec6ce7eaea23997a341ce7e6d4"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/results/build-logs/Ismaestro--angular-example-app.log",
+        "sha256": "043c598af189ebcbfe2aa719bd3090266f727bdb57b53191cbbb6bc67b92ac8b",
+        "excerpts": [
+          {
+            "line": 113,
+            "text": "#24 13.48 Initial chunk files   | Names                  |  Raw size | Estimated transfer size"
+          },
+          {
+            "line": 147,
+            "text": "#24 13.48 Application bundle generation complete. [13.081 seconds] - 2026-09-18T06:11:02.238Z"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [
+        {
+          "kind": "saved-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/Ismaestro--angular-example-app"
+        }
+      ],
+      "bundleMapPairs": 52,
+      "simulationReadiness": "saved-bundle-map-pairs-available; target/oracle audit still required",
+      "limitations": [
+        "Saved artifacts are links; source-map usability is not established by this organization task."
+      ]
+    },
+    {
+      "id": "swimlane--ngx-charts",
+      "repo": "swimlane/ngx-charts",
+      "slug": "swimlane--ngx-charts",
+      "commit": "12b78c242a0ecc86fec0afa0aebe1d976ac03777",
+      "cohort": "primary-60",
+      "bundler": "esbuild",
+      "bundlingMechanism": "Angular demo application builder; not ng-packagr library build",
+      "versionEvidence": "@angular/build 22.0.8; esbuild binary version not separately attested",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/swimlane--ngx-charts",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/swimlane--ngx-charts",
+      "directory": "esbuild/swimlane--ngx-charts",
+      "buildCommand": "ng build ngx-charts --configuration production --source-map=true",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "ng build ngx-charts --configuration production --source-map=true",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "esbuild/swimlane--ngx-charts/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/swimlane--ngx-charts/package.json",
+          "sha256": "007f98be3c2ada9fc35210bed56dfd712f6b5c8f9460ce90caec2b87c3fdef89"
+        },
+        {
+          "path": "esbuild/swimlane--ngx-charts/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/swimlane--ngx-charts/.rq1-provenance.json",
+          "sha256": "2b7fd1db92bc701e8033b99df8f57544248f23da59f1401f3c3f989ba1ab4e69"
+        },
+        {
+          "path": "esbuild/swimlane--ngx-charts/evidence/angular.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/swimlane--ngx-charts/angular.json",
+          "sha256": "ac89d5e05119b9c3014eab54b903ce8781c8bd887a3a4e69ba4586a22626067a"
+        },
+        {
+          "path": "esbuild/swimlane--ngx-charts/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/swimlane--ngx-charts/README.md",
+          "sha256": "60278fef4c803bd1ecc1e7feec447fbd5152548b376101470defa06aa4d058b1"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/results/build-logs/swimlane--ngx-charts.log",
+        "sha256": "ddf4356fc8ce43e625a9fb4dc9cd0b763e4e4d57bfc255480b904225929341eb",
+        "excerpts": [
+          {
+            "line": 182,
+            "text": "#24 7.843 Initial chunk files   | Names         | Raw size | Estimated transfer size"
+          },
+          {
+            "line": 189,
+            "text": "#24 7.843 Application bundle generation complete. [7.453 seconds] - 2026-09-18T05:55:13.880Z"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [
+        {
+          "kind": "saved-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/swimlane--ngx-charts"
+        }
+      ],
+      "bundleMapPairs": 2,
+      "simulationReadiness": "saved-bundle-map-pairs-available; target/oracle audit still required",
+      "limitations": [
+        "Saved artifacts are links; source-map usability is not established by this organization task."
+      ]
+    },
+    {
+      "id": "zxwk1998--vue-admin-better",
+      "repo": "zxwk1998/vue-admin-better",
+      "slug": "zxwk1998--vue-admin-better",
+      "commit": "4701a71531d41f38e42f940ffc9732a583707c38",
+      "cohort": "primary-60",
+      "bundler": "rspack",
+      "bundlingMechanism": "Direct Rspack production build",
+      "versionEvidence": "2.2.6",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/zxwk1998--vue-admin-better",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/zxwk1998--vue-admin-better",
+      "directory": "rspack/zxwk1998--vue-admin-better",
+      "buildCommand": "npm run build",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "npm run build",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "rspack/zxwk1998--vue-admin-better/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/zxwk1998--vue-admin-better/package.json",
+          "sha256": "c8f32f76d7986a9e366abc5651d325c4fe6ddd8d3bc77a0c16c7e6087e60467e"
+        },
+        {
+          "path": "rspack/zxwk1998--vue-admin-better/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/zxwk1998--vue-admin-better/.rq1-provenance.json",
+          "sha256": "0e150cabb0603d89097136d707dda1fb47dd8c8b6874d2f2d7008611231e2e99"
+        },
+        {
+          "path": "rspack/zxwk1998--vue-admin-better/evidence/rspack.js",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/zxwk1998--vue-admin-better/rspack.js",
+          "sha256": "e64a7a786f02e6f2f1e712afaf7072eda1b1b9d4c967cdc4c0edae18b1a3f36a"
+        },
+        {
+          "path": "rspack/zxwk1998--vue-admin-better/evidence/rspack.config.js",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/zxwk1998--vue-admin-better/rspack.config.js",
+          "sha256": "4407e0b2fe49dfd422f475531715da3a20adcbdf8d80b6b38104886baa40aab5"
+        },
+        {
+          "path": "rspack/zxwk1998--vue-admin-better/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/zxwk1998--vue-admin-better/README.md",
+          "sha256": "4195ae08114b25e0587f5ce201e9a806907f6e3cdf606b08b4c99c3b52cf3b21"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/results/build-logs/zxwk1998--vue-admin-better.log",
+        "sha256": "0cc47594b815ee9fe1f5112b8ae6b1b506b65ff0df503380f915ee36e441ce29",
+        "excerpts": [
+          {
+            "line": 501,
+            "text": "#25 1.632 Rspack 2.2.6 compiled successfully in 1.30 s"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [
+        {
+          "kind": "map-enabled-manifest",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/zxwk1998--vue-admin-better.map-enabled.manifest.json",
+          "sha256": "f27b1b89547d72fd29464d174aabdd6ea83030f040d955a3975111cea301b11f"
+        },
+        {
+          "kind": "map-enabled-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/map-enabled/zxwk1998--vue-admin-better"
+        },
+        {
+          "kind": "saved-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/zxwk1998--vue-admin-better"
+        }
+      ],
+      "bundleMapPairs": 93,
+      "simulationReadiness": "saved-bundle-map-pairs-available; target/oracle audit still required",
+      "limitations": [
+        "Saved artifacts are links; source-map usability is not established by this organization task."
+      ]
+    },
+    {
+      "id": "agalwood--Motrix",
+      "repo": "agalwood/Motrix",
+      "slug": "agalwood--Motrix",
+      "commit": "f3751b3413bd66145957f34a791959d9f10b9416",
+      "cohort": "primary-60",
+      "bundler": "rolldown",
+      "bundlingMechanism": "Vite 8 browser renderer build",
+      "versionEvidence": "Vite 8.3.0; Rolldown backend",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/agalwood--Motrix",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/agalwood--Motrix",
+      "directory": "rolldown/agalwood--Motrix",
+      "buildCommand": "vite build --config vite.renderer.web.config.ts",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "vite build --config vite.renderer.web.config.ts",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "rolldown/agalwood--Motrix/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/agalwood--Motrix/package.json",
+          "sha256": "8158a1a15239ca952915302ad29c49ed9250cf4fe44cdd954a18fb3021468a9a"
+        },
+        {
+          "path": "rolldown/agalwood--Motrix/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/agalwood--Motrix/.rq1-provenance.json",
+          "sha256": "6fd2e2ea66c3fdc23f1f8eb5eee40209eeeac94825a0668b5bac0155abfa13fc"
+        },
+        {
+          "path": "rolldown/agalwood--Motrix/evidence/vite.renderer.web.config.ts",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/agalwood--Motrix/vite.renderer.web.config.ts",
+          "sha256": "13cebcdc11c59ac9d5923e37323a0490430011ba731d6a0ac56ffafd75255317"
+        },
+        {
+          "path": "rolldown/agalwood--Motrix/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/agalwood--Motrix/README.md",
+          "sha256": "1573f483d8a6e389414213f4687ff9e5aa7d87c05ac62be7e01dfd298abf745b"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/results/build-logs/agalwood--Motrix.log",
+        "sha256": "21b5b79438fd11d779e6d641177030a46aa9793b4455e4f35e46375051acf795",
+        "excerpts": [
+          {
+            "line": 167,
+            "text": "#24 0.253 vite v8.3.0 building client environment for production..."
+          },
+          {
+            "line": 192,
+            "text": "#24 1.520 dist/renderer-web/assets/rolldown-runtime-Dd_uD5pT.js                       1.10 kB │ gzip:     0.62 kB"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [
+        {
+          "kind": "map-enabled-manifest",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/agalwood--Motrix.map-enabled.manifest.json",
+          "sha256": "b83ec26f0d50c0602f62cd5cc8b35f761421306fa7b87a3de31af7bb0289850d"
+        },
+        {
+          "kind": "map-enabled-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/map-enabled/agalwood--Motrix"
+        },
+        {
+          "kind": "saved-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/agalwood--Motrix"
+        }
+      ],
+      "bundleMapPairs": 4,
+      "simulationReadiness": "saved-bundle-map-pairs-available; target/oracle audit still required",
+      "limitations": [
+        "Saved artifacts are links; source-map usability is not established by this organization task."
+      ]
+    },
+    {
+      "id": "cypress-io--cypress-realworld-app",
+      "repo": "cypress-io/cypress-realworld-app",
+      "slug": "cypress-io--cypress-realworld-app",
+      "commit": "79aa5b126fdd951aab2263c8201b52aeb5f2a43c",
+      "cohort": "alternative-52",
+      "bundler": "rolldown",
+      "bundlingMechanism": "Vite 8 production build",
+      "versionEvidence": "Vite 8.2.2; Rolldown backend",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/cypress-io--cypress-realworld-app",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/cypress-io--cypress-realworld-app",
+      "directory": "rolldown/cypress-io--cypress-realworld-app",
+      "buildCommand": "vite build --sourcemap",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "vite build --sourcemap",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "rolldown/cypress-io--cypress-realworld-app/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/cypress-io--cypress-realworld-app/package.json",
+          "sha256": "c365daaf44546126f7cc0295cad36493e08bc251833c005ea3bda3139dd63548"
+        },
+        {
+          "path": "rolldown/cypress-io--cypress-realworld-app/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/cypress-io--cypress-realworld-app/.rq1-provenance.json",
+          "sha256": "d2ca5c18855b23993f50f4a9f304eb3fb472712804aced07724ed0dc5f69ed82"
+        },
+        {
+          "path": "rolldown/cypress-io--cypress-realworld-app/evidence/vite.config.ts",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/cypress-io--cypress-realworld-app/vite.config.ts",
+          "sha256": "68c0bd25f44b9549503c5c96adf4da3c35c23c0ef3a9ed4c81534f7279e46894"
+        },
+        {
+          "path": "rolldown/cypress-io--cypress-realworld-app/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/cypress-io--cypress-realworld-app/README.md",
+          "sha256": "7088b87ff0a322685053704c8d70a599e29188abe1999c16a366b369d2944bf5"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/alternative-52/results/build-logs/cypress-io--cypress-realworld-app.log",
+        "sha256": "108024bc15dfe62331b49a8c483df9cb2700494937a503ce0f2dc81e1d7dc9cd",
+        "excerpts": [
+          {
+            "line": 105,
+            "text": "#24 0.534 vite v8.2.2 building client environment for production..."
+          },
+          {
+            "line": 107,
+            "text": "#24 1.330 [plugin rolldown:vite-resolve] Module \"net\" has been externalized for browser compatibility, imported by \"/app/node_modules/detect-port/lib/detect-port.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 108,
+            "text": "#24 1.335 [plugin rolldown:vite-resolve] Module \"fs\" has been externalized for browser compatibility, imported by \"/app/node_modules/address/lib/address.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 109,
+            "text": "#24 1.335 [plugin rolldown:vite-resolve] Module \"child_process\" has been externalized for browser compatibility, imported by \"/app/node_modules/address/lib/address.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 110,
+            "text": "#24 1.335 [plugin rolldown:vite-resolve] Module \"os\" has been externalized for browser compatibility, imported by \"/app/node_modules/address/lib/address.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [],
+      "bundleMapPairs": 0,
+      "simulationReadiness": "requires-artifact-collection-or-build",
+      "limitations": [
+        "No saved bundle/map pair is linked for this selected target."
+      ]
+    },
+    {
+      "id": "Hiram-Wong--ZyPlayer",
+      "repo": "Hiram-Wong/ZyPlayer",
+      "slug": "Hiram-Wong--ZyPlayer",
+      "commit": "ffba0e2c8b72a9d40e7484fb3053dc4922934950",
+      "cohort": "alternative-52",
+      "bundler": "rolldown",
+      "bundlingMechanism": "Electron renderer via vite npm alias to rolldown-vite",
+      "versionEvidence": "rolldown-vite 7.3.0; Rolldown backend",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/Hiram-Wong--ZyPlayer",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/Hiram-Wong--ZyPlayer",
+      "directory": "rolldown/Hiram-Wong--ZyPlayer",
+      "buildCommand": "npx electron-vite build",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "npx electron-vite build",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "rolldown/Hiram-Wong--ZyPlayer/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/Hiram-Wong--ZyPlayer/package.json",
+          "sha256": "e6c645856cbc39e125d3bede7d8d66645baa978239b0411e522c667d978c5793"
+        },
+        {
+          "path": "rolldown/Hiram-Wong--ZyPlayer/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/Hiram-Wong--ZyPlayer/.rq1-provenance.json",
+          "sha256": "17c107e4046411bd022f98782275e7cd62f96863c427d21b4401f2c5ffc22161"
+        },
+        {
+          "path": "rolldown/Hiram-Wong--ZyPlayer/evidence/electron.vite.config.ts",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/Hiram-Wong--ZyPlayer/electron.vite.config.ts",
+          "sha256": "164796bd4ada2b1840df0ef30c3eb146c1d6e19c928cb25e18888f70713fe397"
+        },
+        {
+          "path": "rolldown/Hiram-Wong--ZyPlayer/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/Hiram-Wong--ZyPlayer/README.md",
+          "sha256": "26f95c8168ec9de4e9544f1f72a2f8ebb7680063c29c8ec16ffcf6c8da4a6704"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/alternative-52/results/build-logs/Hiram-Wong--ZyPlayer.log",
+        "sha256": "09eef3e74a7ae5eb45b4c5ff9dc19384ba270ef3dfb83b53ecf9706e9629dff9",
+        "excerpts": [
+          {
+            "line": 2669,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"child_process\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/workerpool@10.0.2/node_modules/workerpool/dist/workerpool.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2670,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"child_process\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/workerpool@10.0.2/node_modules/workerpool/dist/workerpool.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2671,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"worker_threads\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/workerpool@10.0.2/node_modules/workerpool/dist/workerpool.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2672,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"crypto\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/sm-crypto-v2@1.15.1/node_modules/sm-crypto-v2/dist/index.mjs\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2673,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"os\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/workerpool@10.0.2/node_modules/workerpool/dist/workerpool.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2674,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"worker_threads\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/workerpool@10.0.2/node_modules/workerpool/dist/workerpool.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2675,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"child_process\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/workerpool@10.0.2/node_modules/workerpool/dist/workerpool.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2676,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"child_process\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/workerpool@10.0.2/node_modules/workerpool/dist/workerpool.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2677,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"worker_threads\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/workerpool@10.0.2/node_modules/workerpool/dist/workerpool.js\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2678,
+            "text": "#25 3.371 [plugin rolldown:vite-resolve] Module \"crypto\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/sm-crypto-v2@1.15.1/node_modules/sm-crypto-v2/dist/index.mjs\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2679,
+            "text": "#25 3.495 [plugin rolldown:vite-resolve] Module \"crypto\" has been externalized for browser compatibility, imported by \"/app/node_modules/.pnpm/sm-crypto-v2@1.15.1/node_modules/sm-crypto-v2/dist/index.mjs\". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details."
+          },
+          {
+            "line": 2885,
+            "text": "#25 5.292 out/renderer/assets/chunk/rolldown-runtime_C3tLqBRA.js                                      2.02 kB"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [],
+      "bundleMapPairs": 0,
+      "simulationReadiness": "requires-artifact-collection-or-build",
+      "limitations": [
+        "No saved bundle/map pair is linked for this selected target."
+      ]
+    },
+    {
+      "id": "justjavac--wechat-miniapp-radar",
+      "repo": "justjavac/wechat-miniapp-radar",
+      "slug": "justjavac--wechat-miniapp-radar",
+      "commit": "02a010ecea0320b7aa975bb62a5dde271ae630c9",
+      "cohort": "primary-60",
+      "bundler": "turbopack",
+      "bundlingMechanism": "Next.js production Turbopack build",
+      "versionEvidence": "Next.js 16.2.11",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/justjavac--wechat-miniapp-radar",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/justjavac--wechat-miniapp-radar",
+      "directory": "turbopack/justjavac--wechat-miniapp-radar",
+      "buildCommand": "npm run build",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "npm run build",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "turbopack/justjavac--wechat-miniapp-radar/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/justjavac--wechat-miniapp-radar/package.json",
+          "sha256": "1119e4d9f39c07bebd691cc55666feccb0c2821babff2b20ce83b4cbbd613125"
+        },
+        {
+          "path": "turbopack/justjavac--wechat-miniapp-radar/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/justjavac--wechat-miniapp-radar/.rq1-provenance.json",
+          "sha256": "afdb1b4f0dfe6a62cae55b480449c9be31a3beb8e80db312e558c6252d7cf968"
+        },
+        {
+          "path": "turbopack/justjavac--wechat-miniapp-radar/evidence/next.config.ts",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/justjavac--wechat-miniapp-radar/next.config.ts",
+          "sha256": "9a3081e60e6596ae123ebb5dc6d5fa5498a4760f47209833158681ca771dcf53"
+        },
+        {
+          "path": "turbopack/justjavac--wechat-miniapp-radar/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/justjavac--wechat-miniapp-radar/README.md",
+          "sha256": "07ecb8c93671e7a478f50f70fc35cb5f0c44cc5b877a571ffa3f3e78793036c1"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/results/build-logs/justjavac--wechat-miniapp-radar.log",
+        "sha256": "acc2e8eb1fc076455ae86487eed63bd4bd2214918752d5f960fdaef593b7245e",
+        "excerpts": [
+          {
+            "line": 94,
+            "text": "#21 0.312 ▲ Next.js 16.2.11 (Turbopack)"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [
+        {
+          "kind": "map-enabled-manifest",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/justjavac--wechat-miniapp-radar.map-enabled.manifest.json",
+          "sha256": "1e2e9a11d8c2d6531c7de5d9fe18cc6d0ce93f01091b3a32daf4dfac2002d9e7"
+        },
+        {
+          "kind": "map-enabled-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/map-enabled/justjavac--wechat-miniapp-radar"
+        },
+        {
+          "kind": "saved-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/justjavac--wechat-miniapp-radar"
+        }
+      ],
+      "bundleMapPairs": 1,
+      "simulationReadiness": "saved-bundle-map-pairs-available; target/oracle audit still required",
+      "limitations": [
+        "Saved artifacts are links; source-map usability is not established by this organization task."
+      ]
+    },
+    {
+      "id": "DayuanJiang--next-ai-draw-io",
+      "repo": "DayuanJiang/next-ai-draw-io",
+      "slug": "DayuanJiang--next-ai-draw-io",
+      "commit": "027cd88c9088ad5b2d6deff4641dc47ded06afd2",
+      "cohort": "primary-60",
+      "bundler": "turbopack",
+      "bundlingMechanism": "Next.js production Turbopack build; not Electron esbuild target",
+      "versionEvidence": "Next.js 16.2.6",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/DayuanJiang--next-ai-draw-io",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/DayuanJiang--next-ai-draw-io",
+      "directory": "turbopack/DayuanJiang--next-ai-draw-io",
+      "buildCommand": "npm run build",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "npm run build",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "turbopack/DayuanJiang--next-ai-draw-io/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/DayuanJiang--next-ai-draw-io/package.json",
+          "sha256": "1253b90f00a71f57c2b09670880b9594f25825c2abce5fc370b06c5b017758d2"
+        },
+        {
+          "path": "turbopack/DayuanJiang--next-ai-draw-io/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/DayuanJiang--next-ai-draw-io/.rq1-provenance.json",
+          "sha256": "a5b59429df8ff9852ffe97eb41fc53758cbd61d796c81a6b010ba1de05f39cdc"
+        },
+        {
+          "path": "turbopack/DayuanJiang--next-ai-draw-io/evidence/next.config.ts",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/DayuanJiang--next-ai-draw-io/next.config.ts",
+          "sha256": "6281f67d38f0bfe245a219ad365bff27290f3738990591a20066a20ce1716fa9"
+        },
+        {
+          "path": "turbopack/DayuanJiang--next-ai-draw-io/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/DayuanJiang--next-ai-draw-io/README.md",
+          "sha256": "de0be5f6c4c875c154d39c9fdadf1653128f7f60329d86566d48cabcb9c30994"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/results/build-logs/DayuanJiang--next-ai-draw-io.log",
+        "sha256": "290721dfe0ad648b8e0d93d650aa6b24886e039759d24f52175a182994ac87a7",
+        "excerpts": [
+          {
+            "line": 105,
+            "text": "#21 0.376 ▲ Next.js 16.2.6 (Turbopack)"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [
+        {
+          "kind": "map-enabled-manifest",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/DayuanJiang--next-ai-draw-io.map-enabled.manifest.json",
+          "sha256": "25647d5c8e097e0ed1188e6097f4337385d551c23333e018e36bd68744f258fa"
+        },
+        {
+          "kind": "map-enabled-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/map-enabled/DayuanJiang--next-ai-draw-io"
+        },
+        {
+          "kind": "saved-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/DayuanJiang--next-ai-draw-io"
+        }
+      ],
+      "bundleMapPairs": 19,
+      "simulationReadiness": "saved-bundle-map-pairs-available; target/oracle audit still required",
+      "limitations": [
+        "Saved artifacts are links; source-map usability is not established by this organization task."
+      ]
+    },
+    {
+      "id": "rahuldkjain--github-profile-readme-generator",
+      "repo": "rahuldkjain/github-profile-readme-generator",
+      "slug": "rahuldkjain--github-profile-readme-generator",
+      "commit": "5ae90bfcbd7ab2f69809b094601f7975c32ae077",
+      "cohort": "primary-60",
+      "bundler": "turbopack",
+      "bundlingMechanism": "Next.js production build --turbo",
+      "versionEvidence": "Next.js 15.5.4",
+      "status": "recorded-build-verified",
+      "targetKind": "browser-application-or-renderer",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/rahuldkjain--github-profile-readme-generator",
+      "projectRelative": ".",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/rahuldkjain--github-profile-readme-generator",
+      "directory": "turbopack/rahuldkjain--github-profile-readme-generator",
+      "buildCommand": "npm run build",
+      "recordedOriginalApplicationProject": ".",
+      "recordedOriginalApplicationBuildCommand": "npm run build",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "turbopack/rahuldkjain--github-profile-readme-generator/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/rahuldkjain--github-profile-readme-generator/package.json",
+          "sha256": "6e87997d8464bcf96dbf1fc6240c1d59daa38ae4b70dfa010e48e8819c591045"
+        },
+        {
+          "path": "turbopack/rahuldkjain--github-profile-readme-generator/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/rahuldkjain--github-profile-readme-generator/.rq1-provenance.json",
+          "sha256": "44085ffe9222469d470145882a1cf7bfb2fb9bd50088d3f1fa8378da6dce1151"
+        },
+        {
+          "path": "turbopack/rahuldkjain--github-profile-readme-generator/evidence/next.config.ts",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/rahuldkjain--github-profile-readme-generator/next.config.ts",
+          "sha256": "8c27bf465861c5f455ad9036966d32cce6aca02f1ff97c78b20f5e651485c50c"
+        },
+        {
+          "path": "turbopack/rahuldkjain--github-profile-readme-generator/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/sources/rahuldkjain--github-profile-readme-generator/README.md",
+          "sha256": "accbd4cfcb080ee9900979dd8f1e8e4e9fc02dd964343df5aca866616e60c1ba"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/results/build-logs/rahuldkjain--github-profile-readme-generator.log",
+        "sha256": "08836d94d4e5161f2aa17012d00dc54ddb035c17e9ed052b805321661238ca13",
+        "excerpts": [
+          {
+            "line": 113,
+            "text": "#24 0.742    ▲ Next.js 15.5.4 (Turbopack)"
+          }
+        ],
+        "appliesToSelectedTarget": true
+      },
+      "savedArtifacts": [
+        {
+          "kind": "map-enabled-manifest",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/rahuldkjain--github-profile-readme-generator.map-enabled.manifest.json",
+          "sha256": "6057ea5b8b46f61d6d3039221a83dfb88dc741a255a465912eccfb4dbe139ae0"
+        },
+        {
+          "kind": "map-enabled-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/map-enabled/rahuldkjain--github-profile-readme-generator"
+        },
+        {
+          "kind": "saved-artifact-directory",
+          "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/primary-60/artifacts/rahuldkjain--github-profile-readme-generator"
+        }
+      ],
+      "bundleMapPairs": 22,
+      "simulationReadiness": "saved-bundle-map-pairs-available; target/oracle audit still required",
+      "limitations": [
+        "Saved artifacts are links; source-map usability is not established by this organization task."
+      ]
+    },
+    {
+      "id": "mattermost--focalboard::webext",
+      "repo": "mattermost/focalboard",
+      "slug": "mattermost--focalboard",
+      "commit": "a84bbb65e32edf972856b329417096ac413518e9",
+      "cohort": "alternative-52",
+      "bundler": "parcel",
+      "bundlingMechanism": "Focalboard Web Clipper browser extension; separate from recorded webpack webapp",
+      "versionEvidence": "Parcel ^2.0.0 (declared; not execution-verified)",
+      "status": "configuration-only-not-built",
+      "targetKind": "browser-extension",
+      "sourceRoot": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard",
+      "projectRelative": "experiments/webext",
+      "projectPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext",
+      "directory": "parcel/mattermost--focalboard",
+      "buildCommand": "parcel build manifest.json --target prod && web-ext build -s dist/prod/",
+      "recordedOriginalApplicationProject": "webapp",
+      "recordedOriginalApplicationBuildCommand": "cross-env NODE_ENV=production webpack --config webpack.prod.js --devtool=source-map",
+      "recordedOriginalApplicationOutcome": "served",
+      "evidence": [
+        {
+          "path": "parcel/mattermost--focalboard/evidence/package.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/package.json",
+          "sha256": "c6dc9d95623eda6172d880750f1a01b1c84266ea7a9b1c385d4fe15e1cf7d161"
+        },
+        {
+          "path": "parcel/mattermost--focalboard/evidence/source-provenance.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/.rq1-provenance.json",
+          "sha256": "c5001230c10be0cd3f75728db96286a6a1718576b9a87965e22079d03f10c520"
+        },
+        {
+          "path": "parcel/mattermost--focalboard/evidence/manifest.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/manifest.json",
+          "sha256": "bd806a18fb1b6d502ac1d77f9ef619ecaa69234e4370541b41dd5cb459bceb16"
+        },
+        {
+          "path": "parcel/mattermost--focalboard/evidence/.parcelrc",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/.parcelrc",
+          "sha256": "678a1e37c371d6fb1391e58dd5cc612dedfccb636c45a0bd603ad1da85bc2a97"
+        },
+        {
+          "path": "parcel/mattermost--focalboard/evidence/tsconfig.json",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/tsconfig.json",
+          "sha256": "bb2b3a4ce1b6ae087a61ae582eb7acbb50306a1d2de5fb16036244e4b465b003"
+        },
+        {
+          "path": "parcel/mattermost--focalboard/evidence/upstream-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/README.md",
+          "sha256": "65e16df315fbb47b2110bf67f803a2d24127e9b07a71525b3b121a9f771220bb"
+        },
+        {
+          "path": "parcel/mattermost--focalboard/evidence/repository-README.md",
+          "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/README.md",
+          "sha256": "e81286d598cddb46c7a362f1ed5f630a27c5fc3860b12f4222b6caf435bf8351"
+        }
+      ],
+      "buildLog": {
+        "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/alternative-52/results/build-logs/mattermost--focalboard.log",
+        "sha256": "904ceb0c083586b99e3b263fc6b87d551e4483d4c4fc4d05633e0f884884cb47",
+        "excerpts": [],
+        "appliesToSelectedTarget": false
+      },
+      "savedArtifacts": [],
+      "bundleMapPairs": 0,
+      "simulationReadiness": "requires-artifact-collection-or-build",
+      "limitations": [
+        "This Parcel browser extension was not built or served by the original corpus. The original served Focalboard webapp uses webpack.",
+        "No saved bundle/map pair is linked for this selected target."
+      ]
+    }
+  ]
+}

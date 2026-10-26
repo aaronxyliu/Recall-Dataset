@@ -1,0 +1,70 @@
+{
+  "id": "mattermost--focalboard::webext",
+  "repo": "mattermost/focalboard",
+  "slug": "mattermost--focalboard",
+  "commit": "a84bbb65e32edf972856b329417096ac413518e9",
+  "cohort": "alternative-52",
+  "bundler": "parcel",
+  "bundlingMechanism": "Focalboard Web Clipper browser extension; separate from recorded webpack webapp",
+  "versionEvidence": "Parcel ^2.0.0 (declared; not execution-verified)",
+  "status": "configuration-only-not-built",
+  "targetKind": "browser-extension",
+  "sourceRoot": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard",
+  "projectRelative": "experiments/webext",
+  "projectPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext",
+  "directory": "parcel/mattermost--focalboard",
+  "buildCommand": "parcel build manifest.json --target prod && web-ext build -s dist/prod/",
+  "recordedOriginalApplicationProject": "webapp",
+  "recordedOriginalApplicationBuildCommand": "cross-env NODE_ENV=production webpack --config webpack.prod.js --devtool=source-map",
+  "recordedOriginalApplicationOutcome": "served",
+  "evidence": [
+    {
+      "path": "parcel/mattermost--focalboard/evidence/package.json",
+      "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/package.json",
+      "sha256": "c6dc9d95623eda6172d880750f1a01b1c84266ea7a9b1c385d4fe15e1cf7d161"
+    },
+    {
+      "path": "parcel/mattermost--focalboard/evidence/source-provenance.json",
+      "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/.rq1-provenance.json",
+      "sha256": "c5001230c10be0cd3f75728db96286a6a1718576b9a87965e22079d03f10c520"
+    },
+    {
+      "path": "parcel/mattermost--focalboard/evidence/manifest.json",
+      "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/manifest.json",
+      "sha256": "bd806a18fb1b6d502ac1d77f9ef619ecaa69234e4370541b41dd5cb459bceb16"
+    },
+    {
+      "path": "parcel/mattermost--focalboard/evidence/.parcelrc",
+      "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/.parcelrc",
+      "sha256": "678a1e37c371d6fb1391e58dd5cc612dedfccb636c45a0bd603ad1da85bc2a97"
+    },
+    {
+      "path": "parcel/mattermost--focalboard/evidence/tsconfig.json",
+      "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/tsconfig.json",
+      "sha256": "bb2b3a4ce1b6ae087a61ae582eb7acbb50306a1d2de5fb16036244e4b465b003"
+    },
+    {
+      "path": "parcel/mattermost--focalboard/evidence/upstream-README.md",
+      "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/experiments/webext/README.md",
+      "sha256": "65e16df315fbb47b2110bf67f803a2d24127e9b07a71525b3b121a9f771220bb"
+    },
+    {
+      "path": "parcel/mattermost--focalboard/evidence/repository-README.md",
+      "originalPath": "/Users/aaronxyliu/GitHub/framework-study/corpus/rq1-60-sources/mattermost--focalboard/README.md",
+      "sha256": "e81286d598cddb46c7a362f1ed5f630a27c5fc3860b12f4222b6caf435bf8351"
+    }
+  ],
+  "buildLog": {
+    "path": "/Users/aaronxyliu/GitHub/framework-sink-dataset/datasets/alternative-52/results/build-logs/mattermost--focalboard.log",
+    "sha256": "904ceb0c083586b99e3b263fc6b87d551e4483d4c4fc4d05633e0f884884cb47",
+    "excerpts": [],
+    "appliesToSelectedTarget": false
+  },
+  "savedArtifacts": [],
+  "bundleMapPairs": 0,
+  "simulationReadiness": "requires-artifact-collection-or-build",
+  "limitations": [
+    "This Parcel browser extension was not built or served by the original corpus. The original served Focalboard webapp uses webpack.",
+    "No saved bundle/map pair is linked for this selected target."
+  ]
+}
