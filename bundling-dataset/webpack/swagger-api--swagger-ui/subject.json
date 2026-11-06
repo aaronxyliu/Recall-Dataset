@@ -1,0 +1,12 @@
+{
+  "repo": "swagger-api/swagger-ui",
+  "commit": "d3296954a6b813898d298815ac3e68daa1cf7408",
+  "bundler": "webpack",
+  "bundlingEngine": "webpack",
+  "packageJson": "https://github.com/swagger-api/swagger-ui/blob/d3296954a6b813898d298815ac3e68daa1cf7408/package.json",
+  "productionScripts": {
+    "build:bundle": "cross-env NODE_ENV=production BABEL_ENV=production BROWSERSLIST_ENV=isomorphic-production webpack --color --config webpack/bundle.js",
+    "build:standalone": "cross-env NODE_ENV=production BABEL_ENV=production BROWSERSLIST_ENV=browser-production webpack --color --config webpack/standalone.js"
+  },
+  "siteUrl": "https://petstore.swagger.io/"
+}

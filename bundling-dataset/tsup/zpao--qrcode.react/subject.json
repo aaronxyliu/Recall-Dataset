@@ -1,0 +1,12 @@
+{
+  "repo": "zpao/qrcode.react",
+  "commit": "bd6bec861c50d36a01c82193c8fcdc8a5e968465",
+  "bundler": "tsup",
+  "bundlingEngine": "esbuild",
+  "packageJson": "https://github.com/zpao/qrcode.react/blob/bd6bec861c50d36a01c82193c8fcdc8a5e968465/package.json",
+  "productionScripts": {
+    "build:examples": "tsup examples/demo.tsx -d examples --format iife --env.NODE_ENV production --minify --target=es2017 --legacy-output",
+    "publish-docs": "gh-pages --dist=examples --src='{index.html,iife/demo.js}'"
+  },
+  "siteUrl": "https://zpao.github.io/qrcode.react/"
+}

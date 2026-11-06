@@ -1,0 +1,13 @@
+{
+  "repo": "abrahamjuliot/creepjs",
+  "commit": "10aa6724cd33a1015db1574211890518cd04f0cc",
+  "bundler": "Rollup",
+  "bundlingEngine": "Rollup",
+  "packageJson": "https://github.com/abrahamjuliot/creepjs/blob/10aa6724cd33a1015db1574211890518cd04f0cc/package.json",
+  "productionScripts": {
+    "build": "pnpm -s build:js && pnpm -s build:css",
+    "build:js": "pnpm build:dev",
+    "build:dev": "cross-env NODE_OPTIONS=--no-warnings TSCONFIG_PATH=./tsconfig.build.json pnpm exec rollup --config rollup.config.js"
+  },
+  "siteUrl": "https://abrahamjuliot.github.io/creepjs/"
+}

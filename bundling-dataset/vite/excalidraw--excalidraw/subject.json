@@ -1,0 +1,12 @@
+{
+  "repo": "excalidraw/excalidraw",
+  "commit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
+  "bundler": "Vite",
+  "bundlingEngine": "Rollup",
+  "packageJson": "https://github.com/excalidraw/excalidraw/blob/701b901a0f1ba3d0b390d9cdf63d112e25abac4b/excalidraw-app/package.json",
+  "productionScripts": {
+    "build": "yarn build:app && yarn build:version",
+    "build:app": "cross-env VITE_APP_GIT_SHA=$VERCEL_GIT_COMMIT_SHA cross-env VITE_APP_ENABLE_TRACKING=true vite build"
+  },
+  "siteUrl": "https://excalidraw.com/"
+}

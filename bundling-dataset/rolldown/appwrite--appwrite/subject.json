@@ -1,0 +1,11 @@
+{
+  "repo": "appwrite/appwrite",
+  "commit": "8e0bac6a1736d3e9998f470974ec0bbe0ef0bd74",
+  "bundler": "Rolldown",
+  "bundlingEngine": "Rolldown",
+  "packageJson": "https://github.com/appwrite/appwrite/blob/8e0bac6a1736d3e9998f470974ec0bbe0ef0bd74/apps/console/package.json",
+  "productionScripts": {
+    "build": "bun run generate:routes && bun run generate:github-stars && bun run generate:specs && bun run generate:cover-manifest && bun run generate:blog-manifest && vite build && bun run prune:removed-blog-assets && bun run scripts/check-prerender-styles.ts && bun run generate:specs --copy && bun run generate:sitemap && bun run generate:docs-exports"
+  },
+  "siteUrl": "https://appwrite.io/"
+}

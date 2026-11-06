@@ -1,0 +1,12 @@
+{
+  "repo": "metabase/metabase",
+  "commit": "2146c45b12e8fbd4801ad921fcee8ad59f4ab601",
+  "bundler": "Rspack",
+  "bundlingEngine": "Rspack",
+  "packageJson": "https://github.com/metabase/metabase/blob/2146c45b12e8fbd4801ad921fcee8ad59f4ab601/package.json",
+  "productionScripts": {
+    "build-release": "bun run build-release:cljs && bun run build-release:js",
+    "build-release:js": "WEBPACK_BUNDLE=production rspack build"
+  },
+  "siteUrl": "https://stats.metabase.com/"
+}

@@ -1,0 +1,12 @@
+{
+  "repo": "ToolJet/ToolJet",
+  "commit": "7f8ac7d54b0492819d64485eb7621d486b1115c3",
+  "bundler": "Rspack",
+  "bundlingEngine": "Rspack",
+  "packageJson": "https://github.com/ToolJet/ToolJet/blob/7f8ac7d54b0492819d64485eb7621d486b1115c3/frontend/package.json",
+  "productionScripts": {
+    "build": "rspack build --mode=production && cp -a ./assets/. ./build/assets/",
+    "build:cloud": "rspack build --mode=production && cp -a ./assets/. ./build/assets/ && rm -rf ./build/assets/libs/pyodide-0.23.2"
+  },
+  "siteUrl": "https://app.tooljet.ai/"
+}

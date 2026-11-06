@@ -1,0 +1,13 @@
+{
+  "repo": "peggyjs/peggy",
+  "commit": "643957df9cfd539ccaac18f800c8fd1a80f58e0f",
+  "bundler": "tsup",
+  "bundlingEngine": "esbuild",
+  "packageJson": "https://github.com/peggyjs/peggy/blob/643957df9cfd539ccaac18f800c8fd1a80f58e0f/package.json",
+  "productionScripts": {
+    "make": "npm run parser && npm run ts && npm run examples && npm run docs && npm run headers && npm run deploy",
+    "ts": "tsup",
+    "deploy": "cpy --flat browser/peggy.min.js docs/vendor/peggy/"
+  },
+  "siteUrl": "https://peggyjs.org/online.html"
+}
