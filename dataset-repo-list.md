@@ -1,6 +1,6 @@
 # Dataset Repo List
 
-共 70 个 GitHub 仓库，按 Stars 降序排列。星标采集日期为 2026-11-05。
+共 70 个 GitHub 仓库，按 Stars 降序排列。星标采集日期为 2026-11-06。
 
 | 排名 | GitHub 仓库 | Stars | 打包器 |
 | ---: | --- | ---: | --- |
