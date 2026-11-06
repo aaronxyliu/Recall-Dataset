@@ -4,7 +4,7 @@ This repository owns dataset metadata, the bundler-organized catalog, local held
 
 ## Frontend repository builds
 
-Build recipes, setup instructions, and browser evidence are organized by build tool and repository under `bundling-dataset/<bundler>/<owner>--<repository>/`. Optional source checkouts belong in the sibling experiment repository’s Git-ignored `builds/` directory.
+Build recipes, setup instructions, and browser evidence are organized by build tool and repository under `bundling-dataset/<bundler>/<owner>--<repository>/`. Local source checkouts live in this repository’s Git-ignored `builds/<bundler>/<owner>--<repository>/` directory.
 
 The table covers the [original 70-repository selection](https://github.com/aaronxyliu/Recall-Dataset/blob/42cbd7235c2f6c2133eebed394c989cefacba34c/selection.json). The page column reports local browser observations. “Untested” means a local Docker build and browser check are pending. Three pilot builds have retained reproduction records. The excluded gallery is listed for traceability.
 
