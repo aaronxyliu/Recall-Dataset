@@ -1,6 +1,6 @@
 # Dataset Repo List
 
-共 70 个 GitHub 仓库，按 Stars 降序排列。星标采集日期为 2026-11-06。
+共 70 个 GitHub 仓库，按 Stars 降序排列。星标采集日期为 2026-11-05。
 
 | 排名 | GitHub 仓库 | Stars | 打包器 |
 | ---: | --- | ---: | --- |
@@ -75,4 +75,4 @@
 | 69 | [olragon/binpackingjs](https://github.com/olragon/binpackingjs) | 192 | Bun |
 | 70 | [tednaleid/grimdawn-devotions](https://github.com/tednaleid/grimdawn-devotions) | 6 | Bun |
 
-公开网站、固定提交和构建证据见[完整数据集](README.md)。
+公开网站、固定提交和构建证据见[完整数据集](dataset-repo-list-README.md)。
