@@ -1,0 +1,2650 @@
+{
+  "dataset": "Recall dataset",
+  "checkedOn": "2026-11-06",
+  "survey": {
+    "edition": 2025,
+    "metric": "Usage",
+    "population": "All Respondents",
+    "chartUrl": "https://2025.stateofjs.com/en-US/libraries/build-tools/#build_tools_ratios",
+    "chartDataUrl": "https://2025.stateofjs.com/page-data/en-US/libraries/build-tools/page-data.json"
+  },
+  "selection": {
+    "count": 70,
+    "ordering": "GitHub stargazer count descending; case-insensitive repository name ascending for ties",
+    "sampling": "GitHub star-sorted repository search, public code search, and upstream references. One URL and one category per repository.",
+    "scope": "Publicly reachable web apps, interactive demos, and project sites with a corresponding frontend build. Stars belong to the whole repository.",
+    "deploymentLimit": "Source revision is pinned independently of the HTTP check. Deployed revision is generally unavailable.",
+    "githubSearches": [
+      {
+        "group": "bun",
+        "url": "https://api.github.com/search/repositories?q=topic%3Abun+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "esbuild",
+        "url": "https://api.github.com/search/repositories?q=esbuild+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "parcel",
+        "url": "https://api.github.com/search/repositories?q=parcel+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "rolldown",
+        "url": "https://api.github.com/search/repositories?q=rolldown+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "rollup",
+        "url": "https://api.github.com/search/repositories?q=rollup+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "rspack",
+        "url": "https://api.github.com/search/repositories?q=rspack+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "tsup",
+        "url": "https://api.github.com/search/repositories?q=tsup+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "turbopack",
+        "url": "https://api.github.com/search/repositories?q=turbopack+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "vite",
+        "url": "https://api.github.com/search/repositories?q=vite+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      },
+      {
+        "group": "webpack",
+        "url": "https://api.github.com/search/repositories?q=webpack+in%3Aname%2Cdescription%2Ctopics+archived%3Afalse+fork%3Afalse&sort=stars&order=desc&per_page=50",
+        "resultCountRetrieved": 50
+      }
+    ]
+  },
+  "groups": [
+    {
+      "bundler": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 10,
+      "exception": null
+    },
+    {
+      "bundler": "Vite",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 10,
+      "exception": null
+    },
+    {
+      "bundler": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 10,
+      "exception": null
+    },
+    {
+      "bundler": "tsc CLI",
+      "bundlerId": "tsc",
+      "usagePercent": 53,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 0,
+      "exception": "tsc CLI 在调查中属于构建工具。本数据集将普通 TypeScript 编译、类型检查和声明文件生成排除在前端打包分组之外。"
+    },
+    {
+      "bundler": "Rollup",
+      "bundlerId": "rollup",
+      "usagePercent": 47,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 6,
+      "exception": null
+    },
+    {
+      "bundler": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 10,
+      "exception": null
+    },
+    {
+      "bundler": "SWC",
+      "bundlerId": "swc",
+      "usagePercent": 27,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 0,
+      "exception": "SWC 的 spack 具备打包功能。筛选到的可验证公开页面中，SWC 用作转译器，或只构建独立 worker，未找到足以归入此组的前端生产构建。"
+    },
+    {
+      "bundler": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 10,
+      "exception": null
+    },
+    {
+      "bundler": "Bun",
+      "bundlerId": "bun",
+      "usagePercent": 25,
+      "quotaFromUsage": [
+        6,
+        10
+      ],
+      "repoCount": 7,
+      "exception": null
+    },
+    {
+      "bundler": "tsup",
+      "bundlerId": "tsup",
+      "usagePercent": 12,
+      "quotaFromUsage": [
+        2,
+        3
+      ],
+      "repoCount": 2,
+      "exception": null
+    },
+    {
+      "bundler": "Rolldown",
+      "bundlerId": "rolldown",
+      "usagePercent": 10,
+      "quotaFromUsage": [
+        2,
+        3
+      ],
+      "repoCount": 2,
+      "exception": null
+    },
+    {
+      "bundler": "Rspack",
+      "bundlerId": "rspack",
+      "usagePercent": 7,
+      "quotaFromUsage": [
+        2,
+        3
+      ],
+      "repoCount": 3,
+      "exception": null
+    }
+  ],
+  "subjects": [
+    {
+      "repo": "freeCodeCamp/freeCodeCamp",
+      "slug": "freeCodeCamp--freeCodeCamp",
+      "repoUrl": "https://github.com/freeCodeCamp/freeCodeCamp",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 458611,
+      "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
+      "siteUrl": "https://www.freecodecamp.org/learn",
+      "siteTitle": "",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/freeCodeCamp/freeCodeCamp/blob/a7292b4f26e37f59ba12d670e53d8806d5c2527f/client/package.json",
+      "productionScripts": {
+        "build": "NODE_OPTIONS=\"--max-old-space-size=7168 --no-deprecation\" gatsby build --prefix-paths"
+      },
+      "relevantManifestVersions": {
+        "gatsby": "5.16.1"
+      },
+      "additionalEvidence": [
+        {
+          "path": "client/gatsby-node.ts",
+          "url": "https://github.com/freeCodeCamp/freeCodeCamp/blob/a7292b4f26e37f59ba12d670e53d8806d5c2527f/client/gatsby-node.ts"
+        }
+      ],
+      "observedScriptUrls": [
+        "/webpack-runtime-c121791ac1573b71611d.js",
+        "/640bf66f-c471573bfc55f8d210a8.js",
+        "/73ca4de5-b6c3579d9f27c62e9e79.js",
+        "/app-784f43bd20bd7de03e77.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "Gatsby 构建课程前端，线上页面加载 webpack-runtime。",
+      "rank": 1,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "microsoft/vscode",
+      "slug": "microsoft--vscode",
+      "repoUrl": "https://github.com/microsoft/vscode",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 194761,
+      "commit": "e13716ce975fc4597cb8c2228471ac4783bf4529",
+      "siteUrl": "https://vscode.dev/",
+      "siteTitle": "",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/microsoft/vscode/blob/e13716ce975fc4597cb8c2228471ac4783bf4529/package.json",
+      "productionScripts": {},
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": "build/gulpfile.vscode.web.ts",
+          "url": "https://github.com/microsoft/vscode/blob/e13716ce975fc4597cb8c2228471ac4783bf4529/build/gulpfile.vscode.web.ts"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://main.vscode-cdn.net/nlsmetadata/6bab64e2d12b04d04c0d99c27ff166023efd1dda/nls.messages.js"
+      ],
+      "note": "取 VS Code Web 的 Gulp 发布构建，web 任务显式调用 runEsbuildBundle。",
+      "rank": 2,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "excalidraw/excalidraw",
+      "slug": "excalidraw--excalidraw",
+      "repoUrl": "https://github.com/excalidraw/excalidraw",
+      "bundler": "Vite",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 135214,
+      "commit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
+      "siteUrl": "https://excalidraw.com/",
+      "siteTitle": "Excalidraw Whiteboard",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/excalidraw/excalidraw/blob/701b901a0f1ba3d0b390d9cdf63d112e25abac4b/excalidraw-app/package.json",
+      "productionScripts": {
+        "build": "yarn build:app && yarn build:version",
+        "build:app": "cross-env VITE_APP_GIT_SHA=$VERCEL_GIT_COMMIT_SHA cross-env VITE_APP_ENABLE_TRACKING=true vite build"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": "package.json",
+          "url": "https://github.com/excalidraw/excalidraw/blob/701b901a0f1ba3d0b390d9cdf63d112e25abac4b/package.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "/assets/index-COQVqmE8.js"
+      ],
+      "note": "工作区中的白板前端由 vite build 构建，Vite 版本由根清单声明。",
+      "rank": 3,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "shadcn-ui/ui",
+      "slug": "shadcn-ui--ui",
+      "repoUrl": "https://github.com/shadcn-ui/ui",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 127452,
+      "commit": "8a3536678a528cc012b9e62484290e79d0be410f",
+      "siteUrl": "https://ui.shadcn.com/create",
+      "siteTitle": "New Project - shadcn/ui",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/shadcn-ui/ui/blob/8a3536678a528cc012b9e62484290e79d0be410f/apps/v4/package.json",
+      "productionScripts": {
+        "build": "pnpm registry:build && next build"
+      },
+      "relevantManifestVersions": {
+        "next": "16.4.2"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/immutable/chunks/16yq-54xs8rpg.js",
+        "/_next/static/immutable/chunks/0me8w3oqbbq3t.js",
+        "/_next/static/immutable/chunks/2mbw4jsfq7hpq.js",
+        "/_next/static/immutable/chunks/turbopack-0jxne8ud_-qel.js",
+        "/_next/static/immutable/chunks/3l29cx354ydi_.js",
+        "/_next/static/immutable/chunks/26ki-6tzh52z_.js",
+        "/_next/static/immutable/chunks/396ijggs93fs-.js",
+        "/_next/static/immutable/chunks/2cv67qrnizzqs.js",
+        "/_next/static/immutable/chunks/2s_10t3qt4g74.js",
+        "/_next/static/immutable/chunks/3ko07ytdtht5-.js",
+        "/_next/static/immutable/chunks/1jl11z9hajezo.js",
+        "/_next/static/immutable/chunks/3fosmdcgu-pgf.js"
+      ],
+      "note": "Next.js 16 的 next build 默认使用 Turbopack。",
+      "rank": 4,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "immich-app/immich",
+      "slug": "immich-app--immich",
+      "repoUrl": "https://github.com/immich-app/immich",
+      "bundler": "Vite",
+      "bundlingEngine": "Rolldown",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 118350,
+      "commit": "037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9",
+      "siteUrl": "https://demo.immich.app/",
+      "siteTitle": "",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/immich-app/immich/blob/037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9/web/package.json",
+      "productionScripts": {
+        "build": "vite build"
+      },
+      "relevantManifestVersions": {
+        "vite": "^8.0.12"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [],
+      "note": "公开 Immich 演示实例对应的 web 工作区使用 Vite 8，底层为 Rolldown。",
+      "rank": 5,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "supabase/supabase",
+      "slug": "supabase--supabase",
+      "repoUrl": "https://github.com/supabase/supabase",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 114581,
+      "commit": "aa9d04e4f77447e2b6aaf317b686007aff05aa96",
+      "siteUrl": "https://supabase.com/",
+      "siteTitle": "Supabase | The Postgres Development Platform",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/supabase/supabase/blob/aa9d04e4f77447e2b6aaf317b686007aff05aa96/apps/www/package.json",
+      "productionScripts": {
+        "build": "turbo run build:next --filter=www",
+        "build:next": "next build --webpack && node ./internals/generate-sitemap.mjs"
+      },
+      "relevantManifestVersions": {
+        "next": "catalog:",
+        "vite": "catalog:"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/cbfddaed-3b83965d7e4a14e5.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/e4726ba1-f0091752bf71629f.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/4310-c2bd72df229f1d55.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/main-app-5c2bf1ba03d93aee.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/953f2711-fc0999f8fe06ffbf.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/82bb98b3-eac88c237d9e7528.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/6829-048c8494e5cdfaa3.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/3084-44e29b4359d64f1b.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/8763-2f2341f9f888ce6f.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/7476-8c285855917d3d3a.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/14-51aec3edcf2eb876.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya",
+        "https://frontend-assets.supabase.com/www/e05ef0e50cb0/_next/static/chunks/1513-002d52ab03b609b3.js?dpl=dpl_6HVk8cCTUpAb3TbsdFZG34J41Vya"
+      ],
+      "note": "采样的是 www 站点，生产脚本显式指定 --webpack。",
+      "rank": 6,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "PanJiaChen/vue-element-admin",
+      "slug": "PanJiaChen--vue-element-admin",
+      "repoUrl": "https://github.com/PanJiaChen/vue-element-admin",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 90118,
+      "commit": "6858a9ad67483025f6a9432a926beb9327037be3",
+      "siteUrl": "https://panjiachen.github.io/vue-element-admin/",
+      "siteTitle": "Vue Element Admin",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/PanJiaChen/vue-element-admin/blob/6858a9ad67483025f6a9432a926beb9327037be3/package.json",
+      "productionScripts": {
+        "build:prod": "vue-cli-service build"
+      },
+      "relevantManifestVersions": {
+        "@vue/cli-service": "4.4.4"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "//cdn.carbonads.com/carbon.js?serve=CE7IK5QY&placement=panjiachengithubio"
+      ],
+      "note": "Vue CLI 生产构建调用 webpack。",
+      "rank": 7,
+      "bundlerRank": 3
+    },
+    {
+      "repo": "hoppscotch/hoppscotch",
+      "slug": "hoppscotch--hoppscotch",
+      "repoUrl": "https://github.com/hoppscotch/hoppscotch",
+      "bundler": "Vite",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 80762,
+      "commit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
+      "siteUrl": "https://hoppscotch.io/",
+      "siteTitle": "Hoppscotch • Open source API development ecosystem",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/hoppscotch/hoppscotch/blob/55908a76a1d0555c9bbb5d74244c14173df95b06/packages/hoppscotch-selfhost-web/package.json",
+      "productionScripts": {
+        "build": "node --max_old_space_size=8192 ./node_modules/vite/bin/vite.js build",
+        "do-build-prod": "pnpm run build"
+      },
+      "relevantManifestVersions": {
+        "vite": "7.3.2"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/assets/polyfills-B9QC9tel.js",
+        "/assets/index-5rIoxiGr.js"
+      ],
+      "note": "Web 客户端生产命令直接执行 Vite CLI。",
+      "rank": 8,
+      "bundlerRank": 3
+    },
+    {
+      "repo": "dair-ai/Prompt-Engineering-Guide",
+      "slug": "dair-ai--Prompt-Engineering-Guide",
+      "repoUrl": "https://github.com/dair-ai/Prompt-Engineering-Guide",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 79854,
+      "commit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
+      "siteUrl": "https://www.promptingguide.ai/",
+      "siteTitle": "Prompt Engineering Guide | Prompt Engineering Guide<!-- -->",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/dair-ai/Prompt-Engineering-Guide/blob/57673726396dd94acb23bdb1e67f27c78ee85a8e/package.json",
+      "productionScripts": {
+        "build": "next build"
+      },
+      "relevantManifestVersions": {
+        "next": "^13.5.6"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",
+        "/_next/static/chunks/webpack-be40fc1d8f460103.js",
+        "/_next/static/chunks/framework-91c74e967f16450c.js",
+        "/_next/static/chunks/main-7b8613dfa05e2972.js",
+        "/_next/static/chunks/pages/_app-ba6f91739539648d.js",
+        "/_next/static/chunks/57914-1ae7ac5e3b7039bf.js",
+        "/_next/static/chunks/26494-fa63a27027cd3584.js",
+        "/_next/static/chunks/pages/index.en-655cd6fe4d57133a.js",
+        "/_next/static/UZldutHvUJTaYJGIX6prQ/_buildManifest.js",
+        "/_next/static/UZldutHvUJTaYJGIX6prQ/_ssgManifest.js"
+      ],
+      "note": "Next.js 13 的生产构建走 webpack，线上资源包含 webpack chunk。",
+      "rank": 9,
+      "bundlerRank": 4
+    },
+    {
+      "repo": "grafana/grafana",
+      "slug": "grafana--grafana",
+      "repoUrl": "https://github.com/grafana/grafana",
+      "bundler": "Rspack",
+      "bundlingEngine": "Rspack",
+      "bundlerId": "rspack",
+      "usagePercent": 7,
+      "stars": 77721,
+      "commit": "68df7b6065f9724a7273e90987615b0aaa25355c",
+      "siteUrl": "https://play.grafana.org/login",
+      "siteTitle": "Grafana",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/grafana/grafana/blob/68df7b6065f9724a7273e90987615b0aaa25355c/package.json",
+      "productionScripts": {
+        "build": "NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 nx exec --verbose -- rspack build --config scripts/rspack/rspack.prod.ts"
+      },
+      "relevantManifestVersions": {
+        "@rspack/core": "^2.1.7",
+        "esbuild": "0.28.1",
+        "webpack": "^5.105.0"
+      },
+      "additionalEvidence": [
+        {
+          "path": "scripts/rspack/rspack.prod.ts",
+          "url": "https://github.com/grafana/grafana/blob/68df7b6065f9724a7273e90987615b0aaa25355c/scripts/rspack/rspack.prod.ts"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://snippet.meticulous.ai/v1/meticulous.js",
+        "https://grafana-assets.grafana.net/grafana/13.4.0-41805046240/public/build/runtime.cd4f440fed56caaf.js",
+        "https://grafana-assets.grafana.net/grafana/13.4.0-41805046240/public/build/27697.7dee79d54fc3e6b4.js",
+        "https://grafana-assets.grafana.net/grafana/13.4.0-41805046240/public/build/38877.e6f4f2f90527d508.js",
+        "https://grafana-assets.grafana.net/grafana/13.4.0-41805046240/public/build/app.77514d1eb30df0ea.js"
+      ],
+      "note": "生产命令使用 Rspack 的生产配置，采样 Grafana Play。",
+      "rank": 10,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "appwrite/appwrite",
+      "slug": "appwrite--appwrite",
+      "repoUrl": "https://github.com/appwrite/appwrite",
+      "bundler": "Rolldown",
+      "bundlingEngine": "Rolldown",
+      "bundlerId": "rolldown",
+      "usagePercent": 10,
+      "stars": 57871,
+      "commit": "8e0bac6a1736d3e9998f470974ec0bbe0ef0bd74",
+      "siteUrl": "https://appwrite.io/",
+      "siteTitle": "Appwrite · The open-source cloud for developers and agents",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/appwrite/appwrite/blob/8e0bac6a1736d3e9998f470974ec0bbe0ef0bd74/apps/console/package.json",
+      "productionScripts": {
+        "build": "bun run generate:routes && bun run generate:github-stars && bun run generate:specs && bun run generate:cover-manifest && bun run generate:blog-manifest && vite build && bun run prune:removed-blog-assets && bun run scripts/check-prerender-styles.ts && bun run generate:specs --copy && bun run generate:sitemap && bun run generate:docs-exports"
+      },
+      "relevantManifestVersions": {
+        "vite": "npm:rolldown-vite@7.3.1"
+      },
+      "additionalEvidence": [
+        {
+          "path": "apps/console/vite.config.ts",
+          "url": "https://github.com/appwrite/appwrite/blob/8e0bac6a1736d3e9998f470974ec0bbe0ef0bd74/apps/console/vite.config.ts"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://cdn.appwrite.io/assets/index-TceX6Llt.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "此站点清单显式将 vite 别名为 npm:rolldown-vite，配置也检查 Rolldown 产物。",
+      "rank": 11,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "mozilla/pdf.js",
+      "slug": "mozilla--pdf.js",
+      "repoUrl": "https://github.com/mozilla/pdf.js",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 54101,
+      "commit": "578fe15c435f7c91eb1fc4f30963b645e56e20ff",
+      "siteUrl": "https://mozilla.github.io/pdf.js/web/viewer.html",
+      "siteTitle": "PDF.js viewer",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/mozilla/pdf.js/blob/578fe15c435f7c91eb1fc4f30963b645e56e20ff/package.json",
+      "productionScripts": {},
+      "relevantManifestVersions": {
+        "webpack": "^5.112.2"
+      },
+      "additionalEvidence": [
+        {
+          "path": "gulpfile.mjs",
+          "url": "https://github.com/mozilla/pdf.js/blob/578fe15c435f7c91eb1fc4f30963b645e56e20ff/gulpfile.mjs"
+        }
+      ],
+      "observedScriptUrls": [
+        "../build/pdf.mjs",
+        "viewer.mjs"
+      ],
+      "note": "清单声明 webpack，Gulp 的 generic viewer 构建使用 webpack 生成 viewer.mjs。",
+      "rank": 12,
+      "bundlerRank": 5
+    },
+    {
+      "repo": "DavidHDev/react-bits",
+      "slug": "DavidHDev--react-bits",
+      "repoUrl": "https://github.com/DavidHDev/react-bits",
+      "bundler": "Vite",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 51330,
+      "commit": "4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4",
+      "siteUrl": "https://reactbits.dev/",
+      "siteTitle": "React Bits — Free Animated React Components",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/DavidHDev/react-bits/blob/4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4/package.json",
+      "productionScripts": {
+        "build": "npm run check:prop-docs && npm run sounds:build && npm run registry:build && npm run llms:text && npm run sitemap && npm run rss && vite build && npm run og:routes && npm run verify:seo"
+      },
+      "relevantManifestVersions": {
+        "vite": "^5.3.4"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "https://www.googletagmanager.com/gtag/js?id=G-1GF5NXTV27",
+        "/center-stage.js",
+        "/assets/index-CwPEg48p.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "站点构建脚本在生成注册表等数据后调用 vite build。",
+      "rank": 13,
+      "bundlerRank": 4
+    },
+    {
+      "repo": "tldraw/tldraw",
+      "slug": "tldraw--tldraw",
+      "repoUrl": "https://github.com/tldraw/tldraw",
+      "bundler": "Vite",
+      "bundlingEngine": "Rolldown",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 51285,
+      "commit": "bc3432915441bb53eb7429459b19d67c8f0c69d1",
+      "siteUrl": "https://www.tldraw.com/",
+      "siteTitle": "tldraw • very good free whiteboard",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/tldraw/tldraw/blob/bc3432915441bb53eb7429459b19d67c8f0c69d1/apps/dotcom/client/package.json",
+      "productionScripts": {
+        "build": "pnpm exec tsx scripts/build.ts"
+      },
+      "relevantManifestVersions": {
+        "vite": "^8.0.16"
+      },
+      "additionalEvidence": [
+        {
+          "path": "apps/dotcom/client/scripts/build.ts",
+          "url": "https://github.com/tldraw/tldraw/blob/bc3432915441bb53eb7429459b19d67c8f0c69d1/apps/dotcom/client/scripts/build.ts"
+        }
+      ],
+      "observedScriptUrls": [
+        "/theme-init.js",
+        "/polyfills.js",
+        "/assets/index-BR_pV03y.js"
+      ],
+      "note": "脚本运行 vite build 并复制产物到 Vercel 静态目录，Vite 8 底层为 Rolldown。",
+      "rank": 14,
+      "bundlerRank": 5
+    },
+    {
+      "repo": "metabase/metabase",
+      "slug": "metabase--metabase",
+      "repoUrl": "https://github.com/metabase/metabase",
+      "bundler": "Rspack",
+      "bundlingEngine": "Rspack",
+      "bundlerId": "rspack",
+      "usagePercent": 7,
+      "stars": 50190,
+      "commit": "2146c45b12e8fbd4801ad921fcee8ad59f4ab601",
+      "siteUrl": "https://stats.metabase.com/",
+      "siteTitle": "Metabase",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/metabase/metabase/blob/2146c45b12e8fbd4801ad921fcee8ad59f4ab601/package.json",
+      "productionScripts": {
+        "build-release": "bun run build-release:cljs && bun run build-release:js",
+        "build-release:js": "WEBPACK_BUNDLE=production rspack build"
+      },
+      "relevantManifestVersions": {
+        "@rspack/core": "^2.0.3",
+        "esbuild": "^0.28.1",
+        "vite": "^8.1.6",
+        "webpack": "5.105.0"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "app/dist/runtime.d5f2ba1df580670d.js",
+        "app/dist/vendor.d3d9fd6cbeafeb5e.js",
+        "app/dist/app-main.7116b8ae176692ee.js"
+      ],
+      "note": "发布脚本在 CLJS 构建后调用 rspack build。",
+      "rank": 15,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "CalCom/cal.com",
+      "slug": "CalCom--cal.com",
+      "repoUrl": "https://github.com/CalCom/cal.com",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 49723,
+      "commit": "2eb48eccd8aca8a0c0ffabf28cf92e298b33ecee",
+      "siteUrl": "https://app.cal.com/auth/login",
+      "siteTitle": "Login | Cal.com",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/CalCom/cal.com/blob/2eb48eccd8aca8a0c0ffabf28cf92e298b33ecee/apps/web/package.json",
+      "productionScripts": {
+        "build": "next build && yarn sentry:release"
+      },
+      "relevantManifestVersions": {
+        "next": "16.4.3"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/3ckw8ct4xjcpl.js",
+        "/_next/static/chunks/0nies379yr5j0.js",
+        "/_next/static/chunks/2zp5_u_o54dla.js",
+        "/_next/static/chunks/03sd4mtcett2v.js",
+        "/_next/static/chunks/0p7fd1_71g727.js",
+        "/_next/static/chunks/turbopack-1byz1flvc-bu1.js",
+        "/_next/static/chunks/38f7mdg4iqeb6.js",
+        "/_next/static/chunks/0ypa1zd9qdw-7.js",
+        "/_next/static/chunks/1p_nq083zpbec.js",
+        "/_next/static/chunks/1ynlc-2o7k1_y.js",
+        "/_next/static/chunks/2k_f65k41a86f.js",
+        "/_next/static/chunks/0df1-p946m22r.js"
+      ],
+      "note": "采样 Web 应用登录入口，Next.js 16 的 next build 默认使用 Turbopack。",
+      "rank": 16,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "discourse/discourse",
+      "slug": "discourse--discourse",
+      "repoUrl": "https://github.com/discourse/discourse",
+      "bundler": "Rolldown",
+      "bundlingEngine": "Rolldown",
+      "bundlerId": "rolldown",
+      "usagePercent": 10,
+      "stars": 48051,
+      "commit": "08cd4ee7294dd839858eb7d388ec938fcfe4ba68",
+      "siteUrl": "https://try.discourse.org/",
+      "siteTitle": "Discourse Demo",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/discourse/discourse/blob/08cd4ee7294dd839858eb7d388ec938fcfe4ba68/frontend/discourse/package.json",
+      "productionScripts": {
+        "build": "rolldown -c rolldown.config.mjs"
+      },
+      "relevantManifestVersions": {
+        "rolldown": "1.2.7",
+        "vite": "^8.2.4"
+      },
+      "additionalEvidence": [
+        {
+          "path": "frontend/discourse/rolldown.config.mjs",
+          "url": "https://github.com/discourse/discourse/blob/08cd4ee7294dd839858eb7d388ec938fcfe4ba68/frontend/discourse/rolldown.config.mjs"
+        },
+        {
+          "path": "package.json",
+          "url": "https://github.com/discourse/discourse/blob/08cd4ee7294dd839858eb7d388ec938fcfe4ba68/package.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://global.discourse-cdn.com/try/assets/plugins/footnote_extra-95ffab71.js",
+        "https://sea1.discourse-cdn.com/try/extra-locales/e809083d1a0a5818772f2ccf2eb5d75aaa48331c/en/main.js",
+        "https://sea1.discourse-cdn.com/try/extra-locales/0ffe7a21317d2af4f704e60d5a6802a6b9fa84f4/en/mf.js?__ws=try.discourse.org",
+        "https://sea1.discourse-cdn.com/try/extra-locales/7041ad6c9ea5abf5693050faa62592065eebeacf/en/overrides.js?__ws=try.discourse.org",
+        "https://sea1.discourse-cdn.com/try/theme-javascripts/5f7ea291bd7a34bc754eacf2f2e3c7423d261662.js?__ws=try.discourse.org",
+        "https://sea1.discourse-cdn.com/try/theme-javascripts/59a1f894fd7061ac434794842f4572015178daa4.js?__ws=try.discourse.org",
+        "https://global.discourse-cdn.com/try/assets/js/browser-detect-47cf9e6d.js",
+        "/plugins/discourse-client-performance/javascripts/discourse-client-performance.js?v=a7b922e8787e07682fc55636ddbe93c4307c315489def4c7a44d5d46bf814e3c",
+        "https://global.discourse-cdn.com/try/assets/js/discourse-g3u3ki7x.digested.js",
+        "https://global.discourse-cdn.com/try/assets/js/browser-update-91688f13.js"
+      ],
+      "note": "Web 前端生产命令直接调用 rolldown。",
+      "rank": 17,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "LibreChat-AI/LibreChat",
+      "slug": "LibreChat-AI--LibreChat",
+      "repoUrl": "https://github.com/LibreChat-AI/LibreChat",
+      "bundler": "Vite",
+      "bundlingEngine": "Rolldown",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 46784,
+      "commit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
+      "siteUrl": "https://demo.librechat.ai/",
+      "siteTitle": "LibreChat",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/LibreChat-AI/LibreChat/blob/f4154b649efa37e1345ccc517a4d8d1ed2178c82/client/package.json",
+      "productionScripts": {
+        "build": "cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=8192 vite build"
+      },
+      "relevantManifestVersions": {
+        "vite": "^8.3.5"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "https://demo.librechat.ai/.webmcp/bridge.js",
+        "./assets/index.DNNntDAR.js",
+        "./registerSW.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "采样客户端，Vite 8 底层为 Rolldown。",
+      "rank": 18,
+      "bundlerRank": 6
+    },
+    {
+      "repo": "colinhacks/zod",
+      "slug": "colinhacks--zod",
+      "repoUrl": "https://github.com/colinhacks/zod",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 44266,
+      "commit": "8651451b82b454847ef9d6d8cc533496853a10d8",
+      "siteUrl": "https://zod.dev/",
+      "siteTitle": "Intro | Zod",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/colinhacks/zod/blob/8651451b82b454847ef9d6d8cc533496853a10d8/packages/docs/package.json",
+      "productionScripts": {
+        "build": "nub exec --node next build --turbopack"
+      },
+      "relevantManifestVersions": {
+        "next": "15.5.25"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/82973c63e98e1ec8.js",
+        "/_next/static/chunks/3fa3ae6e53384173.js",
+        "/_next/static/chunks/7131bc8358a058fd.js",
+        "/_next/static/chunks/476dee84f2370645.js",
+        "/_next/static/chunks/turbopack-5d6018c99bf72045.js",
+        "/_next/static/chunks/363df8a0a885aa64.js",
+        "/_next/static/chunks/7b37a1be3871dd74.js",
+        "/_next/static/chunks/a372b072e9e386f6.js",
+        "/_next/static/chunks/a229fcc952f8024d.js",
+        "/_next/static/chunks/896d862bf70449ae.js",
+        "/_next/static/chunks/db14acfa2656b832.js",
+        "/_next/static/chunks/331ff862417cb8cf.js"
+      ],
+      "note": "生产脚本显式指定 --turbopack。",
+      "rank": 19,
+      "bundlerRank": 3
+    },
+    {
+      "repo": "ToolJet/ToolJet",
+      "slug": "ToolJet--ToolJet",
+      "repoUrl": "https://github.com/ToolJet/ToolJet",
+      "bundler": "Rspack",
+      "bundlingEngine": "Rspack",
+      "bundlerId": "rspack",
+      "usagePercent": 7,
+      "stars": 41201,
+      "commit": "7f8ac7d54b0492819d64485eb7621d486b1115c3",
+      "siteUrl": "https://app.tooljet.ai/",
+      "siteTitle": "Loading...",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/ToolJet/ToolJet/blob/7f8ac7d54b0492819d64485eb7621d486b1115c3/frontend/package.json",
+      "productionScripts": {
+        "build": "rspack build --mode=production && cp -a ./assets/. ./build/assets/",
+        "build:cloud": "rspack build --mode=production && cp -a ./assets/. ./build/assets/ && rm -rf ./build/assets/libs/pyodide-0.23.2"
+      },
+      "relevantManifestVersions": {
+        "@rspack/core": "^2.1.3",
+        "esbuild": "0.25.9",
+        "webpack": "^5.75.0"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "https://cdn.jsdelivr.net/pyodide/v0.23.2/full/pyodide.js",
+        "runtime.3862dd7c.js",
+        "lucide-react.635d99f3.js",
+        "vendor.d02c1556.js",
+        "main.0d423c97.js"
+      ],
+      "note": "Web 默认和云部署生产命令均使用 Rspack。",
+      "rank": 20,
+      "bundlerRank": 3
+    },
+    {
+      "repo": "CorentinTh/it-tools",
+      "slug": "CorentinTh--it-tools",
+      "repoUrl": "https://github.com/CorentinTh/it-tools",
+      "bundler": "Vite",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 41129,
+      "commit": "d505845f918e946ec300af7b36efc107e2f66e9e",
+      "siteUrl": "https://it-tools.tech/",
+      "siteTitle": "IT Tools - Handy online tools for developers",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/package.json",
+      "productionScripts": {
+        "build": "vue-tsc --noEmit && NODE_OPTIONS=--max_old_space_size=4096 vite build"
+      },
+      "relevantManifestVersions": {
+        "vite": "^4.4.9"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/assets/index-61effc08.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "类型检查后调用 vite build 生成在线工具集。",
+      "rank": 21,
+      "bundlerRank": 7
+    },
+    {
+      "repo": "bailicangdu/vue2-elm",
+      "slug": "bailicangdu--vue2-elm",
+      "repoUrl": "https://github.com/bailicangdu/vue2-elm",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 40964,
+      "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
+      "siteUrl": "https://cangdu.org/elm/",
+      "siteTitle": "elm",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/bailicangdu/vue2-elm/blob/b85ff0220366be863868269177a4abf74c7a85ca/package.json",
+      "productionScripts": {
+        "build": "node build/build.js"
+      },
+      "relevantManifestVersions": {
+        "webpack": "^1.13.2"
+      },
+      "additionalEvidence": [
+        {
+          "path": "build/build.js",
+          "url": "https://github.com/bailicangdu/vue2-elm/blob/b85ff0220366be863868269177a4abf74c7a85ca/build/build.js"
+        }
+      ],
+      "observedScriptUrls": [
+        "/elm/static/js/manifest.js",
+        "/elm/static/js/vendor.js",
+        "/elm/static/js/app.js"
+      ],
+      "note": "生产脚本直接调用 webpack API。",
+      "rank": 22,
+      "bundlerRank": 6
+    },
+    {
+      "repo": "drawdb-io/drawdb",
+      "slug": "drawdb-io--drawdb",
+      "repoUrl": "https://github.com/drawdb-io/drawdb",
+      "bundler": "Vite",
+      "bundlingEngine": "Rolldown",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 40259,
+      "commit": "a249c7fb730c2de9b5c2ce6e863f2ea7344ac372",
+      "siteUrl": "https://www.drawdb.app/",
+      "siteTitle": "drawDB - Online Database Schema Design & ER Diagram Tool",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/drawdb-io/drawdb/blob/a249c7fb730c2de9b5c2ce6e863f2ea7344ac372/package.json",
+      "productionScripts": {
+        "build": "vite build"
+      },
+      "relevantManifestVersions": {
+        "vite": "^8.3.5"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/assets/index-xvuonap6.js",
+        "https://client.crisp.chat/l.js",
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
+      "note": "数据库图表编辑器调用 Vite 8，底层为 Rolldown。",
+      "rank": 23,
+      "bundlerRank": 8
+    },
+    {
+      "repo": "umami-software/umami",
+      "slug": "umami-software--umami",
+      "repoUrl": "https://github.com/umami-software/umami",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 39943,
+      "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
+      "siteUrl": "https://cloud.umami.is/",
+      "siteTitle": "Umami Cloud",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/umami-software/umami/blob/559e3c607c23d2c72d9bd4f6481bda428255323c/package.json",
+      "productionScripts": {
+        "build:app": "next build --turbo"
+      },
+      "relevantManifestVersions": {
+        "esbuild": "^0.28.2",
+        "next": "16.4.2",
+        "rollup": "^4.63.1",
+        "tsup": "^8.5.0"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/immutable/chunks/06lu9f9ezmmii.js",
+        "/_next/static/immutable/chunks/2weamg2g9s4ko.js",
+        "/_next/static/immutable/chunks/2hk9vu54jktc7.js",
+        "/_next/static/immutable/chunks/1_6ikuki7ax8k.js",
+        "/_next/static/immutable/chunks/turbopack-1byz1flvc-bu1.js",
+        "/_next/static/immutable/chunks/0sk28jp-l1a4h.js",
+        "/_next/static/immutable/chunks/0x9gzfvavfr2r.js",
+        "/_next/static/immutable/chunks/337bt_u7o_g92.js",
+        "/_next/static/immutable/chunks/1vvvj33jy3vfq.js",
+        "/_next/static/immutable/chunks/3tdb-hrp75zaf.js",
+        "/_next/static/immutable/chunks/1v6y0i4u3u3f6.js",
+        "/_next/static/immutable/chunks/2o57-5z-e5x2a.js"
+      ],
+      "note": "生产应用脚本显式指定 --turbo，Rollup tracker 是另一产物。",
+      "rank": 24,
+      "bundlerRank": 4
+    },
+    {
+      "repo": "dokploy/dokploy",
+      "slug": "dokploy--dokploy",
+      "repoUrl": "https://github.com/dokploy/dokploy",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 38265,
+      "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
+      "siteUrl": "https://app.dokploy.com/",
+      "siteTitle": "Dokploy",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/dokploy/dokploy/blob/fe9ae2a7db22730ff1ab72939e10806848c7cccd/apps/dokploy/package.json",
+      "productionScripts": {
+        "build": "npm run build-server && npm run build-next",
+        "build-next": "next build --webpack"
+      },
+      "relevantManifestVersions": {
+        "next": "16.4.1",
+        "esbuild": "0.25.0"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/polyfills-42372ed130431b0a.js",
+        "/_next/static/chunks/webpack-b27ed15a063c5539.js",
+        "/_next/static/chunks/framework-e761851351655f08.js",
+        "/_next/static/chunks/main-9def47691a409286.js",
+        "/_next/static/chunks/pages/_app-9a33f4f101f82f71.js",
+        "/_next/static/chunks/2398-2b3d0753a925dedf.js",
+        "/_next/static/chunks/5393-9f53505a80a9318e.js",
+        "/_next/static/chunks/pages/index-4da1bca6960446bc.js",
+        "/_next/static/52AL4Mwqta8P-ya3dCgde/_buildManifest.js",
+        "/_next/static/52AL4Mwqta8P-ya3dCgde/_ssgManifest.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "Next.js 生产脚本显式指定 --webpack。",
+      "rank": 25,
+      "bundlerRank": 7
+    },
+    {
+      "repo": "DayuanJiang/next-ai-draw-io",
+      "slug": "DayuanJiang--next-ai-draw-io",
+      "repoUrl": "https://github.com/DayuanJiang/next-ai-draw-io",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 36715,
+      "commit": "c9dc5f5cc62e7e5a327a62b39027d80033e1548c",
+      "siteUrl": "https://next-ai-drawio.jiang.jp/en",
+      "siteTitle": "Next AI Draw.io - AI-Powered Diagram Generator",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/DayuanJiang/next-ai-draw-io/blob/c9dc5f5cc62e7e5a327a62b39027d80033e1548c/package.json",
+      "productionScripts": {
+        "build": "next build"
+      },
+      "relevantManifestVersions": {
+        "next": "^16.0.7",
+        "esbuild": "^0.28.0"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/15-dx5ybuacs4.js",
+        "/_next/static/chunks/2w0u22fy2xak1.js",
+        "/_next/static/chunks/turbopack-08adix_91jzqs.js",
+        "/_next/static/chunks/3fntmmi971322.js",
+        "/_next/static/chunks/0_s-zholoh7u2.js",
+        "/_next/static/chunks/2t9hfk1mtcljf.js",
+        "/_next/static/chunks/3rei0yss8y0os.js",
+        "/_next/static/chunks/1qy1onbo5d8mt.js",
+        "/_next/static/chunks/3y6qd0icsix4q.js",
+        "/_next/static/chunks/037k7akwf5m3y.js",
+        "/_next/static/chunks/0g5m1sci5cf2_.js",
+        "/_next/static/chunks/443wc17__gff3.js"
+      ],
+      "note": "Next.js 16 的 next build 默认使用 Turbopack，Electron 构建另有 esbuild。",
+      "rank": 26,
+      "bundlerRank": 5
+    },
+    {
+      "repo": "actualbudget/actual",
+      "slug": "actualbudget--actual",
+      "repoUrl": "https://github.com/actualbudget/actual",
+      "bundler": "Vite",
+      "bundlingEngine": "Rolldown",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 30014,
+      "commit": "92865f32f307ec04e0556a8c2052819d49e8e204",
+      "siteUrl": "https://demo.actualbudget.org/",
+      "siteTitle": "Actual",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/actualbudget/actual/blob/92865f32f307ec04e0556a8c2052819d49e8e204/packages/desktop-client/package.json",
+      "productionScripts": {
+        "build:browser": "vite build --mode=browser"
+      },
+      "relevantManifestVersions": {
+        "rolldown": "^1.2.13",
+        "vite": "^8.3.4"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/static/js/index.CMrE7aQb.js"
+      ],
+      "note": "采样浏览器模式，Vite 8 底层为 Rolldown。",
+      "rank": 27,
+      "bundlerRank": 9
+    },
+    {
+      "repo": "swagger-api/swagger-ui",
+      "slug": "swagger-api--swagger-ui",
+      "repoUrl": "https://github.com/swagger-api/swagger-ui",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 29072,
+      "commit": "d3296954a6b813898d298815ac3e68daa1cf7408",
+      "siteUrl": "https://petstore.swagger.io/",
+      "siteTitle": "Swagger UI",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/swagger-api/swagger-ui/blob/d3296954a6b813898d298815ac3e68daa1cf7408/package.json",
+      "productionScripts": {
+        "build:bundle": "cross-env NODE_ENV=production BABEL_ENV=production BROWSERSLIST_ENV=isomorphic-production webpack --color --config webpack/bundle.js",
+        "build:standalone": "cross-env NODE_ENV=production BABEL_ENV=production BROWSERSLIST_ENV=browser-production webpack --color --config webpack/standalone.js"
+      },
+      "relevantManifestVersions": {
+        "webpack": "^5.97.1"
+      },
+      "additionalEvidence": [
+        {
+          "path": "dist/index.html",
+          "url": "https://github.com/swagger-api/swagger-ui/blob/d3296954a6b813898d298815ac3e68daa1cf7408/dist/index.html"
+        }
+      ],
+      "observedScriptUrls": [
+        "./swagger-ui-bundle.js",
+        "./swagger-ui-standalone-preset.js",
+        "./swagger-initializer.js"
+      ],
+      "note": "线上 Petstore 加载 webpack 生成的 Swagger UI bundle 和 standalone preset。",
+      "rank": 28,
+      "bundlerRank": 8
+    },
+    {
+      "repo": "onlook-dev/onlook",
+      "slug": "onlook-dev--onlook",
+      "repoUrl": "https://github.com/onlook-dev/onlook",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 27122,
+      "commit": "423e2e924366419e418ee049093872d535eea41a",
+      "siteUrl": "https://app.onlook.com/sign-in",
+      "siteTitle": "Sign In | Onlook",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/onlook-dev/onlook/blob/423e2e924366419e418ee049093872d535eea41a/apps/web/client/package.json",
+      "productionScripts": {
+        "build": "next build"
+      },
+      "relevantManifestVersions": {
+        "next": "16.0.7"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/68c80be805fb045c.js",
+        "/_next/static/chunks/ff9b2d7d70b4b725.js",
+        "/_next/static/chunks/d2890fdeb7209f74.js",
+        "/_next/static/chunks/fb4bdea05f859b48.js",
+        "/_next/static/chunks/b2f16b73e52a4e70.js",
+        "/_next/static/chunks/5fa70df8b4eb002f.js",
+        "/_next/static/chunks/417b03c93ea6aa9b.js",
+        "/_next/static/chunks/turbopack-d890c1a92048ba92.js",
+        "/_next/static/chunks/812a55ba67efb325.js",
+        "/_next/static/chunks/c7e246cbefdfd36b.js",
+        "/_next/static/chunks/e356d32e6ee055c9.js",
+        "/_next/static/chunks/7ece4b160a5a9f07.js"
+      ],
+      "note": "Web 客户端使用 Next.js 16 的默认生产打包器。",
+      "rank": 29,
+      "bundlerRank": 6
+    },
+    {
+      "repo": "Lissy93/dashy",
+      "slug": "Lissy93--dashy",
+      "repoUrl": "https://github.com/Lissy93/dashy",
+      "bundler": "Vite",
+      "bundlingEngine": "Rolldown",
+      "bundlerId": "vite",
+      "usagePercent": 84,
+      "stars": 26932,
+      "commit": "002c6dd559c8d7ba662aeae9228164f6cf398c75",
+      "siteUrl": "https://demo.dashy.to/",
+      "siteTitle": "Dashy",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/Lissy93/dashy/blob/002c6dd559c8d7ba662aeae9228164f6cf398c75/package.json",
+      "productionScripts": {
+        "build": "vite build"
+      },
+      "relevantManifestVersions": {
+        "vite": "^8.3.5"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/js/chunk-vendors.37a2837c.js",
+        "/js/index.8c764455.js",
+        "/js/chunk-vendors-legacy.1c320fb5.js",
+        "/js/index-legacy.a688baf7.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "Dashy 的 Vite 8 生产构建，底层为 Rolldown。",
+      "rank": 30,
+      "bundlerRank": 10
+    },
+    {
+      "repo": "akveo/ngx-admin",
+      "slug": "akveo--ngx-admin",
+      "repoUrl": "https://github.com/akveo/ngx-admin",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 25668,
+      "commit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
+      "siteUrl": "https://akveo.github.io/ngx-admin/",
+      "siteTitle": "The most popular admin dashboard based on Angular 15+ and Nebular.",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/akveo/ngx-admin/blob/dc6a442704bfef34b776b5eb15faf852d9e2f75c/package.json",
+      "productionScripts": {
+        "build": "ng build",
+        "build:prod": "npm run build -- --configuration production --aot"
+      },
+      "relevantManifestVersions": {
+        "@angular-devkit/build-angular": "^15.2.10"
+      },
+      "additionalEvidence": [
+        {
+          "path": "angular.json",
+          "url": "https://github.com/akveo/ngx-admin/blob/dc6a442704bfef34b776b5eb15faf852d9e2f75c/angular.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "assets/ghspa.js",
+        "//js.hsforms.net/forms/v2-legacy.js",
+        "//js.hsforms.net/forms/v2.js",
+        "runtime.9102817a8ba40277.js",
+        "polyfills.2e4c112654251469.js",
+        "main.dae950c9d826394f.js"
+      ],
+      "note": "Angular 的 browser builder 使用 webpack。",
+      "rank": 31,
+      "bundlerRank": 9
+    },
+    {
+      "repo": "CapSoftware/Cap",
+      "slug": "CapSoftware--Cap",
+      "repoUrl": "https://github.com/CapSoftware/Cap",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 24447,
+      "commit": "8ce7e711492a6187dda345e8424e903c9e8c25d8",
+      "siteUrl": "https://cap.so/",
+      "siteTitle": "Cap — Free Screen Recorder & Open Source Loom Alternative",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/CapSoftware/Cap/blob/8ce7e711492a6187dda345e8424e903c9e8c25d8/apps/web/package.json",
+      "productionScripts": {
+        "build": "next build --turbopack"
+      },
+      "relevantManifestVersions": {
+        "next": "16.4.5"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/immutable/chunks/05maazy5h3-mo.js",
+        "/_next/static/immutable/chunks/10rrawrdpf5co.js",
+        "/_next/static/immutable/chunks/1-rkig14g84sb.js",
+        "/_next/static/immutable/chunks/3q1--59mmlp8e.js",
+        "/_next/static/immutable/chunks/30wi52_tu34u6.js",
+        "/_next/static/immutable/chunks/turbopack-0l1ukkt8h7dio.js",
+        "/_next/static/immutable/chunks/0oexzftdzq_hu.js",
+        "/_next/static/immutable/chunks/04zzh-5n40fr7.js",
+        "/_next/static/immutable/chunks/33r3n4b3kp1oc.js",
+        "/_next/static/immutable/chunks/3s96m_gjnggsx.js",
+        "/_next/static/immutable/chunks/3med3bx6tqs2q.js",
+        "/_next/static/immutable/chunks/39bti2xrwb71k.js"
+      ],
+      "note": "网页工作区显式指定 --turbopack。",
+      "rank": 32,
+      "bundlerRank": 7
+    },
+    {
+      "repo": "bilibili/flv.js",
+      "slug": "bilibili--flv.js",
+      "repoUrl": "https://github.com/bilibili/flv.js",
+      "bundler": "webpack",
+      "bundlingEngine": "webpack",
+      "bundlerId": "webpack",
+      "usagePercent": 87,
+      "stars": 23173,
+      "commit": "42343088f22619cf014a057b3878fe3d320016a6",
+      "siteUrl": "https://bilibili.github.io/flv.js/demo/",
+      "siteTitle": "flv.js demo",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/bilibili/flv.js/blob/42343088f22619cf014a057b3878fe3d320016a6/package.json",
+      "productionScripts": {
+        "build": "webpack --mode=production --progress"
+      },
+      "relevantManifestVersions": {
+        "webpack": "^5.45.1"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "../dist/flv.js"
+      ],
+      "note": "线上视频演示使用 webpack 构建的 flv.js 浏览器产物。",
+      "rank": 33,
+      "bundlerRank": 10
+    },
+    {
+      "repo": "Open-Dev-Society/OpenStock",
+      "slug": "Open-Dev-Society--OpenStock",
+      "repoUrl": "https://github.com/Open-Dev-Society/OpenStock",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 21157,
+      "commit": "eac478f71dcff342d196a65c724dc955c221eeee",
+      "siteUrl": "https://openstock-ods.vercel.app/",
+      "siteTitle": "OpenStock",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/Open-Dev-Society/OpenStock/blob/eac478f71dcff342d196a65c724dc955c221eeee/package.json",
+      "productionScripts": {
+        "build": "next build --turbopack"
+      },
+      "relevantManifestVersions": {
+        "next": "15.5.28"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/9ed1d5ddc162b02a.js",
+        "/_next/static/chunks/28067c7af1ff25a3.js",
+        "/_next/static/chunks/08f9fdaa521f5164.js",
+        "/_next/static/chunks/76d8ede2e2165462.js",
+        "/_next/static/chunks/522518d740397639.js",
+        "/_next/static/chunks/turbopack-9e157f437ce34093.js",
+        "/_next/static/chunks/ff1a16fafef87110.js",
+        "/_next/static/chunks/424a128cff598a93.js",
+        "/_next/static/chunks/e659ba95cbc23de8.js",
+        "/_next/static/chunks/e5b013682e91cbd3.js",
+        "/_next/static/chunks/f622ac551adc565a.js",
+        "/_next/static/chunks/4bac6a8ca6bb5665.js"
+      ],
+      "note": "在线应用的生产脚本显式指定 --turbopack。",
+      "rank": 34,
+      "bundlerRank": 8
+    },
+    {
+      "repo": "tensorflow/tfjs",
+      "slug": "tensorflow--tfjs",
+      "repoUrl": "https://github.com/tensorflow/tfjs",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 19154,
+      "commit": "7f5309fef0a47545e34049903dbdae0f97285f7e",
+      "siteUrl": "https://tensorflow.github.io/tfjs/tfjs-automl/demo/img_classification/",
+      "siteTitle": "AutoML Image classification demo",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/tensorflow/tfjs/blob/7f5309fef0a47545e34049903dbdae0f97285f7e/tfjs-automl/demo/img_classification/package.json",
+      "productionScripts": {
+        "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./"
+      },
+      "relevantManifestVersions": {
+        "parcel": "~2.8.3"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "index.js"
+      ],
+      "note": "采样 AutoML 图像分类演示。",
+      "rank": 35,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "jonasschmedtmann/complete-javascript-course",
+      "slug": "jonasschmedtmann--complete-javascript-course",
+      "repoUrl": "https://github.com/jonasschmedtmann/complete-javascript-course",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 17273,
+      "commit": "76b8b79b2994dd00298b2be105aa6bc721e40a22",
+      "siteUrl": "https://forkify-v2.netlify.app/",
+      "siteTitle": "forkify // Search over 1,000,000 recipes",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/jonasschmedtmann/complete-javascript-course/blob/76b8b79b2994dd00298b2be105aa6bc721e40a22/18-forkify/final/package.json",
+      "productionScripts": {
+        "build": "parcel build index.html --dist-dir ./dist"
+      },
+      "relevantManifestVersions": {
+        "parcel": "^2.0.0-beta.1"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/index.runtime.567a4219.js",
+        "/index.361640f0.js"
+      ],
+      "note": "采样已部署的 Forkify 菜谱应用，星标为课程仓库的总星标。",
+      "rank": 36,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "video-dev/hls.js",
+      "slug": "video-dev--hls.js",
+      "repoUrl": "https://github.com/video-dev/hls.js",
+      "bundler": "Rollup",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "rollup",
+      "usagePercent": 47,
+      "stars": 17036,
+      "commit": "15ded1909feda7a414998ba022d3b88e647592f7",
+      "siteUrl": "https://hlsjs.video-dev.org/demo/",
+      "siteTitle": "hls.js demo",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/video-dev/hls.js/blob/15ded1909feda7a414998ba022d3b88e647592f7/package.json",
+      "productionScripts": {
+        "build": "rollup --config && npm run build:types",
+        "build:debug": "rollup --config --configType full --configType demo"
+      },
+      "relevantManifestVersions": {
+        "rollup": "4.62.4"
+      },
+      "additionalEvidence": [
+        {
+          "path": "rollup.config.js",
+          "url": "https://github.com/video-dev/hls.js/blob/15ded1909feda7a414998ba022d3b88e647592f7/rollup.config.js"
+        },
+        {
+          "path": "build-config.js",
+          "url": "https://github.com/video-dev/hls.js/blob/15ded1909feda7a414998ba022d3b88e647592f7/build-config.js"
+        },
+        {
+          "path": "demo/index.html",
+          "url": "https://github.com/video-dev/hls.js/blob/15ded1909feda7a414998ba022d3b88e647592f7/demo/index.html"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js",
+        "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.37.5/ace.js",
+        "canvas.js",
+        "metrics.js",
+        "../dist/hls.js",
+        "../dist/hls-demo.js",
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
+      "note": "Rollup 配置包含 demo 构建目标，采样官方播放器演示。",
+      "rank": 37,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "cobiwave/simplefolio",
+      "slug": "cobiwave--simplefolio",
+      "repoUrl": "https://github.com/cobiwave/simplefolio",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 14223,
+      "commit": "af03c0cb90d03844de2b5a4cf2045aa0f72c2442",
+      "siteUrl": "https://the-simplefolio.netlify.app/",
+      "siteTitle": "[Your name here] | Developer",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/cobiwave/simplefolio/blob/af03c0cb90d03844de2b5a4cf2045aa0f72c2442/package.json",
+      "productionScripts": {
+        "build": "parcel build"
+      },
+      "relevantManifestVersions": {
+        "parcel": "^2.8.2"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js",
+        "https://buttons.github.io/buttons.js",
+        "/index.f3360eb2.js"
+      ],
+      "note": "采样已部署的作品集模板演示。",
+      "rank": 38,
+      "bundlerRank": 3
+    },
+    {
+      "repo": "formbricks/formbricks",
+      "slug": "formbricks--formbricks",
+      "repoUrl": "https://github.com/formbricks/formbricks",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 13216,
+      "commit": "fa0546bda2f53c3e39440dd6cc240c191e1dda10",
+      "siteUrl": "https://app.formbricks.com/",
+      "siteTitle": "Formbricks",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/formbricks/formbricks/blob/fa0546bda2f53c3e39440dd6cc240c191e1dda10/apps/web/package.json",
+      "productionScripts": {
+        "build": "cross-env NODE_OPTIONS=--max-old-space-size=8192 next build && pnpm build:env-validator && pnpm build:authzed-cli"
+      },
+      "relevantManifestVersions": {
+        "next": "16.4.1",
+        "vite": "catalog:"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/1kvufu86z56yj.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/07jl0ag4livup.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/02dfhb6ufa2ga.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/1nnpdobio59rg.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/20g3_2_t3oygf.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/0jy1ty0idahh2.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/turbopack-3yv6cmuran_d1.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/1c3ixz8m8tont.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/25pj3ccxlrxtp.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/03gz7cw2165nv.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/18fpp0mnrui29.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3",
+        "/_next/static/chunks/1o_6ek95ku6lb.js?dpl=54c46bddce75ac7b80a0087dbaf0a2e7a7816f026318c98c633a49139c32b0c3"
+      ],
+      "note": "Web 前端是 Next.js 16，Vite 命令用于其他辅助产物。",
+      "rank": 39,
+      "bundlerRank": 9
+    },
+    {
+      "repo": "primefaces/primeng",
+      "slug": "primefaces--primeng",
+      "repoUrl": "https://github.com/primefaces/primeng",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 12480,
+      "commit": "fe82b291d6fedde177dc12c0af7ef1008dc1b1ff",
+      "siteUrl": "https://primeng.dev/",
+      "siteTitle": "PrimeNG - Angular UI Component Library",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/primefaces/primeng/blob/fe82b291d6fedde177dc12c0af7ef1008dc1b1ff/apps/showcase/package.json",
+      "productionScripts": {
+        "build": "ng build"
+      },
+      "relevantManifestVersions": {
+        "esbuild": "^0.19.8"
+      },
+      "additionalEvidence": [
+        {
+          "path": "apps/showcase/angular.json",
+          "url": "https://github.com/primefaces/primeng/blob/fe82b291d6fedde177dc12c0af7ef1008dc1b1ff/apps/showcase/angular.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+        "main-2F3H53HF.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "采样 Angular 展示站，其 application builder 使用 esbuild。",
+      "rank": 40,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "sissbruecker/linkding",
+      "slug": "sissbruecker--linkding",
+      "repoUrl": "https://github.com/sissbruecker/linkding",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 11385,
+      "commit": "27b7303baf41bb28babc610ac8eaa486e1ddfab5",
+      "siteUrl": "https://demo.linkding.link/login/?next=/bookmarks",
+      "siteTitle": "Login - Linkding",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/sissbruecker/linkding/blob/27b7303baf41bb28babc610ac8eaa486e1ddfab5/package.json",
+      "productionScripts": {
+        "build": "npm run build-js && npm run build-theme-light && npm run build-theme-dark",
+        "build-js": "esbuild bookmarks/frontend/index.js --bundle --minify --sourcemap --format=iife --outfile=bookmarks/static/bundle.js"
+      },
+      "relevantManifestVersions": {
+        "esbuild": "^0.28.2"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/static/bundle.js?v=1.47.0"
+      ],
+      "note": "生产脚本将书签应用前端打成 bookmarks/static/bundle.js。",
+      "rank": 41,
+      "bundlerRank": 3
+    },
+    {
+      "repo": "jnsahaj/tweakcn",
+      "slug": "jnsahaj--tweakcn",
+      "repoUrl": "https://github.com/jnsahaj/tweakcn",
+      "bundler": "Turbopack",
+      "bundlingEngine": "Turbopack",
+      "bundlerId": "turbopack",
+      "usagePercent": 28,
+      "stars": 10522,
+      "commit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
+      "siteUrl": "https://tweakcn.com/editor/theme",
+      "siteTitle": "tweakcn — Theme Generator for shadcn/ui",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/jnsahaj/tweakcn/blob/a3b47b37cba97dd637de517aab52c45ec0f83456/package.json",
+      "productionScripts": {
+        "build": "next build --turbopack"
+      },
+      "relevantManifestVersions": {
+        "next": "15.4.10"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/_next/static/chunks/d3a6bd5de84ea006.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/15ecc5db33c0fd88.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/3e6eb1bb23fbe070.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/04c33173f4a0574b.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/3e8f6808b514902d.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/bc57b4cfbd7e3c91.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/b1fa5fdb0413a1dd.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/a0beedfe5fb86682.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/89501622955b4da3.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/b7d08bf9d4fe787d.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/19d538ce3a378828.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2",
+        "/_next/static/chunks/20cc7c907362eebd.js?dpl=dpl_E1vvek2VXVojAt6W49JiTrGaAJu2"
+      ],
+      "note": "主题编辑器生产脚本显式指定 --turbopack。",
+      "rank": 42,
+      "bundlerRank": 10
+    },
+    {
+      "repo": "missive/emoji-mart",
+      "slug": "missive--emoji-mart",
+      "repoUrl": "https://github.com/missive/emoji-mart",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 9400,
+      "commit": "16978d04a766eec6455e2e8bb21cd8dc0b3c7436",
+      "siteUrl": "https://learn.missiveapp.com/open/emoji-mart",
+      "siteTitle": "Emoji Mart • One component to pick them all",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/missive/emoji-mart/blob/16978d04a766eec6455e2e8bb21cd8dc0b3c7436/packages/emoji-mart-website/package.json",
+      "productionScripts": {
+        "build": "parcel build index.html --no-autoinstall --public-url https://missiveapp.com/open/emoji-mart --dist-dir emoji-mart"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "https://learn.missiveapp.com/open/emoji-mart/example-categories.ba7dc3f2.js",
+        "https://learn.missiveapp.com/open/emoji-mart/example-categories.ca4f408c.js",
+        "https://hq.missiveapp.com/latest.js"
+      ],
+      "note": "构建命令的 public-url 直接指向该线上演示站。",
+      "rank": 43,
+      "bundlerRank": 4
+    },
+    {
+      "repo": "ng-bootstrap/ng-bootstrap",
+      "slug": "ng-bootstrap--ng-bootstrap",
+      "repoUrl": "https://github.com/ng-bootstrap/ng-bootstrap",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 8217,
+      "commit": "2a45c97082c66c955ac9c4865cf66d8d4dfd27fc",
+      "siteUrl": "https://ng-bootstrap.github.io/",
+      "siteTitle": "Angular powered Bootstrap",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/ng-bootstrap/ng-bootstrap/blob/2a45c97082c66c955ac9c4865cf66d8d4dfd27fc/package.json",
+      "productionScripts": {
+        "build": "yarn ngb:build && yarn demo:build",
+        "demo:build": "yarn demo:docs && yarn demo:sources && yarn demo:stackblitzes && ng build demo"
+      },
+      "relevantManifestVersions": {
+        "@angular/build": "^22.0.1",
+        "rollup": "^4.1.4"
+      },
+      "additionalEvidence": [
+        {
+          "path": "angular.json",
+          "url": "https://github.com/ng-bootstrap/ng-bootstrap/blob/2a45c97082c66c955ac9c4865cf66d8d4dfd27fc/angular.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://www.googletagmanager.com/gtag/js?id=G-Y252VKQEPT",
+        "polyfills-PZSJNBYU.js",
+        "main-QWLQ3PID.js"
+      ],
+      "note": "Angular demo 的 application builder 使用 esbuild。",
+      "rank": 44,
+      "bundlerRank": 4
+    },
+    {
+      "repo": "parcel-bundler/lightningcss",
+      "slug": "parcel-bundler--lightningcss",
+      "repoUrl": "https://github.com/parcel-bundler/lightningcss",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 7727,
+      "commit": "4a1b083d0958987d9241899ea93f80a962a259a9",
+      "siteUrl": "https://lightningcss.dev/playground/",
+      "siteTitle": "⚡️ Lightning CSS Playground",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/parcel-bundler/lightningcss/blob/4a1b083d0958987d9241899ea93f80a962a259a9/package.json",
+      "productionScripts": {
+        "website:build": "yarn wasm:build-release && parcel build 'website/*.html' website/playground/index.html"
+      },
+      "relevantManifestVersions": {
+        "esbuild": "^0.19.8",
+        "parcel": "^2.8.2"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/playground/index.55723f0c.js",
+        "/playground/index.72d2c0fd.js"
+      ],
+      "note": "生产命令用 Parcel 处理 playground/index.html。",
+      "rank": 45,
+      "bundlerRank": 5
+    },
+    {
+      "repo": "tensorflow/tfjs-examples",
+      "slug": "tensorflow--tfjs-examples",
+      "repoUrl": "https://github.com/tensorflow/tfjs-examples",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 6789,
+      "commit": "51430d697acd332f9d89fefe6df2fd90537d9e96",
+      "siteUrl": "https://storage.googleapis.com/tfjs-examples/mnist/dist/index.html",
+      "siteTitle": "MNIST in TensorFlow.js Layers API",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/tensorflow/tfjs-examples/blob/51430d697acd332f9d89fefe6df2fd90537d9e96/mnist/package.json",
+      "productionScripts": {
+        "build": "cross-env NODE_ENV=production parcel build --no-scope-hoist index.html --public-url ./"
+      },
+      "relevantManifestVersions": {
+        "parcel": "~2.3.2"
+      },
+      "additionalEvidence": [
+        {
+          "path": "mnist/README.md",
+          "url": "https://github.com/tensorflow/tfjs-examples/blob/51430d697acd332f9d89fefe6df2fd90537d9e96/mnist/README.md"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://cdn.plot.ly/plotly-latest.min.js",
+        "mnist.4c301e65.js"
+      ],
+      "note": "采样有公开产物的 MNIST 浏览器应用。",
+      "rank": 46,
+      "bundlerRank": 6
+    },
+    {
+      "repo": "jlfwong/speedscope",
+      "slug": "jlfwong--speedscope",
+      "repoUrl": "https://github.com/jlfwong/speedscope",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 6781,
+      "commit": "fe804e6281cf847713448c2c3e0faec3e1f62b2d",
+      "siteUrl": "https://www.speedscope.app/",
+      "siteTitle": "speedscope",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/jlfwong/speedscope/blob/fe804e6281cf847713448c2c3e0faec3e1f62b2d/package.json",
+      "productionScripts": {
+        "deploy": "./scripts/deploy.sh"
+      },
+      "relevantManifestVersions": {
+        "esbuild": "0.27.0"
+      },
+      "additionalEvidence": [
+        {
+          "path": "scripts/deploy.sh",
+          "url": "https://github.com/jlfwong/speedscope/blob/fe804e6281cf847713448c2c3e0faec3e1f62b2d/scripts/deploy.sh"
+        },
+        {
+          "path": "scripts/prepack.sh",
+          "url": "https://github.com/jlfwong/speedscope/blob/fe804e6281cf847713448c2c3e0faec3e1f62b2d/scripts/prepack.sh"
+        },
+        {
+          "path": "scripts/build-release.ts",
+          "url": "https://github.com/jlfwong/speedscope/blob/fe804e6281cf847713448c2c3e0faec3e1f62b2d/scripts/build-release.ts"
+        }
+      ],
+      "observedScriptUrls": [
+        "speedscope-POFKGZ3Q.js",
+        "chunk-LAD3R2YY.js",
+        "chunk-FW4363Y4.js",
+        "source-map-FFWWKABY.js",
+        "import-YPVHIJSN.js",
+        "demangle-B53S5JWH.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "站点发布链调用 build-release.ts，使用 esbuild 打包浏览器性能分析器。",
+      "rank": 47,
+      "bundlerRank": 5
+    },
+    {
+      "repo": "vega/vega-lite",
+      "slug": "vega--vega-lite",
+      "repoUrl": "https://github.com/vega/vega-lite",
+      "bundler": "Rollup",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "rollup",
+      "usagePercent": 47,
+      "stars": 5545,
+      "commit": "4a29260c30c2a7352ec681ecca65c0c2ad960dfc",
+      "siteUrl": "https://vega.github.io/vega-lite/examples/bar.html",
+      "siteTitle": "Simple Bar Chart | Vega-Lite",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/vega/vega-lite/blob/4a29260c30c2a7352ec681ecca65c0c2ad960dfc/package.json",
+      "productionScripts": {
+        "presite": "npm run data && npm run schema && npm run build:site && npm run build:versions && scripts/create-example-pages.sh",
+        "build:site": "rollup -c site/rollup.config.js"
+      },
+      "relevantManifestVersions": {
+        "rollup": "^4.64.0"
+      },
+      "additionalEvidence": [
+        {
+          "path": "site/rollup.config.js",
+          "url": "https://github.com/vega/vega-lite/blob/4a29260c30c2a7352ec681ecca65c0c2ad960dfc/site/rollup.config.js"
+        }
+      ],
+      "observedScriptUrls": [
+        "/vega-lite/static/bundle.js"
+      ],
+      "note": "Rollup 打包站点 static/bundle.js，采样条形图示例页面。",
+      "rank": 48,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "swimlane/ngx-datatable",
+      "slug": "swimlane--ngx-datatable",
+      "repoUrl": "https://github.com/swimlane/ngx-datatable",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 4665,
+      "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+      "siteUrl": "https://swimlane.github.io/ngx-datatable/",
+      "siteTitle": "ngx-datatable - Angular component for presenting large and complex data",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/swimlane/ngx-datatable/blob/2d4f8f2b383d875d3e3dec45969f0e42a117fb3f/package.json",
+      "productionScripts": {
+        "build-docs": "cross-env NODE_ENV=production ng build --configuration production --base-href=\"/ngx-datatable/\""
+      },
+      "relevantManifestVersions": {
+        "@angular-devkit/build-angular": "22.0.8",
+        "@angular/build": "22.0.8"
+      },
+      "additionalEvidence": [
+        {
+          "path": "angular.json",
+          "url": "https://github.com/swimlane/ngx-datatable/blob/2d4f8f2b383d875d3e3dec45969f0e42a117fb3f/angular.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://buttons.github.io/buttons.js",
+        "polyfills-PJGX3BAA.js",
+        "main-QR7UKVFJ.js"
+      ],
+      "note": "Angular demo 的 application builder 使用 esbuild。",
+      "rank": 49,
+      "bundlerRank": 6
+    },
+    {
+      "repo": "swimlane/ngx-charts",
+      "slug": "swimlane--ngx-charts",
+      "repoUrl": "https://github.com/swimlane/ngx-charts",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 4358,
+      "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
+      "siteUrl": "https://swimlane.github.io/ngx-charts/",
+      "siteTitle": "NgxCharts",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/swimlane/ngx-charts/blob/9625b8efea06a6edd1d6c7184241ded9442cf570/package.json",
+      "productionScripts": {
+        "build:demo": "npm run build:lib:prod && cross-env NODE_ENV=production ng build --configuration production --base-href=\"/ngx-charts/\""
+      },
+      "relevantManifestVersions": {
+        "@angular-devkit/build-angular": "22.0.8",
+        "@angular/build": "22.0.8",
+        "webpack": "5"
+      },
+      "additionalEvidence": [
+        {
+          "path": "angular.json",
+          "url": "https://github.com/swimlane/ngx-charts/blob/9625b8efea06a6edd1d6c7184241ded9442cf570/angular.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "polyfills-D5OGI5N6.js",
+        "main-GXUGOBIT.js"
+      ],
+      "note": "Angular demo 的 application builder 使用 esbuild。",
+      "rank": 50,
+      "bundlerRank": 7
+    },
+    {
+      "repo": "zpao/qrcode.react",
+      "slug": "zpao--qrcode.react",
+      "repoUrl": "https://github.com/zpao/qrcode.react",
+      "bundler": "tsup",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "tsup",
+      "usagePercent": 12,
+      "stars": 4295,
+      "commit": "bd6bec861c50d36a01c82193c8fcdc8a5e968465",
+      "siteUrl": "https://zpao.github.io/qrcode.react/",
+      "siteTitle": "QRCode.react Demo",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/zpao/qrcode.react/blob/bd6bec861c50d36a01c82193c8fcdc8a5e968465/package.json",
+      "productionScripts": {
+        "build:examples": "tsup examples/demo.tsx -d examples --format iife --env.NODE_ENV production --minify --target=es2017 --legacy-output",
+        "publish-docs": "gh-pages --dist=examples --src='{index.html,iife/demo.js}'"
+      },
+      "relevantManifestVersions": {
+        "tsup": "^8.5.1"
+      },
+      "additionalEvidence": [
+        {
+          "path": "examples/index.html",
+          "url": "https://github.com/zpao/qrcode.react/blob/bd6bec861c50d36a01c82193c8fcdc8a5e968465/examples/index.html"
+        }
+      ],
+      "observedScriptUrls": [
+        "iife/demo.js"
+      ],
+      "note": "tsup 直接构建 demo.tsx，发布脚本上传页面和 iife/demo.js。",
+      "rank": 51,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "0dayCTF/reverse-shell-generator",
+      "slug": "0dayCTF--reverse-shell-generator",
+      "repoUrl": "https://github.com/0dayCTF/reverse-shell-generator",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 4104,
+      "commit": "9fda27f91b1b1f370539dd534bc3bbb1f6b49bf6",
+      "siteUrl": "https://www.revshells.com/",
+      "siteTitle": "Online - Reverse Shell Generator",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/0dayCTF/reverse-shell-generator/blob/9fda27f91b1b1f370539dd534bc3bbb1f6b49bf6/package.json",
+      "productionScripts": {
+        "build": "rm -rf ./dist && ./node_modules/.bin/parcel build"
+      },
+      "relevantManifestVersions": {
+        "parcel": "2.3.2"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/index.bb7a8825.js",
+        "/index.8d852046.js",
+        "/index.81dd48a9.js",
+        "/index.20501885.js",
+        "/index.443b374a.js",
+        "/index.048f21d5.js",
+        "/index.d283d206.js",
+        "/index.bf099d5f.js"
+      ],
+      "note": "在线 Reverse Shell Generator 的生产命令直接运行 parcel build。",
+      "rank": 52,
+      "bundlerRank": 7
+    },
+    {
+      "repo": "json-schema-faker/json-schema-faker",
+      "slug": "json-schema-faker--json-schema-faker",
+      "repoUrl": "https://github.com/json-schema-faker/json-schema-faker",
+      "bundler": "Bun",
+      "bundlingEngine": "Bun",
+      "bundlerId": "bun",
+      "usagePercent": 25,
+      "stars": 3447,
+      "commit": "1f407f32e572a3403da7329f9567fa52cf455e24",
+      "siteUrl": "https://json-schema-faker.js.org/",
+      "siteTitle": "JSON Schema Faker – Generate Realistic Test Data",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/json-schema-faker/json-schema-faker/blob/1f407f32e572a3403da7329f9567fa52cf455e24/package.json",
+      "productionScripts": {
+        "build:playground": "bun build ./src/browser.ts --outfile=./public/jsf.bundle.js --target=browser --minify --format=iife --external:@faker-js/faker --external:chance"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": "public/index.html",
+          "url": "https://github.com/json-schema-faker/json-schema-faker/blob/1f407f32e572a3403da7329f9567fa52cf455e24/public/index.html"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://cdn.tailwindcss.com",
+        "https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.6/ace.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.6/mode-json.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.6/mode-yaml.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.6/theme-nord_dark.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.6/theme-github_dark.min.js",
+        "https://cdn.jsdelivr.net/npm/@faker-js/faker@8.4.1/dist/browserfaker.min.js",
+        "jsf.bundle.js",
+        "https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js",
+        "main.js"
+      ],
+      "note": "页面中的互动 Playground 加载 bun build 生成的 jsf.bundle.js。",
+      "rank": 53,
+      "bundlerRank": 1
+    },
+    {
+      "repo": "101arrowz/fflate",
+      "slug": "101arrowz--fflate",
+      "repoUrl": "https://github.com/101arrowz/fflate",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 3081,
+      "commit": "dcb3714a6c25db3a2748641019c5277413d09714",
+      "siteUrl": "https://101arrowz.github.io/fflate/",
+      "siteTitle": "fflate demo",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/101arrowz/fflate/blob/dcb3714a6c25db3a2748641019c5277413d09714/package.json",
+      "productionScripts": {
+        "build:demo": "tsc --project tsconfig.demo.json && parcel build demo/index.html --no-cache --public-url \"./\" && SC=cpGHPages npm run script"
+      },
+      "relevantManifestVersions": {
+        "parcel": "^2.9.3"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "index.6af6d217.js",
+        "index.62995380.js",
+        "index.49afaac1.js",
+        "index.7a17f155.js"
+      ],
+      "note": "Parcel 打包在线压缩演示，TypeScript 编译为前置步骤。",
+      "rank": 54,
+      "bundlerRank": 8
+    },
+    {
+      "repo": "mattlewis92/angular-calendar",
+      "slug": "mattlewis92--angular-calendar",
+      "repoUrl": "https://github.com/mattlewis92/angular-calendar",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 2811,
+      "commit": "9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68",
+      "siteUrl": "https://mattlewis92.github.io/angular-calendar/",
+      "siteTitle": "Angular 20.2+ calendar",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/mattlewis92/angular-calendar/blob/9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68/package.json",
+      "productionScripts": {
+        "gh-pages:demos": "ng build --configuration production"
+      },
+      "relevantManifestVersions": {
+        "@angular-devkit/build-angular": "^20.2.0",
+        "@angular/build": "^20.2.0"
+      },
+      "additionalEvidence": [
+        {
+          "path": "angular.json",
+          "url": "https://github.com/mattlewis92/angular-calendar/blob/9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68/angular.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://www.googletagmanager.com/gtag/js?id=G-6NL16F0Q9N",
+        "polyfills-2MKISE7G.js",
+        "main-6QOUTL5M.js"
+      ],
+      "note": "Angular demo 的 application builder 使用 esbuild。",
+      "rank": 55,
+      "bundlerRank": 8
+    },
+    {
+      "repo": "daybrush/scenejs",
+      "slug": "daybrush--scenejs",
+      "repoUrl": "https://github.com/daybrush/scenejs",
+      "bundler": "Rollup",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "rollup",
+      "usagePercent": 47,
+      "stars": 2774,
+      "commit": "da1b4eb7c045d3f7133d2bb63fe29d1080be9639",
+      "siteUrl": "https://daybrush.com/scenejs/",
+      "siteTitle": "Scene.js is a JavaScript Animation Library",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/daybrush/scenejs/blob/da1b4eb7c045d3f7133d2bb63fe29d1080be9639/packages/demo/package.json",
+      "productionScripts": {
+        "build": "rm -rf ../../demo/dist && rollup -c rollup.config.js"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": "packages/demo/rollup.config.js",
+          "url": "https://github.com/daybrush/scenejs/blob/da1b4eb7c045d3f7133d2bb63fe29d1080be9639/packages/demo/rollup.config.js"
+        },
+        {
+          "path": "package.json",
+          "url": "https://github.com/daybrush/scenejs/blob/da1b4eb7c045d3f7133d2bb63fe29d1080be9639/package.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://static.codepen.io/assets/embed/ei.js",
+        "./release/latest/dist/scene.min.js",
+        "https://daybrush.com/scenejs-effects/release/latest/dist/effects.min.js",
+        "https://daybrush.com/scenejs-media/release/latest/dist/media.min.js",
+        "https://daybrush.com/shape-svg/release/latest/dist/shape.min.js",
+        "./dist/index.js",
+        "https://www.googletagmanager.com/gtag/js?id=G-TRBNXHQ0ZF"
+      ],
+      "note": "站点加载 demo/dist/index.js，由独立 demo 工作区的 Rollup 配置生成。",
+      "rank": 56,
+      "bundlerRank": 3
+    },
+    {
+      "repo": "abrahamjuliot/creepjs",
+      "slug": "abrahamjuliot--creepjs",
+      "repoUrl": "https://github.com/abrahamjuliot/creepjs",
+      "bundler": "Rollup",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "rollup",
+      "usagePercent": 47,
+      "stars": 2541,
+      "commit": "10aa6724cd33a1015db1574211890518cd04f0cc",
+      "siteUrl": "https://abrahamjuliot.github.io/creepjs/",
+      "siteTitle": "CreepJS",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/abrahamjuliot/creepjs/blob/10aa6724cd33a1015db1574211890518cd04f0cc/package.json",
+      "productionScripts": {
+        "build": "pnpm -s build:js && pnpm -s build:css",
+        "build:js": "pnpm build:dev",
+        "build:dev": "cross-env NODE_OPTIONS=--no-warnings TSCONFIG_PATH=./tsconfig.build.json pnpm exec rollup --config rollup.config.js"
+      },
+      "relevantManifestVersions": {
+        "rollup": "^4.30.1"
+      },
+      "additionalEvidence": [
+        {
+          "path": "rollup.config.js",
+          "url": "https://github.com/abrahamjuliot/creepjs/blob/10aa6724cd33a1015db1574211890518cd04f0cc/rollup.config.js"
+        },
+        {
+          "path": "docs/index.html",
+          "url": "https://github.com/abrahamjuliot/creepjs/blob/10aa6724cd33a1015db1574211890518cd04f0cc/docs/index.html"
+        }
+      ],
+      "observedScriptUrls": [
+        "creep.js"
+      ],
+      "note": "Rollup 打包的 creep.js 由同仓库的 Pages 页面加载。",
+      "rank": 57,
+      "bundlerRank": 4
+    },
+    {
+      "repo": "download-directory/download-directory.github.io",
+      "slug": "download-directory--download-directory.github.io",
+      "repoUrl": "https://github.com/download-directory/download-directory.github.io",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 1899,
+      "commit": "eee887009ab94640d163a66047a7e33778190902",
+      "siteUrl": "https://download-directory.github.io/",
+      "siteTitle": "Download GitHub directory",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/download-directory/download-directory.github.io/blob/eee887009ab94640d163a66047a7e33778190902/package.json",
+      "productionScripts": {
+        "build": "run-s build:*",
+        "build:bundle": "parcel build --dist-dir public --no-scope-hoist"
+      },
+      "relevantManifestVersions": {
+        "parcel": "^2.12.0"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "/index.ea5e85a1.js"
+      ],
+      "note": "公开目录下载工具的构建命令写入 public。",
+      "rank": 58,
+      "bundlerRank": 9
+    },
+    {
+      "repo": "fiduswriter/simple-datatables",
+      "slug": "fiduswriter--simple-datatables",
+      "repoUrl": "https://github.com/fiduswriter/simple-datatables",
+      "bundler": "Rollup",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "rollup",
+      "usagePercent": 47,
+      "stars": 1607,
+      "commit": "ff80161244e78c10f2183e7a238f3a6c0cb14023",
+      "siteUrl": "https://fiduswriter.github.io/simple-datatables/demos/1-simple/",
+      "siteTitle": "Simple - simple-datatables",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/fiduswriter/simple-datatables/blob/ff80161244e78c10f2183e7a238f3a6c0cb14023/package.json",
+      "productionScripts": {
+        "build_demos": "npm run build_demos_js && shx cp -R src/css docs/demos/dist/",
+        "build_demos_js": "rollup -c rollup.demos.config.mjs"
+      },
+      "relevantManifestVersions": {
+        "rollup": "^4.62.3"
+      },
+      "additionalEvidence": [
+        {
+          "path": "rollup.demos.config.mjs",
+          "url": "https://github.com/fiduswriter/simple-datatables/blob/ff80161244e78c10f2183e7a238f3a6c0cb14023/rollup.demos.config.mjs"
+        },
+        {
+          "path": "docs/demos/1-simple/index.html",
+          "url": "https://github.com/fiduswriter/simple-datatables/blob/ff80161244e78c10f2183e7a238f3a6c0cb14023/docs/demos/1-simple/index.html"
+        }
+      ],
+      "observedScriptUrls": [],
+      "note": "采样导入 dist/module.js 的 Simple 演示，和仓库另有的 Browserify UMD 演示区分。",
+      "rank": 59,
+      "bundlerRank": 5
+    },
+    {
+      "repo": "peggyjs/peggy",
+      "slug": "peggyjs--peggy",
+      "repoUrl": "https://github.com/peggyjs/peggy",
+      "bundler": "tsup",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "tsup",
+      "usagePercent": 12,
+      "stars": 1187,
+      "commit": "643957df9cfd539ccaac18f800c8fd1a80f58e0f",
+      "siteUrl": "https://peggyjs.org/online.html",
+      "siteTitle": "Online Version » Peggy – Parser Generator for JavaScript",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/peggyjs/peggy/blob/643957df9cfd539ccaac18f800c8fd1a80f58e0f/package.json",
+      "productionScripts": {
+        "make": "npm run parser && npm run ts && npm run examples && npm run docs && npm run headers && npm run deploy",
+        "ts": "tsup",
+        "deploy": "cpy --flat browser/peggy.min.js docs/vendor/peggy/"
+      },
+      "relevantManifestVersions": {
+        "tsup": "^9.0.0"
+      },
+      "additionalEvidence": [
+        {
+          "path": "tsup.config.js",
+          "url": "https://github.com/peggyjs/peggy/blob/643957df9cfd539ccaac18f800c8fd1a80f58e0f/tsup.config.js"
+        },
+        {
+          "path": "docs/online.html",
+          "url": "https://github.com/peggyjs/peggy/blob/643957df9cfd539ccaac18f800c8fd1a80f58e0f/docs/online.html"
+        }
+      ],
+      "observedScriptUrls": [
+        "/vendor/jquery.min.js",
+        "/vendor/FileSaver.min.js",
+        "/vendor/inspect.js",
+        "/vendor/peggy/peggy.min.js",
+        "/vendor/codemirror/codemirror.js",
+        "/vendor/codemirror/lint.js",
+        "/js/online.js"
+      ],
+      "note": "tsup 生成在线解析器核心，deploy 将其复制至页面实际加载的 vendor 路径。",
+      "rank": 60,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "primefaces/sakai-ng",
+      "slug": "primefaces--sakai-ng",
+      "repoUrl": "https://github.com/primefaces/sakai-ng",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 951,
+      "commit": "96d71496d685b5c110efd2875abaa2bf89a56ad2",
+      "siteUrl": "https://sakai.primeng.org/",
+      "siteTitle": "Sakai - PrimeNG",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/primefaces/sakai-ng/blob/96d71496d685b5c110efd2875abaa2bf89a56ad2/package.json",
+      "productionScripts": {
+        "build": "ng build"
+      },
+      "relevantManifestVersions": {
+        "@angular-devkit/build-angular": "^21"
+      },
+      "additionalEvidence": [
+        {
+          "path": "angular.json",
+          "url": "https://github.com/primefaces/sakai-ng/blob/96d71496d685b5c110efd2875abaa2bf89a56ad2/angular.json"
+        }
+      ],
+      "observedScriptUrls": [
+        "main-VLNZ5W7G.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "Angular application builder 使用 esbuild。",
+      "rank": 61,
+      "bundlerRank": 9
+    },
+    {
+      "repo": "okikio/bundlejs",
+      "slug": "okikio--bundlejs",
+      "repoUrl": "https://github.com/okikio/bundlejs",
+      "bundler": "esbuild",
+      "bundlingEngine": "esbuild",
+      "bundlerId": "esbuild",
+      "usagePercent": 54,
+      "stars": 915,
+      "commit": "96033c66d7361f79e25bb9b511f4286805fcb9fb",
+      "siteUrl": "https://bundlejs.com/",
+      "siteTitle": "bundlejs - Online bundler + npm package size checker",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/okikio/bundlejs/blob/96033c66d7361f79e25bb9b511f4286805fcb9fb/package.json",
+      "productionScripts": {
+        "build": "gulp build"
+      },
+      "relevantManifestVersions": {
+        "esbuild": "^0.28.0",
+        "rollup": "^4.60.1"
+      },
+      "additionalEvidence": [
+        {
+          "path": "gulpfile.js",
+          "url": "https://github.com/okikio/bundlejs/blob/96033c66d7361f79e25bb9b511f4286805fcb9fb/gulpfile.js"
+        }
+      ],
+      "observedScriptUrls": [
+        "/js/theme.min.js",
+        "/js/main.min.js"
+      ],
+      "note": "Gulp 使用 gulp-esbuild 打包站点页面脚本，区别于站点提供的在线打包功能。",
+      "rank": 62,
+      "bundlerRank": 10
+    },
+    {
+      "repo": "omnibrain/svguitar",
+      "slug": "omnibrain--svguitar",
+      "repoUrl": "https://github.com/omnibrain/svguitar",
+      "bundler": "Rollup",
+      "bundlingEngine": "Rollup",
+      "bundlerId": "rollup",
+      "usagePercent": 47,
+      "stars": 826,
+      "commit": "3b465fdc8af57a9ed948e168ada1c87c9aafd574",
+      "siteUrl": "https://omnibrain.github.io/svguitar/",
+      "siteTitle": "SVGuitar Demo",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/omnibrain/svguitar/blob/3b465fdc8af57a9ed948e168ada1c87c9aafd574/package.json",
+      "productionScripts": {
+        "build": "run-s build:tsc build:rollup build:typedoc build:demo",
+        "build:rollup": "rollup -c rollup.config.ts",
+        "build:demo": "ts-node tools/build-demo"
+      },
+      "relevantManifestVersions": {
+        "rollup": "^2.0.0"
+      },
+      "additionalEvidence": [
+        {
+          "path": "rollup.config.ts",
+          "url": "https://github.com/omnibrain/svguitar/blob/3b465fdc8af57a9ed948e168ada1c87c9aafd574/rollup.config.ts"
+        },
+        {
+          "path": "tools/build-demo.ts",
+          "url": "https://github.com/omnibrain/svguitar/blob/3b465fdc8af57a9ed948e168ada1c87c9aafd574/tools/build-demo.ts"
+        }
+      ],
+      "observedScriptUrls": [
+        "https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Array.prototype.reduce%2CObject.keys%2CArray.prototype.forEach",
+        "https://code.jquery.com/jquery-3.2.1.slim.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js",
+        "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
+        "./js/svguitar.umd.js"
+      ],
+      "note": "演示的互动吉他和弦渲染加载 Rollup 生成的 svguitar.umd.js。",
+      "rank": 63,
+      "bundlerRank": 6
+    },
+    {
+      "repo": "micahkepe/jsongrep",
+      "slug": "micahkepe--jsongrep",
+      "repoUrl": "https://github.com/micahkepe/jsongrep",
+      "bundler": "Bun",
+      "bundlingEngine": "Bun",
+      "bundlerId": "bun",
+      "usagePercent": 25,
+      "stars": 678,
+      "commit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
+      "siteUrl": "https://micahkepe.com/jsongrep/playground/",
+      "siteTitle": "jsongrep playground",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/micahkepe/jsongrep/blob/2c913fa21c2a264311ff8b1c44ed5fd4f68363e5/playground/package.json",
+      "productionScripts": {
+        "build": "bun run setup && bun build ./src/index.html --outdir=dist --sourcemap --target=browser --minify --define:process.env.NODE_ENV='\"production\"' --env='BUN_PUBLIC_*' && bun run wasm:move"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "./index-gj41en0j.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "采样 JSON 查询 Playground，bun build 以 HTML 为入口。",
+      "rank": 64,
+      "bundlerRank": 2
+    },
+    {
+      "repo": "chenglou/chenglou.github.io",
+      "slug": "chenglou--chenglou.github.io",
+      "repoUrl": "https://github.com/chenglou/chenglou.github.io",
+      "bundler": "Bun",
+      "bundlingEngine": "Bun",
+      "bundlerId": "bun",
+      "usagePercent": 25,
+      "stars": 573,
+      "commit": "4f0d972320af1b0a112d9af33616d3bc915a482a",
+      "siteUrl": "https://chenglou.me/",
+      "siteTitle": "My Midjourney AI Art",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/chenglou/chenglou.github.io/blob/4f0d972320af1b0a112d9af33616d3bc915a482a/package.json",
+      "productionScripts": {
+        "build": "bun build ./index.html --outdir=dist --minify"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": ".github/workflows/deploy.yml",
+          "url": "https://github.com/chenglou/chenglou.github.io/blob/4f0d972320af1b0a112d9af33616d3bc915a482a/.github/workflows/deploy.yml"
+        }
+      ],
+      "observedScriptUrls": [
+        "./index-sykvqdpd.js"
+      ],
+      "note": "Pages 工作流执行该脚本并部署 dist。",
+      "rank": 65,
+      "bundlerRank": 3
+    },
+    {
+      "repo": "RockwellShah/filekey",
+      "slug": "RockwellShah--filekey",
+      "repoUrl": "https://github.com/RockwellShah/filekey",
+      "bundler": "Bun",
+      "bundlingEngine": "Bun",
+      "bundlerId": "bun",
+      "usagePercent": 25,
+      "stars": 486,
+      "commit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
+      "siteUrl": "https://filekey.app",
+      "siteTitle": "FileKey: encrypt and share files with passkeys",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/RockwellShah/filekey/blob/4f148f6f55e61d8bbeed7a812f31756cdbae12af/reference/package.json",
+      "productionScripts": {
+        "build:web": "bun run web/gen-source.ts && bun build web/app.ts web/worker.ts web/selftest.ts --outdir web/dist --target browser --minify && bun run web/build-recover.ts && bun run web/build-blog.ts"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/RockwellShah/filekey/blob/4f148f6f55e61d8bbeed7a812f31756cdbae12af/README.md"
+        }
+      ],
+      "observedScriptUrls": [
+        "./dist/app.js",
+        "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+      ],
+      "note": "公开加密页面加载该命令生成的 dist/app.js。",
+      "rank": 66,
+      "bundlerRank": 4
+    },
+    {
+      "repo": "mikehadlow/gtr-cof",
+      "slug": "mikehadlow--gtr-cof",
+      "repoUrl": "https://github.com/mikehadlow/gtr-cof",
+      "bundler": "Bun",
+      "bundlingEngine": "Bun",
+      "bundlerId": "bun",
+      "usagePercent": 25,
+      "stars": 380,
+      "commit": "7fa1f50f9a849bc251c6cbc9637fc4bbb0cf2b89",
+      "siteUrl": "https://guitardashboard.com/",
+      "siteTitle": "Guitar Dashboard",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/mikehadlow/gtr-cof/blob/7fa1f50f9a849bc251c6cbc9637fc4bbb0cf2b89/package.json",
+      "productionScripts": {
+        "build": "bun run check && bun build ./src/index.ts --outfile ./docs/gtr-cof.js --target=browser --sourcemap=linked && mv ./src/gtr-cof.js ./src/gtr-cof.js.map ./docs/ && bun build ./src/styles/index.css --outfile ./docs/gtr-cof.css"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": "docs/index.html",
+          "url": "https://github.com/mikehadlow/gtr-cof/blob/7fa1f50f9a849bc251c6cbc9637fc4bbb0cf2b89/docs/index.html"
+        }
+      ],
+      "observedScriptUrls": [
+        "gtr-cof.js?v=7fa1f50f9a849bc251c6cbc9637fc4bbb0cf2b89"
+      ],
+      "note": "Guitar Dashboard 加载 Bun 生成的 gtr-cof.js，资源版本与固定提交一致。",
+      "rank": 67,
+      "bundlerRank": 5
+    },
+    {
+      "repo": "parcel-bundler/website",
+      "slug": "parcel-bundler--website",
+      "repoUrl": "https://github.com/parcel-bundler/website",
+      "bundler": "Parcel",
+      "bundlingEngine": "Parcel",
+      "bundlerId": "parcel",
+      "usagePercent": 26,
+      "stars": 365,
+      "commit": "01c63ed0cb880285db774ec7c96f88da24aeaec7",
+      "siteUrl": "https://parceljs.org/",
+      "siteTitle": "Parcel",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/parcel-bundler/website/blob/01c63ed0cb880285db774ec7c96f88da24aeaec7/package.json",
+      "productionScripts": {
+        "build": "rm -rf _site dist; eleventy; parcel build src/home/index.html '_site/*.html' _site/*/index.html '_site/*/*/*.html' --public-url $(node public-url.js)"
+      },
+      "relevantManifestVersions": {
+        "parcel": "^2.15.0"
+      },
+      "additionalEvidence": [],
+      "observedScriptUrls": [
+        "https://www.googletagmanager.com/gtag/js?id=UA-110647385-1"
+      ],
+      "note": "官方站点的 Eleventy 输出与主页由 Parcel 打包。",
+      "rank": 68,
+      "bundlerRank": 10
+    },
+    {
+      "repo": "olragon/binpackingjs",
+      "slug": "olragon--binpackingjs",
+      "repoUrl": "https://github.com/olragon/binpackingjs",
+      "bundler": "Bun",
+      "bundlingEngine": "Bun",
+      "bundlerId": "bun",
+      "usagePercent": 25,
+      "stars": 192,
+      "commit": "15c28a39e2b778bad70539b71835d352d08507e7",
+      "siteUrl": "https://olragon.github.io/binpackingjs/",
+      "siteTitle": "binpackingjs · showcase",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/olragon/binpackingjs/blob/15c28a39e2b778bad70539b71835d352d08507e7/playground/package.json",
+      "productionScripts": {
+        "build": "rm -rf dist && bun build index.html --outdir=dist --target=browser --minify --public-path=./"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/olragon/binpackingjs/blob/15c28a39e2b778bad70539b71835d352d08507e7/README.md"
+        }
+      ],
+      "observedScriptUrls": [
+        "./index-jv5h56zn.js"
+      ],
+      "note": "GitHub Pages 上的互动装箱演示，HTML 入口由 Bun 打包。",
+      "rank": 69,
+      "bundlerRank": 6
+    },
+    {
+      "repo": "tednaleid/grimdawn-devotions",
+      "slug": "tednaleid--grimdawn-devotions",
+      "repoUrl": "https://github.com/tednaleid/grimdawn-devotions",
+      "bundler": "Bun",
+      "bundlingEngine": "Bun",
+      "bundlerId": "bun",
+      "usagePercent": 25,
+      "stars": 6,
+      "commit": "bd749c4e1f05c7f6d03a82798b685063e35c956a",
+      "siteUrl": "https://tednaleid.github.io/grimdawn-devotions/",
+      "siteTitle": "Grim Dawn Devotion Planner",
+      "siteHttpStatus": 200,
+      "packageJson": "https://github.com/tednaleid/grimdawn-devotions/blob/bd749c4e1f05c7f6d03a82798b685063e35c956a/web/package.json",
+      "productionScripts": {
+        "build": "bun build src/app/main.ts --outdir dist --target browser"
+      },
+      "relevantManifestVersions": {},
+      "additionalEvidence": [
+        {
+          "path": ".github/workflows/deploy.yml",
+          "url": "https://github.com/tednaleid/grimdawn-devotions/blob/bd749c4e1f05c7f6d03a82798b685063e35c956a/.github/workflows/deploy.yml"
+        }
+      ],
+      "observedScriptUrls": [
+        "./main-dj5z7q7b.js"
+      ],
+      "note": "Pages 部署工作流调用生成 web/dist 的构建链。",
+      "rank": 70,
+      "bundlerRank": 7
+    }
+  ]
+}
