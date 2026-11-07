@@ -1,0 +1,1 @@
+window.__LIBRECHAT_CONFIG__=Object.assign({},window.__LIBRECHAT_CONFIG__,{"hasConfiguredFooter":false,"landingFooter":true});

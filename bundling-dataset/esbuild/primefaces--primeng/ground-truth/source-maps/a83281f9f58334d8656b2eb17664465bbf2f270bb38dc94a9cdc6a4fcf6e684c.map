@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../packages/primeng/src/basemodelholder/basemodelholder.ts"],
+  "sourcesContent": ["import { computed, Directive, signal } from '@angular/core';\nimport { isNotEmpty } from '@primeuix/utils';\nimport { BaseComponent } from 'primeng/basecomponent';\n\n@Directive({ standalone: true })\nexport class BaseModelHolder<PT = any> extends BaseComponent<PT> {\n    modelValue = signal<string | string[] | any | undefined>(undefined);\n\n    $filled = computed(() => isNotEmpty(this.modelValue()));\n\n    writeModelValue(value: any) {\n        this.modelValue.set(value);\n    }\n}\n"],
+  "mappings": "yHAKA,IAAaA,GAA0B,IAAA,CAAjC,MAAOA,UAAkCC,CAAiB,CAC5DC,WAAaC,EAA4CC,MAAS,EAElEC,QAAUC,EAAS,IAAMC,EAAW,KAAKL,WAAU,CAAE,CAAC,EAEtDM,gBAAgBC,EAAU,CACtB,KAAKP,WAAWQ,IAAID,CAAK,CAC7B,gEAPST,CAAe,IAAAW,GAAfX,CAAe,CAAA,CAAA,GAAA,2BAAfA,EAAeY,SAAA,CAAAC,CAAA,CAAA,CAAA,SAAfb,CAA0B,GAAA",
+  "names": ["BaseModelHolder", "BaseComponent", "modelValue", "signal", "undefined", "$filled", "computed", "isNotEmpty", "writeModelValue", "value", "set", "__ngFactoryType__", "features", "\u0275\u0275InheritDefinitionFeature"]
+}

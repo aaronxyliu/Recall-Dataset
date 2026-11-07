@@ -1,0 +1,2 @@
+import{hr as o,h_ as r,eo as n,ej as t}from"./index--ZPpORdW.js";const l={viewBox:"0 0 24 24",width:"1.2em",height:"1.2em"};function a(i,e){return r(),n("svg",l,[...e[0]||(e[0]=[t("path",{fill:"none",stroke:"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M12 19h8M4 17l6-6l-6-6"},null,-1)])])}const c=o({name:"lucide-terminal",render:a});export{c as I};
+//# sourceMappingURL=terminal-LfUQdZ4a.js.map

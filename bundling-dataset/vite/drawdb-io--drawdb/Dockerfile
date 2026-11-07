@@ -5,6 +5,7 @@ COPY package*.json ./
 RUN npm ci
 COPY . .
 ENV NODE_OPTIONS="--max-old-space-size=4096"
+RUN node -e 'const fs=require('"'"'fs'"'"'),p=require('"'"'./package.json'"'"');p.scripts.build=p.scripts.build.replace('"'"'vite build'"'"','"'"'vite build --sourcemap'"'"');fs.writeFileSync('"'"'package.json'"'"',JSON.stringify(p))'
 RUN npm run build
 
 # Stage 2: Setup the Nginx Server to serve the app

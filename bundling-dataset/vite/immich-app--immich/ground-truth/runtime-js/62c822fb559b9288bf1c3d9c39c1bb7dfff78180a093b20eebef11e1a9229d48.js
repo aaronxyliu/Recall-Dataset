@@ -1,0 +1,2 @@
+import{s as e}from"./BDt1khSy.js";import{a as t,f as n,g as r}from"./BWGXZOld.js";import{b as i}from"./Bd2jfYsB.js";import{S as a}from"./D9zhaSel.js";import{t as o}from"./C-CtrsaE.js";import{t as s}from"./B-OCdmCI.js";async function c(a){e(a),await i();let c=await t.query(n());await o.load(),c.maintenanceMode||await Promise.all([t.query(r()),s.init()])}var l=a(c,()=>`singlevalue`);export{l as t};
+//# sourceMappingURL=QkuwkIq9.js.map

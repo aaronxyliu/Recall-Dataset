@@ -1,0 +1,2 @@
+import{FC as e,sC as t}from"./Icon.LX2Zi3Im.js";import{u as n}from"./tanstack-vendor.NtMqtWSc.js";var r=(r,i)=>n([t.insights,r],()=>e.getInsights(r),{keepPreviousData:!0,refetchOnWindowFocus:!1,...i}),i=(r,i)=>n([t.insightsAccess,r??`anonymous`],()=>e.getInsightsAccess(),{retry:!1,staleTime:6e4,refetchOnWindowFocus:!1,...i});export{r as n,i as t};
+//# sourceMappingURL=queries.BcgR3F5Q.js.map

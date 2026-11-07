@@ -1,0 +1,2 @@
+import{$t as e,St as t,a as n,i as r,mt as i,xt as a}from"./DHn4i6Qo.js";import{t as o}from"./BKXq98Fw.js";var s=new Set([`$$slots`,`$$events`,`$$legacy`,`class`,`children`]);function c(c,l){let u=r(l,s);o(c,n({direction:`column`,align:`center`,get class(){return l.class}},()=>u,{children:(n,r)=>{var o=t(),s=e(o);i(s,()=>l.children),a(n,o)},$$slots:{default:!0}}))}export{c as t};
+//# sourceMappingURL=Cm9IpxpI.js.map

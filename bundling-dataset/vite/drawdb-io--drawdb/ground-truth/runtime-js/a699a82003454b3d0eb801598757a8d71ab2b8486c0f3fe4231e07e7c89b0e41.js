@@ -1,0 +1,1 @@
+window.__DRAWDB_CONFIG__ = { backendUrl: "", gistBackendUrl: "" };

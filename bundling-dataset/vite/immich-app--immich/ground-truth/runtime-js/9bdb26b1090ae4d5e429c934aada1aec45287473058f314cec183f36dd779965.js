@@ -1,0 +1,2 @@
+import{a as e,i as t,vn as n,yn as r}from"./DHn4i6Qo.js";import{Wc as i}from"./BWGXZOld.js";import{a}from"./BKXq98Fw.js";var o=new Set([`$$slots`,`$$events`,`$$legacy`]);function s(s,c){r(c,!0);let l=t(c,o);a(s,e({get for(){return i.Modal},get as(){return i.ModalHeader}},()=>l)),n()}export{s as t};
+//# sourceMappingURL=DS-Fmr8a.js.map

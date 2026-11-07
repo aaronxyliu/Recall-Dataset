@@ -1,0 +1,2 @@
+import{Pt as e,on as t,pn as n}from"./DHn4i6Qo.js";import{t as r}from"./DP1jnaOx.js";var i=new class{#e=n(()=>r.isFullSidebar);get isOpen(){return e(this.#e)}set isOpen(e){t(this.#e,e)}reset(){this.isOpen=r.isFullSidebar}toggle(){this.isOpen=r.isFullSidebar||!this.isOpen}};export{i as t};
+//# sourceMappingURL=XIzE5zm4.js.map

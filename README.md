@@ -2,11 +2,42 @@
 
 This repository owns dataset metadata, the bundler-organized catalog, local held-out source checkouts, fixture inputs, and dataset preparation scripts. Recovery code lives in `../ReCall`; experiment outputs and the paper live in `../ReCall Exp`.
 
+The [function ground-truth dataset](function-ground-truth/README.md) records the sampled production dependencies, browser capture coverage, and source-to-bundle function pairs for the 26 retained experiment repositories, with 19,914 one-to-one pairs.
+
+For new applications, follow the [agent setup guide](WEB_APPLICATION_SETUP_GUIDE.md) for Docker builds, production source maps, browser verification, and common failure fixes.
+
+## Tracked experiment artifacts
+
+The active experiment contains **26 repositories and 19,914 one-to-one function pairs**. Its durable entry point is [bundling-dataset/one-to-one-evaluation.json](bundling-dataset/one-to-one-evaluation.json). All captured JavaScript, source maps, and pair records in the following layout are tracked by Git.
+
+```text
+bundling-dataset/
+  one-to-one-evaluation.json
+  <bundler>/<owner>--<repo>/
+    Dockerfile                       # source-map-enabled application build
+    Dockerfile.dockerignore           # build-context rules, when required
+    README.md                        # application setup and page URL
+    ground-truth/
+      runtime-js/<sha256>.js                 # exact captured JavaScript
+      source-maps/<sha256>.map              # exact captured source maps
+      func-mapping.json             # one-to-one function records
+```
+
+Each retained repository has one Dockerfile at `bundling-dataset/<bundler>/<owner>--<repo>/Dockerfile`. It enables or retains source maps and includes any packaging fixes needed to serve them. Use the repository’s documented build context and launch commands. The archive script copies captured artifacts and function mappings while using this outer Dockerfile as the canonical recipe.
+
+Manifest paths resolve relative to `bundling-dataset/`. A function identifier in `func-mapping.json` uses `path#sha256@start-end`. Its offsets are half-open UTF-16 code-unit offsets into the corresponding artifact. Original library source is supplied by the map's `sourcesContent` where available. The pair records store locations and relationships; the archived scripts and maps supply the actual code.
+
+The archive preserves captured bytes under content-hash filenames. A bundled function's hash identifies its file under `runtime-js/`. Source-map filenames identify their content hashes under `source-maps/`; their `sources` and `sourcesContent` identify original files. A script's original map URL may refer to its former HTTP location. Keep the manifest, scripts, maps, and metadata together when transferring the dataset.
+
+The archive occupies approximately 441 MB before Git compression. Source checkouts under `builds/` remain local and ignored. To publish refreshed capture records into this layout, run `python3 scripts/archive-function-ground-truth.py` from this repository. It verifies content hashes and copies new artifacts from the capture scratch directories. The tracked archive can be read independently of those temporary directories.
+
 ## Frontend repository builds
 
 Build recipes, setup instructions, and browser evidence are organized by build tool and repository under `bundling-dataset/<bundler>/<owner>--<repository>/`. Local source checkouts live in this repository’s Git-ignored `builds/<bundler>/<owner>--<repository>/` directory.
 
-The table covers the [original 70-repository selection](https://github.com/aaronxyliu/Recall-Dataset/blob/42cbd7235c2f6c2133eebed394c989cefacba34c/selection.json). The page column reports local browser observations. “Untested” means a local Docker build and browser check are pending. Three pilot builds have retained reproduction records. The excluded gallery is listed for traceability.
+The table covers the [original 70-repository selection](https://github.com/aaronxyliu/Recall-Dataset/blob/42cbd7235c2f6c2133eebed394c989cefacba34c/selection.json). The page column reports local browser observations. “Untested” means a local Docker build and browser check are pending. The status links lead to repository-specific build and launch instructions. A verified page has a local browser observation; a failed attempt records the stage reached. The excluded gallery is listed for traceability.
+
+**Docker reproduction results.** All 30 selected webpack, Vite, and esbuild frontends built from their pinned commits. Chrome verified 29 local pages: 10 webpack, 9 Vite, and 10 esbuild. The tldraw whiteboard requires Clerk configuration and local services. Each project’s setup instructions link to its verification record; backend-dependent projects include local Compose commands.
 
 Groups follow State of JS 2025 usage among all respondents, highest first. Within each group, repositories are sorted by GitHub stars from the November 2026 selection snapshot. Stars count the whole repository, including for frontends selected from monorepos.
 
@@ -14,46 +45,46 @@ Groups follow State of JS 2025 usage among all respondents, highest first. Withi
 
 | Repository | Stars | Selected frontend | Upstream commit | Local page opens? | Docker build status |
 |---|---:|---|---|---|---|
-| [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 458,611 | Interactive coding curriculum | [`a7292b4f26e37f59ba12d670e53d8806d5c2527f`](https://github.com/freeCodeCamp/freeCodeCamp/commit/a7292b4f26e37f59ba12d670e53d8806d5c2527f) | Untested | Pending |
-| [supabase/supabase](https://github.com/supabase/supabase) | 114,581 | Supabase platform website | [`aa9d04e4f77447e2b6aaf317b686007aff05aa96`](https://github.com/supabase/supabase/commit/aa9d04e4f77447e2b6aaf317b686007aff05aa96) | Untested | Pending |
-| [PanJiaChen/vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) | 90,118 | Vue administration dashboard template | [`6858a9ad67483025f6a9432a926beb9327037be3`](https://github.com/PanJiaChen/vue-element-admin/commit/6858a9ad67483025f6a9432a926beb9327037be3) | Untested | Pending |
-| [dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide) | 79,854 | Prompt engineering guide | [`57673726396dd94acb23bdb1e67f27c78ee85a8e`](https://github.com/dair-ai/Prompt-Engineering-Guide/commit/57673726396dd94acb23bdb1e67f27c78ee85a8e) | Untested | Pending |
-| [mozilla/pdf.js](https://github.com/mozilla/pdf.js) | 54,101 | Browser PDF viewer | [`578fe15c435f7c91eb1fc4f30963b645e56e20ff`](https://github.com/mozilla/pdf.js/commit/578fe15c435f7c91eb1fc4f30963b645e56e20ff) | Untested | Pending |
-| [bailicangdu/vue2-elm](https://github.com/bailicangdu/vue2-elm) | 40,964 | Food delivery application demo | [`b85ff0220366be863868269177a4abf74c7a85ca`](https://github.com/bailicangdu/vue2-elm/commit/b85ff0220366be863868269177a4abf74c7a85ca) | Untested | Pending |
-| [dokploy/dokploy](https://github.com/dokploy/dokploy) | 38,265 | Application deployment dashboard | [`fe9ae2a7db22730ff1ab72939e10806848c7cccd`](https://github.com/dokploy/dokploy/commit/fe9ae2a7db22730ff1ab72939e10806848c7cccd) | Untested | Pending |
-| [swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui) | 29,072 | Interactive OpenAPI explorer | [`d3296954a6b813898d298815ac3e68daa1cf7408`](https://github.com/swagger-api/swagger-ui/commit/d3296954a6b813898d298815ac3e68daa1cf7408) | Untested | Pending |
-| [akveo/ngx-admin](https://github.com/akveo/ngx-admin) | 25,668 | Angular administration dashboard demo | [`dc6a442704bfef34b776b5eb15faf852d9e2f75c`](https://github.com/akveo/ngx-admin/commit/dc6a442704bfef34b776b5eb15faf852d9e2f75c) | Untested | Pending |
-| [bilibili/flv.js](https://github.com/bilibili/flv.js) | 23,173 | FLV video playback demo | [`42343088f22619cf014a057b3878fe3d320016a6`](https://github.com/bilibili/flv.js/commit/42343088f22619cf014a057b3878fe3d320016a6) | Untested | Pending |
+| [freeCodeCamp/freeCodeCamp](https://github.com/freeCodeCamp/freeCodeCamp) | 458,611 | Interactive coding curriculum | [`a7292b4f26e37f59ba12d670e53d8806d5c2527f`](https://github.com/freeCodeCamp/freeCodeCamp/commit/a7292b4f26e37f59ba12d670e53d8806d5c2527f) | Yes — local page verified | [Verified](bundling-dataset/webpack/freeCodeCamp--freeCodeCamp/README.md) |
+| [supabase/supabase](https://github.com/supabase/supabase) | 114,581 | Supabase platform website | [`aa9d04e4f77447e2b6aaf317b686007aff05aa96`](https://github.com/supabase/supabase/commit/aa9d04e4f77447e2b6aaf317b686007aff05aa96) | Yes — local page verified | [Verified](bundling-dataset/webpack/supabase--supabase/README.md) |
+| [PanJiaChen/vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) | 90,118 | Vue administration dashboard template | [`6858a9ad67483025f6a9432a926beb9327037be3`](https://github.com/PanJiaChen/vue-element-admin/commit/6858a9ad67483025f6a9432a926beb9327037be3) | Yes — local page verified | [Verified](bundling-dataset/webpack/PanJiaChen--vue-element-admin/README.md) |
+| [dair-ai/Prompt-Engineering-Guide](https://github.com/dair-ai/Prompt-Engineering-Guide) | 79,854 | Prompt engineering guide | [`57673726396dd94acb23bdb1e67f27c78ee85a8e`](https://github.com/dair-ai/Prompt-Engineering-Guide/commit/57673726396dd94acb23bdb1e67f27c78ee85a8e) | Yes — local page verified | [Verified](bundling-dataset/webpack/dair-ai--Prompt-Engineering-Guide/README.md) |
+| [mozilla/pdf.js](https://github.com/mozilla/pdf.js) | 54,101 | Browser PDF viewer | [`578fe15c435f7c91eb1fc4f30963b645e56e20ff`](https://github.com/mozilla/pdf.js/commit/578fe15c435f7c91eb1fc4f30963b645e56e20ff) | Yes — local page verified | [Verified](bundling-dataset/webpack/mozilla--pdf.js/README.md) |
+| [bailicangdu/vue2-elm](https://github.com/bailicangdu/vue2-elm) | 40,964 | Food delivery application demo | [`b85ff0220366be863868269177a4abf74c7a85ca`](https://github.com/bailicangdu/vue2-elm/commit/b85ff0220366be863868269177a4abf74c7a85ca) | Yes — local page verified | [Verified](bundling-dataset/webpack/bailicangdu--vue2-elm/README.md) |
+| [dokploy/dokploy](https://github.com/dokploy/dokploy) | 38,265 | Application deployment dashboard | [`fe9ae2a7db22730ff1ab72939e10806848c7cccd`](https://github.com/dokploy/dokploy/commit/fe9ae2a7db22730ff1ab72939e10806848c7cccd) | Yes — setup form with PostgreSQL | [Verified with Compose](bundling-dataset/webpack/dokploy--dokploy/README.md) |
+| [swagger-api/swagger-ui](https://github.com/swagger-api/swagger-ui) | 29,072 | Interactive OpenAPI explorer | [`d3296954a6b813898d298815ac3e68daa1cf7408`](https://github.com/swagger-api/swagger-ui/commit/d3296954a6b813898d298815ac3e68daa1cf7408) | Yes — local page verified | [Verified](bundling-dataset/webpack/swagger-api--swagger-ui/README.md) |
+| [akveo/ngx-admin](https://github.com/akveo/ngx-admin) | 25,668 | Angular administration dashboard demo | [`dc6a442704bfef34b776b5eb15faf852d9e2f75c`](https://github.com/akveo/ngx-admin/commit/dc6a442704bfef34b776b5eb15faf852d9e2f75c) | Yes — local page verified | [Verified](bundling-dataset/webpack/akveo--ngx-admin/README.md) |
+| [bilibili/flv.js](https://github.com/bilibili/flv.js) | 23,173 | FLV video playback demo | [`42343088f22619cf014a057b3878fe3d320016a6`](https://github.com/bilibili/flv.js/commit/42343088f22619cf014a057b3878fe3d320016a6) | Yes — local page verified | [Verified](bundling-dataset/webpack/bilibili--flv.js/README.md) |
 
 ### Vite (84% usage)
 
 | Repository | Stars | Selected frontend | Upstream commit | Local page opens? | Docker build status |
 |---|---:|---|---|---|---|
-| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 135,214 | Collaborative whiteboard and diagram editor | [`701b901a0f1ba3d0b390d9cdf63d112e25abac4b`](https://github.com/excalidraw/excalidraw/commit/701b901a0f1ba3d0b390d9cdf63d112e25abac4b) | Untested | Pending |
-| [immich-app/immich](https://github.com/immich-app/immich) | 118,350 | Self-hosted photo and video manager | [`037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9`](https://github.com/immich-app/immich/commit/037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9) | Untested | Pending |
-| [hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch) | 80,762 | Browser API request client | [`55908a76a1d0555c9bbb5d74244c14173df95b06`](https://github.com/hoppscotch/hoppscotch/commit/55908a76a1d0555c9bbb5d74244c14173df95b06) | Untested | Pending |
-| [DavidHDev/react-bits](https://github.com/DavidHDev/react-bits) | 51,330 | Animated React component gallery | [`4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4`](https://github.com/DavidHDev/react-bits/commit/4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4) | Untested | Pending |
-| [tldraw/tldraw](https://github.com/tldraw/tldraw) | 51,285 | Collaborative drawing canvas | [`bc3432915441bb53eb7429459b19d67c8f0c69d1`](https://github.com/tldraw/tldraw/commit/bc3432915441bb53eb7429459b19d67c8f0c69d1) | Untested | Pending |
-| [LibreChat-AI/LibreChat](https://github.com/LibreChat-AI/LibreChat) | 46,784 | Conversational AI client | [`f4154b649efa37e1345ccc517a4d8d1ed2178c82`](https://github.com/LibreChat-AI/LibreChat/commit/f4154b649efa37e1345ccc517a4d8d1ed2178c82) | Untested | Pending |
-| [CorentinTh/it-tools](https://github.com/CorentinTh/it-tools) | 41,129 | Browser utilities for developers | [`d505845f918e946ec300af7b36efc107e2f66e9e`](https://github.com/CorentinTh/it-tools/commit/d505845f918e946ec300af7b36efc107e2f66e9e) | Untested | Pending |
-| [drawdb-io/drawdb](https://github.com/drawdb-io/drawdb) | 40,259 | Database schema and diagram editor | [`a249c7fb730c2de9b5c2ce6e863f2ea7344ac372`](https://github.com/drawdb-io/drawdb/commit/a249c7fb730c2de9b5c2ce6e863f2ea7344ac372) | Yes — editor opened | [Verified](bundling-dataset/vite/drawdb-io--drawdb/README.md) |
-| [actualbudget/actual](https://github.com/actualbudget/actual) | 30,014 | Personal budgeting application | [`92865f32f307ec04e0556a8c2052819d49e8e204`](https://github.com/actualbudget/actual/commit/92865f32f307ec04e0556a8c2052819d49e8e204) | Untested | Pending |
-| [Lissy93/dashy](https://github.com/Lissy93/dashy) | 26,932 | Configurable personal dashboard | [`002c6dd559c8d7ba662aeae9228164f6cf398c75`](https://github.com/Lissy93/dashy/commit/002c6dd559c8d7ba662aeae9228164f6cf398c75) | Untested | Pending |
+| [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw) | 135,214 | Collaborative whiteboard and diagram editor | [`701b901a0f1ba3d0b390d9cdf63d112e25abac4b`](https://github.com/excalidraw/excalidraw/commit/701b901a0f1ba3d0b390d9cdf63d112e25abac4b) | Yes — local page verified | [Verified](bundling-dataset/vite/excalidraw--excalidraw/README.md) |
+| [immich-app/immich](https://github.com/immich-app/immich) | 118,350 | Self-hosted photo and video manager | [`037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9`](https://github.com/immich-app/immich/commit/037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9) | Yes — welcome screen with local API | [Verified with Compose](bundling-dataset/vite/immich-app--immich/README.md) |
+| [hoppscotch/hoppscotch](https://github.com/hoppscotch/hoppscotch) | 80,762 | Browser API request client | [`55908a76a1d0555c9bbb5d74244c14173df95b06`](https://github.com/hoppscotch/hoppscotch/commit/55908a76a1d0555c9bbb5d74244c14173df95b06) | Yes — local page verified | [Verified](bundling-dataset/vite/hoppscotch--hoppscotch/README.md) |
+| [DavidHDev/react-bits](https://github.com/DavidHDev/react-bits) | 51,330 | Animated React component gallery | [`4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4`](https://github.com/DavidHDev/react-bits/commit/4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4) | Yes — local page verified | [Verified](bundling-dataset/vite/DavidHDev--react-bits/README.md) |
+| [tldraw/tldraw](https://github.com/tldraw/tldraw) | 51,285 | Collaborative drawing canvas | [`bc3432915441bb53eb7429459b19d67c8f0c69d1`](https://github.com/tldraw/tldraw/commit/bc3432915441bb53eb7429459b19d67c8f0c69d1) | Whiteboard requires Clerk configuration | [Built; runtime configuration required](bundling-dataset/vite/tldraw--tldraw/README.md) |
+| [LibreChat-AI/LibreChat](https://github.com/LibreChat-AI/LibreChat) | 46,784 | Conversational AI client | [`f4154b649efa37e1345ccc517a4d8d1ed2178c82`](https://github.com/LibreChat-AI/LibreChat/commit/f4154b649efa37e1345ccc517a4d8d1ed2178c82) | Yes — login form with MongoDB | [Verified with Compose](bundling-dataset/vite/LibreChat-AI--LibreChat/README.md) |
+| [CorentinTh/it-tools](https://github.com/CorentinTh/it-tools) | 41,129 | Browser utilities for developers | [`d505845f918e946ec300af7b36efc107e2f66e9e`](https://github.com/CorentinTh/it-tools/commit/d505845f918e946ec300af7b36efc107e2f66e9e) | Yes — local page verified | [Verified](bundling-dataset/vite/CorentinTh--it-tools/README.md) |
+| [drawdb-io/drawdb](https://github.com/drawdb-io/drawdb) | 40,259 | Database schema and diagram editor | [`a249c7fb730c2de9b5c2ce6e863f2ea7344ac372`](https://github.com/drawdb-io/drawdb/commit/a249c7fb730c2de9b5c2ce6e863f2ea7344ac372) | Yes — local page verified | [Verified](bundling-dataset/vite/drawdb-io--drawdb/README.md) |
+| [actualbudget/actual](https://github.com/actualbudget/actual) | 30,014 | Personal budgeting application | [`92865f32f307ec04e0556a8c2052819d49e8e204`](https://github.com/actualbudget/actual/commit/92865f32f307ec04e0556a8c2052819d49e8e204) | Yes — local page verified | [Verified](bundling-dataset/vite/actualbudget--actual/README.md) |
+| [Lissy93/dashy](https://github.com/Lissy93/dashy) | 26,932 | Configurable personal dashboard | [`002c6dd559c8d7ba662aeae9228164f6cf398c75`](https://github.com/Lissy93/dashy/commit/002c6dd559c8d7ba662aeae9228164f6cf398c75) | Yes — local page verified | [Verified](bundling-dataset/vite/Lissy93--dashy/README.md) |
 
 ### esbuild (54% usage)
 
 | Repository | Stars | Selected frontend | Upstream commit | Local page opens? | Docker build status |
 |---|---:|---|---|---|---|
-| [microsoft/vscode](https://github.com/microsoft/vscode) | 194,761 | Browser-based Visual Studio Code editor | [`e13716ce975fc4597cb8c2228471ac4783bf4529`](https://github.com/microsoft/vscode/commit/e13716ce975fc4597cb8c2228471ac4783bf4529) | Untested | Pending |
-| [primefaces/primeng](https://github.com/primefaces/primeng) | 12,480 | Angular UI component showcase | [`fe82b291d6fedde177dc12c0af7ef1008dc1b1ff`](https://github.com/primefaces/primeng/commit/fe82b291d6fedde177dc12c0af7ef1008dc1b1ff) | Untested | Pending |
-| [sissbruecker/linkding](https://github.com/sissbruecker/linkding) | 11,385 | Bookmark manager | [`27b7303baf41bb28babc610ac8eaa486e1ddfab5`](https://github.com/sissbruecker/linkding/commit/27b7303baf41bb28babc610ac8eaa486e1ddfab5) | Untested | Pending |
-| [ng-bootstrap/ng-bootstrap](https://github.com/ng-bootstrap/ng-bootstrap) | 8,217 | Angular Bootstrap component demos | [`2a45c97082c66c955ac9c4865cf66d8d4dfd27fc`](https://github.com/ng-bootstrap/ng-bootstrap/commit/2a45c97082c66c955ac9c4865cf66d8d4dfd27fc) | Untested | Pending |
-| [jlfwong/speedscope](https://github.com/jlfwong/speedscope) | 6,781 | Interactive performance profile viewer | [`fe804e6281cf847713448c2c3e0faec3e1f62b2d`](https://github.com/jlfwong/speedscope/commit/fe804e6281cf847713448c2c3e0faec3e1f62b2d) | Untested | Pending |
-| [swimlane/ngx-datatable](https://github.com/swimlane/ngx-datatable) | 4,665 | Interactive data table showcase | [`2d4f8f2b383d875d3e3dec45969f0e42a117fb3f`](https://github.com/swimlane/ngx-datatable/commit/2d4f8f2b383d875d3e3dec45969f0e42a117fb3f) | Untested | Pending |
-| [swimlane/ngx-charts](https://github.com/swimlane/ngx-charts) | 4,358 | Angular chart showcase | [`9625b8efea06a6edd1d6c7184241ded9442cf570`](https://github.com/swimlane/ngx-charts/commit/9625b8efea06a6edd1d6c7184241ded9442cf570) | Untested | Pending |
-| [mattlewis92/angular-calendar](https://github.com/mattlewis92/angular-calendar) | 2,811 | Interactive calendar demo | [`9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68`](https://github.com/mattlewis92/angular-calendar/commit/9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68) | Untested | Pending |
-| [primefaces/sakai-ng](https://github.com/primefaces/sakai-ng) | 951 | Angular dashboard template | [`96d71496d685b5c110efd2875abaa2bf89a56ad2`](https://github.com/primefaces/sakai-ng/commit/96d71496d685b5c110efd2875abaa2bf89a56ad2) | Untested | Pending |
-| [okikio/bundlejs](https://github.com/okikio/bundlejs) | 915 | Online JavaScript bundler and package size checker | [`96033c66d7361f79e25bb9b511f4286805fcb9fb`](https://github.com/okikio/bundlejs/commit/96033c66d7361f79e25bb9b511f4286805fcb9fb) | Untested | Pending |
+| [microsoft/vscode](https://github.com/microsoft/vscode) | 194,761 | Browser-based Visual Studio Code editor | [`e13716ce975fc4597cb8c2228471ac4783bf4529`](https://github.com/microsoft/vscode/commit/e13716ce975fc4597cb8c2228471ac4783bf4529) | Yes — local page verified | [Verified](bundling-dataset/esbuild/microsoft--vscode/README.md) |
+| [primefaces/primeng](https://github.com/primefaces/primeng) | 12,480 | Angular UI component showcase | [`fe82b291d6fedde177dc12c0af7ef1008dc1b1ff`](https://github.com/primefaces/primeng/commit/fe82b291d6fedde177dc12c0af7ef1008dc1b1ff) | Yes — local page verified | [Verified](bundling-dataset/esbuild/primefaces--primeng/README.md) |
+| [sissbruecker/linkding](https://github.com/sissbruecker/linkding) | 11,385 | Bookmark manager | [`27b7303baf41bb28babc610ac8eaa486e1ddfab5`](https://github.com/sissbruecker/linkding/commit/27b7303baf41bb28babc610ac8eaa486e1ddfab5) | Yes — local page verified | [Verified](bundling-dataset/esbuild/sissbruecker--linkding/README.md) |
+| [ng-bootstrap/ng-bootstrap](https://github.com/ng-bootstrap/ng-bootstrap) | 8,217 | Angular Bootstrap component demos | [`2a45c97082c66c955ac9c4865cf66d8d4dfd27fc`](https://github.com/ng-bootstrap/ng-bootstrap/commit/2a45c97082c66c955ac9c4865cf66d8d4dfd27fc) | Yes — local page verified | [Verified](bundling-dataset/esbuild/ng-bootstrap--ng-bootstrap/README.md) |
+| [jlfwong/speedscope](https://github.com/jlfwong/speedscope) | 6,781 | Interactive performance profile viewer | [`fe804e6281cf847713448c2c3e0faec3e1f62b2d`](https://github.com/jlfwong/speedscope/commit/fe804e6281cf847713448c2c3e0faec3e1f62b2d) | Yes — local page verified | [Verified](bundling-dataset/esbuild/jlfwong--speedscope/README.md) |
+| [swimlane/ngx-datatable](https://github.com/swimlane/ngx-datatable) | 4,665 | Interactive data table showcase | [`2d4f8f2b383d875d3e3dec45969f0e42a117fb3f`](https://github.com/swimlane/ngx-datatable/commit/2d4f8f2b383d875d3e3dec45969f0e42a117fb3f) | Yes — local page verified | [Verified](bundling-dataset/esbuild/swimlane--ngx-datatable/README.md) |
+| [swimlane/ngx-charts](https://github.com/swimlane/ngx-charts) | 4,358 | Angular chart showcase | [`9625b8efea06a6edd1d6c7184241ded9442cf570`](https://github.com/swimlane/ngx-charts/commit/9625b8efea06a6edd1d6c7184241ded9442cf570) | Yes — local page verified | [Verified](bundling-dataset/esbuild/swimlane--ngx-charts/README.md) |
+| [mattlewis92/angular-calendar](https://github.com/mattlewis92/angular-calendar) | 2,811 | Interactive calendar demo | [`9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68`](https://github.com/mattlewis92/angular-calendar/commit/9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68) | Yes — local page verified | [Verified](bundling-dataset/esbuild/mattlewis92--angular-calendar/README.md) |
+| [primefaces/sakai-ng](https://github.com/primefaces/sakai-ng) | 951 | Angular dashboard template | [`96d71496d685b5c110efd2875abaa2bf89a56ad2`](https://github.com/primefaces/sakai-ng/commit/96d71496d685b5c110efd2875abaa2bf89a56ad2) | Yes — local page verified | [Verified](bundling-dataset/esbuild/primefaces--sakai-ng/README.md) |
+| [okikio/bundlejs](https://github.com/okikio/bundlejs) | 915 | Online JavaScript bundler and package size checker | [`96033c66d7361f79e25bb9b511f4286805fcb9fb`](https://github.com/okikio/bundlejs/commit/96033c66d7361f79e25bb9b511f4286805fcb9fb) | Yes — local page verified | [Verified](bundling-dataset/esbuild/okikio--bundlejs/README.md) |
 
 ### Rollup (47% usage)
 
