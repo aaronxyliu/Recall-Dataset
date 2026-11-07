@@ -5,21 +5,111 @@
   "imageID": "sha256:ce39cccc90da044c8946872ae46536380ff8d54393ee71d4696d3c5f7055d4ee",
   "coverage": {
     "react-responsive": 1,
-    "react-tooltip": 0,
     "date-fns-tz": 7,
     "validator": 9,
     "react-dom": 3,
-    "prismjs": 0,
-    "browser-cookies": 1,
-    "micromark": 0,
-    "@fortawesome/free-brands-svg-icons": 0,
-    "@babel/preset-env": 0
+    "react-monaco-editor": 3,
+    "@loadable/component": 1,
+    "react-redux": 20,
+    "react": 4,
+    "reselect": 3,
+    "store": 12
   },
   "pairs": [
+    {
+      "library": "@loadable/component",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/@loadable+component@5.16.7_react@18.3.1/node_modules/@loadable/component/dist/esm/loadable.esm.mjs#589316075dbc6a0805dcbcf14ed7d2901ba455d4651acb72e7e69539f1cadf1d@456-650",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@6141-6250",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "@loadable/component",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/@loadable+component@5.16.7_react@18.3.1/node_modules/@loadable/component/dist/esm/loadable.esm.mjs#589316075dbc6a0805dcbcf14ed7d2901ba455d4651acb72e7e69539f1cadf1d@5752-5802",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@7361-7384",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "@loadable/component",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/@loadable+component@5.16.7_react@18.3.1/node_modules/@loadable/component/dist/esm/loadable.esm.mjs#589316075dbc6a0805dcbcf14ed7d2901ba455d4651acb72e7e69539f1cadf1d@12662-12865",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@9984-10039",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/oldFF-globalStorage.js#517b7bee8384f82c41353de96a27e49dbdd31288bfa340f64135382331aaaeff@351-400",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@38810-38834",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/oldFF-globalStorage.js#517b7bee8384f82c41353de96a27e49dbdd31288bfa340f64135382331aaaeff@402-458",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@38841-38862",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/oldFF-globalStorage.js#517b7bee8384f82c41353de96a27e49dbdd31288bfa340f64135382331aaaeff@604-666",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@38877-38912",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/oldFF-globalStorage.js#517b7bee8384f82c41353de96a27e49dbdd31288bfa340f64135382331aaaeff@460-602",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@38987-39058",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/src/util.js#c55f45d29461d50dc5de5f3c720aee5bc5afa1001b5dbb025357b620a864fa04@1522-1604",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@43437-43495",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/src/util.js#c55f45d29461d50dc5de5f3c720aee5bc5afa1001b5dbb025357b620a864fa04@1843-2115",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@43548-43691",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/src/util.js#c55f45d29461d50dc5de5f3c720aee5bc5afa1001b5dbb025357b620a864fa04@2117-2224",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@43691-43769",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/src/util.js#c55f45d29461d50dc5de5f3c720aee5bc5afa1001b5dbb025357b620a864fa04@1405-1520",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@43810-43901",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/src/util.js#c55f45d29461d50dc5de5f3c720aee5bc5afa1001b5dbb025357b620a864fa04@1438-1518",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@43831-43900",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/src/util.js#c55f45d29461d50dc5de5f3c720aee5bc5afa1001b5dbb025357b620a864fa04@2226-2315",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@44032-44096",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/src/util.js#c55f45d29461d50dc5de5f3c720aee5bc5afa1001b5dbb025357b620a864fa04@2317-2402",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@44106-44168",
+      "distinctOriginalPositions": 4
+    },
     {
       "library": "validator",
       "source": "webpack://@freecodecamp/node_modules/.pnpm/validator@13.15.35/node_modules/validator/lib/isFQDN.js#9d6761851ec2d3874aadf6c93bc7c604f65a5f5b5cd2d412a860604497807c66@244-329",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@48112-48163",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "reselect",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/reselect@4.1.8/node_modules/reselect/es/index.js#8b7efbdd02c7238a02b6a63627807cfbc525fe0878922c2af0e8264f649b2a10@2972-3142",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@96072-96118",
       "distinctOriginalPositions": 3
     },
     {
@@ -41,10 +131,136 @@
       "distinctOriginalPositions": 4
     },
     {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/sessionStorage.js#627a8b261816385d4eb13f581b3580ab8d2dfe57ac96ade66e447662927909fa@185-244",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@109810-109847",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/sessionStorage.js#627a8b261816385d4eb13f581b3580ab8d2dfe57ac96ade66e447662927909fa@246-306",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@109847-109883",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/sessionStorage.js#627a8b261816385d4eb13f581b3580ab8d2dfe57ac96ade66e447662927909fa@308-381",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@109929-109967",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/sessionStorage.js#627a8b261816385d4eb13f581b3580ab8d2dfe57ac96ade66e447662927909fa@383-522",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@109973-110046",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/sessionStorage.js#627a8b261816385d4eb13f581b3580ab8d2dfe57ac96ade66e447662927909fa@524-589",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@110054-110091",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/sessionStorage.js#627a8b261816385d4eb13f581b3580ab8d2dfe57ac96ade66e447662927909fa@591-647",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@110101-110131",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/localStorage.js#acdc269445df6822d4629db2b0c95e7f1996eca4a3b183b41f9824d28cc9e61f@184-239",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@118560-118595",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/localStorage.js#acdc269445df6822d4629db2b0c95e7f1996eca4a3b183b41f9824d28cc9e61f@241-299",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@118595-118631",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/localStorage.js#acdc269445df6822d4629db2b0c95e7f1996eca4a3b183b41f9824d28cc9e61f@301-372",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@118675-118713",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/localStorage.js#acdc269445df6822d4629db2b0c95e7f1996eca4a3b183b41f9824d28cc9e61f@374-509",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@118719-118792",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/localStorage.js#acdc269445df6822d4629db2b0c95e7f1996eca4a3b183b41f9824d28cc9e61f@511-574",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@118800-118837",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/localStorage.js#acdc269445df6822d4629db2b0c95e7f1996eca4a3b183b41f9824d28cc9e61f@576-630",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@118847-118877",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/oldIE-userDataStorage.js#bbddfe458e3763ec6b36776afb6c43bb75b3812ee0e7a7f9ca0d9cb48ca54e2c@2020-2116",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@160484-160547",
+      "distinctOriginalPositions": 3
+    },
+    {
       "library": "validator",
       "source": "webpack://@freecodecamp/node_modules/.pnpm/validator@13.15.35/node_modules/validator/lib/isIP.js#56daa309d8c63ce911cc4b495cfac8b1dc95a3d9daa7945b0f1fd3a093130b45@2845-3533",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@183812-184093",
       "distinctOriginalPositions": 15
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.production.min.js#4b35e378f469c4f492c7514bb106b5833746dbbae80496bd4aa9acc6e9ac4b42@883-959",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@312940-313016",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.production.min.js#4b35e378f469c4f492c7514bb106b5833746dbbae80496bd4aa9acc6e9ac4b42@1395-1471",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@313030-313106",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.production.min.js#4b35e378f469c4f492c7514bb106b5833746dbbae80496bd4aa9acc6e9ac4b42@1667-2097",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@313719-314147",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.production.min.js#4b35e378f469c4f492c7514bb106b5833746dbbae80496bd4aa9acc6e9ac4b42@2191-2257",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@314147-314212",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.production.min.js#4b35e378f469c4f492c7514bb106b5833746dbbae80496bd4aa9acc6e9ac4b42@2369-2466",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@314225-314407",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.production.min.js#4b35e378f469c4f492c7514bb106b5833746dbbae80496bd4aa9acc6e9ac4b42@2098-2191",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@314759-314850",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.production.min.js#4b35e378f469c4f492c7514bb106b5833746dbbae80496bd4aa9acc6e9ac4b42@607-728",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@315039-315146",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.production.min.js#4b35e378f469c4f492c7514bb106b5833746dbbae80496bd4aa9acc6e9ac4b42@3912-3998",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@316032-316117",
+      "distinctOriginalPositions": 2
     },
     {
       "library": "validator",
@@ -74,6 +290,102 @@
       "library": "validator",
       "source": "webpack://@freecodecamp/node_modules/.pnpm/validator@13.15.35/node_modules/validator/lib/isEmail.js#87b76ec61c0be294d4aea38fbc77e717c8fa9b354c1c034bc6dcde0b7fadf4ab@500-585",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@352888-352939",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/utils/batch.js#92b06787ad0c542ffac6cdcbd14b02b59dc8e8bf129d0f2a027d0c90f3d6cdc4@73-126",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@479202-479218",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/components/Context.js#c729572fd184297be3d599cfcb0f4866bb45596cb42ebe0de15a73a777cee851@242-748",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@479336-479514",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/hooks/useReduxContext.js#23dc1ff24bb0ebb374b4d6c81e104ff26daab53765b07c110c8fff282b188d60@452-827",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@479526-479587",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/hooks/useReduxContext.js#23dc1ff24bb0ebb374b4d6c81e104ff26daab53765b07c110c8fff282b188d60@524-824",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@479549-479586",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/connect/wrapMapToProps.js#6ef4f39271a00fd1ac0900cadd323f3f5f20f0a4365d93d1dd882fb10141672c@1232-1382",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@480772-480855",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/connect/mergeProps.js#29eeb71795598b7896b4e777f1ed74ee3f301d9d39c7c8c37a6abf744bcdf641@189-332",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@481347-481389",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/utils/Subscription.js#fade533a7491ae089d8ade73fb4552ee3ee1740bd3515fcd333f4e4ed7631d5b@2029-2149",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@482076-482099",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/utils/shallowEqual.js#db2a5214299c02e3fdb10c92946cbfdd110af5d44a550f677426a67fcbc7293a@0-134",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@482440-482503",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/utils/shallowEqual.js#db2a5214299c02e3fdb10c92946cbfdd110af5d44a550f677426a67fcbc7293a@151-658",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@482503-482796",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/components/connect.js#b15cf54d579c7691274a7013cc2828a1004fb647a76ae5f26e06a913e21c3c1b@2025-2586",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@482859-482940",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/components/connect.js#b15cf54d579c7691274a7013cc2828a1004fb647a76ae5f26e06a913e21c3c1b@6057-6105",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@482940-482969",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/connect/selectorFactory.js#1e28abea0b1c0618f1801ff84456e5aefc330773d2e800efe74556d70b308bfb@2678-3317",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@484427-484562",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/hooks/useStore.js#cba1a6450f344929fc24b911dfc91ed2e97917971f689ba9a8af02bc64a8798a@425-750",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@486596-486680",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/hooks/useStore.js#cba1a6450f344929fc24b911dfc91ed2e97917971f689ba9a8af02bc64a8798a@638-747",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@486640-486679",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/hooks/useDispatch.js#9edd8882430a69b471cde5e8893df786817299bfdf90ca0d28e859f0a3a68d18@403-685",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@486692-486768",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "react-redux",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-redux@8.1.3_@types+react-dom@18.3.7_@types+react@18.3.31__@types+react@18.3.31_re_200ec7b00437ba6d838f87a2aabb112b/node_modules/react-redux/es/hooks/useDispatch.js#9edd8882430a69b471cde5e8893df786817299bfdf90ca0d28e859f0a3a68d18@582-682",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@486736-486767",
       "distinctOriginalPositions": 3
     },
     {
@@ -2159,6 +2471,42 @@
       "distinctOriginalPositions": 2
     },
     {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/memoryStorage.js#f86fd31d407083fb61817496aabaab3d13b724d97aa430746d66792ca3c46946@409-458",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1399100-1399124",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/memoryStorage.js#f86fd31d407083fb61817496aabaab3d13b724d97aa430746d66792ca3c46946@460-516",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1399131-1399152",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/memoryStorage.js#f86fd31d407083fb61817496aabaab3d13b724d97aa430746d66792ca3c46946@518-666",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1399158-1399216",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/memoryStorage.js#f86fd31d407083fb61817496aabaab3d13b724d97aa430746d66792ca3c46946@668-719",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1399224-1399248",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/memoryStorage.js#f86fd31d407083fb61817496aabaab3d13b724d97aa430746d66792ca3c46946@721-767",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1399258-1399275",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/src/store-engine.js#b5f4ecda99e827b725e3e7d8fa988c6fa12a066965f310ced7e0819bc009a4bf@2208-2408",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1416798-1416900",
+      "distinctOriginalPositions": 6
+    },
+    {
       "library": "date-fns-tz",
       "source": "webpack://@freecodecamp/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/_lib/tzTokenizeDate/index.js#5f15b89b8681d23d15974f95f0eed018e4c210f20897a85f24fe5c8aa66fc62b@147-320",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1422830-1423651",
@@ -2303,6 +2651,36 @@
       "distinctOriginalPositions": 14
     },
     {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/cookieStorage.js#8f5c52b42253f564fdadb8f209561bca806d63bbc9d7a0ab75e03d83aabffb1e@450-700",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1461510-1461700",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/cookieStorage.js#8f5c52b42253f564fdadb8f209561bca806d63bbc9d7a0ab75e03d83aabffb1e@979-1128",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1461707-1461817",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/cookieStorage.js#8f5c52b42253f564fdadb8f209561bca806d63bbc9d7a0ab75e03d83aabffb1e@702-977",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1461896-1462037",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/cookieStorage.js#8f5c52b42253f564fdadb8f209561bca806d63bbc9d7a0ab75e03d83aabffb1e@1130-1272",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1462037-1462132",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/cookieStorage.js#8f5c52b42253f564fdadb8f209561bca806d63bbc9d7a0ab75e03d83aabffb1e@1342-1474",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1462132-1462244",
+      "distinctOriginalPositions": 4
+    },
+    {
       "library": "validator",
       "source": "webpack://@freecodecamp/node_modules/.pnpm/validator@13.15.35/node_modules/validator/lib/isURL.js#2d77fbcd3d5a8f5e9b9a63dab5e7ab8e94dce0b7e6c239f6f52e0b855e4413e7@1999-2062",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1463704-1463745",
@@ -2337,6 +2715,12 @@
       "source": "webpack://@freecodecamp/node_modules/.pnpm/validator@13.15.35/node_modules/validator/lib/isURL.js#2d77fbcd3d5a8f5e9b9a63dab5e7ab8e94dce0b7e6c239f6f52e0b855e4413e7@1317-1465",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1465295-1465397",
       "distinctOriginalPositions": 6
+    },
+    {
+      "library": "store",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/plugins/json2.js#e93de791fdc15769163dd79a50ac80e4aa549c72656e6ec6d2873de5b74098bc@30-91",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1471136-1471166",
+      "distinctOriginalPositions": 5
     },
     {
       "library": "react-responsive",
@@ -2499,20 +2883,893 @@
       "source": "webpack://@freecodecamp/node_modules/.pnpm/react-responsive@9.0.2_react@18.3.1/node_modules/react-responsive/dist/react-responsive.js#241a6a0fe9e94309cb52a112e81301596ced65344742fdf10efc8b9b2e5bea84@61467-61540",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1588198-1588224",
       "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react-jsx-runtime.production.min.js#76e3364c46895ed2c4a8d5cc332e5e4ef31d6f732d35b1e56826dc5895245452@494-810",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1605580-1605894",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "reselect",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/reselect@5.3.0/node_modules/reselect/dist/reselect.mjs#0da63d82f26c074090064e7e24b6c8b9ace629227d8647233b051fc3848d6f8e@9448-9777",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1610886-1611302",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "reselect",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/reselect@5.3.0/node_modules/reselect/dist/reselect.mjs#0da63d82f26c074090064e7e24b6c8b9ace629227d8647233b051fc3848d6f8e@8585-8770",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1611457-1611568",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "react-monaco-editor",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/react-monaco-editor@0.59.0_monaco-editor@0.55.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-monaco-editor/lib/utils.js#d32d8983b8aa11f881e8224d58d2ae3f01857992afa6f653c6d71eb324d8cd0c@7-100",
+      "bundled": "<local>/c8f7fe3b0e41be846d5687592cf2018ff6e22687-0f038c98810552b6391b.js#830e244190b2f565dc7fc8b0d32af8f54bb730dc15df09e461ec81af55ac6024@2457084-2457140",
+      "distinctOriginalPositions": 3
     }
   ],
   "observedSplit": {
-    "count": 79,
-    "denominator": 694,
-    "percent": 11.38328530259366
+    "count": 172,
+    "denominator": 1066,
+    "percent": 16.135084427767353
   },
   "observedCombine": {
-    "count": 152,
-    "denominator": 690,
-    "percent": 22.028985507246375
+    "count": 349,
+    "denominator": 1063,
+    "percent": 32.8316086547507
   },
   "removePercent": null,
   "createPercent": null,
   "missingSourceContents": [],
-  "failures": []
+  "failures": [],
+  "capture": {
+    "entry": "<local>/learn/",
+    "pageStatus": 200,
+    "title": "Learn to Code for Free. Coding Courses & Certifications | freeCodeCamp",
+    "finalURL": "<local>/learn/",
+    "bodyTextLength": 2250,
+    "failures": [],
+    "assets": [
+      {
+        "url": "<local>/webpack-runtime-15b4c3d8d77c017e6f25.js",
+        "sha256": "0efe57c694df6586bce121932e641b534f22efc85af7083b89b2761034306ff4",
+        "bytes": 11573,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "634ccda90f8e06c7dc6e8c23cea5b53e14c9e40e82f96b2a2ac44e3833ff0b36",
+          "url": "<local>/webpack-runtime-15b4c3d8d77c017e6f25.js.map",
+          "link": "referenced",
+          "file": "webpack-runtime-15b4c3d8d77c017e6f25.js",
+          "localPath": "source-maps/634ccda90f8e06c7dc6e8c23cea5b53e14c9e40e82f96b2a2ac44e3833ff0b36.map"
+        },
+        "localPath": "runtime-js/0efe57c694df6586bce121932e641b534f22efc85af7083b89b2761034306ff4.js"
+      },
+      {
+        "url": "<local>/640bf66f-c471573bfc55f8d210a8.js",
+        "sha256": "6324e5b7b206d276d0662bebac659d05a048bdd8106b7fe5a38df2c6c052352b",
+        "bytes": 15082,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "956506db86ba5f6fc82ed079b443a540081e48bfb656dd7d389ea7eb151cba58",
+          "url": "<local>/640bf66f-c471573bfc55f8d210a8.js.map",
+          "link": "referenced",
+          "file": "640bf66f-c471573bfc55f8d210a8.js",
+          "localPath": "source-maps/956506db86ba5f6fc82ed079b443a540081e48bfb656dd7d389ea7eb151cba58.map"
+        },
+        "localPath": "runtime-js/6324e5b7b206d276d0662bebac659d05a048bdd8106b7fe5a38df2c6c052352b.js"
+      },
+      {
+        "url": "<local>/learn/",
+        "sha256": "6839aaefbd8460b82a8927f5ac96ae47380c95eecd3020aebcb224e2af3707c2",
+        "bytes": 532,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/6839aaefbd8460b82a8927f5ac96ae47380c95eecd3020aebcb224e2af3707c2.js"
+      },
+      {
+        "url": "<local>/learn/",
+        "sha256": "514e8a6a4a5b1e234389df7882a6738d22582fd7cb465c6f7d3b1c98efd6df4c",
+        "bytes": 45,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/514e8a6a4a5b1e234389df7882a6738d22582fd7cb465c6f7d3b1c98efd6df4c.js"
+      },
+      {
+        "url": "<local>/learn/",
+        "sha256": "f0f0e22fae0a4b872a7f0eb43d4b617d0b7e5b567b75d59dd4b80113ee8d9ee7",
+        "bytes": 4912,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/f0f0e22fae0a4b872a7f0eb43d4b617d0b7e5b567b75d59dd4b80113ee8d9ee7.js"
+      },
+      {
+        "url": "<local>/learn/",
+        "sha256": "8336b475aeedca7001c61517baf7cdbe1a506b357b78440636705694f4d5be64",
+        "bytes": 56,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/8336b475aeedca7001c61517baf7cdbe1a506b357b78440636705694f4d5be64.js"
+      },
+      {
+        "url": "<local>/73ca4de5-b6c3579d9f27c62e9e79.js",
+        "sha256": "dadc8440797af7c7cdd2964dc2f7e1e50e7d18a35d0b4e8cc12d07a935914d43",
+        "bytes": 240086,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "e592564ac98668bdf2cef22861355113ad5928b29aba2e4c80a6b54baa25e4ed",
+          "url": "<local>/73ca4de5-b6c3579d9f27c62e9e79.js.map",
+          "link": "referenced",
+          "file": "73ca4de5-b6c3579d9f27c62e9e79.js",
+          "localPath": "source-maps/e592564ac98668bdf2cef22861355113ad5928b29aba2e4c80a6b54baa25e4ed.map"
+        },
+        "localPath": "runtime-js/dadc8440797af7c7cdd2964dc2f7e1e50e7d18a35d0b4e8cc12d07a935914d43.js"
+      },
+      {
+        "url": "<local>/app-a177237cb29bf3d6c151.js",
+        "sha256": "b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107",
+        "bytes": 1664974,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "8b22aa8722ddd7e0a522c3999c57101a26df3e63d99ac7fe3c3d65c6c5e1b680",
+          "url": "<local>/app-a177237cb29bf3d6c151.js.map",
+          "link": "referenced",
+          "file": "app-a177237cb29bf3d6c151.js",
+          "localPath": "source-maps/8b22aa8722ddd7e0a522c3999c57101a26df3e63d99ac7fe3c3d65c6c5e1b680.map"
+        },
+        "localPath": "runtime-js/b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107.js"
+      },
+      {
+        "url": "<anonymous>",
+        "sha256": "c006e50320d670e87b035260385682aa10ac02e19006755b5747938247391fe8",
+        "bytes": 434,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/c006e50320d670e87b035260385682aa10ac02e19006755b5747938247391fe8.js"
+      },
+      {
+        "url": "<local>/7cf767037a7ebcf87d15c19a3225070b7a99f238-991c9eac7d6a285b14c6.js",
+        "sha256": "760d83056ccd9a16586817decbcf31e52b76b8cc3441edef17e8850fb41eb420",
+        "bytes": 30118,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "b4f6845e763ff1721037ff082f42470954b0fca78200cb3b049693bb5c8c7662",
+          "url": "<local>/7cf767037a7ebcf87d15c19a3225070b7a99f238-991c9eac7d6a285b14c6.js.map",
+          "link": "referenced",
+          "file": "7cf767037a7ebcf87d15c19a3225070b7a99f238-991c9eac7d6a285b14c6.js",
+          "localPath": "source-maps/b4f6845e763ff1721037ff082f42470954b0fca78200cb3b049693bb5c8c7662.map"
+        },
+        "localPath": "runtime-js/760d83056ccd9a16586817decbcf31e52b76b8cc3441edef17e8850fb41eb420.js"
+      },
+      {
+        "url": "<local>/42b96a1470e8d512536de477e949aa4ad93bd5e3-935f538ea6d748381a73.js",
+        "sha256": "003a42daa2321a40d38bdf97c6081b08eea48f733a84e3d6828118208cdaf9e7",
+        "bytes": 28402,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "8948eb3abe071f8960d23a6b1334dcaa0064d1f652c0b283dbcb908af933caff",
+          "url": "<local>/42b96a1470e8d512536de477e949aa4ad93bd5e3-935f538ea6d748381a73.js.map",
+          "link": "referenced",
+          "file": "42b96a1470e8d512536de477e949aa4ad93bd5e3-935f538ea6d748381a73.js",
+          "localPath": "source-maps/8948eb3abe071f8960d23a6b1334dcaa0064d1f652c0b283dbcb908af933caff.map"
+        },
+        "localPath": "runtime-js/003a42daa2321a40d38bdf97c6081b08eea48f733a84e3d6828118208cdaf9e7.js"
+      },
+      {
+        "url": "<local>/e0bc56afb165c14a8c960fde051c174ad1b55038-5e3161f9544da6729e61.js",
+        "sha256": "c8384240103c5c2b8212b299b216b910df36827730feece338752f7ea639ca4e",
+        "bytes": 28377,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "326f56550dda61cac2b5b765e43a3dba8fafdd3ee9a42cbb01162bf01dcd15ad",
+          "url": "<local>/e0bc56afb165c14a8c960fde051c174ad1b55038-5e3161f9544da6729e61.js.map",
+          "link": "referenced",
+          "file": "e0bc56afb165c14a8c960fde051c174ad1b55038-5e3161f9544da6729e61.js",
+          "localPath": "source-maps/326f56550dda61cac2b5b765e43a3dba8fafdd3ee9a42cbb01162bf01dcd15ad.map"
+        },
+        "localPath": "runtime-js/c8384240103c5c2b8212b299b216b910df36827730feece338752f7ea639ca4e.js"
+      },
+      {
+        "url": "<local>/component---src-pages-learn-tsx-3b4816e4f8c3f06dcb68.js",
+        "sha256": "b7aa7b0be1b7c1bb5a59733b4d99d0644539fe257e0629e0e472548a2fe2554b",
+        "bytes": 8311,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "2756dba9cecebade3f6ad66d2dec28260a002108cb18428cbf99a21aefaf3646",
+          "url": "<local>/component---src-pages-learn-tsx-3b4816e4f8c3f06dcb68.js.map",
+          "link": "referenced",
+          "file": "component---src-pages-learn-tsx-3b4816e4f8c3f06dcb68.js",
+          "localPath": "source-maps/2756dba9cecebade3f6ad66d2dec28260a002108cb18428cbf99a21aefaf3646.map"
+        },
+        "localPath": "runtime-js/b7aa7b0be1b7c1bb5a59733b4d99d0644539fe257e0629e0e472548a2fe2554b.js"
+      },
+      {
+        "url": "<local>/d82bff99d17dc59c45b6281a99a3ed0ccb6fc4cd-4549daa88726380170c6.js",
+        "sha256": "74d4d6817e72b6042a78d74513c3dbec597cf81f93558d97f8a6bc11c7171ff9",
+        "bytes": 38340,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "15213880e0999714501b51e409660c933370c67591ccb116696199caec07d448",
+          "url": "<local>/d82bff99d17dc59c45b6281a99a3ed0ccb6fc4cd-4549daa88726380170c6.js.map",
+          "link": "referenced",
+          "file": "d82bff99d17dc59c45b6281a99a3ed0ccb6fc4cd-4549daa88726380170c6.js",
+          "localPath": "source-maps/15213880e0999714501b51e409660c933370c67591ccb116696199caec07d448.map"
+        },
+        "localPath": "runtime-js/74d4d6817e72b6042a78d74513c3dbec597cf81f93558d97f8a6bc11c7171ff9.js"
+      },
+      {
+        "url": "<local>/92a01dc011390abc00d2932ce721791bab2ddb91-f5e41c1db4440c162946.js",
+        "sha256": "7cfb6665a18bf765590654c67ba95bf3437349e577e3dc4d134561fd3a77f2b7",
+        "bytes": 63155,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "6fd353c7207d851e49b199ec7d546120b410935adf9038b0a10bb978002dc82e",
+          "url": "<local>/92a01dc011390abc00d2932ce721791bab2ddb91-f5e41c1db4440c162946.js.map",
+          "link": "referenced",
+          "file": "92a01dc011390abc00d2932ce721791bab2ddb91-f5e41c1db4440c162946.js",
+          "localPath": "source-maps/6fd353c7207d851e49b199ec7d546120b410935adf9038b0a10bb978002dc82e.map"
+        },
+        "localPath": "runtime-js/7cfb6665a18bf765590654c67ba95bf3437349e577e3dc4d134561fd3a77f2b7.js"
+      },
+      {
+        "url": "<local>/3472-e6675dab4ff8ee5b4044.js",
+        "sha256": "7f00ba28d9738e87d4d79947079af7b8c6b08c8455870116b36092d48b1c904f",
+        "bytes": 184833,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "4a4c62fa48de87093807b27aaa6f598c28b8a6254889ff425ac9b91d79279ec6",
+          "url": "<local>/3472-e6675dab4ff8ee5b4044.js.map",
+          "link": "referenced",
+          "file": "3472-e6675dab4ff8ee5b4044.js",
+          "localPath": "source-maps/4a4c62fa48de87093807b27aaa6f598c28b8a6254889ff425ac9b91d79279ec6.map"
+        },
+        "localPath": "runtime-js/7f00ba28d9738e87d4d79947079af7b8c6b08c8455870116b36092d48b1c904f.js"
+      },
+      {
+        "url": "<local>/c8f7fe3b0e41be846d5687592cf2018ff6e22687-0f038c98810552b6391b.js",
+        "sha256": "830e244190b2f565dc7fc8b0d32af8f54bb730dc15df09e461ec81af55ac6024",
+        "bytes": 4123876,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "1b91a92dbf9cc0abcde3321765b342c5e251073aafd8785f516a1178db931eec",
+          "url": "<local>/c8f7fe3b0e41be846d5687592cf2018ff6e22687-0f038c98810552b6391b.js.map",
+          "link": "referenced",
+          "file": "c8f7fe3b0e41be846d5687592cf2018ff6e22687-0f038c98810552b6391b.js",
+          "localPath": "source-maps/1b91a92dbf9cc0abcde3321765b342c5e251073aafd8785f516a1178db931eec.map"
+        },
+        "localPath": "runtime-js/830e244190b2f565dc7fc8b0d32af8f54bb730dc15df09e461ec81af55ac6024.js"
+      },
+      {
+        "url": "https://js.stripe.com/v3",
+        "sha256": "22b1934f5d77fe367f0fc371f93ef5c3388690083ab43db9a7aa1a91fbad40ed",
+        "bytes": 1175280,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/22b1934f5d77fe367f0fc371f93ef5c3388690083ab43db9a7aa1a91fbad40ed.js"
+      },
+      {
+        "url": "https://js.stripe.com/v3/fingerprinted/js/shared-58a8dfabd65e1a3c8b730e0df5c4aad1.js",
+        "sha256": "9597f83c4250584e85fbc5c4fa30bbf9f8f1a157dce59ec4a9802136c85e0fab",
+        "bytes": 897586,
+        "channels": [
+          "http",
+          "parsed:other"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/9597f83c4250584e85fbc5c4fa30bbf9f8f1a157dce59ec4a9802136c85e0fab.js"
+      },
+      {
+        "url": "https://js.stripe.com/v3/fingerprinted/js/controller-with-preconnect-1dbee5a2ff268f4184667befcfe25194.js",
+        "sha256": "0a27a5b05826246b618b49c76add1dce09bb323c29cab8fee3f17b598e3d0a4e",
+        "bytes": 1810367,
+        "channels": [
+          "http",
+          "parsed:other"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/0a27a5b05826246b618b49c76add1dce09bb323c29cab8fee3f17b598e3d0a4e.js"
+      },
+      {
+        "url": "https://js.stripe.com/v3/fingerprinted/js/stripe-cookies-342e5a3c90613ebd49e7001b6682f9f8.js",
+        "sha256": "5e8a96f18f6eb713e8e41f9f2facc37e4c1003fc2dc3e468e0b55b54682a9f5b",
+        "bytes": 75848,
+        "channels": [
+          "http",
+          "parsed:other"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/5e8a96f18f6eb713e8e41f9f2facc37e4c1003fc2dc3e468e0b55b54682a9f5b.js"
+      },
+      {
+        "url": "https://js.stripe.com/v3/fingerprinted/js/consumerSchema-83a22fb235852a7ced5e094bc777e12f.js",
+        "sha256": "cf507bdc38adfc5d1b8873f787a80661948640f768b257f86cf35ebf20760e5d",
+        "bytes": 33597,
+        "channels": [
+          "http",
+          "parsed:other"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/cf507bdc38adfc5d1b8873f787a80661948640f768b257f86cf35ebf20760e5d.js"
+      },
+      {
+        "url": "https://js.stripe.com/v3/fingerprinted/js/m-outer-15a2b40a058ddff1cffdb63779fe3de1.js",
+        "sha256": "ba2338aa6670580269c762f51c4291daef913201aa8f4d4fd166c1a878262652",
+        "bytes": 526,
+        "channels": [
+          "http",
+          "parsed:other"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/ba2338aa6670580269c762f51c4291daef913201aa8f4d4fd166c1a878262652.js"
+      },
+      {
+        "url": "https://m.stripe.network/inner.html",
+        "sha256": "7b7e7b9f53f1089f1dd37fd009229a1c59871752400f2bd21dd49fb21c4ce3de",
+        "bytes": 809,
+        "channels": [
+          "parsed:other"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/7b7e7b9f53f1089f1dd37fd009229a1c59871752400f2bd21dd49fb21c4ce3de.js"
+      },
+      {
+        "url": "https://m.stripe.network/out-4.5.45.js",
+        "sha256": "f2a8a36c74c59cfbe7a73d441cfd180ca6e6a9942a74ef9b240191d1c6056a59",
+        "bytes": 88737,
+        "channels": [
+          "http",
+          "parsed:other"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/f2a8a36c74c59cfbe7a73d441cfd180ca6e6a9942a74ef9b240191d1c6056a59.js"
+      }
+    ],
+    "repo": "freeCodeCamp/freeCodeCamp",
+    "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
+    "imageID": "sha256:ce39cccc90da044c8946872ae46536380ff8d54393ee71d4696d3c5f7055d4ee"
+  },
+  "selection": {
+    "repo": "freeCodeCamp/freeCodeCamp",
+    "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
+    "manifest": "client/package.json",
+    "manifestSHA256": "9aedf600166c24bf3a8ac4fa087933334e8fa9f25e6619f189c8b392b6243282",
+    "seed": "recall-library-sample-v1",
+    "eligible": {
+      "@babel/plugin-proposal-export-default-from": "7.29.7",
+      "@babel/plugin-proposal-function-bind": "7.29.7",
+      "@babel/plugin-transform-runtime": "^7.23.7",
+      "@babel/preset-env": "7.29.7",
+      "@babel/preset-react": "7.29.7",
+      "@babel/preset-typescript": "7.29.7",
+      "@codesandbox/sandpack-react": "2.20.0",
+      "@codesandbox/sandpack-themes": "2.0.21",
+      "@fortawesome/fontawesome-svg-core": "7.3.1",
+      "@fortawesome/free-brands-svg-icons": "7.3.1",
+      "@fortawesome/free-solid-svg-icons": "7.3.1",
+      "@fortawesome/react-fontawesome": "3.5.0",
+      "@freecodecamp/ui": "6.1.0",
+      "@gatsbyjs/reach-router": "1.3.9",
+      "@growthbook/growthbook-react": "1.8.0",
+      "@loadable/component": "5.16.7",
+      "@paypal/react-paypal-js": "10.6.1",
+      "@redux-devtools/extension": "3.3.0",
+      "@redux-saga/core": "^1.4.2",
+      "@reduxjs/toolkit": "2.11.2",
+      "@stripe/react-stripe-js": "1.16.5",
+      "@stripe/stripe-js": "1.54.2",
+      "@xterm/addon-fit": "0.11.0",
+      "@xterm/xterm": "6.0.0",
+      "algoliasearch": "4.27.0",
+      "assert": "2.0.0",
+      "babel-plugin-preval": "5.1.0",
+      "babel-plugin-prismjs": "2.1.0",
+      "bezier-easing": "2.1.0",
+      "browser-cookies": "1.2.0",
+      "canvas-confetti": "^1.6.0",
+      "crypto-browserify": "3.12.1",
+      "date-fns": "4.4.0",
+      "date-fns-tz": "3.2.0",
+      "eslint-config-react-app": "7.0.1",
+      "final-form": "4.20.10",
+      "gatsby": "5.16.1",
+      "gatsby-cli": "5.16.0",
+      "gatsby-plugin-postcss": "6.16.0",
+      "gatsby-plugin-react-helmet": "6.16.0",
+      "gatsby-plugin-remove-serviceworker": "1.0.0",
+      "gatsby-source-filesystem": "5.16.0",
+      "gatsby-transformer-remark": "6.16.0",
+      "i18next": "25.10.10",
+      "instantsearch.js": "4.120.0",
+      "lodash": "4.18.1",
+      "lodash-es": "4.18.1",
+      "micromark": "4.0.3",
+      "monaco-editor": "0.55.1",
+      "nanoid": "3.3.20",
+      "normalize-url": "6.1.0",
+      "path-browserify": "1.0.1",
+      "pinyin-tone": "2.4.1",
+      "postcss": "8.5.31",
+      "prismjs": "1.30.0",
+      "process": "0.11.10",
+      "prop-types": "15.8.1",
+      "qrcode.react": "^3.1.0",
+      "query-string": "7.1.3",
+      "react": "18.3.1",
+      "react-calendar-heatmap": "1.10.0",
+      "react-dom": "18.3.1",
+      "react-final-form": "6.5.9",
+      "react-gtm-module": "2.0.11",
+      "react-helmet": "6.1.0",
+      "react-hotkeys": "2.0.0",
+      "react-i18next": "15.7.4",
+      "react-instantsearch": "7.52.0",
+      "react-instantsearch-core": "7.52.0",
+      "react-monaco-editor": "0.59.0",
+      "react-redux": "8.1.3",
+      "react-reflex": "4.2.7",
+      "react-responsive": "9.0.2",
+      "react-scroll": "1.9.3",
+      "react-speech-recognition": "4.0.1",
+      "react-spinkit": "3.0.0",
+      "react-tooltip": "4.5.1",
+      "react-transition-group": "4.4.5",
+      "react-youtube": "10.1.0",
+      "redux": "4.2.1",
+      "redux-actions": "2.6.5",
+      "redux-observable": "1.2.0",
+      "redux-saga": "1.4.2",
+      "reselect": "4.1.8",
+      "rxjs": "6.6.7",
+      "sanitize-html": "2.18.1",
+      "store": "2.0.12",
+      "stream-browserify": "3.0.0",
+      "tone": "15.1.22",
+      "typescript": "5.9.3",
+      "util": "0.12.5",
+      "uuid": "8.3.2",
+      "validator": "13.15.35"
+    },
+    "excluded": {
+      "@freecodecamp/challenge-builder": "workspace:*",
+      "@types/react-speech-recognition": "3.9.6"
+    },
+    "selected": [
+      "react-responsive",
+      "date-fns-tz",
+      "validator",
+      "react-dom",
+      "react-monaco-editor",
+      "@loadable/component",
+      "react-redux",
+      "react",
+      "reselect",
+      "store"
+    ],
+    "samplingRule": "frontend-counterpart-fill-v1",
+    "fillSeed": "recall-counterpart-fill-v1",
+    "previousSelected": [
+      "react-responsive",
+      "react-tooltip",
+      "date-fns-tz",
+      "validator",
+      "react-dom",
+      "prismjs",
+      "browser-cookies",
+      "micromark",
+      "@fortawesome/free-brands-svg-icons",
+      "@babel/preset-env"
+    ],
+    "retainedContributors": [
+      "date-fns-tz",
+      "react-dom",
+      "react-responsive",
+      "validator"
+    ],
+    "candidatePairCounts": {
+      "@babel/plugin-proposal-export-default-from": 0,
+      "@babel/plugin-proposal-function-bind": 0,
+      "@babel/plugin-transform-runtime": 0,
+      "@babel/preset-env": 0,
+      "@babel/preset-react": 0,
+      "@babel/preset-typescript": 0,
+      "@codesandbox/sandpack-react": 0,
+      "@codesandbox/sandpack-themes": 0,
+      "@fortawesome/fontawesome-svg-core": 58,
+      "@fortawesome/free-brands-svg-icons": 0,
+      "@fortawesome/free-solid-svg-icons": 0,
+      "@fortawesome/react-fontawesome": 2,
+      "@freecodecamp/ui": 117,
+      "@gatsbyjs/reach-router": 105,
+      "@growthbook/growthbook-react": 4,
+      "@loadable/component": 3,
+      "@paypal/react-paypal-js": 15,
+      "@redux-devtools/extension": 0,
+      "@redux-saga/core": 42,
+      "@reduxjs/toolkit": 38,
+      "@stripe/react-stripe-js": 2,
+      "@stripe/stripe-js": 2,
+      "@xterm/addon-fit": 0,
+      "@xterm/xterm": 0,
+      "algoliasearch": 6,
+      "assert": 0,
+      "babel-plugin-preval": 0,
+      "babel-plugin-prismjs": 0,
+      "bezier-easing": 0,
+      "browser-cookies": 0,
+      "canvas-confetti": 0,
+      "crypto-browserify": 0,
+      "date-fns": 48,
+      "date-fns-tz": 24,
+      "eslint-config-react-app": 0,
+      "final-form": 0,
+      "gatsby": 1,
+      "gatsby-cli": 0,
+      "gatsby-plugin-postcss": 0,
+      "gatsby-plugin-react-helmet": 0,
+      "gatsby-plugin-remove-serviceworker": 0,
+      "gatsby-source-filesystem": 0,
+      "gatsby-transformer-remark": 0,
+      "i18next": 1,
+      "instantsearch.js": 30,
+      "lodash": 0,
+      "lodash-es": 142,
+      "micromark": 0,
+      "monaco-editor": 1138,
+      "nanoid": 0,
+      "normalize-url": 0,
+      "path-browserify": 0,
+      "pinyin-tone": 0,
+      "postcss": 0,
+      "prismjs": 0,
+      "process": 7,
+      "prop-types": 0,
+      "qrcode.react": 0,
+      "query-string": 7,
+      "react": 9,
+      "react-calendar-heatmap": 0,
+      "react-dom": 347,
+      "react-final-form": 0,
+      "react-gtm-module": 0,
+      "react-helmet": 1,
+      "react-hotkeys": 77,
+      "react-i18next": 1,
+      "react-instantsearch": 5,
+      "react-instantsearch-core": 11,
+      "react-monaco-editor": 1,
+      "react-redux": 16,
+      "react-reflex": 0,
+      "react-responsive": 27,
+      "react-scroll": 31,
+      "react-speech-recognition": 0,
+      "react-spinkit": 7,
+      "react-tooltip": 0,
+      "react-transition-group": 0,
+      "react-youtube": 0,
+      "redux": 7,
+      "redux-actions": 2,
+      "redux-observable": 8,
+      "redux-saga": 0,
+      "reselect": 3,
+      "rxjs": 21,
+      "sanitize-html": 0,
+      "store": 36,
+      "stream-browserify": 0,
+      "tone": 82,
+      "typescript": 0,
+      "util": 65,
+      "uuid": 4,
+      "validator": 16
+    },
+    "candidateOrder": [
+      "react-monaco-editor",
+      "redux-saga",
+      "@loadable/component",
+      "react-redux",
+      "react",
+      "stream-browserify",
+      "reselect",
+      "@fortawesome/free-brands-svg-icons",
+      "react-tooltip",
+      "nanoid",
+      "store",
+      "@reduxjs/toolkit",
+      "prismjs",
+      "@babel/plugin-proposal-export-default-from",
+      "react-youtube",
+      "gatsby-plugin-postcss",
+      "@paypal/react-paypal-js",
+      "bezier-easing",
+      "@babel/plugin-transform-runtime",
+      "assert",
+      "eslint-config-react-app",
+      "i18next",
+      "lodash-es",
+      "react-calendar-heatmap",
+      "@growthbook/growthbook-react",
+      "react-helmet",
+      "algoliasearch",
+      "util",
+      "react-instantsearch",
+      "sanitize-html",
+      "process",
+      "query-string",
+      "monaco-editor",
+      "@babel/preset-react",
+      "prop-types",
+      "react-spinkit",
+      "@redux-devtools/extension",
+      "react-scroll",
+      "postcss",
+      "babel-plugin-preval",
+      "@xterm/xterm",
+      "gatsby-source-filesystem",
+      "uuid",
+      "react-i18next",
+      "@stripe/react-stripe-js",
+      "@codesandbox/sandpack-react",
+      "@redux-saga/core",
+      "crypto-browserify",
+      "redux",
+      "@stripe/stripe-js",
+      "normalize-url",
+      "@fortawesome/react-fontawesome",
+      "browser-cookies",
+      "@codesandbox/sandpack-themes",
+      "@xterm/addon-fit",
+      "react-speech-recognition",
+      "tone",
+      "instantsearch.js",
+      "react-final-form",
+      "@gatsbyjs/reach-router",
+      "pinyin-tone",
+      "gatsby-plugin-react-helmet",
+      "canvas-confetti",
+      "react-reflex",
+      "@babel/plugin-proposal-function-bind",
+      "@babel/preset-typescript",
+      "redux-actions",
+      "gatsby-transformer-remark",
+      "path-browserify",
+      "react-instantsearch-core",
+      "gatsby-plugin-remove-serviceworker",
+      "qrcode.react",
+      "@babel/preset-env",
+      "date-fns",
+      "lodash",
+      "@fortawesome/fontawesome-svg-core",
+      "rxjs",
+      "@fortawesome/free-solid-svg-icons",
+      "micromark",
+      "@freecodecamp/ui",
+      "gatsby",
+      "react-transition-group",
+      "typescript",
+      "gatsby-cli",
+      "react-hotkeys",
+      "redux-observable",
+      "babel-plugin-prismjs",
+      "final-form",
+      "react-gtm-module"
+    ],
+    "targetContributingLibraries": 10,
+    "fillOutcome": "limit-reached",
+    "frontendImageID": "sha256:ce39cccc90da044c8946872ae46536380ff8d54393ee71d4696d3c5f7055d4ee"
+  },
+  "selectionHistory": {
+    "selection-before-counterpart-fill": {
+      "repo": "freeCodeCamp/freeCodeCamp",
+      "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
+      "manifest": "client/package.json",
+      "manifestSHA256": "9aedf600166c24bf3a8ac4fa087933334e8fa9f25e6619f189c8b392b6243282",
+      "seed": "recall-library-sample-v1",
+      "eligible": {
+        "@babel/plugin-proposal-export-default-from": "7.29.7",
+        "@babel/plugin-proposal-function-bind": "7.29.7",
+        "@babel/plugin-transform-runtime": "^7.23.7",
+        "@babel/preset-env": "7.29.7",
+        "@babel/preset-react": "7.29.7",
+        "@babel/preset-typescript": "7.29.7",
+        "@codesandbox/sandpack-react": "2.20.0",
+        "@codesandbox/sandpack-themes": "2.0.21",
+        "@fortawesome/fontawesome-svg-core": "7.3.1",
+        "@fortawesome/free-brands-svg-icons": "7.3.1",
+        "@fortawesome/free-solid-svg-icons": "7.3.1",
+        "@fortawesome/react-fontawesome": "3.5.0",
+        "@freecodecamp/ui": "6.1.0",
+        "@gatsbyjs/reach-router": "1.3.9",
+        "@growthbook/growthbook-react": "1.8.0",
+        "@loadable/component": "5.16.7",
+        "@paypal/react-paypal-js": "10.6.1",
+        "@redux-devtools/extension": "3.3.0",
+        "@redux-saga/core": "^1.4.2",
+        "@reduxjs/toolkit": "2.11.2",
+        "@stripe/react-stripe-js": "1.16.5",
+        "@stripe/stripe-js": "1.54.2",
+        "@xterm/addon-fit": "0.11.0",
+        "@xterm/xterm": "6.0.0",
+        "algoliasearch": "4.27.0",
+        "assert": "2.0.0",
+        "babel-plugin-preval": "5.1.0",
+        "babel-plugin-prismjs": "2.1.0",
+        "bezier-easing": "2.1.0",
+        "browser-cookies": "1.2.0",
+        "canvas-confetti": "^1.6.0",
+        "crypto-browserify": "3.12.1",
+        "date-fns": "4.4.0",
+        "date-fns-tz": "3.2.0",
+        "eslint-config-react-app": "7.0.1",
+        "final-form": "4.20.10",
+        "gatsby": "5.16.1",
+        "gatsby-cli": "5.16.0",
+        "gatsby-plugin-postcss": "6.16.0",
+        "gatsby-plugin-react-helmet": "6.16.0",
+        "gatsby-plugin-remove-serviceworker": "1.0.0",
+        "gatsby-source-filesystem": "5.16.0",
+        "gatsby-transformer-remark": "6.16.0",
+        "i18next": "25.10.10",
+        "instantsearch.js": "4.120.0",
+        "lodash": "4.18.1",
+        "lodash-es": "4.18.1",
+        "micromark": "4.0.3",
+        "monaco-editor": "0.55.1",
+        "nanoid": "3.3.20",
+        "normalize-url": "6.1.0",
+        "path-browserify": "1.0.1",
+        "pinyin-tone": "2.4.1",
+        "postcss": "8.5.31",
+        "prismjs": "1.30.0",
+        "process": "0.11.10",
+        "prop-types": "15.8.1",
+        "qrcode.react": "^3.1.0",
+        "query-string": "7.1.3",
+        "react": "18.3.1",
+        "react-calendar-heatmap": "1.10.0",
+        "react-dom": "18.3.1",
+        "react-final-form": "6.5.9",
+        "react-gtm-module": "2.0.11",
+        "react-helmet": "6.1.0",
+        "react-hotkeys": "2.0.0",
+        "react-i18next": "15.7.4",
+        "react-instantsearch": "7.52.0",
+        "react-instantsearch-core": "7.52.0",
+        "react-monaco-editor": "0.59.0",
+        "react-redux": "8.1.3",
+        "react-reflex": "4.2.7",
+        "react-responsive": "9.0.2",
+        "react-scroll": "1.9.3",
+        "react-speech-recognition": "4.0.1",
+        "react-spinkit": "3.0.0",
+        "react-tooltip": "4.5.1",
+        "react-transition-group": "4.4.5",
+        "react-youtube": "10.1.0",
+        "redux": "4.2.1",
+        "redux-actions": "2.6.5",
+        "redux-observable": "1.2.0",
+        "redux-saga": "1.4.2",
+        "reselect": "4.1.8",
+        "rxjs": "6.6.7",
+        "sanitize-html": "2.18.1",
+        "store": "2.0.12",
+        "stream-browserify": "3.0.0",
+        "tone": "15.1.22",
+        "typescript": "5.9.3",
+        "util": "0.12.5",
+        "uuid": "8.3.2",
+        "validator": "13.15.35"
+      },
+      "excluded": {
+        "@freecodecamp/challenge-builder": "workspace:*",
+        "@types/react-speech-recognition": "3.9.6"
+      },
+      "selected": [
+        "react-responsive",
+        "react-tooltip",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "prismjs",
+        "browser-cookies",
+        "micromark",
+        "@fortawesome/free-brands-svg-icons",
+        "@babel/preset-env"
+      ]
+    }
+  },
+  "audit": {
+    "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
+    "imageID": "sha256:ce39cccc90da044c8946872ae46536380ff8d54393ee71d4696d3c5f7055d4ee",
+    "verifiedPairs": 482,
+    "checks": [
+      "script and map SHA-256",
+      "mapped source SHA-256",
+      "both function spans"
+    ]
+  }
 }

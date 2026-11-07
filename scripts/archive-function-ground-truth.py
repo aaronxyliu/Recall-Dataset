@@ -48,6 +48,16 @@ def archive():
         relations = json.loads((source / 'relations.json').read_text())
         for pair in relations['pairs']:
             pair.pop('syntaxIdentical', None)
+        # Keep provenance with the canonical records; working JSON stays local/ignored.
+        relations['capture'] = capture
+        relations['selection'] = json.loads((source / 'selection.json').read_text())
+        relations['selectionHistory'] = {
+            p.stem: json.loads(p.read_text())
+            for p in sorted(source.glob('selection-before-*.json'))
+        }
+        audit = json.loads((source / 'pair-audit.json').read_text())
+        relations['audit'] = {k: v for k, v in audit.items() if k != 'checks'}
+        relations['audit']['checks'] = [c for c in audit.get('checks', []) if 'syntaxIdentical' not in c]
         write(dest / 'func-mapping.json', relations)
         for name in ('relation.json', 'relations.json', 'capture.json', 'selection.json',
                      'pair-audit.json', 'status.json'):

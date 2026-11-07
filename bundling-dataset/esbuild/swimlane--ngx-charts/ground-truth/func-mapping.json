@@ -5,17 +5,1559 @@
   "imageID": "sha256:ea908782be4b9f0e5c256e46bb7abdadf1bf128d7bc85bad0895d25d8a371935",
   "coverage": {
     "rxjs": 99,
-    "@angular/platform-browser-dynamic": 0,
     "d3-format": 15,
-    "@angular/flex-layout": 0,
     "d3-interpolate": 16,
     "tslib": 1,
-    "@angular/forms": 0,
-    "@angular/router": 0,
     "d3-transition": 27,
-    "d3-scale": 11
+    "d3-scale": 11,
+    "emoji-flags": 2,
+    "d3-hierarchy": 22,
+    "zone.js": 1,
+    "d3-selection": 48
   },
   "pairs": [
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@263-402",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@18-86",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@403-27894",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@86-10051",
+      "distinctOriginalPositions": 140
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@476-576",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@121-156",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@581-715",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@156-201",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@881-1424",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@245-612",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@1433-1612",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@612-681",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@1621-1696",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@681-716",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@1705-1774",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@716-750",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@1852-2680",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@750-976",
+      "distinctOriginalPositions": 58
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@2689-2746",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@976-1009",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@2755-2808",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1009-1038",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@2817-3152",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1038-1221",
+      "distinctOriginalPositions": 34
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@3161-3297",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1221-1283",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@3306-3595",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1283-1386",
+      "distinctOriginalPositions": 24
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@3604-3772",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1386-1477",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@3781-4190",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1477-1668",
+      "distinctOriginalPositions": 27
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@4076-4179",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1616-1667",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@4199-4555",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1668-1775",
+      "distinctOriginalPositions": 32
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@4564-5158",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1775-1958",
+      "distinctOriginalPositions": 48
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@5167-7842",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@1958-2670",
+      "distinctOriginalPositions": 161
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@7851-9512",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@2670-3148",
+      "distinctOriginalPositions": 96
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@9521-9704",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@3148-3225",
+      "distinctOriginalPositions": 20
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@9713-9913",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@3225-3299",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@9922-10122",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@3299-3373",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@10131-11126",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@3373-3782",
+      "distinctOriginalPositions": 72
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@11135-11464",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@3782-3917",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@11534-11611",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@3943-3968",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@11637-11703",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@3984-4014",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@11727-11835",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@4028-4064",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@11859-11923",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@4078-4106",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@11966-12019",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@4116-4145",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@12028-16585",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@4145-6111",
+      "distinctOriginalPositions": 272
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@16594-16805",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@6111-6202",
+      "distinctOriginalPositions": 23
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@16814-17054",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@6202-6327",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@17063-17357",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@6327-6453",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@17366-17592",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@6453-6587",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@17601-18460",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@6587-6923",
+      "distinctOriginalPositions": 52
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@18469-18768",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@6923-7078",
+      "distinctOriginalPositions": 28
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@18777-19234",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@7078-7290",
+      "distinctOriginalPositions": 38
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@19243-19669",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@7290-7427",
+      "distinctOriginalPositions": 28
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@19747-20409",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@7427-7691",
+      "distinctOriginalPositions": 58
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@20445-21610",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@7700-8071",
+      "distinctOriginalPositions": 61
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@21470-21585",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8013-8070",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@21619-22100",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8071-8181",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@22109-22162",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8181-8210",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@22171-22226",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8210-8241",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@22235-22328",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8241-8289",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@22406-22944",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8289-8545",
+      "distinctOriginalPositions": 45
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@22953-23211",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8545-8671",
+      "distinctOriginalPositions": 22
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@23319-23559",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8671-8782",
+      "distinctOriginalPositions": 22
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@24088-24806",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8847-8951",
+      "distinctOriginalPositions": 40
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@24811-25306",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@8951-9004",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@25311-26016",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9004-9190",
+      "distinctOriginalPositions": 58
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@26655-26678",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9374-9379",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@26819-26881",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9458-9503",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@26909-26917",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9521-9527",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@26973-26983",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9560-9565",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27008-27016",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9580-9586",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27037-27047",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9597-9602",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27073-27083",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9618-9623",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27114-27124",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9644-9649",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27146-27157",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9661-9667",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27185-27200",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9685-9691",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27232-27242",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9713-9718",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27284-27299",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9750-9756",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27323-27338",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9770-9776",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27360-27368",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9788-9794",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27390-27400",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9806-9811",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27431-27441",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9832-9837",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27469-27477",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9855-9861",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27510-27520",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9884-9889",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27549-27559",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9908-9913",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27585-27595",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@9929-9934",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27812-27831",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@10011-10025",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@27896-28929",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@10051-10243",
+      "distinctOriginalPositions": 34
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@30131-30229",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@10472-10519",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@30230-30426",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@10519-10591",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@30682-30919",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@10683-10788",
+      "distinctOriginalPositions": 32
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@30920-31680",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@10788-11010",
+      "distinctOriginalPositions": 50
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@31370-31650",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@10921-11003",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@31418-31545",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@10931-10985",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@31681-31946",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@11010-11102",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@32881-35354",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@11422-11826",
+      "distinctOriginalPositions": 101
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@35356-39040",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@11827-12522",
+      "distinctOriginalPositions": 94
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@36758-37581",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@12116-12297",
+      "distinctOriginalPositions": 46
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@37728-38957",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@12304-12503",
+      "distinctOriginalPositions": 56
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@39041-39575",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@12522-12691",
+      "distinctOriginalPositions": 57
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@39672-42470",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@12720-13495",
+      "distinctOriginalPositions": 61
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@39905-40685",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@12774-13065",
+      "distinctOriginalPositions": 94
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@40840-40855",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13089-13101",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@41060-42270",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13159-13426",
+      "distinctOriginalPositions": 26
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@41187-41322",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13213-13269",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@41457-42099",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13295-13388",
+      "distinctOriginalPositions": 32
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@42126-42225",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13393-13423",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@42471-43558",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13495-13752",
+      "distinctOriginalPositions": 87
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@43378-43460",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13694-13730",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@43622-44396",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13752-14031",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@43706-43948",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13782-13902",
+      "distinctOriginalPositions": 22
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@43800-43871",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13832-13874",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@44006-44392",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@13914-14029",
+      "distinctOriginalPositions": 36
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@44397-44506",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@14031-14075",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@44561-44801",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@14091-14218",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@44802-45177",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@14218-14392",
+      "distinctOriginalPositions": 39
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@45178-45248",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@14392-14435",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@45249-45315",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@14435-14476",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@45866-45934",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@14557-14574",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@46734-47278",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@14764-14864",
+      "distinctOriginalPositions": 44
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@47279-79123",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@14864-20448",
+      "distinctOriginalPositions": 69
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@48037-49480",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@15041-15364",
+      "distinctOriginalPositions": 75
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@48430-48468",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@15143-15162",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@49486-51560",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@15365-15726",
+      "distinctOriginalPositions": 120
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@51446-51510",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@15709-15722",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@51686-51761",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@15732-15764",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@51894-51968",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@15767-15799",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@51974-78960",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@15800-20388",
+      "distinctOriginalPositions": 225
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@54723-55610",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@16184-16368",
+      "distinctOriginalPositions": 49
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@55648-56087",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@16374-16463",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@56412-58567",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@16466-16850",
+      "distinctOriginalPositions": 93
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@58609-58752",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@16853-16920",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@58792-58939",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@16923-16990",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@58979-59113",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@16993-17060",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@59353-59613",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@17081-17186",
+      "distinctOriginalPositions": 20
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@59873-61249",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@17266-17374",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@61282-70422",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@17380-18861",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@61413-70411",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@17415-18860",
+      "distinctOriginalPositions": 340
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@68343-68375",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@18516-18542",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@68867-68917",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@18598-18636",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@70840-74979",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@18919-19462",
+      "distinctOriginalPositions": 148
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@75023-75701",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@19468-19694",
+      "distinctOriginalPositions": 59
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@75756-78444",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@19700-20334",
+      "distinctOriginalPositions": 182
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@79124-80282",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@20448-20714",
+      "distinctOriginalPositions": 103
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@80283-80830",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@20714-20858",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@80481-80820",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@20817-20856",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@80887-81123",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@20858-20981",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@81008-81112",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@20911-20979",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@81223-86594",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@21002-22139",
+      "distinctOriginalPositions": 31
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@81433-82253",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@21060-21242",
+      "distinctOriginalPositions": 38
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@81518-81596",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@21097-21146",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@82258-82399",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@21242-21310",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@82459-85743",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@21322-21986",
+      "distinctOriginalPositions": 98
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@82849-84150",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@21470-21621",
+      "distinctOriginalPositions": 36
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@85036-85519",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@21787-21945",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@85810-86590",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@22000-22137",
+      "distinctOriginalPositions": 47
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@86596-87318",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@22139-22519",
+      "distinctOriginalPositions": 47
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@87320-88385",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@22519-22872",
+      "distinctOriginalPositions": 89
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@88386-88464",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@22872-22916",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@88517-88968",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@22916-23091",
+      "distinctOriginalPositions": 38
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@88722-88750",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@22979-22994",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@88915-88964",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@23069-23089",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@88969-89384",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@23091-23151",
+      "distinctOriginalPositions": 24
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@89538-89731",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@23151-23268",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@89635-89685",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@23210-23243",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@89700-89727",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@23249-23266",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@89732-91602",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@23268-23922",
+      "distinctOriginalPositions": 121
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@91659-104612",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@23922-27082",
+      "distinctOriginalPositions": 61
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@91721-91872",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@23961-24009",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@91907-92140",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24035-24128",
+      "distinctOriginalPositions": 24
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@92190-92428",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24169-24317",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@92465-92890",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24345-24490",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@92691-92872",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24434-24487",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@92744-92857",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24443-24487",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@92930-93369",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24521-24635",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@93414-93530",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24671-24733",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@93579-93653",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24773-24810",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@93692-93756",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24840-24867",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@93796-93872",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24898-24916",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@93915-93987",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24950-24968",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@94019-103013",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@24991-26534",
+      "distinctOriginalPositions": 33
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@94459-103007",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@25122-26533",
+      "distinctOriginalPositions": 82
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@94772-94861",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@25190-25216",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@95681-99337",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@25357-25887",
+      "distinctOriginalPositions": 70
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@96416-98964",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@25471-25822",
+      "distinctOriginalPositions": 62
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@97670-98459",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@25626-25758",
+      "distinctOriginalPositions": 37
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@99350-99384",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@25887-25901",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@99397-99781",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@25901-25973",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@99864-100046",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@25995-26053",
+      "distinctOriginalPositions": 23
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@100342-101852",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@26149-26336",
+      "distinctOriginalPositions": 60
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@101939-102995",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@26357-26531",
+      "distinctOriginalPositions": 44
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@103053-103279",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@26565-26674",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@103329-104493",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@26715-27028",
+      "distinctOriginalPositions": 23
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@103403-104173",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@26723-26882",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@103470-104162",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@26744-26881",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@103588-104146",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@26772-26879",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@104536-104608",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@27062-27080",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@104614-128722",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@27082-32596",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@104686-128718",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@27131-32594",
+      "distinctOriginalPositions": 152
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@104859-105226",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@27203-27396",
+      "distinctOriginalPositions": 40
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@105626-106151",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@27543-27792",
+      "distinctOriginalPositions": 45
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@106186-106788",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@27814-27932",
+      "distinctOriginalPositions": 26
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@106402-106641",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@27873-27914",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@106905-107246",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@27977-28073",
+      "distinctOriginalPositions": 27
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@107255-107333",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28073-28104",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@107342-107413",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28104-28127",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@107422-107525",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28127-28160",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@108007-108374",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28295-28356",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@108066-108363",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28318-28355",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@108396-108769",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28362-28455",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@108464-108758",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28389-28454",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@108523-108743",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28408-28453",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@108942-114279",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28513-29438",
+      "distinctOriginalPositions": 261
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@109553-109643",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28677-28692",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@110507-110605",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@28877-28892",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@114369-115446",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@29473-29654",
+      "distinctOriginalPositions": 59
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@115455-117125",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@29654-29902",
+      "distinctOriginalPositions": 34
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@115977-117099",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@29768-29898",
+      "distinctOriginalPositions": 58
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@117241-117256",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@29958-29970",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@117357-117443",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@29999-30026",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@117456-117674",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30026-30090",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@117687-117795",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30090-30136",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@117808-118085",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30136-30226",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@117922-118038",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30191-30222",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@118098-119765",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30226-30716",
+      "distinctOriginalPositions": 79
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@119001-119749",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30573-30714",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@119129-119362",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30618-30637",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@119364-119707",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30638-30712",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@119778-120476",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30716-30868",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@119896-119998",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30750-30766",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@120017-120098",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30768-30787",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@120115-120194",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30787-30806",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@120489-120588",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30868-30910",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@120601-120979",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@30910-31096",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@120818-120861",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31012-31045",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@120898-120944",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31060-31093",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@120992-123062",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31096-31386",
+      "distinctOriginalPositions": 58
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@121131-121233",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31143-31159",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@121731-122069",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31235-31282",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@122071-122592",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31283-31336",
+      "distinctOriginalPositions": 20
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@123075-123760",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31386-31558",
+      "distinctOriginalPositions": 55
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@123773-123849",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31558-31600",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@123862-123941",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31600-31631",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@123954-125442",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31631-31819",
+      "distinctOriginalPositions": 52
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@125455-125540",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31819-31853",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@125553-126349",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@31853-32035",
+      "distinctOriginalPositions": 54
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@126928-127843",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32158-32363",
+      "distinctOriginalPositions": 38
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@127526-127788",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32289-32353",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@127612-127714",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32316-32341",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@127887-128355",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32377-32501",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@127929-128344",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32399-32500",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@128464-128495",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32532-32540",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@128724-130965",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32596-33187",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@128899-130961",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32637-33185",
+      "distinctOriginalPositions": 39
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@129266-130360",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@32729-32982",
+      "distinctOriginalPositions": 69
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@130738-130954",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@33099-33184",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@130967-133478",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@33187-33681",
+      "distinctOriginalPositions": 38
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@131212-133412",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@33271-33648",
+      "distinctOriginalPositions": 20
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@131313-133329",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@33320-33630",
+      "distinctOriginalPositions": 78
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@133480-135865",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@33681-34465",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@133537-135861",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@33718-34463",
+      "distinctOriginalPositions": 97
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@135536-135854",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@34267-34462",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "zone.js",
+      "source": "node_modules/zone.js/fesm2015/zone.js#c02ba7d7e9ca0c7b4a4923d6ca375c5c2ad9202b770c57fa21ff3b17b7345987@135867-135967",
+      "bundled": "<local>/ngx-charts/polyfills-BLCX5WK5.js#03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce@34465-34498",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "emoji-flags",
+      "source": "node_modules/emoji-flags/index.js#19d66318596f7dfc164957b38a890dfcdede0448434b0161177e56d5fb5c35d5@117-354",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@43970-44113",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "emoji-flags",
+      "source": "node_modules/emoji-flags/index.js#19d66318596f7dfc164957b38a890dfcdede0448434b0161177e56d5fb5c35d5@266-348",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@44067-44111",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "emoji-flags",
+      "source": "node_modules/emoji-flags/index.js#19d66318596f7dfc164957b38a890dfcdede0448434b0161177e56d5fb5c35d5@359-392",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@44114-44135",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "emoji-flags",
+      "source": "node_modules/emoji-flags/index.js#19d66318596f7dfc164957b38a890dfcdede0448434b0161177e56d5fb5c35d5@442-623",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@44179-44281",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "emoji-flags",
+      "source": "node_modules/emoji-flags/index.js#19d66318596f7dfc164957b38a890dfcdede0448434b0161177e56d5fb5c35d5@515-615",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@44227-44278",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "emoji-flags",
+      "source": "node_modules/emoji-flags/index.js#19d66318596f7dfc164957b38a890dfcdede0448434b0161177e56d5fb5c35d5@550-607",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@44252-44276",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "emoji-flags",
+      "source": "node_modules/emoji-flags/index.js#19d66318596f7dfc164957b38a890dfcdede0448434b0161177e56d5fb5c35d5@683-744",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@44294-44325",
+      "distinctOriginalPositions": 12
+    },
     {
       "library": "rxjs",
       "source": "node_modules/rxjs/src/internal/util/createErrorClass.ts#5d7a364fe929274051f77a1152aaa4e3697a3160642dcb56c385abe614ba7d91@536-626",
@@ -2507,6 +4049,630 @@
       "distinctOriginalPositions": 19
     },
     {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/creator.js#6061f19618551ec72d1d3b1494b680438fd11dd13b2ed2432efd8d273859b0f1@80-374",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2345254-2345427",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/creator.js#6061f19618551ec72d1d3b1494b680438fd11dd13b2ed2432efd8d273859b0f1@121-371",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2345277-2345426",
+      "distinctOriginalPositions": 26
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/creator.js#6061f19618551ec72d1d3b1494b680438fd11dd13b2ed2432efd8d273859b0f1@376-517",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2345427-2345521",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/creator.js#6061f19618551ec72d1d3b1494b680438fd11dd13b2ed2432efd8d273859b0f1@419-514",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2345450-2345520",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selector.js#b1b8b8deab33b4be960a03e23fdedc3a4a229e65d7f5ed43aef90a389d995553@0-18",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2345575-2345591",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selector.js#b1b8b8deab33b4be960a03e23fdedc3a4a229e65d7f5ed43aef90a389d995553@91-148",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2345625-2345665",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selectorAll.js#104f936bce4209bd0a03230233f1359fee9843347b45f0a80d3ca4c1405b5dc3@0-33",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346022-2346046",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selectorAll.js#104f936bce4209bd0a03230233f1359fee9843347b45f0a80d3ca4c1405b5dc3@107-167",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346080-2346123",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/selectAll.js#e37b1bb5ce46d52e128f06135159d847e7bcb480778d1fd8c855e2941f90d138@117-222",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346124-2346194",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/selectAll.js#e37b1bb5ce46d52e128f06135159d847e7bcb480778d1fd8c855e2941f90d138@154-219",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346147-2346193",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/matcher.js#48a082397d98e3d46f39d59af1f11b71886de3630c4e82dffd355f49fbf6c948@45-96",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346439-2346473",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/matcher.js#48a082397d98e3d46f39d59af1f11b71886de3630c4e82dffd355f49fbf6c948@108-209",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346474-2346529",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/matcher.js#48a082397d98e3d46f39d59af1f11b71886de3630c4e82dffd355f49fbf6c948@151-206",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346496-2346528",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/selectChild.js#ed400254b3ac65352eec9c126948a29e739d83bb3e44443a50502441e66c1ae9@79-179",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346558-2346626",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/selectChild.js#ed400254b3ac65352eec9c126948a29e739d83bb3e44443a50502441e66c1ae9@116-176",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346581-2346625",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/selectChild.js#ed400254b3ac65352eec9c126948a29e739d83bb3e44443a50502441e66c1ae9@181-239",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346626-2346671",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/selectChildren.js#18f28ff723f4bfde76feb2cf9443d87f9c887330d01c0e59f7c82b13a58b4df3@83-142",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346783-2346831",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/selectChildren.js#18f28ff723f4bfde76feb2cf9443d87f9c887330d01c0e59f7c82b13a58b4df3@144-251",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346831-2346899",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/selectChildren.js#18f28ff723f4bfde76feb2cf9443d87f9c887330d01c0e59f7c82b13a58b4df3@186-248",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2346854-2346898",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/enter.js#eb33be777e2467f74994c0b311088550d45d618948ea4775939c9d6fee2ca1bf@191-387",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2347337-2347469",
+      "distinctOriginalPositions": 23
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/enter.js#eb33be777e2467f74994c0b311088550d45d618948ea4775939c9d6fee2ca1bf@454-526",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2347510-2347569",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/enter.js#eb33be777e2467f74994c0b311088550d45d618948ea4775939c9d6fee2ca1bf@544-616",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2347583-2347635",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/enter.js#eb33be777e2467f74994c0b311088550d45d618948ea4775939c9d6fee2ca1bf@635-702",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2347650-2347699",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/enter.js#eb33be777e2467f74994c0b311088550d45d618948ea4775939c9d6fee2ca1bf@724-794",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2347717-2347769",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/constant.js#88f2653180d441d431ad68e0e2cf2c02aea72976c5ff24b6ed988a5bb2b78847@38-68",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2347793-2347813",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/data.js#4fe03082fde4214bae9abd4ba10eae1f85a4471f95327f61487d69ede8ea5c61@116-731",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2347814-2347970",
+      "distinctOriginalPositions": 60
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/data.js#4fe03082fde4214bae9abd4ba10eae1f85a4471f95327f61487d69ede8ea5c61@733-2074",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2347970-2348307",
+      "distinctOriginalPositions": 134
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/data.js#4fe03082fde4214bae9abd4ba10eae1f85a4471f95327f61487d69ede8ea5c61@2076-2124",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2348307-2348341",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/data.js#4fe03082fde4214bae9abd4ba10eae1f85a4471f95327f61487d69ede8ea5c61@3970-4178",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2348855-2348927",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/sort.js#7e7cd09bab87a1873018c345ca72f825bb95f17ba7381a0c80207ee52a9b39da@114-209",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2349742-2349801",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/sort.js#7e7cd09bab87a1873018c345ca72f825bb95f17ba7381a0c80207ee52a9b39da@603-683",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2349991-2350040",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@42-130",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350535-2350594",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@79-127",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350558-2350593",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@132-254",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350594-2350669",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@175-251",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350617-2350668",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@256-357",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350669-2350729",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@302-354",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350694-2350728",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@359-494",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350729-2350805",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@411-491",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350754-2350804",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@496-687",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350805-2350927",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@542-684",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350830-2350926",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@689-942",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350927-2351081",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/attr.js#b46ff374f921ddb3a69172cc0b18327a659355e7203a524ec54e86c872e77bec@741-939",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2350952-2351080",
+      "distinctOriginalPositions": 27
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/style.js#5d3a13cfda67f873e90a3ce2f46b1e10f5645acaf1d1f2ae498b87dcbfe22fbe@41-135",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351417-2351481",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/style.js#5d3a13cfda67f873e90a3ce2f46b1e10f5645acaf1d1f2ae498b87dcbfe22fbe@79-132",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351440-2351480",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/style.js#5d3a13cfda67f873e90a3ce2f46b1e10f5645acaf1d1f2ae498b87dcbfe22fbe@137-264",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351481-2351550",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/style.js#5d3a13cfda67f873e90a3ce2f46b1e10f5645acaf1d1f2ae498b87dcbfe22fbe@194-261",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351508-2351549",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/style.js#5d3a13cfda67f873e90a3ce2f46b1e10f5645acaf1d1f2ae498b87dcbfe22fbe@266-488",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351550-2351686",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/style.js#5d3a13cfda67f873e90a3ce2f46b1e10f5645acaf1d1f2ae498b87dcbfe22fbe@323-485",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351577-2351685",
+      "distinctOriginalPositions": 24
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/style.js#5d3a13cfda67f873e90a3ce2f46b1e10f5645acaf1d1f2ae498b87dcbfe22fbe@812-970",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351814-2351918",
+      "distinctOriginalPositions": 22
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/property.js#c5f3d62485b3c2aac4ccd1e957f36a773fed4e69f254cd321de65da7d25573cb@0-83",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351918-2351968",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/property.js#c5f3d62485b3c2aac4ccd1e957f36a773fed4e69f254cd321de65da7d25573cb@41-80",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351941-2351967",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/property.js#c5f3d62485b3c2aac4ccd1e957f36a773fed4e69f254cd321de65da7d25573cb@85-178",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351968-2352015",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/property.js#c5f3d62485b3c2aac4ccd1e957f36a773fed4e69f254cd321de65da7d25573cb@135-175",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2351993-2352014",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/property.js#c5f3d62485b3c2aac4ccd1e957f36a773fed4e69f254cd321de65da7d25573cb@180-354",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352015-2352115",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/property.js#c5f3d62485b3c2aac4ccd1e957f36a773fed4e69f254cd321de65da7d25573cb@230-351",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352040-2352114",
+      "distinctOriginalPositions": 20
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@0-70",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352232-2352278",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@72-148",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352278-2352323",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@150-261",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352323-2352395",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@294-469",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352413-2352536",
+      "distinctOriginalPositions": 28
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@481-659",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352544-2352672",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@673-736",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352682-2352727",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@741-871",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352729-2352797",
+      "distinctOriginalPositions": 25
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@873-1009",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352797-2352868",
+      "distinctOriginalPositions": 25
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@1011-1098",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352868-2352914",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@1050-1095",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352891-2352913",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@1100-1191",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352914-2352960",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@1140-1188",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352937-2352959",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@1193-1340",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352960-2353037",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/classed.js#31df84aa6f9e472023af2601aec87d49d02b074a8e51dbb311063d3c976f4415@1243-1337",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2352985-2353036",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/text.js#db435c382864fa0a6979b20af9f3eaf32eab2553af85984478a1a8d3da6a825e@0-50",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353240-2353275",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/text.js#db435c382864fa0a6979b20af9f3eaf32eab2553af85984478a1a8d3da6a825e@52-141",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353275-2353329",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/text.js#db435c382864fa0a6979b20af9f3eaf32eab2553af85984478a1a8d3da6a825e@92-138",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353298-2353328",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/text.js#db435c382864fa0a6979b20af9f3eaf32eab2553af85984478a1a8d3da6a825e@143-287",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353329-2353417",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/text.js#db435c382864fa0a6979b20af9f3eaf32eab2553af85984478a1a8d3da6a825e@183-284",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353352-2353416",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/html.js#28919f1b49fbdb720a05fbd5a501bda24e9ffda5be89eed218028d87a2bdd84f@0-48",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353537-2353570",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/html.js#28919f1b49fbdb720a05fbd5a501bda24e9ffda5be89eed218028d87a2bdd84f@50-137",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353570-2353622",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/html.js#28919f1b49fbdb720a05fbd5a501bda24e9ffda5be89eed218028d87a2bdd84f@90-134",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353593-2353621",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/html.js#28919f1b49fbdb720a05fbd5a501bda24e9ffda5be89eed218028d87a2bdd84f@139-281",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353622-2353708",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/html.js#28919f1b49fbdb720a05fbd5a501bda24e9ffda5be89eed218028d87a2bdd84f@179-278",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353645-2353707",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/raise.js#6838a702fbdb645c56cf75b2374573f1e8538a5c4f8ef5039496443d45b150cc@0-79",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353826-2353893",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/lower.js#cb7e1862036fd668e3b9138fb156647c4a653fdf0548e3fb63c2c2cef776696b@0-112",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2353929-2354028",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/append.js#d560c4c4e06089dc65b41003b267c5676c49569b6cc241ce95e4ff57d5f91e89@157-233",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354133-2354193",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/insert.js#c61ec972c9449724a93345355db175e3483a2ee3618c41d479799c9180558fba@77-119",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354195-2354222",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/insert.js#c61ec972c9449724a93345355db175e3483a2ee3618c41d479799c9180558fba@353-469",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354336-2354427",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/remove.js#7219061902b3462bf80dd2ec1d99a3350085ff3cb2e421e7e50c7c0369e248cd@0-93",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354429-2354489",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/clone.js#d1372904bb37b382dc4e72238a8bdc8305f3d4e95bf73b5b3823fc6ee9cf4dca@0-172",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354525-2354629",
+      "distinctOriginalPositions": 22
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/clone.js#d1372904bb37b382dc4e72238a8bdc8305f3d4e95bf73b5b3823fc6ee9cf4dca@174-342",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354629-2354733",
+      "distinctOriginalPositions": 22
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/on.js#84b7a9ab8aa1ad7b83ff94c41ede558e4de7dcfeba5e61286c22ab0583228591@0-117",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354866-2354931",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/on.js#84b7a9ab8aa1ad7b83ff94c41ede558e4de7dcfeba5e61286c22ab0583228591@46-114",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354889-2354930",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/on.js#84b7a9ab8aa1ad7b83ff94c41ede558e4de7dcfeba5e61286c22ab0583228591@119-353",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354931-2355083",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/on.js#84b7a9ab8aa1ad7b83ff94c41ede558e4de7dcfeba5e61286c22ab0583228591@201-349",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2354982-2355081",
+      "distinctOriginalPositions": 33
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/on.js#84b7a9ab8aa1ad7b83ff94c41ede558e4de7dcfeba5e61286c22ab0583228591@355-785",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2355083-2355325",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/on.js#84b7a9ab8aa1ad7b83ff94c41ede558e4de7dcfeba5e61286c22ab0583228591@394-782",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2355106-2355324",
+      "distinctOriginalPositions": 59
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/on.js#84b7a9ab8aa1ad7b83ff94c41ede558e4de7dcfeba5e61286c22ab0583228591@787-1472",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2355325-2355716",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/on.js#84b7a9ab8aa1ad7b83ff94c41ede558e4de7dcfeba5e61286c22ab0583228591@839-1469",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2355352-2355715",
+      "distinctOriginalPositions": 94
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/dispatch.js#aa013d513b34daac3b47265681b6e097ee8ea2fd41f4e2dcb46ea52f4ed14835@41-475",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2356002-2356219",
+      "distinctOriginalPositions": 53
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/dispatch.js#aa013d513b34daac3b47265681b6e097ee8ea2fd41f4e2dcb46ea52f4ed14835@477-593",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2356219-2356276",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/dispatch.js#aa013d513b34daac3b47265681b6e097ee8ea2fd41f4e2dcb46ea52f4ed14835@528-590",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2356244-2356275",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/dispatch.js#aa013d513b34daac3b47265681b6e097ee8ea2fd41f4e2dcb46ea52f4ed14835@595-734",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2356276-2356355",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/dispatch.js#aa013d513b34daac3b47265681b6e097ee8ea2fd41f4e2dcb46ea52f4ed14835@646-731",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2356301-2356354",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/index.js#639575343bbe797620704cb4a1ae164a905eacccfba3ff016520b8669720cb4b@1505-1596",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2356560-2356608",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/index.js#639575343bbe797620704cb4a1ae164a905eacccfba3ff016520b8669720cb4b@1598-1682",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2356608-2356669",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "d3-selection",
+      "source": "node_modules/d3-selection/src/selection/index.js#639575343bbe797620704cb4a1ae164a905eacccfba3ff016520b8669720cb4b@1684-1733",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2356669-2356696",
+      "distinctOriginalPositions": 6
+    },
+    {
       "library": "d3-transition",
       "source": "node_modules/d3-transition/src/transition/schedule.js#3231c7a0a19e2995258d79e327e2510717edc6eb1f01c93761c2203234cd580b@844-1002",
       "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2407670-2407771",
@@ -3003,20 +5169,590 @@
       "source": "node_modules/d3-transition/src/selection/transition.js#231c6cd7d138e7013e0cc662275e05490c713335d5c265659653f61bc9f8e66b@286-515",
       "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2418072-2418207",
       "distinctOriginalPositions": 31
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/count.js#c9c5358f12c2b8f49cda9995d717b1aa3a78edd389e186f8d5db7d7b241b50d7@0-199",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2771302-2771405",
+      "distinctOriginalPositions": 32
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/sum.js#2925ff253e09a1cce6a8154d8ea297278e3523fa3c6a5e15a728ccb2553a9702@57-259",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2771963-2772058",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/sort.js#12f2a37886b943764a3e72480d8c05c28f9b96d47da11ea88b67833347b5ed72@60-146",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2772098-2772141",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/path.js#43fe78ae5f91060f78d2259138ce7c7a996330b53735b030fd8edc2ffa5b69db@335-605",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2772280-2772423",
+      "distinctOriginalPositions": 45
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/leaves.js#9919c70c209893eef488f2a22aa3bd8f4f5e7ea9fbcc4bd7188158743cbed1da@65-142",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2772573-2772607",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/links.js#80eeabc158828e1e72c961438a444fffc09c99c2cacebe397ce83e6d2ac70a02@71-221",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2772655-2772709",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/index.js#63bed36dcc1d845ae750b0d377f817d97228e1313d577b52a2753100d781265b@1244-1315",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773165-2773212",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/index.js#63bed36dcc1d845ae750b0d377f817d97228e1313d577b52a2753100d781265b@1317-1368",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773212-2773246",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/index.js#63bed36dcc1d845ae750b0d377f817d97228e1313d577b52a2753100d781265b@1370-1438",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773246-2773296",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/index.js#63bed36dcc1d845ae750b0d377f817d97228e1313d577b52a2753100d781265b@1440-1564",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773296-2773377",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/index.js#63bed36dcc1d845ae750b0d377f817d97228e1313d577b52a2753100d781265b@1573-1710",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773377-2773448",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/hierarchy/index.js#63bed36dcc1d845ae750b0d377f817d97228e1313d577b52a2753100d781265b@1719-1818",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773448-2773517",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/accessors.js#9e157391ac464da876d3f4b99b5614915e263bf78038c199f837b099129d7847@7-72",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773712-2773753",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/accessors.js#9e157391ac464da876d3f4b99b5614915e263bf78038c199f837b099129d7847@81-165",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773753-2773817",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/constant.js#63b6a4f6759f2d18982354ea993d5e03154de9835394dea9fb224bcb0a5490d6@7-46",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773817-2773840",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/constant.js#63b6a4f6759f2d18982354ea993d5e03154de9835394dea9fb224bcb0a5490d6@86-116",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2773862-2773882",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@166-206",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2774157-2774185",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@208-260",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2774185-2774219",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@361-2626",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2774251-2775204",
+      "distinctOriginalPositions": 268
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@671-708",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2774343-2774365",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@971-985",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2774478-2774490",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@1011-1025",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2774493-2774505",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@2452-2511",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2775094-2775135",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@2644-2726",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2775216-2775266",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@2751-2845",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2775278-2775328",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@2866-2952",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2775336-2775386",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@3174-3366",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2775389-2775498",
+      "distinctOriginalPositions": 39
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@3577-3723",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2775498-2775587",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/stratify.js#40e86a4de7b2b3b7e1e2206f125fda5083006d5bd1d4394237566d808a8ed707@3931-4099",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2775587-2775687",
+      "distinctOriginalPositions": 34
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/squarify.js#b010f697d376eca4ec2e5d4b75f2a079a124df404221a0a2b555d5633c463372@126-1621",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2775854-2776300",
+      "distinctOriginalPositions": 174
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/squarify.js#b010f697d376eca4ec2e5d4b75f2a079a124df404221a0a2b555d5633c463372@1639-1866",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2776308-2776414",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/squarify.js#b010f697d376eca4ec2e5d4b75f2a079a124df404221a0a2b555d5633c463372@1667-1764",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2776322-2776361",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/squarify.js#b010f697d376eca4ec2e5d4b75f2a079a124df404221a0a2b555d5633c463372@1785-1843",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2776376-2776411",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@474-688",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2776488-2776579",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@692-1383",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2776579-2776839",
+      "distinctOriginalPositions": 106
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@1403-1482",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2776854-2776902",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@1502-1595",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2776910-2776972",
+      "distinctOriginalPositions": 22
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@1615-1700",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2776980-2777030",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@1723-1836",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2777041-2777128",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@1864-1996",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2777144-2777218",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@2024-2165",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2777234-2777349",
+      "distinctOriginalPositions": 23
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@2191-2319",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2777363-2777437",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@2347-2479",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2777453-2777527",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@2508-2642",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2777544-2777618",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "d3-hierarchy",
+      "source": "node_modules/d3-hierarchy/src/treemap/index.js#28b566cdfbf6e87a04eb6ed15d83df2e875544e75ebd904a8275d88922545f8f@2669-2799",
+      "bundled": "<local>/ngx-charts/main-WNPK7TMK.js#6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c@2777633-2777707",
+      "distinctOriginalPositions": 18
     }
   ],
   "observedSplit": {
     "count": 2,
-    "denominator": 655,
-    "percent": 0.3053435114503817
+    "denominator": 1135,
+    "percent": 0.1762114537444934
   },
   "observedCombine": {
     "count": 0,
-    "denominator": 657,
+    "denominator": 1137,
     "percent": 0
   },
   "removePercent": null,
   "createPercent": null,
   "missingSourceContents": [],
-  "failures": []
+  "failures": [],
+  "capture": {
+    "entry": "<local>/ngx-charts/",
+    "pageStatus": 200,
+    "title": "NgxCharts",
+    "finalURL": "<local>/ngx-charts/#/ngx-charts/bar-vertical",
+    "bodyTextLength": 2296,
+    "failures": [],
+    "assets": [
+      {
+        "url": "<local>/ngx-charts/polyfills-BLCX5WK5.js",
+        "sha256": "03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce",
+        "bytes": 34572,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "1f2b593d02d6042ca925d1e4b01c5ea4c1f6f850925bb3dabbd4db6e063b481c",
+          "url": "<local>/ngx-charts/polyfills-BLCX5WK5.js.map",
+          "link": "referenced",
+          "file": null,
+          "localPath": "source-maps/1f2b593d02d6042ca925d1e4b01c5ea4c1f6f850925bb3dabbd4db6e063b481c.map"
+        },
+        "localPath": "runtime-js/03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce.js"
+      },
+      {
+        "url": "<local>/ngx-charts/main-WNPK7TMK.js",
+        "sha256": "6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c",
+        "bytes": 3225765,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "514e019a1ca922327c485f6eefcf29749d067eeb9762ace976636d575f020da5",
+          "url": "<local>/ngx-charts/main-WNPK7TMK.js.map",
+          "link": "referenced",
+          "file": null,
+          "localPath": "source-maps/514e019a1ca922327c485f6eefcf29749d067eeb9762ace976636d575f020da5.map"
+        },
+        "localPath": "runtime-js/6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c.js"
+      },
+      {
+        "url": "<anonymous>",
+        "sha256": "cea32b507d853fca729ef50238481796280427007c606a96845e14e04ccf7869",
+        "bytes": 135,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/cea32b507d853fca729ef50238481796280427007c606a96845e14e04ccf7869.js"
+      },
+      {
+        "url": "<anonymous>",
+        "sha256": "028e7653cdfb6107902ab4b776c5e3482976104f5fca7b17af7773724fa98c42",
+        "bytes": 51,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/028e7653cdfb6107902ab4b776c5e3482976104f5fca7b17af7773724fa98c42.js"
+      },
+      {
+        "url": "<anonymous>",
+        "sha256": "ef2e6299e42c6031adb5825c5a5ba59e5ce82123df435db11f0edebfb0240b5a",
+        "bytes": 95,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/ef2e6299e42c6031adb5825c5a5ba59e5ce82123df435db11f0edebfb0240b5a.js"
+      }
+    ],
+    "repo": "swimlane/ngx-charts",
+    "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
+    "imageID": "sha256:ea908782be4b9f0e5c256e46bb7abdadf1bf128d7bc85bad0895d25d8a371935"
+  },
+  "selection": {
+    "repo": "swimlane/ngx-charts",
+    "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
+    "manifest": "package.json",
+    "manifestSHA256": "007f98be3c2ada9fc35210bed56dfd712f6b5c8f9460ce90caec2b87c3fdef89",
+    "seed": "recall-library-sample-v1",
+    "eligible": {
+      "@angular/animations": "~22.0.8",
+      "@angular/cdk": "~22.0.6",
+      "@angular/common": "~22.0.8",
+      "@angular/compiler": "~22.0.8",
+      "@angular/core": "~22.0.8",
+      "@angular/flex-layout": "15.0.0-beta.42",
+      "@angular/forms": "~22.0.8",
+      "@angular/platform-browser": "~22.0.8",
+      "@angular/platform-browser-dynamic": "~22.0.8",
+      "@angular/router": "~22.0.8",
+      "@swimlane/ngx-ui": "53.0.0-beta.0",
+      "ajv": "8.12.0",
+      "codemirror": "^5.65.0",
+      "d3-array": "^3.2.0",
+      "d3-brush": "^3.0.0",
+      "d3-color": "^3.1.0",
+      "d3-ease": "^3.0.1",
+      "d3-format": "^3.1.0",
+      "d3-hierarchy": "^3.1.2",
+      "d3-interpolate": "^3.0.1",
+      "d3-sankey": "^0.12.3",
+      "d3-scale": "^4.0.2",
+      "d3-selection": "^3.0.0",
+      "d3-shape": "^3.2.0",
+      "d3-time-format": "^4.1.0",
+      "d3-transition": "^3.0.1",
+      "emoji-flags": "^1.2.0",
+      "moment-timezone": "^0.5.40",
+      "ng-in-viewport": "13.0.1",
+      "ngx-moment": "^5.0.0",
+      "resize-observer-polyfill": "^1.5.1",
+      "rxjs": "^7.8.1",
+      "tslib": "^2.3.1",
+      "zone.js": "~0.15.0"
+    },
+    "excluded": {},
+    "selected": [
+      "rxjs",
+      "d3-format",
+      "d3-interpolate",
+      "tslib",
+      "d3-transition",
+      "d3-scale",
+      "emoji-flags",
+      "d3-hierarchy",
+      "zone.js",
+      "d3-selection"
+    ],
+    "samplingRule": "frontend-counterpart-fill-v1",
+    "fillSeed": "recall-counterpart-fill-v1",
+    "previousSelected": [
+      "rxjs",
+      "@angular/platform-browser-dynamic",
+      "d3-format",
+      "@angular/flex-layout",
+      "d3-interpolate",
+      "tslib",
+      "@angular/forms",
+      "@angular/router",
+      "d3-transition",
+      "d3-scale"
+    ],
+    "retainedContributors": [
+      "d3-format",
+      "d3-interpolate",
+      "d3-scale",
+      "d3-transition",
+      "rxjs",
+      "tslib"
+    ],
+    "candidatePairCounts": {
+      "@angular/animations": 0,
+      "@angular/cdk": 0,
+      "@angular/common": 0,
+      "@angular/compiler": 0,
+      "@angular/core": 0,
+      "@angular/flex-layout": 0,
+      "@angular/forms": 0,
+      "@angular/platform-browser": 0,
+      "@angular/platform-browser-dynamic": 0,
+      "@angular/router": 0,
+      "@swimlane/ngx-ui": 0,
+      "ajv": 547,
+      "codemirror": 1517,
+      "d3-array": 15,
+      "d3-brush": 59,
+      "d3-color": 37,
+      "d3-ease": 2,
+      "d3-format": 21,
+      "d3-hierarchy": 45,
+      "d3-interpolate": 39,
+      "d3-sankey": 47,
+      "d3-scale": 67,
+      "d3-selection": 104,
+      "d3-shape": 173,
+      "d3-time-format": 104,
+      "d3-transition": 83,
+      "emoji-flags": 7,
+      "moment-timezone": 53,
+      "ng-in-viewport": 0,
+      "ngx-moment": 0,
+      "resize-observer-polyfill": 70,
+      "rxjs": 258,
+      "tslib": 30,
+      "zone.js": 250
+    },
+    "candidateOrder": [
+      "emoji-flags",
+      "d3-hierarchy",
+      "@angular/forms",
+      "zone.js",
+      "@angular/core",
+      "d3-selection",
+      "codemirror",
+      "ng-in-viewport",
+      "@angular/router",
+      "@angular/cdk",
+      "ajv",
+      "d3-array",
+      "d3-time-format",
+      "moment-timezone",
+      "d3-sankey",
+      "d3-color",
+      "@angular/platform-browser",
+      "d3-shape",
+      "ngx-moment",
+      "resize-observer-polyfill",
+      "@angular/flex-layout",
+      "d3-ease",
+      "@angular/animations",
+      "@angular/compiler",
+      "d3-brush",
+      "@swimlane/ngx-ui",
+      "@angular/platform-browser-dynamic",
+      "@angular/common"
+    ],
+    "targetContributingLibraries": 10,
+    "fillOutcome": "limit-reached",
+    "frontendImageID": "sha256:ea908782be4b9f0e5c256e46bb7abdadf1bf128d7bc85bad0895d25d8a371935"
+  },
+  "selectionHistory": {
+    "selection-before-counterpart-fill": {
+      "repo": "swimlane/ngx-charts",
+      "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
+      "manifest": "package.json",
+      "manifestSHA256": "007f98be3c2ada9fc35210bed56dfd712f6b5c8f9460ce90caec2b87c3fdef89",
+      "seed": "recall-library-sample-v1",
+      "eligible": {
+        "@angular/animations": "~22.0.8",
+        "@angular/cdk": "~22.0.6",
+        "@angular/common": "~22.0.8",
+        "@angular/compiler": "~22.0.8",
+        "@angular/core": "~22.0.8",
+        "@angular/flex-layout": "15.0.0-beta.42",
+        "@angular/forms": "~22.0.8",
+        "@angular/platform-browser": "~22.0.8",
+        "@angular/platform-browser-dynamic": "~22.0.8",
+        "@angular/router": "~22.0.8",
+        "@swimlane/ngx-ui": "53.0.0-beta.0",
+        "ajv": "8.12.0",
+        "codemirror": "^5.65.0",
+        "d3-array": "^3.2.0",
+        "d3-brush": "^3.0.0",
+        "d3-color": "^3.1.0",
+        "d3-ease": "^3.0.1",
+        "d3-format": "^3.1.0",
+        "d3-hierarchy": "^3.1.2",
+        "d3-interpolate": "^3.0.1",
+        "d3-sankey": "^0.12.3",
+        "d3-scale": "^4.0.2",
+        "d3-selection": "^3.0.0",
+        "d3-shape": "^3.2.0",
+        "d3-time-format": "^4.1.0",
+        "d3-transition": "^3.0.1",
+        "emoji-flags": "^1.2.0",
+        "moment-timezone": "^0.5.40",
+        "ng-in-viewport": "13.0.1",
+        "ngx-moment": "^5.0.0",
+        "resize-observer-polyfill": "^1.5.1",
+        "rxjs": "^7.8.1",
+        "tslib": "^2.3.1",
+        "zone.js": "~0.15.0"
+      },
+      "excluded": {},
+      "selected": [
+        "rxjs",
+        "@angular/platform-browser-dynamic",
+        "d3-format",
+        "@angular/flex-layout",
+        "d3-interpolate",
+        "tslib",
+        "@angular/forms",
+        "@angular/router",
+        "d3-transition",
+        "d3-scale"
+      ]
+    }
+  },
+  "audit": {
+    "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
+    "imageID": "sha256:ea908782be4b9f0e5c256e46bb7abdadf1bf128d7bc85bad0895d25d8a371935",
+    "verifiedPairs": 904,
+    "checks": [
+      "script and map SHA-256",
+      "mapped source SHA-256",
+      "both function spans"
+    ]
+  }
 }

@@ -4,18 +4,16 @@
   "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
   "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d",
   "coverage": {
-    "@angular/core": 0,
-    "@angular/platform-browser-dynamic": 0,
-    "zone.js": 0,
-    "@angular/compiler": 0,
-    "@angular/forms": 0,
-    "@angular/platform-browser": 0,
-    "@angular/router": 0,
-    "@angular/animations": 0,
-    "@angular/common": 0,
-    "tslib": 1
+    "tslib": 1,
+    "rxjs": 93
   },
   "pairs": [
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/args.ts#fa20f23df91889699843f73011e3718b35b73cc1834ac3d5d2708803a8f3e911@131-206",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@752-790",
+      "distinctOriginalPositions": 11
+    },
     {
       "library": "tslib",
       "source": "node_modules/rxjs/node_modules/tslib/tslib.es6.mjs#0929993220938091ede542d688b0fdb87dad99a7e77678e1983c32d18a503339@5507-6137",
@@ -153,20 +151,1149 @@
       "source": "node_modules/rxjs/node_modules/tslib/tslib.es6.mjs#0929993220938091ede542d688b0fdb87dad99a7e77678e1983c32d18a503339@12202-12287",
       "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@2750-2797",
       "distinctOriginalPositions": 19
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/createErrorClass.ts#5d7a364fe929274051f77a1152aaa4e3697a3160642dcb56c385abe614ba7d91@536-626",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@3007-3052",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/UnsubscriptionError.ts#9501a902ee283375c29e4d676a2b8f9afa9cf2f7d098c4b6163628eeed2db6e0@620-968",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@3147-3340",
+      "distinctOriginalPositions": 28
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/UnsubscriptionError.ts#9501a902ee283375c29e4d676a2b8f9afa9cf2f7d098c4b6163628eeed2db6e0@822-863",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@3242-3274",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscription.ts#7bc29eba0a7ac8331f421d61928fb1455329ce0e075c1454eef3596537640dce@1785-3025",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@3523-3956",
+      "distinctOriginalPositions": 107
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscription.ts#7bc29eba0a7ac8331f421d61928fb1455329ce0e075c1454eef3596537640dce@4059-4850",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@3956-4163",
+      "distinctOriginalPositions": 40
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscription.ts#7bc29eba0a7ac8331f421d61928fb1455329ce0e075c1454eef3596537640dce@5079-5254",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@4163-4246",
+      "distinctOriginalPositions": 20
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscription.ts#7bc29eba0a7ac8331f421d61928fb1455329ce0e075c1454eef3596537640dce@5513-5726",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@4246-4341",
+      "distinctOriginalPositions": 26
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscription.ts#7bc29eba0a7ac8331f421d61928fb1455329ce0e075c1454eef3596537640dce@5845-6077",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@4341-4437",
+      "distinctOriginalPositions": 22
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscription.ts#7bc29eba0a7ac8331f421d61928fb1455329ce0e075c1454eef3596537640dce@7377-7537",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@4702-4745",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/reportUnhandledError.ts#96c1a4f500270f7413e2fa1d9cd35acc02190d5710c7e0e88175806fcb5892a5@623-897",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@4919-4932",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@1680-1845",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5110-5152",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@3076-3237",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5152-5197",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@3503-3692",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5197-5266",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@3918-4100",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5266-5339",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@4104-4247",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5339-5431",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@4251-4322",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5431-5466",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@4326-4457",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5466-5536",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@4461-4587",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5536-5610",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@5074-5135",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5630-5669",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@5139-5359",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5669-5749",
+      "distinctOriginalPositions": 23
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@5363-5630",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@5749-5845",
+      "distinctOriginalPositions": 26
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@7596-7869",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6103-6129",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@8085-8140",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6129-6152",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subscriber.ts#5add6d2414097e0c442b20fbcf4b50930183f37752c1daf2b68942279d13d72e@8323-8587",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6152-6172",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@1302-1460",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6479-6518",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@2702-2890",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6518-6574",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@9496-10617",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6574-6733",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@9820-10587",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6629-6729",
+      "distinctOriginalPositions": 27
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@10640-10941",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6733-6802",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@13146-13690",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6802-6952",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@13316-13667",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6836-6950",
+      "distinctOriginalPositions": 20
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@13402-13566",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6863-6909",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@13713-13830",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@6952-7036",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@13993-14037",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@7036-7055",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@16859-16975",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@7055-7087",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@18886-18907",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@7150-7156",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@18952-18972",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@7165-7173",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@1939-2050",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@7195-7206",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@19334-19461",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@7213-7290",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@19463-19622",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@7290-7358",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Observable.ts#b53cad85cf6daf781230b0b5aec3cc96164b80300ae5f249791381ed747a7c0a@19624-19785",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@7358-7417",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/innerFrom.ts#aa12a76fc06153cf41e411e9e39f9580b7eec634816e7034091115d85a7fa5fc@1833-2158",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@8407-8553",
+      "distinctOriginalPositions": 24
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/innerFrom.ts#aa12a76fc06153cf41e411e9e39f9580b7eec634816e7034091115d85a7fa5fc@2605-3388",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@8585-8654",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/innerFrom.ts#aa12a76fc06153cf41e411e9e39f9580b7eec634816e7034091115d85a7fa5fc@3693-3728",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@8738-8751",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/innerFrom.ts#aa12a76fc06153cf41e411e9e39f9580b7eec634816e7034091115d85a7fa5fc@3868-4058",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@8802-8864",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/innerFrom.ts#aa12a76fc06153cf41e411e9e39f9580b7eec634816e7034091115d85a7fa5fc@4160-4274",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@8896-8930",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/innerFrom.ts#aa12a76fc06153cf41e411e9e39f9580b7eec634816e7034091115d85a7fa5fc@4238-4268",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@8914-8927",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/lift.ts#48581262e69c4f9140f0521d3f8e88cb2358f6371fd00ec99b33b143690e8903@762-1109",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@9448-9597",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/lift.ts#48581262e69c4f9140f0521d3f8e88cb2358f6371fd00ec99b33b143690e8903@843-1030",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@9475-9533",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/OperatorSubscriber.ts#e2bf85c3c0f115aa9894e78aaccf0d996890fc22c5d09ee36ad8bf998a455e26@3801-3978",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@9770-9814",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/observeOn.ts#87c946b8958b4435e94e735db842517208652369dda42f2be0a02d6220eb4d56@3466-3862",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@10240-10361",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduled/scheduleArray.ts#d6f514fc466f532989bb16970b03ca9f510b1f682f08b1c3cbf300350400c09e@196-944",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@10586-10699",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduled/scheduleArray.ts#d6f514fc466f532989bb16970b03ca9f510b1f682f08b1c3cbf300350400c09e@349-938",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@10616-10697",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduled/scheduleIterable.ts#e6cd7d9d774ee0373a79053eecb30ba2549b80e679736a8cd879654579865f00@550-2179",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@10733-10927",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduled/scheduleIterable.ts#e6cd7d9d774ee0373a79053eecb30ba2549b80e679736a8cd879654579865f00@813-1810",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@10759-10894",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduled/scheduleIterable.ts#e6cd7d9d774ee0373a79053eecb30ba2549b80e679736a8cd879654579865f00@974-1770",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@10785-10884",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduled/scheduleIterable.ts#e6cd7d9d774ee0373a79053eecb30ba2549b80e679736a8cd879654579865f00@2119-2174",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@10896-10926",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduled/scheduleAsyncIterable.ts#cc2e915ce422dc12671620a85126bbe14a1deb6c3c7f8d60978fcfff787be4d2@335-897",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@11012-11147",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduled/scheduleAsyncIterable.ts#cc2e915ce422dc12671620a85126bbe14a1deb6c3c7f8d60978fcfff787be4d2@567-839",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@11090-11131",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/map.ts#e77ac02ea85fd9dd0483051e7182df474445217768a41cea6e49232b6e49a096@2026-2534",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@11507-11574",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/map.ts#e77ac02ea85fd9dd0483051e7182df474445217768a41cea6e49232b6e49a096@2303-2522",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@11541-11570",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/Action.ts#62284be6aaa0af2eac68138f9ce18644734f2562367d580e01bd61722c9bb444@596-701",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@11605-11631",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/intervalProvider.ts#f1eeb5ac6f566d7545afc5a609bf7b64c57e2f92362a919e3032aa80f3c54b7b@653-913",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@11671-11782",
+      "distinctOriginalPositions": 27
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/AsyncAction.ts#88c2b8b910aade8b9ed67751bce67eb573677cbddc8aef1412dcdf3c7a4edf9f@722-2552",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@11947-12203",
+      "distinctOriginalPositions": 51
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/AsyncAction.ts#88c2b8b910aade8b9ed67751bce67eb573677cbddc8aef1412dcdf3c7a4edf9f@2556-2751",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@12203-12275",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/AsyncAction.ts#88c2b8b910aade8b9ed67751bce67eb573677cbddc8aef1412dcdf3c7a4edf9f@2755-3333",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@12275-12389",
+      "distinctOriginalPositions": 24
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/AsyncAction.ts#88c2b8b910aade8b9ed67751bce67eb573677cbddc8aef1412dcdf3c7a4edf9f@3415-4303",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@12389-12621",
+      "distinctOriginalPositions": 43
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/AsyncAction.ts#88c2b8b910aade8b9ed67751bce67eb573677cbddc8aef1412dcdf3c7a4edf9f@4307-4869",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@12621-12770",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/dateTimestampProvider.ts#fba730354a5a55ba693516a2ba4ccaa91f11bb5a23982c033f3197ebc14117b5@217-409",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@13014-13040",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Scheduler.ts#672983d19884bc33b3f015f90d1cb222b312a3cdcff735a273fc7deff811c3d2@917-1033",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@13057-13119",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/mergeInternals.ts#326bc00537e70208b44a0e40e7c559ed7be9bf6107203073ccc6a452a977bc12@3825-5587",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@13763-13876",
+      "distinctOriginalPositions": 34
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/mergeInternals.ts#326bc00537e70208b44a0e40e7c559ed7be9bf6107203073ccc6a452a977bc12@5248-5279",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@13829-13838",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/mergeInternals.ts#326bc00537e70208b44a0e40e7c559ed7be9bf6107203073ccc6a452a977bc12@5722-5876",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@13908-13925",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/mergeInternals.ts#326bc00537e70208b44a0e40e7c559ed7be9bf6107203073ccc6a452a977bc12@6031-6071",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@13928-13934",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/mergeMap.ts#f19b86bbb5566a5c110e3b77641e1feedcf95dc18e49698979f355f9bdc38301@3467-3518",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@13991-14008",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/mergeMap.ts#f19b86bbb5566a5c110e3b77641e1feedcf95dc18e49698979f355f9bdc38301@3666-3745",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14058-14076",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/empty.ts#fb22097915375c1473850afbc23b9cdc46fc2df2e1bf3f26f6414d930f128d2d@1670-1707",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14209-14224",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/take.ts#f73f87f11b722e41ccf883b60dd96176a247c42d6b5fbf3047f784b0b3339c45@1568-2279",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14266-14348",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/take.ts#f73f87f11b722e41ccf883b60dd96176a247c42d6b5fbf3047f784b0b3339c45@1689-2259",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14300-14344",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/ignoreElements.ts#8a24ba1e9592defb030a4deb765af5f3a26e727e09e8f553a9d9514b39e3a114@1462-1557",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14375-14409",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/mapTo.ts#4aa614033a02426c72e4ff7090a828902e7c3b69edf69791b0d2c55acb99b5fa@1656-1667",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14438-14443",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/delayWhen.ts#58f35dd57713720ba6b1ad3ed0873dc25c723cda06cfe5769688cdfed80ae741@4445-4582",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14473-14514",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/delayWhen.ts#58f35dd57713720ba6b1ad3ed0873dc25c723cda06cfe5769688cdfed80ae741@4607-4699",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14520-14557",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/delay.ts#45d8ae58958f08a1941a13482c5b5271036537dd2be796652bbaaf29483e77c1@2276-2290",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14883-14888",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/animationFrameProvider.ts#db60426a737cb75d51d24649e08f30a865e4d30d61f77ab1892efa8cf51a6bc8@632-1266",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14898-15016",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/animationFrameProvider.ts#db60426a737cb75d51d24649e08f30a865e4d30d61f77ab1892efa8cf51a6bc8@970-1207",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@14969-14988",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/animationFrameProvider.ts#db60426a737cb75d51d24649e08f30a865e4d30d61f77ab1892efa8cf51a6bc8@1238-1260",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15004-15014",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/ObjectUnsubscribedError.ts#4a9add1a98b8ec49293a6bdc643f0a9df02c031345d5c2b0e7e1f3459cae38fe@674-838",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15222-15313",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@2025-2200",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15499-15555",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@2223-2327",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15555-15600",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@2331-2658",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15600-15782",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@2365-2652",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15611-15779",
+      "distinctOriginalPositions": 28
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@2662-2983",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15782-15955",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@2697-2977",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15794-15952",
+      "distinctOriginalPositions": 32
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@2987-3255",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15955-16099",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@3017-3249",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@15969-16096",
+      "distinctOriginalPositions": 26
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@3259-3371",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16099-16188",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@3375-3434",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16188-16274",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@3457-3599",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16274-16343",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@3622-3807",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16343-16442",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@3830-4201",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16442-16614",
+      "distinctOriginalPositions": 25
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@4106-4195",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16568-16611",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@4224-4467",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16614-16718",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@4924-5155",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16841-16900",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@5159-5216",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@16900-17007",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@5220-5277",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17007-17116",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/Subject.ts#7c14f62a621eaa6c36dc623379863eccb7b22d93b4f70b5635557eb2da2b80a0@5281-5333",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17116-17228",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/BehaviorSubject.ts#6bc744be4205cb8db87af83f0f4bf119e95d4e70ebf3b023fa0a261bd876fcbb@307-356",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17377-17415",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/BehaviorSubject.ts#6bc744be4205cb8db87af83f0f4bf119e95d4e70ebf3b023fa0a261bd876fcbb@360-408",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17415-17450",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/BehaviorSubject.ts#6bc744be4205cb8db87af83f0f4bf119e95d4e70ebf3b023fa0a261bd876fcbb@431-636",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17450-17530",
+      "distinctOriginalPositions": 19
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/BehaviorSubject.ts#6bc744be4205cb8db87af83f0f4bf119e95d4e70ebf3b023fa0a261bd876fcbb@640-808",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17530-17629",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/AnimationFrameAction.ts#a4c5ecbef385d9e140d84d99212d4241916955d2bf205479ff10b866f8c1004c@335-489",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17695-17753",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/AnimationFrameAction.ts#a4c5ecbef385d9e140d84d99212d4241916955d2bf205479ff10b866f8c1004c@493-1213",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17753-17924",
+      "distinctOriginalPositions": 30
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/scheduler/AnimationFrameAction.ts#a4c5ecbef385d9e140d84d99212d4241916955d2bf205479ff10b866f8c1004c@1174-1206",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@17901-17920",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/EmptyError.ts#dcb5d2c93743669e14fdf3bab5acdfceff6f06b95cab9b4055e846b5da654fbf@641-783",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@18674-18756",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/mapOneOrManyArgs.ts#ad749cb5037c7d4663b1eadfe43748569d5f99264eca879ea893f93bf9b86190@114-240",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@18780-18823",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/mapOneOrManyArgs.ts#ad749cb5037c7d4663b1eadfe43748569d5f99264eca879ea893f93bf9b86190@507-536",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@18852-18862",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/argsArgArrayOrObject.ts#29caec8bb477573a4c6606ea69589e450d80b599722c6b71337bb895fbd2cfe1@758-777",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@19055-19062",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/util/argsArgArrayOrObject.ts#29caec8bb477573a4c6606ea69589e450d80b599722c6b71337bb895fbd2cfe1@861-985",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@19099-19155",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/combineLatest.ts#8d39206fbdc632548388e54bc1db6c35ad05531cda1ad196fbadcd46a2e6bc09@10418-12855",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@19414-19631",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/combineLatest.ts#8d39206fbdc632548388e54bc1db6c35ad05531cda1ad196fbadcd46a2e6bc09@10604-12826",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@19423-19626",
+      "distinctOriginalPositions": 27
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/combineLatest.ts#8d39206fbdc632548388e54bc1db6c35ad05531cda1ad196fbadcd46a2e6bc09@12468-12722",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@19593-19617",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/combineLatest.ts#8d39206fbdc632548388e54bc1db6c35ad05531cda1ad196fbadcd46a2e6bc09@13019-13236",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@19632-19670",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/defer.ts#690c66e8ec58bde20775e9c81b3fd2de3c2118a4ebda343dfadd28ca889dca84@2194-2273",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@19700-19728",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/observable/forkJoin.ts#9b86174290645239a5b5edab45feac3935709726bc221b2943cff20b47ffb8bf@7649-7907",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@19974-20030",
+      "distinctOriginalPositions": 20
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/filter.ts#40d681723430d568fe98ecc51960c0fec1dc4acd2c377fce39a61571ae9528be@3016-3528",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@20254-20321",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/filter.ts#40d681723430d568fe98ecc51960c0fec1dc4acd2c377fce39a61571ae9528be@3440-3516",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@20288-20317",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/audit.ts#55287c6fbffb9397743f44123211e17f2415f852e88883c34d70f03dd54a3397@2394-2672",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@20387-20470",
+      "distinctOriginalPositions": 24
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/audit.ts#55287c6fbffb9397743f44123211e17f2415f852e88883c34d70f03dd54a3397@3191-3337",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@20574-20618",
+      "distinctOriginalPositions": 13
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/auditTime.ts#5563596efa23a7aca02256b9c05191c0259438c76c9194804c114de4daa87578@2315-2347",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@20656-20667",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/catchError.ts#0b25e06f414efdd78b5a7c39afa299e28c31b51baea485fb5b7226849ea50344@3354-4495",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@20695-20876",
+      "distinctOriginalPositions": 29
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/catchError.ts#0b25e06f414efdd78b5a7c39afa299e28c31b51baea485fb5b7226849ea50344@3607-4034",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@20755-20829",
+      "distinctOriginalPositions": 26
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/defaultIfEmpty.ts#0eecbadaa58c96f6dd74491b813bb02041cf4d2761770f04557d5346525e4329@1709-1842",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21013-21045",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/throwIfEmpty.ts#1aa0f403c84debbcc2a375bda9dd34d0cd9e0fc8469f74449d0dbf30bea82b51@1613-1688",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21136-21167",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/throwIfEmpty.ts#1aa0f403c84debbcc2a375bda9dd34d0cd9e0fc8469f74449d0dbf30bea82b51@1713-1774",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21173-21203",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/finalize.ts#82adefb0c60909b50f0b5a86c3b09495c4cb6c7cd8313a8c17ded72d2989a3e2@1923-2201",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21229-21276",
+      "distinctOriginalPositions": 16
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/first.ts#ba2894c9917ac681469139cb3a232368cf7bdf3fdafafec6a9fb79e0eff29c54@3340-3569",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21328-21398",
+      "distinctOriginalPositions": 17
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/first.ts#ba2894c9917ac681469139cb3a232368cf7bdf3fdafafec6a9fb79e0eff29c54@3409-3442",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21345-21360",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/first.ts#ba2894c9917ac681469139cb3a232368cf7bdf3fdafafec6a9fb79e0eff29c54@3540-3562",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21384-21396",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/takeLast.ts#d63b7c6fbb3c9d05d46b8e0250ae811995f50f2d5d37eaa1173f3d389d28339f@2842-2964",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21564-21577",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/startWith.ts#342d9767c5499494bf7000ca46ada77ed0e5d9b21508d60b6412ca641e57e162@2298-2664",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21626-21670",
+      "distinctOriginalPositions": 18
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/switchMap.ts#4bfef21c0edc5cf09d5d3b992ce65d72d39dafba2f4cf9f02937dc03a551c87f@4055-4116",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21730-21753",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/switchMap.ts#4bfef21c0edc5cf09d5d3b992ce65d72d39dafba2f4cf9f02937dc03a551c87f@4851-4973",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21838-21865",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/switchMap.ts#4bfef21c0edc5cf09d5d3b992ce65d72d39dafba2f4cf9f02937dc03a551c87f@4989-5276",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21866-21883",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/switchMap.ts#4bfef21c0edc5cf09d5d3b992ce65d72d39dafba2f4cf9f02937dc03a551c87f@5324-5397",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21888-21903",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/takeUntil.ts#89261b6d66a8b451481f7c17c802750c61506b1b4e1f6a3971001ffbf484c66a@1728-1921",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21935-22018",
+      "distinctOriginalPositions": 21
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/takeUntil.ts#89261b6d66a8b451481f7c17c802750c61506b1b4e1f6a3971001ffbf484c66a@1825-1852",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@21967-21983",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/tap.ts#444d7ec4132d252d452cadefe1242fa0624808bb32818f7432b019a4f8674e95@7887-8016",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@22253-22328",
+      "distinctOriginalPositions": 11
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/tap.ts#444d7ec4132d252d452cadefe1242fa0624808bb32818f7432b019a4f8674e95@8030-8162",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@22329-22400",
+      "distinctOriginalPositions": 14
+    },
+    {
+      "library": "rxjs",
+      "source": "node_modules/rxjs/src/internal/operators/tap.ts#444d7ec4132d252d452cadefe1242fa0624808bb32818f7432b019a4f8674e95@8176-8327",
+      "bundled": "<local>/ngx-datatable/main-DNDN2VAB.js#d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff@22401-22513",
+      "distinctOriginalPositions": 12
     }
   ],
   "observedSplit": {
-    "count": 3,
-    "denominator": 29,
-    "percent": 10.344827586206897
+    "count": 42,
+    "denominator": 346,
+    "percent": 12.138728323699421
   },
   "observedCombine": {
-    "count": 3,
-    "denominator": 29,
-    "percent": 10.344827586206897
+    "count": 31,
+    "denominator": 350,
+    "percent": 8.857142857142858
   },
   "removePercent": null,
   "createPercent": null,
   "missingSourceContents": [],
-  "failures": []
+  "failures": [],
+  "capture": {
+    "entry": "<local>/ngx-datatable/",
+    "pageStatus": 200,
+    "title": "ngx-datatable - Angular component for presenting large and complex data",
+    "finalURL": "<local>/ngx-datatable/#/",
+    "bodyTextLength": 3940,
+    "failures": [],
+    "assets": [
+      {
+        "url": "<local>/ngx-datatable/polyfills-MTONFW3A.js",
+        "sha256": "596b31c19c7d1637e597c635f7be0a77704f4cb3cc4dd0475e013fcc4e6ffce8",
+        "bytes": 47,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "ed562b0bba7ee7214e56ac7f728054b3496bec4597c94a4eb7b4179e6f5cb1c9",
+          "url": "<local>/ngx-datatable/polyfills-MTONFW3A.js.map",
+          "link": "referenced",
+          "file": null,
+          "localPath": "source-maps/ed562b0bba7ee7214e56ac7f728054b3496bec4597c94a4eb7b4179e6f5cb1c9.map"
+        },
+        "localPath": "runtime-js/596b31c19c7d1637e597c635f7be0a77704f4cb3cc4dd0475e013fcc4e6ffce8.js"
+      },
+      {
+        "url": "<local>/ngx-datatable/main-DNDN2VAB.js",
+        "sha256": "d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff",
+        "bytes": 413922,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "d109a650ba8b306832dfcb54986c8c3525806630aede6226f757aed4b3c45023",
+          "url": "<local>/ngx-datatable/main-DNDN2VAB.js.map",
+          "link": "referenced",
+          "file": "main-DNDN2VAB.js",
+          "localPath": "source-maps/d109a650ba8b306832dfcb54986c8c3525806630aede6226f757aed4b3c45023.map"
+        },
+        "localPath": "runtime-js/d160520a0ac2bb1fa3e73361631579a632e96591703dc2d26b1f698a90e492ff.js"
+      },
+      {
+        "url": "https://buttons.github.io/buttons.js",
+        "sha256": "e1238a1f9e4e466283e28114abfc4e6747a237ac948b8572b7e1735a72f994f1",
+        "bytes": 19546,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/e1238a1f9e4e466283e28114abfc4e6747a237ac948b8572b7e1735a72f994f1.js"
+      },
+      {
+        "url": "<local>/ngx-datatable/",
+        "sha256": "321b4f657afbf8ba49518e6ab4cbad07ea967d0b4c68f71c7deed05ed09c1187",
+        "bytes": 16,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/321b4f657afbf8ba49518e6ab4cbad07ea967d0b4c68f71c7deed05ed09c1187.js"
+      },
+      {
+        "url": "<local>/ngx-datatable/chunk-DK2Pp4V3.js",
+        "sha256": "8451f7fa92444c75176aac23b45764fbdaee69c9fe1eb78b5afdab7c08b1060a",
+        "bytes": 1362,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "2fed4d26c89cfa296f949eb33a2f61be3d50abb7827d01b792741215f3179e6a",
+          "url": "<local>/ngx-datatable/chunk-DK2Pp4V3.js.map",
+          "link": "referenced",
+          "file": "chunk-DK2Pp4V3.js",
+          "localPath": "source-maps/2fed4d26c89cfa296f949eb33a2f61be3d50abb7827d01b792741215f3179e6a.map"
+        },
+        "localPath": "runtime-js/8451f7fa92444c75176aac23b45764fbdaee69c9fe1eb78b5afdab7c08b1060a.js"
+      },
+      {
+        "url": "<local>/ngx-datatable/chunk-CyYO2b3C.js",
+        "sha256": "74a9ab75dde7d48c02df92ea54289bdeb476d23d8bfc1eb3c31ae3fab5462a65",
+        "bytes": 362,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "930901f0596fb985b26ce4bf02268226fd98397132bcf5bdb6870a7cc38341af",
+          "url": "<local>/ngx-datatable/chunk-CyYO2b3C.js.map",
+          "link": "referenced",
+          "file": "chunk-CyYO2b3C.js",
+          "localPath": "source-maps/930901f0596fb985b26ce4bf02268226fd98397132bcf5bdb6870a7cc38341af.map"
+        },
+        "localPath": "runtime-js/74a9ab75dde7d48c02df92ea54289bdeb476d23d8bfc1eb3c31ae3fab5462a65.js"
+      }
+    ],
+    "repo": "swimlane/ngx-datatable",
+    "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+    "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d"
+  },
+  "selection": {
+    "repo": "swimlane/ngx-datatable",
+    "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+    "manifest": "package.json",
+    "manifestSHA256": "1803c245acde0a2f0a41d4e5608d5a63554c4ba22c3194cb4bb4206c9c925514",
+    "seed": "recall-library-sample-v1",
+    "eligible": {
+      "@angular/animations": "22.0.8",
+      "@angular/cdk": "22.0.6",
+      "@angular/common": "22.0.8",
+      "@angular/compiler": "22.0.8",
+      "@angular/core": "22.0.8",
+      "@angular/forms": "22.0.8",
+      "@angular/platform-browser": "22.0.8",
+      "@angular/platform-browser-dynamic": "22.0.8",
+      "@angular/router": "22.0.8",
+      "rxjs": "~7.8.2",
+      "tslib": "~2.4.0",
+      "zone.js": "~0.16.0"
+    },
+    "excluded": {},
+    "selected": [
+      "tslib",
+      "rxjs"
+    ],
+    "samplingRule": "frontend-counterpart-fill-v1",
+    "fillSeed": "recall-counterpart-fill-v1",
+    "previousSelected": [
+      "@angular/core",
+      "@angular/platform-browser-dynamic",
+      "zone.js",
+      "@angular/compiler",
+      "@angular/forms",
+      "@angular/platform-browser",
+      "@angular/router",
+      "@angular/animations",
+      "@angular/common",
+      "tslib"
+    ],
+    "retainedContributors": [
+      "tslib"
+    ],
+    "candidatePairCounts": {
+      "@angular/animations": 0,
+      "@angular/cdk": 0,
+      "@angular/common": 0,
+      "@angular/compiler": 0,
+      "@angular/core": 0,
+      "@angular/forms": 0,
+      "@angular/platform-browser": 0,
+      "@angular/platform-browser-dynamic": 0,
+      "@angular/router": 0,
+      "rxjs": 151,
+      "tslib": 23,
+      "zone.js": 0
+    },
+    "candidateOrder": [
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/animations",
+      "@angular/compiler",
+      "@angular/common",
+      "@angular/core",
+      "rxjs",
+      "@angular/router",
+      "@angular/forms",
+      "zone.js",
+      "@angular/cdk"
+    ],
+    "targetContributingLibraries": 10,
+    "fillOutcome": "eligible-pool-exhausted",
+    "frontendImageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d"
+  },
+  "selectionHistory": {
+    "selection-before-counterpart-fill": {
+      "repo": "swimlane/ngx-datatable",
+      "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+      "manifest": "package.json",
+      "manifestSHA256": "1803c245acde0a2f0a41d4e5608d5a63554c4ba22c3194cb4bb4206c9c925514",
+      "seed": "recall-library-sample-v1",
+      "eligible": {
+        "@angular/animations": "22.0.8",
+        "@angular/cdk": "22.0.6",
+        "@angular/common": "22.0.8",
+        "@angular/compiler": "22.0.8",
+        "@angular/core": "22.0.8",
+        "@angular/forms": "22.0.8",
+        "@angular/platform-browser": "22.0.8",
+        "@angular/platform-browser-dynamic": "22.0.8",
+        "@angular/router": "22.0.8",
+        "rxjs": "~7.8.2",
+        "tslib": "~2.4.0",
+        "zone.js": "~0.16.0"
+      },
+      "excluded": {},
+      "selected": [
+        "@angular/core",
+        "@angular/platform-browser-dynamic",
+        "zone.js",
+        "@angular/compiler",
+        "@angular/forms",
+        "@angular/platform-browser",
+        "@angular/router",
+        "@angular/animations",
+        "@angular/common",
+        "tslib"
+      ]
+    }
+  },
+  "audit": {
+    "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+    "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d",
+    "verifiedPairs": 174,
+    "checks": [
+      "script and map SHA-256",
+      "mapped source SHA-256",
+      "both function spans"
+    ]
+  }
 }

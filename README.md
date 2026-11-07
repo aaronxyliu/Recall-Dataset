@@ -2,13 +2,13 @@
 
 This repository owns dataset metadata, the bundler-organized catalog, local held-out source checkouts, fixture inputs, and dataset preparation scripts. Recovery code lives in `../ReCall`; experiment outputs and the paper live in `../ReCall Exp`.
 
-The [function ground-truth dataset](function-ground-truth/README.md) records the sampled production dependencies, browser capture coverage, and source-to-bundle function pairs for the 26 retained experiment repositories, with 19,914 one-to-one pairs.
+The [function ground-truth dataset](function-ground-truth/README.md) records the sampled production dependencies, browser capture coverage, and source-to-bundle function pairs for the 26 retained experiment repositories, with 78,884 one-to-one pairs.
 
 For new applications, follow the [agent setup guide](WEB_APPLICATION_SETUP_GUIDE.md) for Docker builds, production source maps, browser verification, and common failure fixes.
 
 ## Tracked experiment artifacts
 
-The active experiment contains **26 repositories and 19,914 one-to-one function pairs**. Its durable entry point is [bundling-dataset/one-to-one-evaluation.json](bundling-dataset/one-to-one-evaluation.json). All captured JavaScript, source maps, and pair records in the following layout are tracked by Git.
+The active experiment contains **26 repositories and 78,884 one-to-one function pairs**. Its durable entry point is [bundling-dataset/one-to-one-evaluation.json](bundling-dataset/one-to-one-evaluation.json). All captured JavaScript, source maps, and pair records in the following layout are tracked by Git.
 
 ```text
 bundling-dataset/
@@ -25,11 +25,13 @@ bundling-dataset/
 
 Each retained repository has one Dockerfile at `bundling-dataset/<bundler>/<owner>--<repo>/Dockerfile`. It enables or retains source maps and includes any packaging fixes needed to serve them. Use the repository’s documented build context and launch commands. The archive script copies captured artifacts and function mappings while using this outer Dockerfile as the canonical recipe.
 
-Manifest paths resolve relative to `bundling-dataset/`. A function identifier in `func-mapping.json` uses `path#sha256@start-end`. Its offsets are half-open UTF-16 code-unit offsets into the corresponding artifact. Original library source is supplied by the map's `sourcesContent` where available. The pair records store locations and relationships; the archived scripts and maps supply the actual code.
+Manifest paths resolve relative to `bundling-dataset/`. A function identifier in `func-mapping.json` uses `path#sha256@start-end`. Its offsets are half-open UTF-16 code-unit offsets into the corresponding artifact. Original library source is supplied by the map's `sourcesContent` where available. The pair records store locations and relationships; the archived scripts and maps supply the actual code. Each `func-mapping.json` also retains capture-to-map links, selection provenance and history, coverage diagnostics, and an audit summary. Separate intermediate capture/selection/relation/status files under `function-ground-truth/` remain local and Git-ignored.
 
 The archive preserves captured bytes under content-hash filenames. A bundled function's hash identifies its file under `runtime-js/`. Source-map filenames identify their content hashes under `source-maps/`; their `sources` and `sourcesContent` identify original files. A script's original map URL may refer to its former HTTP location. Keep the manifest, scripts, maps, and metadata together when transferring the dataset.
 
-The archive occupies approximately 441 MB before Git compression. Source checkouts under `builds/` remain local and ignored. To publish refreshed capture records into this layout, run `python3 scripts/archive-function-ground-truth.py` from this repository. It verifies content hashes and copies new artifacts from the capture scratch directories. The tracked archive can be read independently of those temporary directories.
+Library samples are extended to at most ten contributing libraries when a repository declares more than ten eligible dependencies. Existing contributors are retained, and additional candidates are chosen in a fixed pseudorandom order conditional on having at least one accepted function pair in the captured scripts. The manifest records the seed, candidate counts, retained libraries, and whether the ten-library limit was reached or the eligible pool was exhausted. Twelve repositories reached ten through this extension; six exhausted the pool below ten.
+
+The archive includes the captured bytes and their provenance. Source checkouts under `builds/` remain local and ignored. To publish refreshed capture records into this layout, run `python3 scripts/archive-function-ground-truth.py` from this repository. It verifies content hashes and copies new artifacts from the capture scratch directories. The tracked archive can be read independently of those temporary directories.
 
 ## Frontend repository builds
 

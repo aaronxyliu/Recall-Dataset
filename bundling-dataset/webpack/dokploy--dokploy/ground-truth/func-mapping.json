@@ -5,17 +5,618 @@
   "imageID": "sha256:6fdac03eee413572b38609316f90bda393b401a5651011d851368a959520fbc1",
   "coverage": {
     "better-auth": 29,
-    "class-variance-authority": 0,
-    "@trpc/next": 0,
     "react-dom": 4,
-    "sonner": 0,
-    "react-hook-form": 0,
     "@better-auth/passkey": 2,
-    "posthog-js": 0,
-    "@trpc/server": 0,
-    "superjson": 0
+    "next": 8,
+    "react": 4
   },
   "pairs": [
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/build/polyfills/polyfill-module.js#94c8008b70e41ac5b0360fd6f35ea7a59c20c6927aca7731ef8c6a3c26b9cddf@279-350",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@47804-47875",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/build/polyfills/polyfill-module.js#94c8008b70e41ac5b0360fd6f35ea7a59c20c6927aca7731ef8c6a3c26b9cddf@611-842",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@48136-48367",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/build/polyfills/polyfill-module.js#94c8008b70e41ac5b0360fd6f35ea7a59c20c6927aca7731ef8c6a3c26b9cddf@718-779",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@48243-48304",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/build/polyfills/polyfill-module.js#94c8008b70e41ac5b0360fd6f35ea7a59c20c6927aca7731ef8c6a3c26b9cddf@780-840",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@48305-48365",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/build/polyfills/polyfill-module.js#94c8008b70e41ac5b0360fd6f35ea7a59c20c6927aca7731ef8c6a3c26b9cddf@884-965",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@48409-48490",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/build/polyfills/polyfill-module.js#94c8008b70e41ac5b0360fd6f35ea7a59c20c6927aca7731ef8c6a3c26b9cddf@1007-1105",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@48532-48630",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/build/polyfills/polyfill-module.js#94c8008b70e41ac5b0360fd6f35ea7a59c20c6927aca7731ef8c6a3c26b9cddf@1137-1285",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@48662-48806",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/build/polyfills/polyfill-module.js#94c8008b70e41ac5b0360fd6f35ea7a59c20c6927aca7731ef8c6a3c26b9cddf@1319-1377",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@48840-48900",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/is-error.js#107768cb8a4d1bd51ae3998058c2c46601d85efad96281890f455a7c5d2b6000@496-538",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@48996-49016",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/is-error.js#107768cb8a4d1bd51ae3998058c2c46601d85efad96281890f455a7c5d2b6000@560-609",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@49032-49052",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@2488-2536",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@49917-49937",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@2557-2605",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@49952-49972",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@2635-2692",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@49996-50016",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@2714-2763",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50032-50052",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@2790-2844",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50073-50094",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@2873-2929",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50117-50138",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@2964-3026",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50167-50188",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3056-3113",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50212-50233",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3145-3204",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50259-50279",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3226-3275",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50295-50315",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3312-3376",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50346-50366",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3408-3467",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50392-50412",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3494-3548",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50433-50453",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3575-3629",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50474-50494",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3663-3724",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50522-50542",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3748-3799",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50560-50580",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3833-3894",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50608-50628",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@3936-4005",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50664-50684",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4051-4124",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50724-50744",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4160-4223",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50774-50794",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4261-4326",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50826-50846",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4356-4413",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50870-50890",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4445-4504",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50916-50936",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4537-4597",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@50963-50983",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4621-4672",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51001-51021",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4711-4777",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51054-51074",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4801-4852",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51092-51112",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4889-4953",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51143-51163",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@4984-5042",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51188-51208",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5068-5121",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51228-51248",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5160-5226",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51281-51301",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5255-5311",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51324-51345",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5334-5384",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51362-51382",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5419-5481",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51411-51431",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5531-5608",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51475-51495",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5630-5679",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51511-51531",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5708-5764",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51554-51574",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5802-5867",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51606-51626",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5889-5938",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51642-51662",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@5977-6043",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51695-51715",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6078-6140",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51744-51764",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6170-6227",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51788-51808",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6260-6320",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51835-51855",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6351-6409",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51880-51900",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6449-6516",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51934-51954",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6547-6605",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@51979-51999",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6636-6694",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52024-52044",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6720-6773",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52064-52084",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6791-6836",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52096-52116",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6869-6929",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52143-52163",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@6973-7044",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52201-52221",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7077-7137",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52248-52268",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7159-7208",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52284-52305",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7241-7301",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52332-52353",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7339-7404",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52385-52405",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7454-7531",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52449-52469",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7569-7634",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52501-52521",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7674-7741",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52555-52576",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7763-7812",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52592-52613",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7844-7903",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52639-52660",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/constants.js#5d425d1024fdab2df5f8478a213fc1a42033f306ba73ce555fcdca59055a6639@7939-8002",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@52690-52711",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@515-565",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@69807-69827",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@599-660",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@69855-69875",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@695-757",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@69904-69924",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@789-848",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@69950-69970",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@881-941",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@69997-70017",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@973-1032",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@70043-70063",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@1074-1721",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@70150-70284",
+      "distinctOriginalPositions": 7
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@1722-2160",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@70284-70404",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@2161-3410",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@70404-70596",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@2227-3406",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@70431-70594",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@3411-3734",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@70596-70654",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@3735-4398",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@70654-70863",
+      "distinctOriginalPositions": 12
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/route-pattern-normalizer.js#03a968b2a577cd6f0fd6f3654fe4bdbbc551bbecd0db590dfc9bc2bb50d8d1d1@4214-4307",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@70792-70845",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/is-api-route.js#9a239610ccb575a8223f8dffcd2d6e518d1e3a87a503911b88222a1df0d063ef@209-331",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@114653-114726",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/lib/is-api-route.js#9a239610ccb575a8223f8dffcd2d6e518d1e3a87a503911b88222a1df0d063ef@159-204",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@114831-114851",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@1-7306",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@126055-132196",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@1505-3155",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@126150-128602",
+      "distinctOriginalPositions": 50
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@277-1505",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@126195-127372",
+      "distinctOriginalPositions": 76
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@1759-1933",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@127528-127686",
+      "distinctOriginalPositions": 4
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@1950-2046",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@127689-127761",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@2058-2157",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@127764-127852",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@2174-2491",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@127855-128115",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@3247-4496",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@128602-129767",
+      "distinctOriginalPositions": 9
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@3411-3499",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@128733-128818",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@3509-4495",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@128827-129766",
+      "distinctOriginalPositions": 35
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@4632-5124",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@129767-130181",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@5160-5238",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@130181-130248",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@5238-5285",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@130248-130291",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@3169-3229",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@132013-132046",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "next",
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/path-to-regexp/index.js#2ec41abbe53eda0f9e0f224ea91e457214c22f8cb56693c8c4880c76ab5e7ced@4532-4618",
+      "bundled": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js#48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf@132076-132122",
+      "distinctOriginalPositions": 4
+    },
     {
       "library": "@better-auth/passkey",
       "source": "webpack://_N_E/node_modules/.pnpm/@better-auth+passkey@1.6.23_@better-auth+core@1.6.23_@better-auth+utils@0.4.2_@better-f_1a36ff7f1a5f7ed600a80fc893fe0656/node_modules/@better-auth/passkey/dist/client.mjs#e010ed7363177fcc23bebe7c7bd2232483465acb49200b8d70016a57d337a4dc@4504-4667",
@@ -3419,6 +4020,12 @@
       "distinctOriginalPositions": 32
     },
     {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react-jsx-runtime.production.js#1e46f15002696985e80c61d47aaa30dabb03c954270a690f5f7dfbbacfa9002b@383-888",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@174746-174960",
+      "distinctOriginalPositions": 18
+    },
+    {
       "library": "react-dom",
       "source": "webpack://_N_E/node_modules/.pnpm/react-dom@19.2.7_react@19.2.7/node_modules/react-dom/client.js#00e348ab3d6bc2eef908345d0bc4e008c95bcfecec060dfda5c4967953761396@15-1035",
       "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@175035-175227",
@@ -3429,6 +4036,282 @@
       "source": "webpack://_N_E/node_modules/.pnpm/react-dom@19.2.7_react@19.2.7/node_modules/react-dom/index.js#ba1a3e33489f868371561777607e3ee5091df0f7ea3f1a10f789d6b86e4c1505@15-1035",
       "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@178712-178904",
       "distinctOriginalPositions": 11
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@1301-1337",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@179440-179460",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@1507-1679",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@179577-179653",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@2322-2498",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@179667-179743",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@1754-2118",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@179796-180031",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@2154-2243",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@180056-180122",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@2904-3117",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@180334-180426",
+      "distinctOriginalPositions": 10
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@3236-3387",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@180426-180491",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@8074-8328",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@180674-182310",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@6065-6113",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@181115-181136",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@8238-8307",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@182271-182306",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@10160-10285",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183163-183213",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@10227-10261",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183194-183209",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@10300-10441",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183222-183272",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@10367-10419",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183245-183266",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@10453-10654",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183278-183393",
+      "distinctOriginalPositions": 5
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@11117-11192",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183588-183627",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@11212-11295",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183637-183699",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@11237-11292",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183656-183698",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@11319-11349",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183714-183737",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@11374-12288",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@183753-184174",
+      "distinctOriginalPositions": 25
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@12314-12684",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@184191-184350",
+      "distinctOriginalPositions": 15
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@12710-13621",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@184367-184732",
+      "distinctOriginalPositions": 26
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@13643-13686",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@184745-184777",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@13709-13793",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@184791-184831",
+      "distinctOriginalPositions": 3
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@13851-13990",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@184858-184929",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@14007-14147",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@184937-185003",
+      "distinctOriginalPositions": 6
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@14175-14926",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185022-185234",
+      "distinctOriginalPositions": 23
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@14963-15029",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185262-185302",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15045-15111",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185309-185339",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15138-15265",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185357-185406",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15289-15379",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185421-185463",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15402-15477",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185477-185514",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15546-15651",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185563-185610",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15673-15757",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185623-185663",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15784-15865",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185681-185722",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15883-15939",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185731-185761",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@15971-16075",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185784-185838",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@16106-16199",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185860-185909",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@16227-16317",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185928-185974",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@16337-16419",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@185985-186023",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@16445-16549",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@186040-186084",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@16572-16683",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@186098-186143",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@16702-16783",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@186153-186186",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@16804-16887",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@186198-186233",
+      "distinctOriginalPositions": 2
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@16920-17097",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@186257-186312",
+      "distinctOriginalPositions": 8
+    },
+    {
+      "library": "react",
+      "source": "webpack://_N_E/node_modules/.pnpm/react@19.2.7/node_modules/react/cjs/react.production.js#66fa8fc8149e02f61dd5f26e3d0ea7bd03bac64a52d15601019f50a61260a115@17123-17187",
+      "bundled": "<local>/_next/static/chunks/framework-a029190e971374cb.js#659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459@186329-186367",
+      "distinctOriginalPositions": 2
     },
     {
       "library": "react-dom",
@@ -3522,14 +4405,14 @@
     }
   ],
   "observedSplit": {
-    "count": 64,
-    "denominator": 784,
-    "percent": 8.16326530612245
+    "count": 72,
+    "denominator": 975,
+    "percent": 7.384615384615385
   },
   "observedCombine": {
-    "count": 108,
-    "denominator": 760,
-    "percent": 14.210526315789474
+    "count": 122,
+    "denominator": 944,
+    "percent": 12.923728813559322
   },
   "removePercent": null,
   "createPercent": null,
@@ -3539,5 +4422,1103 @@
       "asset": "<local>/_next/static/chunks/pages/_app-8c7409f7af6b4029.js",
       "reason": "map position outside artifact"
     }
-  ]
+  ],
+  "capture": {
+    "entry": "<local>/",
+    "pageStatus": 200,
+    "title": "Dokploy",
+    "finalURL": "<local>/register",
+    "bodyTextLength": 150,
+    "failures": [],
+    "assets": [
+      {
+        "url": "<local>/register",
+        "sha256": "78cba1f318b0717ef6ad160d00610dbab40101c1fb90b9405107283ab8b7048a",
+        "bytes": 419,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/78cba1f318b0717ef6ad160d00610dbab40101c1fb90b9405107283ab8b7048a.js"
+      },
+      {
+        "url": "<local>/_next/static/chunks/webpack-0c68ece63efaec63.js",
+        "sha256": "821641af279a1b527d861f58c8600e3bafff23392e438d1fec24ff1f6c82a74e",
+        "bytes": 5298,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "8eefb0fdcb88ea673ffdbdeb9987919918ae42b1002f5210cb8b81527e19ab16",
+          "url": "<local>/_next/static/chunks/webpack-0c68ece63efaec63.js.map",
+          "link": "referenced",
+          "file": "static/chunks/webpack-0c68ece63efaec63.js",
+          "localPath": "source-maps/8eefb0fdcb88ea673ffdbdeb9987919918ae42b1002f5210cb8b81527e19ab16.map"
+        },
+        "localPath": "runtime-js/821641af279a1b527d861f58c8600e3bafff23392e438d1fec24ff1f6c82a74e.js"
+      },
+      {
+        "url": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js",
+        "sha256": "48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf",
+        "bytes": 137462,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "a44b167ae777ef7ebdc629b47fa91aeb1f06cb74484d1843015e68086c347bd5",
+          "url": "<local>/_next/static/chunks/main-1cc82aeffb8c0f4c.js.map",
+          "link": "referenced",
+          "file": "static/chunks/main-1cc82aeffb8c0f4c.js",
+          "localPath": "source-maps/a44b167ae777ef7ebdc629b47fa91aeb1f06cb74484d1843015e68086c347bd5.map"
+        },
+        "localPath": "runtime-js/48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf.js"
+      },
+      {
+        "url": "<local>/_next/static/chunks/2398-e4c2c7eea0f44cab.js",
+        "sha256": "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031",
+        "bytes": 58235,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "d2e824fe7be2f0128d1d5df5c1508252f8348bbc0682ce367c2a7bfeb47b8d98",
+          "url": "<local>/_next/static/chunks/2398-e4c2c7eea0f44cab.js.map",
+          "link": "referenced",
+          "file": "static/chunks/2398-e4c2c7eea0f44cab.js",
+          "localPath": "source-maps/d2e824fe7be2f0128d1d5df5c1508252f8348bbc0682ce367c2a7bfeb47b8d98.map"
+        },
+        "localPath": "runtime-js/f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031.js"
+      },
+      {
+        "url": "<local>/_next/static/chunks/framework-a029190e971374cb.js",
+        "sha256": "659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459",
+        "bytes": 189739,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "49fa6829bdf99e7ea074dbe3e15675051bda42af819b27948e6a19b91e412bd6",
+          "url": "<local>/_next/static/chunks/framework-a029190e971374cb.js.map",
+          "link": "referenced",
+          "file": "static/chunks/framework-a029190e971374cb.js",
+          "localPath": "source-maps/49fa6829bdf99e7ea074dbe3e15675051bda42af819b27948e6a19b91e412bd6.map"
+        },
+        "localPath": "runtime-js/659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459.js"
+      },
+      {
+        "url": "<local>/_next/static/chunks/5393-f9e16baf1afe2fc8.js",
+        "sha256": "9cc4f7e0f52d574e9f988435f876dd7eaeceff039a67ef34ba86be73a888aa43",
+        "bytes": 15891,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "43c3727f88517596bab5904058b4cac68e51e631c6dc7eefa50db2d38489f125",
+          "url": "<local>/_next/static/chunks/5393-f9e16baf1afe2fc8.js.map",
+          "link": "referenced",
+          "file": "static/chunks/5393-f9e16baf1afe2fc8.js",
+          "localPath": "source-maps/43c3727f88517596bab5904058b4cac68e51e631c6dc7eefa50db2d38489f125.map"
+        },
+        "localPath": "runtime-js/9cc4f7e0f52d574e9f988435f876dd7eaeceff039a67ef34ba86be73a888aa43.js"
+      },
+      {
+        "url": "<local>/_next/static/chunks/pages/register-c69de7e548f6c243.js",
+        "sha256": "c731748b3a8530c19b56b5b88045c52c96097bc3d1eac661ae19bf3362e4c6ef",
+        "bytes": 13386,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "60759954665008de97b80ba4eb4b5663447010bedb3b71182c963840f4db42a5",
+          "url": "<local>/_next/static/chunks/pages/register-c69de7e548f6c243.js.map",
+          "link": "referenced",
+          "file": "static/chunks/pages/register-c69de7e548f6c243.js",
+          "localPath": "source-maps/60759954665008de97b80ba4eb4b5663447010bedb3b71182c963840f4db42a5.map"
+        },
+        "localPath": "runtime-js/c731748b3a8530c19b56b5b88045c52c96097bc3d1eac661ae19bf3362e4c6ef.js"
+      },
+      {
+        "url": "<local>/_next/static/CWTLHAZMiktbNiCD6zXci/_ssgManifest.js",
+        "sha256": "6f5b4aa00d2f8d6aed9935b471806bf7acef464d0c1d390260e5fe27f800c67e",
+        "bytes": 77,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "http-404",
+          "url": "<local>/_next/static/CWTLHAZMiktbNiCD6zXci/_ssgManifest.js.map"
+        },
+        "localPath": "runtime-js/6f5b4aa00d2f8d6aed9935b471806bf7acef464d0c1d390260e5fe27f800c67e.js"
+      },
+      {
+        "url": "<local>/_next/static/CWTLHAZMiktbNiCD6zXci/_buildManifest.js",
+        "sha256": "d614c3f9c005ca0e5856bde147731c97d068041cedd3947aeb38bb1c0ed167b7",
+        "bytes": 11390,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "http-404",
+          "url": "<local>/_next/static/CWTLHAZMiktbNiCD6zXci/_buildManifest.js.map"
+        },
+        "localPath": "runtime-js/d614c3f9c005ca0e5856bde147731c97d068041cedd3947aeb38bb1c0ed167b7.js"
+      },
+      {
+        "url": "<local>/_next/static/chunks/pages/_app-8c7409f7af6b4029.js",
+        "sha256": "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad",
+        "bytes": 865249,
+        "channels": [
+          "parsed:page",
+          "http"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "bcad2261a25cf2296b5930810ce3c33f538c45f6383bb1861fee753732e4784f",
+          "url": "<local>/_next/static/chunks/pages/_app-8c7409f7af6b4029.js.map",
+          "link": "referenced",
+          "file": "static/chunks/pages/_app-8c7409f7af6b4029.js",
+          "localPath": "source-maps/bcad2261a25cf2296b5930810ce3c33f538c45f6383bb1861fee753732e4784f.map"
+        },
+        "localPath": "runtime-js/9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad.js"
+      },
+      {
+        "url": "<anonymous>",
+        "sha256": "f82b08b4e803c98515d1c06eb4d345d367f1f4d7822f9dab4b7d4cabafa38d03",
+        "bytes": 28,
+        "channels": [
+          "parsed:page"
+        ],
+        "map": {
+          "status": "no-map-reference"
+        },
+        "localPath": "runtime-js/f82b08b4e803c98515d1c06eb4d345d367f1f4d7822f9dab4b7d4cabafa38d03.js"
+      },
+      {
+        "url": "<local>/_next/static/chunks/pages/index-58cac78c73bbc9c9.js",
+        "sha256": "fa2d3ec815dc6de3af242f7dccd4085cdd77b8635dc78bf9b628d6236c6769f7",
+        "bytes": 12075,
+        "channels": [
+          "http",
+          "parsed:page"
+        ],
+        "map": {
+          "status": "map-found",
+          "sha256": "4c7780b9163725ff82f05a3bdb15e018d7dd04217df59a3b52a8b23e854b307a",
+          "url": "<local>/_next/static/chunks/pages/index-58cac78c73bbc9c9.js.map",
+          "link": "referenced",
+          "file": "static/chunks/pages/index-58cac78c73bbc9c9.js",
+          "localPath": "source-maps/4c7780b9163725ff82f05a3bdb15e018d7dd04217df59a3b52a8b23e854b307a.map"
+        },
+        "localPath": "runtime-js/fa2d3ec815dc6de3af242f7dccd4085cdd77b8635dc78bf9b628d6236c6769f7.js"
+      }
+    ],
+    "repo": "dokploy/dokploy",
+    "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
+    "imageID": "sha256:6fdac03eee413572b38609316f90bda393b401a5651011d851368a959520fbc1"
+  },
+  "selection": {
+    "repo": "dokploy/dokploy",
+    "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
+    "manifest": "apps/dokploy/package.json",
+    "manifestSHA256": "53a4bb794faa71fe88f01fb807e15d80ab17e0ea254ee3a0fc612aad569a1ed4",
+    "seed": "recall-frontend-visible-v1",
+    "eligible": {
+      "@ai-sdk/anthropic": "^3.0.44",
+      "@ai-sdk/azure": "^3.0.30",
+      "@ai-sdk/cohere": "^3.0.21",
+      "@ai-sdk/deepinfra": "^2.0.34",
+      "@ai-sdk/mistral": "^3.0.20",
+      "@ai-sdk/openai": "^3.0.29",
+      "@ai-sdk/openai-compatible": "^2.0.30",
+      "@aws-sdk/client-cloudwatch": "^3.1108.0",
+      "@aws-sdk/client-cloudwatch-logs": "^3.1108.0",
+      "@aws-sdk/client-route-53": "^3.1108.0",
+      "@aws-sdk/client-secrets-manager": "^3.1108.0",
+      "@aws-sdk/client-ssm": "3.1108.0",
+      "@better-auth/api-key": "1.6.23",
+      "@better-auth/passkey": "1.6.23",
+      "@better-auth/scim": "1.6.23",
+      "@better-auth/sso": "1.6.23",
+      "@codemirror/autocomplete": "^6.18.6",
+      "@codemirror/lang-css": "^6.3.1",
+      "@codemirror/lang-json": "^6.0.1",
+      "@codemirror/lang-yaml": "^6.1.2",
+      "@codemirror/language": "^6.11.0",
+      "@codemirror/legacy-modes": "6.4.0",
+      "@codemirror/search": "^6.6.0",
+      "@codemirror/view": "^6.39.15",
+      "@dokploy/trpc-openapi": "0.0.18",
+      "@faker-js/faker": "^10.5.0",
+      "@hookform/resolvers": "^5.2.2",
+      "@octokit/auth-app": "^6.1.3",
+      "@octokit/webhooks": "^13.9.0",
+      "@openpanel/nextjs": "^1.5.1",
+      "@react-email/components": "^1.0.12",
+      "@stepperize/react": "4.0.1",
+      "@stripe/stripe-js": "4.8.0",
+      "@tailwindcss/typography": "0.5.16",
+      "@tanstack/react-query": "^5.90.21",
+      "@tanstack/react-table": "^8.21.3",
+      "@tanstack/react-virtual": "3.14.18",
+      "@trpc/client": "^11.10.0",
+      "@trpc/next": "^11.10.0",
+      "@trpc/react-query": "^11.10.0",
+      "@trpc/server": "^11.10.0",
+      "@uiw/codemirror-theme-github": "^4.23.12",
+      "@uiw/react-codemirror": "^4.23.12",
+      "@xterm/addon-attach": "0.10.0",
+      "@xterm/addon-clipboard": "0.1.0",
+      "@xterm/xterm": "^5.5.0",
+      "adm-zip": "^0.6.1",
+      "ai": "^6.0.86",
+      "ai-sdk-ollama": "^3.7.0",
+      "bcrypt": "6.0.0",
+      "better-auth": "1.6.23",
+      "bl": "6.0.11",
+      "boxen": "^7.1.1",
+      "class-variance-authority": "^0.7.1",
+      "clsx": "^2.1.1",
+      "cmdk": "^0.2.1",
+      "copy-to-clipboard": "^3.3.3",
+      "date-fns": "3.6.0",
+      "dockerode": "4.0.2",
+      "dompurify": "^3.4.17",
+      "dotenv": "16.4.5",
+      "drizzle-orm": "0.45.2",
+      "drizzle-zod": "0.8.3",
+      "fancy-ansi": "^0.1.3",
+      "input-otp": "^1.4.2",
+      "js-cookie": "^3.0.7",
+      "lodash": "4.18.1",
+      "lucide-react": "^0.469.0",
+      "micromatch": "4.0.8",
+      "nanoid": "3.3.18",
+      "next": "16.4.1",
+      "next-themes": "^0.2.1",
+      "nextjs-toploader": "^3.9.17",
+      "node-os-utils": "2.0.1",
+      "node-pty": "1.1.0",
+      "node-schedule": "2.1.1",
+      "nodemailer": "10.1.4",
+      "octokit": "3.1.2",
+      "pino": "9.4.0",
+      "pino-pretty": "11.2.2",
+      "postgres": "3.4.4",
+      "posthog-js": "1.438.10",
+      "public-ip": "6.0.2",
+      "qrcode": "^1.5.4",
+      "radix-ui": "^1.6.0",
+      "react": "19.2.7",
+      "react-confetti-explosion": "3.0.3",
+      "react-day-picker": "10.0.1",
+      "react-dom": "19.2.7",
+      "react-hook-form": "^7.71.2",
+      "react-markdown": "^9.1.0",
+      "recharts": "^3.8.0",
+      "resend": "^6.0.2",
+      "semver": "7.7.3",
+      "shadcn": "^4.23.0",
+      "shell-quote": "^1.11.0",
+      "slugify": "^1.6.6",
+      "sonner": "^1.7.4",
+      "ssh2": "~1.16.0",
+      "stripe": "17.2.0",
+      "superjson": "^2.2.2",
+      "swagger-ui-react": "^5.32.6",
+      "tailwind-merge": "^2.6.1",
+      "tailwindcss-animate": "^1.0.7",
+      "toml": "5.0.1",
+      "tw-animate-css": "^1.4.0",
+      "undici": "^6.29.1",
+      "use-resize-observer": "9.1.0",
+      "ws": "8.21.0",
+      "xterm-addon-fit": "^0.8.0",
+      "yaml": "2.8.3",
+      "zod": "^4.6.6",
+      "zod-form-data": "^3.0.1"
+    },
+    "excluded": {
+      "@dokploy/server": "workspace:*"
+    },
+    "selected": [
+      "better-auth",
+      "react-dom",
+      "@better-auth/passkey",
+      "next",
+      "react"
+    ],
+    "samplingRule": "frontend-counterpart-fill-v1",
+    "frontendPoolField": "dependencies",
+    "frontendPool": [
+      "better-auth",
+      "class-variance-authority",
+      "@trpc/next",
+      "react-dom",
+      "sonner",
+      "react-hook-form",
+      "@better-auth/passkey",
+      "posthog-js",
+      "@trpc/server",
+      "superjson",
+      "@hookform/resolvers",
+      "next",
+      "@better-auth/sso",
+      "@better-auth/api-key",
+      "tailwind-merge",
+      "@trpc/client",
+      "cmdk",
+      "next-themes",
+      "@tanstack/react-query",
+      "clsx",
+      "@openpanel/nextjs",
+      "copy-to-clipboard",
+      "nextjs-toploader",
+      "zod",
+      "react",
+      "@trpc/react-query"
+    ],
+    "frontendImageID": "sha256:6fdac03eee413572b38609316f90bda393b401a5651011d851368a959520fbc1",
+    "frontendEvidence": {
+      "better-auth": [
+        "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031"
+      ],
+      "class-variance-authority": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "@trpc/next": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "react-dom": [
+        "659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459"
+      ],
+      "sonner": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "react-hook-form": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "@better-auth/passkey": [
+        "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031"
+      ],
+      "posthog-js": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "@trpc/server": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "superjson": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "@hookform/resolvers": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "next": [
+        "48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf",
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "@better-auth/sso": [
+        "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031"
+      ],
+      "@better-auth/api-key": [
+        "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031"
+      ],
+      "tailwind-merge": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "@trpc/client": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "cmdk": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "next-themes": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "@tanstack/react-query": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "clsx": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "@openpanel/nextjs": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "copy-to-clipboard": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "nextjs-toploader": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "zod": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ],
+      "react": [
+        "659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459"
+      ],
+      "@trpc/react-query": [
+        "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+      ]
+    },
+    "fillSeed": "recall-counterpart-fill-v1",
+    "previousSelected": [
+      "better-auth",
+      "class-variance-authority",
+      "@trpc/next",
+      "react-dom",
+      "sonner",
+      "react-hook-form",
+      "@better-auth/passkey",
+      "posthog-js",
+      "@trpc/server",
+      "superjson"
+    ],
+    "retainedContributors": [
+      "@better-auth/passkey",
+      "better-auth",
+      "react-dom"
+    ],
+    "candidatePairCounts": {
+      "@ai-sdk/anthropic": 0,
+      "@ai-sdk/azure": 0,
+      "@ai-sdk/cohere": 0,
+      "@ai-sdk/deepinfra": 0,
+      "@ai-sdk/mistral": 0,
+      "@ai-sdk/openai": 0,
+      "@ai-sdk/openai-compatible": 0,
+      "@aws-sdk/client-cloudwatch": 0,
+      "@aws-sdk/client-cloudwatch-logs": 0,
+      "@aws-sdk/client-route-53": 0,
+      "@aws-sdk/client-secrets-manager": 0,
+      "@aws-sdk/client-ssm": 0,
+      "@better-auth/api-key": 0,
+      "@better-auth/passkey": 1,
+      "@better-auth/scim": 0,
+      "@better-auth/sso": 0,
+      "@codemirror/autocomplete": 0,
+      "@codemirror/lang-css": 0,
+      "@codemirror/lang-json": 0,
+      "@codemirror/lang-yaml": 0,
+      "@codemirror/language": 0,
+      "@codemirror/legacy-modes": 0,
+      "@codemirror/search": 0,
+      "@codemirror/view": 0,
+      "@dokploy/trpc-openapi": 0,
+      "@faker-js/faker": 0,
+      "@hookform/resolvers": 0,
+      "@octokit/auth-app": 0,
+      "@octokit/webhooks": 0,
+      "@openpanel/nextjs": 0,
+      "@react-email/components": 0,
+      "@stepperize/react": 0,
+      "@stripe/stripe-js": 0,
+      "@tailwindcss/typography": 0,
+      "@tanstack/react-query": 0,
+      "@tanstack/react-table": 0,
+      "@tanstack/react-virtual": 0,
+      "@trpc/client": 0,
+      "@trpc/next": 0,
+      "@trpc/react-query": 0,
+      "@trpc/server": 0,
+      "@uiw/codemirror-theme-github": 0,
+      "@uiw/react-codemirror": 0,
+      "@xterm/addon-attach": 0,
+      "@xterm/addon-clipboard": 0,
+      "@xterm/xterm": 0,
+      "adm-zip": 0,
+      "ai": 0,
+      "ai-sdk-ollama": 0,
+      "bcrypt": 0,
+      "better-auth": 41,
+      "bl": 0,
+      "boxen": 0,
+      "class-variance-authority": 0,
+      "clsx": 0,
+      "cmdk": 0,
+      "copy-to-clipboard": 0,
+      "date-fns": 0,
+      "dockerode": 0,
+      "dompurify": 0,
+      "dotenv": 0,
+      "drizzle-orm": 0,
+      "drizzle-zod": 0,
+      "fancy-ansi": 0,
+      "input-otp": 0,
+      "js-cookie": 0,
+      "lodash": 0,
+      "lucide-react": 0,
+      "micromatch": 0,
+      "nanoid": 0,
+      "next": 101,
+      "next-themes": 0,
+      "nextjs-toploader": 0,
+      "node-os-utils": 0,
+      "node-pty": 0,
+      "node-schedule": 0,
+      "nodemailer": 0,
+      "octokit": 0,
+      "pino": 0,
+      "pino-pretty": 0,
+      "postgres": 0,
+      "posthog-js": 0,
+      "public-ip": 0,
+      "qrcode": 0,
+      "radix-ui": 0,
+      "react": 47,
+      "react-confetti-explosion": 0,
+      "react-day-picker": 0,
+      "react-dom": 542,
+      "react-hook-form": 0,
+      "react-markdown": 0,
+      "recharts": 0,
+      "resend": 0,
+      "semver": 0,
+      "shadcn": 0,
+      "shell-quote": 0,
+      "slugify": 0,
+      "sonner": 0,
+      "ssh2": 0,
+      "stripe": 0,
+      "superjson": 0,
+      "swagger-ui-react": 0,
+      "tailwind-merge": 0,
+      "tailwindcss-animate": 0,
+      "toml": 0,
+      "tw-animate-css": 0,
+      "undici": 0,
+      "use-resize-observer": 0,
+      "ws": 0,
+      "xterm-addon-fit": 0,
+      "yaml": 0,
+      "zod": 0,
+      "zod-form-data": 0
+    },
+    "candidateOrder": [
+      "slugify",
+      "undici",
+      "nanoid",
+      "react-markdown",
+      "@uiw/react-codemirror",
+      "@stepperize/react",
+      "@codemirror/legacy-modes",
+      "qrcode",
+      "dompurify",
+      "@octokit/webhooks",
+      "drizzle-orm",
+      "shadcn",
+      "@codemirror/view",
+      "tw-animate-css",
+      "@codemirror/lang-css",
+      "@ai-sdk/openai-compatible",
+      "@codemirror/lang-yaml",
+      "@tanstack/react-virtual",
+      "zod-form-data",
+      "react-confetti-explosion",
+      "@codemirror/language",
+      "@ai-sdk/openai",
+      "@uiw/codemirror-theme-github",
+      "@better-auth/api-key",
+      "@xterm/xterm",
+      "@openpanel/nextjs",
+      "@trpc/server",
+      "lucide-react",
+      "@react-email/components",
+      "node-pty",
+      "tailwindcss-animate",
+      "ssh2",
+      "node-os-utils",
+      "bcrypt",
+      "@ai-sdk/cohere",
+      "ai-sdk-ollama",
+      "toml",
+      "radix-ui",
+      "semver",
+      "resend",
+      "postgres",
+      "@better-auth/sso",
+      "pino",
+      "stripe",
+      "zod",
+      "@tanstack/react-table",
+      "js-cookie",
+      "@stripe/stripe-js",
+      "shell-quote",
+      "@ai-sdk/deepinfra",
+      "@ai-sdk/mistral",
+      "sonner",
+      "@tailwindcss/typography",
+      "@hookform/resolvers",
+      "class-variance-authority",
+      "micromatch",
+      "@aws-sdk/client-secrets-manager",
+      "date-fns",
+      "@codemirror/search",
+      "@trpc/client",
+      "cmdk",
+      "input-otp",
+      "@better-auth/scim",
+      "@dokploy/trpc-openapi",
+      "@codemirror/autocomplete",
+      "swagger-ui-react",
+      "@octokit/auth-app",
+      "nextjs-toploader",
+      "pino-pretty",
+      "@aws-sdk/client-route-53",
+      "lodash",
+      "dotenv",
+      "@ai-sdk/azure",
+      "@ai-sdk/anthropic",
+      "public-ip",
+      "next",
+      "next-themes",
+      "node-schedule",
+      "@trpc/next",
+      "bl",
+      "dockerode",
+      "ws",
+      "react-hook-form",
+      "posthog-js",
+      "recharts",
+      "fancy-ansi",
+      "use-resize-observer",
+      "@xterm/addon-clipboard",
+      "@xterm/addon-attach",
+      "xterm-addon-fit",
+      "ai",
+      "@trpc/react-query",
+      "@aws-sdk/client-ssm",
+      "superjson",
+      "@aws-sdk/client-cloudwatch-logs",
+      "octokit",
+      "nodemailer",
+      "@aws-sdk/client-cloudwatch",
+      "react-day-picker",
+      "clsx",
+      "drizzle-zod",
+      "tailwind-merge",
+      "@tanstack/react-query",
+      "react",
+      "@codemirror/lang-json",
+      "copy-to-clipboard",
+      "@faker-js/faker",
+      "boxen",
+      "adm-zip",
+      "yaml"
+    ],
+    "targetContributingLibraries": 10,
+    "fillOutcome": "eligible-pool-exhausted"
+  },
+  "selectionHistory": {
+    "selection-before-counterpart-fill": {
+      "repo": "dokploy/dokploy",
+      "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
+      "manifest": "apps/dokploy/package.json",
+      "manifestSHA256": "53a4bb794faa71fe88f01fb807e15d80ab17e0ea254ee3a0fc612aad569a1ed4",
+      "seed": "recall-frontend-visible-v1",
+      "eligible": {
+        "@ai-sdk/anthropic": "^3.0.44",
+        "@ai-sdk/azure": "^3.0.30",
+        "@ai-sdk/cohere": "^3.0.21",
+        "@ai-sdk/deepinfra": "^2.0.34",
+        "@ai-sdk/mistral": "^3.0.20",
+        "@ai-sdk/openai": "^3.0.29",
+        "@ai-sdk/openai-compatible": "^2.0.30",
+        "@aws-sdk/client-cloudwatch": "^3.1108.0",
+        "@aws-sdk/client-cloudwatch-logs": "^3.1108.0",
+        "@aws-sdk/client-route-53": "^3.1108.0",
+        "@aws-sdk/client-secrets-manager": "^3.1108.0",
+        "@aws-sdk/client-ssm": "3.1108.0",
+        "@better-auth/api-key": "1.6.23",
+        "@better-auth/passkey": "1.6.23",
+        "@better-auth/scim": "1.6.23",
+        "@better-auth/sso": "1.6.23",
+        "@codemirror/autocomplete": "^6.18.6",
+        "@codemirror/lang-css": "^6.3.1",
+        "@codemirror/lang-json": "^6.0.1",
+        "@codemirror/lang-yaml": "^6.1.2",
+        "@codemirror/language": "^6.11.0",
+        "@codemirror/legacy-modes": "6.4.0",
+        "@codemirror/search": "^6.6.0",
+        "@codemirror/view": "^6.39.15",
+        "@dokploy/trpc-openapi": "0.0.18",
+        "@faker-js/faker": "^10.5.0",
+        "@hookform/resolvers": "^5.2.2",
+        "@octokit/auth-app": "^6.1.3",
+        "@octokit/webhooks": "^13.9.0",
+        "@openpanel/nextjs": "^1.5.1",
+        "@react-email/components": "^1.0.12",
+        "@stepperize/react": "4.0.1",
+        "@stripe/stripe-js": "4.8.0",
+        "@tailwindcss/typography": "0.5.16",
+        "@tanstack/react-query": "^5.90.21",
+        "@tanstack/react-table": "^8.21.3",
+        "@tanstack/react-virtual": "3.14.18",
+        "@trpc/client": "^11.10.0",
+        "@trpc/next": "^11.10.0",
+        "@trpc/react-query": "^11.10.0",
+        "@trpc/server": "^11.10.0",
+        "@uiw/codemirror-theme-github": "^4.23.12",
+        "@uiw/react-codemirror": "^4.23.12",
+        "@xterm/addon-attach": "0.10.0",
+        "@xterm/addon-clipboard": "0.1.0",
+        "@xterm/xterm": "^5.5.0",
+        "adm-zip": "^0.6.1",
+        "ai": "^6.0.86",
+        "ai-sdk-ollama": "^3.7.0",
+        "bcrypt": "6.0.0",
+        "better-auth": "1.6.23",
+        "bl": "6.0.11",
+        "boxen": "^7.1.1",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "cmdk": "^0.2.1",
+        "copy-to-clipboard": "^3.3.3",
+        "date-fns": "3.6.0",
+        "dockerode": "4.0.2",
+        "dompurify": "^3.4.17",
+        "dotenv": "16.4.5",
+        "drizzle-orm": "0.45.2",
+        "drizzle-zod": "0.8.3",
+        "fancy-ansi": "^0.1.3",
+        "input-otp": "^1.4.2",
+        "js-cookie": "^3.0.7",
+        "lodash": "4.18.1",
+        "lucide-react": "^0.469.0",
+        "micromatch": "4.0.8",
+        "nanoid": "3.3.18",
+        "next": "16.4.1",
+        "next-themes": "^0.2.1",
+        "nextjs-toploader": "^3.9.17",
+        "node-os-utils": "2.0.1",
+        "node-pty": "1.1.0",
+        "node-schedule": "2.1.1",
+        "nodemailer": "10.1.4",
+        "octokit": "3.1.2",
+        "pino": "9.4.0",
+        "pino-pretty": "11.2.2",
+        "postgres": "3.4.4",
+        "posthog-js": "1.438.10",
+        "public-ip": "6.0.2",
+        "qrcode": "^1.5.4",
+        "radix-ui": "^1.6.0",
+        "react": "19.2.7",
+        "react-confetti-explosion": "3.0.3",
+        "react-day-picker": "10.0.1",
+        "react-dom": "19.2.7",
+        "react-hook-form": "^7.71.2",
+        "react-markdown": "^9.1.0",
+        "recharts": "^3.8.0",
+        "resend": "^6.0.2",
+        "semver": "7.7.3",
+        "shadcn": "^4.23.0",
+        "shell-quote": "^1.11.0",
+        "slugify": "^1.6.6",
+        "sonner": "^1.7.4",
+        "ssh2": "~1.16.0",
+        "stripe": "17.2.0",
+        "superjson": "^2.2.2",
+        "swagger-ui-react": "^5.32.6",
+        "tailwind-merge": "^2.6.1",
+        "tailwindcss-animate": "^1.0.7",
+        "toml": "5.0.1",
+        "tw-animate-css": "^1.4.0",
+        "undici": "^6.29.1",
+        "use-resize-observer": "9.1.0",
+        "ws": "8.21.0",
+        "xterm-addon-fit": "^0.8.0",
+        "yaml": "2.8.3",
+        "zod": "^4.6.6",
+        "zod-form-data": "^3.0.1"
+      },
+      "excluded": {
+        "@dokploy/server": "workspace:*"
+      },
+      "selected": [
+        "better-auth",
+        "class-variance-authority",
+        "@trpc/next",
+        "react-dom",
+        "sonner",
+        "react-hook-form",
+        "@better-auth/passkey",
+        "posthog-js",
+        "@trpc/server",
+        "superjson"
+      ],
+      "samplingRule": "frontend-visible-v1",
+      "frontendPoolField": "dependencies",
+      "frontendPool": [
+        "better-auth",
+        "class-variance-authority",
+        "@trpc/next",
+        "react-dom",
+        "sonner",
+        "react-hook-form",
+        "@better-auth/passkey",
+        "posthog-js",
+        "@trpc/server",
+        "superjson",
+        "@hookform/resolvers",
+        "next",
+        "@better-auth/sso",
+        "@better-auth/api-key",
+        "tailwind-merge",
+        "@trpc/client",
+        "cmdk",
+        "next-themes",
+        "@tanstack/react-query",
+        "clsx",
+        "@openpanel/nextjs",
+        "copy-to-clipboard",
+        "nextjs-toploader",
+        "zod",
+        "react",
+        "@trpc/react-query"
+      ],
+      "frontendImageID": "sha256:6fdac03eee413572b38609316f90bda393b401a5651011d851368a959520fbc1",
+      "frontendEvidence": {
+        "better-auth": [
+          "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031"
+        ],
+        "class-variance-authority": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "@trpc/next": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "react-dom": [
+          "659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459"
+        ],
+        "sonner": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "react-hook-form": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "@better-auth/passkey": [
+          "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031"
+        ],
+        "posthog-js": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "@trpc/server": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "superjson": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "@hookform/resolvers": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "next": [
+          "48d1156a08cfa07ff895a8803ac4cb4e7aeb5c705d920e1a36925b642135e8cf",
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "@better-auth/sso": [
+          "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031"
+        ],
+        "@better-auth/api-key": [
+          "f6f36fd4f49bdf075b0031e7c57596519e1f2f65a7a12192ac5eb3819b77a031"
+        ],
+        "tailwind-merge": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "@trpc/client": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "cmdk": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "next-themes": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "@tanstack/react-query": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "clsx": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "@openpanel/nextjs": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "copy-to-clipboard": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "nextjs-toploader": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "zod": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ],
+        "react": [
+          "659a21fb4c35beaa7d090ba5622d030251ed0e969772bfbbf60a32c555009459"
+        ],
+        "@trpc/react-query": [
+          "9672f62f69a8c8c36b3ae3b6c34f75a348b0c799ce44d683816f31bc917a7fad"
+        ]
+      }
+    },
+    "selection-before-frontend": {
+      "repo": "dokploy/dokploy",
+      "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
+      "manifest": "apps/dokploy/package.json",
+      "manifestSHA256": "53a4bb794faa71fe88f01fb807e15d80ab17e0ea254ee3a0fc612aad569a1ed4",
+      "seed": "recall-library-sample-v1",
+      "eligible": {
+        "@ai-sdk/anthropic": "^3.0.44",
+        "@ai-sdk/azure": "^3.0.30",
+        "@ai-sdk/cohere": "^3.0.21",
+        "@ai-sdk/deepinfra": "^2.0.34",
+        "@ai-sdk/mistral": "^3.0.20",
+        "@ai-sdk/openai": "^3.0.29",
+        "@ai-sdk/openai-compatible": "^2.0.30",
+        "@aws-sdk/client-cloudwatch": "^3.1108.0",
+        "@aws-sdk/client-cloudwatch-logs": "^3.1108.0",
+        "@aws-sdk/client-route-53": "^3.1108.0",
+        "@aws-sdk/client-secrets-manager": "^3.1108.0",
+        "@aws-sdk/client-ssm": "3.1108.0",
+        "@better-auth/api-key": "1.6.23",
+        "@better-auth/passkey": "1.6.23",
+        "@better-auth/scim": "1.6.23",
+        "@better-auth/sso": "1.6.23",
+        "@codemirror/autocomplete": "^6.18.6",
+        "@codemirror/lang-css": "^6.3.1",
+        "@codemirror/lang-json": "^6.0.1",
+        "@codemirror/lang-yaml": "^6.1.2",
+        "@codemirror/language": "^6.11.0",
+        "@codemirror/legacy-modes": "6.4.0",
+        "@codemirror/search": "^6.6.0",
+        "@codemirror/view": "^6.39.15",
+        "@dokploy/trpc-openapi": "0.0.18",
+        "@faker-js/faker": "^10.5.0",
+        "@hookform/resolvers": "^5.2.2",
+        "@octokit/auth-app": "^6.1.3",
+        "@octokit/webhooks": "^13.9.0",
+        "@openpanel/nextjs": "^1.5.1",
+        "@react-email/components": "^1.0.12",
+        "@stepperize/react": "4.0.1",
+        "@stripe/stripe-js": "4.8.0",
+        "@tailwindcss/typography": "0.5.16",
+        "@tanstack/react-query": "^5.90.21",
+        "@tanstack/react-table": "^8.21.3",
+        "@tanstack/react-virtual": "3.14.18",
+        "@trpc/client": "^11.10.0",
+        "@trpc/next": "^11.10.0",
+        "@trpc/react-query": "^11.10.0",
+        "@trpc/server": "^11.10.0",
+        "@uiw/codemirror-theme-github": "^4.23.12",
+        "@uiw/react-codemirror": "^4.23.12",
+        "@xterm/addon-attach": "0.10.0",
+        "@xterm/addon-clipboard": "0.1.0",
+        "@xterm/xterm": "^5.5.0",
+        "adm-zip": "^0.6.1",
+        "ai": "^6.0.86",
+        "ai-sdk-ollama": "^3.7.0",
+        "bcrypt": "6.0.0",
+        "better-auth": "1.6.23",
+        "bl": "6.0.11",
+        "boxen": "^7.1.1",
+        "class-variance-authority": "^0.7.1",
+        "clsx": "^2.1.1",
+        "cmdk": "^0.2.1",
+        "copy-to-clipboard": "^3.3.3",
+        "date-fns": "3.6.0",
+        "dockerode": "4.0.2",
+        "dompurify": "^3.4.17",
+        "dotenv": "16.4.5",
+        "drizzle-orm": "0.45.2",
+        "drizzle-zod": "0.8.3",
+        "fancy-ansi": "^0.1.3",
+        "input-otp": "^1.4.2",
+        "js-cookie": "^3.0.7",
+        "lodash": "4.18.1",
+        "lucide-react": "^0.469.0",
+        "micromatch": "4.0.8",
+        "nanoid": "3.3.18",
+        "next": "16.4.1",
+        "next-themes": "^0.2.1",
+        "nextjs-toploader": "^3.9.17",
+        "node-os-utils": "2.0.1",
+        "node-pty": "1.1.0",
+        "node-schedule": "2.1.1",
+        "nodemailer": "10.1.4",
+        "octokit": "3.1.2",
+        "pino": "9.4.0",
+        "pino-pretty": "11.2.2",
+        "postgres": "3.4.4",
+        "posthog-js": "1.438.10",
+        "public-ip": "6.0.2",
+        "qrcode": "^1.5.4",
+        "radix-ui": "^1.6.0",
+        "react": "19.2.7",
+        "react-confetti-explosion": "3.0.3",
+        "react-day-picker": "10.0.1",
+        "react-dom": "19.2.7",
+        "react-hook-form": "^7.71.2",
+        "react-markdown": "^9.1.0",
+        "recharts": "^3.8.0",
+        "resend": "^6.0.2",
+        "semver": "7.7.3",
+        "shadcn": "^4.23.0",
+        "shell-quote": "^1.11.0",
+        "slugify": "^1.6.6",
+        "sonner": "^1.7.4",
+        "ssh2": "~1.16.0",
+        "stripe": "17.2.0",
+        "superjson": "^2.2.2",
+        "swagger-ui-react": "^5.32.6",
+        "tailwind-merge": "^2.6.1",
+        "tailwindcss-animate": "^1.0.7",
+        "toml": "5.0.1",
+        "tw-animate-css": "^1.4.0",
+        "undici": "^6.29.1",
+        "use-resize-observer": "9.1.0",
+        "ws": "8.21.0",
+        "xterm-addon-fit": "^0.8.0",
+        "yaml": "2.8.3",
+        "zod": "^4.6.6",
+        "zod-form-data": "^3.0.1"
+      },
+      "excluded": {
+        "@dokploy/server": "workspace:*"
+      },
+      "selected": [
+        "@ai-sdk/anthropic",
+        "@tanstack/react-query",
+        "@stripe/stripe-js",
+        "@aws-sdk/client-cloudwatch-logs",
+        "@aws-sdk/client-secrets-manager",
+        "@react-email/components",
+        "clsx",
+        "drizzle-orm",
+        "@aws-sdk/client-cloudwatch",
+        "node-pty"
+      ]
+    }
+  },
+  "audit": {
+    "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
+    "imageID": "sha256:6fdac03eee413572b38609316f90bda393b401a5651011d851368a959520fbc1",
+    "verifiedPairs": 732,
+    "checks": [
+      "script and map SHA-256",
+      "mapped source SHA-256",
+      "both function spans"
+    ]
+  }
 }
