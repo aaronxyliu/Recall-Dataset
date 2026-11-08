@@ -1,0 +1,2 @@
+import{hr as o,h_ as n,eo as r,ej as t}from"./index--ZPpORdW.js";const a={viewBox:"0 0 24 24",width:"1.2em",height:"1.2em"};function i(l,e){return n(),r("svg",a,[...e[0]||(e[0]=[t("path",{fill:"none",stroke:"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M15 3h6v6m-11 5L21 3m-3 10v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"},null,-1)])])}const c=o({name:"lucide-external-link",render:i});export{c as I};
+//# sourceMappingURL=external-link-C-1Ar8-H.js.map

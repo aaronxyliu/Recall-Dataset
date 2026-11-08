@@ -1,0 +1,677 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "ce431a6bb4777e280cebd9e331fc68028e03044a1ed154a022bd0c5910cc05ff",
+    "manifestSHA256": "b859a71d1c3d8dec2dcdb7086ec6edd04b40f66af4dd308c49846f806303d3dd",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@dagrejs/dagre",
+    "@dbml/core",
+    "@dnd-kit/core",
+    "@dnd-kit/sortable",
+    "@dnd-kit/utilities",
+    "@douyinfe/semi-ui",
+    "@lexical/react",
+    "@monaco-editor/react",
+    "@vercel/analytics",
+    "axios",
+    "dexie",
+    "dexie-react-hooks",
+    "file-saver",
+    "framer-motion",
+    "html-to-image",
+    "i18next",
+    "i18next-browser-languagedetector",
+    "jsonschema",
+    "jspdf",
+    "jszip",
+    "lexical",
+    "lodash",
+    "luxon",
+    "nanoid",
+    "node-sql-parser",
+    "oracle-sql-parser",
+    "react",
+    "react-dom",
+    "react-hotkeys-hook",
+    "react-i18next",
+    "react-router-dom",
+    "react-tweet",
+    "usehooks-ts",
+    "uuid"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@dagrejs/dagre",
+      "initialAnchors": 56,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dagrejs/dagre"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 538,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 56
+    },
+    {
+      "library": "@dbml/core",
+      "initialAnchors": 2384,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dagrejs/dagre",
+        "@dbml/core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 38473,
+      "sourceFiles": 89,
+      "finalInitialAnchors": 2384
+    },
+    {
+      "library": "@dnd-kit/core",
+      "initialAnchors": 27,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dagrejs/dagre",
+        "@dbml/core",
+        "@dnd-kit/core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 278,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 27
+    },
+    {
+      "library": "@dnd-kit/sortable",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dnd-kit/sortable"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 78,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@dnd-kit/utilities",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 39,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@douyinfe/semi-ui",
+      "initialAnchors": 142,
+      "trialLibraries": [
+        "@dnd-kit/sortable",
+        "jsonschema",
+        "oracle-sql-parser",
+        "react-i18next",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "usehooks-ts",
+        "@douyinfe/semi-ui"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 1861,
+      "sourceFiles": 144,
+      "finalInitialAnchors": 142
+    },
+    {
+      "library": "@lexical/react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 138,
+      "sourceFiles": 30
+    },
+    {
+      "library": "@monaco-editor/react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 55,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@vercel/analytics",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 20,
+      "sourceFiles": 1
+    },
+    {
+      "library": "axios",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 360,
+      "sourceFiles": 53
+    },
+    {
+      "library": "dexie",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 814,
+      "sourceFiles": 1
+    },
+    {
+      "library": "dexie-react-hooks",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 11,
+      "sourceFiles": 1
+    },
+    {
+      "library": "file-saver",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 17,
+      "sourceFiles": 1
+    },
+    {
+      "library": "framer-motion",
+      "initialAnchors": 79,
+      "trialLibraries": [
+        "@dnd-kit/sortable",
+        "jsonschema",
+        "oracle-sql-parser",
+        "react-i18next",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "usehooks-ts",
+        "@douyinfe/semi-ui"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 834,
+      "sourceFiles": 210,
+      "finalInitialAnchors": 79
+    },
+    {
+      "library": "html-to-image",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 121,
+      "sourceFiles": 10
+    },
+    {
+      "library": "i18next",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 254,
+      "sourceFiles": 1
+    },
+    {
+      "library": "i18next-browser-languagedetector",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 34,
+      "sourceFiles": 1
+    },
+    {
+      "library": "jsonschema",
+      "initialAnchors": 38,
+      "trialLibraries": [
+        "@dnd-kit/sortable",
+        "jsonschema",
+        "oracle-sql-parser",
+        "react-i18next",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "usehooks-ts",
+        "@douyinfe/semi-ui"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 110,
+      "sourceFiles": 5,
+      "finalInitialAnchors": 38
+    },
+    {
+      "library": "jspdf",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 1422,
+      "sourceFiles": 1
+    },
+    {
+      "library": "jszip",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 465,
+      "sourceFiles": 1
+    },
+    {
+      "library": "lexical",
+      "initialAnchors": 79,
+      "trialLibraries": [
+        "@dnd-kit/sortable",
+        "jsonschema",
+        "oracle-sql-parser",
+        "react-i18next",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "usehooks-ts",
+        "@douyinfe/semi-ui"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 524,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 79
+    },
+    {
+      "library": "lodash",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 917,
+      "sourceFiles": 213
+    },
+    {
+      "library": "luxon",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 583,
+      "sourceFiles": 23
+    },
+    {
+      "library": "nanoid",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 6,
+      "sourceFiles": 2
+    },
+    {
+      "library": "node-sql-parser",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 9941,
+      "sourceFiles": 1
+    },
+    {
+      "library": "oracle-sql-parser",
+      "initialAnchors": 11,
+      "trialLibraries": [
+        "@dnd-kit/sortable",
+        "jsonschema",
+        "oracle-sql-parser",
+        "react-i18next",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "usehooks-ts",
+        "@douyinfe/semi-ui"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 1532,
+      "sourceFiles": 3,
+      "finalInitialAnchors": 11
+    },
+    {
+      "library": "react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 55,
+      "sourceFiles": 4
+    },
+    {
+      "library": "react-dom",
+      "initialAnchors": 59,
+      "trialLibraries": [
+        "@dnd-kit/sortable",
+        "jsonschema",
+        "oracle-sql-parser",
+        "react-i18next",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "usehooks-ts",
+        "@douyinfe/semi-ui"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 490,
+      "sourceFiles": 3,
+      "finalInitialAnchors": 59
+    },
+    {
+      "library": "react-hotkeys-hook",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 70,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react-i18next",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "react-i18next"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 52,
+      "sourceFiles": 7
+    },
+    {
+      "library": "react-router-dom",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-tweet",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "@dnd-kit/sortable",
+        "jsonschema",
+        "oracle-sql-parser",
+        "react-i18next",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "usehooks-ts",
+        "@douyinfe/semi-ui"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 75,
+      "sourceFiles": 32,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "usehooks-ts",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "usehooks-ts"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 160,
+      "sourceFiles": 1
+    },
+    {
+      "library": "uuid",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 5,
+      "sourceFiles": 3
+    }
+  ],
+  "selectedLibraries": [
+    "jsonschema",
+    "oracle-sql-parser",
+    "lexical",
+    "react-tweet",
+    "framer-motion",
+    "react-dom",
+    "@douyinfe/semi-ui",
+    "@dagrejs/dagre",
+    "@dbml/core",
+    "@dnd-kit/core"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 850,
+  "bundleUnits": 2,
+  "candidateOrder": [
+    "jsonschema",
+    "oracle-sql-parser",
+    "lexical",
+    "react-tweet",
+    "framer-motion",
+    "react-dom",
+    "@douyinfe/semi-ui",
+    "@dnd-kit/sortable",
+    "react-i18next",
+    "usehooks-ts",
+    "@dagrejs/dagre",
+    "@dbml/core",
+    "@dnd-kit/core",
+    "@dnd-kit/utilities",
+    "@lexical/react",
+    "@monaco-editor/react",
+    "@vercel/analytics",
+    "axios",
+    "dexie",
+    "dexie-react-hooks",
+    "file-saver",
+    "html-to-image",
+    "i18next",
+    "i18next-browser-languagedetector",
+    "jspdf",
+    "jszip",
+    "lodash",
+    "luxon",
+    "nanoid",
+    "node-sql-parser",
+    "react",
+    "react-hotkeys-hook",
+    "react-router-dom",
+    "uuid"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "@dnd-kit/sortable",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dnd-kit/sortable"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "react-i18next",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "react-i18next"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "usehooks-ts",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "usehooks-ts"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@dagrejs/dagre",
+      "initialAnchors": 56,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dagrejs/dagre"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@dbml/core",
+      "initialAnchors": 2384,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dagrejs/dagre",
+        "@dbml/core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@dnd-kit/core",
+      "initialAnchors": 27,
+      "trialLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dagrejs/dagre",
+        "@dbml/core",
+        "@dnd-kit/core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "401c2e9306ae8aa364978641238ccea4c97724adc52420c6388c6aeb013d2564",
+  "bundleDigest": "cd2bafeb77460ba7be071117f4c8fe122f09d3911b3d1468db32bfb4208b1abd",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "87bbb6b432cc9d3755c6d49e6018f8fa0b57fc14d9932421ac311ef7fc4cc38c",
+  "reason": null,
+  "organizationSignature": "8b2589cb604139b5167bdc4856022906a5b208c8f09f28efacc925358f7b8837"
+}

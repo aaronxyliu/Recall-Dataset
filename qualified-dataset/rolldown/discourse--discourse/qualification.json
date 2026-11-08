@@ -1,0 +1,1265 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "61b426555e111a7e8a01a4ba47a1732cbc15256970e4d5254d33d4f0a9a05222",
+    "manifestSHA256": "5e35875ce22c9fb8af95dcaa7ffeb13c387610fbe048aac81d3809a8581682ed",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@atlaskit/pragmatic-drag-and-drop",
+    "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+    "@codemirror/autocomplete",
+    "@codemirror/commands",
+    "@codemirror/lang-javascript",
+    "@codemirror/language",
+    "@codemirror/state",
+    "@codemirror/view",
+    "@dagrejs/dagre",
+    "@discourse/gif",
+    "@discourse/heic",
+    "@discourse/jpeg",
+    "@discourse/jxl",
+    "@discourse/png",
+    "@discourse/resize",
+    "@discourse/webp",
+    "@embroider/legacy-inspector-support",
+    "@faker-js/faker",
+    "@fullcalendar/core",
+    "@fullcalendar/daygrid",
+    "@fullcalendar/interaction",
+    "@fullcalendar/list",
+    "@fullcalendar/moment",
+    "@fullcalendar/moment-timezone",
+    "@fullcalendar/timegrid",
+    "@glimmer/syntax",
+    "@glint/ember-tsc",
+    "@glint/template",
+    "@highlightjs/cdn-assets",
+    "@json-editor/json-editor",
+    "@lezer/common",
+    "@lezer/highlight",
+    "@lezer/javascript",
+    "@lezer/lr",
+    "@warp-drive/core",
+    "@warp-drive/ember",
+    "@warp-drive/json-api",
+    "@warp-drive/legacy",
+    "@warp-drive/utilities",
+    "ace-builds",
+    "chart.js",
+    "chartjs-adapter-moment",
+    "chartjs-plugin-datalabels",
+    "codemirror",
+    "decorator-transforms",
+    "diff",
+    "dom-accessibility-api",
+    "ember-curry-component",
+    "ember-resolver",
+    "ember-route-template",
+    "ember-source",
+    "highlight.js",
+    "immer",
+    "minimasonry",
+    "moment",
+    "moment-timezone",
+    "morphlex",
+    "orderedmap",
+    "photoswipe",
+    "picomatch",
+    "pikaday",
+    "pretty-text",
+    "prosemirror-codemark",
+    "prosemirror-commands",
+    "prosemirror-dropcursor",
+    "prosemirror-gapcursor",
+    "prosemirror-highlightjs",
+    "prosemirror-history",
+    "prosemirror-inputrules",
+    "prosemirror-keymap",
+    "prosemirror-markdown",
+    "prosemirror-model",
+    "prosemirror-schema-list",
+    "prosemirror-state",
+    "prosemirror-transform",
+    "prosemirror-view",
+    "rete",
+    "rete-area-plugin",
+    "rete-comment-plugin",
+    "rete-connection-plugin",
+    "rete-history-plugin",
+    "rete-render-utils",
+    "rrule",
+    "strip-test-selectors"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@atlaskit/pragmatic-drag-and-drop",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 184,
+      "sourceFiles": 54,
+      "finalInitialAnchors": 8
+    },
+    {
+      "library": "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 69,
+      "sourceFiles": 18,
+      "finalInitialAnchors": 8
+    },
+    {
+      "library": "@codemirror/autocomplete",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/commands",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/lang-javascript",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/language",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/state",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/view",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@dagrejs/dagre",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@discourse/gif",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@discourse/heic",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@discourse/jpeg",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@discourse/jxl",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@discourse/png",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@discourse/resize",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@discourse/webp",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@embroider/legacy-inspector-support",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@embroider/legacy-inspector-support"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 3,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@faker-js/faker",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fullcalendar/core",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fullcalendar/daygrid",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fullcalendar/interaction",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fullcalendar/list",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fullcalendar/moment",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fullcalendar/moment-timezone",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fullcalendar/timegrid",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@glimmer/syntax",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@glint/ember-tsc",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@glint/template",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@highlightjs/cdn-assets",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@json-editor/json-editor",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@lezer/common",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@lezer/highlight",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@lezer/javascript",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@lezer/lr",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@warp-drive/core",
+      "initialAnchors": 73,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 1219,
+      "sourceFiles": 14,
+      "finalInitialAnchors": 73
+    },
+    {
+      "library": "@warp-drive/ember",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/ember"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 10,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@warp-drive/json-api",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 189,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 9
+    },
+    {
+      "library": "@warp-drive/legacy",
+      "initialAnchors": 34,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 776,
+      "sourceFiles": 13,
+      "finalInitialAnchors": 33
+    },
+    {
+      "library": "@warp-drive/utilities",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 102,
+      "sourceFiles": 5,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "ace-builds",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "chart.js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "chartjs-adapter-moment",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "chartjs-plugin-datalabels",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "codemirror",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "decorator-transforms",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "decorator-transforms"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 12,
+      "sourceFiles": 3
+    },
+    {
+      "library": "diff",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "dom-accessibility-api",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ember-curry-component",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-curry-component"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 7,
+      "sourceFiles": 1
+    },
+    {
+      "library": "ember-resolver",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 57,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "ember-route-template",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "ember-route-template"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 0,
+      "sourceFiles": 1
+    },
+    {
+      "library": "ember-source",
+      "initialAnchors": 197,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "ember-source"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 3151,
+      "sourceFiles": 199,
+      "finalInitialAnchors": 197
+    },
+    {
+      "library": "highlight.js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "immer",
+      "initialAnchors": 12,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "ember-source",
+        "immer"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 173,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 12
+    },
+    {
+      "library": "minimasonry",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "moment",
+      "initialAnchors": 59,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "ember-source",
+        "immer",
+        "moment"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 371,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 59
+    },
+    {
+      "library": "moment-timezone",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 58,
+      "sourceFiles": 1
+    },
+    {
+      "library": "morphlex",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "orderedmap",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "photoswipe",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "picomatch",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 73,
+      "sourceFiles": 6
+    },
+    {
+      "library": "pikaday",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "pretty-text",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-codemark",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-commands",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-dropcursor",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-gapcursor",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-highlightjs",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-history",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-inputrules",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-keymap",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-markdown",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-model",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-schema-list",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-state",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-transform",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prosemirror-view",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "rete",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "rete-area-plugin",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "rete-comment-plugin",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "rete-connection-plugin",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "rete-history-plugin",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "rete-render-utils",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "rrule",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "strip-test-selectors",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    }
+  ],
+  "selectedLibraries": [
+    "@atlaskit/pragmatic-drag-and-drop",
+    "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+    "@warp-drive/core",
+    "@warp-drive/json-api",
+    "@warp-drive/legacy",
+    "@warp-drive/utilities",
+    "ember-resolver",
+    "ember-source",
+    "immer",
+    "moment"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 325,
+  "bundleUnits": 56,
+  "candidateOrder": [
+    "@atlaskit/pragmatic-drag-and-drop",
+    "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+    "@codemirror/autocomplete",
+    "@codemirror/commands",
+    "@codemirror/lang-javascript",
+    "@codemirror/language",
+    "@codemirror/state",
+    "@codemirror/view",
+    "@dagrejs/dagre",
+    "@discourse/gif",
+    "@discourse/heic",
+    "@discourse/jpeg",
+    "@discourse/jxl",
+    "@discourse/png",
+    "@discourse/resize",
+    "@discourse/webp",
+    "@embroider/legacy-inspector-support",
+    "@faker-js/faker",
+    "@fullcalendar/core",
+    "@fullcalendar/daygrid",
+    "@fullcalendar/interaction",
+    "@fullcalendar/list",
+    "@fullcalendar/moment",
+    "@fullcalendar/moment-timezone",
+    "@fullcalendar/timegrid",
+    "@glimmer/syntax",
+    "@glint/ember-tsc",
+    "@glint/template",
+    "@highlightjs/cdn-assets",
+    "@json-editor/json-editor",
+    "@lezer/common",
+    "@lezer/highlight",
+    "@lezer/javascript",
+    "@lezer/lr",
+    "@warp-drive/core",
+    "@warp-drive/ember",
+    "@warp-drive/json-api",
+    "@warp-drive/legacy",
+    "@warp-drive/utilities",
+    "ace-builds",
+    "chart.js",
+    "chartjs-adapter-moment",
+    "chartjs-plugin-datalabels",
+    "codemirror",
+    "decorator-transforms",
+    "diff",
+    "dom-accessibility-api",
+    "ember-curry-component",
+    "ember-resolver",
+    "ember-route-template",
+    "ember-source",
+    "highlight.js",
+    "immer",
+    "minimasonry",
+    "moment",
+    "moment-timezone",
+    "morphlex",
+    "orderedmap",
+    "photoswipe",
+    "picomatch",
+    "pikaday",
+    "pretty-text",
+    "prosemirror-codemark",
+    "prosemirror-commands",
+    "prosemirror-dropcursor",
+    "prosemirror-gapcursor",
+    "prosemirror-highlightjs",
+    "prosemirror-history",
+    "prosemirror-inputrules",
+    "prosemirror-keymap",
+    "prosemirror-markdown",
+    "prosemirror-model",
+    "prosemirror-schema-list",
+    "prosemirror-state",
+    "prosemirror-transform",
+    "prosemirror-view",
+    "rete",
+    "rete-area-plugin",
+    "rete-comment-plugin",
+    "rete-connection-plugin",
+    "rete-history-plugin",
+    "rete-render-utils",
+    "rrule",
+    "strip-test-selectors"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "@embroider/legacy-inspector-support",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@embroider/legacy-inspector-support"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@warp-drive/core",
+      "initialAnchors": 73,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@warp-drive/ember",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/ember"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@warp-drive/json-api",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@warp-drive/legacy",
+      "initialAnchors": 34,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@warp-drive/utilities",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "decorator-transforms",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "decorator-transforms"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "ember-curry-component",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-curry-component"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "ember-resolver",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "ember-route-template",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "ember-route-template"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "ember-source",
+      "initialAnchors": 197,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "ember-source"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "immer",
+      "initialAnchors": 12,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "ember-source",
+        "immer"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "moment",
+      "initialAnchors": 59,
+      "trialLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "ember-source",
+        "immer",
+        "moment"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [
+    {
+      "kind": "parse-error",
+      "unit": "s-bde6c2a163e01b02a1183c968567bb8d5f1f0bdb2891fa8945891f56181000e6",
+      "error": "[2:12-2:13]: Expected 'from'"
+    }
+  ],
+  "bundleDiagnostics": [],
+  "sourceDigest": "c30ebc6f0f2596db2d7b6944916c1589ce8a3b7ef3c3a4cd23420e24ad78231d",
+  "bundleDigest": "35f00fe1ac04d765a6e2ea5b16e6be524e0a999c5e8c1a788d70b22eb27cf58f",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "1b41f407f4b218a53391b8b1d9bda914258efd2f88370a6ab4bde9fdd2ace662",
+  "reason": null,
+  "organizationSignature": "55db23fac6f87fd20dd72450c40133f7f9d569a67656e6380668ee97e8b4a2e3"
+}

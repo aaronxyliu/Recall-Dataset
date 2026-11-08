@@ -1,5 +1,14 @@
 # ReCall Dataset
 
+The active [qualified dataset](qualified-dataset/README.md) contains **18 repositories, 156 library instances, and 135,988 one-to-one function pairs**. It uses production dependencies only, with 5–10 qualifying libraries per repository and at least three distinct initial function anchors per library.
+
+Use [qualified-dataset/index.json](qualified-dataset/index.json) for membership and artifact paths, the [policy](qualification/initial-anchors-3/POLICY.md) for selection details, and [catalog decisions](qualification/initial-anchors-3/catalog-decisions.json) for exclusions and unassessed cases. Hufang's independent [build/browser verification](verification/hufang-builds-2026-11-08/README.md) records successful captures and unresolved attempts.
+
+Older cohort manifests are preserved in [historical-cohorts/](historical-cohorts/before-initial-anchors-3/). The catalog and historical descriptions below do not define current dataset membership. Both `bundling-dataset/one-to-one-evaluation*.json` entry points now refer to the qualified v2 records.
+
+## Historical build and capture catalog
+
+
 This repository owns dataset metadata, the bundler-organized catalog, local held-out source checkouts, fixture inputs, and dataset preparation scripts. Recovery code lives in `../ReCall`; experiment outputs and the paper live in `../ReCall Exp`.
 
 The [function ground-truth dataset](function-ground-truth/README.md) records the sampled production dependencies, browser capture coverage, and source-to-bundle function pairs for the 26 retained experiment repositories, with 78,884 one-to-one pairs.
@@ -8,7 +17,7 @@ For new applications, follow the [agent setup guide](WEB_APPLICATION_SETUP_GUIDE
 
 ## Tracked experiment artifacts
 
-The active experiment contains **26 repositories and 78,884 one-to-one function pairs**. Its durable entry point is [bundling-dataset/one-to-one-evaluation.json](bundling-dataset/one-to-one-evaluation.json). All captured JavaScript, source maps, and pair records in the following layout are tracked by Git.
+The historical experiment described in this section contained **26 repositories and 78,884 one-to-one function pairs**. The current entry point is [qualified-dataset/index.json](qualified-dataset/index.json); prior manifest snapshots are retained under `historical-cohorts/`. All captured JavaScript, source maps, and pair records in the following layout are tracked by Git.
 
 ```text
 bundling-dataset/

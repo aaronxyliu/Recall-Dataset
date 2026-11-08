@@ -1,0 +1,2 @@
+import{Ec as e,_st as t,er as n,est as r,tr as i,xst as a}from"./index-ARRzLOvi.js";var o=a(t(),1),s=a(r(),1);function c({className:t}){let[r,a]=(0,o.useState)(!1),{theme:c,resolvedTheme:l}=e();return(0,o.useEffect)(()=>{a(!0)},[]),r&&i(c,l)?(0,s.jsx)(`img`,{src:n,alt:`Appwrite`,className:t}):(0,s.jsx)(`img`,{src:!r||(l??c)===`dark`?`/appwrite-dark.svg`:`/appwrite-light.svg`,alt:`Appwrite`,className:t})}export{c as t};
+//# sourceMappingURL=AppwriteLogo-DmqsI9uJ.js.map

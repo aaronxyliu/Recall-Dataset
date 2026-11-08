@@ -1,0 +1,3 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/debug.error-preview-KXKcSt-L.js","assets/index-ARRzLOvi.js","assets/index-CzzUskj_.css"])))=>i.map(i=>d[i]);
+import{n as e,t}from"./lazyRouteComponent-DuwTJ5fo.js";import{Uet as n,r}from"./index-ARRzLOvi.js";const i=e(`/_public/debug/error-preview`)({validateSearch:e=>({kind:e.kind===`stale`?`stale`:void 0}),head:()=>({meta:[{title:r(`Error preview`)}]}),component:t(()=>n(()=>import(`./debug.error-preview-KXKcSt-L.js`),__vite__mapDeps([0,1,2])),`component`)});export{i as t};
+//# sourceMappingURL=debug.error-preview-Bux1mO1Y.js.map

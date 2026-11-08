@@ -1,0 +1,537 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "527532084f14d1876bef261209562f8840163c1fd149e99bcf89e990290ce440",
+    "manifestSHA256": "147c5c3896f2df05ae76542256f69c38c0c9d2e39aa20a42d9a9002af8c382f7",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "axios",
+    "clipboard",
+    "codemirror",
+    "core-js",
+    "driver.js",
+    "dropzone",
+    "echarts",
+    "element-ui",
+    "file-saver",
+    "fuse.js",
+    "js-cookie",
+    "jsonlint",
+    "jszip",
+    "normalize.css",
+    "nprogress",
+    "path-to-regexp",
+    "screenfull",
+    "script-loader",
+    "sortablejs",
+    "tui-editor",
+    "vue",
+    "vue-count-to",
+    "vue-router",
+    "vue-splitpane",
+    "vuedraggable",
+    "vuex",
+    "xlsx"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "axios",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "nprogress",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "screenfull",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 97,
+      "sourceFiles": 24,
+      "finalInitialAnchors": 8
+    },
+    {
+      "library": "clipboard",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "codemirror",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "core-js",
+      "initialAnchors": 22,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "nprogress",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "screenfull",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 505,
+      "sourceFiles": 242,
+      "finalInitialAnchors": 22
+    },
+    {
+      "library": "driver.js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "dropzone",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "echarts",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "element-ui",
+      "initialAnchors": 506,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "nprogress",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "screenfull",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 4139,
+      "sourceFiles": 44,
+      "finalInitialAnchors": 506
+    },
+    {
+      "library": "file-saver",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "fuse.js",
+      "initialAnchors": 14,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "nprogress",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "screenfull",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 54,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 14
+    },
+    {
+      "library": "js-cookie",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 10,
+      "sourceFiles": 1
+    },
+    {
+      "library": "jsonlint",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "jszip",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "normalize.css",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "nprogress",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "core-js",
+        "nprogress"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 39,
+      "sourceFiles": 1
+    },
+    {
+      "library": "path-to-regexp",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "nprogress",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "screenfull",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 12,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "screenfull",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "core-js",
+        "screenfull"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 16,
+      "sourceFiles": 1
+    },
+    {
+      "library": "script-loader",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "sortablejs",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "tui-editor",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vue",
+      "initialAnchors": 65,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "nprogress",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "screenfull",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 509,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 65
+    },
+    {
+      "library": "vue-count-to",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vue-router",
+      "initialAnchors": 22,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "nprogress",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "screenfull",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 220,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 22
+    },
+    {
+      "library": "vue-splitpane",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vuedraggable",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vuex",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "core-js",
+        "vuex"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 122,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 9
+    },
+    {
+      "library": "xlsx",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    }
+  ],
+  "selectedLibraries": [
+    "vue-router",
+    "fuse.js",
+    "axios",
+    "path-to-regexp",
+    "element-ui",
+    "vue",
+    "core-js",
+    "vuex"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 318,
+  "bundleUnits": 10,
+  "candidateOrder": [
+    "vue-router",
+    "fuse.js",
+    "axios",
+    "path-to-regexp",
+    "element-ui",
+    "vue",
+    "core-js",
+    "nprogress",
+    "screenfull",
+    "js-cookie",
+    "clipboard",
+    "codemirror",
+    "driver.js",
+    "dropzone",
+    "echarts",
+    "file-saver",
+    "jsonlint",
+    "jszip",
+    "normalize.css",
+    "script-loader",
+    "sortablejs",
+    "tui-editor",
+    "vue-count-to",
+    "vue-splitpane",
+    "vuedraggable",
+    "vuex",
+    "xlsx"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "nprogress",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "core-js",
+        "nprogress"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "screenfull",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "core-js",
+        "screenfull"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "js-cookie",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "core-js",
+        "js-cookie"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "vuex",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "core-js",
+        "vuex"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "30c470e5331979d1282a4ccaa66ffdd08778011bcd20729f84b6d1df9e732739",
+  "bundleDigest": "9f8ee3e0d4e677a2573ca8579f11e0a5927bcdfd382b55adec66e1389840fd91",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "8f29c0048e39e2df68426108f0079a4df7b400907f120554d99b1d502d954a88",
+  "reason": null,
+  "organizationSignature": "05ea3307dc99b4853b5b736e2387767c5d77b6c42f3af496f4aee2f88b33f73e"
+}

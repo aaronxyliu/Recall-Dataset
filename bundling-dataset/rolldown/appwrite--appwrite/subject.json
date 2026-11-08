@@ -7,5 +7,8 @@
   "productionScripts": {
     "build": "bun run generate:routes && bun run generate:github-stars && bun run generate:specs && bun run generate:cover-manifest && bun run generate:blog-manifest && vite build && bun run prune:removed-blog-assets && bun run scripts/check-prerender-styles.ts && bun run generate:specs --copy && bun run generate:sitemap && bun run generate:docs-exports"
   },
-  "siteUrl": "https://appwrite.io/"
+  "siteUrl": "https://appwrite.io/",
+  "verifiedBuildCommit": "18c60abee1e2cb9d63612478f8e0e7319dfc300b",
+  "verifiedBuildManifest": "apps/console/package.json",
+  "verification": "verification/hufang-builds-2026-11-08/rolldown/appwrite--appwrite/verification.json"
 }

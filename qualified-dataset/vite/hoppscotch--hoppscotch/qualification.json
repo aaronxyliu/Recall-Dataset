@@ -1,0 +1,721 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "6907db78989b7116f0380ecb750ef5b31b3f80b17d6508b5e0f117649e496f40",
+    "manifestSHA256": "4fcd4b5f39c4d0a6d4c71762cc1d00c3a01484cdf8e915e10b189696879f6b58",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@fontsource-variable/inter",
+    "@fontsource-variable/material-symbols-rounded",
+    "@fontsource-variable/roboto-mono",
+    "@hoppscotch/common",
+    "@hoppscotch/data",
+    "@hoppscotch/kernel",
+    "@hoppscotch/plugin-appload",
+    "@hoppscotch/ui",
+    "@import-meta-env/unplugin",
+    "@tauri-apps/api",
+    "@tauri-apps/plugin-dialog",
+    "@tauri-apps/plugin-fs",
+    "@tauri-apps/plugin-shell",
+    "@vueuse/core",
+    "axios",
+    "buffer",
+    "dioc",
+    "fp-ts",
+    "process",
+    "rxjs",
+    "stream-browserify",
+    "util",
+    "verzod",
+    "vue",
+    "workbox-window",
+    "zod"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@fontsource-variable/inter",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fontsource-variable/material-symbols-rounded",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fontsource-variable/roboto-mono",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@hoppscotch/common",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@hoppscotch/data",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@hoppscotch/kernel",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@hoppscotch/plugin-appload",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@hoppscotch/ui",
+      "initialAnchors": 103,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 996,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 103
+    },
+    {
+      "library": "@import-meta-env/unplugin",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tauri-apps/api",
+      "initialAnchors": 6,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 321,
+      "sourceFiles": 11,
+      "finalInitialAnchors": 6
+    },
+    {
+      "library": "@tauri-apps/plugin-dialog",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@tauri-apps/plugin-dialog"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 5,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@tauri-apps/plugin-fs",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "@tauri-apps/plugin-fs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 33,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@tauri-apps/plugin-shell",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "@tauri-apps/plugin-shell"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 25,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@vueuse/core",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "buffer",
+        "@tauri-apps/plugin-dialog",
+        "workbox-window",
+        "stream-browserify",
+        "@vueuse/core",
+        "util",
+        "verzod",
+        "process",
+        "dioc",
+        "axios"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 1229,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 7
+    },
+    {
+      "library": "axios",
+      "initialAnchors": 34,
+      "trialLibraries": [
+        "buffer",
+        "@tauri-apps/plugin-dialog",
+        "workbox-window",
+        "stream-browserify",
+        "@vueuse/core",
+        "util",
+        "verzod",
+        "process",
+        "dioc",
+        "axios"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 360,
+      "sourceFiles": 55,
+      "finalInitialAnchors": 34
+    },
+    {
+      "library": "buffer",
+      "initialAnchors": 10,
+      "trialLibraries": [
+        "buffer",
+        "@tauri-apps/plugin-dialog",
+        "workbox-window",
+        "stream-browserify",
+        "@vueuse/core",
+        "util",
+        "verzod",
+        "process",
+        "dioc",
+        "axios"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 133,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 10
+    },
+    {
+      "library": "dioc",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "dioc"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 130,
+      "sourceFiles": 3
+    },
+    {
+      "library": "fp-ts",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "fp-ts"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 1844,
+      "sourceFiles": 27
+    },
+    {
+      "library": "process",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "process"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 16,
+      "sourceFiles": 1
+    },
+    {
+      "library": "rxjs",
+      "initialAnchors": 5,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "rxjs"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 215,
+      "sourceFiles": 51,
+      "finalInitialAnchors": 5
+    },
+    {
+      "library": "stream-browserify",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "stream-browserify"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 8,
+      "sourceFiles": 1
+    },
+    {
+      "library": "util",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "buffer",
+        "@tauri-apps/plugin-dialog",
+        "workbox-window",
+        "stream-browserify",
+        "@vueuse/core",
+        "util",
+        "verzod",
+        "process",
+        "dioc",
+        "axios"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 143,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "verzod",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "verzod"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 15,
+      "sourceFiles": 1
+    },
+    {
+      "library": "vue",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "workbox-window",
+      "initialAnchors": 6,
+      "trialLibraries": [
+        "buffer",
+        "@tauri-apps/plugin-dialog",
+        "workbox-window",
+        "stream-browserify",
+        "@vueuse/core",
+        "util",
+        "verzod",
+        "process",
+        "dioc",
+        "axios"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 56,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 6
+    },
+    {
+      "library": "zod",
+      "initialAnchors": 5,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "rxjs",
+        "zod"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 434,
+      "sourceFiles": 7,
+      "finalInitialAnchors": 5
+    }
+  ],
+  "selectedLibraries": [
+    "buffer",
+    "workbox-window",
+    "@vueuse/core",
+    "util",
+    "axios",
+    "@hoppscotch/ui",
+    "@tauri-apps/api",
+    "rxjs",
+    "zod"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 168,
+  "bundleUnits": 30,
+  "candidateOrder": [
+    "buffer",
+    "workbox-window",
+    "@vueuse/core",
+    "util",
+    "axios",
+    "@tauri-apps/plugin-dialog",
+    "stream-browserify",
+    "verzod",
+    "process",
+    "dioc",
+    "@fontsource-variable/inter",
+    "@fontsource-variable/material-symbols-rounded",
+    "@fontsource-variable/roboto-mono",
+    "@hoppscotch/common",
+    "@hoppscotch/data",
+    "@hoppscotch/kernel",
+    "@hoppscotch/plugin-appload",
+    "@hoppscotch/ui",
+    "@import-meta-env/unplugin",
+    "@tauri-apps/api",
+    "@tauri-apps/plugin-fs",
+    "@tauri-apps/plugin-shell",
+    "fp-ts",
+    "rxjs",
+    "vue",
+    "zod"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "@tauri-apps/plugin-dialog",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@tauri-apps/plugin-dialog"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "stream-browserify",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "stream-browserify"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "verzod",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "verzod"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "process",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "process"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "dioc",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "dioc"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@hoppscotch/ui",
+      "initialAnchors": 103,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@tauri-apps/api",
+      "initialAnchors": 6,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@tauri-apps/plugin-fs",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "@tauri-apps/plugin-fs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@tauri-apps/plugin-shell",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "@tauri-apps/plugin-shell"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "fp-ts",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "fp-ts"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "rxjs",
+      "initialAnchors": 5,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "rxjs"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "zod",
+      "initialAnchors": 5,
+      "trialLibraries": [
+        "buffer",
+        "workbox-window",
+        "@vueuse/core",
+        "util",
+        "axios",
+        "@hoppscotch/ui",
+        "@tauri-apps/api",
+        "rxjs",
+        "zod"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "973f9086cec47d2a813e15958e74fc489fa7c06b78b91d432bf47d4736ada19c",
+  "bundleDigest": "98415c2f4d3d8b025abab43660ae6683a9c4c99555dd2a96d7bca844b10d1ef8",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "9f85de6a69ac66a8a19d2486793910b364f4ce8a01887be1173fa7242842a686",
+  "reason": null,
+  "organizationSignature": "7a581d1aaeedf3d5ed943445abbfcb8403b8ec76d6afc833d4a6013b787f14d1"
+}

@@ -1,0 +1,2 @@
+import{Hot as e,_P as t,est as n,h6 as r,qet as i,v3 as a,xst as o}from"./index-ARRzLOvi.js";var s=o(n());function c({orgId:n,children:o=`Upgrade your plan`,className:c}){let l=r(),u=i(`link-neutral`,c),d=typeof o==`string`?l(o):o;return a().billing?n?(0,s.jsx)(e,{to:`/upgrade`,search:{orgId:n},className:u,...t(`upgrade-clicked`),children:d}):(0,s.jsx)(e,{to:`/upgrade`,className:u,...t(`upgrade-clicked`),children:d}):(0,s.jsx)(`span`,{className:u,children:d})}export{c as t};
+//# sourceMappingURL=UpgradePlanLink-DmeeQoRv.js.map

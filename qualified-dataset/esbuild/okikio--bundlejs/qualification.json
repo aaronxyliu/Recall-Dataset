@@ -1,0 +1,552 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "d34ff239275c89666f5935f9e803d7bd60bdcec40c036df3e8f6b5569678c2d1",
+    "manifestSHA256": "042e98fe4d64b5078749b27592dbbb37a1d89e2eb9deb62e11439b6432ee20ef",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@amoutonbrady/lz-string",
+    "@dprint/formatter",
+    "@dprint/typescript",
+    "@okikio/animate",
+    "@okikio/emitter",
+    "@okikio/native",
+    "@okikio/sharedworker",
+    "@std/media-types",
+    "@std/path",
+    "@std/streams",
+    "@std/tar",
+    "@typescript/ata",
+    "d3",
+    "d3-array",
+    "d3-color",
+    "d3-hierarchy",
+    "d3-scale",
+    "d3-shape",
+    "esbuild-wasm",
+    "monaco-editor",
+    "parse-package-name",
+    "preact",
+    "resolve.exports",
+    "solid-js",
+    "web-animations-js",
+    "webcola",
+    "workbox-window"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@amoutonbrady/lz-string",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@amoutonbrady/lz-string"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 14,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@dprint/formatter",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@okikio/sharedworker",
+        "@okikio/native",
+        "parse-package-name",
+        "workbox-window",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 88,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "@dprint/typescript",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@okikio/animate",
+      "initialAnchors": 14,
+      "trialLibraries": [
+        "@okikio/sharedworker",
+        "@okikio/native",
+        "parse-package-name",
+        "workbox-window",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 340,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 14
+    },
+    {
+      "library": "@okikio/emitter",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 38,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@okikio/native",
+      "initialAnchors": 19,
+      "trialLibraries": [
+        "@okikio/sharedworker",
+        "@okikio/native",
+        "parse-package-name",
+        "workbox-window",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 163,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 19
+    },
+    {
+      "library": "@okikio/sharedworker",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/sharedworker"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 0,
+      "sourceFiles": 3
+    },
+    {
+      "library": "@std/media-types",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@std/path",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@std/streams",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@std/tar",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@typescript/ata",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "d3",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "d3-array",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "d3-color",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "d3-hierarchy",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "d3-scale",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "d3-shape",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "esbuild-wasm",
+      "initialAnchors": 31,
+      "trialLibraries": [
+        "@okikio/sharedworker",
+        "@okikio/native",
+        "parse-package-name",
+        "workbox-window",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 322,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 31
+    },
+    {
+      "library": "monaco-editor",
+      "initialAnchors": 5432,
+      "trialLibraries": [
+        "@okikio/sharedworker",
+        "@okikio/native",
+        "parse-package-name",
+        "workbox-window",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 42283,
+      "sourceFiles": 1015,
+      "finalInitialAnchors": 5432
+    },
+    {
+      "library": "parse-package-name",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "parse-package-name"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 1,
+      "sourceFiles": 1
+    },
+    {
+      "library": "preact",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "resolve.exports",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "solid-js",
+      "initialAnchors": 19,
+      "trialLibraries": [
+        "@okikio/sharedworker",
+        "@okikio/native",
+        "parse-package-name",
+        "workbox-window",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 354,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 19
+    },
+    {
+      "library": "web-animations-js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "webcola",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "workbox-window",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "workbox-window"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 28,
+      "sourceFiles": 6
+    }
+  ],
+  "selectedLibraries": [
+    "@okikio/native",
+    "@okikio/animate",
+    "@dprint/formatter",
+    "esbuild-wasm",
+    "monaco-editor",
+    "solid-js"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 1036,
+  "bundleUnits": 23,
+  "candidateOrder": [
+    "@okikio/native",
+    "@okikio/animate",
+    "@dprint/formatter",
+    "esbuild-wasm",
+    "monaco-editor",
+    "solid-js",
+    "@okikio/sharedworker",
+    "parse-package-name",
+    "workbox-window",
+    "@okikio/emitter",
+    "@amoutonbrady/lz-string",
+    "@dprint/typescript",
+    "@std/media-types",
+    "@std/path",
+    "@std/streams",
+    "@std/tar",
+    "@typescript/ata",
+    "d3",
+    "d3-array",
+    "d3-color",
+    "d3-hierarchy",
+    "d3-scale",
+    "d3-shape",
+    "preact",
+    "resolve.exports",
+    "web-animations-js",
+    "webcola"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "@okikio/sharedworker",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/sharedworker"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "parse-package-name",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "parse-package-name"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "workbox-window",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "workbox-window"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@okikio/emitter",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@okikio/emitter"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@amoutonbrady/lz-string",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "@okikio/native",
+        "@okikio/animate",
+        "@dprint/formatter",
+        "esbuild-wasm",
+        "monaco-editor",
+        "solid-js",
+        "@amoutonbrady/lz-string"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [
+    {
+      "kind": "parse-error",
+      "unit": "s-3617fb1a493c7871745fc71778a9ab8e4699e7c5ec9acf7981a16369a205e23e",
+      "error": "[9:34-9:44]: Expected '{'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-094e8a0cb98acd844e9852c231e9112e8d62dd80e4feca0cc81753352217f6ed",
+      "error": "[11:17-11:18]: Expected ')'"
+    }
+  ],
+  "bundleDiagnostics": [],
+  "sourceDigest": "fe24cf2e2b50c9c4c823bc3b26b3bf269782d15277abc56dec9780b43d0f9dc7",
+  "bundleDigest": "6276868adfe7eea1defb168bc787d0346690ab72f10dc27b7b59b3250116e6ea",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "808f6614bc425a68304a99352dbb31b7ccc5ed3341a644946c506e905dd9481d",
+  "reason": null,
+  "organizationSignature": "9eaa2a760b7eb3b920c8f777341a0e30820da80202c49a1eb5657fe60fae5ef1"
+}

@@ -1,0 +1,740 @@
+import { setBuildURLConfig as setBuildURLConfig$1, buildBaseURL, buildQueryParams } from './index.js';
+import { p as pluralize } from "./inflect-BSG696t-.js";
+import { e as extractCacheOptions, c as copyForwardUrlOptions } from "./builder-utils-Donkk-BZ.js";
+import { recordIdentifierFor } from '@warp-drive/core';
+import { macroCondition, getGlobalConfig } from '@embroider/macros';
+const JsonApiAccept = 'application/vnd.api+json';
+const DEFAULT_CONFIG = {
+  host: '',
+  namespace: ''
+};
+let ACCEPT_HEADER_VALUE = 'application/vnd.api+json';
+
+/**
+ * Allows setting extensions and profiles to be used in the `Accept` header.
+ *
+ * Extensions and profiles are keyed by their namespace with the value being
+ * their URI.
+ *
+ * Example:
+ *
+ * ```ts
+ * setBuildURLConfig({
+ *   extensions: {
+ *     atomic: 'https://jsonapi.org/ext/atomic'
+ *   },
+ *   profiles: {
+ *     pagination: 'https://jsonapi.org/profiles/ethanresnick/cursor-pagination'
+ *   }
+ * });
+ * ```
+ *
+ * This also sets the global configuration for `buildBaseURL`
+ * for host and namespace values for the global coniguration
+ * done via `import { setBuildURLConfig } from '@warp-drive/utilities';`
+ *
+ * These values may still be overridden by passing
+ * them to buildBaseURL directly.
+ *
+ * This method may be called as many times as needed
+ *
+ * ```ts
+ * type BuildURLConfig = {
+ *   host: string;
+ *   namespace: string'
+ * }
+ * ```
+ *
+ * @public
+ * @param {BuildURLConfig} config
+ * @return {void}
+ */
+function setBuildURLConfig(config) {
+  Object.assign({}, DEFAULT_CONFIG, config);
+  if (config.profiles || config.extensions) {
+    let accept = JsonApiAccept;
+    if (config.profiles) {
+      const profiles = Object.values(config.profiles);
+      if (profiles.length) {
+        accept += ';profile="' + profiles.join(' ') + '"';
+      }
+    }
+    if (config.extensions) {
+      const extensions = Object.values(config.extensions);
+      if (extensions.length) {
+        accept += ';ext=' + extensions.join(' ');
+      }
+    }
+    ACCEPT_HEADER_VALUE = accept;
+  }
+  setBuildURLConfig$1(config);
+}
+
+/**
+ * Builds request options to fetch a single resource by a known id or identifier
+ * configured for the url and header expectations of most JSON:API APIs.
+ *
+ * :::tabs
+ *
+ * == Basic Usage
+ *
+ * ```ts
+ * import { findRecord } from '@warp-drive/utilities/json-api';
+ * import type { Person } from '#/data/types';
+ *
+ * const result = await store.request(
+ *   findRecord<Person>('person', '1')
+ * );
+ * ```
+ *
+ * == With Options
+ *
+ * ```ts
+ * import { findRecord } from '@warp-drive/utilities/json-api';
+ * import type { Person } from '#/data/types';
+ *
+ * const data = await store.request(
+ *   findRecord<Person>(
+ *     'person', '1',
+ *     { include: ['pets', 'friends'] }
+ *   )
+ * );
+ * ```
+ *
+ * == With an Identifier
+ *
+ * ```ts
+ * import { findRecord } from '@warp-drive/utilities/json-api';
+ * import type { Person } from '#/data/types';
+ *
+ * const data = await store.request(
+ *   findRecord<Person>(
+ *     { type: 'person', id: '1' },
+ *     { include: ['pets', 'friends'] }
+ *   )
+ * );
+ * ```
+ *
+ * :::
+ *
+ * **Supplying Options to Modify the Request Behavior**
+ *
+ * The following options are supported:
+ *
+ * - `host` - The host to use for the request, defaults to the `host` configured with `setBuildURLConfig`.
+ * - `namespace` - The namespace to use for the request, defaults to the `namespace` configured with `setBuildURLConfig`.
+ * - `resourcePath` - The resource path to use for the request, defaults to pluralizing the supplied type
+ * - `reload` - Whether to forcibly reload the request if it is already in the store, not supplying this
+ *      option will delegate to the store's CachePolicy, defaulting to `false` if none is configured.
+ * - `backgroundReload` - Whether to reload the request if it is already in the store, but to also resolve the
+ *      promise with the cached value, not supplying this option will delegate to the store's CachePolicy,
+ *      defaulting to `false` if none is configured.
+ * - `urlParamsSetting` - an object containing options for how to serialize the query params (see `buildQueryParams`)
+ *
+ * ```ts
+ * import { findRecord } from '@warp-drive/utilities/json-api';
+ *
+ * const data = await store.request(
+ *   findRecord(
+ *     'person', '1',
+ *     { include: ['pets', 'friends'] },
+ *     { namespace: 'api/v2' }
+ *   )
+ * );
+ * ```
+ *
+ * @public
+ */
+
+function findRecord(arg1, arg2, arg3) {
+  const identifier = typeof arg1 === 'string' ? {
+    type: arg1,
+    id: arg2
+  } : arg1;
+  const options = (typeof arg1 === 'string' ? arg3 : arg2) || {};
+  const cacheOptions = extractCacheOptions(options);
+  const urlOptions = {
+    identifier,
+    op: 'findRecord',
+    resourcePath: pluralize(identifier.type)
+  };
+  copyForwardUrlOptions(urlOptions, options);
+  const url = buildBaseURL(urlOptions);
+  const headers = new Headers();
+  headers.append('Accept', ACCEPT_HEADER_VALUE);
+  return {
+    url: options.include?.length ? `${url}?${buildQueryParams({
+      include: options.include
+    }, options.urlParamsSettings)}` : url,
+    method: 'GET',
+    headers,
+    cacheOptions,
+    op: 'findRecord',
+    records: [identifier]
+  };
+}
+
+/** @deprecated use {@link ReactiveDataDocument} */
+
+/**
+ * Builds request options to query for resources, usually by a primary
+ * type, configured for the url and header expectations of most JSON:API APIs.
+ *
+ * The key difference between this and `postQuery` is that this method will send the query
+ * as query params in the url of a "GET" request instead of as the JSON body of a "POST"
+ * request.
+ *
+ * **Basic Usage**
+ *
+ * ```ts
+ * import { query } from '@warp-drive/utilities/json-api';
+ *
+ * const data = await store.request(query('person'));
+ * ```
+ *
+ * **With Query Params**
+ *
+ * ```ts
+ * import { query } from '@warp-drive/utilities/json-api';
+ *
+ * const options = query('person', { include: ['pets', 'friends'] });
+ * const data = await store.request(options);
+ * ```
+ *
+ * **Supplying Options to Modify the Request Behavior**
+ *
+ * The following options are supported:
+ *
+ * - `host` - The host to use for the request, defaults to the `host` configured with `setBuildURLConfig`.
+ * - `namespace` - The namespace to use for the request, defaults to the `namespace` configured with `setBuildURLConfig`.
+ * - `resourcePath` - The resource path to use for the request, defaults to pluralizing the supplied type
+ * - `reload` - Whether to forcibly reload the request if it is already in the store, not supplying this
+ *      option will delegate to the store's CachePolicy, defaulting to `false` if none is configured.
+ * - `backgroundReload` - Whether to reload the request if it is already in the store, but to also resolve the
+ *      promise with the cached value, not supplying this option will delegate to the store's CachePolicy,
+ *      defaulting to `false` if none is configured.
+ * - `urlParamsSetting` - an object containing options for how to serialize the query params (see `buildQueryParams`)
+ *
+ * ```ts
+ * import { query } from '@warp-drive/utilities/json-api';
+ *
+ * const options = query('person', { include: ['pets', 'friends'] }, { reload: true });
+ * const data = await store.request(options);
+ * ```
+ *
+ * @public
+ */
+
+function query(type,
+// eslint-disable-next-line @typescript-eslint/no-shadow
+query = {}, options = {}) {
+  const cacheOptions = extractCacheOptions(options);
+  const urlOptions = {
+    identifier: {
+      type
+    },
+    op: 'query',
+    resourcePath: pluralize(type)
+  };
+  copyForwardUrlOptions(urlOptions, options);
+  const url = buildBaseURL(urlOptions);
+  const headers = new Headers();
+  headers.append('Accept', ACCEPT_HEADER_VALUE);
+  const queryString = buildQueryParams(query, options.urlParamsSettings);
+  return {
+    url: queryString ? `${url}?${queryString}` : url,
+    method: 'GET',
+    headers,
+    cacheOptions,
+    op: 'query'
+  };
+}
+
+/**
+ * Builds request options to query for resources, usually by a primary
+ * type, configured for the url and header expectations of most JSON:API APIs.
+ *
+ * The key difference between this and `query` is that this method will send the query
+ * as the JSON body of a "POST" request instead of as query params in the url of a "GET"
+ * request.
+ *
+ * A CacheKey is generated from the url and query params, and used to cache the response
+ * in the store.
+ *
+ * ```ts
+ * import { postQuery } from '@warp-drive/utilities/json-api';
+ *
+ * const options = postQuery('person', { include: ['pets', 'friends'] });
+ * const data = await store.request(options);
+ * ```
+ *
+ * **Supplying Options to Modify the Request Behavior**
+ *
+ * The following options are supported:
+ *
+ * - `host` - The host to use for the request, defaults to the `host` configured with `setBuildURLConfig`.
+ * - `namespace` - The namespace to use for the request, defaults to the `namespace` configured with `setBuildURLConfig`.
+ * - `resourcePath` - The resource path to use for the request, defaults to pluralizing the supplied type
+ * - `reload` - Whether to forcibly reload the request if it is already in the store, not supplying this
+ *      option will delegate to the store's CachePolicy, defaulting to `false` if none is configured.
+ * - `backgroundReload` - Whether to reload the request if it is already in the store, but to also resolve the
+ *      promise with the cached value, not supplying this option will delegate to the store's CachePolicy,
+ *      defaulting to `false` if none is configured.
+ * - `urlParamsSetting` - an object containing options for how to serialize the query params (see `buildQueryParams`)
+ *
+ * ```ts
+ * import { postQuery } from '@warp-drive/utilities/json-api';
+ *
+ * const options = postQuery('person', { include: ['pets', 'friends'] }, { reload: true });
+ * const data = await store.request(options);
+ * ```
+ *
+ * @public
+ * @param identifier
+ * @param query
+ * @param options
+ */
+
+function postQuery(type,
+// eslint-disable-next-line @typescript-eslint/no-shadow
+query = {}, options = {}) {
+  const cacheOptions = extractCacheOptions(options);
+  const urlOptions = {
+    identifier: {
+      type
+    },
+    op: 'query',
+    resourcePath: options.resourcePath ?? pluralize(type)
+  };
+  copyForwardUrlOptions(urlOptions, options);
+  const url = buildBaseURL(urlOptions);
+  const headers = new Headers();
+  headers.append('Accept', ACCEPT_HEADER_VALUE);
+  const queryData = structuredClone(query);
+  cacheOptions.key = cacheOptions.key ?? `${url}?${buildQueryParams(queryData, options.urlParamsSettings)}`;
+  return {
+    url,
+    method: 'POST',
+    body: JSON.stringify(query),
+    headers,
+    cacheOptions: cacheOptions,
+    op: 'query'
+  };
+}
+function isExisting(identifier) {
+  return 'id' in identifier && identifier.id !== null && 'type' in identifier && identifier.type !== null;
+}
+
+/**
+ * :::warning ⚠️ **These Mutation Builders DO NOT Set The Request Body**
+ * While this may come as a surprise, the app providing the body ensures that only
+ * desired and correctly formatted data is sent with the request.
+ * :::
+ *
+ * Builds request options to delete record for resources,
+ * configured for the url, method and header expectations of most JSON:API APIs.
+ *
+ * **Basic Usage**
+ *
+ * ```ts
+ * import { deleteRecord } from '@warp-drive/utilities/json-api';
+ *
+ * const person = store.peekRecord('person', '1');
+ *
+ * // mark record as deleted
+ * store.deleteRecord(person);
+ *
+ * // persist deletion
+ * const data = await store.request(deleteRecord(person));
+ * ```
+ *
+ * **Supplying Options to Modify the Request Behavior**
+ *
+ * The following options are supported:
+ *
+ * - `host` - The host to use for the request, defaults to the `host` configured with `setBuildURLConfig`.
+ * - `namespace` - The namespace to use for the request, defaults to the `namespace` configured with `setBuildURLConfig`.
+ * - `resourcePath` - The resource path to use for the request, defaults to pluralizing the supplied type
+ * - `reload` - Whether to forcibly reload the request if it is already in the store, not supplying this
+ *      option will delegate to the store's CachePolicy, defaulting to `false` if none is configured.
+ * - `backgroundReload` - Whether to reload the request if it is already in the store, but to also resolve the
+ *      promise with the cached value, not supplying this option will delegate to the store's CachePolicy,
+ *      defaulting to `false` if none is configured.
+ * - `urlParamsSetting` - an object containing options for how to serialize the query params (see `buildQueryParams`)
+ *
+ * ```ts
+ * import { deleteRecord } from '@warp-drive/utilities/json-api';
+ *
+ * const person = store.peekRecord('person', '1');
+ *
+ * // mark record as deleted
+ * store.deleteRecord(person);
+ *
+ * // persist deletion
+ * const options = deleteRecord(person, { namespace: 'api/v1' });
+ * const data = await store.request(options);
+ * ```
+ *
+ * @public
+ * @param record
+ * @param options
+ */
+
+function deleteRecord(record, options = {}) {
+  const identifier = recordIdentifierFor(record);
+  macroCondition(getGlobalConfig().WarpDrive.env.DEBUG) ? (test => {
+    if (!test) {
+      throw new Error(`Expected to be given a record instance`);
+    }
+  })(identifier) : {};
+  macroCondition(getGlobalConfig().WarpDrive.env.DEBUG) ? (test => {
+    if (!test) {
+      throw new Error(`Cannot delete a record that does not have an associated type and id.`);
+    }
+  })(isExisting(identifier)) : {};
+  const urlOptions = {
+    identifier: identifier,
+    op: 'deleteRecord',
+    resourcePath: pluralize(identifier.type)
+  };
+  copyForwardUrlOptions(urlOptions, options);
+  const url = buildBaseURL(urlOptions);
+  const headers = new Headers();
+  headers.append('Accept', ACCEPT_HEADER_VALUE);
+  return {
+    url,
+    method: 'DELETE',
+    headers,
+    op: 'deleteRecord',
+    data: {
+      record: identifier
+    },
+    records: [identifier]
+  };
+}
+
+/**
+ * :::warning ⚠️ **These Mutation Builders DO NOT Set The Necessary Request Body**
+ * While this may come as a surprise, the app providing the body ensures that only
+ * desired and correctly formatted data is sent with the request.
+ * :::
+ *
+ * Builds request options to create new record for resources,
+ * configured for the url, method and header expectations of most JSON:API APIs.
+ *
+ * **Basic Usage**
+ *
+ * ```ts
+ * import { cacheKeyFor } from '@warp-drive/core';
+ * import { createRecord } from '@warp-drive/utilities/json-api';
+ * import type { Person } from '#/data/types';
+ *
+ * const person = store.createRecord<Person>('person', { name: 'Ted' });
+ * const init = createRecord(person);
+ * init.body = JSON.stringify(
+ *  {
+ *    // it's likely you will want to transform this data
+ *    // somewhat
+ *    data: store.cache.peek(cacheKeyFor(person))
+ *  }
+ * );
+ * const data = await store.request(init);
+ * ```
+ *
+ * **Supplying Options to Modify the Request Behavior**
+ *
+ * The following options are supported:
+ *
+ * - `host` - The host to use for the request, defaults to the `host` configured with `setBuildURLConfig`.
+ * - `namespace` - The namespace to use for the request, defaults to the `namespace` configured with `setBuildURLConfig`.
+ * - `resourcePath` - The resource path to use for the request, defaults to pluralizing the supplied type
+ * - `reload` - Whether to forcibly reload the request if it is already in the store, not supplying this
+ *      option will delegate to the store's CachePolicy, defaulting to `false` if none is configured.
+ * - `backgroundReload` - Whether to reload the request if it is already in the store, but to also resolve the
+ *      promise with the cached value, not supplying this option will delegate to the store's CachePolicy,
+ *      defaulting to `false` if none is configured.
+ * - `urlParamsSetting` - an object containing options for how to serialize the query params (see `buildQueryParams`)
+ *
+ * ```ts
+ * import { createRecord } from '@warp-drive/utilities/json-api';
+ *
+ * const person = store.createRecord('person', { name: 'Ted' });
+ * const options = createRecord(person, { namespace: 'api/v1' });
+ * const data = await store.request(options);
+ * ```
+ *
+ * @public
+ * @param record
+ * @param options
+ */
+
+function createRecord(record, options = {}) {
+  const identifier = recordIdentifierFor(record);
+  macroCondition(getGlobalConfig().WarpDrive.env.DEBUG) ? (test => {
+    if (!test) {
+      throw new Error(`Expected to be given a record instance`);
+    }
+  })(identifier) : {};
+  const urlOptions = {
+    identifier: identifier,
+    op: 'createRecord',
+    resourcePath: pluralize(identifier.type)
+  };
+  copyForwardUrlOptions(urlOptions, options);
+  const url = buildBaseURL(urlOptions);
+  const headers = new Headers();
+  headers.append('Accept', ACCEPT_HEADER_VALUE);
+  return {
+    url,
+    method: 'POST',
+    headers,
+    op: 'createRecord',
+    data: {
+      record: identifier
+    },
+    records: [identifier]
+  };
+}
+
+/**
+ * :::warning ⚠️ **These Mutation Builders DO NOT Set The Necessary Request Body**
+ * While this may come as a surprise, the app providing the body ensures that only
+ * desired and correctly formatted data is sent with the request.
+ * :::
+ *
+ * Builds request options to update existing record for resources,
+ * configured for the url, method and header expectations of most JSON:API APIs.
+ *
+ * **Example Usage**
+ *
+ * ```ts
+ * import { cacheKeyFor } from '@warp-drive/core';
+ * import { updateRecord } from '@warp-drive/utilities/json-api';
+ * import type { EditablePerson } from '#/data/types';
+ *
+ * const mutable = await checkout<EditablePerson>(person);
+ * mutable.name = 'Chris';
+ * const init = updateRecord(mutable);
+ *
+ * init.body = JSON.stringify(
+ *  // it's likely you will want to transform this data
+ *  // somewhat, or serialize only specific properties instead
+ *  serializePatch(store.cache, cacheKeyFor(mutable))
+ * );
+ * const data = await store.request(init);
+ * ```
+ *
+ *
+ * **Supplying Options to Modify the Request Behavior**
+ *
+ * The following options are supported:
+ *
+ * - `patch` - Allows caller to specify whether to use a PATCH request instead of a PUT request, defaults to `false`.
+ * - `host` - The host to use for the request, defaults to the `host` configured with `setBuildURLConfig`.
+ * - `namespace` - The namespace to use for the request, defaults to the `namespace` configured with `setBuildURLConfig`.
+ * - `resourcePath` - The resource path to use for the request, defaults to pluralizing the supplied type
+ * - `reload` - Whether to forcibly reload the request if it is already in the store, not supplying this
+ *      option will delegate to the store's CachePolicy, defaulting to `false` if none is configured.
+ * - `backgroundReload` - Whether to reload the request if it is already in the store, but to also resolve the
+ *      promise with the cached value, not supplying this option will delegate to the store's CachePolicy,
+ *      defaulting to `false` if none is configured.
+ * - `urlParamsSetting` - an object containing options for how to serialize the query params (see `buildQueryParams`)
+ *
+ * ```ts
+ * import { updateRecord } from '@warp-drive/utilities/json-api';
+ *
+ * const person = store.peekRecord('person', '1');
+ * person.name = 'Chris';
+ * const options = updateRecord(person, { patch: true });
+ * const data = await store.request(options);
+ * ```
+ *
+ * @public
+ * @param record
+ * @param options
+ */
+
+function updateRecord(record, options = {}) {
+  const identifier = recordIdentifierFor(record);
+  macroCondition(getGlobalConfig().WarpDrive.env.DEBUG) ? (test => {
+    if (!test) {
+      throw new Error(`Expected to be given a record instance`);
+    }
+  })(identifier) : {};
+  macroCondition(getGlobalConfig().WarpDrive.env.DEBUG) ? (test => {
+    if (!test) {
+      throw new Error(`Cannot update a record that does not have an associated type and id.`);
+    }
+  })(isExisting(identifier)) : {};
+  const urlOptions = {
+    identifier: identifier,
+    op: 'updateRecord',
+    resourcePath: pluralize(identifier.type)
+  };
+  copyForwardUrlOptions(urlOptions, options);
+  const url = buildBaseURL(urlOptions);
+  const headers = new Headers();
+  headers.append('Accept', ACCEPT_HEADER_VALUE);
+  return {
+    url,
+    method: options.patch ? 'PATCH' : 'PUT',
+    headers,
+    op: 'updateRecord',
+    data: {
+      record: identifier
+    },
+    records: [identifier]
+  };
+}
+
+/**
+ * :::warning ⚠️ **This util often won't produce the necessary body for a {json:api} request**
+ *
+ * While this may come as a surprise, they are intended to serialize cache state for more
+ * generalized usage. {json:api} has a large variance in acceptable shapes, and only your
+ * app can ensure that the body is correctly formatted and contains all necessary data.
+ * :::
+ *
+ * Serializes the current state of a resource or array of resources for use with POST or PUT requests.
+ *
+ * @public
+ * @param {Cache} cache}
+ * @param {ResourceKey} identifier
+ * @return {Object} An object with a `data` property containing the serialized resource patch
+ */
+function serializeResources(cache, identifiers) {
+  return {
+    data: Array.isArray(identifiers) ? identifiers.map(identifier => _serializeResource(cache, identifier)) : _serializeResource(cache, identifiers)
+  };
+}
+function fixRef({
+  id,
+  lid,
+  type
+}) {
+  if (id !== null) {
+    return {
+      id,
+      type
+    };
+  }
+  return {
+    id,
+    lid,
+    type
+  };
+}
+function fixRelData(rel) {
+  if (Array.isArray(rel)) {
+    return rel.map(ref => fixRef(ref));
+  } else if (typeof rel === 'object' && rel !== null) {
+    return fixRef(rel);
+  }
+  return null;
+}
+function _serializeResource(cache, identifier) {
+  const {
+    id,
+    lid,
+    type
+  } = identifier;
+  // peek gives us everything we want, but since its referentially the same data
+  // as is in the cache we clone it to avoid any accidental mutations
+  const record = structuredClone(cache.peek(identifier));
+  macroCondition(getGlobalConfig().WarpDrive.env.DEBUG) ? (test => {
+    if (!test) {
+      throw new Error(`A record with id ${String(id)} and type ${type} for lid ${lid} was not found not in the supplied Cache.`);
+    }
+  })(record) : {};
+
+  // remove lid from anything that has an ID and slice any relationship arrays
+  if (record.id !== null) {
+    delete record.lid;
+  }
+  if (record.relationships) {
+    for (const key of Object.keys(record.relationships)) {
+      const relationship = record.relationships[key];
+      if (Array.isArray(relationship.data)) {
+        relationship.data = relationship.data.map(ref => fixRef(ref));
+      } else if (typeof relationship.data === 'object' && relationship.data !== null) {
+        relationship.data = fixRef(relationship.data);
+      } else if (Object.keys(relationship ?? {}).length === 0) {
+        delete record.relationships[key];
+      }
+    }
+  }
+  return record;
+}
+
+/**
+ * :::warning ⚠️ **This util often won't produce the necessary body for a {json:api} request**
+ *
+ * While this may come as a surprise, they are intended to serialize cache state for more
+ * generalized usage. {json:api} has a large variance in acceptable shapes, and only your
+ * app can ensure that the body is correctly formatted and contains all necessary data.
+ * :::
+ *
+ * Serializes changes to a resource. Useful for use with building bodies for PATCH requests.
+ *
+ * Only attributes which are changed are serialized.
+ * Only relationships which are changed are serialized.
+ *
+ * Collection relationships serialize the collection as a whole.
+ *
+ * If you would like to serialize updates to a collection more granularly
+ * (for instance, as operations) request the diff from the store and
+ * serialize as desired:
+ *
+ * ```ts
+ * const relationshipDiffMap = cache.changedRelationships(identifier);
+ * ```
+ *
+ * @public
+ * @param {Cache} cache}
+ * @param {ResourceKey} identifier
+ * @return {Object} An object with a `data` property containing the serialized resource patch
+ */
+function serializePatch(cache, identifier) {
+  const {
+    id,
+    lid,
+    type
+  } = identifier;
+  macroCondition(getGlobalConfig().WarpDrive.env.DEBUG) ? (test => {
+    if (!test) {
+      throw new Error(`A record with id ${String(id)} and type ${type} for lid ${lid} was not found not in the supplied Cache.`);
+    }
+  })(cache.peek(identifier)) : {};
+  const data = id === null ? {
+    type,
+    lid,
+    id
+  } : {
+    type,
+    id
+  };
+  if (cache.hasChangedAttrs(identifier)) {
+    const attrsChanges = cache.changedAttrs(identifier);
+    const attributes = {};
+    Object.keys(attrsChanges).forEach(key => {
+      const change = attrsChanges[key];
+      const newVal = change[1];
+      attributes[key] = newVal === undefined ? null : structuredClone(newVal);
+    });
+    data.attributes = attributes;
+  }
+  const changedRelationships = cache.changedRelationships(identifier);
+  if (changedRelationships.size) {
+    const relationships = {};
+    changedRelationships.forEach((diff, key) => {
+      relationships[key] = {
+        data: fixRelData(diff.localState)
+      };
+    });
+    data.relationships = relationships;
+  }
+  return {
+    data
+  };
+}
+export { createRecord, deleteRecord, findRecord, postQuery, query, serializePatch, serializeResources, setBuildURLConfig, updateRecord };

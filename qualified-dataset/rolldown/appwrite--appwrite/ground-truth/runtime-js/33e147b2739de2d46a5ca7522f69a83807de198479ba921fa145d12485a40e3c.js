@@ -1,0 +1,2 @@
+import{Cot as e}from"./index-ARRzLOvi.js";var t=[[`rect`,{width:`18`,height:`18`,x:`3`,y:`3`,rx:`2`,key:`afitv7`}],[`path`,{d:`M9 3v18`,key:`fh3hqa`}],[`path`,{d:`M15 3v18`,key:`14nvp0`}]],n=e(`columns-3`,t);export{t as n,n as t};
+//# sourceMappingURL=columns-3-HpGeAnId.js.map

@@ -1,0 +1,633 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "214db1bf977799f52d1100f137b6218e2b2c760da85d814b60910349d4b509c4",
+    "manifestSHA256": "6515c27336fe22b3f2832c476d862455bc3ba017f9bf7900fdb78c505590bfeb",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@codemirror/autocomplete",
+    "@codemirror/commands",
+    "@codemirror/lang-yaml",
+    "@codemirror/language",
+    "@codemirror/lint",
+    "@codemirror/search",
+    "@codemirror/state",
+    "@codemirror/view",
+    "@jsonforms/core",
+    "@jsonforms/vue",
+    "@jsonforms/vue-vanilla",
+    "@lezer/highlight",
+    "@sentry/vue",
+    "ajv",
+    "ajv-formats",
+    "crypto-js",
+    "dompurify",
+    "express",
+    "express-basic-auth",
+    "frappe-charts",
+    "jose",
+    "js-yaml",
+    "keycloak-js",
+    "oidc-client-ts",
+    "pingman",
+    "rsup-progress",
+    "simple-icons",
+    "sortablejs",
+    "vue",
+    "vue-i18n",
+    "vue-router",
+    "vue-select",
+    "vuex",
+    "yaml"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@codemirror/autocomplete",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/commands",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/lang-yaml",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/language",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/lint",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/search",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/state",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/view",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@jsonforms/core",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@jsonforms/vue",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@jsonforms/vue-vanilla",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@lezer/highlight",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@sentry/vue",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ajv",
+      "initialAnchors": 69,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "ajv"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 679,
+      "sourceFiles": 61,
+      "finalInitialAnchors": 69
+    },
+    {
+      "library": "ajv-formats",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "ajv-formats"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 28,
+      "sourceFiles": 3
+    },
+    {
+      "library": "crypto-js",
+      "initialAnchors": 24,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 133,
+      "sourceFiles": 10,
+      "finalInitialAnchors": 24
+    },
+    {
+      "library": "dompurify",
+      "initialAnchors": 11,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 118,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 11
+    },
+    {
+      "library": "express",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "express-basic-auth",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "frappe-charts",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "jose",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "js-yaml",
+      "initialAnchors": 58,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 266,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 58
+    },
+    {
+      "library": "keycloak-js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "oidc-client-ts",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "pingman",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "rsup-progress",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 23,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "simple-icons",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "simple-icons"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 3467,
+      "sourceFiles": 1
+    },
+    {
+      "library": "sortablejs",
+      "initialAnchors": 40,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 239,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 40
+    },
+    {
+      "library": "vue",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vue-i18n",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 267,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 9
+    },
+    {
+      "library": "vue-router",
+      "initialAnchors": 19,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "ajv",
+        "vue-router"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 341,
+      "sourceFiles": 3,
+      "finalInitialAnchors": 19
+    },
+    {
+      "library": "vue-select",
+      "initialAnchors": 11,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 126,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 11
+    },
+    {
+      "library": "vuex",
+      "initialAnchors": 13,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "ajv-formats",
+        "sortablejs",
+        "simple-icons",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 173,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 13
+    },
+    {
+      "library": "yaml",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    }
+  ],
+  "selectedLibraries": [
+    "vuex",
+    "crypto-js",
+    "sortablejs",
+    "dompurify",
+    "rsup-progress",
+    "js-yaml",
+    "vue-i18n",
+    "vue-select",
+    "ajv",
+    "vue-router"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 85,
+  "bundleUnits": 17,
+  "candidateOrder": [
+    "vuex",
+    "crypto-js",
+    "sortablejs",
+    "dompurify",
+    "rsup-progress",
+    "js-yaml",
+    "vue-i18n",
+    "vue-select",
+    "ajv-formats",
+    "simple-icons",
+    "@codemirror/autocomplete",
+    "@codemirror/commands",
+    "@codemirror/lang-yaml",
+    "@codemirror/language",
+    "@codemirror/lint",
+    "@codemirror/search",
+    "@codemirror/state",
+    "@codemirror/view",
+    "@jsonforms/core",
+    "@jsonforms/vue",
+    "@jsonforms/vue-vanilla",
+    "@lezer/highlight",
+    "@sentry/vue",
+    "ajv",
+    "express",
+    "express-basic-auth",
+    "frappe-charts",
+    "jose",
+    "keycloak-js",
+    "oidc-client-ts",
+    "pingman",
+    "vue",
+    "vue-router",
+    "yaml"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "ajv-formats",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "ajv-formats"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "simple-icons",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "simple-icons"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "ajv",
+      "initialAnchors": 69,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "ajv"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "vue-router",
+      "initialAnchors": 19,
+      "trialLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "ajv",
+        "vue-router"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "d36a9a8b069c219ef764b19e65d089d4682bfd91f0eb00421e2dd1fe59962c51",
+  "bundleDigest": "7ac6b4a7dd1e943f66331d259597062e312b3d5c6d6dfa9bb53b2901dd23341d",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "9ba7ae308821ff52af5c3cc79768a2029648574f01360bc62e74a01836b82fc5",
+  "reason": null,
+  "organizationSignature": "24989e35655f0888dee2c54baa71b78ab4fecea7aac10d6c4398ae3bba2eb312"
+}

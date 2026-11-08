@@ -1,17 +1,9 @@
 # zpao/qrcode.react
 
-Commit `bd6bec861c50d36a01c82193c8fcdc8a5e968465`. Build tool: tsup. Engine: esbuild.
+Independent verification of Hufang submission `feea3f3`, using upstream commit `f91d2bdcc39def6c5c77178743a44f935a740992`. The original catalog pin is preserved in `subject.json`; `application.json` records the actual reproduced frontend.
 
-The CI workflow reads Node 26 from .nvmrc, runs pnpm install and then make. The Makefile builds the library before the browser demo. The Dockerfile selects pnpm 11.7.0 from the manifest, installs from the lockfile, and serves the examples directory locally with Nginx. [.github/workflows/ci.yml](https://github.com/zpao/qrcode.react/blob/bd6bec861c50d36a01c82193c8fcdc8a5e968465/.github/workflows/ci.yml) · [.nvmrc](https://github.com/zpao/qrcode.react/blob/bd6bec861c50d36a01c82193c8fcdc8a5e968465/.nvmrc) · [Makefile](https://github.com/zpao/qrcode.react/blob/bd6bec861c50d36a01c82193c8fcdc8a5e968465/Makefile) · [package.json](https://github.com/zpao/qrcode.react/blob/bd6bec861c50d36a01c82193c8fcdc8a5e968465/package.json)
+Build: **built**. Browser: **rendered**.
 
-From this folder, extract the pinned revision into an empty source directory and run:
+Use `RECALL_ONLY=tsup/zpao--qrcode.react python3 verification/hufang-builds-2026-11-08/build.py` from the dataset root. Then run the same command with `capture.py` to launch the required local services and collect the selected route. Set `RECALL_REBUILD=1` or `RECALL_RECAPTURE=1` for a fresh attempt. See `recipe.json`, `launch.json`, and the verification scripts for contexts, environment-variable names, and service requirements. Secrets are generated locally and are not tracked.
 
-```sh
-mkdir source
-curl -fLsS https://codeload.github.com/zpao/qrcode.react/tar.gz/bd6bec861c50d36a01c82193c8fcdc8a5e968465 -o source.tar.gz
-tar xzf source.tar.gz --strip-components=1 -C source
-docker build -f "$PWD/Dockerfile" -t recall70/zpao--qrcode.react:bd6bec861c50 source
-docker run --rm -p 127.0.0.1:8080:80 recall70/zpao--qrcode.react:bd6bec861c50
-```
-
-Open http://127.0.0.1:8080/.
+[Build/browser evidence](../../../verification/hufang-builds-2026-11-08/tsup/zpao--qrcode.react/verification.json). [Captured JS, maps, and function pairs](ground-truth/func-mapping.json). This is the build/capture archive; membership in the final restricted dataset is defined by `qualified-dataset/index.json`. Authenticated workflows and external integrations remain outside the observed scope.

@@ -1,0 +1,5 @@
+# discourse/discourse
+
+Pinned commit `3a1b1ae930e568a8c1c2f12d6e09f8e907da608b`. 10 production libraries satisfy the minimum of three distinct initial POG source-function anchors. See `qualification.json`, `initial-anchors.json`, and `frontend-package.json` for eligibility evidence. `ground-truth/func-mapping.json` contains 5272 independently span-verified one-to-one pairs.
+
+The captured scripts and maps are retained byte-for-byte. Reference snapshots are explicit JavaScript inputs; map positions and pair labels do not enter anchor matching. The saved build/browser evidence remains in the build archive under `bundling-dataset/rolldown/discourse--discourse`.

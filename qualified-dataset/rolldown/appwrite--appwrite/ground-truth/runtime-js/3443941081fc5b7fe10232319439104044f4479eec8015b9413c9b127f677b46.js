@@ -1,0 +1,2 @@
+import{Cot as e}from"./index-ARRzLOvi.js";var t=[[`path`,{d:`m16 3 4 4-4 4`,key:`1x1c3m`}],[`path`,{d:`M20 7H4`,key:`zbl0bi`}],[`path`,{d:`m8 21-4-4 4-4`,key:`h9nckh`}],[`path`,{d:`M4 17h16`,key:`g4d7ey`}]],n=e(`arrow-right-left`,t);export{t as n,n as t};
+//# sourceMappingURL=arrow-right-left-Dr2hqLn6.js.map

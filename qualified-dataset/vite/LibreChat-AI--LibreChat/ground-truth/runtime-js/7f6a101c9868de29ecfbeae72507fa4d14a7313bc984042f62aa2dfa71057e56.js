@@ -1,0 +1,2 @@
+import{uw as e}from"./Icon.LX2Zi3Im.js";function t(t){let n=t?.trim();return n!=null&&n!==``&&e(n)?n:void 0}function n(e){return{privacyPolicyUrl:t(e?.interface?.privacyPolicy?.externalUrl),termsOfServiceUrl:t(e?.interface?.termsOfService?.externalUrl)}}function r(e){if(e?.interface?.termsOfService?.modalAcceptance===!0)return!1;let{privacyPolicyUrl:t,termsOfServiceUrl:r}=n(e);return t!=null||r!=null}export{n,r as t};
+//# sourceMappingURL=policies.B-UnGUAN.js.map

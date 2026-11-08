@@ -1,9 +1,14 @@
-FROM node:26-bookworm AS build
-WORKDIR /app
+FROM node:20-bookworm AS build
+WORKDIR /src
+RUN npm install --global pnpm@9.8.0
 COPY . .
-RUN npm install --global pnpm@11.7.0
 RUN pnpm install --frozen-lockfile
-RUN make && test -s examples/iife/demo.js
+RUN node -e "const fs=require('fs');const p='tsup.config.ts';const s=fs.readFileSync(p,'utf8');if(!s.includes('defineConfig({'))throw Error('config anchor missing');fs.writeFileSync(p,s.replace('defineConfig({','defineConfig({sourcemap: true,'));"
+RUN pnpm run build \
+    && test -s examples/index.html \
+    && test -s examples/iife/demo.js \
+    && test -s examples/iife/demo.js.map
 
-FROM nginx:1.27-alpine
-COPY --from=build /app/examples/ /usr/share/nginx/html/
+FROM nginx:stable-alpine AS runtime
+COPY --from=build /src/examples/index.html /usr/share/nginx/html/index.html
+COPY --from=build /src/examples/iife/ /usr/share/nginx/html/iife/

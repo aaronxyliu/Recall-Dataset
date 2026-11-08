@@ -1,0 +1,4 @@
+import{$W as e,H6 as t}from"./index-ARRzLOvi.js";const n=`database-pricing`,r=Math.round(t*100),i=`+${r}% of base`,a=`Full tier price per replica, +${r}% for point-in-time recovery`,o=[{label:`Monthly compute`,serverless:`$0 fixed fee`,dedicated:`From $10/mo per database`},{label:`Reads and writes`,serverless:`Plan quota, then overage`,dedicated:`Included in compute tier`},{label:`Storage`,serverless:`Project storage rates`,dedicated:`Tier allowance + overage`},{label:`CPU and memory`,serverless:`Serverless`,dedicated:`Reserved per tier`},{label:`HA replicas`,serverless:`-`,dedicated:`Full tier price per replica`},{label:`Point-in-time recovery`,serverless:`-`,dedicated:i},{label:`Database types`,serverless:`TablesDB (default)`,dedicated:`DocumentsDB, VectorsDB,
+PostgreSQL, MySQL,
+or upgraded TablesDB`}],s=e;export{n as i,s as n,a as r,o as t};
+//# sourceMappingURL=dedicated-databases-4ydbEQsZ.js.map

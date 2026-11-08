@@ -1,0 +1,77 @@
+{
+  "repository": "zpao/qrcode.react",
+  "commit": "f91d2bdcc39def6c5c77178743a44f935a740992",
+  "sourceDirectory": "builds/zpao--qrcode.react",
+  "applicationDirectory": ".",
+  "packageManifest": "package.json",
+  "declaredPackageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276",
+  "runtimeDeclarations": {
+    ".nvmrc": "20"
+  },
+  "engines": {
+    "workspace": {},
+    "root": {}
+  },
+  "upstreamProductionScripts": {
+    "build": "pnpm run build:code && pnpm run build:examples",
+    "build:code": "tsup src/index.tsx -d lib --format esm,cjs --dts --legacy-output --target=es2017 --platform=browser",
+    "build:examples": "tsup examples/demo.tsx -d examples --format iife --env.NODE_ENV production --minify --target=es2017 --legacy-output",
+    "publish-docs": "gh-pages --dist=examples --src='{index.html,iife/demo.js}'"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "Existing upstream sourcemap configuration",
+  "dockerRuntimeBases": [
+    "node:20-bookworm AS build",
+    "nginx:stable-alpine AS runtime"
+  ],
+  "expectedOutput": "examples/index.html 与 examples/iife/demo.js",
+  "serverCommand": [
+    "/docker-entrypoint.sh",
+    "nginx",
+    "-g",
+    "daemon off;"
+  ],
+  "containerPort": 80,
+  "pageRoute": "/",
+  "expectedInterface": "QR",
+  "serviceRecipe": null,
+  "runtimeConfigurationNames": [],
+  "referenceURL": "https://zpao.github.io/qrcode.react/",
+  "bundler": "tsup",
+  "bundlerEvidence": "build:examples 使用 tsup 将 examples/demo.tsx 打成 IIFE，examples/index.html 加载 iife/demo.js。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "package.json",
+      "url": "https://github.com/zpao/qrcode.react/blob/f91d2bdcc39def6c5c77178743a44f935a740992/package.json"
+    },
+    {
+      "path": "examples/index.html",
+      "url": "https://github.com/zpao/qrcode.react/blob/f91d2bdcc39def6c5c77178743a44f935a740992/examples/index.html"
+    },
+    {
+      "path": "tsup.config.ts",
+      "url": "https://github.com/zpao/qrcode.react/blob/f91d2bdcc39def6c5c77178743a44f935a740992/tsup.config.ts"
+    },
+    {
+      "path": ".nvmrc",
+      "url": "https://github.com/zpao/qrcode.react/blob/f91d2bdcc39def6c5c77178743a44f935a740992/.nvmrc"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "url": "https://github.com/zpao/qrcode.react/blob/f91d2bdcc39def6c5c77178743a44f935a740992/pnpm-lock.yaml"
+    },
+    {
+      "path": "Makefile",
+      "url": "https://github.com/zpao/qrcode.react/blob/f91d2bdcc39def6c5c77178743a44f935a740992/Makefile"
+    }
+  ],
+  "dependencyLocks": [
+    "pnpm-lock.yaml"
+  ],
+  "localVerificationURL": "http://127.0.0.1:43102/",
+  "expectedSelector": "canvas, svg",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [],
+  "resolvedDependencySnapshots": {}
+}

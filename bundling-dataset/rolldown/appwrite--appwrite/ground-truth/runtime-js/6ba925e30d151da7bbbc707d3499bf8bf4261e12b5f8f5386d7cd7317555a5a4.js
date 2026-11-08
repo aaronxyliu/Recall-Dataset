@@ -1,0 +1,2 @@
+const e=[`appwrite.io`];({...Object.fromEntries([`www.appwrite.io`,`new.appwrite.io`].map(e=>[e,`appwrite.io`]))});const t={name:`robots`,content:`noindex, nofollow`},n={name:`robots`,content:`noindex, follow`},r={name:`robots`,content:`max-image-preview:large`};var i=new Set(e);function a(e){return e.trim().toLowerCase().split(`:`)[0]??``}function o(e){return i.has(a(e))}function s(e){try{return o(new URL(e).hostname)}catch{return!1}}function c(e){return s(e)?[r]:[t]}export{t as n,c as r,n as t};
+//# sourceMappingURL=indexing-CWCsPP1b.js.map

@@ -1,0 +1,85 @@
+{
+  "repository": "shadcn-ui/ui",
+  "commit": "d549251bab2e57dbf72f7c909d6458c02c43f529",
+  "sourceDirectory": "builds/shadcn-ui--ui",
+  "applicationDirectory": "apps/v4",
+  "packageManifest": "apps/v4/package.json",
+  "declaredPackageManager": "pnpm@10.33.4",
+  "runtimeDeclarations": {
+    ".nvmrc": "v20.5.1"
+  },
+  "engines": {
+    "workspace": {},
+    "root": {}
+  },
+  "upstreamProductionScripts": {
+    "build": "pnpm registry:build && next build"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "enable-maps.cjs",
+  "dockerRuntimeBases": [
+    "oven/bun:1.4 AS bun",
+    "node:22-bookworm AS build",
+    "node:22-bookworm AS runtime"
+  ],
+  "expectedOutput": "apps/v4/.next",
+  "serverCommand": [
+    "[\"node\",\"node_modules/next/dist/bin/next\",\"start\",\"--port\",\"4000\",\"--hostname\",\"0.0.0.0\"]"
+  ],
+  "containerPort": 4000,
+  "pageRoute": "/",
+  "expectedInterface": "shadcn|Components",
+  "serviceRecipe": null,
+  "runtimeConfigurationNames": [],
+  "referenceURL": "https://ui.shadcn.com/create",
+  "bundler": "Turbopack",
+  "bundlerEvidence": "目标脚本使用 next build，清单声明 Next.js 16.4.2，该主版本默认使用 Turbopack。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "apps/v4/package.json",
+      "url": "https://github.com/shadcn-ui/ui/blob/d549251bab2e57dbf72f7c909d6458c02c43f529/apps/v4/package.json"
+    },
+    {
+      "path": "package.json",
+      "url": "https://github.com/shadcn-ui/ui/blob/d549251bab2e57dbf72f7c909d6458c02c43f529/package.json"
+    },
+    {
+      "path": ".nvmrc",
+      "url": "https://github.com/shadcn-ui/ui/blob/d549251bab2e57dbf72f7c909d6458c02c43f529/.nvmrc"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "url": "https://github.com/shadcn-ui/ui/blob/d549251bab2e57dbf72f7c909d6458c02c43f529/pnpm-workspace.yaml"
+    },
+    {
+      "path": "apps/v4/next.config.mjs",
+      "url": "https://github.com/shadcn-ui/ui/blob/d549251bab2e57dbf72f7c909d6458c02c43f529/apps/v4/next.config.mjs"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "url": "https://github.com/shadcn-ui/ui/blob/d549251bab2e57dbf72f7c909d6458c02c43f529/pnpm-lock.yaml"
+    }
+  ],
+  "dependencyLocks": [
+    "pnpm-lock.yaml"
+  ],
+  "localVerificationURL": "http://127.0.0.1:43104/",
+  "expectedSelector": "main",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [],
+  "resolvedDependencySnapshots": {},
+  "buildResourceSettings": {
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "experimental.cpus": 1,
+    "experimental.staticGenerationMaxConcurrency": 2,
+    "staticPageGenerationTimeout": 180,
+    "staticWorkerHeapMiB": 4096
+  },
+  "localBuildStages": [
+    "pnpm --filter=v4 run registry:build",
+    "pnpm --filter=v4 exec next build --turbopack --experimental-build-mode compile",
+    "pnpm --filter=v4 exec next build --turbopack --experimental-build-mode generate"
+  ],
+  "buildOnlyDependencyPatch": "static-worker-heap.cjs enables heap inheritance for the Next.js 16.4.2 static worker during generate and restores the original file afterward."
+}

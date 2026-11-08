@@ -1,0 +1,2 @@
+import{_st as e,xst as t}from"./index-ARRzLOvi.js";var n=t(e());function r(e,t){let[r,i]=(0,n.useState)(e);return(0,n.useEffect)(()=>{let n=setTimeout(()=>i(e),t);return()=>clearTimeout(n)},[e,t]),r}export{r as t};
+//# sourceMappingURL=useDebouncedValue-DYqNaQpC.js.map

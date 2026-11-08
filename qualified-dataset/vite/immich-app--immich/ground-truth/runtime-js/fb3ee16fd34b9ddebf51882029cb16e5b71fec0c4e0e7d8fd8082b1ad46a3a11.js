@@ -1,0 +1,2 @@
+import{i as e,pt as t,vn as n,yn as r}from"./DHn4i6Qo.js";import{fl as i}from"./BWGXZOld.js";var a=new Set([`$$slots`,`$$events`,`$$legacy`]);function o(o,s){r(s,!0);let c=e(s,a);t(()=>{let e={};for(let[t,n]of Object.entries(c)){if(!n)continue;let r=t.slice(2);e[r]=n}return i.on(e)}),n()}export{o as t};
+//# sourceMappingURL=uHbI-s25.js.map

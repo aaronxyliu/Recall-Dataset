@@ -1,0 +1,84 @@
+{
+  "repository": "CalCom/cal.com",
+  "commit": "1c193cca8682b33b9866c792186033f7ef886682",
+  "sourceDirectory": "builds/calcom--cal.com",
+  "applicationDirectory": "apps/web",
+  "packageManifest": "apps/web/package.json",
+  "declaredPackageManager": "yarn@4.12.0",
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {
+      "yarn": "3.4.1"
+    },
+    "root": {
+      "npm": ">=7.0.0",
+      "yarn": ">=4.12.0"
+    }
+  },
+  "upstreamProductionScripts": {
+    "build": "next build && yarn sentry:release"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "Existing upstream sourcemap configuration",
+  "dockerRuntimeBases": [
+    "--platform=$BUILDPLATFORM node:20 AS builder",
+    "node:20 AS builder-two",
+    "node:20 AS runner"
+  ],
+  "expectedOutput": "apps/web/.next",
+  "serverCommand": [
+    "[\"/calcom/scripts/start.sh\"]"
+  ],
+  "containerPort": 3000,
+  "pageRoute": "/auth/login",
+  "expectedInterface": "Sign in|Log in|Email",
+  "serviceRecipe": "compose.yaml",
+  "runtimeConfigurationNames": [
+    "CALENDSO_ENCRYPTION_KEY",
+    "DATABASE_DIRECT_URL",
+    "DATABASE_HOST",
+    "DATABASE_URL",
+    "NEXTAUTH_SECRET",
+    "NEXTAUTH_URL",
+    "NEXT_PUBLIC_WEBAPP_URL",
+    "POSTGRES_PASSWORD"
+  ],
+  "referenceURL": "https://app.cal.com/auth/login",
+  "bundler": "Turbopack",
+  "bundlerEvidence": "目标脚本使用 next build，清单声明 Next.js 16.1.5，该主版本默认使用 Turbopack。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "apps/web/package.json",
+      "url": "https://github.com/calcom/cal.diy/blob/1c193cca8682b33b9866c792186033f7ef886682/apps/web/package.json"
+    },
+    {
+      "path": "package.json",
+      "url": "https://github.com/calcom/cal.diy/blob/1c193cca8682b33b9866c792186033f7ef886682/package.json"
+    },
+    {
+      "path": "Dockerfile",
+      "url": "https://github.com/calcom/cal.diy/blob/1c193cca8682b33b9866c792186033f7ef886682/Dockerfile"
+    },
+    {
+      "path": "docker-compose.yml",
+      "url": "https://github.com/calcom/cal.diy/blob/1c193cca8682b33b9866c792186033f7ef886682/docker-compose.yml"
+    },
+    {
+      "path": "apps/web/next.config.ts",
+      "url": "https://github.com/calcom/cal.diy/blob/1c193cca8682b33b9866c792186033f7ef886682/apps/web/next.config.ts"
+    },
+    {
+      "path": "yarn.lock",
+      "url": "https://github.com/calcom/cal.diy/blob/1c193cca8682b33b9866c792186033f7ef886682/yarn.lock"
+    }
+  ],
+  "dependencyLocks": [
+    "yarn.lock"
+  ],
+  "localVerificationURL": "http://127.0.0.1:43105/auth/login",
+  "expectedSelector": "form",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [],
+  "resolvedDependencySnapshots": {}
+}

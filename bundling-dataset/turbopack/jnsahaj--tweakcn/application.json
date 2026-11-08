@@ -1,0 +1,77 @@
+{
+  "repository": "jnsahaj/tweakcn",
+  "commit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
+  "sourceDirectory": "builds/jnsahaj--tweakcn",
+  "applicationDirectory": ".",
+  "packageManifest": "package.json",
+  "declaredPackageManager": null,
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {},
+    "root": {}
+  },
+  "upstreamProductionScripts": {
+    "build": "next build --turbopack"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "enable-maps.cjs",
+  "dockerRuntimeBases": [
+    "node:22-bookworm AS build",
+    "node:22-bookworm-slim AS runtime"
+  ],
+  "expectedOutput": ".next",
+  "serverCommand": [
+    "[\"node\",\"node_modules/next/dist/bin/next\",\"start\",\"--hostname\",\"0.0.0.0\"]"
+  ],
+  "containerPort": 3000,
+  "pageRoute": "/editor/theme",
+  "expectedInterface": "Theme|tweakcn",
+  "serviceRecipe": null,
+  "runtimeConfigurationNames": [
+    "BETTER_AUTH_SECRET",
+    "POLAR_WEBHOOK_SECRET"
+  ],
+  "referenceURL": "https://tweakcn.com/editor/theme",
+  "bundler": "Turbopack",
+  "bundlerEvidence": "目标脚本显式启用 Turbopack。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "package.json",
+      "url": "https://github.com/jnsahaj/tweakcn/blob/a3b47b37cba97dd637de517aab52c45ec0f83456/package.json"
+    },
+    {
+      "path": "Dockerfile",
+      "url": "https://github.com/jnsahaj/tweakcn/blob/a3b47b37cba97dd637de517aab52c45ec0f83456/Dockerfile"
+    },
+    {
+      "path": "docker-compose.yml",
+      "url": "https://github.com/jnsahaj/tweakcn/blob/a3b47b37cba97dd637de517aab52c45ec0f83456/docker-compose.yml"
+    },
+    {
+      "path": "next.config.ts",
+      "url": "https://github.com/jnsahaj/tweakcn/blob/a3b47b37cba97dd637de517aab52c45ec0f83456/next.config.ts"
+    },
+    {
+      "path": "README.md",
+      "url": "https://github.com/jnsahaj/tweakcn/blob/a3b47b37cba97dd637de517aab52c45ec0f83456/README.md"
+    },
+    {
+      "path": "package-lock.json",
+      "url": "https://github.com/jnsahaj/tweakcn/blob/a3b47b37cba97dd637de517aab52c45ec0f83456/package-lock.json"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "url": "https://github.com/jnsahaj/tweakcn/blob/a3b47b37cba97dd637de517aab52c45ec0f83456/pnpm-lock.yaml"
+    }
+  ],
+  "dependencyLocks": [
+    "package-lock.json",
+    "pnpm-lock.yaml"
+  ],
+  "localVerificationURL": "http://127.0.0.1:43113/editor/theme",
+  "expectedSelector": "main, [data-slot=sidebar]",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [],
+  "resolvedDependencySnapshots": {}
+}

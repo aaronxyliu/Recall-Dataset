@@ -1,0 +1,187 @@
+#0 building with "colima" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.91kB done
+#1 DONE 0.1s
+
+#2 [context recipe] load .dockerignore
+#2 transferring recipe: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:16-bullseye@sha256:cd59a61258b82b86c1ff0ead50c8a689f6c3483c5ed21036e11ee741add419eb
+#3 DONE 0.1s
+
+#4 [internal] load metadata for docker.io/library/node:24-bookworm@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c63b4
+#4 DONE 4.2s
+
+#5 [context recipe] load from client
+#5 transferring recipe: 1.29kB done
+#5 DONE 0.0s
+
+#6 [build  1/11] FROM docker.io/library/node:16-bullseye@sha256:cd59a61258b82b86c1ff0ead50c8a689f6c3483c5ed21036e11ee741add419eb
+#6 resolve docker.io/library/node:16-bullseye@sha256:cd59a61258b82b86c1ff0ead50c8a689f6c3483c5ed21036e11ee741add419eb 0.0s done
+#6 CACHED
+
+#7 [context recipe] load from client
+#7 transferring recipe: 1.42kB done
+#7 DONE 0.1s
+
+#8 [runtime 1/4] FROM docker.io/library/node:24-bookworm@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c63b4
+#8 resolve docker.io/library/node:24-bookworm@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c63b4 0.0s done
+#8 ...
+
+#9 [internal] load build context
+#9 transferring context: 452.84kB 0.0s done
+#9 DONE 0.1s
+
+#10 [build  2/11] WORKDIR /src/tfjs-automl
+#10 DONE 0.1s
+
+#11 [build  3/11] COPY tfjs-automl/package.json tfjs-automl/yarn.lock ./
+#11 DONE 0.0s
+
+#8 [runtime 1/4] FROM docker.io/library/node:24-bookworm@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c63b4
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 0B / 59.81MB 0.2s
+#8 sha256:243b062857a5929fa9c3f6c0601e4a173c232953b85140f9e9ebfd207c89ca52 0B / 446B 0.2s
+#8 sha256:aa78086cb2f5474b0b9b9de8f9ba11bfa750687dc71c2f490d29646e2c0fa7ba 0B / 1.25MB 0.2s
+#8 sha256:93de12f00ca7f28ece93f4bb9e907c62ef0a3598f6f205c65e1bf72b31ac466d 0B / 3.32kB 0.2s
+#8 sha256:243b062857a5929fa9c3f6c0601e4a173c232953b85140f9e9ebfd207c89ca52 446B / 446B 1.1s done
+#8 sha256:93de12f00ca7f28ece93f4bb9e907c62ef0a3598f6f205c65e1bf72b31ac466d 3.32kB / 3.32kB 1.1s done
+#8 extracting sha256:93de12f00ca7f28ece93f4bb9e907c62ef0a3598f6f205c65e1bf72b31ac466d done
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 5.24MB / 59.81MB 1.8s
+#8 sha256:aa78086cb2f5474b0b9b9de8f9ba11bfa750687dc71c2f490d29646e2c0fa7ba 1.25MB / 1.25MB 2.2s done
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 13.63MB / 59.81MB 2.4s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 17.83MB / 59.81MB 2.6s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 22.02MB / 59.81MB 2.9s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 26.21MB / 59.81MB 3.0s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 30.41MB / 59.81MB 3.2s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 33.55MB / 59.81MB 3.3s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 36.70MB / 59.81MB 3.5s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 39.85MB / 59.81MB 3.6s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 42.99MB / 59.81MB 3.8s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 49.28MB / 59.81MB 4.1s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 52.43MB / 59.81MB 4.2s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 57.67MB / 59.81MB 4.4s
+#8 sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 59.81MB / 59.81MB 4.4s done
+#8 extracting sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55
+#8 extracting sha256:f1ef69d04a21a080d62ce6a9e3aaf8f30d7639c89a78fb7a10417f20f0d59d55 0.9s done
+#8 DONE 5.5s
+
+#12 [build  4/11] RUN --mount=type=cache,id=recall-tfjs-yarn,target=/var/cache/yarn     node --version && yarn --version     && yarn install --frozen-lockfile --non-interactive --registry https://registry.npmjs.org
+#12 0.153 v16.20.2
+#12 0.232 1.22.19
+#12 0.286 yarn install v1.22.19
+#12 0.314 [1/4] Resolving packages...
+#12 0.366 [2/4] Fetching packages...
+#12 ...
+
+#8 [runtime 1/4] FROM docker.io/library/node:24-bookworm@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c63b4
+#8 extracting sha256:aa78086cb2f5474b0b9b9de8f9ba11bfa750687dc71c2f490d29646e2c0fa7ba 0.0s done
+#8 extracting sha256:243b062857a5929fa9c3f6c0601e4a173c232953b85140f9e9ebfd207c89ca52 done
+#8 DONE 5.5s
+
+#13 [runtime 2/4] WORKDIR /site
+#13 DONE 0.2s
+
+#12 [build  4/11] RUN --mount=type=cache,id=recall-tfjs-yarn,target=/var/cache/yarn     node --version && yarn --version     && yarn install --frozen-lockfile --non-interactive --registry https://registry.npmjs.org
+#12 6.666 info There appears to be trouble with your network connection. Retrying...
+#12 17.23 info There appears to be trouble with your network connection. Retrying...
+#12 21.01 info There appears to be trouble with your network connection. Retrying...
+#12 49.50 info There appears to be trouble with your network connection. Retrying...
+#12 52.92 info There appears to be trouble with your network connection. Retrying...
+#12 56.55 info There appears to be trouble with your network connection. Retrying...
+#12 68.06 info There appears to be trouble with your network connection. Retrying...
+#12 73.57 info There appears to be trouble with your network connection. Retrying...
+#12 78.19 info There appears to be trouble with your network connection. Retrying...
+#12 103.3 info There appears to be trouble with your network connection. Retrying...
+#12 114.2 info There appears to be trouble with your network connection. Retrying...
+#12 120.7 info There appears to be trouble with your network connection. Retrying...
+#12 170.2 info There appears to be trouble with your network connection. Retrying...
+#12 224.2 info There appears to be trouble with your network connection. Retrying...
+#12 227.9 [3/4] Linking dependencies...
+#12 227.9 warning " > karma-typescript@5.5.3" has incorrect peer dependency "typescript@1 || 2 || 3 || 4".
+#12 227.9 warning " > rollup-plugin-terser@7.0.2" has incorrect peer dependency "rollup@^2.0.0".
+#12 227.9 warning " > rollup-plugin-uglify@6.0.4" has incorrect peer dependency "rollup@>=0.66.0 <2".
+#12 227.9 warning " > ts-node@10.9.1" has unmet peer dependency "@types/node@*".
+#12 231.7 [4/4] Building fresh packages...
+#12 232.0 Done in 231.70s.
+#12 DONE 232.7s
+
+#14 [build  5/11] COPY tsconfig_base.json /src/
+#14 DONE 0.3s
+
+#15 [build  6/11] COPY tfjs-automl/ ./
+#15 DONE 0.1s
+
+#16 [build  7/11] RUN yarn build && test -s dist/tf-automl.esm.js && test -s dist/tf-automl.esm.js.map
+#16 0.361 yarn run v1.22.19
+#16 0.502 $ tsc && yarn bundle
+#16 1.912 $ rollup -c
+#16 2.166 [36m
+#16 2.166 [1msrc/index.ts[22m → [1mdist/tf-automl.node.js[22m...[39m
+#16 3.811 [32mcreated [1mdist/tf-automl.node.js[22m in [1m1.6s[22m[39m
+#16 3.811 [36m
+#16 3.811 [1msrc/index.ts[22m → [1mdist/tf-automl.js[22m...[39m
+#16 5.222 [32mcreated [1mdist/tf-automl.js[22m in [1m1.4s[22m[39m
+#16 5.222 [36m
+#16 5.222 [1msrc/index.ts[22m → [1mdist/tf-automl.min.js[22m...[39m
+#16 6.797 [32mcreated [1mdist/tf-automl.min.js[22m in [1m1.5s[22m[39m
+#16 6.797 [36m
+#16 6.797 [1msrc/index.ts[22m → [1mdist/tf-automl.esm.js[22m...[39m
+#16 8.080 [32mcreated [1mdist/tf-automl.esm.js[22m in [1m1.2s[22m[39m
+#16 8.277 Done in 7.92s.
+#16 DONE 9.2s
+
+#17 [build  8/11] WORKDIR /src/tfjs-automl/demo/img_classification
+#17 DONE 0.6s
+
+#18 [build  9/11] RUN --mount=type=cache,id=recall-tfjs-yarn,target=/var/cache/yarn     yarn install --frozen-lockfile --non-interactive --registry https://registry.npmjs.org
+#18 0.335 yarn install v1.22.19
+#18 0.405 [1/4] Resolving packages...
+#18 0.480 [2/4] Fetching packages...
+#18 8.611 info There appears to be trouble with your network connection. Retrying...
+#18 62.72 info There appears to be trouble with your network connection. Retrying...
+#18 68.10 info There appears to be trouble with your network connection. Retrying...
+#18 106.3 info There appears to be trouble with your network connection. Retrying...
+#18 109.9 [3/4] Linking dependencies...
+#18 113.6 [4/4] Building fresh packages...
+#18 137.0 Done in 136.70s.
+#18 DONE 137.2s
+
+#19 [build 10/11] COPY --from=recipe prepare-parcel.cjs ./prepare-parcel.cjs
+#19 DONE 0.2s
+
+#20 [build 11/11] RUN mv ../../node_modules ../../build-node_modules     && ln -s demo/img_classification/node_modules ../../node_modules     && for shim in process buffer base64-js ieee754; do cp -a "../../build-node_modules/$shim" node_modules/ || exit 1; done     && node prepare-parcel.cjs && yarn build --no-autoinstall --no-scope-hoist     && test -s dist/index.html     && for script in dist/*.js; do test -s "$script" && test -s "$script.map" || exit 1; done
+#20 5.814 yarn run v1.22.19
+#20 5.833 $ cross-env NODE_ENV=production parcel build index.html --public-url ./ --no-autoinstall --no-scope-hoist
+#20 6.122 Building...
+#20 6.244 
+#20 6.245 console: Browserslist: caniuse-lite is outdated. Please run:
+#20 6.245   npx browserslist@latest --update-db
+#20 6.245   Why you should do it regularly: 
+#20 6.245 https://github.com/browserslist/browserslist#browsers-data-updating
+#20 7.437 Bundling...
+#20 7.740 Packaging & Optimizing...
+#20 11.31 ✨ Built in 5.34s
+#20 11.31 
+#20 11.31 dist/index.html                 302 B    613ms
+#20 11.31 dist/index.65b789d3.js    ⚠️  1.76 MB    3.72s
+#20 11.55 Done in 5.74s.
+#20 DONE 11.9s
+
+#21 [runtime 3/4] COPY --from=build /src/tfjs-automl/demo/img_classification/dist/ /site/tfjs-automl/demo/img_classification/
+#21 DONE 0.1s
+
+#22 [runtime 4/4] COPY --from=recipe serve.cjs /usr/local/lib/tfjs-serve.cjs
+#22 DONE 0.0s
+
+#23 exporting to image
+#23 exporting layers
+#23 exporting layers 0.2s done
+#23 exporting manifest sha256:b7dbb6878d881dc8232d717ffa94952b90feb12dd05f647c01b147bfe4e77f4c done
+#23 exporting config sha256:c14fd7517addac3fb5e9cffaa0bf1863203549facbe63d380a97e4225bc02991 done
+#23 exporting attestation manifest sha256:8bacb032b07a6976f330b0076438ca5a662a6d34dc38d1a21eee540b60912936 done
+#23 exporting manifest list sha256:e0353279e647932c4a074fb1283cab6f26aa0d9a9355fa3ddd396a40fcf42908 done
+#23 naming to docker.io/recall-hufang/tensorflow--tfjs:e5d5e9371ed1 done
+#23 unpacking to docker.io/recall-hufang/tensorflow--tfjs:e5d5e9371ed1 0.0s done
+#23 DONE 0.3s

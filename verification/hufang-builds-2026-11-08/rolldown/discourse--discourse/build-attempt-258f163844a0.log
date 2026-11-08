@@ -1,0 +1,1272 @@
+#0 building with "colima" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 30B
+#1 transferring dockerfile: 3.48kB 0.0s done
+#1 DONE 0.1s
+
+#2 [context recipe] load .dockerignore
+#2 transferring recipe: 2B done
+#2 DONE 0.1s
+
+#3 [context maptools] load .dockerignore
+#3 transferring maptools: 2B done
+#3 DONE 0.1s
+
+#4 [context sourcegit] load .dockerignore
+#4 transferring sourcegit: 2B done
+#4 DONE 0.1s
+
+#5 [internal] load metadata for docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#5 DONE 22.1s
+
+#6 [context maptools] load from client
+#6 transferring maptools: 766B done
+#6 DONE 0.1s
+
+#7 [context recipe] load from client
+#7 transferring recipe: 613B done
+#7 DONE 0.1s
+
+#8 [internal] setting cache mount permissions
+#8 DONE 0.1s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 resolve docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07 0.0s done
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 0B / 99.85MB 0.2s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 0B / 229.42MB 0.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 0B / 373.42MB 0.2s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 0B / 163.15MB 0.2s
+#9 ...
+
+#10 [context sourcegit] load from client
+#10 transferring sourcegit: 244.66MB 1.5s done
+#10 DONE 1.6s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 ...
+
+#11 [internal] load build context
+#11 transferring context: 180.61MB 3.0s done
+#11 DONE 3.1s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 0B / 99.85MB 5.3s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 0B / 229.42MB 5.3s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 0B / 373.42MB 5.3s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 0B / 163.15MB 5.3s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 0B / 99.85MB 10.4s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 0B / 229.42MB 10.4s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 0B / 373.42MB 10.4s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 0B / 163.15MB 10.4s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 8.39MB / 163.15MB 11.9s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 19.92MB / 163.15MB 12.6s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 30.41MB / 163.15MB 13.2s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 40.89MB / 163.15MB 13.7s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 5.24MB / 99.85MB 14.1s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 50.33MB / 163.15MB 14.1s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 59.77MB / 163.15MB 14.6s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 12.58MB / 99.85MB 14.9s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 17.83MB / 99.85MB 15.2s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 69.21MB / 163.15MB 15.2s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 27.26MB / 99.85MB 15.5s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 0B / 229.42MB 15.5s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 0B / 373.42MB 15.5s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 33.55MB / 99.85MB 15.8s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 78.64MB / 163.15MB 15.6s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 38.80MB / 99.85MB 15.9s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 44.04MB / 99.85MB 16.1s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 53.48MB / 99.85MB 16.4s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 87.03MB / 163.15MB 16.2s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 62.91MB / 99.85MB 16.7s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 95.42MB / 163.15MB 16.7s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 70.25MB / 99.85MB 17.0s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 77.59MB / 99.85MB 17.3s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 103.81MB / 163.15MB 17.3s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 84.93MB / 99.85MB 17.6s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 91.23MB / 99.85MB 17.9s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 98.57MB / 99.85MB 18.2s
+#9 sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 99.85MB / 99.85MB 18.2s done
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 113.25MB / 163.15MB 18.2s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 0B / 181.56MB 0.2s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 121.63MB / 163.15MB 18.8s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 131.07MB / 163.15MB 19.5s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 140.51MB / 163.15MB 20.1s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 0B / 229.42MB 20.6s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 0B / 373.42MB 20.6s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 149.95MB / 163.15MB 20.7s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 160.43MB / 163.15MB 21.0s
+#9 sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 163.15MB / 163.15MB 21.1s done
+#9 sha256:20abf6fe2d9ad3c96c8796b8a680555e45f04a960f774bf7877f7814e2f9d3aa 0B / 5.52MB 0.2s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 14.68MB / 229.42MB 22.5s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 28.31MB / 229.42MB 23.3s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 0B / 181.56MB 5.3s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 39.85MB / 229.42MB 24.0s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 53.48MB / 229.42MB 24.8s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 66.06MB / 229.42MB 25.4s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 0B / 373.42MB 25.7s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 77.59MB / 229.42MB 26.0s
+#9 sha256:20abf6fe2d9ad3c96c8796b8a680555e45f04a960f774bf7877f7814e2f9d3aa 0B / 5.52MB 5.3s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 89.13MB / 229.42MB 26.9s
+#9 sha256:20abf6fe2d9ad3c96c8796b8a680555e45f04a960f774bf7877f7814e2f9d3aa 1.05MB / 5.52MB 6.2s
+#9 sha256:20abf6fe2d9ad3c96c8796b8a680555e45f04a960f774bf7877f7814e2f9d3aa 5.52MB / 5.52MB 6.4s done
+#9 sha256:4b59d2322a682c049925611491773eb671d8069a8933fba924772924bd5d5464 0B / 1.51kB 0.2s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 101.71MB / 229.42MB 27.9s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 0B / 181.56MB 10.4s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 113.25MB / 229.42MB 28.8s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 125.83MB / 229.42MB 29.7s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 138.41MB / 229.42MB 30.3s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 150.99MB / 229.42MB 30.9s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 0B / 373.42MB 30.8s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 164.63MB / 229.42MB 31.7s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 19.92MB / 373.42MB 32.1s
+#9 sha256:4b59d2322a682c049925611491773eb671d8069a8933fba924772924bd5d5464 1.51kB / 1.51kB 4.7s done
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 176.16MB / 229.42MB 32.3s
+#9 sha256:2dc95613918350a620c50a9ebcb927bf76b63976feb6be3908ea4d5771e4d5af 0B / 534B 0.2s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 189.79MB / 229.42MB 33.0s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 42.99MB / 373.42MB 33.0s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 0B / 181.56MB 15.5s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 201.33MB / 229.42MB 33.8s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 61.67MB / 373.42MB 33.8s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 9.44MB / 181.56MB 16.4s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 212.86MB / 229.42MB 34.8s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 81.79MB / 373.42MB 35.4s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 18.87MB / 181.56MB 17.4s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 224.40MB / 229.42MB 36.3s
+#9 sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 229.42MB / 229.42MB 36.7s done
+#9 sha256:2dc95613918350a620c50a9ebcb927bf76b63976feb6be3908ea4d5771e4d5af 534B / 534B 4.6s done
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 28.31MB / 181.56MB 18.6s
+#9 sha256:1b4168e2e470316cc0fb3444a8ca512d838069ce8cb96f8a091f4f39828a5e7a 0B / 853B 0.2s
+#9 sha256:780b999484382fb5f6cc2e154b3f28267e7d86e473aa0b15f6e5cc11a51d0fa4 0B / 129B 0.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 100.66MB / 373.42MB 37.1s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 38.80MB / 181.56MB 19.4s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 121.63MB / 373.42MB 38.1s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 48.23MB / 181.56MB 19.8s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 58.72MB / 181.56MB 20.4s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 140.51MB / 373.42MB 39.0s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 70.25MB / 181.56MB 21.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 160.26MB / 373.42MB 39.9s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 81.79MB / 181.56MB 21.8s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 96.47MB / 181.56MB 22.5s
+#9 sha256:780b999484382fb5f6cc2e154b3f28267e7d86e473aa0b15f6e5cc11a51d0fa4 129B / 129B 3.8s done
+#9 sha256:c3a659e7c0ae06a159485b04fb947ec793d5aa3e7dc803fba075a33a55d85b04 0B / 32.53kB 0.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 180.36MB / 373.42MB 41.0s
+#9 sha256:1b4168e2e470316cc0fb3444a8ca512d838069ce8cb96f8a091f4f39828a5e7a 853B / 853B 4.3s done
+#9 sha256:7d16c5f1a16375b68508d7735b6e1486add02559c5d6f36406bae3547d7eff8c 0B / 500.99kB 0.2s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 106.95MB / 181.56MB 23.1s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 201.33MB / 373.42MB 42.0s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 117.44MB / 181.56MB 23.7s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 126.88MB / 181.56MB 24.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 220.20MB / 373.42MB 42.9s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 137.36MB / 181.56MB 24.8s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 146.80MB / 181.56MB 25.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 241.17MB / 373.42MB 44.0s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 157.29MB / 181.56MB 25.8s
+#9 sha256:c3a659e7c0ae06a159485b04fb947ec793d5aa3e7dc803fba075a33a55d85b04 32.53kB / 32.53kB 3.9s done
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 167.77MB / 181.56MB 26.4s
+#9 sha256:635820e69c5d35a726014c82b55a1ce96159e6fd2d8c1a00403bd00fa95fc8f3 0B / 96.14kB 0.2s
+#9 sha256:7d16c5f1a16375b68508d7735b6e1486add02559c5d6f36406bae3547d7eff8c 500.99kB / 500.99kB 4.0s done
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 261.10MB / 373.42MB 45.2s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 177.21MB / 181.56MB 27.0s
+#9 sha256:7ab20385c91ea6b5460e37ac21ca631d72988d4db886eb8faadf3a3bff9c44b3 0B / 2.44MB 0.2s
+#9 sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 181.56MB / 181.56MB 27.4s done
+#9 sha256:93b97a97362201e1eb7f46235bdab6f5d7b030f9daa785e62d2e106346173c42 0B / 3.60kB 0.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 279.97MB / 373.42MB 46.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 298.84MB / 373.42MB 47.1s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 321.91MB / 373.42MB 48.0s
+#9 sha256:635820e69c5d35a726014c82b55a1ce96159e6fd2d8c1a00403bd00fa95fc8f3 96.14kB / 96.14kB 3.6s done
+#9 sha256:049947430debb7a3d8b4d85624bed5be0e75c1c4c94c90865b0d08e5c9086aff 0B / 6.71kB 0.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 343.93MB / 373.42MB 48.8s
+#9 sha256:7ab20385c91ea6b5460e37ac21ca631d72988d4db886eb8faadf3a3bff9c44b3 2.44MB / 2.44MB 4.5s done
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 367.00MB / 373.42MB 49.7s
+#9 sha256:871decdd4340e4cfb0d40777913cb0c22512b3dd4d5f0baa9c20aa88eaf20c9b 0B / 205.32kB 0.2s
+#9 sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 373.42MB / 373.42MB 50.0s done
+#9 sha256:9d1e8a5f595c4f41be086af3a635c856203ddc34f8e68b69e204e5c5ecc10642 0B / 1.45MB 0.2s
+#9 sha256:93b97a97362201e1eb7f46235bdab6f5d7b030f9daa785e62d2e106346173c42 0B / 3.60kB 5.3s
+#9 sha256:049947430debb7a3d8b4d85624bed5be0e75c1c4c94c90865b0d08e5c9086aff 6.71kB / 6.71kB 3.8s done
+#9 sha256:65c033d4b0ce9899e6ff6ab1c73cc30c6603e2179f75619e0b3f344bcf3ca1dd 0B / 336B 0.2s
+#9 sha256:93b97a97362201e1eb7f46235bdab6f5d7b030f9daa785e62d2e106346173c42 3.60kB / 3.60kB 7.3s done
+#9 sha256:8c92516f441382905ee1eec02961a01fbe2dec35b86e39d3afb8c4cf4c27184f 0B / 18.50kB 0.2s
+#9 sha256:871decdd4340e4cfb0d40777913cb0c22512b3dd4d5f0baa9c20aa88eaf20c9b 0B / 205.32kB 5.3s
+#9 sha256:9d1e8a5f595c4f41be086af3a635c856203ddc34f8e68b69e204e5c5ecc10642 1.45MB / 1.45MB 5.2s done
+#9 sha256:2ba2aa8fc3af5e2a6c8a237fc63db242b6ce55b0c5fa61578a698ea78603391d 0B / 33.94kB 0.2s
+#9 sha256:871decdd4340e4cfb0d40777913cb0c22512b3dd4d5f0baa9c20aa88eaf20c9b 205.32kB / 205.32kB 5.8s done
+#9 sha256:d398ef0a775da0137d0252a11646298e0dff86f5161221bb748cc80a3d617f75 0B / 2.49MB 0.2s
+#9 sha256:65c033d4b0ce9899e6ff6ab1c73cc30c6603e2179f75619e0b3f344bcf3ca1dd 336B / 336B 4.4s done
+#9 sha256:8c92516f441382905ee1eec02961a01fbe2dec35b86e39d3afb8c4cf4c27184f 18.50kB / 18.50kB 3.6s done
+#9 sha256:5e75ce523de4ed618ffe7a83384bbdb509b7afaeced1d45116f44217f3eba517 0B / 3.64MB 0.2s
+#9 sha256:fdea35d92e2eb73ac73e3e62266b5b49060bc47c34e1a5712fa32058b8636efe 0B / 11.31kB 0.2s
+#9 sha256:2ba2aa8fc3af5e2a6c8a237fc63db242b6ce55b0c5fa61578a698ea78603391d 33.94kB / 33.94kB 4.3s done
+#9 sha256:d398ef0a775da0137d0252a11646298e0dff86f5161221bb748cc80a3d617f75 1.05MB / 2.49MB 4.1s
+#9 sha256:d398ef0a775da0137d0252a11646298e0dff86f5161221bb748cc80a3d617f75 2.49MB / 2.49MB 4.2s done
+#9 sha256:564a3c488ebc892a80163cfe3d343214b06441d19fafe4c1acba0a8103968e24 0B / 868.39kB 0.2s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 0B / 114.64MB 0.2s
+#9 sha256:fdea35d92e2eb73ac73e3e62266b5b49060bc47c34e1a5712fa32058b8636efe 11.31kB / 11.31kB 4.2s done
+#9 sha256:6952cb68e519438fca59ca0d8347044c500ac1c4a57042420b87a07cb5975848 0B / 816B 0.2s
+#9 sha256:5e75ce523de4ed618ffe7a83384bbdb509b7afaeced1d45116f44217f3eba517 2.10MB / 3.64MB 4.8s
+#9 sha256:5e75ce523de4ed618ffe7a83384bbdb509b7afaeced1d45116f44217f3eba517 3.64MB / 3.64MB 4.9s done
+#9 sha256:03f3050da7b6f6f8950c48141bcf82149b6d6476bcd63a901adb32be788f3958 0B / 699.85kB 0.2s
+#9 sha256:564a3c488ebc892a80163cfe3d343214b06441d19fafe4c1acba0a8103968e24 868.39kB / 868.39kB 4.6s done
+#9 sha256:1303569f48716312123d1ff1ee6b5c721240c1a86069e273ed1562a1b91e97ca 0B / 226B 0.2s
+#9 sha256:6952cb68e519438fca59ca0d8347044c500ac1c4a57042420b87a07cb5975848 816B / 816B 3.8s done
+#9 sha256:0fdcb447d9a7f8d0bc282a4a56c189486d883dc4a8a3261f50f2c35429b845f8 0B / 118B 0.2s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 0B / 114.64MB 5.3s
+#9 sha256:03f3050da7b6f6f8950c48141bcf82149b6d6476bcd63a901adb32be788f3958 0B / 699.85kB 5.3s
+#9 sha256:03f3050da7b6f6f8950c48141bcf82149b6d6476bcd63a901adb32be788f3958 699.85kB / 699.85kB 6.4s done
+#9 sha256:5850e8f530b69b3433622e1bf1b28040de85e0a4ced9250dab116097aed58f99 0B / 3.39kB 0.2s
+#9 sha256:1303569f48716312123d1ff1ee6b5c721240c1a86069e273ed1562a1b91e97ca 226B / 226B 4.1s done
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 0B / 59.30MB 0.2s
+#9 sha256:0fdcb447d9a7f8d0bc282a4a56c189486d883dc4a8a3261f50f2c35429b845f8 118B / 118B 5.2s done
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 2.10MB / 114.64MB 10.4s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 0B / 30.21MB 0.2s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 2.10MB / 30.21MB 0.9s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 5.24MB / 30.21MB 1.1s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 7.34MB / 30.21MB 1.2s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 10.49MB / 30.21MB 1.4s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 12.58MB / 30.21MB 1.5s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 15.73MB / 30.21MB 1.7s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 17.83MB / 30.21MB 1.8s
+#9 sha256:5850e8f530b69b3433622e1bf1b28040de85e0a4ced9250dab116097aed58f99 3.39kB / 3.39kB 3.9s done
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 20.97MB / 30.21MB 2.0s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 23.07MB / 30.21MB 2.1s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 26.21MB / 30.21MB 2.3s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 28.31MB / 30.21MB 2.4s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 8.39MB / 114.64MB 12.8s
+#9 sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 30.21MB / 30.21MB 2.5s done
+#9 extracting sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 19.92MB / 114.64MB 13.2s
+#9 extracting sha256:acd43e9bebc37bc4ba7a5f47bd7598913337803e53d468f37d940f11f5d5f1ef 0.7s done
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 30.41MB / 114.64MB 13.7s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 36.70MB / 114.64MB 13.8s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 0B / 59.30MB 5.3s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 45.09MB / 114.64MB 14.1s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 55.57MB / 114.64MB 14.4s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 61.87MB / 114.64MB 14.6s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 70.25MB / 114.64MB 14.9s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 76.55MB / 114.64MB 15.2s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 82.84MB / 114.64MB 15.3s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 93.32MB / 114.64MB 15.6s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 101.71MB / 114.64MB 15.9s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 112.20MB / 114.64MB 16.2s
+#9 sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 114.64MB / 114.64MB 16.3s done
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 4.19MB / 59.30MB 8.1s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 7.34MB / 59.30MB 8.3s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 12.58MB / 59.30MB 8.6s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 17.83MB / 59.30MB 8.9s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 22.02MB / 59.30MB 9.2s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 25.17MB / 59.30MB 9.3s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 29.36MB / 59.30MB 9.6s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 32.51MB / 59.30MB 9.8s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 35.65MB / 59.30MB 10.1s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 39.85MB / 59.30MB 10.2s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 44.04MB / 59.30MB 10.5s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 49.28MB / 59.30MB 10.8s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 53.48MB / 59.30MB 11.1s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 56.62MB / 59.30MB 11.3s
+#9 sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 59.30MB / 59.30MB 11.4s done
+#9 extracting sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d
+#9 extracting sha256:37455ac2dc9431b2e941ad2820f6a649cb6301d0b4a42c32c813f68ff45dd13d 0.8s done
+#9 DONE 81.4s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 extracting sha256:5850e8f530b69b3433622e1bf1b28040de85e0a4ced9250dab116097aed58f99 done
+#9 extracting sha256:0fdcb447d9a7f8d0bc282a4a56c189486d883dc4a8a3261f50f2c35429b845f8 done
+#9 extracting sha256:1303569f48716312123d1ff1ee6b5c721240c1a86069e273ed1562a1b91e97ca done
+#9 extracting sha256:03f3050da7b6f6f8950c48141bcf82149b6d6476bcd63a901adb32be788f3958 done
+#9 extracting sha256:6952cb68e519438fca59ca0d8347044c500ac1c4a57042420b87a07cb5975848 done
+#9 extracting sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55
+#9 extracting sha256:3c1b2f7cbff4d5f42d9e0be64557fb861f4d24a17b7828903006a3783d598e55 1.3s done
+#9 DONE 82.7s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 extracting sha256:564a3c488ebc892a80163cfe3d343214b06441d19fafe4c1acba0a8103968e24 0.0s done
+#9 extracting sha256:5e75ce523de4ed618ffe7a83384bbdb509b7afaeced1d45116f44217f3eba517 0.1s done
+#9 extracting sha256:fdea35d92e2eb73ac73e3e62266b5b49060bc47c34e1a5712fa32058b8636efe 0.0s done
+#9 extracting sha256:d398ef0a775da0137d0252a11646298e0dff86f5161221bb748cc80a3d617f75 0.0s done
+#9 DONE 82.8s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 extracting sha256:2ba2aa8fc3af5e2a6c8a237fc63db242b6ce55b0c5fa61578a698ea78603391d done
+#9 extracting sha256:8c92516f441382905ee1eec02961a01fbe2dec35b86e39d3afb8c4cf4c27184f 0.0s done
+#9 extracting sha256:65c033d4b0ce9899e6ff6ab1c73cc30c6603e2179f75619e0b3f344bcf3ca1dd done
+#9 extracting sha256:9d1e8a5f595c4f41be086af3a635c856203ddc34f8e68b69e204e5c5ecc10642 0.0s done
+#9 extracting sha256:871decdd4340e4cfb0d40777913cb0c22512b3dd4d5f0baa9c20aa88eaf20c9b done
+#9 extracting sha256:049947430debb7a3d8b4d85624bed5be0e75c1c4c94c90865b0d08e5c9086aff done
+#9 extracting sha256:93b97a97362201e1eb7f46235bdab6f5d7b030f9daa785e62d2e106346173c42 done
+#9 extracting sha256:7ab20385c91ea6b5460e37ac21ca631d72988d4db886eb8faadf3a3bff9c44b3 0.0s done
+#9 DONE 82.9s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 extracting sha256:635820e69c5d35a726014c82b55a1ce96159e6fd2d8c1a00403bd00fa95fc8f3 done
+#9 extracting sha256:7d16c5f1a16375b68508d7735b6e1486add02559c5d6f36406bae3547d7eff8c 0.0s done
+#9 extracting sha256:c3a659e7c0ae06a159485b04fb947ec793d5aa3e7dc803fba075a33a55d85b04 0.0s done
+#9 extracting sha256:780b999484382fb5f6cc2e154b3f28267e7d86e473aa0b15f6e5cc11a51d0fa4 done
+#9 extracting sha256:1b4168e2e470316cc0fb3444a8ca512d838069ce8cb96f8a091f4f39828a5e7a done
+#9 extracting sha256:2dc95613918350a620c50a9ebcb927bf76b63976feb6be3908ea4d5771e4d5af done
+#9 extracting sha256:4b59d2322a682c049925611491773eb671d8069a8933fba924772924bd5d5464 0.0s done
+#9 extracting sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a
+#9 extracting sha256:415cdf6188ae5b8df2aeda21a816ccba9d51f9aecf9da8d54b175db5878b108a 3.1s done
+#9 DONE 86.1s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 extracting sha256:20abf6fe2d9ad3c96c8796b8a680555e45f04a960f774bf7877f7814e2f9d3aa 0.1s done
+#9 DONE 86.2s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 extracting sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c
+#9 extracting sha256:d33ec0eabcd59f4cb51b01affc299534ce424f03a1cf91ee4dbcdbef2ff0100c 2.3s done
+#9 DONE 88.5s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 extracting sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990
+#9 extracting sha256:c3e3b185e7e49fb7bec79fadb282f9974118df96eb1bbbb0b96f3d9cde810990 5.3s done
+#9 DONE 93.9s
+
+#9 [build 1/9] FROM docker.io/discourse/base:release@sha256:7a9939472b66a4adada01617be443a24606c9b1e3bc2502bb0fdb87b249d2c07
+#9 extracting sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52
+#9 extracting sha256:50371a7f08d39d3a9efd60ad0e3e285bf39b2b31594ffe17071bfbd452913b52 8.3s done
+#9 extracting sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603
+#9 extracting sha256:edf6151765a295ed724ced617da4f5e876e899c3a7a6c1ef0d17061bce68d603 1.0s done
+#9 DONE 103.2s
+
+#12 [build 2/9] RUN ruby --version && gem install bundler --version 4.0.23 --no-document     && npm install --global pnpm@12.11.2
+#12 0.185 ruby 4.0.9 (2026-10-23 revision 3e93b23afc) +PRISM [aarch64-linux]
+#12 1.728 Successfully installed bundler-4.0.23
+#12 1.728 1 gem installed
+#12 62.37 
+#12 62.37 added 1 package, and changed 1 package in 1m
+#12 62.37 npm notice
+#12 62.37 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#12 62.37 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#12 62.37 npm notice To update run: npm install -g npm@12.2.2
+#12 62.37 npm notice
+#12 DONE 62.5s
+
+#13 [build 3/9] WORKDIR /src
+#13 DONE 0.1s
+
+#14 [build 4/9] RUN chown discourse:discourse /src
+#14 DONE 0.2s
+
+#15 [build 5/9] COPY --chown=discourse:discourse . .
+#15 DONE 2.4s
+
+#16 [build 6/9] RUN --mount=type=cache,id=recall-discourse-rubygems,target=/home/discourse/.bundle/cache,uid=1000,gid=1000     bundle config set --local path vendor/bundle     && bundle config set --local without development:test     && sed -i 's/\r$//' Gemfile.lock     && grep -Fx '  ruby 4.0.7' Gemfile.lock     && ruby -e 'abort unless RUBY_VERSION == "4.0.9"'     && sed -i '/^RUBY VERSION$/{n;s/^  ruby 4\.0\.7$/  ruby 4.0.9/;}' Gemfile.lock     && bundle config set --local frozen true     && bundle install --jobs=2 --retry=3
+#16 0.398   ruby 4.0.7
+#16 0.670 Fetching https://github.com/discourse/raindrops
+#16 5.675 Fetching gem metadata from https://rubygems.org/..
+#16 6.302 
+#16 19.29 
+#16 49.52 Fetching rake 13.4.2
+#16 49.97 Installing rake 13.4.2
+#16 49.98 Fetching Ascii85 2.0.1
+#16 49.98 Fetching base64 0.3.0
+#16 50.09 Fetching bigdecimal 3.3.1
+#16 50.20 Fetching concurrent-ruby 1.3.8
+#16 50.31 Installing bigdecimal 3.3.1 with native extensions
+#16 50.46 Fetching connection_pool 2.5.5
+#16 50.56 Fetching drb 2.2.3
+#16 50.67 Fetching i18n 1.14.8
+#16 50.82 Fetching json 2.21.2
+#16 50.93 Fetching logger 1.7.0
+#16 51.04 Installing json 2.21.2 with native extensions
+#16 54.12 Fetching prism 1.9.0
+#16 54.63 Fetching minitest 6.0.6
+#16 54.95 Installing prism 1.9.0 with native extensions
+#16 56.10 Fetching securerandom 0.4.1
+#16 56.21 Fetching tzinfo 2.0.6
+#16 56.31 Fetching uri 1.1.2
+#16 56.41 Fetching activesupport 8.1.4.1
+#16 56.57 Fetching builder 3.3.0
+#16 56.67 Fetching erubi 1.13.1
+#16 56.77 Fetching racc 1.8.1
+#16 56.88 Fetching nokogiri 1.19.7 (aarch64-linux-gnu)
+#16 57.71 Installing racc 1.8.1 with native extensions
+#16 58.12 Fetching rails-dom-testing 2.3.0
+#16 58.22 Fetching crass 1.0.8
+#16 58.33 Fetching loofah 2.25.3
+#16 58.43 Fetching rails-html-sanitizer 1.7.2
+#16 58.54 Fetching actionview 8.1.4.1
+#16 58.72 Fetching rack 2.2.24
+#16 58.83 Fetching rack-session 1.0.2
+#16 58.93 Fetching rack-test 2.2.0
+#16 59.04 Fetching useragent 0.16.11
+#16 59.14 Fetching actionpack 8.1.4.1
+#16 59.34 Fetching globalid 1.4.0
+#16 59.44 Fetching activejob 8.1.4.1
+#16 59.55 Fetching mini_mime 1.1.5
+#16 59.65 Fetching date 3.6.0
+#16 59.76 Fetching timeout 0.6.1
+#16 59.86 Installing date 3.6.0 with native extensions
+#16 64.62 Fetching net-protocol 0.4.0
+#16 64.64 Fetching net-imap 0.6.7
+#16 65.01 Fetching net-pop 0.1.2
+#16 65.08 Fetching net-smtp 0.5.2
+#16 65.11 Fetching mail 2.9.1
+#16 65.18 Fetching actionmailer 8.1.4.1
+#16 65.29 Fetching actionview_precompiler 0.4.0
+#16 65.39 Fetching activemodel 8.1.4.1
+#16 65.42 Fetching active_model_serializers 0.8.4
+#16 65.51 Fetching activerecord 8.1.4.1
+#16 65.53 Fetching public_suffix 7.0.5
+#16 65.63 Fetching addressable 2.9.0
+#16 65.69 Fetching afm 1.0.0
+#16 65.74 Fetching version_gem 1.1.15
+#16 65.80 Fetching anonymous_loader 0.1.3
+#16 65.85 Fetching auth-sanitizer 0.2.3
+#16 65.92 Fetching aws-eventstream 1.4.0
+#16 65.95 Fetching aws-partitions 1.1296.0
+#16 66.03 Fetching aws-sigv4 1.12.1
+#16 66.06 Fetching jmespath 1.6.2
+#16 66.14 Fetching rexml 3.4.4
+#16 66.16 Fetching aws-sdk-core 3.259.0
+#16 66.26 Fetching aws-sdk-bedrockruntime 1.85.0
+#16 66.37 Fetching aws-sdk-kms 1.99.0
+#16 66.37 Fetching aws-sdk-mediaconvert 1.165.0
+#16 66.48 Fetching aws-sdk-s3 1.227.0
+#16 66.56 Fetching aws-sdk-sns 1.96.0
+#16 66.69 Fetching aws-sdk-sts 1.12.0
+#16 66.71 Fetching benchmark 0.5.0
+#16 66.80 Fetching msgpack 1.8.5
+#16 66.82 Fetching bootsnap 1.26.0
+#16 66.91 Fetching cbor 0.5.10.3
+#16 66.95 Installing msgpack 1.8.5 with native extensions
+#16 67.02 Fetching cgi 0.5.2
+#16 67.13 Installing cbor 0.5.10.3 with native extensions
+#16 68.98 Installing cgi 0.5.2 with native extensions
+#16 69.18 Fetching chunky_png 1.4.0
+#16 69.22 Fetching coderay 1.1.3
+#16 69.54 Fetching colored2 4.0.3
+#16 69.65 Fetching openssl 4.0.2
+#16 69.67 Fetching openssl-signature_algorithm 1.3.0
+#16 69.77 Fetching cose 1.3.1
+#16 69.80 Fetching cppjieba_rb 0.4.4
+#16 69.89 Installing openssl 4.0.2 with native extensions
+#16 70.59 Fetching ssrf_filter 1.6.0
+#16 70.71 Installing cppjieba_rb 0.4.4 with native extensions
+#16 72.64 Fetching css_parser 3.3.0
+#16 72.95 Fetching csv 3.3.6
+#16 73.30 Fetching diffy 3.4.4
+#16 73.41 Fetching digest 3.3.0
+#16 73.51 Fetching discourse-emojis 1.0.47
+#16 77.45 Installing digest 3.3.0 with native extensions
+#16 78.24 Fetching discourse-fonts 0.0.19
+#16 78.91 Fetching discourse-seed-fu 2.3.12
+#16 79.02 Fetching tiktoken_ruby 0.0.17 (aarch64-linux)
+#16 79.90 Fetching tokenizers 0.6.4 (aarch64-linux)
+#16 80.09 Fetching discourse_ai-tokenizers 0.4.2
+#16 80.45 Fetching discourse_math_bundle 1.0.1
+#16 81.02 Fetching discourse_voice_assets 0.2.0
+#16 81.52 Fetching dry-initializer 3.2.0
+#16 81.62 Fetching ed25519 1.4.0
+#16 81.72 Fetching email_reply_trimmer 0.4.0
+#16 81.84 Installing ed25519 1.4.0 with native extensions
+#16 82.56 Fetching erb 6.0.7
+#16 82.66 Fetching excon 1.8.0
+#16 82.76 Installing erb 6.0.7 with native extensions
+#16 82.78 Fetching net-http 0.10.0
+#16 82.88 Fetching faraday-net_http 3.5.0
+#16 82.98 Fetching faraday 2.15.0
+#16 83.00 Fetching multipart-post 2.4.1
+#16 83.07 Fetching faraday-multipart 1.2.0
+#16 83.10 Fetching faraday-retry 2.4.0
+#16 83.17 Fetching fast_blank 1.0.1
+#16 83.21 Fetching fastimage 2.4.1
+#16 83.28 Fetching ffi 1.17.4 (aarch64-linux-gnu)
+#16 83.31 Installing fast_blank 1.0.1 with native extensions
+#16 83.39 Fetching goldiloader 6.0.0
+#16 83.46 Fetching google-protobuf 4.36.2 (aarch64-linux-gnu)
+#16 83.49 Fetching guess_html_encoding 0.0.11
+#16 83.59 Fetching hana 1.3.7
+#16 83.59 Fetching hashery 2.1.2
+#16 83.69 Fetching hashie 5.1.0
+#16 83.69 Fetching io-console 0.9.4
+#16 83.79 Fetching reline 0.7.0
+#16 83.80 Fetching highline 3.1.2
+#16 83.89 Installing io-console 0.9.4 with native extensions
+#16 83.91 Fetching htmlentities 4.4.2
+#16 84.01 Fetching http_accept_language 2.1.1
+#16 84.11 Fetching inflection 1.0.0
+#16 84.21 Fetching prettyprint 0.2.0
+#16 84.31 Fetching pp 0.6.4
+#16 84.41 Fetching tsort 0.2.0
+#16 84.51 Fetching rbs 4.2.0
+#16 84.73 Fetching rdoc 8.1.0
+#16 84.86 Fetching irb 1.18.0
+#16 84.97 Fetching iso8601 0.13.0
+#16 85.07 Fetching json_completer 1.2.0
+#16 85.17 Fetching regexp_parser 2.13.1
+#16 85.27 Fetching simpleidn 0.3.0
+#16 85.33 Fetching json_schemer 2.5.0
+#16 85.37 Fetching jwt 3.3.0
+#16 85.43 Fetching landlock 0.6.0
+#16 85.47 Fetching libv8-node 24.12.0.1 (aarch64-linux)
+#16 85.54 Fetching strscan 3.1.8
+#16 85.65 Installing landlock 0.6.0 with native extensions
+#16 86.35 Installing strscan 3.1.8 with native extensions
+#16 87.05 Fetching liquid 5.12.0
+#16 87.16 Fetching webrick 1.9.2
+#16 87.26 Fetching rackup 1.0.1
+#16 87.36 Fetching thor 1.5.0
+#16 87.46 Fetching zeitwerk 2.8.3
+#16 87.55 Fetching railties 8.1.4.1
+#16 87.56 Fetching request_store 1.7.0
+#16 87.65 Fetching lograge 0.15.1
+#16 87.67 Fetching logstash-event 1.2.02
+#16 87.75 Fetching logster 3.0.1
+#16 87.77 Fetching lru_redux 1.1.0
+#16 87.86 Fetching lz4-ruby 0.3.3
+#16 87.88 Fetching maxminddb 0.1.22
+#16 87.96 Fetching memory_profiler 1.1.0
+#16 87.98 Installing lz4-ruby 0.3.3 with native extensions
+#16 88.06 Fetching message_bus 5.0.0
+#16 88.30 Fetching mini_racer 0.22.1
+#16 88.40 Fetching messageformat-wrapper 1.1.0
+#16 88.44 Fetching method_source 1.1.0
+#16 88.50 Fetching redis-client 0.30.1
+#16 88.60 Fetching sidekiq 7.3.10
+#16 88.62 Fetching mini_scheduler 0.20.0
+#16 88.73 Fetching mini_sql 1.6.0
+#16 88.73 Fetching mini_suffix 0.3.3
+#16 88.84 Fetching multi_json 1.21.2
+#16 88.85 Fetching multi_xml 0.9.1
+#16 88.95 Fetching mustache 1.1.3
+#16 88.95 Fetching oauth-tty 1.0.13
+#16 89.06 Fetching snaky_hash 2.0.7
+#16 89.06 Fetching oauth 1.1.8
+#16 89.17 Fetching oauth2 2.0.25
+#16 89.17 Fetching sawyer 0.9.3
+#16 89.28 Fetching octokit 10.0.0
+#16 89.29 Fetching ostruct 0.6.3
+#16 89.39 Fetching oj 3.17.7
+#16 89.40 Fetching rack-protection 3.2.0
+#16 89.51 Fetching omniauth 2.1.2
+#16 89.61 Fetching omniauth-oauth2 1.9.0
+#16 89.64 Fetching omniauth-facebook 10.0.0
+#16 89.71 Fetching omniauth-github 2.0.1
+#16 89.75 Fetching omniauth-google-oauth2 1.2.3
+#16 89.82 Fetching omniauth-oauth 1.2.1
+#16 89.86 Fetching omniauth-twitter 1.5.0
+#16 89.92 Fetching optimist 3.2.1
+#16 89.97 Fetching parallel 2.3.0
+#16 90.02 Fetching tty-color 0.6.0
+#16 90.10 Fetching pastel 0.8.0
+#16 90.12 Fetching ttfunk 1.8.0
+#16 90.20 Fetching pdf-reader 2.16.0
+#16 90.23 Fetching pg 1.7.0 (aarch64-linux)
+#16 90.32 Fetching pitchfork 0.18.2
+#16 90.43 Fetching propshaft 1.3.2
+#16 90.54 Fetching pry 0.16.0
+#16 90.60 Fetching pry-rails 0.3.11
+#16 90.64 Fetching rack-mini-profiler 5.0.0
+#16 90.70 Fetching rails_failover 2.3.0
+#16 90.76 Fetching rails_multisite 9.0.0
+#16 90.81 Fetching rbtrace 0.5.5
+#16 90.93 Fetching redis 6.0.0
+#16 91.03 Fetching redis-namespace 1.11.0
+#16 91.13 Fetching reverse_markdown 3.0.2
+#16 91.23 Fetching rinku 2.0.6
+#16 91.33 Fetching rotp 6.3.0
+#16 91.44 Installing rinku 2.0.6 with native extensions
+#16 92.33 Fetching rqrcode_core 2.1.0
+#16 92.45 Fetching rqrcode 3.2.0
+#16 92.55 Fetching rrule 0.8.0
+#16 92.65 Fetching rss 0.3.3
+#16 92.76 Fetching rtlcss 0.2.1
+#16 92.88 Fetching ruby-rc4 0.1.5
+#16 92.99 Fetching ruby-readability 0.7.3
+#16 93.12 Fetching ruby-vips 2.3.0
+#16 93.22 Fetching rubyzip 3.7.0
+#16 93.32 Fetching sanitize 7.0.1
+#16 93.43 Fetching sass-embedded 1.104.0 (aarch64-linux-gnu)
+#16 93.73 Fetching sassc-embedded 1.80.9
+#16 93.83 Fetching smarter_json 1.2.6
+#16 93.93 Fetching sshkey 3.0.0
+#16 94.03 Installing smarter_json 1.2.6 with native extensions
+#16 95.53 Fetching stackprof 0.2.28
+#16 95.64 Fetching stripe 19.6.2
+#16 95.92 Installing stackprof 0.2.28 with native extensions
+#16 95.92 Fetching tty-cursor 0.7.1
+#16 96.03 Fetching tty-screen 0.8.2
+#16 96.12 Fetching wisper 2.0.1
+#16 96.23 Fetching tty-reader 0.9.0
+#16 96.33 Fetching tty-prompt 0.23.1
+#16 96.44 Fetching tzinfo-data 1.2026.5
+#16 96.64 Fetching unf 0.2.0
+#16 96.74 Fetching web-push 3.1.0
+#16 96.84 Installing unf 0.2.0 with native extensions
+#16 96.86 Fetching zendesk_api 3.1.2
+#16 96.93 Installing base64 0.3.0
+#16 96.93 Installing Ascii85 2.0.1
+#16 96.94 Installing concurrent-ruby 1.3.8
+#16 96.95 Installing connection_pool 2.5.5
+#16 96.96 Installing drb 2.2.3
+#16 96.96 Installing i18n 1.14.8
+#16 96.97 Installing logger 1.7.0
+#16 96.97 Installing minitest 6.0.6
+#16 96.97 Installing securerandom 0.4.1
+#16 96.98 Installing tzinfo 2.0.6
+#16 96.99 Installing uri 1.1.2
+#16 97.00 Installing builder 3.3.0
+#16 97.00 Installing activesupport 8.1.4.1
+#16 97.01 Installing erubi 1.13.1
+#16 97.04 Installing nokogiri 1.19.7 (aarch64-linux-gnu)
+#16 97.07 Installing rails-dom-testing 2.3.0
+#16 97.07 Installing crass 1.0.8
+#16 97.08 Installing loofah 2.25.3
+#16 97.08 Installing rails-html-sanitizer 1.7.2
+#16 97.09 Installing actionview 8.1.4.1
+#16 97.11 Installing rack 2.2.24
+#16 97.12 Installing rack-session 1.0.2
+#16 97.12 Installing rack-test 2.2.0
+#16 97.13 Installing useragent 0.16.11
+#16 97.13 Installing actionpack 8.1.4.1
+#16 97.15 Installing globalid 1.4.0
+#16 97.16 Installing activejob 8.1.4.1
+#16 97.16 Installing mini_mime 1.1.5
+#16 97.17 Installing timeout 0.6.1
+#16 97.18 Installing net-protocol 0.4.0
+#16 97.18 Installing net-imap 0.6.7
+#16 97.19 Installing net-pop 0.1.2
+#16 97.19 Installing net-smtp 0.5.2
+#16 97.19 Installing actionmailer 8.1.4.1
+#16 97.20 Installing actionview_precompiler 0.4.0
+#16 97.21 Installing mail 2.9.1
+#16 97.23 Installing activemodel 8.1.4.1
+#16 97.24 Installing active_model_serializers 0.8.4
+#16 97.24 Installing public_suffix 7.0.5
+#16 97.25 Installing activerecord 8.1.4.1
+#16 97.25 Installing addressable 2.9.0
+#16 97.26 Installing afm 1.0.0
+#16 97.26 Installing version_gem 1.1.15
+#16 97.26 Installing anonymous_loader 0.1.3
+#16 97.27 Installing auth-sanitizer 0.2.3
+#16 97.27 Installing aws-eventstream 1.4.0
+#16 97.28 Installing aws-partitions 1.1296.0
+#16 97.31 Installing aws-sigv4 1.12.1
+#16 97.31 Installing jmespath 1.6.2
+#16 97.32 Installing rexml 3.4.4
+#16 97.34 Installing aws-sdk-bedrockruntime 1.85.0
+#16 97.35 Installing aws-sdk-kms 1.99.0
+#16 97.36 Installing aws-sdk-core 3.259.0
+#16 97.38 Installing aws-sdk-mediaconvert 1.165.0
+#16 97.44 Installing aws-sdk-sns 1.96.0
+#16 97.47 Installing aws-sdk-s3 1.227.0
+#16 97.48 Installing aws-sdk-sts 1.12.0
+#16 97.48 Installing benchmark 0.5.0
+#16 97.49 Installing coderay 1.1.3
+#16 97.51 Installing bootsnap 1.26.0 with native extensions
+#16 97.54 Installing colored2 4.0.3
+#16 97.54 Installing chunky_png 1.4.0
+#16 97.59 Installing openssl-signature_algorithm 1.3.0
+#16 97.59 Installing cose 1.3.1
+#16 97.60 Installing ssrf_filter 1.6.0
+#16 97.60 Installing css_parser 3.3.0
+#16 97.60 Installing csv 3.3.6
+#16 97.61 Installing diffy 3.4.4
+#16 98.02 Installing discourse-emojis 1.0.47
+#16 98.56 Installing discourse-fonts 0.0.19
+#16 98.63 Installing discourse-seed-fu 2.3.12
+#16 98.78 Installing tiktoken_ruby 0.0.17 (aarch64-linux)
+#16 99.80 Installing tokenizers 0.6.4 (aarch64-linux)
+#16 100.3 Installing discourse_math_bundle 1.0.1
+#16 100.8 Installing discourse_ai-tokenizers 0.4.2
+#16 102.6 Installing dry-initializer 3.2.0
+#16 102.6 Installing email_reply_trimmer 0.4.0
+#16 102.6 Installing excon 1.8.0
+#16 102.9 Installing discourse_voice_assets 0.2.0
+#16 104.4 Installing net-http 0.10.0
+#16 104.4 Installing faraday-net_http 3.5.0
+#16 104.4 Installing faraday 2.15.0
+#16 104.4 Installing multipart-post 2.4.1
+#16 104.5 Installing faraday-multipart 1.2.0
+#16 104.5 Installing faraday-retry 2.4.0
+#16 104.5 Installing fastimage 2.4.1
+#16 104.5 Installing ffi 1.17.4 (aarch64-linux-gnu)
+#16 104.6 Installing goldiloader 6.0.0
+#16 104.6 Installing google-protobuf 4.36.2 (aarch64-linux-gnu)
+#16 104.7 Installing guess_html_encoding 0.0.11
+#16 104.7 Installing hana 1.3.7
+#16 104.7 Installing hashery 2.1.2
+#16 104.8 Installing hashie 5.1.0
+#16 104.8 Installing reline 0.7.0
+#16 104.9 Installing highline 3.1.2
+#16 104.9 Installing htmlentities 4.4.2
+#16 104.9 Installing http_accept_language 2.1.1
+#16 104.9 Installing inflection 1.0.0
+#16 104.9 Installing prettyprint 0.2.0
+#16 104.9 Installing pp 0.6.4
+#16 105.0 Installing tsort 0.2.0
+#16 105.0 Installing rdoc 8.1.0
+#16 105.4 Installing rbs 4.2.0 with native extensions
+#16 105.6 Installing irb 1.18.0
+#16 105.7 Installing iso8601 0.13.0
+#16 105.7 Installing json_completer 1.2.0
+#16 105.7 Installing regexp_parser 2.13.1
+#16 105.7 Installing simpleidn 0.3.0
+#16 105.7 Installing json_schemer 2.5.0
+#16 105.8 Installing jwt 3.3.0
+#16 105.8 Installing liquid 5.12.0
+#16 105.8 Installing webrick 1.9.2
+#16 105.8 Installing rackup 1.0.1
+#16 105.8 Installing thor 1.5.0
+#16 106.1 Installing libv8-node 24.12.0.1 (aarch64-linux)
+#16 107.8 Installing zeitwerk 2.8.3
+#16 107.8 Installing railties 8.1.4.1
+#16 107.9 Installing request_store 1.7.0
+#16 107.9 Installing lograge 0.15.1
+#16 107.9 Installing logstash-event 1.2.02
+#16 108.0 Installing logster 3.0.1
+#16 108.0 Installing lru_redux 1.1.0
+#16 108.0 Installing maxminddb 0.1.22
+#16 108.0 Installing memory_profiler 1.1.0
+#16 108.0 Installing message_bus 5.0.0
+#16 108.0 Installing messageformat-wrapper 1.1.0
+#16 108.0 Installing mini_racer 0.22.1 with native extensions
+#16 111.2 Installing redis-client 0.30.1
+#16 111.2 Installing method_source 1.1.0
+#16 111.2 Installing mini_scheduler 0.20.0
+#16 111.2 Installing sidekiq 7.3.10
+#16 111.3 Installing mini_sql 1.6.0
+#16 111.3 Installing mini_suffix 0.3.3
+#16 111.3 Installing multi_json 1.21.2
+#16 111.3 Installing multi_xml 0.9.1
+#16 111.3 Installing oauth-tty 1.0.13
+#16 111.3 Installing mustache 1.1.3
+#16 111.3 Installing snaky_hash 2.0.7
+#16 111.3 Installing oauth 1.1.8
+#16 111.3 Installing sawyer 0.9.3
+#16 111.4 Installing oauth2 2.0.25
+#16 111.4 Installing ostruct 0.6.3
+#16 111.4 Installing octokit 10.0.0
+#16 111.4 Installing omniauth 2.1.2
+#16 111.4 Installing oj 3.17.7 with native extensions
+#16 115.0 Installing rack-protection 3.2.0
+#16 115.0 Installing omniauth-oauth2 1.9.0
+#16 115.0 Installing omniauth-facebook 10.0.0
+#16 115.0 Installing omniauth-github 2.0.1
+#16 115.0 Installing omniauth-google-oauth2 1.2.3
+#16 115.0 Installing omniauth-oauth 1.2.1
+#16 115.0 Installing omniauth-twitter 1.5.0
+#16 115.0 Installing optimist 3.2.1
+#16 115.0 Installing parallel 2.3.0
+#16 115.0 Installing tty-color 0.6.0
+#16 115.0 Installing pastel 0.8.0
+#16 115.1 Installing ttfunk 1.8.0
+#16 115.1 Installing pdf-reader 2.16.0
+#16 115.1 Installing propshaft 1.3.2
+#16 115.1 Installing pitchfork 0.18.2 with native extensions
+#16 117.7 Installing pg 1.7.0 (aarch64-linux)
+#16 117.8 Installing pry 0.16.0
+#16 117.8 Installing pry-rails 0.3.11
+#16 117.8 Installing rack-mini-profiler 5.0.0
+#16 117.9 Installing rails_failover 2.3.0
+#16 117.9 Installing rails_multisite 9.0.0
+#16 117.9 Installing redis 6.0.0
+#16 117.9 Installing rbtrace 0.5.5 with native extensions
+#16 120.0 Installing redis-namespace 1.11.0
+#16 120.0 Installing reverse_markdown 3.0.2
+#16 120.0 Installing rotp 6.3.0
+#16 120.0 Installing rqrcode_core 2.1.0
+#16 120.0 Installing rqrcode 3.2.0
+#16 120.0 Installing rrule 0.8.0
+#16 120.1 Installing rss 0.3.3
+#16 120.1 Installing rtlcss 0.2.1
+#16 120.1 Installing ruby-rc4 0.1.5
+#16 120.1 Installing ruby-readability 0.7.3
+#16 120.1 Installing ruby-vips 2.3.0
+#16 120.1 Installing rubyzip 3.7.0
+#16 120.1 Installing sanitize 7.0.1
+#16 120.1 Installing sass-embedded 1.104.0 (aarch64-linux-gnu)
+#16 120.2 Installing sassc-embedded 1.80.9
+#16 120.2 Installing sshkey 3.0.0
+#16 120.2 Installing stripe 19.6.2
+#16 120.3 Installing tty-cursor 0.7.1
+#16 120.3 Installing tty-screen 0.8.2
+#16 120.3 Installing wisper 2.0.1
+#16 120.4 Installing tty-reader 0.9.0
+#16 120.4 Installing tty-prompt 0.23.1
+#16 120.4 Installing tzinfo-data 1.2026.5
+#16 120.4 Installing web-push 3.1.0
+#16 120.4 Installing zendesk_api 3.1.2
+#16 122.9 Bundle complete! 170 Gemfile dependencies, 217 gems now installed.
+#16 122.9 Gems in the groups 'development' and 'test' were not installed.
+#16 122.9 Bundled gems are installed into `./vendor/bundle`
+#16 122.9 3 installed gems you directly depend on are looking for funding.
+#16 122.9   Run `bundle fund` for details
+#16 DONE 123.8s
+
+#17 [build 7/9] RUN --mount=type=cache,id=recall-discourse-pnpm,target=/tmp/pnpm-store,uid=1000,gid=1000     sed -i 's/\r$//' pnpm-lock.yaml     && pnpm install --frozen-lockfile --store-dir=/tmp/pnpm-store     && ruby -e 'abort "Installed pnpm lock differs" unless File.read("node_modules/.pnpm/lock.yaml") == File.read("pnpm-lock.yaml").split(/^---\n/).last'
+#17 1.439 Scope: all 57 workspace projects
+#17 1.713 ✓ Lockfile passes supply-chain policies (verified 1d ago)
+#17 1.713 Lockfile is up to date, resolution step is skipped
+#17 2.380 Downloading @rolldown/binding-linux-arm64-gnu@1.2.7: 0.00 B/7.54 MB
+#17 2.396 Packages are copied from the content-addressable store to the virtual store.
+#17 2.396   Content-addressable store is at: /tmp/pnpm-store/v11
+#17 2.396   Virtual store is at:             node_modules/.pnpm
+#17 3.403 Progress: resolved 1609, reused 0, downloaded 223, added 203
+#17 4.421 Progress: resolved 1609, reused 0, downloaded 430, added 416
+#17 5.087 Downloading ace-builds@1.44.0: 0.00 B/10.10 MB
+#17 6.100 Progress: resolved 1609, reused 0, downloaded 795, added 799
+#17 6.836 Downloading @typescript/typescript-linux-arm64@7.1.0-dev.20260930.4: 0.00 B/9.34 MB
+#17 6.884 Downloading @fortawesome/fontawesome-free@7.3.1: 0.00 B/6.61 MB
+#17 7.916 Progress: resolved 1609, reused 0, downloaded 1186, added 1184
+#17 8.917 Progress: resolved 1609, reused 0, downloaded 1400, added 1376
+#17 9.920 Progress: resolved 1609, reused 0, downloaded 1589, added 1568
+#17 20.68 Progress: resolved 1609, reused 0, downloaded 1601, added 1600
+#17 20.87 Packages: +1609
+#17 20.87 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#17 21.06 Progress: resolved 1609, reused 0, downloaded 1601, added 1609, done
+#17 21.08 .../lefthook@2.2.1/node_modules/lefthook postinstall$ node postinstall.js
+#17 21.33 .../lefthook@2.2.1/node_modules/lefthook postinstall: │  > git rev-parse --path-format=absolute --show-toplevel --git-path hooks --git-path info --git-dir --git-common-dir
+#17 21.33 .../lefthook@2.2.1/node_modules/lefthook postinstall: │    fatal: not a git repository (or any of the parent directories): .git                                            
+#17 21.33 .../lefthook@2.2.1/node_modules/lefthook postinstall: │                                                                                                                    
+#17 21.33 .../lefthook@2.2.1/node_modules/lefthook postinstall: exit status 128
+#17 21.33 .../lefthook@2.2.1/node_modules/lefthook postinstall: Done
+#17 21.75 . postinstall$ node script/copy_vendored_assets.mjs
+#17 21.95 . postinstall: Done
+#17 21.95 . prepare$ pnpm types:generate
+#17 22.04 . prepare: $ pnpm --dir=frontend/discourse-i18n tsc && pnpm --dir=frontend/discourse-types generate-external
+#17 22.38 . prepare: $ pnpm compile-dts-generator && pnpm generate-external-types
+#17 22.43 . prepare: $ tsc --ignoreConfig --types node dts-generator.ts --target esnext --moduleResolution nodenext --module nodenext
+#17 23.94 . prepare: $ node generate-external-types.js
+#17 26.06 . prepare: Done
+#17 26.11 . prepare: Done
+#17 26.13 
+#17 26.13 devDependencies:
+#17 26.13 + @discourse/lint-configs 3.9.1
+#17 26.13 + @discourse/moment-timezone-names-translations 1.0.0
+#17 26.13 + @fortawesome/fontawesome-free 7.3.1
+#17 26.13 + @glint/ember-tsc 1.11.6
+#17 26.13 + @glint/tsserver-plugin 2.7.9
+#17 26.13 + @rdil/parallel-prettier 3.0.0
+#17 26.13 + concurrently 10.0.6
+#17 26.13 + ember-content-mapper 0.3.1
+#17 26.13 + eslint 10.6.0
+#17 26.13 + execa 10.1.0
+#17 26.13 + jsdoc 4.0.5
+#17 26.13 + lefthook 2.2.1
+#17 26.13 + licensee 12.0.2
+#17 26.13 + lint-to-the-future 3.2.0
+#17 26.13 + lint-to-the-future-eslint 4.0.0
+#17 26.13 + postcss-selector-parser 7.1.6
+#17 26.13 + postcss-value-parser 4.2.0
+#17 26.13 + prettier 3.8.1
+#17 26.13 + stylelint 17.5.0
+#17 26.13 + typescript 7.1.0-dev.20260930.4
+#17 26.13 
+#17 26.19 Done in 24.9s using pnpm v12.11.2
+#17 DONE 27.0s
+
+#18 [build 8/9] RUN --mount=from=sourcegit,target=/tmp/recall-sourcegit     sed -i 's/\r$//' bin/rake bin/rails script/assemble_ember_build.rb     && chmod +x bin/rake bin/rails script/assemble_ember_build.rb     && git init --quiet     && for entry in HEAD index objects refs packed-refs shallow; do         if test -e "/tmp/recall-sourcegit/$entry"; then cp -a "/tmp/recall-sourcegit/$entry" .git/; fi;     done     && test "$(git rev-parse HEAD)" = "3a1b1ae930e568a8c1c2f12d6e09f8e907da608b"     && RAILS_ENV=production EMBER_ENV=production NODE_ENV=production     DISCOURSE_DOWNLOAD_PRE_BUILT_ASSETS=0 SKIP_DB_AND_REDIS=1     bundle exec rake assets:precompile     && test -s frontend/discourse/dist/manifest/manifest.json     && test -d public/assets     && rm -rf .git
+#18 2.762 cp: cannot open '/tmp/recall-sourcegit/objects/pack/pack-15f16689f461bdc82320316d18d5e3224393c57a.promisor' for reading: Permission denied
+#18 3.260 cp: cannot open '/tmp/recall-sourcegit/objects/pack/pack-cd0cd271c1a998d61f852a7d1be5327a23d4ae27.promisor' for reading: Permission denied
+#18 9.953 Couldn't connect to Redis
+#18 12.91 [assemble_ember_build] No existing build info file found.
+#18 12.91 [assemble_ember_build] Running full core build...
+#18 13.27 $ rolldown -c rolldown.config.mjs
+#18 30.23 [33m[PLUGIN_TIMINGS] [0mPlugin hooks ran for 13.7s of this 14.6s build (94%).
+#18 30.23 The slowest hooks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
+#18 30.23   - brotli-assets generateBundle (30%, 4.4s, 1 call)
+#18 30.23 Additional hook time came from the hooks below and from hooks under 1s.
+#18 30.23 4 hooks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
+#18 30.23   - babel transform (2153 calls)
+#18 30.23   - embroider-resolver resolveId (1986 calls)
+#18 30.23   - production-ember-deprecations resolveId (50 calls)
+#18 30.23   … and 1 more
+#18 30.23 See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+#18 30.23 
+#18 30.36 [log] <DIR>/@embroider/virtual/test-support.css                                            asset │ size:     0.00 kB
+#18 30.36 [log] <DIR>/@embroider/virtual/vendor.css                                                  asset │ size:     0.00 kB
+#18 30.36 [log] <DIR>/@embroider/virtual/vendor.js                                                   asset │ size:     0.02 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-gu6onvfo.digested.js.br                                        asset │ size:     0.20 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-h11aus06.digested.js.br                                        asset │ size:     0.26 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-m57k1uh2.digested.js.br                                        asset │ size:     0.31 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-b5koh09i.digested.js.br                                        asset │ size:     0.33 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-npbukgo1.digested.js.br                                        asset │ size:     0.46 kB
+#18 30.36 [log] <DIR>/@embroider/virtual/test-support.js                                             asset │ size:     0.46 kB
+#18 30.36 [log] <DIR>/assets/js/to-markdown-jdv1uio0.digested.js.br                                  asset │ size:     0.48 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-fnb5gk1s.digested.js.br                                        asset │ size:     0.58 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-f96lzs6p.digested.js.br                                        asset │ size:     0.62 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-lsixrhgn.digested.js.br                                        asset │ size:     0.66 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-ewjttrcb.digested.js.br                                        asset │ size:     0.73 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-gu6onvfo.digested.js.map                                      asset │ size:     0.81 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-blhg1o24.digested.js.br                                        asset │ size:     0.87 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-kl508b8i.digested.js.br                                        asset │ size:     1.00 kB
+#18 30.36 [log] <DIR>/assets/js/minimasonry-bpdcqtmi.digested.js.br                                  asset │ size:     1.08 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-lw13s40t.digested.js.br                                        asset │ size:     1.23 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-kg0hypea.digested.js.br                                        asset │ size:     1.36 kB
+#18 30.36 [log] <DIR>/assets/js/tags-admin-dropdown-eg0msgx3.digested.js.br                          asset │ size:     1.42 kB
+#18 30.36 [log] <DIR>/assets/js/morphlex-m7h93uwv.digested.js.br                                     asset │ size:     2.13 kB
+#18 30.36 [log] <DIR>/assets/js/jxl_enc_mt.worker-j0szyb2f.digested.js                               asset │ size:     2.16 kB
+#18 30.36 [log] <DIR>/assets/js/jxl_enc_mt_simd.worker-ol683em7.digested.js                          asset │ size:     2.16 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-b0b2ldmd.digested.js.br                                        asset │ size:     2.38 kB
+#18 30.36 [log] <DIR>/assets/map/to-markdown-jdv1uio0.digested.js.map                                asset │ size:     2.82 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-npbukgo1.digested.js.map                                      asset │ size:     3.63 kB
+#18 30.36 [log] <DIR>/assets/js/ember-inspector-support-i7dpbggv.digested.js.br                      asset │ size:     3.64 kB
+#18 30.36 [log] <DIR>/assets/js/route-wizard-js-jr6yhp1z.digested.js.br                              asset │ size:     3.70 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-oe1e5mev.digested.js.br                                        asset │ size:     3.97 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-b5koh09i.digested.js.map                                      asset │ size:     4.00 kB
+#18 30.36 [log] <DIR>/assets/js/photoswipe-lightbox-omiq7iv9.digested.js.br                          asset │ size:     4.03 kB
+#18 30.36 [log] <DIR>/assets/js/dist-h7vi0yy8.digested.js.br                                         asset │ size:     4.23 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-lsixrhgn.digested.js.map                                      asset │ size:     4.26 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-ewjttrcb.digested.js.map                                      asset │ size:     4.72 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-m57k1uh2.digested.js.map                                      asset │ size:     4.85 kB
+#18 30.36 [log] <DIR>/assets/js/pikaday-dev2dbrh.digested.js.br                                      asset │ size:     5.24 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-fnb5gk1s.digested.js.map                                      asset │ size:     5.58 kB
+#18 30.36 [log] <DIR>/assets/js/webp_enc_simd-m7rn96ub.digested.js.br                                asset │ size:     6.53 kB
+#18 30.36 [log] <DIR>/assets/js/webp_enc-hqpac58j.digested.js.br                                     asset │ size:     6.55 kB
+#18 30.36 [log] <DIR>/assets/js/diff-bz2bnrwp.digested.js.br                                         asset │ size:     7.04 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-earq0jcu.digested.js.br                                        asset │ size:     7.05 kB
+#18 30.36 [log] <DIR>/assets/js/highlightjs-fl8q1i9d.digested.js.br                                  asset │ size:     7.29 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-kg0hypea.digested.js.map                                      asset │ size:     7.58 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-lw13s40t.digested.js.map                                      asset │ size:     7.70 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-h11aus06.digested.js.map                                      asset │ size:     8.39 kB
+#18 30.36 [log] <DIR>/assets/map/tags-admin-dropdown-eg0msgx3.digested.js.map                        asset │ size:     8.55 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-blhg1o24.digested.js.map                                      asset │ size:     9.16 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-kl508b8i.digested.js.map                                      asset │ size:     9.82 kB
+#18 30.36 [log] <DIR>/assets/map/minimasonry-bpdcqtmi.digested.js.map                                asset │ size:    11.60 kB
+#18 30.36 [log] <DIR>/assets/js/photoswipe-b36q5pc1.digested.js.br                                   asset │ size:    15.19 kB
+#18 30.36 [log] <DIR>/assets/js/prosemirror-editor-ggjk09xu.digested.js.br                           asset │ size:    15.69 kB
+#18 30.36 [log] <DIR>/assets/js/js-yaml-qoo0lxuu.digested.js.br                                      asset │ size:    16.09 kB
+#18 30.36 [log] <DIR>/assets/js/dev-tools-nw5n60dg.digested.js.br                                    asset │ size:    17.12 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-hq41ku7d.digested.js.br                                        asset │ size:    18.38 kB
+#18 30.36 [log] <DIR>/assets/js/jsquash_magic_kernel_bg-kegyad09.digested.wasm                       asset │ size:    18.76 kB
+#18 30.36 [log] <DIR>/assets/map/ember-inspector-support-i7dpbggv.digested.js.map                    asset │ size:    19.75 kB
+#18 30.36 [log] <DIR>/assets/js/app-workers-media-optimization-entrypoint-bgg7iqfw.digested.js.br    asset │ size:    21.11 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-fwyzjdqf.digested.js.br                                        asset │ size:    22.25 kB
+#18 30.36 [log] <DIR>/assets/js/rete-bundle-fl1fr10z.digested.js.br                                  asset │ size:    27.66 kB
+#18 30.36 [log] <DIR>/assets/map/morphlex-m7h93uwv.digested.js.map                                   asset │ size:    29.85 kB
+#18 30.36 [log] <DIR>/manifest/manifest.json                                                         asset │ size:    32.65 kB
+#18 30.36 [log] <DIR>/assets/map/route-wizard-js-jr6yhp1z.digested.js.map                            asset │ size:    32.73 kB
+#18 30.36 [log] <DIR>/assets/js/squoosh_resize_bg-bp9nawun.digested.wasm                             asset │ size:    34.55 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-n4aw3z40.digested.js.br                                        asset │ size:    34.84 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-eq1gwo0y.digested.js.br                                        asset │ size:    36.39 kB
+#18 30.36 [log] <DIR>/assets/js/squoosh_gif_bg-k76zrrpq.digested.wasm                                asset │ size:    43.42 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-ep3qv2nj.digested.js.br                                        asset │ size:    45.27 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-fg220fa3.digested.js.br                                        asset │ size:    47.77 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-oe1e5mev.digested.js.map                                      asset │ size:    52.40 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-jcceqytm.digested.js.br                                        asset │ size:    52.48 kB
+#18 30.36 [log] <DIR>/assets/map/pikaday-dev2dbrh.digested.js.map                                    asset │ size:    61.74 kB
+#18 30.36 [log] <DIR>/assets/map/dist-h7vi0yy8.digested.js.map                                       asset │ size:    62.66 kB
+#18 30.36 [log] <DIR>/assets/map/webp_enc-hqpac58j.digested.js.map                                   asset │ size:    62.68 kB
+#18 30.36 [log] <DIR>/assets/map/webp_enc_simd-m7rn96ub.digested.js.map                              asset │ size:    62.95 kB
+#18 30.36 [log] <DIR>/assets/js/chart-js-bundle-joi0qjry.digested.js.br                              asset │ size:    64.03 kB
+#18 30.36 [log] <DIR>/assets/map/photoswipe-lightbox-omiq7iv9.digested.js.map                        asset │ size:    72.66 kB
+#18 30.36 [log] <DIR>/assets/js/jsoneditor-ewm47qge.digested.js.br                                   asset │ size:    80.21 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-b0b2ldmd.digested.js.map                                      asset │ size:    83.44 kB
+#18 30.36 [log] <DIR>/assets/js/full-calendar-bundle-jsmy3bfj.digested.js.br                         asset │ size:    91.48 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-b5lawyhh.digested.js.br                                        asset │ size:    93.54 kB
+#18 30.36 [log] <DIR>/assets/js/prosemirror-extensions-o3151ybo.digested.js.br                       asset │ size:    93.62 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-earq0jcu.digested.js.map                                      asset │ size:    94.52 kB
+#18 30.36 [log] <DIR>/assets/map/highlightjs-fl8q1i9d.digested.js.map                                asset │ size:   103.23 kB
+#18 30.36 [log] <DIR>/assets/js/ace-editor-bundle-o08gyn9s.digested.js.br                            asset │ size:   126.63 kB
+#18 30.36 [log] <DIR>/assets/js/squooshhqx_bg-cd86wrn4.digested.wasm                                 asset │ size:   135.08 kB
+#18 30.36 [log] <DIR>/assets/map/diff-bz2bnrwp.digested.js.map                                       asset │ size:   136.07 kB
+#18 30.36 [log] <DIR>/assets/js/codemirror-editor-hr1d7zo0.digested.js.br                            asset │ size:   140.39 kB
+#18 30.36 [log] <DIR>/assets/js/webp_dec-geb9t9l8.digested.wasm                                      asset │ size:   144.78 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-jvsnrs13.digested.js.br                                        asset │ size:   160.62 kB
+#18 30.36 [log] <DIR>/assets/js/mozjpeg_dec-cktdh3wj.digested.wasm                                   asset │ size:   166.47 kB
+#18 30.36 [log] <DIR>/assets/js/squoosh_png_bg-lobmjcmy.digested.wasm                                asset │ size:   181.09 kB
+#18 30.36 [log] <DIR>/assets/map/dev-tools-nw5n60dg.digested.js.map                                  asset │ size:   200.70 kB
+#18 30.36 [log] <DIR>/assets/map/js-yaml-qoo0lxuu.digested.js.map                                    asset │ size:   209.05 kB
+#18 30.36 [log] <DIR>/assets/map/prosemirror-editor-ggjk09xu.digested.js.map                         asset │ size:   214.50 kB
+#18 30.36 [log] <DIR>/assets/js/admin-pbir8mxt.digested.js.br                                        asset │ size:   218.64 kB
+#18 30.36 [log] <DIR>/assets/js/mozjpeg_enc-mje7fyf9.digested.wasm                                   asset │ size:   251.52 kB
+#18 30.36 [log] <DIR>/assets/map/photoswipe-b36q5pc1.digested.js.map                                 asset │ size:   256.68 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-hq41ku7d.digested.js.map                                      asset │ size:   270.91 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-fwyzjdqf.digested.js.map                                      asset │ size:   356.92 kB
+#18 30.36 [log] <DIR>/assets/map/app-workers-media-optimization-entrypoint-bgg7iqfw.digested.js.map  asset │ size:   396.73 kB
+#18 30.36 [log] <DIR>/assets/js/webp_enc-ndsdbmht.digested.wasm                                      asset │ size:   424.54 kB
+#18 30.36 [log] <DIR>/assets/map/rete-bundle-fl1fr10z.digested.js.map                                asset │ size:   491.55 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-eq1gwo0y.digested.js.map                                      asset │ size:   531.44 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-fg220fa3.digested.js.map                                      asset │ size:   538.07 kB
+#18 30.36 [log] <DIR>/assets/js/discourse-im0itjm7.digested.js.br                                    asset │ size:   629.15 kB
+#18 30.36 [log] <DIR>/assets/js/webp_enc_simd-ivbcnosj.digested.wasm                                 asset │ size:   642.25 kB
+#18 30.36 [log] <DIR>/assets/js/faker-nn0129gy.digested.js.br                                        asset │ size:   685.44 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-n4aw3z40.digested.js.map                                      asset │ size:   687.41 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-ep3qv2nj.digested.js.map                                      asset │ size:   719.68 kB
+#18 30.36 [log] <DIR>/assets/js/jxl_dec-ec63vg9w.digested.wasm                                       asset │ size:   849.24 kB
+#18 30.36 [log] <DIR>/assets/map/chart-js-bundle-joi0qjry.digested.js.map                            asset │ size:   857.17 kB
+#18 30.36 [log] <DIR>/assets/js/heic_dec-copf1fgf.digested.wasm                                      asset │ size:   959.55 kB
+#18 30.36 [log] <DIR>/assets/map/full-calendar-bundle-jsmy3bfj.digested.js.map                       asset │ size:   967.43 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-jcceqytm.digested.js.map                                      asset │ size: 1,073.59 kB
+#18 30.36 [log] <DIR>/assets/map/jsoneditor-ewm47qge.digested.js.map                                 asset │ size: 1,105.61 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-b5lawyhh.digested.js.map                                      asset │ size: 1,353.92 kB
+#18 30.36 [log] <DIR>/assets/js/jxl_enc-gne50clb.digested.wasm                                       asset │ size: 1,363.82 kB
+#18 30.36 [log] <DIR>/assets/js/jxl_enc_mt-nfg44xx4.digested.wasm                                    asset │ size: 1,375.37 kB
+#18 30.36 [log] <DIR>/assets/map/prosemirror-extensions-o3151ybo.digested.js.map                     asset │ size: 1,400.11 kB
+#18 30.36 [log] <DIR>/assets/map/ace-editor-bundle-o08gyn9s.digested.js.map                          asset │ size: 1,759.49 kB
+#18 30.36 [log] <DIR>/assets/map/codemirror-editor-hr1d7zo0.digested.js.map                          asset │ size: 1,807.91 kB
+#18 30.36 [log] <DIR>/assets/js/jxl_enc_mt_simd-b0vx5xe3.digested.wasm                               asset │ size: 2,012.67 kB
+#18 30.36 [log] <DIR>/assets/map/chunk-jvsnrs13.digested.js.map                                      asset │ size: 2,774.12 kB
+#18 30.36 [log] <DIR>/assets/map/faker-nn0129gy.digested.js.map                                      asset │ size: 2,793.18 kB
+#18 30.36 [log] <DIR>/assets/map/admin-pbir8mxt.digested.js.map                                      asset │ size: 2,981.37 kB
+#18 30.36 [log] <DIR>/assets/map/discourse-im0itjm7.digested.js.map                                  asset │ size: 9,640.36 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-gu6onvfo.digested.js                                           chunk │ size:     0.27 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-h11aus06.digested.js                                           chunk │ size:     0.51 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-b5koh09i.digested.js                                           chunk │ size:     0.63 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-m57k1uh2.digested.js                                           chunk │ size:     0.72 kB
+#18 30.36 [log] <DIR>/assets/js/to-markdown-jdv1uio0.digested.js                                     chunk │ size:     0.87 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-npbukgo1.digested.js                                           chunk │ size:     0.91 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-fnb5gk1s.digested.js                                           chunk │ size:     1.23 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-f96lzs6p.digested.js                                           chunk │ size:     1.29 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-lsixrhgn.digested.js                                           chunk │ size:     1.49 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-ewjttrcb.digested.js                                           chunk │ size:     1.55 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-blhg1o24.digested.js                                           chunk │ size:     2.17 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-kl508b8i.digested.js                                           chunk │ size:     2.23 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-lw13s40t.digested.js                                           chunk │ size:     3.94 kB
+#18 30.36 [log] <DIR>/assets/js/tags-admin-dropdown-eg0msgx3.digested.js                             chunk │ size:     4.00 kB
+#18 30.36 [log] <DIR>/assets/js/minimasonry-bpdcqtmi.digested.js                                     chunk │ size:     4.15 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-kg0hypea.digested.js                                           chunk │ size:     4.56 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-b0b2ldmd.digested.js                                           chunk │ size:     6.58 kB
+#18 30.36 [log] <DIR>/assets/js/morphlex-m7h93uwv.digested.js                                        chunk │ size:     7.37 kB
+#18 30.36 [log] <DIR>/assets/js/ember-inspector-support-i7dpbggv.digested.js                         chunk │ size:     9.73 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-oe1e5mev.digested.js                                           chunk │ size:    12.73 kB
+#18 30.36 [log] <DIR>/assets/js/photoswipe-lightbox-omiq7iv9.digested.js                             chunk │ size:    14.49 kB
+#18 30.36 [log] <DIR>/assets/js/route-wizard-js-jr6yhp1z.digested.js                                 chunk │ size:    14.80 kB
+#18 30.36 [log] <DIR>/assets/js/dist-h7vi0yy8.digested.js                                            chunk │ size:    14.82 kB
+#18 30.36 [log] <DIR>/assets/js/pikaday-dev2dbrh.digested.js                                         chunk │ size:    16.31 kB
+#18 30.36 [log] <DIR>/assets/js/webp_enc-hqpac58j.digested.js                                        chunk │ size:    18.13 kB
+#18 30.36 [log] <DIR>/assets/js/webp_enc_simd-m7rn96ub.digested.js                                   chunk │ size:    18.22 kB
+#18 30.36 [log] <DIR>/assets/js/highlightjs-fl8q1i9d.digested.js                                     chunk │ size:    20.50 kB
+#18 30.36 [log] <DIR>/assets/js/diff-bz2bnrwp.digested.js                                            chunk │ size:    22.34 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-earq0jcu.digested.js                                           chunk │ size:    28.11 kB
+#18 30.36 [log] <DIR>/assets/js/prosemirror-editor-ggjk09xu.digested.js                              chunk │ size:    53.01 kB
+#18 30.36 [log] <DIR>/assets/js/photoswipe-b36q5pc1.digested.js                                      chunk │ size:    58.91 kB
+#18 30.36 [log] <DIR>/assets/js/js-yaml-qoo0lxuu.digested.js                                         chunk │ size:    59.68 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-hq41ku7d.digested.js                                           chunk │ size:    62.57 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-fwyzjdqf.digested.js                                           chunk │ size:    84.19 kB
+#18 30.36 [log] <DIR>/assets/js/dev-tools-nw5n60dg.digested.js                                       chunk │ size:    86.09 kB
+#18 30.36 [log] <DIR>/assets/js/app-workers-media-optimization-entrypoint-bgg7iqfw.digested.js       chunk │ size:   112.16 kB
+#18 30.36 [log] <DIR>/assets/js/rete-bundle-fl1fr10z.digested.js                                     chunk │ size:   113.22 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-n4aw3z40.digested.js                                           chunk │ size:   122.80 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-eq1gwo0y.digested.js                                           chunk │ size:   134.41 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-fg220fa3.digested.js                                           chunk │ size:   141.07 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-ep3qv2nj.digested.js                                           chunk │ size:   188.82 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-jcceqytm.digested.js                                           chunk │ size:   191.07 kB
+#18 30.36 [log] <DIR>/assets/js/chart-js-bundle-joi0qjry.digested.js                                 chunk │ size:   216.45 kB
+#18 30.36 [log] <DIR>/assets/js/prosemirror-extensions-o3151ybo.digested.js                          chunk │ size:   361.99 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-b5lawyhh.digested.js                                           chunk │ size:   409.63 kB
+#18 30.36 [log] <DIR>/assets/js/codemirror-editor-hr1d7zo0.digested.js                               chunk │ size:   502.21 kB
+#18 30.36 [log] <DIR>/assets/js/jsoneditor-ewm47qge.digested.js                                      chunk │ size:   532.31 kB
+#18 30.36 [log] <DIR>/assets/js/ace-editor-bundle-o08gyn9s.digested.js                               chunk │ size:   612.37 kB
+#18 30.36 [log] <DIR>/assets/js/chunk-jvsnrs13.digested.js                                           chunk │ size:   645.94 kB
+#18 30.36 [log] <DIR>/assets/js/full-calendar-bundle-jsmy3bfj.digested.js                            chunk │ size: 1,000.59 kB
+#18 30.36 [log] <DIR>/assets/js/admin-pbir8mxt.digested.js                                           chunk │ size: 1,616.33 kB
+#18 30.36 [log] <DIR>/assets/js/faker-nn0129gy.digested.js                                           chunk │ size: 2,373.93 kB
+#18 30.36 [log] <DIR>/assets/js/discourse-im0itjm7.digested.js                                       chunk │ size: 3,769.68 kB
+#18 30.36 [log]
+#18 30.36 [success] rolldown v1.2.7 Finished in 14.92 s
+#18 35.64 Couldn't connect to Redis
+#18 36.65 Compiling 47 plugins...
+#18 64.69 Finished initial compilation of plugins in 28.04s
+#18 65.52 Couldn't connect to Redis
+#18 66.79 Compressing JavaScript and WASM files
+#18 66.79 Done 'message-bus-a56eedff.js' : 0.0 secs
+#18 66.80 Done 'message-bus-ajax-75fbb252.js' : 0.0 secs
+#18 66.80 Done 'rails-ujs.esm-4793aacd.js' : 0.0 secs
+#18 66.80 Done 'rails-ujs-02496e62.js' : 0.0 secs
+#18 66.80 Done 'embed-topics-f1f2489c.js' : 0.0 secs
+#18 66.80 Done 'count-971fed55.js' : 0.0 secs
+#18 66.80 Done 'embed-d733af19.js' : 0.0 secs
+#18 66.80 Already compressed: js/morphlex-m7h93uwv.digested.js
+#18 66.83 Done 'js/jxl_enc_mt-nfg44xx4.digested.wasm' : 0.03 secs
+#18 66.83 Already compressed: js/chunk-hq41ku7d.digested.js
+#18 66.83 Done 'js/jxl_enc_mt_simd.worker-ol683em7.digested.js' : 0.0 secs
+#18 66.83 Already compressed: js/route-wizard-js-jr6yhp1z.digested.js
+#18 66.83 Already compressed: js/chunk-gu6onvfo.digested.js
+#18 66.87 Done 'js/jxl_enc-gne50clb.digested.wasm' : 0.03 secs
+#18 66.87 Done 'js/mozjpeg_dec-cktdh3wj.digested.wasm' : 0.01 secs
+#18 66.87 Already compressed: js/chunk-npbukgo1.digested.js
+#18 66.87 Already compressed: js/chunk-jcceqytm.digested.js
+#18 66.87 Already compressed: js/to-markdown-jdv1uio0.digested.js
+#18 66.87 Already compressed: js/chunk-h11aus06.digested.js
+#18 66.87 Already compressed: js/photoswipe-b36q5pc1.digested.js
+#18 66.87 Already compressed: js/chunk-eq1gwo0y.digested.js
+#18 66.87 Already compressed: js/chunk-ewjttrcb.digested.js
+#18 66.88 Done 'js/squoosh_resize_bg-bp9nawun.digested.wasm' : 0.0 secs
+#18 66.88 Already compressed: js/chunk-f96lzs6p.digested.js
+#18 66.88 Already compressed: js/photoswipe-lightbox-omiq7iv9.digested.js
+#18 66.88 Already compressed: js/admin-pbir8mxt.digested.js
+#18 66.88 Already compressed: js/chunk-kl508b8i.digested.js
+#18 66.88 Already compressed: js/chunk-ep3qv2nj.digested.js
+#18 66.88 Already compressed: js/diff-bz2bnrwp.digested.js
+#18 66.88 Already compressed: js/codemirror-editor-hr1d7zo0.digested.js
+#18 66.88 Already compressed: js/ace-editor-bundle-o08gyn9s.digested.js
+#18 66.88 Already compressed: js/chunk-fwyzjdqf.digested.js
+#18 66.88 Already compressed: js/ember-inspector-support-i7dpbggv.digested.js
+#18 66.89 Done 'js/webp_enc_simd-ivbcnosj.digested.wasm' : 0.02 secs
+#18 66.89 Already compressed: js/faker-nn0129gy.digested.js
+#18 66.89 Already compressed: js/rete-bundle-fl1fr10z.digested.js
+#18 66.89 Already compressed: js/highlightjs-fl8q1i9d.digested.js
+#18 66.89 Already compressed: js/chunk-n4aw3z40.digested.js
+#18 66.89 Already compressed: js/app-workers-media-optimization-entrypoint-bgg7iqfw.digested.js
+#18 66.89 Already compressed: js/chunk-oe1e5mev.digested.js
+#18 66.93 Done 'js/jxl_enc_mt_simd-b0vx5xe3.digested.wasm' : 0.04 secs
+#18 66.93 Already compressed: js/chunk-b5koh09i.digested.js
+#18 66.93 Already compressed: js/chart-js-bundle-joi0qjry.digested.js
+#18 66.96 Done 'js/jxl_dec-ec63vg9w.digested.wasm' : 0.03 secs
+#18 66.96 Already compressed: js/chunk-b5lawyhh.digested.js
+#18 66.96 Already compressed: js/chunk-kg0hypea.digested.js
+#18 66.96 Already compressed: js/chunk-blhg1o24.digested.js
+#18 66.97 Done 'js/squooshhqx_bg-cd86wrn4.digested.wasm' : 0.0 secs
+#18 66.97 Done 'js/jxl_enc_mt.worker-j0szyb2f.digested.js' : 0.0 secs
+#18 66.97 Already compressed: js/chunk-b0b2ldmd.digested.js
+#18 66.97 Already compressed: js/discourse-im0itjm7.digested.js
+#18 66.97 Already compressed: js/pikaday-dev2dbrh.digested.js
+#18 66.97 Already compressed: js/webp_enc-hqpac58j.digested.js
+#18 66.97 Already compressed: js/chunk-m57k1uh2.digested.js
+#18 66.97 Already compressed: js/js-yaml-qoo0lxuu.digested.js
+#18 66.97 Already compressed: js/chunk-jvsnrs13.digested.js
+#18 66.97 Already compressed: js/tags-admin-dropdown-eg0msgx3.digested.js
+#18 66.97 Done 'js/webp_dec-geb9t9l8.digested.wasm' : 0.0 secs
+#18 66.98 Done 'js/mozjpeg_enc-mje7fyf9.digested.wasm' : 0.0 secs
+#18 66.98 Already compressed: js/minimasonry-bpdcqtmi.digested.js
+#18 66.98 Already compressed: js/dist-h7vi0yy8.digested.js
+#18 66.99 Done 'js/webp_enc-ndsdbmht.digested.wasm' : 0.01 secs
+#18 66.99 Done 'js/squoosh_png_bg-lobmjcmy.digested.wasm' : 0.01 secs
+#18 66.99 Already compressed: js/chunk-fnb5gk1s.digested.js
+#18 66.99 Already compressed: js/jsoneditor-ewm47qge.digested.js
+#18 67.02 Done 'js/heic_dec-copf1fgf.digested.wasm' : 0.02 secs
+#18 67.02 Already compressed: js/prosemirror-editor-ggjk09xu.digested.js
+#18 67.02 Already compressed: js/full-calendar-bundle-jsmy3bfj.digested.js
+#18 67.02 Done 'js/jsquash_magic_kernel_bg-kegyad09.digested.wasm' : 0.0 secs
+#18 67.02 Already compressed: js/webp_enc_simd-m7rn96ub.digested.js
+#18 67.02 Done 'js/squoosh_gif_bg-k76zrrpq.digested.wasm' : 0.0 secs
+#18 67.02 Already compressed: js/chunk-fg220fa3.digested.js
+#18 67.02 Already compressed: js/chunk-lsixrhgn.digested.js
+#18 67.02 Already compressed: js/chunk-earq0jcu.digested.js
+#18 67.02 Already compressed: js/prosemirror-extensions-o3151ybo.digested.js
+#18 67.02 Already compressed: js/chunk-lw13s40t.digested.js
+#18 67.02 Already compressed: js/dev-tools-nw5n60dg.digested.js
+#18 67.02 Done 'vendor-44928a31.js' : 0.0 secs
+#18 67.02 Done 'test-support-7db0bc7e.js' : 0.0 secs
+#18 67.02 Done 'js/pageview-de2d5660.js' : 0.0 secs
+#18 67.02 Done 'js/onpopstate-handler-34b9efd2.js' : 0.0 secs
+#18 67.03 Done 'js/browser-update-91688f13.js' : 0.0 secs
+#18 67.03 Done 'js/print-page-7042a48b.js' : 0.0 secs
+#18 67.03 Done 'js/publish-689fcd4c.js' : 0.0 secs
+#18 67.03 Done 'js/google-universal-analytics-v3-7249837c.js' : 0.0 secs
+#18 67.03 Done 'js/google-universal-analytics-v4-43cb071f.js' : 0.0 secs
+#18 67.03 Done 'js/embed-application-cf752b74.js' : 0.0 secs
+#18 67.03 Done 'js/browser-detect-47cf9e6d.js' : 0.0 secs
+#18 67.03 Done 'js/google-tag-manager-bcfc67c4.js' : 0.0 secs
+#18 67.03 Already compressed: js/plugins/automation_admin.C_eASK-9kwhngbl.digested.js
+#18 67.03 Already compressed: js/plugins/automation_main.Bb-bmg-9kwhngbl.digested.js
+#18 67.03 Already compressed: js/plugins/automation_chunk.B05OvtFu-9kwhngbl.digested.js
+#18 67.03 Already compressed: js/plugins/blog_main.C7v067-1ypz8070.digested.js
+#18 67.03 Already compressed: js/plugins/blog_admin.ruIxx5-1ypz8070.digested.js
+#18 67.03 Already compressed: js/plugins/boards_admin.CKZbcR-fy3n3ewr.digested.js
+#18 67.03 Already compressed: js/plugins/boards_chunk.UELpcUsl-fy3n3ewr.digested.js
+#18 67.03 Already compressed: js/plugins/boards_main.rEJC10-fy3n3ewr.digested.js
+#18 67.03 Already compressed: js/plugins/chat_main.BQSzuc-fj7bnf4q.digested.js
+#18 67.03 Already compressed: js/plugins/chat_chunk.DXcD4IWy-fj7bnf4q.digested.js
+#18 67.03 Already compressed: js/plugins/chat_admin.CrlA8d-fj7bnf4q.digested.js
+#18 67.03 Already compressed: js/plugins/checklist_main.Baa4Ik-mqwr7550.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-adplugin_main.M_LJuM-rng3tyrg.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-adplugin_admin.BxZCG6-rng3tyrg.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-affiliate_main.C4dLw4-ksmsiffj.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-ai_admin.RNBG-B-j4lgojv0.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-ai_main.DKaRgk-j4lgojv0.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-ai_chunk.Ca2uct75-j4lgojv0.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-apple-auth_main.CFZtkM-5cqi74zo.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-assign_main.BlymgY-ic1gzukh.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-cakeday_main.Bc0WCv-r71not4f.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-captcha_chunk.535i8hN--dgv1vcht.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-captcha_main.DlebbU-dgv1vcht.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-captcha_admin.5dVjf_-dgv1vcht.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-chat-integration_admin.DTI68F-a8i2m19f.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-chat-integration_main.BTajIK-a8i2m19f.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-data-explorer_chunk.CN-yzrUv-g84h8qpy.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-data-explorer_main.2sd7e2-g84h8qpy.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-data-explorer_admin.DiCSiU-g84h8qpy.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-details_main.hWoK3j-il5pj3p3.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-events_main.CJ2ZdO-ocvw7554.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-gamification_admin.BBVt1Y-cnupn3mz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-gamification_chunk.B8_Lw9BX-cnupn3mz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-gamification_main.D92TOk-cnupn3mz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-github_main.DkPy2_-sfk73ukc.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-graphviz_main.DDRIpH-zqvy75ne.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-lazy-videos_main.raLewU-h58zag4g.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-local-dates_main.BgJnmu-ec8fq3qh.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-lti_main.C83t7Q-k5aky8l0.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-math_main.B1NAOI-1ec2si7y.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-microsoft-auth_main.C4mKBn-cazzkfvr.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-narrative-bot_main.C0hAQL-2adyxzuw.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-oauth2-basic_main.BoeXC4-1f98nnz7.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-openid-connect_main.B68bQL-el38pl9y.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-patreon_main.CEaSP3-jwapgdix.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-patreon_chunk.BZ1XHLiM-jwapgdix.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-patreon_admin.Dy-rB2-jwapgdix.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-policy_main.ByhEMv-kyn1z0tz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-post-voting_main.BAE3a9-ibq5wvs7.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-presence_main.CbW2Z--qpmmxhul.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-reactions_main.Bx39fk-lhjib6ff.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-rewind_main.Cjg4ta-n2973hj1.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-rss-polling_main.iNeDYd-s6dvqcx0.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-rss-polling_admin.Bk7t_D-s6dvqcx0.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-solved_admin.C7YI2j-o2hctp92.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-solved_chunk.DsWerPYw-o2hctp92.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-solved_main.DjL0x4-o2hctp92.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-subscriptions_admin.DwAqZh-1xn8psfq.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-subscriptions_main.DvrlVD-1xn8psfq.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-subscriptions_chunk.B1Ef_uBU-1xn8psfq.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-templates_main.DIkTd9-oxcjioca.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-topic-voting_main.DDRbYz-lfagyknd.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-user-notes_admin.7E7JQt-fidbad7p.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-user-notes_chunk.welxYlPS-fidbad7p.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-user-notes_main.BfimaT-fidbad7p.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-workflows_admin.BGWGS7-1yijthkz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-workflows_chunk._7Ec_MTh-1yijthkz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-workflows_main.D-j3Ya-1yijthkz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-workflows_chunk.BYGgz2lw-1yijthkz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-workflows_chunk.FvHM9bct-1yijthkz.digested.js
+#18 67.03 Already compressed: js/plugins/discourse-zendesk-plugin_main.CWcp99-qqbbpbuf.digested.js
+#18 67.03 Done 'plugins/footnote_extra-95ffab71.js' : 0.0 secs
+#18 67.03 Already compressed: js/plugins/footnote_main.DEFmzz-i5ay7qv3.digested.js
+#18 67.03 Already compressed: js/plugins/live_chunk.wTxkHG51-9mnwlw0i.digested.js
+#18 67.03 Already compressed: js/plugins/live_admin.D_YGI_-9mnwlw0i.digested.js
+#18 67.03 Already compressed: js/plugins/live_main.DhmrgA-9mnwlw0i.digested.js
+#18 67.03 Already compressed: js/plugins/poll_main.BF2vjL-5re9ypo0.digested.js
+#18 67.03 Already compressed: js/plugins/spoiler-alert_main.DbmNra-exjv4itp.digested.js
+#18 67.03 Already compressed: js/plugins/styleguide_main.CWD561-94ongo2o.digested.js
+#18 67.03 Done 'Done compressing all JS and WASM files' : 0.24 secs
+#18 67.03 Skipping CSS precompilation, ensure CSS lives in a shared directory across hosts
+#18 67.03 MaxMind IP database download requires an account ID and a license key
+#18 67.03 Please set DISCOURSE_MAXMIND_ACCOUNT_ID and DISCOURSE_MAXMIND_LICENSE_KEY. See https://meta.discourse.org/t/configure-maxmind-for-reverse-ip-lookups/173941 for more details.
+#18 67.03 MaxMind IP database download requires an account ID and a license key
+#18 67.03 Please set DISCOURSE_MAXMIND_ACCOUNT_ID and DISCOURSE_MAXMIND_LICENSE_KEY. See https://meta.discourse.org/t/configure-maxmind-for-reverse-ip-lookups/173941 for more details.
+#18 67.06 Downloading MaxMindDB...
+#18 DONE 67.9s
+
+#19 [build 9/9] RUN printf '{"git_version":"%s"}\n' "3a1b1ae930e568a8c1c2f12d6e09f8e907da608b" > config/git-utils-overrides.json     && sed -i 's/\r$//' script/discourse_vips_worker     && chmod +x script/discourse_vips_worker
+#19 DONE 0.3s
+
+#20 [browser-maps 1/1] RUN --network=none     --mount=from=maptools,source=/identity-map.cjs,target=/tmp/recall-map.cjs     --mount=from=recipe,source=/publish-browser-maps.rb,target=/tmp/publish-browser-maps.rb     printf '%s\n'       '8d9f29f5a53222655585d74c1cdfc5f4b6557f83ca22544820f20b499744f87c  frontend/discourse/scripts/js/browser-detect.js'       'c9256958b9333d787dd0a0b4ffabec4f21e9b12e01448b6864c1eedbb0f3cd92  frontend/discourse/scripts/js/browser-update.js' | sha256sum -c -     && for file in frontend/discourse/scripts/js/browser-detect.js frontend/discourse/scripts/js/browser-update.js; do          node /tmp/recall-map.cjs "$file" "$file" "$file" || exit;        done     && SKIP_DB_AND_REDIS=1 bundle exec rails runner /tmp/publish-browser-maps.rb
+#20 0.096 frontend/discourse/scripts/js/browser-detect.js: FAILED
+#20 0.097 frontend/discourse/scripts/js/browser-update.js: FAILED
+#20 0.097 sha256sum: WARNING: 2 computed checksums did NOT match
+#20 ERROR: process "/bin/sh -c printf '%s\\n'       '8d9f29f5a53222655585d74c1cdfc5f4b6557f83ca22544820f20b499744f87c  frontend/discourse/scripts/js/browser-detect.js'       'c9256958b9333d787dd0a0b4ffabec4f21e9b12e01448b6864c1eedbb0f3cd92  frontend/discourse/scripts/js/browser-update.js' | sha256sum -c -     && for file in frontend/discourse/scripts/js/browser-detect.js frontend/discourse/scripts/js/browser-update.js; do          node /tmp/recall-map.cjs \"$file\" \"$file\" \"$file\" || exit;        done     && SKIP_DB_AND_REDIS=1 bundle exec rails runner /tmp/publish-browser-maps.rb" did not complete successfully: exit code: 1
+------
+ > [browser-maps 1/1] RUN --network=none     --mount=from=maptools,source=/identity-map.cjs,target=/tmp/recall-map.cjs     --mount=from=recipe,source=/publish-browser-maps.rb,target=/tmp/publish-browser-maps.rb     printf '%s\n'       '8d9f29f5a53222655585d74c1cdfc5f4b6557f83ca22544820f20b499744f87c  frontend/discourse/scripts/js/browser-detect.js'       'c9256958b9333d787dd0a0b4ffabec4f21e9b12e01448b6864c1eedbb0f3cd92  frontend/discourse/scripts/js/browser-update.js' | sha256sum -c -     && for file in frontend/discourse/scripts/js/browser-detect.js frontend/discourse/scripts/js/browser-update.js; do          node /tmp/recall-map.cjs "$file" "$file" "$file" || exit;        done     && SKIP_DB_AND_REDIS=1 bundle exec rails runner /tmp/publish-browser-maps.rb:
+0.096 frontend/discourse/scripts/js/browser-detect.js: FAILED
+0.097 frontend/discourse/scripts/js/browser-update.js: FAILED
+0.097 sha256sum: WARNING: 2 computed checksums did NOT match
+------
+Dockerfile:49
+--------------------
+  48 |     FROM ${RECALL_RUNTIME_BASE} AS browser-maps
+  49 | >>> RUN --network=none \
+  50 | >>>     --mount=from=maptools,source=/identity-map.cjs,target=/tmp/recall-map.cjs \
+  51 | >>>     --mount=from=recipe,source=/publish-browser-maps.rb,target=/tmp/publish-browser-maps.rb \
+  52 | >>>     printf '%s\n' \
+  53 | >>>       '8d9f29f5a53222655585d74c1cdfc5f4b6557f83ca22544820f20b499744f87c  frontend/discourse/scripts/js/browser-detect.js' \
+  54 | >>>       'c9256958b9333d787dd0a0b4ffabec4f21e9b12e01448b6864c1eedbb0f3cd92  frontend/discourse/scripts/js/browser-update.js' | sha256sum -c - \
+  55 | >>>     && for file in frontend/discourse/scripts/js/browser-detect.js frontend/discourse/scripts/js/browser-update.js; do \
+  56 | >>>          node /tmp/recall-map.cjs "$file" "$file" "$file" || exit; \
+  57 | >>>        done \
+  58 | >>>     && SKIP_DB_AND_REDIS=1 bundle exec rails runner /tmp/publish-browser-maps.rb
+  59 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c printf '%s\\n'       '8d9f29f5a53222655585d74c1cdfc5f4b6557f83ca22544820f20b499744f87c  frontend/discourse/scripts/js/browser-detect.js'       'c9256958b9333d787dd0a0b4ffabec4f21e9b12e01448b6864c1eedbb0f3cd92  frontend/discourse/scripts/js/browser-update.js' | sha256sum -c -     && for file in frontend/discourse/scripts/js/browser-detect.js frontend/discourse/scripts/js/browser-update.js; do          node /tmp/recall-map.cjs \"$file\" \"$file\" \"$file\" || exit;        done     && SKIP_DB_AND_REDIS=1 bundle exec rails runner /tmp/publish-browser-maps.rb" did not complete successfully: exit code: 1

@@ -1,0 +1,788 @@
+#0 building with "colima" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.33kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-bookworm
+#2 DONE 0.0s
+
+#3 [context recipe] load .dockerignore
+#3 transferring recipe: 2B done
+#3 DONE 0.1s
+
+#4 [internal] load metadata for docker.io/library/nginx:stable-alpine
+#4 DONE 0.2s
+
+#5 [internal] load metadata for docker.io/library/ruby:3.4-bookworm
+#5 DONE 11.5s
+
+#6 [runtime 1/2] FROM docker.io/library/nginx:stable-alpine@sha256:583b7f2fce1cdb8da5ad5c39ebd3c33b98b87d493190e548bdee1fa8c619c311
+#6 resolve docker.io/library/nginx:stable-alpine@sha256:583b7f2fce1cdb8da5ad5c39ebd3c33b98b87d493190e548bdee1fa8c619c311 0.0s done
+#6 CACHED
+
+#7 [build 1/6] FROM docker.io/library/node:24-bookworm@sha256:6dac556d980b7f0e5498d08f08cee0ca67798b4ad6c23964a9214920e67758d0
+#7 resolve docker.io/library/node:24-bookworm@sha256:6dac556d980b7f0e5498d08f08cee0ca67798b4ad6c23964a9214920e67758d0 done
+#7 DONE 0.0s
+
+#8 [build 2/6] WORKDIR /app
+#8 CACHED
+
+#9 [context recipe] load from client
+#9 transferring recipe: 449.66kB 0.0s done
+#9 DONE 0.1s
+
+#10 [site 1/7] FROM docker.io/library/ruby:3.4-bookworm@sha256:d7c312a48736dd291d7ce043c847f04dfde9bdf7334491ca6a545a4a184395be
+#10 resolve docker.io/library/ruby:3.4-bookworm@sha256:d7c312a48736dd291d7ce043c847f04dfde9bdf7334491ca6a545a4a184395be done
+#10 sha256:111ca7206ae02ea8293cffe1d12de4dae0a0acf8eafe356a3670f893fa10c5d7 0B / 143B 0.2s
+#10 sha256:a069cce2f946ae8ffb7eb24f0278380b53e4da3528a1abe1c58645dea5e6d154 0B / 189B 0.2s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 0B / 41.51MB 0.2s
+#10 ...
+
+#11 [internal] load build context
+#11 transferring context: 111.79MB 1.0s done
+#11 DONE 1.1s
+
+#10 [site 1/7] FROM docker.io/library/ruby:3.4-bookworm@sha256:d7c312a48736dd291d7ce043c847f04dfde9bdf7334491ca6a545a4a184395be
+#10 sha256:111ca7206ae02ea8293cffe1d12de4dae0a0acf8eafe356a3670f893fa10c5d7 143B / 143B 3.9s
+#10 sha256:111ca7206ae02ea8293cffe1d12de4dae0a0acf8eafe356a3670f893fa10c5d7 143B / 143B 4.5s done
+#10 sha256:a069cce2f946ae8ffb7eb24f0278380b53e4da3528a1abe1c58645dea5e6d154 189B / 189B 4.9s done
+#10 extracting sha256:a069cce2f946ae8ffb7eb24f0278380b53e4da3528a1abe1c58645dea5e6d154 0.0s done
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 0B / 41.51MB 5.3s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 2.10MB / 41.51MB 9.5s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 5.24MB / 41.51MB 9.6s
+#10 ...
+
+#12 [build 3/6] RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list.d/debian.sources && apt-get -o Acquire::Retries=3 update && apt-get install -y --no-install-recommends rsync libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev && rm -rf /var/lib/apt/lists/*
+#12 1.081 Get:1 https://deb.debian.org/debian bookworm InRelease [151 kB]
+#12 1.239 Get:2 https://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#12 1.337 Get:3 https://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#12 1.445 Get:4 https://deb.debian.org/debian bookworm/main arm64 Packages [8689 kB]
+#12 2.040 Get:5 https://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
+#12 2.134 Get:6 https://deb.debian.org/debian-security bookworm-security/main arm64 Packages [360 kB]
+#12 2.611 Fetched 9297 kB in 2s (4721 kB/s)
+#12 2.611 Reading package lists...
+#12 2.904 Reading package lists...
+#12 3.189 Building dependency tree...
+#12 3.258 Reading state information...
+#12 3.340 libcairo2-dev is already the newest version (1.16.0-7).
+#12 3.340 libcairo2-dev set to manually installed.
+#12 3.340 libjpeg-dev is already the newest version (1:2.1.5-2).
+#12 3.340 librsvg2-dev is already the newest version (2.54.7+dfsg-1~deb12u1).
+#12 3.340 librsvg2-dev set to manually installed.
+#12 3.340 The following additional packages will be installed:
+#12 3.340   gir1.2-harfbuzz-0.0 gir1.2-pango-1.0 libdatrie-dev libfribidi-dev libgif7
+#12 3.340   libgraphite2-dev libharfbuzz-dev libharfbuzz-gobject0 libharfbuzz-icu0
+#12 3.340   libharfbuzz-subset0 libpangoxft-1.0-0 libpopt0 libthai-dev libxft-dev
+#12 3.340   libxft2 pango1.0-tools
+#12 3.340 Suggested packages:
+#12 3.340   libdatrie-doc libgraphite2-utils libpango1.0-doc libthai-doc graphicsmagick
+#12 3.340   openssh-server python3-braceexpand
+#12 3.443 The following NEW packages will be installed:
+#12 3.443   gir1.2-harfbuzz-0.0 gir1.2-pango-1.0 libdatrie-dev libfribidi-dev libgif-dev
+#12 3.443   libgif7 libgraphite2-dev libharfbuzz-dev libharfbuzz-gobject0
+#12 3.443   libharfbuzz-icu0 libharfbuzz-subset0 libpango1.0-dev libpangoxft-1.0-0
+#12 3.443   libpopt0 libthai-dev libxft-dev libxft2 pango1.0-tools rsync
+#12 3.813 0 upgraded, 19 newly installed, 0 to remove and 58 not upgraded.
+#12 3.813 Need to get 9371 kB of archives.
+#12 3.813 After this operation, 15.4 MB of additional disk space will be used.
+#12 3.813 Get:1 https://deb.debian.org/debian bookworm/main arm64 libpopt0 arm64 1.19+dfsg-1 [42.0 kB]
+#12 3.912 Get:2 https://deb.debian.org/debian bookworm/main arm64 rsync arm64 3.2.7-1+deb12u6 [405 kB]
+#12 4.039 Get:3 https://deb.debian.org/debian bookworm/main arm64 gir1.2-harfbuzz-0.0 arm64 6.0.0+dfsg-3 [1579 kB]
+#12 4.305 Get:4 https://deb.debian.org/debian bookworm/main arm64 libxft2 arm64 2.3.6-1 [58.7 kB]
+#12 4.305 Get:5 https://deb.debian.org/debian bookworm/main arm64 libpangoxft-1.0-0 arm64 1.50.12+ds-1 [25.9 kB]
+#12 4.305 Get:6 https://deb.debian.org/debian bookworm/main arm64 gir1.2-pango-1.0 arm64 1.50.12+ds-1 [37.4 kB]
+#12 4.306 Get:7 https://deb.debian.org/debian bookworm/main arm64 libdatrie-dev arm64 0.2.13-2+b1 [18.1 kB]
+#12 4.306 Get:8 https://deb.debian.org/debian bookworm/main arm64 libfribidi-dev arm64 1.0.8-2.1 [105 kB]
+#12 4.308 Get:9 https://deb.debian.org/debian bookworm/main arm64 libgif7 arm64 5.2.1-2.5+deb12u1 [42.6 kB]
+#12 4.309 Get:10 https://deb.debian.org/debian bookworm/main arm64 libgif-dev arm64 5.2.1-2.5+deb12u1 [45.9 kB]
+#12 4.309 Get:11 https://deb.debian.org/debian bookworm/main arm64 libgraphite2-dev arm64 1.3.14-1+deb12u1 [19.8 kB]
+#12 4.309 Get:12 https://deb.debian.org/debian bookworm/main arm64 libharfbuzz-icu0 arm64 6.0.0+dfsg-3 [1557 kB]
+#12 4.611 Get:13 https://deb.debian.org/debian bookworm/main arm64 libharfbuzz-gobject0 arm64 6.0.0+dfsg-3 [1571 kB]
+#12 4.635 Get:14 https://deb.debian.org/debian bookworm/main arm64 libharfbuzz-subset0 arm64 6.0.0+dfsg-3 [1902 kB]
+#12 ...
+
+#10 [site 1/7] FROM docker.io/library/ruby:3.4-bookworm@sha256:d7c312a48736dd291d7ce043c847f04dfde9bdf7334491ca6a545a4a184395be
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 9.44MB / 41.51MB 9.8s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 12.58MB / 41.51MB 9.9s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 17.83MB / 41.51MB 10.1s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 24.12MB / 41.51MB 10.2s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 28.31MB / 41.51MB 10.4s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 32.51MB / 41.51MB 10.5s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 36.70MB / 41.51MB 10.7s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 41.51MB / 41.51MB 10.8s
+#10 sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 41.51MB / 41.51MB 10.9s done
+#10 extracting sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a
+#10 extracting sha256:b942cc226725829bd9327bb2fabbe24f2496fe844a186af607b7e9ca8ac2463a 0.4s done
+#10 DONE 11.6s
+
+#12 [build 3/6] RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list.d/debian.sources && apt-get -o Acquire::Retries=3 update && apt-get install -y --no-install-recommends rsync libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev && rm -rf /var/lib/apt/lists/*
+#12 ...
+
+#10 [site 1/7] FROM docker.io/library/ruby:3.4-bookworm@sha256:d7c312a48736dd291d7ce043c847f04dfde9bdf7334491ca6a545a4a184395be
+#10 extracting sha256:111ca7206ae02ea8293cffe1d12de4dae0a0acf8eafe356a3670f893fa10c5d7 done
+#10 DONE 11.6s
+
+#13 [site 2/7] WORKDIR /site
+#13 DONE 0.3s
+
+#12 [build 3/6] RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list.d/debian.sources && apt-get -o Acquire::Retries=3 update && apt-get install -y --no-install-recommends rsync libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev && rm -rf /var/lib/apt/lists/*
+#12 ...
+
+#14 [site 3/7] COPY --from=recipe bundler-2.6.3.gem /tmp/bundler-2.6.3.gem
+#14 DONE 0.1s
+
+#15 [site 4/7] RUN echo '29f9386f7b2688b2b4c5e9024058debd91ef88599f33489f62ebcc8898c8c8a3  /tmp/bundler-2.6.3.gem' | sha256sum -c -     && gem install --local /tmp/bundler-2.6.3.gem --no-document
+#15 0.238 /tmp/bundler-2.6.3.gem: OK
+#15 0.449 Successfully installed bundler-2.6.3
+#15 0.449 1 gem installed
+#15 DONE 0.5s
+
+#12 [build 3/6] RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list.d/debian.sources && apt-get -o Acquire::Retries=3 update && apt-get install -y --no-install-recommends rsync libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev && rm -rf /var/lib/apt/lists/*
+#12 35.01 Get:15 https://deb.debian.org/debian bookworm/main arm64 libharfbuzz-dev arm64 6.0.0+dfsg-3 [1668 kB]
+#12 35.43 Get:16 https://deb.debian.org/debian bookworm/main arm64 libthai-dev arm64 0.1.29-1 [23.4 kB]
+#12 35.55 Get:17 https://deb.debian.org/debian bookworm/main arm64 libxft-dev arm64 2.3.6-1 [79.1 kB]
+#12 35.66 Get:18 https://deb.debian.org/debian bookworm/main arm64 pango1.0-tools arm64 1.50.12+ds-1 [39.2 kB]
+#12 35.75 Get:19 https://deb.debian.org/debian bookworm/main arm64 libpango1.0-dev arm64 1.50.12+ds-1 [152 kB]
+#12 36.00 debconf: delaying package configuration, since apt-utils is not installed
+#12 36.04 Fetched 9371 kB in 32s (290 kB/s)
+#12 36.08 Selecting previously unselected package libpopt0:arm64.
+#12 36.08 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23287 files and directories currently installed.)
+#12 36.21 Preparing to unpack .../00-libpopt0_1.19+dfsg-1_arm64.deb ...
+#12 36.22 Unpacking libpopt0:arm64 (1.19+dfsg-1) ...
+#12 36.42 Selecting previously unselected package rsync.
+#12 36.42 Preparing to unpack .../01-rsync_3.2.7-1+deb12u6_arm64.deb ...
+#12 36.43 Unpacking rsync (3.2.7-1+deb12u6) ...
+#12 36.49 Selecting previously unselected package gir1.2-harfbuzz-0.0:arm64.
+#12 36.49 Preparing to unpack .../02-gir1.2-harfbuzz-0.0_6.0.0+dfsg-3_arm64.deb ...
+#12 36.49 Unpacking gir1.2-harfbuzz-0.0:arm64 (6.0.0+dfsg-3) ...
+#12 36.56 Selecting previously unselected package libxft2:arm64.
+#12 36.56 Preparing to unpack .../03-libxft2_2.3.6-1_arm64.deb ...
+#12 36.56 Unpacking libxft2:arm64 (2.3.6-1) ...
+#12 36.59 Selecting previously unselected package libpangoxft-1.0-0:arm64.
+#12 36.59 Preparing to unpack .../04-libpangoxft-1.0-0_1.50.12+ds-1_arm64.deb ...
+#12 36.60 Unpacking libpangoxft-1.0-0:arm64 (1.50.12+ds-1) ...
+#12 36.61 Selecting previously unselected package gir1.2-pango-1.0:arm64.
+#12 36.62 Preparing to unpack .../05-gir1.2-pango-1.0_1.50.12+ds-1_arm64.deb ...
+#12 36.62 Unpacking gir1.2-pango-1.0:arm64 (1.50.12+ds-1) ...
+#12 36.64 Selecting previously unselected package libdatrie-dev:arm64.
+#12 36.64 Preparing to unpack .../06-libdatrie-dev_0.2.13-2+b1_arm64.deb ...
+#12 36.64 Unpacking libdatrie-dev:arm64 (0.2.13-2+b1) ...
+#12 36.66 Selecting previously unselected package libfribidi-dev:arm64.
+#12 36.66 Preparing to unpack .../07-libfribidi-dev_1.0.8-2.1_arm64.deb ...
+#12 36.66 Unpacking libfribidi-dev:arm64 (1.0.8-2.1) ...
+#12 36.70 Selecting previously unselected package libgif7:arm64.
+#12 36.70 Preparing to unpack .../08-libgif7_5.2.1-2.5+deb12u1_arm64.deb ...
+#12 36.70 Unpacking libgif7:arm64 (5.2.1-2.5+deb12u1) ...
+#12 36.72 Selecting previously unselected package libgif-dev:arm64.
+#12 36.72 Preparing to unpack .../09-libgif-dev_5.2.1-2.5+deb12u1_arm64.deb ...
+#12 36.73 Unpacking libgif-dev:arm64 (5.2.1-2.5+deb12u1) ...
+#12 36.74 Selecting previously unselected package libgraphite2-dev:arm64.
+#12 36.74 Preparing to unpack .../10-libgraphite2-dev_1.3.14-1+deb12u1_arm64.deb ...
+#12 36.74 Unpacking libgraphite2-dev:arm64 (1.3.14-1+deb12u1) ...
+#12 36.77 Selecting previously unselected package libharfbuzz-icu0:arm64.
+#12 36.77 Preparing to unpack .../11-libharfbuzz-icu0_6.0.0+dfsg-3_arm64.deb ...
+#12 36.77 Unpacking libharfbuzz-icu0:arm64 (6.0.0+dfsg-3) ...
+#12 36.81 Selecting previously unselected package libharfbuzz-gobject0:arm64.
+#12 36.81 Preparing to unpack .../12-libharfbuzz-gobject0_6.0.0+dfsg-3_arm64.deb ...
+#12 36.81 Unpacking libharfbuzz-gobject0:arm64 (6.0.0+dfsg-3) ...
+#12 36.85 Selecting previously unselected package libharfbuzz-subset0:arm64.
+#12 36.85 Preparing to unpack .../13-libharfbuzz-subset0_6.0.0+dfsg-3_arm64.deb ...
+#12 36.85 Unpacking libharfbuzz-subset0:arm64 (6.0.0+dfsg-3) ...
+#12 36.89 Selecting previously unselected package libharfbuzz-dev:arm64.
+#12 36.89 Preparing to unpack .../14-libharfbuzz-dev_6.0.0+dfsg-3_arm64.deb ...
+#12 36.89 Unpacking libharfbuzz-dev:arm64 (6.0.0+dfsg-3) ...
+#12 36.93 Selecting previously unselected package libthai-dev:arm64.
+#12 36.93 Preparing to unpack .../15-libthai-dev_0.1.29-1_arm64.deb ...
+#12 36.93 Unpacking libthai-dev:arm64 (0.1.29-1) ...
+#12 36.95 Selecting previously unselected package libxft-dev:arm64.
+#12 36.95 Preparing to unpack .../16-libxft-dev_2.3.6-1_arm64.deb ...
+#12 36.96 Unpacking libxft-dev:arm64 (2.3.6-1) ...
+#12 36.99 Selecting previously unselected package pango1.0-tools.
+#12 36.99 Preparing to unpack .../17-pango1.0-tools_1.50.12+ds-1_arm64.deb ...
+#12 36.99 Unpacking pango1.0-tools (1.50.12+ds-1) ...
+#12 37.02 Selecting previously unselected package libpango1.0-dev:arm64.
+#12 37.02 Preparing to unpack .../18-libpango1.0-dev_1.50.12+ds-1_arm64.deb ...
+#12 37.02 Unpacking libpango1.0-dev:arm64 (1.50.12+ds-1) ...
+#12 37.06 Setting up libxft2:arm64 (2.3.6-1) ...
+#12 37.07 Setting up libharfbuzz-icu0:arm64 (6.0.0+dfsg-3) ...
+#12 37.08 Setting up libpangoxft-1.0-0:arm64 (1.50.12+ds-1) ...
+#12 37.08 Setting up libfribidi-dev:arm64 (1.0.8-2.1) ...
+#12 37.09 Setting up pango1.0-tools (1.50.12+ds-1) ...
+#12 37.09 Setting up libharfbuzz-gobject0:arm64 (6.0.0+dfsg-3) ...
+#12 37.10 Setting up gir1.2-harfbuzz-0.0:arm64 (6.0.0+dfsg-3) ...
+#12 37.11 Setting up libgraphite2-dev:arm64 (1.3.14-1+deb12u1) ...
+#12 37.11 Setting up gir1.2-pango-1.0:arm64 (1.50.12+ds-1) ...
+#12 37.12 Setting up libgif7:arm64 (5.2.1-2.5+deb12u1) ...
+#12 37.12 Setting up libdatrie-dev:arm64 (0.2.13-2+b1) ...
+#12 37.13 Setting up libgif-dev:arm64 (5.2.1-2.5+deb12u1) ...
+#12 37.13 Setting up libharfbuzz-subset0:arm64 (6.0.0+dfsg-3) ...
+#12 37.13 Setting up libpopt0:arm64 (1.19+dfsg-1) ...
+#12 37.14 Setting up libxft-dev:arm64 (2.3.6-1) ...
+#12 37.14 Setting up libharfbuzz-dev:arm64 (6.0.0+dfsg-3) ...
+#12 37.15 Setting up libthai-dev:arm64 (0.1.29-1) ...
+#12 37.16 Setting up rsync (3.2.7-1+deb12u6) ...
+#12 37.19 invoke-rc.d: could not determine current runlevel
+#12 37.20 invoke-rc.d: policy-rc.d denied execution of start.
+#12 37.25 Setting up libpango1.0-dev:arm64 (1.50.12+ds-1) ...
+#12 37.26 Processing triggers for libc-bin (2.36-9+deb12u14) ...
+#12 DONE 37.7s
+
+#16 [build 4/6] COPY . .
+#16 DONE 0.9s
+
+#17 [build 5/6] RUN --mount=type=cache,target=/root/.npm npm ci --no-audit --no-fund
+#17 1.738 npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+#17 1.799 npm warn deprecated prebuild-install@7.1.3: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
+#17 7.265 
+#17 7.265 > vega-lite@6.5.0 prepare
+#17 7.265 > husky
+#17 7.265 
+#17 7.293 .git can't be found
+#17 7.339 added 702 packages in 7s
+#17 7.340 npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+#17 7.340 npm warn install-scripts   canvas@3.2.3 (install: prebuild-install -r napi || node-gyp rebuild)
+#17 7.340 npm warn install-scripts
+#17 7.340 npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+#17 DONE 7.7s
+
+#18 [build 6/6] RUN npm run presite && test -s site/static/bundle.js
+#18 0.350 
+#18 0.350 > vega-lite@6.5.0 presite
+#18 0.350 > npm run data && npm run schema && npm run build:site && npm run build:versions && scripts/create-example-pages.sh
+#18 0.350 
+#18 0.399 
+#18 0.399 > vega-lite@6.5.0 data
+#18 0.399 > rsync -r node_modules/vega-datasets/data/* site/data
+#18 0.399 
+#18 0.564 
+#18 0.564 > vega-lite@6.5.0 schema
+#18 0.564 > mkdir -p build && ts-json-schema-generator -f tsconfig.json -p src/index.ts -t TopLevelSpec --no-type-check --no-ref-encode > build/vega-lite-schema.json && npm run renameschema && cp build/vega-lite-schema.json site/_data/
+#18 0.564 
+#18 1.714 
+#18 1.714 > vega-lite@6.5.0 renameschema
+#18 1.714 > scripts/rename-schema.sh
+#18 1.714 
+#18 1.881 
+#18 1.881 > vega-lite@6.5.0 build:site
+#18 1.881 > rollup -c site/rollup.config.js
+#18 1.881 
+#18 2.078 [36m
+#18 2.078 [1msite/static/index.ts[22m → [1msite/static/bundle.js[22m...[39m
+#18 7.821 [1m[33m(!) If you do not supply "output.name", you may not be able to access the exports of an IIFE bundle.[39m[22m
+#18 7.821 [90mhttps://rollupjs.org/configuration-options/#output-name[39m
+#18 8.138 Created bundle bundle.js: 2.35 MB → 538.51 kB (gzip)
+#18 8.166 [1m[33m(!) Circular dependencies[39m[22m
+#18 8.166 node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/select.js -> node_modules/d3-selection/src/selection/index.js
+#18 8.166 node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/selectAll.js -> node_modules/d3-selection/src/selection/index.js
+#18 8.166 node_modules/d3-selection/src/selection/index.js -> node_modules/d3-selection/src/selection/filter.js -> node_modules/d3-selection/src/selection/index.js
+#18 8.166 ...and 56 more
+#18 8.167 [32mcreated [1msite/static/bundle.js[22m in [1m6s[22m[39m
+#18 8.284 
+#18 8.284 > vega-lite@6.5.0 build:versions
+#18 8.284 > scripts/update-version.sh
+#18 8.284 
+#18 8.352 + rsync -r examples/specs/airport_connections.vl.json examples/specs/animated_gapminder.vl.json examples/specs/animated_hop.vl.json examples/specs/arc_color_mappings.vl.json examples/specs/arc_donut.vl.json examples/specs/arc_facet.vl.json examples/specs/arc_ordinal_theta.vl.json examples/specs/arc_params.vl.json examples/specs/arc_pie.vl.json examples/specs/arc_pie_normalize_tooltip.vl.json examples/specs/arc_pie_pyramid.vl.json examples/specs/arc_radial.vl.json examples/specs/arc_radial_histogram.vl.json examples/specs/area.vl.json examples/specs/area_cumulative_freq.vl.json examples/specs/area_density.vl.json examples/specs/area_density_facet.vl.json examples/specs/area_density_stacked.vl.json examples/specs/area_density_stacked_fold.vl.json examples/specs/area_gradient.vl.json examples/specs/area_horizon.vl.json examples/specs/area_invalid_null.vl.json examples/specs/area_overlay.vl.json examples/specs/area_overlay_with_y2.vl.json examples/specs/area_params.vl.json examples/specs/area_ranged_offset_quantitative.vl.json examples/specs/area_temperature_range.vl.json examples/specs/area_vertical.vl.json examples/specs/argmin_spaces.vl.json examples/specs/bar.vl.json examples/specs/bar_1d.vl.json examples/specs/bar_1d_binned.vl.json examples/specs/bar_1d_default_size.vl.json examples/specs/bar_1d_dimension_only.vl.json examples/specs/bar_1d_step_config.vl.json examples/specs/bar_1d_temporal.vl.json examples/specs/bar_aggregate.vl.json examples/specs/bar_aggregate_count.vl.json examples/specs/bar_aggregate_format.vl.json examples/specs/bar_aggregate_size.vl.json examples/specs/bar_aggregate_sort_by_encoding.vl.json examples/specs/bar_aggregate_sort_mean.vl.json examples/specs/bar_aggregate_transform.vl.json examples/specs/bar_aggregate_vertical.vl.json examples/specs/bar_argmax.vl.json examples/specs/bar_argmax_transform.vl.json examples/specs/bar_array_aggregate.vl.json examples/specs/bar_axis_orient.vl.json examples/specs/bar_axis_space_saving.vl.json examples/specs/bar_axis_title_quoted.vl.json examples/specs/bar_binned_data.vl.json examples/specs/bar_binned_yearmonth_grouped.vl.json examples/specs/bar_binned_yearmonth_grouped_center_band.vl.json examples/specs/bar_binned_yearmonth_label.vl.json examples/specs/bar_binned_yearmonth_label_band_center.vl.json examples/specs/bar_binnedyearmonth.vl.json examples/specs/bar_bullet_expr_bind.vl.json examples/specs/bar_color_disabled_scale.vl.json examples/specs/bar_column_fold.vl.json examples/specs/bar_column_pivot.vl.json examples/specs/bar_conditional_opacity.vl.json examples/specs/bar_config_no_zero.vl.json examples/specs/bar_corner_radius_end.vl.json examples/specs/bar_count_minimap.vl.json examples/specs/bar_custom_sort_full.vl.json examples/specs/bar_custom_sort_partial.vl.json examples/specs/bar_custom_time_domain.vl.json examples/specs/bar_default_tooltip_title_null.vl.json examples/specs/bar_distinct.vl.json examples/specs/bar_diverging_stack_population_pyramid.vl.json examples/specs/bar_diverging_stack_transform.vl.json examples/specs/bar_filter_calc.vl.json examples/specs/bar_fit.vl.json examples/specs/bar_gantt.vl.json examples/specs/bar_gantt_config_no_zero.vl.json examples/specs/bar_group_timeunit.vl.json examples/specs/bar_grouped.vl.json examples/specs/bar_grouped_custom_color_domain.vl.json examples/specs/bar_grouped_custom_padding.vl.json examples/specs/bar_grouped_errorbar.vl.json examples/specs/bar_grouped_facet.vl.json examples/specs/bar_grouped_facet_independent_scale.vl.json examples/specs/bar_grouped_facet_independent_scale_fixed_width.vl.json examples/specs/bar_grouped_fixed_width.vl.json examples/specs/bar_grouped_horizontal.vl.json examples/specs/bar_grouped_label.vl.json examples/specs/bar_grouped_repeated.vl.json examples/specs/bar_grouped_stacked.vl.json examples/specs/bar_grouped_step_for_offset.vl.json examples/specs/bar_grouped_step_for_position.vl.json examples/specs/bar_grouped_thin.vl.json examples/specs/bar_grouped_thin_minBandSize.vl.json examples/specs/bar_grouped_timeunit_yearweek.vl.json examples/specs/bar_heatlane.vl.json examples/specs/bar_invalid_color_show.vl.json examples/specs/bar_invalid_color_show_override.vl.json examples/specs/bar_layered_transparent.vl.json examples/specs/bar_layered_weather.vl.json examples/specs/bar_month.vl.json examples/specs/bar_month_band.vl.json examples/specs/bar_month_band_config.vl.json examples/specs/bar_month_temporal.vl.json examples/specs/bar_month_temporal_band_center.vl.json examples/specs/bar_month_temporal_band_center_config.vl.json examples/specs/bar_month_temporal_initial.vl.json examples/specs/bar_multi_values_per_categories.vl.json examples/specs/bar_narrow_int_span.vl.json examples/specs/bar_negative.vl.json examples/specs/bar_negative_horizontal_label.vl.json examples/specs/bar_params.vl.json examples/specs/bar_params_bound.vl.json examples/specs/bar_percent_of_total.vl.json examples/specs/bar_q_qpow.vl.json examples/specs/bar_qq_stack.vl.json examples/specs/bar_qq_stack_horizontal.vl.json examples/specs/bar_ranged_not_binned.vl.json examples/specs/bar_ranged_offset_quantitative.vl.json examples/specs/bar_simple_binned_timeunit_special_chars.vl.json examples/specs/bar_simple_extent.vl.json examples/specs/bar_size_default.vl.json examples/specs/bar_size_explicit_bad.vl.json examples/specs/bar_size_fit.vl.json examples/specs/bar_size_responsive.vl.json examples/specs/bar_size_step_small.vl.json examples/specs/bar_sort_by_count.vl.json examples/specs/bar_swap_axes.vl.json examples/specs/bar_swap_custom.vl.json examples/specs/bar_temporal_color_config_time_unit_band_position.vl.json examples/specs/bar_title.vl.json examples/specs/bar_title_start.vl.json examples/specs/bar_tooltip.vl.json examples/specs/bar_tooltip_aggregate.vl.json examples/specs/bar_tooltip_filter.vl.json examples/specs/bar_tooltip_groupby.vl.json examples/specs/bar_tooltip_multi.vl.json examples/specs/bar_tooltip_title.vl.json examples/specs/bar_x_offset_without_x.vl.json examples/specs/bar_yearmonth.vl.json examples/specs/bar_yearmonth_center_band.vl.json examples/specs/bar_yearmonth_custom_format.vl.json examples/specs/bar_yearmonthdate_minBandSize.vl.json examples/specs/boxplot_1D_horizontal.vl.json examples/specs/boxplot_1D_horizontal_custom_mark.vl.json examples/specs/boxplot_1D_horizontal_explicit.vl.json examples/specs/boxplot_1D_invalid.vl.json examples/specs/boxplot_1D_vertical.vl.json examples/specs/boxplot_2D_horizontal.vl.json examples/specs/boxplot_2D_horizontal_color_size.vl.json examples/specs/boxplot_2D_vertical.vl.json examples/specs/boxplot_2D_vertical_single_per_group.vl.json examples/specs/boxplot_2D_vertical_single_per_group_color.vl.json examples/specs/boxplot_groupped.vl.json examples/specs/boxplot_minmax_2D_horizontal.vl.json examples/specs/boxplot_minmax_2D_horizontal_custom_midtick_color.vl.json examples/specs/boxplot_minmax_2D_vertical.vl.json examples/specs/boxplot_preaggregated.vl.json examples/specs/boxplot_preaggregated_with_height.vl.json examples/specs/boxplot_tooltip_aggregate.vl.json examples/specs/boxplot_tooltip_not_aggregate.vl.json examples/specs/brush_table.vl.json examples/specs/circle.vl.json examples/specs/circle_binned.vl.json examples/specs/circle_binned_maxbins_2.vl.json examples/specs/circle_binned_maxbins_20.vl.json examples/specs/circle_binned_maxbins_5.vl.json examples/specs/circle_bubble_health_income.vl.json examples/specs/circle_custom_tick_labels.vl.json examples/specs/circle_flatten.vl.json examples/specs/circle_github_punchcard.vl.json examples/specs/circle_labelangle_orient_signal.vl.json examples/specs/circle_natural_disasters.vl.json examples/specs/circle_opacity.vl.json examples/specs/circle_scale_quantile.vl.json examples/specs/circle_scale_quantize.vl.json examples/specs/circle_scale_threshold.vl.json examples/specs/circle_wilkinson_dotplot.vl.json examples/specs/circle_wilkinson_dotplot_stacked.vl.json examples/specs/concat_bar_layer_circle.vl.json examples/specs/concat_bar_scales_discretize.vl.json examples/specs/concat_bar_scales_discretize_2_cols.vl.json examples/specs/concat_hover.vl.json examples/specs/concat_hover_filter.vl.json examples/specs/concat_layer_voyager_result.vl.json examples/specs/concat_marginal_histograms.vl.json examples/specs/concat_population_pyramid.vl.json examples/specs/concat_weather.vl.json examples/specs/config_numberFormatType_test.vl.json examples/specs/config_numberFormatType_tooltip.vl.json examples/specs/connected_scatterplot.vl.json examples/specs/data examples/specs/dynamic_color_legend.vl.json examples/specs/embedded_csv.vl.json examples/specs/errorband_2d_horizontal_color_encoding.vl.json examples/specs/errorband_2d_vertical_borders.vl.json examples/specs/errorband_tooltip.vl.json examples/specs/errorbar_2d_vertical_ticks.vl.json examples/specs/errorbar_aggregate.vl.json examples/specs/errorbar_horizontal_aggregate.vl.json examples/specs/errorbar_tooltip.vl.json examples/specs/facet_bullet.vl.json examples/specs/facet_column_facet_column_point_future.vl.json examples/specs/facet_column_facet_row_point_future.vl.json examples/specs/facet_cross_independent_scale.vl.json examples/specs/facet_custom.vl.json examples/specs/facet_custom_header.vl.json examples/specs/facet_grid_bar.vl.json examples/specs/facet_independent_scale.vl.json examples/specs/facet_independent_scale_layer_broken.vl.json examples/specs/facet_row_facet_row_point_future.vl.json examples/specs/geo_choropleth.vl.json examples/specs/geo_circle.vl.json examples/specs/geo_constant_value.vl.json examples/specs/geo_custom_projection.vl.json examples/specs/geo_graticule.vl.json examples/specs/geo_graticule_object.vl.json examples/specs/geo_layer.vl.json examples/specs/geo_layer_line_london.vl.json examples/specs/geo_line.vl.json examples/specs/geo_params_projections.vl.json examples/specs/geo_point.vl.json examples/specs/geo_repeat.vl.json examples/specs/geo_rule.vl.json examples/specs/geo_sphere.vl.json examples/specs/geo_text.vl.json examples/specs/geo_trellis.vl.json examples/specs/hconcat_weather.vl.json examples/specs/histogram.vl.json examples/specs/histogram_bin_change.vl.json examples/specs/histogram_bin_spacing.vl.json examples/specs/histogram_bin_spacing_reverse.vl.json examples/specs/histogram_bin_transform.vl.json examples/specs/histogram_invalid_null.vl.json examples/specs/histogram_log.vl.json examples/specs/histogram_no_spacing.vl.json examples/specs/histogram_nonlinear.vl.json examples/specs/histogram_ordinal.vl.json examples/specs/histogram_ordinal_sort.vl.json examples/specs/histogram_rel_freq.vl.json examples/specs/histogram_reverse.vl.json examples/specs/image_scatter_no_size.vl.json examples/specs/interactive_1d_geo_brush.vl.json examples/specs/interactive_airport_crossfilter.vl.json examples/specs/interactive_area_brush.vl.json examples/specs/interactive_bar_select_highlight.vl.json examples/specs/interactive_bin_extent.vl.json examples/specs/interactive_bin_extent_bottom.vl.json examples/specs/interactive_brush.vl.json examples/specs/interactive_concat_layer.vl.json examples/specs/interactive_crossfilter.vl.json examples/specs/interactive_dashboard_europe_pop.vl.json examples/specs/interactive_geo_earthquakes.vl.json examples/specs/interactive_geo_facet_species.vl.json examples/specs/interactive_global_development.vl.json examples/specs/interactive_histogram_full_height_hover.vl.json examples/specs/interactive_index_chart.vl.json examples/specs/interactive_layered_crossfilter.vl.json examples/specs/interactive_layered_crossfilter_discrete.vl.json examples/specs/interactive_legend.vl.json examples/specs/interactive_legend_dblclick.vl.json examples/specs/interactive_line_brush_cursor.vl.json examples/specs/interactive_line_hover.vl.json examples/specs/interactive_line_point_hover.vl.json examples/specs/interactive_multi_line_label.vl.json examples/specs/interactive_multi_line_pivot_tooltip.vl.json examples/specs/interactive_multi_line_tooltip.vl.json examples/specs/interactive_overview_detail.vl.json examples/specs/interactive_paintbrush.vl.json examples/specs/interactive_paintbrush_color.vl.json examples/specs/interactive_paintbrush_color_nearest.vl.json examples/specs/interactive_paintbrush_interval.vl.json examples/specs/interactive_paintbrush_simple_false.vl.json examples/specs/interactive_paintbrush_simple_true.vl.json examples/specs/interactive_panzoom_splom.vl.json examples/specs/interactive_panzoom_vconcat_shared.vl.json examples/specs/interactive_point_domainRaw_binding.vl.json examples/specs/interactive_point_init.vl.json examples/specs/interactive_query_widgets.vl.json examples/specs/interactive_seattle_weather.vl.json examples/specs/interactive_splom.vl.json examples/specs/interactive_stocks_nearest_index.vl.json examples/specs/isotype_bar_chart.vl.json examples/specs/isotype_bar_chart_emoji.vl.json examples/specs/isotype_grid.vl.json examples/specs/joinaggregate_mean_difference.vl.json examples/specs/joinaggregate_mean_difference_by_year.vl.json examples/specs/joinaggregate_percent_of_total.vl.json examples/specs/joinaggregate_residual_graph.vl.json examples/specs/layer_arc_label.vl.json examples/specs/layer_bar_annotations.vl.json examples/specs/layer_bar_circle_grouped.vl.json examples/specs/layer_bar_fruit.vl.json examples/specs/layer_bar_grouped_line_ungrouped.vl.json examples/specs/layer_bar_labels.vl.json examples/specs/layer_bar_labels_grey.vl.json examples/specs/layer_bar_labels_style.vl.json examples/specs/layer_bar_line.vl.json examples/specs/layer_bar_line_union.vl.json examples/specs/layer_bar_month.vl.json examples/specs/layer_bar_tick_binned_time_band_position.vl.json examples/specs/layer_bar_tick_datum_grouped.vl.json examples/specs/layer_boxplot_circle.vl.json examples/specs/layer_candlestick.vl.json examples/specs/layer_circle_independent_color.vl.json examples/specs/layer_color_legend_left.vl.json examples/specs/layer_cumulative_histogram.vl.json examples/specs/layer_dual_axis.vl.json examples/specs/layer_falkensee.vl.json examples/specs/layer_histogram.vl.json examples/specs/layer_histogram_global_mean.vl.json examples/specs/layer_likert.vl.json examples/specs/layer_line_co2_concentration.vl.json examples/specs/layer_line_color_rule.vl.json examples/specs/layer_line_datum_rule.vl.json examples/specs/layer_line_datum_rule_datetime.vl.json examples/specs/layer_line_errorband_2d_horizontal_borders_strokedash.vl.json examples/specs/layer_line_errorband_ci.vl.json examples/specs/layer_line_errorband_pre_aggregated.vl.json examples/specs/layer_line_exponential.vl.json examples/specs/layer_line_mean_point_raw.vl.json examples/specs/layer_line_rolling_mean_point_raw.vl.json examples/specs/layer_line_window.vl.json examples/specs/layer_null_data.vl.json examples/specs/layer_overlay.vl.json examples/specs/layer_point_errorbar_1d_horizontal.vl.json examples/specs/layer_point_errorbar_1d_vertical.vl.json examples/specs/layer_point_errorbar_2d_horizontal.vl.json examples/specs/layer_point_errorbar_2d_horizontal_ci.vl.json examples/specs/layer_point_errorbar_2d_horizontal_color_encoding.vl.json examples/specs/layer_point_errorbar_2d_horizontal_custom_ticks.vl.json examples/specs/layer_point_errorbar_2d_horizontal_iqr.vl.json examples/specs/layer_point_errorbar_2d_horizontal_stdev.vl.json examples/specs/layer_point_errorbar_2d_vertical.vl.json examples/specs/layer_point_errorbar_ci.vl.json examples/specs/layer_point_errorbar_pre_aggregated_asymmetric_error.vl.json examples/specs/layer_point_errorbar_pre_aggregated_symmetric_error.vl.json examples/specs/layer_point_errorbar_pre_aggregated_upper_lower.vl.json examples/specs/layer_point_errorbar_stdev.vl.json examples/specs/layer_point_line_loess.vl.json examples/specs/layer_point_line_regression.vl.json examples/specs/layer_precipitation_mean.vl.json examples/specs/layer_ranged_dot.vl.json examples/specs/layer_rect_extent.vl.json examples/specs/layer_scatter_errorband_1D_stdev_global_mean.vl.json examples/specs/layer_scatter_errorband_1d_stdev.vl.json examples/specs/layer_single_color.vl.json examples/specs/layer_text_heatmap.vl.json examples/specs/layer_text_heatmap_joinaggregate.vl.json examples/specs/layer_timeunit_rect.vl.json examples/specs/line.vl.json examples/specs/line_bump.vl.json examples/specs/line_calculate.vl.json examples/specs/line_color.vl.json examples/specs/line_color_binned.vl.json examples/specs/line_color_halo.vl.json examples/specs/line_color_label.vl.json examples/specs/line_color_with_scale_domain.vl.json examples/specs/line_concat_facet.vl.json examples/specs/line_conditional_axis.vl.json examples/specs/line_conditional_axis_config.vl.json examples/specs/line_dashed_part.vl.json examples/specs/line_default_format.vl.json examples/specs/line_detail.vl.json examples/specs/line_domainminmax.vl.json examples/specs/line_encoding_impute_keyvals.vl.json examples/specs/line_encoding_impute_keyvals_sequence.vl.json examples/specs/line_impute_frame.vl.json examples/specs/line_impute_keyvals.vl.json examples/specs/line_impute_method.vl.json examples/specs/line_impute_transform_frame.vl.json examples/specs/line_impute_transform_value.vl.json examples/specs/line_impute_value.vl.json examples/specs/line_inside_domain_using_clip.vl.json examples/specs/line_inside_domain_using_transform.vl.json examples/specs/line_invalid_null.vl.json examples/specs/line_max_year.vl.json examples/specs/line_mean_month.vl.json examples/specs/line_mean_year.vl.json examples/specs/line_monotone.vl.json examples/specs/line_month.vl.json examples/specs/line_month_center_band.vl.json examples/specs/line_month_center_band_offset.vl.json examples/specs/line_narrow_2year_span.vl.json examples/specs/line_narrow_year_span.vl.json examples/specs/line_narrow_yearmonth_span.vl.json examples/specs/line_narrow_yearquarter_span.vl.json examples/specs/line_outside_domain.vl.json examples/specs/line_overlay.vl.json examples/specs/line_overlay_stroked.vl.json examples/specs/line_override_dynamic_format.vl.json examples/specs/line_override_static_format.vl.json examples/specs/line_params.vl.json examples/specs/line_quarter_legend.vl.json examples/specs/line_shape_overlay.vl.json examples/specs/line_skip_invalid.vl.json examples/specs/line_skip_invalid_mid.vl.json examples/specs/line_skip_invalid_mid_cap_square.vl.json examples/specs/line_skip_invalid_mid_overlay.vl.json examples/specs/line_slope.vl.json examples/specs/line_sort_axis.vl.json examples/specs/line_step.vl.json examples/specs/line_strokedash.vl.json examples/specs/line_timestamp_domain.vl.json examples/specs/line_timeunit_transform.vl.json examples/specs/lookup.vl.json examples/specs/nested_concat_align.vl.json examples/specs/normalized examples/specs/parallel_coordinate.vl.json examples/specs/param_expr.vl.json examples/specs/param_search_input.vl.json examples/specs/point_1d.vl.json examples/specs/point_1d_array.vl.json examples/specs/point_2d.vl.json examples/specs/point_2d_aggregate.vl.json examples/specs/point_2d_array.vl.json examples/specs/point_2d_array_named.vl.json examples/specs/point_2d_config_no_zero.vl.json examples/specs/point_2d_tooltip.vl.json examples/specs/point_2d_tooltip_data.vl.json examples/specs/point_aggregate_detail.vl.json examples/specs/point_angle_windvector.vl.json examples/specs/point_background.vl.json examples/specs/point_binned_color.vl.json examples/specs/point_binned_opacity.vl.json examples/specs/point_binned_size.vl.json examples/specs/point_bubble.vl.json examples/specs/point_color.vl.json examples/specs/point_color_custom.vl.json examples/specs/point_color_ordinal.vl.json examples/specs/point_color_quantitative.vl.json examples/specs/point_color_shape_constant.vl.json examples/specs/point_color_with_shape.vl.json examples/specs/point_colorramp_size.vl.json examples/specs/point_conditional_opacity.vl.json examples/specs/point_constant_legend_domain.vl.json examples/specs/point_diverging_color.vl.json examples/specs/point_dot_timeunit_color.vl.json examples/specs/point_filled.vl.json examples/specs/point_grouped.vl.json examples/specs/point_href.vl.json examples/specs/point_invalid_color.vl.json examples/specs/point_invalid_size_show.vl.json examples/specs/point_log.vl.json examples/specs/point_no_axis_domain_grid.vl.json examples/specs/point_offset_random.vl.json examples/specs/point_ordinal_bin_offset_random.vl.json examples/specs/point_ordinal_color.vl.json examples/specs/point_overlap.vl.json examples/specs/point_params.vl.json examples/specs/point_quantile_quantile.vl.json examples/specs/point_scale_range_field.vl.json examples/specs/point_shape_custom.vl.json examples/specs/point_tooltip.vl.json examples/specs/rect_binned_heatmap.vl.json examples/specs/rect_heatmap.vl.json examples/specs/rect_heatmap_weather.vl.json examples/specs/rect_heatmap_weather_temporal_center_band.vl.json examples/specs/rect_heatmap_weather_temporal_center_band_config.vl.json examples/specs/rect_lasagna.vl.json examples/specs/rect_mosaic_labelled.vl.json examples/specs/rect_mosaic_labelled_with_offset.vl.json examples/specs/rect_mosaic_simple.vl.json examples/specs/rect_params.vl.json examples/specs/repeat_child_layer.vl.json examples/specs/repeat_histogram.vl.json examples/specs/repeat_histogram_autosize.vl.json examples/specs/repeat_histogram_flights.vl.json examples/specs/repeat_independent_colors.vl.json examples/specs/repeat_layer.vl.json examples/specs/repeat_layer_size.json examples/specs/repeat_line_weather.vl.json examples/specs/repeat_splom.vl.json examples/specs/repeat_splom_cars.vl.json examples/specs/rule_color_mean.vl.json examples/specs/rule_extent.vl.json examples/specs/rule_params.vl.json examples/specs/sample_scatterplot.vl.json examples/specs/scatter_image.vl.json examples/specs/selection_bind_cylyr.vl.json examples/specs/selection_bind_origin.vl.json examples/specs/selection_brush_timeunit.vl.json examples/specs/selection_clear_brush.vl.json examples/specs/selection_composition_and.vl.json examples/specs/selection_composition_or.vl.json examples/specs/selection_concat.vl.json examples/specs/selection_filter.vl.json examples/specs/selection_filter_composition.vl.json examples/specs/selection_filter_false.vl.json examples/specs/selection_filter_true.vl.json examples/specs/selection_heatmap.vl.json examples/specs/selection_insert.vl.json examples/specs/selection_interval_mark_style.vl.json examples/specs/selection_layer.json examples/specs/selection_layer_bar_month.vl.json examples/specs/selection_multi_condition.vl.json examples/specs/selection_project_binned_interval.vl.json examples/specs/selection_project_interval.vl.json examples/specs/selection_project_interval_x.vl.json examples/specs/selection_project_interval_x_y.vl.json examples/specs/selection_project_interval_y.vl.json examples/specs/selection_project_multi.vl.json examples/specs/selection_project_multi_cylinders.vl.json examples/specs/selection_project_multi_cylinders_origin.vl.json examples/specs/selection_project_multi_origin.vl.json examples/specs/selection_project_single.vl.json examples/specs/selection_project_single_cylinders.vl.json examples/specs/selection_project_single_cylinders_origin.vl.json examples/specs/selection_project_single_origin.vl.json examples/specs/selection_resolution_global.vl.json examples/specs/selection_resolution_intersect.vl.json examples/specs/selection_resolution_union.vl.json examples/specs/selection_toggle_altKey.vl.json examples/specs/selection_toggle_altKey_shiftKey.vl.json examples/specs/selection_toggle_shiftKey.vl.json examples/specs/selection_translate_brush_drag.vl.json examples/specs/selection_translate_brush_shift-drag.vl.json examples/specs/selection_translate_scatterplot_drag.vl.json examples/specs/selection_translate_scatterplot_shift-drag.vl.json examples/specs/selection_type_interval.vl.json examples/specs/selection_type_interval_invert.vl.json examples/specs/selection_type_point.vl.json examples/specs/selection_type_point_zorder.vl.json examples/specs/selection_type_single_dblclick.vl.json examples/specs/selection_type_single_pointerover.vl.json examples/specs/selection_zoom_brush_shift-wheel.vl.json examples/specs/selection_zoom_brush_wheel.vl.json examples/specs/selection_zoom_scatterplot_shift-wheel.vl.json examples/specs/selection_zoom_scatterplot_wheel.vl.json examples/specs/sequence_line.vl.json examples/specs/sequence_line_fold.vl.json examples/specs/square.vl.json examples/specs/stacked_area.vl.json examples/specs/stacked_area_binned.vl.json examples/specs/stacked_area_normalize.vl.json examples/specs/stacked_area_ordinal.vl.json examples/specs/stacked_area_overlay.vl.json examples/specs/stacked_area_stream.vl.json examples/specs/stacked_area_without_agg.vl.json examples/specs/stacked_bar_1d.vl.json examples/specs/stacked_bar_count.vl.json examples/specs/stacked_bar_count_corner_radius_config.vl.json examples/specs/stacked_bar_count_corner_radius_mark.vl.json examples/specs/stacked_bar_count_corner_radius_mark_x.vl.json examples/specs/stacked_bar_count_corner_radius_stroke.vl.json examples/specs/stacked_bar_h.vl.json examples/specs/stacked_bar_h_custom_color_domain.vl.json examples/specs/stacked_bar_h_normalized_labeled.vl.json examples/specs/stacked_bar_h_order.vl.json examples/specs/stacked_bar_h_order_custom.vl.json examples/specs/stacked_bar_normalize.vl.json examples/specs/stacked_bar_population.vl.json examples/specs/stacked_bar_population_transform.vl.json examples/specs/stacked_bar_size.vl.json examples/specs/stacked_bar_sum_opacity.vl.json examples/specs/stacked_bar_unaggregate.vl.json examples/specs/stacked_bar_v.vl.json examples/specs/stacked_bar_v_ascending.vl.json examples/specs/stacked_bar_weather.vl.json examples/specs/stocks-2009-layered-line-point.vl.json examples/specs/ternary.vl.json examples/specs/test_aggregate_nested.vl.json examples/specs/test_field_with_spaces.vl.json examples/specs/test_invalid_break_paths_filter_domains.vl.json examples/specs/test_invalid_break_paths_show_domains.vl.json examples/specs/test_invalid_break_paths_show_path_domains.vl.json examples/specs/test_invalid_color_filter.vl.json examples/specs/test_invalid_color_filter_but_include_in_scale_invalid.vl.json examples/specs/test_invalid_color_show.vl.json examples/specs/test_invalid_color_size_config_scale.vl.json examples/specs/test_invalid_color_size_mark_filter_only.vl.json examples/specs/test_invalid_color_size_mark_show_only.vl.json examples/specs/test_invalid_default.vl.json examples/specs/test_invalid_filter.vl.json examples/specs/test_invalid_null.vl.json examples/specs/test_invalid_opacity_filter.vl.json examples/specs/test_invalid_opacity_filter_but_include_in_scale_invalid.vl.json examples/specs/test_invalid_opacity_show.vl.json examples/specs/test_invalid_show.vl.json examples/specs/test_minimal.json examples/specs/test_single_point_color.vl.json examples/specs/test_subobject.vl.json examples/specs/test_subobject_missing.vl.json examples/specs/test_subobject_nested.vl.json examples/specs/test_trellis_cross_sort_missing.vl.json examples/specs/text_format.vl.json examples/specs/text_params.vl.json examples/specs/text_scatterplot_colored.vl.json examples/specs/text_tooltip_image.vl.json examples/specs/tick_dot.vl.json examples/specs/tick_dot_thickness.vl.json examples/specs/tick_grouped.vl.json examples/specs/tick_histogram.vl.json examples/specs/tick_sort.vl.json examples/specs/tick_strip.vl.json examples/specs/tick_strip_1D_with_height.vl.json examples/specs/tick_strip_tick_band.vl.json examples/specs/tick_strip_with_height.vl.json examples/specs/tick_timeunit.vl.json examples/specs/tick_width_band.vl.json examples/specs/time_custom_step.vl.json examples/specs/time_output_utc_scale.vl.json examples/specs/time_output_utc_timeunit.vl.json examples/specs/time_parse_binnedutc.vl.json examples/specs/time_parse_binnedutc_with_escaped_field.vl.json examples/specs/time_parse_local.vl.json examples/specs/time_parse_utc.vl.json examples/specs/time_parse_utc_format.vl.json examples/specs/trail_color.vl.json examples/specs/trail_comet.vl.json examples/specs/trellis_anscombe.vl.json examples/specs/trellis_area.vl.json examples/specs/trellis_area_seattle.vl.json examples/specs/trellis_area_sort_array.vl.json examples/specs/trellis_bar.vl.json examples/specs/trellis_bar_histogram.vl.json examples/specs/trellis_bar_histogram_label_rotated.vl.json examples/specs/trellis_bar_no_header.vl.json examples/specs/trellis_barley.vl.json examples/specs/trellis_barley_independent.vl.json examples/specs/trellis_barley_layer_median.vl.json examples/specs/trellis_column_year.vl.json examples/specs/trellis_cross_sort.vl.json examples/specs/trellis_cross_sort_array.vl.json examples/specs/trellis_line_quarter.vl.json examples/specs/trellis_row_column.vl.json examples/specs/trellis_scatter.vl.json examples/specs/trellis_scatter_binned_row.vl.json examples/specs/trellis_scatter_small.vl.json examples/specs/trellis_selections.vl.json examples/specs/trellis_stacked_bar.vl.json examples/specs/vconcat_flatten.vl.json examples/specs/vconcat_weather.vl.json examples/specs/waterfall_chart.vl.json examples/specs/wheat_wages.vl.json examples/specs/window_cumulative_running_average.vl.json examples/specs/window_impute_null.vl.json examples/specs/window_rank.vl.json examples/specs/window_top_k.vl.json examples/specs/window_top_k_others.vl.json site/examples/
+#18 8.363 skipping non-regular file "data"
+#18 8.451 + rsync examples/compiled/airport_connections.svg examples/compiled/animated_gapminder.svg examples/compiled/animated_hop.svg examples/compiled/arc_color_mappings.svg examples/compiled/arc_donut.svg examples/compiled/arc_facet.svg examples/compiled/arc_ordinal_theta.svg examples/compiled/arc_params.svg examples/compiled/arc_pie.svg examples/compiled/arc_pie_normalize_tooltip.svg examples/compiled/arc_pie_pyramid.svg examples/compiled/arc_radial.svg examples/compiled/arc_radial_histogram.svg examples/compiled/area.svg examples/compiled/area_cumulative_freq.svg examples/compiled/area_density.svg examples/compiled/area_density_facet.svg examples/compiled/area_density_stacked.svg examples/compiled/area_density_stacked_fold.svg examples/compiled/area_gradient.svg examples/compiled/area_horizon.svg examples/compiled/area_invalid_null.svg examples/compiled/area_overlay.svg examples/compiled/area_overlay_with_y2.svg examples/compiled/area_params.svg examples/compiled/area_ranged_offset_quantitative.svg examples/compiled/area_temperature_range.svg examples/compiled/area_vertical.svg examples/compiled/argmin_spaces.svg examples/compiled/bar.svg examples/compiled/bar_1d.svg examples/compiled/bar_1d_binned.svg examples/compiled/bar_1d_default_size.svg examples/compiled/bar_1d_dimension_only.svg examples/compiled/bar_1d_step_config.svg examples/compiled/bar_1d_temporal.svg examples/compiled/bar_aggregate.svg examples/compiled/bar_aggregate_count.svg examples/compiled/bar_aggregate_format.svg examples/compiled/bar_aggregate_size.svg examples/compiled/bar_aggregate_sort_by_encoding.svg examples/compiled/bar_aggregate_sort_mean.svg examples/compiled/bar_aggregate_transform.svg examples/compiled/bar_aggregate_vertical.svg examples/compiled/bar_argmax.svg examples/compiled/bar_argmax_transform.svg examples/compiled/bar_array_aggregate.svg examples/compiled/bar_axis_orient.svg examples/compiled/bar_axis_space_saving.svg examples/compiled/bar_axis_title_quoted.svg examples/compiled/bar_binned_data.svg examples/compiled/bar_binned_yearmonth_grouped.svg examples/compiled/bar_binned_yearmonth_grouped_center_band.svg examples/compiled/bar_binned_yearmonth_label.svg examples/compiled/bar_binned_yearmonth_label_band_center.svg examples/compiled/bar_binnedyearmonth.svg examples/compiled/bar_bullet_expr_bind.svg examples/compiled/bar_color_disabled_scale.svg examples/compiled/bar_column_fold.svg examples/compiled/bar_column_pivot.svg examples/compiled/bar_conditional_opacity.svg examples/compiled/bar_config_no_zero.svg examples/compiled/bar_corner_radius_end.svg examples/compiled/bar_count_minimap.svg examples/compiled/bar_custom_sort_full.svg examples/compiled/bar_custom_sort_partial.svg examples/compiled/bar_custom_time_domain.svg examples/compiled/bar_default_tooltip_title_null.svg examples/compiled/bar_distinct.svg examples/compiled/bar_diverging_stack_population_pyramid.svg examples/compiled/bar_diverging_stack_transform.svg examples/compiled/bar_filter_calc.svg examples/compiled/bar_fit.svg examples/compiled/bar_gantt.svg examples/compiled/bar_gantt_config_no_zero.svg examples/compiled/bar_group_timeunit.svg examples/compiled/bar_grouped.svg examples/compiled/bar_grouped_custom_color_domain.svg examples/compiled/bar_grouped_custom_padding.svg examples/compiled/bar_grouped_errorbar.svg examples/compiled/bar_grouped_facet.svg examples/compiled/bar_grouped_facet_independent_scale.svg examples/compiled/bar_grouped_facet_independent_scale_fixed_width.svg examples/compiled/bar_grouped_fixed_width.svg examples/compiled/bar_grouped_horizontal.svg examples/compiled/bar_grouped_label.svg examples/compiled/bar_grouped_repeated.svg examples/compiled/bar_grouped_stacked.svg examples/compiled/bar_grouped_step_for_offset.svg examples/compiled/bar_grouped_step_for_position.svg examples/compiled/bar_grouped_thin.svg examples/compiled/bar_grouped_thin_minBandSize.svg examples/compiled/bar_grouped_timeunit_yearweek.svg examples/compiled/bar_heatlane.svg examples/compiled/bar_invalid_color_show.svg examples/compiled/bar_invalid_color_show_override.svg examples/compiled/bar_layered_transparent.svg examples/compiled/bar_layered_weather.svg examples/compiled/bar_month.svg examples/compiled/bar_month_band.svg examples/compiled/bar_month_band_config.svg examples/compiled/bar_month_temporal.svg examples/compiled/bar_month_temporal_band_center.svg examples/compiled/bar_month_temporal_band_center_config.svg examples/compiled/bar_month_temporal_initial.svg examples/compiled/bar_multi_values_per_categories.svg examples/compiled/bar_narrow_int_span.svg examples/compiled/bar_negative.svg examples/compiled/bar_negative_horizontal_label.svg examples/compiled/bar_params.svg examples/compiled/bar_params_bound.svg examples/compiled/bar_percent_of_total.svg examples/compiled/bar_q_qpow.svg examples/compiled/bar_qq_stack.svg examples/compiled/bar_qq_stack_horizontal.svg examples/compiled/bar_ranged_not_binned.svg examples/compiled/bar_ranged_offset_quantitative.svg examples/compiled/bar_simple_binned_timeunit_special_chars.svg examples/compiled/bar_simple_extent.svg examples/compiled/bar_size_default.svg examples/compiled/bar_size_explicit_bad.svg examples/compiled/bar_size_fit.svg examples/compiled/bar_size_responsive.svg examples/compiled/bar_size_step_small.svg examples/compiled/bar_sort_by_count.svg examples/compiled/bar_swap_axes.svg examples/compiled/bar_swap_custom.svg examples/compiled/bar_temporal_color_config_time_unit_band_position.svg examples/compiled/bar_title.svg examples/compiled/bar_title_start.svg examples/compiled/bar_tooltip.svg examples/compiled/bar_tooltip_aggregate.svg examples/compiled/bar_tooltip_filter.svg examples/compiled/bar_tooltip_groupby.svg examples/compiled/bar_tooltip_multi.svg examples/compiled/bar_tooltip_title.svg examples/compiled/bar_x_offset_without_x.svg examples/compiled/bar_yearmonth.svg examples/compiled/bar_yearmonth_center_band.svg examples/compiled/bar_yearmonth_custom_format.svg examples/compiled/bar_yearmonthdate_minBandSize.svg examples/compiled/boxplot_1D_horizontal.svg examples/compiled/boxplot_1D_horizontal_custom_mark.svg examples/compiled/boxplot_1D_horizontal_explicit.svg examples/compiled/boxplot_1D_invalid.svg examples/compiled/boxplot_1D_vertical.svg examples/compiled/boxplot_2D_horizontal.svg examples/compiled/boxplot_2D_horizontal_color_size.svg examples/compiled/boxplot_2D_vertical.svg examples/compiled/boxplot_2D_vertical_single_per_group.svg examples/compiled/boxplot_2D_vertical_single_per_group_color.svg examples/compiled/boxplot_groupped.svg examples/compiled/boxplot_minmax_2D_horizontal.svg examples/compiled/boxplot_minmax_2D_horizontal_custom_midtick_color.svg examples/compiled/boxplot_minmax_2D_vertical.svg examples/compiled/boxplot_preaggregated.svg examples/compiled/boxplot_preaggregated_with_height.svg examples/compiled/boxplot_tooltip_aggregate.svg examples/compiled/boxplot_tooltip_not_aggregate.svg examples/compiled/brush_table.svg examples/compiled/circle.svg examples/compiled/circle_binned.svg examples/compiled/circle_binned_maxbins_2.svg examples/compiled/circle_binned_maxbins_20.svg examples/compiled/circle_binned_maxbins_5.svg examples/compiled/circle_bubble_health_income.svg examples/compiled/circle_custom_tick_labels.svg examples/compiled/circle_flatten.svg examples/compiled/circle_github_punchcard.svg examples/compiled/circle_labelangle_orient_signal.svg examples/compiled/circle_natural_disasters.svg examples/compiled/circle_opacity.svg examples/compiled/circle_scale_quantile.svg examples/compiled/circle_scale_quantize.svg examples/compiled/circle_scale_threshold.svg examples/compiled/circle_wilkinson_dotplot.svg examples/compiled/circle_wilkinson_dotplot_stacked.svg examples/compiled/concat_bar_layer_circle.svg examples/compiled/concat_bar_scales_discretize.svg examples/compiled/concat_bar_scales_discretize_2_cols.svg examples/compiled/concat_hover.svg examples/compiled/concat_hover_filter.svg examples/compiled/concat_layer_voyager_result.svg examples/compiled/concat_marginal_histograms.svg examples/compiled/concat_population_pyramid.svg examples/compiled/concat_weather.svg examples/compiled/config_numberFormatType_test.svg examples/compiled/config_numberFormatType_tooltip.svg examples/compiled/connected_scatterplot.svg examples/compiled/dynamic_color_legend.svg examples/compiled/embedded_csv.svg examples/compiled/errorband_2d_horizontal_color_encoding.svg examples/compiled/errorband_2d_vertical_borders.svg examples/compiled/errorband_tooltip.svg examples/compiled/errorbar_2d_vertical_ticks.svg examples/compiled/errorbar_aggregate.svg examples/compiled/errorbar_horizontal_aggregate.svg examples/compiled/errorbar_tooltip.svg examples/compiled/facet_bullet.svg examples/compiled/facet_column_facet_column_point_future.svg examples/compiled/facet_column_facet_row_point_future.svg examples/compiled/facet_cross_independent_scale.svg examples/compiled/facet_custom.svg examples/compiled/facet_custom_header.svg examples/compiled/facet_grid_bar.svg examples/compiled/facet_independent_scale.svg examples/compiled/facet_independent_scale_layer_broken.svg examples/compiled/facet_row_facet_row_point_future.svg examples/compiled/geo_choropleth.svg examples/compiled/geo_circle.svg examples/compiled/geo_constant_value.svg examples/compiled/geo_custom_projection.svg examples/compiled/geo_graticule.svg examples/compiled/geo_graticule_object.svg examples/compiled/geo_layer.svg examples/compiled/geo_layer_line_london.svg examples/compiled/geo_line.svg examples/compiled/geo_params_projections.svg examples/compiled/geo_point.svg examples/compiled/geo_repeat.svg examples/compiled/geo_rule.svg examples/compiled/geo_sphere.svg examples/compiled/geo_text.svg examples/compiled/geo_trellis.svg examples/compiled/hconcat_weather.svg examples/compiled/histogram.svg examples/compiled/histogram_bin_change.svg examples/compiled/histogram_bin_spacing.svg examples/compiled/histogram_bin_spacing_reverse.svg examples/compiled/histogram_bin_transform.svg examples/compiled/histogram_invalid_null.svg examples/compiled/histogram_log.svg examples/compiled/histogram_no_spacing.svg examples/compiled/histogram_nonlinear.svg examples/compiled/histogram_ordinal.svg examples/compiled/histogram_ordinal_sort.svg examples/compiled/histogram_rel_freq.svg examples/compiled/histogram_reverse.svg examples/compiled/image_scatter_no_size.svg examples/compiled/interactive_1d_geo_brush.svg examples/compiled/interactive_airport_crossfilter.svg examples/compiled/interactive_area_brush.svg examples/compiled/interactive_bar_select_highlight.svg examples/compiled/interactive_bin_extent.svg examples/compiled/interactive_bin_extent_bottom.svg examples/compiled/interactive_brush.svg examples/compiled/interactive_concat_layer.svg examples/compiled/interactive_crossfilter.svg examples/compiled/interactive_dashboard_europe_pop.svg examples/compiled/interactive_geo_earthquakes.svg examples/compiled/interactive_geo_facet_species.svg examples/compiled/interactive_global_development.svg examples/compiled/interactive_histogram_full_height_hover.svg examples/compiled/interactive_index_chart.svg examples/compiled/interactive_layered_crossfilter.svg examples/compiled/interactive_layered_crossfilter_discrete.svg examples/compiled/interactive_legend.svg examples/compiled/interactive_legend_dblclick.svg examples/compiled/interactive_line_brush_cursor.svg examples/compiled/interactive_line_hover.svg examples/compiled/interactive_line_point_hover.svg examples/compiled/interactive_multi_line_label.svg examples/compiled/interactive_multi_line_pivot_tooltip.svg examples/compiled/interactive_multi_line_tooltip.svg examples/compiled/interactive_overview_detail.svg examples/compiled/interactive_paintbrush.svg examples/compiled/interactive_paintbrush_color.svg examples/compiled/interactive_paintbrush_color_nearest.svg examples/compiled/interactive_paintbrush_interval.svg examples/compiled/interactive_paintbrush_simple_false.svg examples/compiled/interactive_paintbrush_simple_true.svg examples/compiled/interactive_panzoom_splom.svg examples/compiled/interactive_panzoom_vconcat_shared.svg examples/compiled/interactive_point_domainRaw_binding.svg examples/compiled/interactive_point_init.svg examples/compiled/interactive_query_widgets.svg examples/compiled/interactive_seattle_weather.svg examples/compiled/interactive_splom.svg examples/compiled/interactive_stocks_nearest_index.svg examples/compiled/isotype_bar_chart.svg examples/compiled/isotype_bar_chart_emoji.svg examples/compiled/isotype_grid.svg examples/compiled/joinaggregate_mean_difference.svg examples/compiled/joinaggregate_mean_difference_by_year.svg examples/compiled/joinaggregate_percent_of_total.svg examples/compiled/joinaggregate_residual_graph.svg examples/compiled/layer_arc_label.svg examples/compiled/layer_bar_annotations.svg examples/compiled/layer_bar_circle_grouped.svg examples/compiled/layer_bar_fruit.svg examples/compiled/layer_bar_grouped_line_ungrouped.svg examples/compiled/layer_bar_labels.svg examples/compiled/layer_bar_labels_grey.svg examples/compiled/layer_bar_labels_style.svg examples/compiled/layer_bar_line.svg examples/compiled/layer_bar_line_union.svg examples/compiled/layer_bar_month.svg examples/compiled/layer_bar_tick_binned_time_band_position.svg examples/compiled/layer_bar_tick_datum_grouped.svg examples/compiled/layer_boxplot_circle.svg examples/compiled/layer_candlestick.svg examples/compiled/layer_circle_independent_color.svg examples/compiled/layer_color_legend_left.svg examples/compiled/layer_cumulative_histogram.svg examples/compiled/layer_dual_axis.svg examples/compiled/layer_falkensee.svg examples/compiled/layer_histogram.svg examples/compiled/layer_histogram_global_mean.svg examples/compiled/layer_likert.svg examples/compiled/layer_line_co2_concentration.svg examples/compiled/layer_line_color_rule.svg examples/compiled/layer_line_datum_rule.svg examples/compiled/layer_line_datum_rule_datetime.svg examples/compiled/layer_line_errorband_2d_horizontal_borders_strokedash.svg examples/compiled/layer_line_errorband_ci.svg examples/compiled/layer_line_errorband_pre_aggregated.svg examples/compiled/layer_line_exponential.svg examples/compiled/layer_line_mean_point_raw.svg examples/compiled/layer_line_rolling_mean_point_raw.svg examples/compiled/layer_line_window.svg examples/compiled/layer_null_data.svg examples/compiled/layer_overlay.svg examples/compiled/layer_point_errorbar_1d_horizontal.svg examples/compiled/layer_point_errorbar_1d_vertical.svg examples/compiled/layer_point_errorbar_2d_horizontal.svg examples/compiled/layer_point_errorbar_2d_horizontal_ci.svg examples/compiled/layer_point_errorbar_2d_horizontal_color_encoding.svg examples/compiled/layer_point_errorbar_2d_horizontal_custom_ticks.svg examples/compiled/layer_point_errorbar_2d_horizontal_iqr.svg examples/compiled/layer_point_errorbar_2d_horizontal_stdev.svg examples/compiled/layer_point_errorbar_2d_vertical.svg examples/compiled/layer_point_errorbar_ci.svg examples/compiled/layer_point_errorbar_pre_aggregated_asymmetric_error.svg examples/compiled/layer_point_errorbar_pre_aggregated_symmetric_error.svg examples/compiled/layer_point_errorbar_pre_aggregated_upper_lower.svg examples/compiled/layer_point_errorbar_stdev.svg examples/compiled/layer_point_line_loess.svg examples/compiled/layer_point_line_regression.svg examples/compiled/layer_precipitation_mean.svg examples/compiled/layer_ranged_dot.svg examples/compiled/layer_rect_extent.svg examples/compiled/layer_scatter_errorband_1D_stdev_global_mean.svg examples/compiled/layer_scatter_errorband_1d_stdev.svg examples/compiled/layer_single_color.svg examples/compiled/layer_text_heatmap.svg examples/compiled/layer_text_heatmap_joinaggregate.svg examples/compiled/layer_timeunit_rect.svg examples/compiled/line.svg examples/compiled/line_bump.svg examples/compiled/line_calculate.svg examples/compiled/line_color.svg examples/compiled/line_color_binned.svg examples/compiled/line_color_halo.svg examples/compiled/line_color_label.svg examples/compiled/line_color_with_scale_domain.svg examples/compiled/line_concat_facet.svg examples/compiled/line_conditional_axis.svg examples/compiled/line_conditional_axis_config.svg examples/compiled/line_dashed_part.svg examples/compiled/line_default_format.svg examples/compiled/line_detail.svg examples/compiled/line_domainminmax.svg examples/compiled/line_encoding_impute_keyvals.svg examples/compiled/line_encoding_impute_keyvals_sequence.svg examples/compiled/line_impute_frame.svg examples/compiled/line_impute_keyvals.svg examples/compiled/line_impute_method.svg examples/compiled/line_impute_transform_frame.svg examples/compiled/line_impute_transform_value.svg examples/compiled/line_impute_value.svg examples/compiled/line_inside_domain_using_clip.svg examples/compiled/line_inside_domain_using_transform.svg examples/compiled/line_invalid_null.svg examples/compiled/line_max_year.svg examples/compiled/line_mean_month.svg examples/compiled/line_mean_year.svg examples/compiled/line_monotone.svg examples/compiled/line_month.svg examples/compiled/line_month_center_band.svg examples/compiled/line_month_center_band_offset.svg examples/compiled/line_narrow_2year_span.svg examples/compiled/line_narrow_year_span.svg examples/compiled/line_narrow_yearmonth_span.svg examples/compiled/line_narrow_yearquarter_span.svg examples/compiled/line_outside_domain.svg examples/compiled/line_overlay.svg examples/compiled/line_overlay_stroked.svg examples/compiled/line_override_dynamic_format.svg examples/compiled/line_override_static_format.svg examples/compiled/line_params.svg examples/compiled/line_quarter_legend.svg examples/compiled/line_shape_overlay.svg examples/compiled/line_skip_invalid.svg examples/compiled/line_skip_invalid_mid.svg examples/compiled/line_skip_invalid_mid_cap_square.svg examples/compiled/line_skip_invalid_mid_overlay.svg examples/compiled/line_slope.svg examples/compiled/line_sort_axis.svg examples/compiled/line_step.svg examples/compiled/line_strokedash.svg examples/compiled/line_timestamp_domain.svg examples/compiled/line_timeunit_transform.svg examples/compiled/lookup.svg examples/compiled/nested_concat_align.svg examples/compiled/parallel_coordinate.svg examples/compiled/param_expr.svg examples/compiled/param_search_input.svg examples/compiled/point_1d.svg examples/compiled/point_1d_array.svg examples/compiled/point_2d.svg examples/compiled/point_2d_aggregate.svg examples/compiled/point_2d_array.svg examples/compiled/point_2d_array_named.svg examples/compiled/point_2d_config_no_zero.svg examples/compiled/point_2d_tooltip.svg examples/compiled/point_2d_tooltip_data.svg examples/compiled/point_aggregate_detail.svg examples/compiled/point_angle_windvector.svg examples/compiled/point_background.svg examples/compiled/point_binned_color.svg examples/compiled/point_binned_opacity.svg examples/compiled/point_binned_size.svg examples/compiled/point_bubble.svg examples/compiled/point_color.svg examples/compiled/point_color_custom.svg examples/compiled/point_color_ordinal.svg examples/compiled/point_color_quantitative.svg examples/compiled/point_color_shape_constant.svg examples/compiled/point_color_with_shape.svg examples/compiled/point_colorramp_size.svg examples/compiled/point_conditional_opacity.svg examples/compiled/point_constant_legend_domain.svg examples/compiled/point_diverging_color.svg examples/compiled/point_dot_timeunit_color.svg examples/compiled/point_filled.svg examples/compiled/point_grouped.svg examples/compiled/point_href.svg examples/compiled/point_invalid_color.svg examples/compiled/point_invalid_size_show.svg examples/compiled/point_log.svg examples/compiled/point_no_axis_domain_grid.svg examples/compiled/point_offset_random.svg examples/compiled/point_ordinal_bin_offset_random.svg examples/compiled/point_ordinal_color.svg examples/compiled/point_overlap.svg examples/compiled/point_params.svg examples/compiled/point_quantile_quantile.svg examples/compiled/point_scale_range_field.svg examples/compiled/point_shape_custom.svg examples/compiled/point_tooltip.svg examples/compiled/rect_binned_heatmap.svg examples/compiled/rect_heatmap.svg examples/compiled/rect_heatmap_weather.svg examples/compiled/rect_heatmap_weather_temporal_center_band.svg examples/compiled/rect_heatmap_weather_temporal_center_band_config.svg examples/compiled/rect_lasagna.svg examples/compiled/rect_mosaic_labelled.svg examples/compiled/rect_mosaic_labelled_with_offset.svg examples/compiled/rect_mosaic_simple.svg examples/compiled/rect_params.svg examples/compiled/repeat_child_layer.svg examples/compiled/repeat_histogram.svg examples/compiled/repeat_histogram_autosize.svg examples/compiled/repeat_histogram_flights.svg examples/compiled/repeat_independent_colors.svg examples/compiled/repeat_layer.svg examples/compiled/repeat_line_weather.svg examples/compiled/repeat_splom.svg examples/compiled/repeat_splom_cars.svg examples/compiled/rule_color_mean.svg examples/compiled/rule_extent.svg examples/compiled/rule_params.svg examples/compiled/sample_scatterplot.svg examples/compiled/scatter_image.svg examples/compiled/selection_bind_cylyr.svg examples/compiled/selection_bind_origin.svg examples/compiled/selection_brush_timeunit.svg examples/compiled/selection_clear_brush.svg examples/compiled/selection_composition_and.svg examples/compiled/selection_composition_or.svg examples/compiled/selection_concat.svg examples/compiled/selection_filter.svg examples/compiled/selection_filter_composition.svg examples/compiled/selection_filter_false.svg examples/compiled/selection_filter_true.svg examples/compiled/selection_heatmap.svg examples/compiled/selection_insert.svg examples/compiled/selection_interval_mark_style.svg examples/compiled/selection_layer_bar_month.svg examples/compiled/selection_multi_condition.svg examples/compiled/selection_project_binned_interval.svg examples/compiled/selection_project_interval.svg examples/compiled/selection_project_interval_x.svg examples/compiled/selection_project_interval_x_y.svg examples/compiled/selection_project_interval_y.svg examples/compiled/selection_project_multi.svg examples/compiled/selection_project_multi_cylinders.svg examples/compiled/selection_project_multi_cylinders_origin.svg examples/compiled/selection_project_multi_origin.svg examples/compiled/selection_project_single.svg examples/compiled/selection_project_single_cylinders.svg examples/compiled/selection_project_single_cylinders_origin.svg examples/compiled/selection_project_single_origin.svg examples/compiled/selection_resolution_global.svg examples/compiled/selection_resolution_intersect.svg examples/compiled/selection_resolution_union.svg examples/compiled/selection_toggle_altKey.svg examples/compiled/selection_toggle_altKey_shiftKey.svg examples/compiled/selection_toggle_shiftKey.svg examples/compiled/selection_translate_brush_drag.svg examples/compiled/selection_translate_brush_shift-drag.svg examples/compiled/selection_translate_scatterplot_drag.svg examples/compiled/selection_translate_scatterplot_shift-drag.svg examples/compiled/selection_type_interval.svg examples/compiled/selection_type_interval_invert.svg examples/compiled/selection_type_point.svg examples/compiled/selection_type_point_zorder.svg examples/compiled/selection_type_single_dblclick.svg examples/compiled/selection_type_single_pointerover.svg examples/compiled/selection_zoom_brush_shift-wheel.svg examples/compiled/selection_zoom_brush_wheel.svg examples/compiled/selection_zoom_scatterplot_shift-wheel.svg examples/compiled/selection_zoom_scatterplot_wheel.svg examples/compiled/sequence_line.svg examples/compiled/sequence_line_fold.svg examples/compiled/square.svg examples/compiled/stacked_area.svg examples/compiled/stacked_area_binned.svg examples/compiled/stacked_area_normalize.svg examples/compiled/stacked_area_ordinal.svg examples/compiled/stacked_area_overlay.svg examples/compiled/stacked_area_stream.svg examples/compiled/stacked_area_without_agg.svg examples/compiled/stacked_bar_1d.svg examples/compiled/stacked_bar_count.svg examples/compiled/stacked_bar_count_corner_radius_config.svg examples/compiled/stacked_bar_count_corner_radius_mark.svg examples/compiled/stacked_bar_count_corner_radius_mark_x.svg examples/compiled/stacked_bar_count_corner_radius_stroke.svg examples/compiled/stacked_bar_h.svg examples/compiled/stacked_bar_h_custom_color_domain.svg examples/compiled/stacked_bar_h_normalized_labeled.svg examples/compiled/stacked_bar_h_order.svg examples/compiled/stacked_bar_h_order_custom.svg examples/compiled/stacked_bar_normalize.svg examples/compiled/stacked_bar_population.svg examples/compiled/stacked_bar_population_transform.svg examples/compiled/stacked_bar_size.svg examples/compiled/stacked_bar_sum_opacity.svg examples/compiled/stacked_bar_unaggregate.svg examples/compiled/stacked_bar_v.svg examples/compiled/stacked_bar_v_ascending.svg examples/compiled/stacked_bar_weather.svg examples/compiled/stocks-2009-layered-line-point.svg examples/compiled/ternary.svg examples/compiled/test_aggregate_nested.svg examples/compiled/test_field_with_spaces.svg examples/compiled/test_invalid_break_paths_filter_domains.svg examples/compiled/test_invalid_break_paths_show_domains.svg examples/compiled/test_invalid_break_paths_show_path_domains.svg examples/compiled/test_invalid_color_filter.svg examples/compiled/test_invalid_color_filter_but_include_in_scale_invalid.svg examples/compiled/test_invalid_color_show.svg examples/compiled/test_invalid_color_size_config_scale.svg examples/compiled/test_invalid_color_size_mark_filter_only.svg examples/compiled/test_invalid_color_size_mark_show_only.svg examples/compiled/test_invalid_default.svg examples/compiled/test_invalid_filter.svg examples/compiled/test_invalid_null.svg examples/compiled/test_invalid_opacity_filter.svg examples/compiled/test_invalid_opacity_filter_but_include_in_scale_invalid.svg examples/compiled/test_invalid_opacity_show.svg examples/compiled/test_invalid_show.svg examples/compiled/test_single_point_color.svg examples/compiled/test_subobject.svg examples/compiled/test_subobject_missing.svg examples/compiled/test_subobject_nested.svg examples/compiled/test_trellis_cross_sort_missing.svg examples/compiled/text_format.svg examples/compiled/text_params.svg examples/compiled/text_scatterplot_colored.svg examples/compiled/text_tooltip_image.svg examples/compiled/tick_dot.svg examples/compiled/tick_dot_thickness.svg examples/compiled/tick_grouped.svg examples/compiled/tick_histogram.svg examples/compiled/tick_sort.svg examples/compiled/tick_strip.svg examples/compiled/tick_strip_1D_with_height.svg examples/compiled/tick_strip_tick_band.svg examples/compiled/tick_strip_with_height.svg examples/compiled/tick_timeunit.svg examples/compiled/tick_width_band.svg examples/compiled/time_custom_step.svg examples/compiled/time_output_utc_scale.svg examples/compiled/time_output_utc_timeunit.svg examples/compiled/time_parse_binnedutc.svg examples/compiled/time_parse_binnedutc_with_escaped_field.svg examples/compiled/time_parse_local.svg examples/compiled/time_parse_utc.svg examples/compiled/time_parse_utc_format.svg examples/compiled/trail_color.svg examples/compiled/trail_comet.svg examples/compiled/trellis_anscombe.svg examples/compiled/trellis_area.svg examples/compiled/trellis_area_seattle.svg examples/compiled/trellis_area_sort_array.svg examples/compiled/trellis_bar.svg examples/compiled/trellis_bar_histogram.svg examples/compiled/trellis_bar_histogram_label_rotated.svg examples/compiled/trellis_bar_no_header.svg examples/compiled/trellis_barley.svg examples/compiled/trellis_barley_independent.svg examples/compiled/trellis_barley_layer_median.svg examples/compiled/trellis_column_year.svg examples/compiled/trellis_cross_sort.svg examples/compiled/trellis_cross_sort_array.svg examples/compiled/trellis_line_quarter.svg examples/compiled/trellis_row_column.svg examples/compiled/trellis_scatter.svg examples/compiled/trellis_scatter_binned_row.svg examples/compiled/trellis_scatter_small.svg examples/compiled/trellis_selections.svg examples/compiled/trellis_stacked_bar.svg examples/compiled/vconcat_flatten.svg examples/compiled/vconcat_weather.svg examples/compiled/waterfall_chart.svg examples/compiled/wheat_wages.svg examples/compiled/window_cumulative_running_average.svg examples/compiled/window_impute_null.svg examples/compiled/window_rank.svg examples/compiled/window_top_k.svg examples/compiled/window_top_k_others.svg site/examples/
+#18 8.595 + scripts/create-example-pages
+#18 8.608 Processing bar
+#18 8.608 Processing bar_size_responsive
+#18 8.608 Processing bar_aggregate
+#18 8.608 Processing bar_aggregate_sort_by_encoding
+#18 8.608 Processing bar_grouped
+#18 8.608 Processing bar_grouped_repeated
+#18 8.608 Processing stacked_bar_weather
+#18 8.608 Processing stacked_bar_count_corner_radius_mark
+#18 8.608 Processing stacked_bar_h
+#18 8.608 Processing stacked_bar_normalize
+#18 8.609 Processing stacked_bar_h_normalized_labeled
+#18 8.609 Processing bar_gantt
+#18 8.609 Processing bar_color_disabled_scale
+#18 8.609 Processing bar_layered_transparent
+#18 8.609 Processing bar_diverging_stack_population_pyramid
+#18 8.609 Processing bar_diverging_stack_transform
+#18 8.609 Processing layer_bar_labels
+#18 8.609 Processing layer_bar_labels_grey
+#18 8.609 Processing bar_month_temporal_initial
+#18 8.609 Processing bar_month_temporal_band_center
+#18 8.609 Processing bar_negative
+#18 8.609 Processing bar_negative_horizontal_label
+#18 8.609 Processing bar_axis_space_saving
+#18 8.609 Processing bar_heatlane
+#18 8.609 Processing histogram
+#18 8.609 Processing bar_binned_data
+#18 8.610 Processing histogram_log
+#18 8.610 Processing histogram_nonlinear
+#18 8.610 Processing histogram_rel_freq
+#18 8.610 Processing area_density
+#18 8.610 Processing area_density_stacked
+#18 8.610 Processing circle_binned
+#18 8.610 Processing rect_binned_heatmap
+#18 8.610 Processing area_cumulative_freq
+#18 8.610 Processing layer_cumulative_histogram
+#18 8.610 Processing circle_wilkinson_dotplot
+#18 8.610 Processing isotype_bar_chart
+#18 8.611 Processing isotype_bar_chart_emoji
+#18 8.611 Processing bar_percent_of_total
+#18 8.611 Processing point_2d
+#18 8.611 Processing tick_dot
+#18 8.611 Processing tick_strip
+#18 8.611 Processing point_color_with_shape
+#18 8.611 Processing circle_binned
+#18 8.611 Processing point_bubble
+#18 8.611 Processing point_invalid_color
+#18 8.611 Processing circle
+#18 8.611 Processing circle_bubble_health_income
+#18 8.611 Processing circle_natural_disasters
+#18 8.611 Processing text_scatterplot_colored
+#18 8.611 Processing scatter_image
+#18 8.611 Processing circle_custom_tick_labels
+#18 8.611 Processing point_offset_random
+#18 8.611 Processing line
+#18 8.611 Processing line_overlay
+#18 8.611 Processing line_overlay_stroked
+#18 8.612 Processing line_color
+#18 8.612 Processing repeat_layer
+#18 8.612 Processing line_color_halo
+#18 8.612 Processing line_slope
+#18 8.612 Processing line_step
+#18 8.612 Processing line_monotone
+#18 8.612 Processing line_conditional_axis
+#18 8.612 Processing connected_scatterplot
+#18 8.612 Processing line_bump
+#18 8.612 Processing trail_color
+#18 8.612 Processing trail_comet
+#18 8.613 Processing line_skip_invalid_mid_overlay
+#18 8.613 Processing layer_line_co2_concentration
+#18 8.613 Processing window_rank
+#18 8.613 Processing sequence_line_fold
+#18 8.613 Processing line_strokedash
+#18 8.613 Processing line_dashed_part
+#18 8.613 Processing area
+#18 8.613 Processing area_gradient
+#18 8.613 Processing area_overlay
+#18 8.613 Processing stacked_area
+#18 8.613 Processing stacked_area_normalize
+#18 8.613 Processing stacked_area_stream
+#18 8.613 Processing area_horizon
+#18 8.614 Processing rect_heatmap
+#18 8.614 Processing rect_heatmap_weather
+#18 8.614 Processing rect_binned_heatmap
+#18 8.614 Processing circle_github_punchcard
+#18 8.614 Processing layer_text_heatmap
+#18 8.614 Processing rect_lasagna
+#18 8.614 Processing rect_mosaic_labelled_with_offset
+#18 8.614 Processing point_angle_windvector
+#18 8.614 Processing arc_pie
+#18 8.614 Processing arc_pie_normalize_tooltip
+#18 8.614 Processing arc_donut
+#18 8.614 Processing layer_arc_label
+#18 8.614 Processing arc_radial
+#18 8.614 Processing arc_pie_pyramid
+#18 8.614 Processing bar_percent_of_total
+#18 8.614 Processing joinaggregate_mean_difference
+#18 8.614 Processing joinaggregate_mean_difference_by_year
+#18 8.614 Processing joinaggregate_residual_graph
+#18 8.614 Processing window_rank
+#18 8.615 Processing waterfall_chart
+#18 8.615 Processing window_top_k
+#18 8.615 Processing window_top_k_others
+#18 8.615 Processing lookup
+#18 8.615 Processing area_cumulative_freq
+#18 8.615 Processing layer_cumulative_histogram
+#18 8.615 Processing parallel_coordinate
+#18 8.615 Processing bar_argmax
+#18 8.615 Processing layer_line_mean_point_raw
+#18 8.615 Processing layer_line_rolling_mean_point_raw
+#18 8.615 Processing layer_line_window
+#18 8.615 Processing point_quantile_quantile
+#18 8.615 Processing layer_point_line_regression
+#18 8.616 Processing layer_point_line_loess
+#18 8.616 Processing window_impute_null
+#18 8.616 Processing ternary
+#18 8.616 Processing layer_point_errorbar_ci
+#18 8.616 Processing layer_point_errorbar_stdev
+#18 8.616 Processing layer_line_errorband_ci
+#18 8.616 Processing layer_scatter_errorband_1D_stdev_global_mean
+#18 8.616 Processing boxplot_minmax_2D_vertical
+#18 8.616 Processing boxplot_2D_vertical
+#18 8.616 Processing boxplot_preaggregated
+#18 8.616 Processing layer_bar_labels
+#18 8.616 Processing layer_bar_fruit
+#18 8.616 Processing layer_text_heatmap
+#18 8.616 Processing layer_line_co2_concentration
+#18 8.616 Processing layer_bar_annotations
+#18 8.616 Processing layer_precipitation_mean
+#18 8.616 Processing layer_histogram_global_mean
+#18 8.616 Processing layer_falkensee
+#18 8.616 Processing layer_line_mean_point_raw
+#18 8.616 Processing layer_line_rolling_mean_point_raw
+#18 8.616 Processing layer_likert
+#18 8.617 Processing concat_layer_voyager_result
+#18 8.617 Processing layer_candlestick
+#18 8.617 Processing layer_ranged_dot
+#18 8.617 Processing facet_bullet
+#18 8.617 Processing layer_dual_axis
+#18 8.617 Processing area_horizon
+#18 8.617 Processing bar_layered_weather
+#18 8.617 Processing wheat_wages
+#18 8.617 Processing trellis_bar
+#18 8.617 Processing trellis_stacked_bar
+#18 8.617 Processing trellis_scatter
+#18 8.617 Processing trellis_bar_histogram
+#18 8.617 Processing trellis_anscombe
+#18 8.617 Processing trellis_barley
+#18 8.617 Processing trellis_area
+#18 8.617 Processing trellis_area_seattle
+#18 8.618 Processing area_density_facet
+#18 8.618 Processing facet_grid_bar
+#18 8.618 Processing repeat_layer
+#18 8.618 Processing vconcat_weather
+#18 8.618 Processing repeat_histogram
+#18 8.618 Processing interactive_splom
+#18 8.618 Processing concat_marginal_histograms
+#18 8.618 Processing concat_bar_scales_discretize
+#18 8.618 Processing nested_concat_align
+#18 8.618 Processing concat_population_pyramid
+#18 8.618 Processing geo_choropleth
+#18 8.618 Processing geo_circle
+#18 8.618 Processing geo_layer
+#18 8.618 Processing geo_rule
+#18 8.618 Processing geo_repeat
+#18 8.618 Processing geo_text
+#18 8.618 Processing geo_line
+#18 8.618 Processing geo_trellis
+#18 8.619 Processing geo_layer_line_london
+#18 8.619 Processing geo_params_projections
+#18 8.619 Processing interactive_geo_earthquakes
+#18 8.619 Processing interactive_geo_facet_species
+#18 8.619 Processing interactive_bar_select_highlight
+#18 8.619 Processing interactive_histogram_full_height_hover
+#18 8.619 Processing interactive_legend
+#18 8.619 Processing point_href
+#18 8.619 Processing interactive_brush
+#18 8.619 Processing interactive_area_brush
+#18 8.619 Processing interactive_paintbrush
+#18 8.619 Processing selection_translate_scatterplot_drag
+#18 8.619 Processing interactive_query_widgets
+#18 8.620 Processing selection_layer_bar_month
+#18 8.620 Processing interactive_line_hover
+#18 8.620 Processing interactive_line_point_hover
+#18 8.620 Processing interactive_multi_line_label
+#18 8.620 Processing interactive_multi_line_pivot_tooltip
+#18 8.620 Processing interactive_multi_line_tooltip
+#18 8.620 Processing isotype_grid
+#18 8.620 Processing brush_table
+#18 8.620 Processing selection_heatmap
+#18 8.620 Processing bar_count_minimap
+#18 8.620 Processing interactive_index_chart
+#18 8.620 Processing interactive_bin_extent
+#18 8.620 Processing dynamic_color_legend
+#18 8.620 Processing param_search_input
+#18 8.620 Processing selection_type_point_zorder
+#18 8.620 Processing interactive_overview_detail
+#18 8.620 Processing interactive_crossfilter
+#18 8.620 Processing interactive_layered_crossfilter
+#18 8.620 Processing interactive_splom
+#18 8.621 Processing interactive_concat_layer
+#18 8.621 Processing interactive_seattle_weather
+#18 8.621 Processing airport_connections
+#18 8.621 Processing interactive_global_development
+#18 8.623 + rsync examples/compiled/airport_connections.png examples/compiled/animated_gapminder.png examples/compiled/animated_hop.png examples/compiled/arc_color_mappings.png examples/compiled/arc_donut.png examples/compiled/arc_facet.png examples/compiled/arc_ordinal_theta.png examples/compiled/arc_params.png examples/compiled/arc_pie.png examples/compiled/arc_pie_normalize_tooltip.png examples/compiled/arc_pie_pyramid.png examples/compiled/arc_radial.png examples/compiled/arc_radial_histogram.png examples/compiled/area.png examples/compiled/area_cumulative_freq.png examples/compiled/area_density.png examples/compiled/area_density_facet.png examples/compiled/area_density_stacked.png examples/compiled/area_density_stacked_fold.png examples/compiled/area_gradient.png examples/compiled/area_horizon.png examples/compiled/area_invalid_null.png examples/compiled/area_overlay.png examples/compiled/area_overlay_with_y2.png examples/compiled/area_params.png examples/compiled/area_ranged_offset_quantitative.png examples/compiled/area_temperature_range.png examples/compiled/area_vertical.png examples/compiled/argmin_spaces.png examples/compiled/bar.png examples/compiled/bar_1d.png examples/compiled/bar_1d_binned.png examples/compiled/bar_1d_default_size.png examples/compiled/bar_1d_dimension_only.png examples/compiled/bar_1d_step_config.png examples/compiled/bar_1d_temporal.png examples/compiled/bar_aggregate.png examples/compiled/bar_aggregate_count.png examples/compiled/bar_aggregate_format.png examples/compiled/bar_aggregate_size.png examples/compiled/bar_aggregate_sort_by_encoding.png examples/compiled/bar_aggregate_sort_mean.png examples/compiled/bar_aggregate_transform.png examples/compiled/bar_aggregate_vertical.png examples/compiled/bar_argmax.png examples/compiled/bar_argmax_transform.png examples/compiled/bar_array_aggregate.png examples/compiled/bar_axis_orient.png examples/compiled/bar_axis_space_saving.png examples/compiled/bar_axis_title_quoted.png examples/compiled/bar_binned_data.png examples/compiled/bar_binned_yearmonth_grouped.png examples/compiled/bar_binned_yearmonth_grouped_center_band.png examples/compiled/bar_binned_yearmonth_label.png examples/compiled/bar_binned_yearmonth_label_band_center.png examples/compiled/bar_binnedyearmonth.png examples/compiled/bar_bullet_expr_bind.png examples/compiled/bar_color_disabled_scale.png examples/compiled/bar_column_fold.png examples/compiled/bar_column_pivot.png examples/compiled/bar_conditional_opacity.png examples/compiled/bar_config_no_zero.png examples/compiled/bar_corner_radius_end.png examples/compiled/bar_count_minimap.png examples/compiled/bar_custom_sort_full.png examples/compiled/bar_custom_sort_partial.png examples/compiled/bar_custom_time_domain.png examples/compiled/bar_default_tooltip_title_null.png examples/compiled/bar_distinct.png examples/compiled/bar_diverging_stack_population_pyramid.png examples/compiled/bar_diverging_stack_transform.png examples/compiled/bar_filter_calc.png examples/compiled/bar_fit.png examples/compiled/bar_gantt.png examples/compiled/bar_gantt_config_no_zero.png examples/compiled/bar_group_timeunit.png examples/compiled/bar_grouped.png examples/compiled/bar_grouped_custom_color_domain.png examples/compiled/bar_grouped_custom_padding.png examples/compiled/bar_grouped_errorbar.png examples/compiled/bar_grouped_facet.png examples/compiled/bar_grouped_facet_independent_scale.png examples/compiled/bar_grouped_facet_independent_scale_fixed_width.png examples/compiled/bar_grouped_fixed_width.png examples/compiled/bar_grouped_horizontal.png examples/compiled/bar_grouped_label.png examples/compiled/bar_grouped_repeated.png examples/compiled/bar_grouped_stacked.png examples/compiled/bar_grouped_step_for_offset.png examples/compiled/bar_grouped_step_for_position.png examples/compiled/bar_grouped_thin.png examples/compiled/bar_grouped_thin_minBandSize.png examples/compiled/bar_grouped_timeunit_yearweek.png examples/compiled/bar_heatlane.png examples/compiled/bar_invalid_color_show.png examples/compiled/bar_invalid_color_show_override.png examples/compiled/bar_layered_transparent.png examples/compiled/bar_layered_weather.png examples/compiled/bar_month.png examples/compiled/bar_month_band.png examples/compiled/bar_month_band_config.png examples/compiled/bar_month_temporal.png examples/compiled/bar_month_temporal_band_center.png examples/compiled/bar_month_temporal_band_center_config.png examples/compiled/bar_month_temporal_initial.png examples/compiled/bar_multi_values_per_categories.png examples/compiled/bar_narrow_int_span.png examples/compiled/bar_negative.png examples/compiled/bar_negative_horizontal_label.png examples/compiled/bar_params.png examples/compiled/bar_params_bound.png examples/compiled/bar_percent_of_total.png examples/compiled/bar_q_qpow.png examples/compiled/bar_qq_stack.png examples/compiled/bar_qq_stack_horizontal.png examples/compiled/bar_ranged_not_binned.png examples/compiled/bar_ranged_offset_quantitative.png examples/compiled/bar_simple_binned_timeunit_special_chars.png examples/compiled/bar_simple_extent.png examples/compiled/bar_size_default.png examples/compiled/bar_size_explicit_bad.png examples/compiled/bar_size_fit.png examples/compiled/bar_size_responsive.png examples/compiled/bar_size_step_small.png examples/compiled/bar_sort_by_count.png examples/compiled/bar_swap_axes.png examples/compiled/bar_swap_custom.png examples/compiled/bar_temporal_color_config_time_unit_band_position.png examples/compiled/bar_title.png examples/compiled/bar_title_start.png examples/compiled/bar_tooltip.png examples/compiled/bar_tooltip_aggregate.png examples/compiled/bar_tooltip_filter.png examples/compiled/bar_tooltip_groupby.png examples/compiled/bar_tooltip_multi.png examples/compiled/bar_tooltip_title.png examples/compiled/bar_x_offset_without_x.png examples/compiled/bar_yearmonth.png examples/compiled/bar_yearmonth_center_band.png examples/compiled/bar_yearmonth_custom_format.png examples/compiled/bar_yearmonthdate_minBandSize.png examples/compiled/boxplot_1D_horizontal.png examples/compiled/boxplot_1D_horizontal_custom_mark.png examples/compiled/boxplot_1D_horizontal_explicit.png examples/compiled/boxplot_1D_invalid.png examples/compiled/boxplot_1D_vertical.png examples/compiled/boxplot_2D_horizontal.png examples/compiled/boxplot_2D_horizontal_color_size.png examples/compiled/boxplot_2D_vertical.png examples/compiled/boxplot_2D_vertical_single_per_group.png examples/compiled/boxplot_2D_vertical_single_per_group_color.png examples/compiled/boxplot_groupped.png examples/compiled/boxplot_minmax_2D_horizontal.png examples/compiled/boxplot_minmax_2D_horizontal_custom_midtick_color.png examples/compiled/boxplot_minmax_2D_vertical.png examples/compiled/boxplot_preaggregated.png examples/compiled/boxplot_preaggregated_with_height.png examples/compiled/boxplot_tooltip_aggregate.png examples/compiled/boxplot_tooltip_not_aggregate.png examples/compiled/brush_table.png examples/compiled/circle.png examples/compiled/circle_binned.png examples/compiled/circle_binned_maxbins_2.png examples/compiled/circle_binned_maxbins_20.png examples/compiled/circle_binned_maxbins_5.png examples/compiled/circle_bubble_health_income.png examples/compiled/circle_custom_tick_labels.png examples/compiled/circle_flatten.png examples/compiled/circle_github_punchcard.png examples/compiled/circle_labelangle_orient_signal.png examples/compiled/circle_natural_disasters.png examples/compiled/circle_opacity.png examples/compiled/circle_scale_quantile.png examples/compiled/circle_scale_quantize.png examples/compiled/circle_scale_threshold.png examples/compiled/circle_wilkinson_dotplot.png examples/compiled/circle_wilkinson_dotplot_stacked.png examples/compiled/concat_bar_layer_circle.png examples/compiled/concat_bar_scales_discretize.png examples/compiled/concat_bar_scales_discretize_2_cols.png examples/compiled/concat_hover.png examples/compiled/concat_hover_filter.png examples/compiled/concat_layer_voyager_result.png examples/compiled/concat_marginal_histograms.png examples/compiled/concat_population_pyramid.png examples/compiled/concat_weather.png examples/compiled/config_numberFormatType_test.png examples/compiled/config_numberFormatType_tooltip.png examples/compiled/connected_scatterplot.png examples/compiled/dynamic_color_legend.png examples/compiled/embedded_csv.png examples/compiled/errorband_2d_horizontal_color_encoding.png examples/compiled/errorband_2d_vertical_borders.png examples/compiled/errorband_tooltip.png examples/compiled/errorbar_2d_vertical_ticks.png examples/compiled/errorbar_aggregate.png examples/compiled/errorbar_horizontal_aggregate.png examples/compiled/errorbar_tooltip.png examples/compiled/facet_bullet.png examples/compiled/facet_column_facet_column_point_future.png examples/compiled/facet_column_facet_row_point_future.png examples/compiled/facet_cross_independent_scale.png examples/compiled/facet_custom.png examples/compiled/facet_custom_header.png examples/compiled/facet_grid_bar.png examples/compiled/facet_independent_scale.png examples/compiled/facet_independent_scale_layer_broken.png examples/compiled/facet_row_facet_row_point_future.png examples/compiled/geo_choropleth.png examples/compiled/geo_circle.png examples/compiled/geo_constant_value.png examples/compiled/geo_custom_projection.png examples/compiled/geo_graticule.png examples/compiled/geo_graticule_object.png examples/compiled/geo_layer.png examples/compiled/geo_layer_line_london.png examples/compiled/geo_line.png examples/compiled/geo_params_projections.png examples/compiled/geo_point.png examples/compiled/geo_repeat.png examples/compiled/geo_rule.png examples/compiled/geo_sphere.png examples/compiled/geo_text.png examples/compiled/geo_trellis.png examples/compiled/hconcat_weather.png examples/compiled/histogram.png examples/compiled/histogram_bin_change.png examples/compiled/histogram_bin_spacing.png examples/compiled/histogram_bin_spacing_reverse.png examples/compiled/histogram_bin_transform.png examples/compiled/histogram_invalid_null.png examples/compiled/histogram_log.png examples/compiled/histogram_no_spacing.png examples/compiled/histogram_nonlinear.png examples/compiled/histogram_ordinal.png examples/compiled/histogram_ordinal_sort.png examples/compiled/histogram_rel_freq.png examples/compiled/histogram_reverse.png examples/compiled/image_scatter_no_size.png examples/compiled/interactive_1d_geo_brush.png examples/compiled/interactive_airport_crossfilter.png examples/compiled/interactive_area_brush.png examples/compiled/interactive_bar_select_highlight.png examples/compiled/interactive_bin_extent.png examples/compiled/interactive_bin_extent_bottom.png examples/compiled/interactive_brush.png examples/compiled/interactive_concat_layer.png examples/compiled/interactive_crossfilter.png examples/compiled/interactive_dashboard_europe_pop.png examples/compiled/interactive_geo_earthquakes.png examples/compiled/interactive_geo_facet_species.png examples/compiled/interactive_global_development.png examples/compiled/interactive_histogram_full_height_hover.png examples/compiled/interactive_index_chart.png examples/compiled/interactive_layered_crossfilter.png examples/compiled/interactive_layered_crossfilter_discrete.png examples/compiled/interactive_legend.png examples/compiled/interactive_legend_dblclick.png examples/compiled/interactive_line_brush_cursor.png examples/compiled/interactive_line_hover.png examples/compiled/interactive_line_point_hover.png examples/compiled/interactive_multi_line_label.png examples/compiled/interactive_multi_line_pivot_tooltip.png examples/compiled/interactive_multi_line_tooltip.png examples/compiled/interactive_overview_detail.png examples/compiled/interactive_paintbrush.png examples/compiled/interactive_paintbrush_color.png examples/compiled/interactive_paintbrush_color_nearest.png examples/compiled/interactive_paintbrush_interval.png examples/compiled/interactive_paintbrush_simple_false.png examples/compiled/interactive_paintbrush_simple_true.png examples/compiled/interactive_panzoom_splom.png examples/compiled/interactive_panzoom_vconcat_shared.png examples/compiled/interactive_point_domainRaw_binding.png examples/compiled/interactive_point_init.png examples/compiled/interactive_query_widgets.png examples/compiled/interactive_seattle_weather.png examples/compiled/interactive_splom.png examples/compiled/interactive_stocks_nearest_index.png examples/compiled/isotype_bar_chart.png examples/compiled/isotype_bar_chart_emoji.png examples/compiled/isotype_grid.png examples/compiled/joinaggregate_mean_difference.png examples/compiled/joinaggregate_mean_difference_by_year.png examples/compiled/joinaggregate_percent_of_total.png examples/compiled/joinaggregate_residual_graph.png examples/compiled/layer_arc_label.png examples/compiled/layer_bar_annotations.png examples/compiled/layer_bar_circle_grouped.png examples/compiled/layer_bar_fruit.png examples/compiled/layer_bar_grouped_line_ungrouped.png examples/compiled/layer_bar_labels.png examples/compiled/layer_bar_labels_grey.png examples/compiled/layer_bar_labels_style.png examples/compiled/layer_bar_line.png examples/compiled/layer_bar_line_union.png examples/compiled/layer_bar_month.png examples/compiled/layer_bar_tick_binned_time_band_position.png examples/compiled/layer_bar_tick_datum_grouped.png examples/compiled/layer_boxplot_circle.png examples/compiled/layer_candlestick.png examples/compiled/layer_circle_independent_color.png examples/compiled/layer_color_legend_left.png examples/compiled/layer_cumulative_histogram.png examples/compiled/layer_dual_axis.png examples/compiled/layer_falkensee.png examples/compiled/layer_histogram.png examples/compiled/layer_histogram_global_mean.png examples/compiled/layer_likert.png examples/compiled/layer_line_co2_concentration.png examples/compiled/layer_line_color_rule.png examples/compiled/layer_line_datum_rule.png examples/compiled/layer_line_datum_rule_datetime.png examples/compiled/layer_line_errorband_2d_horizontal_borders_strokedash.png examples/compiled/layer_line_errorband_ci.png examples/compiled/layer_line_errorband_pre_aggregated.png examples/compiled/layer_line_exponential.png examples/compiled/layer_line_mean_point_raw.png examples/compiled/layer_line_rolling_mean_point_raw.png examples/compiled/layer_line_window.png examples/compiled/layer_null_data.png examples/compiled/layer_overlay.png examples/compiled/layer_point_errorbar_1d_horizontal.png examples/compiled/layer_point_errorbar_1d_vertical.png examples/compiled/layer_point_errorbar_2d_horizontal.png examples/compiled/layer_point_errorbar_2d_horizontal_ci.png examples/compiled/layer_point_errorbar_2d_horizontal_color_encoding.png examples/compiled/layer_point_errorbar_2d_horizontal_custom_ticks.png examples/compiled/layer_point_errorbar_2d_horizontal_iqr.png examples/compiled/layer_point_errorbar_2d_horizontal_stdev.png examples/compiled/layer_point_errorbar_2d_vertical.png examples/compiled/layer_point_errorbar_ci.png examples/compiled/layer_point_errorbar_pre_aggregated_asymmetric_error.png examples/compiled/layer_point_errorbar_pre_aggregated_symmetric_error.png examples/compiled/layer_point_errorbar_pre_aggregated_upper_lower.png examples/compiled/layer_point_errorbar_stdev.png examples/compiled/layer_point_line_loess.png examples/compiled/layer_point_line_regression.png examples/compiled/layer_precipitation_mean.png examples/compiled/layer_ranged_dot.png examples/compiled/layer_rect_extent.png examples/compiled/layer_scatter_errorband_1D_stdev_global_mean.png examples/compiled/layer_scatter_errorband_1d_stdev.png examples/compiled/layer_single_color.png examples/compiled/layer_text_heatmap.png examples/compiled/layer_text_heatmap_joinaggregate.png examples/compiled/layer_timeunit_rect.png examples/compiled/line.png examples/compiled/line_bump.png examples/compiled/line_calculate.png examples/compiled/line_color.png examples/compiled/line_color_binned.png examples/compiled/line_color_halo.png examples/compiled/line_color_label.png examples/compiled/line_color_with_scale_domain.png examples/compiled/line_concat_facet.png examples/compiled/line_conditional_axis.png examples/compiled/line_conditional_axis_config.png examples/compiled/line_dashed_part.png examples/compiled/line_default_format.png examples/compiled/line_detail.png examples/compiled/line_domainminmax.png examples/compiled/line_encoding_impute_keyvals.png examples/compiled/line_encoding_impute_keyvals_sequence.png examples/compiled/line_impute_frame.png examples/compiled/line_impute_keyvals.png examples/compiled/line_impute_method.png examples/compiled/line_impute_transform_frame.png examples/compiled/line_impute_transform_value.png examples/compiled/line_impute_value.png examples/compiled/line_inside_domain_using_clip.png examples/compiled/line_inside_domain_using_transform.png examples/compiled/line_invalid_null.png examples/compiled/line_max_year.png examples/compiled/line_mean_month.png examples/compiled/line_mean_year.png examples/compiled/line_monotone.png examples/compiled/line_month.png examples/compiled/line_month_center_band.png examples/compiled/line_month_center_band_offset.png examples/compiled/line_narrow_2year_span.png examples/compiled/line_narrow_year_span.png examples/compiled/line_narrow_yearmonth_span.png examples/compiled/line_narrow_yearquarter_span.png examples/compiled/line_outside_domain.png examples/compiled/line_overlay.png examples/compiled/line_overlay_stroked.png examples/compiled/line_override_dynamic_format.png examples/compiled/line_override_static_format.png examples/compiled/line_params.png examples/compiled/line_quarter_legend.png examples/compiled/line_shape_overlay.png examples/compiled/line_skip_invalid.png examples/compiled/line_skip_invalid_mid.png examples/compiled/line_skip_invalid_mid_cap_square.png examples/compiled/line_skip_invalid_mid_overlay.png examples/compiled/line_slope.png examples/compiled/line_sort_axis.png examples/compiled/line_step.png examples/compiled/line_strokedash.png examples/compiled/line_timestamp_domain.png examples/compiled/line_timeunit_transform.png examples/compiled/lookup.png examples/compiled/nested_concat_align.png examples/compiled/parallel_coordinate.png examples/compiled/param_expr.png examples/compiled/param_search_input.png examples/compiled/point_1d.png examples/compiled/point_1d_array.png examples/compiled/point_2d.png examples/compiled/point_2d_aggregate.png examples/compiled/point_2d_array.png examples/compiled/point_2d_array_named.png examples/compiled/point_2d_config_no_zero.png examples/compiled/point_2d_tooltip.png examples/compiled/point_2d_tooltip_data.png examples/compiled/point_aggregate_detail.png examples/compiled/point_angle_windvector.png examples/compiled/point_background.png examples/compiled/point_binned_color.png examples/compiled/point_binned_opacity.png examples/compiled/point_binned_size.png examples/compiled/point_bubble.png examples/compiled/point_color.png examples/compiled/point_color_custom.png examples/compiled/point_color_ordinal.png examples/compiled/point_color_quantitative.png examples/compiled/point_color_shape_constant.png examples/compiled/point_color_with_shape.png examples/compiled/point_colorramp_size.png examples/compiled/point_conditional_opacity.png examples/compiled/point_constant_legend_domain.png examples/compiled/point_diverging_color.png examples/compiled/point_dot_timeunit_color.png examples/compiled/point_filled.png examples/compiled/point_grouped.png examples/compiled/point_href.png examples/compiled/point_invalid_color.png examples/compiled/point_invalid_size_show.png examples/compiled/point_log.png examples/compiled/point_no_axis_domain_grid.png examples/compiled/point_offset_random.png examples/compiled/point_ordinal_bin_offset_random.png examples/compiled/point_ordinal_color.png examples/compiled/point_overlap.png examples/compiled/point_params.png examples/compiled/point_quantile_quantile.png examples/compiled/point_scale_range_field.png examples/compiled/point_shape_custom.png examples/compiled/point_tooltip.png examples/compiled/rect_binned_heatmap.png examples/compiled/rect_heatmap.png examples/compiled/rect_heatmap_weather.png examples/compiled/rect_heatmap_weather_temporal_center_band.png examples/compiled/rect_heatmap_weather_temporal_center_band_config.png examples/compiled/rect_lasagna.png examples/compiled/rect_mosaic_labelled.png examples/compiled/rect_mosaic_labelled_with_offset.png examples/compiled/rect_mosaic_simple.png examples/compiled/rect_params.png examples/compiled/repeat_child_layer.png examples/compiled/repeat_histogram.png examples/compiled/repeat_histogram_autosize.png examples/compiled/repeat_histogram_flights.png examples/compiled/repeat_independent_colors.png examples/compiled/repeat_layer.png examples/compiled/repeat_line_weather.png examples/compiled/repeat_splom.png examples/compiled/repeat_splom_cars.png examples/compiled/rule_color_mean.png examples/compiled/rule_extent.png examples/compiled/rule_params.png examples/compiled/sample_scatterplot.png examples/compiled/scatter_image.png examples/compiled/selection_bind_cylyr.png examples/compiled/selection_bind_origin.png examples/compiled/selection_brush_timeunit.png examples/compiled/selection_clear_brush.png examples/compiled/selection_composition_and.png examples/compiled/selection_composition_or.png examples/compiled/selection_concat.png examples/compiled/selection_filter.png examples/compiled/selection_filter_composition.png examples/compiled/selection_filter_false.png examples/compiled/selection_filter_true.png examples/compiled/selection_heatmap.png examples/compiled/selection_insert.png examples/compiled/selection_interval_mark_style.png examples/compiled/selection_layer_bar_month.png examples/compiled/selection_multi_condition.png examples/compiled/selection_project_binned_interval.png examples/compiled/selection_project_interval.png examples/compiled/selection_project_interval_x.png examples/compiled/selection_project_interval_x_y.png examples/compiled/selection_project_interval_y.png examples/compiled/selection_project_multi.png examples/compiled/selection_project_multi_cylinders.png examples/compiled/selection_project_multi_cylinders_origin.png examples/compiled/selection_project_multi_origin.png examples/compiled/selection_project_single.png examples/compiled/selection_project_single_cylinders.png examples/compiled/selection_project_single_cylinders_origin.png examples/compiled/selection_project_single_origin.png examples/compiled/selection_resolution_global.png examples/compiled/selection_resolution_intersect.png examples/compiled/selection_resolution_union.png examples/compiled/selection_toggle_altKey.png examples/compiled/selection_toggle_altKey_shiftKey.png examples/compiled/selection_toggle_shiftKey.png examples/compiled/selection_translate_brush_drag.png examples/compiled/selection_translate_brush_shift-drag.png examples/compiled/selection_translate_scatterplot_drag.png examples/compiled/selection_translate_scatterplot_shift-drag.png examples/compiled/selection_type_interval.png examples/compiled/selection_type_interval_invert.png examples/compiled/selection_type_point.png examples/compiled/selection_type_point_zorder.png examples/compiled/selection_type_single_dblclick.png examples/compiled/selection_type_single_pointerover.png examples/compiled/selection_zoom_brush_shift-wheel.png examples/compiled/selection_zoom_brush_wheel.png examples/compiled/selection_zoom_scatterplot_shift-wheel.png examples/compiled/selection_zoom_scatterplot_wheel.png examples/compiled/sequence_line.png examples/compiled/sequence_line_fold.png examples/compiled/square.png examples/compiled/stacked_area.png examples/compiled/stacked_area_binned.png examples/compiled/stacked_area_normalize.png examples/compiled/stacked_area_ordinal.png examples/compiled/stacked_area_overlay.png examples/compiled/stacked_area_stream.png examples/compiled/stacked_area_without_agg.png examples/compiled/stacked_bar_1d.png examples/compiled/stacked_bar_count.png examples/compiled/stacked_bar_count_corner_radius_config.png examples/compiled/stacked_bar_count_corner_radius_mark.png examples/compiled/stacked_bar_count_corner_radius_mark_x.png examples/compiled/stacked_bar_count_corner_radius_stroke.png examples/compiled/stacked_bar_h.png examples/compiled/stacked_bar_h_custom_color_domain.png examples/compiled/stacked_bar_h_normalized_labeled.png examples/compiled/stacked_bar_h_order.png examples/compiled/stacked_bar_h_order_custom.png examples/compiled/stacked_bar_normalize.png examples/compiled/stacked_bar_population.png examples/compiled/stacked_bar_population_transform.png examples/compiled/stacked_bar_size.png examples/compiled/stacked_bar_sum_opacity.png examples/compiled/stacked_bar_unaggregate.png examples/compiled/stacked_bar_v.png examples/compiled/stacked_bar_v_ascending.png examples/compiled/stacked_bar_weather.png examples/compiled/stocks-2009-layered-line-point.png examples/compiled/ternary.png examples/compiled/test_aggregate_nested.png examples/compiled/test_field_with_spaces.png examples/compiled/test_invalid_break_paths_filter_domains.png examples/compiled/test_invalid_break_paths_show_domains.png examples/compiled/test_invalid_break_paths_show_path_domains.png examples/compiled/test_invalid_color_filter.png examples/compiled/test_invalid_color_filter_but_include_in_scale_invalid.png examples/compiled/test_invalid_color_show.png examples/compiled/test_invalid_color_size_config_scale.png examples/compiled/test_invalid_color_size_mark_filter_only.png examples/compiled/test_invalid_color_size_mark_show_only.png examples/compiled/test_invalid_default.png examples/compiled/test_invalid_filter.png examples/compiled/test_invalid_null.png examples/compiled/test_invalid_opacity_filter.png examples/compiled/test_invalid_opacity_filter_but_include_in_scale_invalid.png examples/compiled/test_invalid_opacity_show.png examples/compiled/test_invalid_show.png examples/compiled/test_single_point_color.png examples/compiled/test_subobject.png examples/compiled/test_subobject_missing.png examples/compiled/test_subobject_nested.png examples/compiled/test_trellis_cross_sort_missing.png examples/compiled/text_format.png examples/compiled/text_params.png examples/compiled/text_scatterplot_colored.png examples/compiled/text_tooltip_image.png examples/compiled/tick_dot.png examples/compiled/tick_dot_thickness.png examples/compiled/tick_grouped.png examples/compiled/tick_histogram.png examples/compiled/tick_sort.png examples/compiled/tick_strip.png examples/compiled/tick_strip_1D_with_height.png examples/compiled/tick_strip_tick_band.png examples/compiled/tick_strip_with_height.png examples/compiled/tick_timeunit.png examples/compiled/tick_width_band.png examples/compiled/time_custom_step.png examples/compiled/time_output_utc_scale.png examples/compiled/time_output_utc_timeunit.png examples/compiled/time_parse_binnedutc.png examples/compiled/time_parse_binnedutc_with_escaped_field.png examples/compiled/time_parse_local.png examples/compiled/time_parse_utc.png examples/compiled/time_parse_utc_format.png examples/compiled/trail_color.png examples/compiled/trail_comet.png examples/compiled/trellis_anscombe.png examples/compiled/trellis_area.png examples/compiled/trellis_area_seattle.png examples/compiled/trellis_area_sort_array.png examples/compiled/trellis_bar.png examples/compiled/trellis_bar_histogram.png examples/compiled/trellis_bar_histogram_label_rotated.png examples/compiled/trellis_bar_no_header.png examples/compiled/trellis_barley.png examples/compiled/trellis_barley_independent.png examples/compiled/trellis_barley_layer_median.png examples/compiled/trellis_column_year.png examples/compiled/trellis_cross_sort.png examples/compiled/trellis_cross_sort_array.png examples/compiled/trellis_line_quarter.png examples/compiled/trellis_row_column.png examples/compiled/trellis_scatter.png examples/compiled/trellis_scatter_binned_row.png examples/compiled/trellis_scatter_small.png examples/compiled/trellis_selections.png examples/compiled/trellis_stacked_bar.png examples/compiled/vconcat_flatten.png examples/compiled/vconcat_weather.png examples/compiled/waterfall_chart.png examples/compiled/wheat_wages.png examples/compiled/window_cumulative_running_average.png examples/compiled/window_impute_null.png examples/compiled/window_rank.png examples/compiled/window_top_k.png examples/compiled/window_top_k_others.png site/examples/
+#18 8.701 npm notice
+#18 8.701 npm notice New major version of npm available! 11.19.0 -> 12.2.2
+#18 8.701 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#18 8.701 npm notice To update run: npm install -g npm@12.2.2
+#18 8.701 npm notice
+#18 DONE 8.9s
+
+#19 [site 5/7] COPY --from=build /app/site/ ./
+#19 DONE 0.4s
+
+#20 [site 6/7] RUN --mount=type=cache,target=/usr/local/bundle/cache     BUNDLE_FROZEN=true BUNDLE_TIMEOUT=20 bundle _2.6.3_ install --retry=3
+#20 2.665 Fetching gem metadata from https://rubygems.org/.........
+#20 8.837 Fetching base64 0.3.0
+#20 8.837 Fetching benchmark 0.5.0
+#20 8.837 Fetching bigdecimal 4.0.1
+#20 8.837 Fetching concurrent-ruby 1.3.7
+#20 8.837 Fetching connection_pool 3.0.2
+#20 8.837 Fetching drb 2.2.3
+#20 8.837 Fetching logger 1.7.0
+#20 8.837 Fetching minitest 5.27.0
+#20 52.85 Installing base64 0.3.0
+#20 52.85 Fetching securerandom 0.4.1
+#20 52.91 Installing benchmark 0.5.0
+#20 52.92 Fetching uri 1.1.1
+#20 53.02 Installing minitest 5.27.0
+#20 53.04 Fetching public_suffix 5.1.1
+#20 53.20 Installing bigdecimal 4.0.1 with native extensions
+#20 53.31 Installing concurrent-ruby 1.3.7
+#20 53.33 Fetching coffee-script-source 1.12.2
+#20 53.41 Installing connection_pool 3.0.2
+#20 53.42 Fetching execjs 2.10.0
+#20 53.51 Installing drb 2.2.3
+#20 53.51 Fetching colorator 1.1.0
+#20 53.62 Installing logger 1.7.0
+#20 53.63 Fetching commonmarker 0.23.11
+#20 53.73 Installing securerandom 0.4.1
+#20 53.73 Fetching csv 3.3.5
+#20 53.83 Installing uri 1.1.1
+#20 53.83 Fetching simpleidn 0.2.3
+#20 53.93 Installing public_suffix 5.1.1
+#20 53.93 Fetching eventmachine 1.2.7
+#20 54.03 Installing coffee-script-source 1.12.2
+#20 54.03 Fetching http_parser.rb 0.8.0
+#20 54.14 Installing execjs 2.10.0
+#20 54.14 Fetching ffi 1.17.2 (aarch64-linux-gnu)
+#20 54.24 Installing colorator 1.1.0
+#20 54.25 Fetching json 2.20.0
+#20 54.35 Installing commonmarker 0.23.11 with native extensions
+#20 54.46 Installing csv 3.3.5
+#20 54.46 Fetching forwardable-extended 2.6.0
+#20 54.56 Installing simpleidn 0.2.3
+#20 54.56 Fetching gemoji 4.1.0
+#20 54.76 Installing eventmachine 1.2.7 with native extensions
+#20 54.95 Installing http_parser.rb 0.8.0 with native extensions
+#20 55.20 Installing ffi 1.17.2 (aarch64-linux-gnu)
+#20 55.24 Fetching rb-fsevent 0.11.2
+#20 55.31 Installing json 2.20.0 with native extensions
+#20 55.41 Installing forwardable-extended 2.6.0
+#20 55.41 Fetching rexml 3.4.2
+#20 55.51 Installing gemoji 4.1.0
+#20 55.52 Fetching liquid 4.0.4
+#20 55.62 Installing rb-fsevent 0.11.2
+#20 55.64 Fetching mercenary 0.3.6
+#20 55.65 Fetching rouge 3.30.0
+#20 55.73 Installing rexml 3.4.2
+#20 55.74 Fetching safe_yaml 1.0.5
+#20 55.85 Installing liquid 4.0.4
+#20 55.87 Fetching webrick 1.9.2
+#20 55.94 Fetching jekyll-paginate 1.1.0
+#20 55.95 Installing mercenary 0.3.6
+#20 55.96 Fetching rubyzip 2.4.1
+#20 56.88 Installing rouge 3.30.0
+#20 56.96 Fetching jekyll-swiss 1.0.0
+#20 56.97 Installing safe_yaml 1.0.5
+#20 56.98 Fetching unicode-display_width 1.8.0
+#20 57.09 Installing webrick 1.9.2
+#20 57.10 Fetching i18n 1.14.8
+#20 57.19 Installing jekyll-paginate 1.1.0
+#20 57.20 Fetching tzinfo 2.0.6
+#20 57.30 Installing rubyzip 2.4.1
+#20 57.30 Fetching net-http 0.9.1
+#20 57.43 Installing jekyll-swiss 1.0.0
+#20 57.43 Fetching addressable 2.9.0
+#20 57.56 Installing unicode-display_width 1.8.0
+#20 57.56 Fetching coffee-script 2.4.1
+#20 57.67 Installing i18n 1.14.8
+#20 57.67 Fetching dnsruby 1.73.1
+#20 57.77 Installing tzinfo 2.0.6
+#20 57.78 Fetching ethon 0.16.0
+#20 57.87 Installing net-http 0.9.1
+#20 57.88 Fetching rb-inotify 0.11.1
+#20 58.00 Installing addressable 2.9.0
+#20 58.00 Fetching pathutil 0.16.2
+#20 58.10 Installing coffee-script 2.4.1
+#20 58.10 Fetching kramdown 2.4.0
+#20 58.20 Installing dnsruby 1.73.1
+#20 58.22 Fetching nokogiri 1.19.4 (aarch64-linux-gnu)
+#20 58.27 Fetching terminal-table 1.8.0
+#20 58.29 Fetching activesupport 8.0.4.1
+#20 58.30 Installing ethon 0.16.0
+#20 58.31 Fetching faraday-net_http 3.4.4
+#20 58.41 Installing rb-inotify 0.11.1
+#20 58.41 Fetching jekyll-coffeescript 1.2.2
+#20 58.51 Installing pathutil 0.16.2
+#20 58.51 Fetching jekyll-commonmark 1.4.0
+#20 58.61 Installing kramdown 2.4.0
+#20 58.65 Fetching typhoeus 1.4.1
+#20 59.13 Installing nokogiri 1.19.4 (aarch64-linux-gnu)
+#20 59.17 Installing terminal-table 1.8.0
+#20 59.18 Fetching sass-listen 4.0.0
+#20 59.20 Fetching listen 3.9.0
+#20 59.28 Installing activesupport 8.0.4.1
+#20 59.32 Fetching kramdown-parser-gfm 1.1.0
+#20 59.38 Installing faraday-net_http 3.4.4
+#20 59.38 Fetching html-pipeline 2.14.3
+#20 59.48 Installing jekyll-coffeescript 1.2.2
+#20 59.48 Fetching faraday 2.14.3
+#20 59.58 Installing jekyll-commonmark 1.4.0
+#20 59.74 Installing typhoeus 1.4.1
+#20 59.84 Installing sass-listen 4.0.0
+#20 59.84 Fetching sass 3.7.4
+#20 59.94 Installing listen 3.9.0
+#20 59.94 Fetching jekyll-watch 2.2.1
+#20 60.04 Installing kramdown-parser-gfm 1.1.0
+#20 60.15 Installing html-pipeline 2.14.3
+#20 60.25 Installing faraday 2.14.3
+#20 60.26 Fetching sawyer 0.9.2
+#20 60.45 Installing sass 3.7.4
+#20 60.47 Fetching jekyll-sass-converter 1.5.2
+#20 60.57 Installing jekyll-watch 2.2.1
+#20 60.61 Fetching em-websocket 0.5.3
+#20 60.67 Installing sawyer 0.9.2
+#20 60.68 Fetching octokit 4.25.1
+#20 60.78 Installing jekyll-sass-converter 1.5.2
+#20 60.88 Installing em-websocket 0.5.3
+#20 60.89 Fetching jekyll 3.10.0
+#20 60.99 Installing octokit 4.25.1
+#20 61.01 Fetching github-pages-health-check 1.18.2
+#20 61.01 Fetching jekyll-gist 1.5.0
+#20 61.10 Installing jekyll 3.10.0
+#20 61.11 Fetching jekyll-avatar 0.8.0
+#20 61.11 Fetching jekyll-commonmark-ghpages 0.5.1
+#20 61.11 Fetching jekyll-default-layout 0.1.5
+#20 61.11 Fetching jekyll-feed 0.17.0
+#20 61.11 Fetching jekyll-github-metadata 2.16.1
+#20 61.11 Fetching jekyll-include-cache 0.2.1
+#20 61.20 Installing github-pages-health-check 1.18.2
+#20 61.21 Fetching jekyll-mentions 1.6.0
+#20 61.30 Installing jekyll-gist 1.5.0
+#20 61.31 Fetching jekyll-optional-front-matter 0.3.2
+#20 61.42 Installing jekyll-avatar 0.8.0
+#20 61.42 Fetching jekyll-readme-index 0.3.0
+#20 61.52 Installing jekyll-commonmark-ghpages 0.5.1
+#20 61.53 Fetching jekyll-redirect-from 0.16.0
+#20 61.63 Installing jekyll-default-layout 0.1.5
+#20 61.63 Fetching jekyll-relative-links 0.6.1
+#20 61.73 Installing jekyll-feed 0.17.0
+#20 61.74 Fetching jekyll-remote-theme 0.4.3
+#20 61.84 Installing jekyll-github-metadata 2.16.1
+#20 61.84 Fetching jekyll-seo-tag 2.8.0
+#20 61.94 Installing jekyll-include-cache 0.2.1
+#20 61.94 Fetching jekyll-sitemap 1.4.0
+#20 62.04 Installing jekyll-mentions 1.6.0
+#20 62.05 Fetching jekyll-titles-from-headings 0.5.3
+#20 62.15 Installing jekyll-optional-front-matter 0.3.2
+#20 62.15 Fetching jemoji 0.13.0
+#20 62.26 Installing jekyll-readme-index 0.3.0
+#20 62.37 Installing jekyll-redirect-from 0.16.0
+#20 62.47 Installing jekyll-relative-links 0.6.1
+#20 62.57 Installing jekyll-remote-theme 0.4.3
+#20 62.68 Installing jekyll-seo-tag 2.8.0
+#20 62.69 Fetching jekyll-theme-architect 0.2.0
+#20 62.69 Fetching jekyll-theme-cayman 0.2.0
+#20 62.69 Fetching jekyll-theme-dinky 0.2.0
+#20 62.69 Fetching jekyll-theme-hacker 0.2.0
+#20 62.69 Fetching jekyll-theme-leap-day 0.2.0
+#20 62.79 Installing jekyll-sitemap 1.4.0
+#20 62.81 Fetching jekyll-theme-merlot 0.2.0
+#20 62.88 Installing jekyll-titles-from-headings 0.5.3
+#20 62.89 Fetching jekyll-theme-midnight 0.2.0
+#20 62.99 Installing jemoji 0.13.0
+#20 62.99 Fetching jekyll-theme-minimal 0.2.0
+#20 63.09 Installing jekyll-theme-architect 0.2.0
+#20 63.10 Fetching jekyll-theme-modernist 0.2.0
+#20 63.20 Installing jekyll-theme-cayman 0.2.0
+#20 63.20 Fetching jekyll-theme-primer 0.6.0
+#20 63.30 Installing jekyll-theme-dinky 0.2.0
+#20 63.31 Fetching jekyll-theme-slate 0.2.0
+#20 63.40 Installing jekyll-theme-hacker 0.2.0
+#20 63.41 Fetching jekyll-theme-tactile 0.2.0
+#20 63.68 Installing jekyll-theme-leap-day 0.2.0
+#20 63.74 Fetching jekyll-theme-time-machine 0.2.0
+#20 64.57 Installing jekyll-theme-merlot 0.2.0
+#20 64.59 Fetching minima 2.5.1
+#20 65.80 Installing jekyll-theme-midnight 0.2.0
+#20 65.85 Installing jekyll-theme-minimal 0.2.0
+#20 65.95 Installing jekyll-theme-modernist 0.2.0
+#20 66.05 Installing jekyll-theme-primer 0.6.0
+#20 66.18 Installing jekyll-theme-slate 0.2.0
+#20 66.28 Installing jekyll-theme-tactile 0.2.0
+#20 66.38 Installing jekyll-theme-time-machine 0.2.0
+#20 66.49 Installing minima 2.5.1
+#20 66.50 Fetching github-pages 232
+#20 66.64 Installing github-pages 232
+#20 66.65 Bundle complete! 2 Gemfile dependencies, 98 gems now installed.
+#20 66.65 Use `bundle info [gemname]` to see where a bundled gem is installed.
+#20 66.65 Post-install message from minitest:
+#20 66.65 NOTE: minitest 5 will be the last in the minitest family to support
+#20 66.65       ruby 1.8 to 2.7. If you need to keep using these versions,
+#20 66.65       you need to pin your dependency to minitest with something
+#20 66.65       like "~> 5.0". See History.rdoc to locate compatible
+#20 66.65       versions.
+#20 66.65 
+#20 66.65       Further, minitest 6 will be dropping the following:
+#20 66.65 
+#20 66.65       + MiniTest (it's been Minitest for >10 years)
+#20 66.65       + MiniTest::Unit
+#20 66.65       + MiniTest::Unit::TestCase
+#20 66.65       + assert_send (unless you argue for it well)
+#20 66.65       + assert_equal nil, obj
+#20 66.65       + mocks and stubs: moving minitest/mock.rb to its own gem
+#20 66.65 Post-install message from dnsruby:
+#20 66.65 Installing dnsruby...
+#20 66.65   For issues and source code: https://github.com/alexdalitz/dnsruby
+#20 66.65   For general discussion (please tell us how you use dnsruby): https://groups.google.com/forum/#!forum/dnsruby
+#20 66.65 Post-install message from sass:
+#20 66.65 
+#20 66.65 Ruby Sass has reached end-of-life and should no longer be used.
+#20 66.65 
+#20 66.65 * If you use Sass as a command-line tool, we recommend using Dart Sass, the new
+#20 66.65   primary implementation: https://sass-lang.com/install
+#20 66.65 
+#20 66.65 * If you use Sass as a plug-in for a Ruby web framework, we recommend using the
+#20 66.65   sassc gem: https://github.com/sass/sassc-ruby#readme
+#20 66.65 
+#20 66.65 * For more details, please refer to the Sass blog:
+#20 66.65   https://sass-lang.com/blog/posts/7828841
+#20 66.65 
+#20 66.65 Post-install message from html-pipeline:
+#20 66.65 -------------------------------------------------
+#20 66.65 Thank you for installing html-pipeline!
+#20 66.65 You must bundle Filter gem dependencies.
+#20 66.65 See html-pipeline README.md for more details.
+#20 66.65 https://github.com/jch/html-pipeline#dependencies
+#20 66.65 -------------------------------------------------
+#20 66.65 Post-install message from rubyzip:
+#20 66.65 RubyZip 3.0 is coming!
+#20 66.65 **********************
+#20 66.65 
+#20 66.65 The public API of some Rubyzip classes has been modernized to use named
+#20 66.65 parameters for optional arguments. Please check your usage of the
+#20 66.65 following classes:
+#20 66.65   * `Zip::File`
+#20 66.65   * `Zip::Entry`
+#20 66.65   * `Zip::InputStream`
+#20 66.65   * `Zip::OutputStream`
+#20 66.65   * `Zip::DOSTime`
+#20 66.65 
+#20 66.65 Run your test suite with the `RUBYZIP_V3_API_WARN` environment
+#20 66.65 variable set to see warnings about usage of the old API. This will
+#20 66.65 help you to identify any changes that you need to make to your code.
+#20 66.65 See https://github.com/rubyzip/rubyzip/wiki/Updating-to-version-3.x for
+#20 66.65 more information.
+#20 66.65 
+#20 66.65 Please ensure that your Gemfiles and .gemspecs are suitably restrictive
+#20 66.65 to avoid an unexpected breakage when 3.0 is released (e.g. ~> 2.3.0).
+#20 66.65 See https://github.com/rubyzip/rubyzip for details. The Changelog also
+#20 66.65 lists other enhancements and bugfixes that have been implemented since
+#20 66.65 version 2.3.0.
+#20 DONE 66.9s
+
+#21 [site 7/7] RUN bundle _2.6.3_ exec jekyll build --destination /out --baseurl /vega-lite     && test -s /out/static/bundle.js && test -s /out/examples/bar.html
+#21 0.713 Configuration file: /site/_config.yml
+#21 0.797 To use retry middleware with Faraday v2.0+, install `faraday-retry` gem
+#21 1.015             Source: /site
+#21 1.015        Destination: /out
+#21 1.015  Incremental build: disabled. Enable with --incremental
+#21 1.015       Generating... 
+#21 4.088                     done in 3.074 seconds.
+#21 4.088  Auto-regeneration: disabled. Use --watch to enable.
+#21 DONE 4.3s
+
+#22 [runtime 2/2] COPY --from=site /out/ /usr/share/nginx/html/vega-lite/
+#22 DONE 0.3s
+
+#23 exporting to image
+#23 exporting layers
+#23 exporting layers 2.4s done
+#23 exporting manifest sha256:eb0a426807c876c16ed1657ef9670f0359c40cb3c6723d8b13dfe0c3122b9f0c done
+#23 exporting config sha256:dce10d6564028ffb96b513bfb425501b8a178ac8f71d8478ce5b22b2726e06ea done
+#23 exporting attestation manifest sha256:c6881804bc13eb282f49ab01c3c6fe9a7f5823d48a1b84a975b636df2eea1ab6 done
+#23 exporting manifest list sha256:77ebbd8358604ab1d6fbe3b3bb45cce0707bde05a32d9062f707a8e005c68fef done
+#23 naming to docker.io/recall-hufang/vega--vega-lite:e415f441845e done
+#23 unpacking to docker.io/recall-hufang/vega--vega-lite:e415f441845e
+#23 unpacking to docker.io/recall-hufang/vega--vega-lite:e415f441845e 0.7s done
+#23 DONE 3.2s

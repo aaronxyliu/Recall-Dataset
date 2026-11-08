@@ -1,0 +1,224 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "5cbbd224d81b08ce41f07c97e15f9019ca524786ba90dce4a54d855b1f29d9d1",
+    "manifestSHA256": "33bf35f78e40086f51e51ee7858ff2dc0831b45ddf315846abaf7754822b0ae1",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@hpke/core",
+    "@noble/curves",
+    "@noble/hashes",
+    "@scure/base",
+    "@scure/bip39",
+    "fflate",
+    "qrcode-generator"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@hpke/core",
+      "initialAnchors": 11,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "@scure/base",
+        "@scure/bip39",
+        "fflate",
+        "qrcode-generator"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 46,
+      "sourceFiles": 10,
+      "finalInitialAnchors": 11
+    },
+    {
+      "library": "@noble/curves",
+      "initialAnchors": 16,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "@scure/base",
+        "@scure/bip39",
+        "fflate",
+        "qrcode-generator"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 221,
+      "sourceFiles": 5,
+      "finalInitialAnchors": 16
+    },
+    {
+      "library": "@noble/hashes",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "@scure/base",
+        "@scure/bip39",
+        "fflate",
+        "qrcode-generator"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 84,
+      "sourceFiles": 5,
+      "finalInitialAnchors": 7
+    },
+    {
+      "library": "@scure/base",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "fflate",
+        "qrcode-generator",
+        "@scure/base"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 84,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@scure/bip39",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "fflate",
+        "qrcode-generator",
+        "@scure/bip39"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 15,
+      "sourceFiles": 2
+    },
+    {
+      "library": "fflate",
+      "initialAnchors": 6,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "@scure/base",
+        "@scure/bip39",
+        "fflate",
+        "qrcode-generator"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 236,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 6
+    },
+    {
+      "library": "qrcode-generator",
+      "initialAnchors": 16,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "@scure/base",
+        "@scure/bip39",
+        "fflate",
+        "qrcode-generator"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 115,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 16
+    }
+  ],
+  "selectedLibraries": [
+    "@hpke/core",
+    "@noble/curves",
+    "@noble/hashes",
+    "fflate",
+    "qrcode-generator"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 25,
+  "bundleUnits": 3,
+  "candidateOrder": [
+    "@hpke/core",
+    "@noble/curves",
+    "@noble/hashes",
+    "fflate",
+    "qrcode-generator",
+    "@scure/base",
+    "@scure/bip39"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "@scure/base",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "fflate",
+        "qrcode-generator",
+        "@scure/base"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@scure/bip39",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "fflate",
+        "qrcode-generator",
+        "@scure/bip39"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "79881666842a8124da03665c6fc05c9eb35f9b50c5cdca617a835587081e38ab",
+  "bundleDigest": "ec424d380d399b69d39127aa57cd2813932297a1f8d3e12cfb053dd3c3d78b56",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "4139657180288362be4c4dd1a0d07b493dee9ae7efe4decf828e1a7b037be00c",
+  "reason": null,
+  "organizationSignature": "369c4b2094b72d5e3f4908287fe7359870227d5e8faabe6078e640bc2f88e4f7"
+}

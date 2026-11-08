@@ -1,0 +1,277 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "0f6a291637f75436cda88a6ed0f6575632f96fd0239084ed79ba85cf0ef39424",
+    "manifestSHA256": "8f205d668b7e09fb3c1878688d285c7ed51571434cd53caf27a556d2a5d4038b",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@excalidraw/random-username",
+    "@sentry/browser",
+    "callsites",
+    "firebase",
+    "i18next-browser-languagedetector",
+    "idb-keyval",
+    "jotai",
+    "react",
+    "react-dom",
+    "socket.io-client",
+    "uqr",
+    "vite-plugin-html"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@excalidraw/random-username",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@sentry/browser",
+      "initialAnchors": 13,
+      "trialLibraries": [
+        "react-dom",
+        "idb-keyval",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 110,
+      "sourceFiles": 15,
+      "finalInitialAnchors": 13
+    },
+    {
+      "library": "callsites",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "react-dom",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react",
+        "callsites"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "firebase",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "i18next-browser-languagedetector",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "react-dom",
+        "idb-keyval",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 28,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "idb-keyval",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "react-dom",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react",
+        "idb-keyval"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 43,
+      "sourceFiles": 1
+    },
+    {
+      "library": "jotai",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "react-dom",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react",
+        "jotai"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 103,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 7
+    },
+    {
+      "library": "react",
+      "initialAnchors": 6,
+      "trialLibraries": [
+        "react-dom",
+        "idb-keyval",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 67,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 6
+    },
+    {
+      "library": "react-dom",
+      "initialAnchors": 106,
+      "trialLibraries": [
+        "react-dom",
+        "idb-keyval",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 616,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 106
+    },
+    {
+      "library": "socket.io-client",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "uqr",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vite-plugin-html",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    }
+  ],
+  "selectedLibraries": [
+    "react-dom",
+    "@sentry/browser",
+    "i18next-browser-languagedetector",
+    "react",
+    "jotai"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 28,
+  "bundleUnits": 13,
+  "candidateOrder": [
+    "react-dom",
+    "@sentry/browser",
+    "i18next-browser-languagedetector",
+    "react",
+    "idb-keyval",
+    "@excalidraw/random-username",
+    "callsites",
+    "firebase",
+    "jotai",
+    "socket.io-client",
+    "uqr",
+    "vite-plugin-html"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "idb-keyval",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "react-dom",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react",
+        "idb-keyval"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "callsites",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "react-dom",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react",
+        "callsites"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "jotai",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "react-dom",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react",
+        "jotai"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "b4a8bfa7e631402373665fb28893ebd3aadf52859f248b0c7877b67dacea6de4",
+  "bundleDigest": "2838748c55a77ed871639b8517c522f20a6b6c65829349a4299f1815c5009b15",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "2085dd020fe3845bb07824f68d8bee85e9c12c06312fe721c62e7f75917874e1",
+  "reason": null,
+  "organizationSignature": "e44b56752666b013ab8693810d8f93674ba67490f5aa6dc92ea004c951b711e6"
+}

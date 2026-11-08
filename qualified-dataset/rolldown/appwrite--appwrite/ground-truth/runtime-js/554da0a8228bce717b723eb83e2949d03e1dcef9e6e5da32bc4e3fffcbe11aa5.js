@@ -1,0 +1,3 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/domains.continue-nfMGLWiv.js","assets/index-ARRzLOvi.js","assets/index-CzzUskj_.css","assets/buy-wizard-B0r1sK5f.js"])))=>i.map(i=>d[i]);
+import{n as e,t}from"./lazyRouteComponent-DuwTJ5fo.js";import{CN as n,SN as r,Uet as i,hN as a,r as o}from"./index-ARRzLOvi.js";var s=()=>i(()=>import(`./domains.continue-nfMGLWiv.js`),__vite__mapDeps([0,1,2,3]));const c=r({domain:n().optional(),stage:a([`checkout`]).optional()}),l=e(`/domains/continue`)({validateSearch:c,head:()=>({meta:[{title:o(`Continue domain purchase`,`Domains`)}]}),component:t(s,`component`)});export{l as t};
+//# sourceMappingURL=domains.continue-DMUyrTAI.js.map

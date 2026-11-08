@@ -1,0 +1,1995 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "facdc8a2398b5fc8905c32cda795f6c1fcba2cf13ba0500ef459d4a6d2063930",
+    "manifestSHA256": "caa4f9d59a33fab6f15623e2773b690a66c0829f2465d99d1ba6b9c90c099011",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@appwrite.io/console",
+    "@appwrite.io/specs",
+    "@dnd-kit/core",
+    "@dnd-kit/sortable",
+    "@dnd-kit/utilities",
+    "@faker-js/faker",
+    "@hookform/resolvers",
+    "@lucide/lab",
+    "@markdoc/markdoc",
+    "@monaco-editor/react",
+    "@radix-ui/react-accordion",
+    "@radix-ui/react-alert-dialog",
+    "@radix-ui/react-aspect-ratio",
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-checkbox",
+    "@radix-ui/react-collapsible",
+    "@radix-ui/react-compose-refs",
+    "@radix-ui/react-context-menu",
+    "@radix-ui/react-dialog",
+    "@radix-ui/react-direction",
+    "@radix-ui/react-dismissable-layer",
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-hover-card",
+    "@radix-ui/react-label",
+    "@radix-ui/react-menubar",
+    "@radix-ui/react-navigation-menu",
+    "@radix-ui/react-popover",
+    "@radix-ui/react-progress",
+    "@radix-ui/react-radio-group",
+    "@radix-ui/react-scroll-area",
+    "@radix-ui/react-select",
+    "@radix-ui/react-separator",
+    "@radix-ui/react-slider",
+    "@radix-ui/react-slot",
+    "@radix-ui/react-switch",
+    "@radix-ui/react-tabs",
+    "@radix-ui/react-toggle",
+    "@radix-ui/react-toggle-group",
+    "@radix-ui/react-tooltip",
+    "@radix-ui/react-visually-hidden",
+    "@react-three/drei",
+    "@react-three/fiber",
+    "@renoun/screenshot",
+    "@sentry/bun",
+    "@sentry/tanstackstart-react",
+    "@stripe/stripe-js",
+    "@tailwindcss/vite",
+    "@tanstack/react-query",
+    "@tanstack/react-router",
+    "@tanstack/react-start",
+    "@vercel/og",
+    "@xterm/addon-fit",
+    "@xterm/addon-search",
+    "@xterm/xterm",
+    "animejs",
+    "appwrite-cli-wasm",
+    "class-variance-authority",
+    "clsx",
+    "cmdk",
+    "comlink",
+    "date-fns",
+    "decimal.js",
+    "decimal.js-light",
+    "embla-carousel-react",
+    "gray-matter",
+    "hls.js",
+    "html-to-image",
+    "input-otp",
+    "js-yaml",
+    "lucide-react",
+    "maplibre-gl",
+    "mediabunny",
+    "monaco-editor",
+    "motion",
+    "next-themes",
+    "node-appwrite",
+    "prism-react-renderer",
+    "prismjs",
+    "react",
+    "react-day-picker",
+    "react-dom",
+    "react-hook-form",
+    "react-markdown",
+    "react-resizable-panels",
+    "recharts",
+    "remark-breaks",
+    "remark-gfm",
+    "shaka-player",
+    "sharp",
+    "sonner",
+    "sql-formatter",
+    "tailwind-merge",
+    "tailwindcss",
+    "three",
+    "three-globe",
+    "tldts",
+    "tw-animate-css",
+    "vaul",
+    "vite-tsconfig-paths",
+    "zod"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@appwrite.io/console",
+      "initialAnchors": 718,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@lucide/lab",
+        "@markdoc/markdoc"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 2771,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 718
+    },
+    {
+      "library": "@appwrite.io/specs",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@dnd-kit/core",
+      "initialAnchors": 27,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@lucide/lab",
+        "@markdoc/markdoc"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 278,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 27
+    },
+    {
+      "library": "@dnd-kit/sortable",
+      "initialAnchors": 6,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@lucide/lab",
+        "@markdoc/markdoc"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 39,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 6
+    },
+    {
+      "library": "@dnd-kit/utilities",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@dnd-kit/utilities"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 39,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@faker-js/faker",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@hookform/resolvers",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@lucide/lab",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@lucide/lab"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 0,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@markdoc/markdoc",
+      "initialAnchors": 111,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@lucide/lab",
+        "@markdoc/markdoc"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 620,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 111
+    },
+    {
+      "library": "@monaco-editor/react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@radix-ui/react-accordion",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-accordion"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 24,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-alert-dialog",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@radix-ui/react-aspect-ratio",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@radix-ui/react-avatar",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-avatar"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 18,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-checkbox",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-checkbox"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 16,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-collapsible",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-collapsible"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 12,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-compose-refs",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-compose-refs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 13,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@radix-ui/react-context-menu",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-context-menu"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 31,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-dialog",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-dialog"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 62,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@radix-ui/react-direction",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-direction"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 7,
+      "sourceFiles": 3
+    },
+    {
+      "library": "@radix-ui/react-dismissable-layer",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-dismissable-layer"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 79,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@radix-ui/react-dropdown-menu",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-dropdown-menu"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 23,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-hover-card",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-hover-card"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 29,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-label",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-label"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-menubar",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@radix-ui/react-navigation-menu",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@radix-ui/react-popover",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-popover"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 26,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-progress",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-progress"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 9,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-radio-group",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-radio-group"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 17,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-scroll-area",
+      "initialAnchors": 5,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 89,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 5
+    },
+    {
+      "library": "@radix-ui/react-select",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 128,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 7
+    },
+    {
+      "library": "@radix-ui/react-separator",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-separator"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-slider",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slider"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 59,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-slot",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 26,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "@radix-ui/react-switch",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-switch"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 8,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-tabs",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tabs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 13,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-toggle",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-toggle"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-toggle-group",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-toggle-group"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 16,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@radix-ui/react-tooltip",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 58,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "@radix-ui/react-visually-hidden",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@radix-ui/react-visually-hidden"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 3,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@react-three/drei",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/drei"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 20,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@react-three/fiber",
+      "initialAnchors": 64,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 1545,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 64
+    },
+    {
+      "library": "@renoun/screenshot",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@sentry/bun",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@sentry/tanstackstart-react",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber",
+        "@sentry/tanstackstart-react"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 6,
+      "sourceFiles": 4
+    },
+    {
+      "library": "@stripe/stripe-js",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber",
+        "@stripe/stripe-js"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 17,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@tailwindcss/vite",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tanstack/react-query",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber",
+        "@tanstack/react-query"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 67,
+      "sourceFiles": 14,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "@tanstack/react-router",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 228,
+      "sourceFiles": 34
+    },
+    {
+      "library": "@tanstack/react-start",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@vercel/og",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@xterm/addon-fit",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@xterm/addon-search",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@xterm/xterm",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "animejs",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "appwrite-cli-wasm",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "class-variance-authority",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 7,
+      "sourceFiles": 1
+    },
+    {
+      "library": "clsx",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "cmdk",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 106,
+      "sourceFiles": 2
+    },
+    {
+      "library": "comlink",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "date-fns",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 161,
+      "sourceFiles": 83
+    },
+    {
+      "library": "decimal.js",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "decimal.js-light",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 55,
+      "sourceFiles": 1
+    },
+    {
+      "library": "embla-carousel-react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 6,
+      "sourceFiles": 1
+    },
+    {
+      "library": "gray-matter",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "hls.js",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "html-to-image",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "input-otp",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "js-yaml",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 182,
+      "sourceFiles": 1
+    },
+    {
+      "library": "lucide-react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 11,
+      "sourceFiles": 224
+    },
+    {
+      "library": "maplibre-gl",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "mediabunny",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "monaco-editor",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "motion",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "next-themes",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 29,
+      "sourceFiles": 1
+    },
+    {
+      "library": "node-appwrite",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prism-react-renderer",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 145,
+      "sourceFiles": 1
+    },
+    {
+      "library": "prismjs",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 67,
+      "sourceFiles": 4
+    },
+    {
+      "library": "react-day-picker",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 295,
+      "sourceFiles": 98
+    },
+    {
+      "library": "react-dom",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 623,
+      "sourceFiles": 4
+    },
+    {
+      "library": "react-hook-form",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-markdown",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 11,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react-resizable-panels",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 173,
+      "sourceFiles": 1
+    },
+    {
+      "library": "recharts",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 1461,
+      "sourceFiles": 164
+    },
+    {
+      "library": "remark-breaks",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "remark-gfm",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 1,
+      "sourceFiles": 1
+    },
+    {
+      "library": "shaka-player",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "sharp",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "sonner",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 144,
+      "sourceFiles": 1
+    },
+    {
+      "library": "sql-formatter",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 281,
+      "sourceFiles": 86
+    },
+    {
+      "library": "tailwind-merge",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 111,
+      "sourceFiles": 1
+    },
+    {
+      "library": "tailwindcss",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "three",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 5609,
+      "sourceFiles": 13
+    },
+    {
+      "library": "three-globe",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 419,
+      "sourceFiles": 1
+    },
+    {
+      "library": "tldts",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 10,
+      "sourceFiles": 3
+    },
+    {
+      "library": "tw-animate-css",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vaul",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vite-tsconfig-paths",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "zod",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 1280,
+      "sourceFiles": 19
+    }
+  ],
+  "selectedLibraries": [
+    "@appwrite.io/console",
+    "@dnd-kit/core",
+    "@dnd-kit/sortable",
+    "@markdoc/markdoc",
+    "@radix-ui/react-scroll-area",
+    "@radix-ui/react-select",
+    "@radix-ui/react-slot",
+    "@radix-ui/react-tooltip",
+    "@react-three/fiber",
+    "@tanstack/react-query"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 810,
+  "bundleUnits": 414,
+  "candidateOrder": [
+    "@appwrite.io/console",
+    "@dnd-kit/core",
+    "@dnd-kit/sortable",
+    "@markdoc/markdoc",
+    "@dnd-kit/utilities",
+    "@lucide/lab",
+    "@appwrite.io/specs",
+    "@faker-js/faker",
+    "@hookform/resolvers",
+    "@monaco-editor/react",
+    "@radix-ui/react-accordion",
+    "@radix-ui/react-alert-dialog",
+    "@radix-ui/react-aspect-ratio",
+    "@radix-ui/react-avatar",
+    "@radix-ui/react-checkbox",
+    "@radix-ui/react-collapsible",
+    "@radix-ui/react-compose-refs",
+    "@radix-ui/react-context-menu",
+    "@radix-ui/react-dialog",
+    "@radix-ui/react-direction",
+    "@radix-ui/react-dismissable-layer",
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-hover-card",
+    "@radix-ui/react-label",
+    "@radix-ui/react-menubar",
+    "@radix-ui/react-navigation-menu",
+    "@radix-ui/react-popover",
+    "@radix-ui/react-progress",
+    "@radix-ui/react-radio-group",
+    "@radix-ui/react-scroll-area",
+    "@radix-ui/react-select",
+    "@radix-ui/react-separator",
+    "@radix-ui/react-slider",
+    "@radix-ui/react-slot",
+    "@radix-ui/react-switch",
+    "@radix-ui/react-tabs",
+    "@radix-ui/react-toggle",
+    "@radix-ui/react-toggle-group",
+    "@radix-ui/react-tooltip",
+    "@radix-ui/react-visually-hidden",
+    "@react-three/drei",
+    "@react-three/fiber",
+    "@renoun/screenshot",
+    "@sentry/bun",
+    "@sentry/tanstackstart-react",
+    "@stripe/stripe-js",
+    "@tailwindcss/vite",
+    "@tanstack/react-query",
+    "@tanstack/react-router",
+    "@tanstack/react-start",
+    "@vercel/og",
+    "@xterm/addon-fit",
+    "@xterm/addon-search",
+    "@xterm/xterm",
+    "animejs",
+    "appwrite-cli-wasm",
+    "class-variance-authority",
+    "clsx",
+    "cmdk",
+    "comlink",
+    "date-fns",
+    "decimal.js",
+    "decimal.js-light",
+    "embla-carousel-react",
+    "gray-matter",
+    "hls.js",
+    "html-to-image",
+    "input-otp",
+    "js-yaml",
+    "lucide-react",
+    "maplibre-gl",
+    "mediabunny",
+    "monaco-editor",
+    "motion",
+    "next-themes",
+    "node-appwrite",
+    "prism-react-renderer",
+    "prismjs",
+    "react",
+    "react-day-picker",
+    "react-dom",
+    "react-hook-form",
+    "react-markdown",
+    "react-resizable-panels",
+    "recharts",
+    "remark-breaks",
+    "remark-gfm",
+    "shaka-player",
+    "sharp",
+    "sonner",
+    "sql-formatter",
+    "tailwind-merge",
+    "tailwindcss",
+    "three",
+    "three-globe",
+    "tldts",
+    "tw-animate-css",
+    "vaul",
+    "vite-tsconfig-paths",
+    "zod"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "@dnd-kit/utilities",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@dnd-kit/utilities"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@lucide/lab",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@lucide/lab"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-accordion",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-accordion"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-avatar",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-avatar"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-checkbox",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-checkbox"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-collapsible",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-collapsible"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-compose-refs",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-compose-refs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-context-menu",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-context-menu"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-dialog",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-dialog"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-direction",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-direction"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-dismissable-layer",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-dismissable-layer"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-dropdown-menu",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-dropdown-menu"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-hover-card",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-hover-card"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-label",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-label"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-popover",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-popover"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-progress",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-progress"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-radio-group",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-radio-group"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-scroll-area",
+      "initialAnchors": 5,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-select",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-separator",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-separator"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-slider",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slider"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-slot",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-switch",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-switch"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-tabs",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tabs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-toggle",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-toggle"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-toggle-group",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-toggle-group"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-tooltip",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@radix-ui/react-visually-hidden",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@radix-ui/react-visually-hidden"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@react-three/drei",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/drei"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@react-three/fiber",
+      "initialAnchors": 64,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@sentry/tanstackstart-react",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber",
+        "@sentry/tanstackstart-react"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@stripe/stripe-js",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber",
+        "@stripe/stripe-js"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@tanstack/react-query",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber",
+        "@tanstack/react-query"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [
+    {
+      "kind": "parse-error",
+      "unit": "s-8f5ba8eb3fc85406901b1355b81dd0589e7e9181bc683c59d56f4b7b29010696",
+      "error": "[8:4-8:5]: Unexpected token: '<'"
+    }
+  ],
+  "bundleDiagnostics": [],
+  "sourceDigest": "09561eb93b09c1098cd75c32fb84cd62d245cf7508691dd21207afb95e5fb7a0",
+  "bundleDigest": "f8381942b10807245f2a8bea3c7e96bb580eabbf65daf4445ed8a6b746c045ad",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "db31dd08f7a4194c25f13ed0865c93e473690ba8d32f73a71b3dfc7580d7ddc6",
+  "reason": null,
+  "organizationSignature": "cae578daf4d0ccf3cacccbed4361442bf95bc70560e8b3d63e9daf70d0dae7a1"
+}

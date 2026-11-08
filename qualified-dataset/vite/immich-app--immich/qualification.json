@@ -1,0 +1,1132 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "14fd0570778685f122f10cf4bd1f6b4c9823a57808a50da5ad57f65702dd28bb",
+    "manifestSHA256": "065ed2f44406e397bb9dea8d742733740566b088dd8964bbd5746f9a73b78d39",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@formatjs/icu-messageformat-parser",
+    "@futo-org/backups-orchestrator-ui",
+    "@immich/justified-layout-wasm",
+    "@immich/sdk",
+    "@immich/ui",
+    "@mdi/js",
+    "@noble/hashes",
+    "@photo-sphere-viewer/core",
+    "@photo-sphere-viewer/equirectangular-video-adapter",
+    "@photo-sphere-viewer/markers-plugin",
+    "@photo-sphere-viewer/resolution-plugin",
+    "@photo-sphere-viewer/settings-plugin",
+    "@photo-sphere-viewer/video-plugin",
+    "@simplewebauthn/browser",
+    "@tanstack/svelte-query",
+    "@types/geojson",
+    "@zoom-image/core",
+    "@zoom-image/svelte",
+    "dom-to-image",
+    "fabric",
+    "geo-coordinates-parser",
+    "geojson",
+    "handlebars",
+    "hash-wasm",
+    "hls-video-element",
+    "hls.js",
+    "intl-messageformat",
+    "justified-layout",
+    "lodash-es",
+    "luxon",
+    "maplibre-gl",
+    "media-chrome",
+    "pmtiles",
+    "qrcode",
+    "simple-icons",
+    "socket.io-client",
+    "svelte-confetti",
+    "svelte-gestures",
+    "svelte-i18n",
+    "svelte-jsoneditor",
+    "svelte-maplibre",
+    "svelte-persisted-store",
+    "tabbable",
+    "tailwind-merge",
+    "tailwind-variants",
+    "thumbhash",
+    "transformation-matrix",
+    "uplot"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@formatjs/icu-messageformat-parser",
+      "initialAnchors": 20,
+      "trialLibraries": [
+        "svelte-persisted-store",
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "@futo-org/backups-orchestrator-ui",
+        "tailwind-merge",
+        "@tanstack/svelte-query",
+        "media-chrome",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 141,
+      "sourceFiles": 8,
+      "finalInitialAnchors": 20
+    },
+    {
+      "library": "@futo-org/backups-orchestrator-ui",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "@futo-org/backups-orchestrator-ui"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 57,
+      "sourceFiles": 4
+    },
+    {
+      "library": "@immich/justified-layout-wasm",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "@immich/justified-layout-wasm"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 12,
+      "sourceFiles": 3
+    },
+    {
+      "library": "@immich/sdk",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@immich/ui",
+      "initialAnchors": 12,
+      "trialLibraries": [
+        "svelte-persisted-store",
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "@futo-org/backups-orchestrator-ui",
+        "tailwind-merge",
+        "@tanstack/svelte-query",
+        "media-chrome",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 175,
+      "sourceFiles": 68,
+      "finalInitialAnchors": 12
+    },
+    {
+      "library": "@mdi/js",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "@mdi/js"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 0,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@noble/hashes",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@photo-sphere-viewer/core",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@photo-sphere-viewer/equirectangular-video-adapter",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@photo-sphere-viewer/markers-plugin",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@photo-sphere-viewer/resolution-plugin",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@photo-sphere-viewer/settings-plugin",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@photo-sphere-viewer/video-plugin",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@simplewebauthn/browser",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tanstack/svelte-query",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "@tanstack/svelte-query"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 53,
+      "sourceFiles": 10
+    },
+    {
+      "library": "@types/geojson",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@zoom-image/core",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@zoom-image/svelte",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "dom-to-image",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "fabric",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "geo-coordinates-parser",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "geojson",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "handlebars",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "hash-wasm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "hls-video-element",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "hls.js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "intl-messageformat",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "intl-messageformat"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 71,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 7
+    },
+    {
+      "library": "justified-layout",
+      "initialAnchors": 6,
+      "trialLibraries": [
+        "svelte-persisted-store",
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "@futo-org/backups-orchestrator-ui",
+        "tailwind-merge",
+        "@tanstack/svelte-query",
+        "media-chrome",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 19,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 6
+    },
+    {
+      "library": "lodash-es",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "intl-messageformat",
+        "lodash-es"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 176,
+      "sourceFiles": 161,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "luxon",
+      "initialAnchors": 58,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "intl-messageformat",
+        "lodash-es",
+        "luxon"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 581,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 58
+    },
+    {
+      "library": "maplibre-gl",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "media-chrome",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "media-chrome"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 6,
+      "sourceFiles": 2
+    },
+    {
+      "library": "pmtiles",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "qrcode",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "simple-icons",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "socket.io-client",
+      "initialAnchors": 14,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "intl-messageformat",
+        "lodash-es",
+        "luxon",
+        "socket.io-client"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 96,
+      "sourceFiles": 6,
+      "finalInitialAnchors": 14
+    },
+    {
+      "library": "svelte-confetti",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "svelte-gestures",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "svelte-i18n",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 80,
+      "sourceFiles": 1
+    },
+    {
+      "library": "svelte-jsoneditor",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "svelte-maplibre",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "svelte-persisted-store",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "svelte-persisted-store"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 17,
+      "sourceFiles": 1
+    },
+    {
+      "library": "tabbable",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "svelte-persisted-store",
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "@futo-org/backups-orchestrator-ui",
+        "tailwind-merge",
+        "@tanstack/svelte-query",
+        "media-chrome",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 34,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "tailwind-merge",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "svelte-persisted-store",
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "@futo-org/backups-orchestrator-ui",
+        "tailwind-merge",
+        "@tanstack/svelte-query",
+        "media-chrome",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 123,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "tailwind-variants",
+      "initialAnchors": 13,
+      "trialLibraries": [
+        "svelte-persisted-store",
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "@futo-org/backups-orchestrator-ui",
+        "tailwind-merge",
+        "@tanstack/svelte-query",
+        "media-chrome",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 210,
+      "sourceFiles": 3,
+      "finalInitialAnchors": 13
+    },
+    {
+      "library": "thumbhash",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "transformation-matrix",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "uplot",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    }
+  ],
+  "selectedLibraries": [
+    "@immich/ui",
+    "@formatjs/icu-messageformat-parser",
+    "tailwind-merge",
+    "tabbable",
+    "tailwind-variants",
+    "justified-layout",
+    "intl-messageformat",
+    "lodash-es",
+    "luxon",
+    "socket.io-client"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 277,
+  "bundleUnits": 65,
+  "candidateOrder": [
+    "@immich/ui",
+    "@formatjs/icu-messageformat-parser",
+    "tailwind-merge",
+    "tabbable",
+    "tailwind-variants",
+    "justified-layout",
+    "svelte-persisted-store",
+    "@futo-org/backups-orchestrator-ui",
+    "@tanstack/svelte-query",
+    "media-chrome",
+    "@immich/justified-layout-wasm",
+    "@immich/sdk",
+    "@mdi/js",
+    "@noble/hashes",
+    "@photo-sphere-viewer/core",
+    "@photo-sphere-viewer/equirectangular-video-adapter",
+    "@photo-sphere-viewer/markers-plugin",
+    "@photo-sphere-viewer/resolution-plugin",
+    "@photo-sphere-viewer/settings-plugin",
+    "@photo-sphere-viewer/video-plugin",
+    "@simplewebauthn/browser",
+    "@types/geojson",
+    "@zoom-image/core",
+    "@zoom-image/svelte",
+    "dom-to-image",
+    "fabric",
+    "geo-coordinates-parser",
+    "geojson",
+    "handlebars",
+    "hash-wasm",
+    "hls-video-element",
+    "hls.js",
+    "intl-messageformat",
+    "lodash-es",
+    "luxon",
+    "maplibre-gl",
+    "pmtiles",
+    "qrcode",
+    "simple-icons",
+    "socket.io-client",
+    "svelte-confetti",
+    "svelte-gestures",
+    "svelte-i18n",
+    "svelte-jsoneditor",
+    "svelte-maplibre",
+    "thumbhash",
+    "transformation-matrix",
+    "uplot"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "svelte-persisted-store",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "svelte-persisted-store"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@futo-org/backups-orchestrator-ui",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "@futo-org/backups-orchestrator-ui"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@tanstack/svelte-query",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "@tanstack/svelte-query"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "media-chrome",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "media-chrome"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@immich/justified-layout-wasm",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "@immich/justified-layout-wasm"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@mdi/js",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "@mdi/js"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "intl-messageformat",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "intl-messageformat"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "lodash-es",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "intl-messageformat",
+        "lodash-es"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "luxon",
+      "initialAnchors": 58,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "intl-messageformat",
+        "lodash-es",
+        "luxon"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "socket.io-client",
+      "initialAnchors": 14,
+      "trialLibraries": [
+        "@immich/ui",
+        "@formatjs/icu-messageformat-parser",
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "intl-messageformat",
+        "lodash-es",
+        "luxon",
+        "socket.io-client"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [
+    {
+      "kind": "parse-error",
+      "unit": "s-60c6b2e154af0fe861ae10c282ca39487089e50c9e20f6d52215968938a08cf4",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-3e81b8977402dd0013a43f83669e200bc00b6969060e4a992de8ae95f6a95096",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-e13fd7a60347a58759f4bf111717f03c09d01ddb21b6fcca33cef65199e4e79b",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-3d990ca305e4c2807df46e8771e7f67c4b6a590c599312f0b171aff254213364",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-738b109466abb2e2ed379fa4273a71bee6477901e3a307707bda1104e0b5c8fe",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-119061fc713db6970c44215728bbf3d2ec91314e1d52a6f728df9882565749b5",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-97909287d61cb7e71a1aeae67ce61f97ea074a4db67d8f330ccb3833e0a96785",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-003f572b727279eace742c664c3b3ea9eb4981054489d47335eadd3f06230600",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-5ce5eb73de77bc1efa36ded2e8e4c02dfd40ca20f3fa3b912000e554fdcaa7a1",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-0c8a11b399b17494c01cb8d27bedeb0feb068ad2bd9562b07034e367838fe9fc",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-8fe2d9032f393bbd137ec58156c2c2ad2d2a2e544ce11b4e09b60438563da404",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-cc4b343b86c76dca62332da1127e04bc77d3049b8145ae7ee5f1d8eefe9647a7",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-1eb385410370512ee3697b632b9627681b8e8d1011197d5c5e956f2bbcd76df7",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-fabdecd7d71031a45f6c2ca63dcd5b6436fab53b1a31a61cbf3c9fcf003a6509",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-f8ffea69614c3ed4b74355861c8b132f5894d241733375468ee3afd45feae19e",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-89832062201a0a6bca8ffcb74ff81f69ce7639b294aebf611ed3d412468a0351",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-34f85e14031d1f472f381c4f94e020775844b9b48b92a953e681f0d11e5c1f6d",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-06f263d703d5b2387c2718665e8af7d86a4994676cb616cd4d366e44dc8acd84",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-0d3344fff566d7ff327b710a9165c9e247b2b627a60c8b91e1b654ac30a432ac",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-74e10c542356b814c0b31224ceceabc6a6bb6b71ae33f79c6cd1139375f332ca",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-7d494524cdef714e8dd0e9c74f841522207e8603d4ce3b5c0e85a289d7d97f84",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-c7701eb330073877a1be5c4e5ad23ee0cd2e9fbc2de658a5d51310bbde497d60",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-a9adbd2f287b22aad258e703a062e23639f142082131f1b3fe501bf4eb3f8238",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-85ecd9a06457196dacb168d9a0fb8a0ee72a8ecadb5a8168ada5d6317f3db6ef",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-646122d41262257e34849b3067c2575b8b8a49ab2d905b77d00cc7b47a9bec77",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-7d87a0248a024e8a9fbded5d4dc1c872932b9852e1dcb2232bf5df1bdb239019",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-67599d386482ffb529a1eea4ff6cb7fa4b0bcbbf35eba78ba14a58f411c8362c",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-67953e3725180ef7989a3c1c45242e099f497983eadec27a2062fcbf5313586a",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-99b8a4643cd5043f5806da0c1eac9cbe08d49b6368aacd63a90d19fe05ae6a7a",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-1b5fd1a04002daacddf1f8cd14d4cd7ff61deea97b0f8efe4f57d36652265b93",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-5e419792c48e72e4ccfe96413f0be0cbdb6958f429beb48866752b9cada7ee34",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-07e48101bf5199ce65bd863ea336cf82ef8be192df00c1a7572a32ea8d96baa3",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-ef21cf44777e1b53e35f4437b8b8d5aaf46192a0cfe210d6b7e455245d93bb65",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-3f506bcb9f707ec47504b64dca6d37632e26c4e9cfbb3f97dbdfe8406cd794af",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-3994682da5fe3d31061918a92ab6b7f902da2f0b5e56eae96a50c1e717e416cb",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-e50ac631187d6efd3678551324a27572227eef25c1a523f231df061fa22f33ed",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-ea936a3865b4c684e6eca2e79faab53db3231e78c40238bcf17428134a714f54",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-debc1dee4b2ee782a1d7af1895b5bb0cf9f1951c7e294ddc52d7606667e63f65",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-b8966de02a982ede3ae0329219f7e3fc6c967158ed80a473daa5d8ab53eb87e3",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-40e57ddb2119d856e236222f73c2162bd2bd0a4b1356ea6aec2da3fb574d7ad6",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-9b489e22ab982abda4acd2e679943f80dcfac3ef7a517e2140856145c0128d0f",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-8bafcea4a2561a47f3e54507ddedd8b92459b4579d52cf870b6babd386dbe2b4",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-8514d071c953fbd7ff3339ac86f2942b421962755fd5e0cab051a9745e3bc3f3",
+      "error": "[1:0-1:1]: Unexpected token: '<'"
+    },
+    {
+      "kind": "parse-error",
+      "unit": "s-54fb4cfc3631e29f6abb533fccc0e8bc1b391c3b1996562b5e05c053b1f04988",
+      "error": "[4:7-4:16]: Unexpected token: 'interface'"
+    }
+  ],
+  "bundleDiagnostics": [],
+  "sourceDigest": "623418b792f3cfa74af9e60c481123e286e860b674ffed6fd427ef7e63d3ac1a",
+  "bundleDigest": "d2645c51038c5d1d1d6242633f3d99a5bb5c0f7eb64e9e2d75226d2bf605f40d",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "cdd14916631db66b79768ff7f8c976ec7015497d20e86a19c8dface0e2937869",
+  "reason": null,
+  "organizationSignature": "9716e1a4a21e7a1e0451499a6fb05137b7d7d42047fbb9b65472e7f60a16897f"
+}

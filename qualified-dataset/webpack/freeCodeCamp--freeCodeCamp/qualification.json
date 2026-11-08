@@ -1,0 +1,1425 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "5c29a85e5165a13e9451468af13ddd80356ccffca59b00bfffa18605d5e61bbd",
+    "manifestSHA256": "9aedf600166c24bf3a8ac4fa087933334e8fa9f25e6619f189c8b392b6243282",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-transform-runtime",
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+    "@codesandbox/sandpack-react",
+    "@codesandbox/sandpack-themes",
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/free-brands-svg-icons",
+    "@fortawesome/free-solid-svg-icons",
+    "@fortawesome/react-fontawesome",
+    "@freecodecamp/challenge-builder",
+    "@freecodecamp/ui",
+    "@gatsbyjs/reach-router",
+    "@growthbook/growthbook-react",
+    "@loadable/component",
+    "@paypal/react-paypal-js",
+    "@redux-devtools/extension",
+    "@redux-saga/core",
+    "@reduxjs/toolkit",
+    "@stripe/react-stripe-js",
+    "@stripe/stripe-js",
+    "@types/react-speech-recognition",
+    "@xterm/addon-fit",
+    "@xterm/xterm",
+    "algoliasearch",
+    "assert",
+    "babel-plugin-preval",
+    "babel-plugin-prismjs",
+    "bezier-easing",
+    "browser-cookies",
+    "canvas-confetti",
+    "crypto-browserify",
+    "date-fns",
+    "date-fns-tz",
+    "eslint-config-react-app",
+    "final-form",
+    "gatsby",
+    "gatsby-cli",
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-remove-serviceworker",
+    "gatsby-source-filesystem",
+    "gatsby-transformer-remark",
+    "i18next",
+    "instantsearch.js",
+    "lodash",
+    "lodash-es",
+    "micromark",
+    "monaco-editor",
+    "nanoid",
+    "normalize-url",
+    "path-browserify",
+    "pinyin-tone",
+    "postcss",
+    "prismjs",
+    "process",
+    "prop-types",
+    "qrcode.react",
+    "query-string",
+    "react",
+    "react-calendar-heatmap",
+    "react-dom",
+    "react-final-form",
+    "react-gtm-module",
+    "react-helmet",
+    "react-hotkeys",
+    "react-i18next",
+    "react-instantsearch",
+    "react-instantsearch-core",
+    "react-monaco-editor",
+    "react-redux",
+    "react-reflex",
+    "react-responsive",
+    "react-scroll",
+    "react-speech-recognition",
+    "react-spinkit",
+    "react-tooltip",
+    "react-transition-group",
+    "react-youtube",
+    "redux",
+    "redux-actions",
+    "redux-observable",
+    "redux-saga",
+    "reselect",
+    "rxjs",
+    "sanitize-html",
+    "store",
+    "stream-browserify",
+    "tone",
+    "typescript",
+    "util",
+    "uuid",
+    "validator"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@babel/plugin-proposal-export-default-from",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@babel/plugin-proposal-function-bind",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@babel/plugin-transform-runtime",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@babel/preset-env",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@babel/preset-react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@babel/preset-typescript",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codesandbox/sandpack-react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codesandbox/sandpack-themes",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fortawesome/fontawesome-svg-core",
+      "initialAnchors": 38,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 306,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 38
+    },
+    {
+      "library": "@fortawesome/free-brands-svg-icons",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@fortawesome/free-solid-svg-icons",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/free-solid-svg-icons"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 0,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@fortawesome/react-fontawesome",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 25,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "@freecodecamp/challenge-builder",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@freecodecamp/ui",
+      "initialAnchors": 94,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@freecodecamp/ui"
+      ],
+      "qualified": false,
+      "status": "would-undercut-retained-library-anchors",
+      "conflicts": [
+        "@fortawesome/react-fontawesome"
+      ],
+      "phase": "replacement",
+      "referenceFunctions": 1202,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@gatsbyjs/reach-router",
+      "initialAnchors": 22,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@gatsbyjs/reach-router"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 214,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 22
+    },
+    {
+      "library": "@growthbook/growthbook-react",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@gatsbyjs/reach-router",
+        "@growthbook/growthbook-react"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 25,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@loadable/component",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@loadable/component"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 53,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@paypal/react-paypal-js",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@gatsbyjs/reach-router",
+        "@paypal/react-paypal-js"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 141,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 8
+    },
+    {
+      "library": "@redux-devtools/extension",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@redux-saga/core",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 239,
+      "sourceFiles": 3
+    },
+    {
+      "library": "@reduxjs/toolkit",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 739,
+      "sourceFiles": 3
+    },
+    {
+      "library": "@stripe/react-stripe-js",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 73,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@stripe/stripe-js",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 12,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@types/react-speech-recognition",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@xterm/addon-fit",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@xterm/xterm",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "algoliasearch",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 164,
+      "sourceFiles": 1
+    },
+    {
+      "library": "assert",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "babel-plugin-preval",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "babel-plugin-prismjs",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "bezier-easing",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "browser-cookies",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 4,
+      "sourceFiles": 1
+    },
+    {
+      "library": "canvas-confetti",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 59,
+      "sourceFiles": 1
+    },
+    {
+      "library": "crypto-browserify",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "date-fns",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 226,
+      "sourceFiles": 81
+    },
+    {
+      "library": "date-fns-tz",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react-monaco-editor",
+        "@loadable/component",
+        "react-redux",
+        "react",
+        "reselect",
+        "store"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 24,
+      "sourceFiles": 7,
+      "finalInitialAnchors": 9
+    },
+    {
+      "library": "eslint-config-react-app",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "final-form",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "gatsby",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 4,
+      "sourceFiles": 4
+    },
+    {
+      "library": "gatsby-cli",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "gatsby-plugin-postcss",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "gatsby-plugin-react-helmet",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "gatsby-plugin-remove-serviceworker",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "gatsby-source-filesystem",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "gatsby-transformer-remark",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "i18next",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 239,
+      "sourceFiles": 1
+    },
+    {
+      "library": "instantsearch.js",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 395,
+      "sourceFiles": 61
+    },
+    {
+      "library": "lodash",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "lodash-es",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 251,
+      "sourceFiles": 236
+    },
+    {
+      "library": "micromark",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "monaco-editor",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 19876,
+      "sourceFiles": 1002
+    },
+    {
+      "library": "nanoid",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 6,
+      "sourceFiles": 1
+    },
+    {
+      "library": "normalize-url",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "path-browserify",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "pinyin-tone",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "postcss",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "prismjs",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "process",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 16,
+      "sourceFiles": 1
+    },
+    {
+      "library": "prop-types",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 5,
+      "sourceFiles": 3
+    },
+    {
+      "library": "qrcode.react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "query-string",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 43,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react",
+      "initialAnchors": 6,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react-monaco-editor",
+        "@loadable/component",
+        "react-redux",
+        "react",
+        "reselect",
+        "store"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 55,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 6
+    },
+    {
+      "library": "react-calendar-heatmap",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-dom",
+      "initialAnchors": 66,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react-monaco-editor",
+        "@loadable/component",
+        "react-redux",
+        "react",
+        "reselect",
+        "store"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 490,
+      "sourceFiles": 3,
+      "finalInitialAnchors": 66
+    },
+    {
+      "library": "react-final-form",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-gtm-module",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 12,
+      "sourceFiles": 4
+    },
+    {
+      "library": "react-helmet",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 92,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react-hotkeys",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 479,
+      "sourceFiles": 2
+    },
+    {
+      "library": "react-i18next",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 84,
+      "sourceFiles": 11
+    },
+    {
+      "library": "react-instantsearch",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 17,
+      "sourceFiles": 5
+    },
+    {
+      "library": "react-instantsearch-core",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 69,
+      "sourceFiles": 30
+    },
+    {
+      "library": "react-monaco-editor",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "react-monaco-editor"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 41,
+      "sourceFiles": 3
+    },
+    {
+      "library": "react-redux",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "react-redux"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 106,
+      "sourceFiles": 20
+    },
+    {
+      "library": "react-reflex",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-responsive",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react-monaco-editor",
+        "@loadable/component",
+        "react-redux",
+        "react",
+        "reselect",
+        "store"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 154,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 8
+    },
+    {
+      "library": "react-scroll",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 187,
+      "sourceFiles": 16
+    },
+    {
+      "library": "react-speech-recognition",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-spinkit",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 15,
+      "sourceFiles": 2
+    },
+    {
+      "library": "react-tooltip",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-transition-group",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-youtube",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "redux",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 88,
+      "sourceFiles": 2
+    },
+    {
+      "library": "redux-actions",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 30,
+      "sourceFiles": 17
+    },
+    {
+      "library": "redux-observable",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 35,
+      "sourceFiles": 5
+    },
+    {
+      "library": "redux-saga",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "reselect",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "reselect"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 91,
+      "sourceFiles": 3
+    },
+    {
+      "library": "rxjs",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 344,
+      "sourceFiles": 72
+    },
+    {
+      "library": "sanitize-html",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "store",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react-monaco-editor",
+        "@loadable/component",
+        "react-redux",
+        "react",
+        "reselect",
+        "store"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 104,
+      "sourceFiles": 12,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "stream-browserify",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "tone",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 1829,
+      "sourceFiles": 173
+    },
+    {
+      "library": "typescript",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "util",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 99,
+      "sourceFiles": 3
+    },
+    {
+      "library": "uuid",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 4,
+      "sourceFiles": 5
+    },
+    {
+      "library": "validator",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react-monaco-editor",
+        "@loadable/component",
+        "react-redux",
+        "react",
+        "reselect",
+        "store"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 33,
+      "sourceFiles": 9,
+      "finalInitialAnchors": 3
+    }
+  ],
+  "selectedLibraries": [
+    "react-responsive",
+    "date-fns-tz",
+    "validator",
+    "react-dom",
+    "react",
+    "store",
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/react-fontawesome",
+    "@gatsbyjs/reach-router",
+    "@paypal/react-paypal-js"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 1823,
+  "bundleUnits": 25,
+  "candidateOrder": [
+    "react-responsive",
+    "date-fns-tz",
+    "validator",
+    "react-dom",
+    "react",
+    "store",
+    "react-monaco-editor",
+    "@loadable/component",
+    "react-redux",
+    "reselect",
+    "@babel/plugin-proposal-export-default-from",
+    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-transform-runtime",
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript",
+    "@codesandbox/sandpack-react",
+    "@codesandbox/sandpack-themes",
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/free-brands-svg-icons",
+    "@fortawesome/free-solid-svg-icons",
+    "@fortawesome/react-fontawesome",
+    "@freecodecamp/challenge-builder",
+    "@freecodecamp/ui",
+    "@gatsbyjs/reach-router",
+    "@growthbook/growthbook-react",
+    "@paypal/react-paypal-js",
+    "@redux-devtools/extension",
+    "@redux-saga/core",
+    "@reduxjs/toolkit",
+    "@stripe/react-stripe-js",
+    "@stripe/stripe-js",
+    "@types/react-speech-recognition",
+    "@xterm/addon-fit",
+    "@xterm/xterm",
+    "algoliasearch",
+    "assert",
+    "babel-plugin-preval",
+    "babel-plugin-prismjs",
+    "bezier-easing",
+    "browser-cookies",
+    "canvas-confetti",
+    "crypto-browserify",
+    "date-fns",
+    "eslint-config-react-app",
+    "final-form",
+    "gatsby",
+    "gatsby-cli",
+    "gatsby-plugin-postcss",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-remove-serviceworker",
+    "gatsby-source-filesystem",
+    "gatsby-transformer-remark",
+    "i18next",
+    "instantsearch.js",
+    "lodash",
+    "lodash-es",
+    "micromark",
+    "monaco-editor",
+    "nanoid",
+    "normalize-url",
+    "path-browserify",
+    "pinyin-tone",
+    "postcss",
+    "prismjs",
+    "process",
+    "prop-types",
+    "qrcode.react",
+    "query-string",
+    "react-calendar-heatmap",
+    "react-final-form",
+    "react-gtm-module",
+    "react-helmet",
+    "react-hotkeys",
+    "react-i18next",
+    "react-instantsearch",
+    "react-instantsearch-core",
+    "react-reflex",
+    "react-scroll",
+    "react-speech-recognition",
+    "react-spinkit",
+    "react-tooltip",
+    "react-transition-group",
+    "react-youtube",
+    "redux",
+    "redux-actions",
+    "redux-observable",
+    "redux-saga",
+    "rxjs",
+    "sanitize-html",
+    "stream-browserify",
+    "tone",
+    "typescript",
+    "util",
+    "uuid"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "react-monaco-editor",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "react-monaco-editor"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@loadable/component",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@loadable/component"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "react-redux",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "react-redux"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "reselect",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "reselect"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@fortawesome/fontawesome-svg-core",
+      "initialAnchors": 38,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@fortawesome/free-solid-svg-icons",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/free-solid-svg-icons"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@fortawesome/react-fontawesome",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@freecodecamp/ui",
+      "initialAnchors": 94,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@freecodecamp/ui"
+      ],
+      "qualified": false,
+      "status": "would-undercut-retained-library-anchors",
+      "conflicts": [
+        "@fortawesome/react-fontawesome"
+      ],
+      "phase": "replacement"
+    },
+    {
+      "library": "@gatsbyjs/reach-router",
+      "initialAnchors": 22,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@gatsbyjs/reach-router"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@growthbook/growthbook-react",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@gatsbyjs/reach-router",
+        "@growthbook/growthbook-react"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@paypal/react-paypal-js",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@gatsbyjs/reach-router",
+        "@paypal/react-paypal-js"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "f19a03dee1946a3e6349c3b56456b02b77862387679e0b217bc124dfb1f0cbc9",
+  "bundleDigest": "dbe75afc1a9db0c4de4c490004ff6e7b4af710f6d7849029c38d4c6f5df1df20",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "55a58759d64494c68a464c73fda004c04794e2b779ff5d2d4c02fd52946ea129",
+  "reason": null,
+  "organizationSignature": "236d0327c1f5cb9b39bf083b2a6f8e90f707555d78ff887daf4f9e24027ce662"
+}

@@ -1,0 +1,46 @@
+{
+  "containerPort": 3000,
+  "route": "/",
+  "expectedSelector": ".d-header",
+  "expectedText": "Discourse|Topics|Welcome",
+  "composeFile": "compose.yaml",
+  "readinessTimeoutSeconds": 360,
+  "scopeNotes": [
+    "The temporary PostgreSQL database is migrated and seeded, then the upstream admin:create task creates a local administrator with a random password and a reserved example.invalid address. Chromium opens the anonymous forum home. Email and the optional MaxMind GeoIP database are outside this observation.",
+    "browser-detect.js and browser-update.js are served untransformed by the Rails asset pipeline; the recipe pins their bytes by sha256 and adds an identity source map (map-tools/identity-map.cjs) because upstream ships none."
+  ],
+  "nonBuildScripts": [
+    {
+      "pattern": "/extra-locales/",
+      "kind": "generated-data",
+      "provenance": "Runtime locale bundle: app/controllers/extra_locales_controller.rb#show renders JsLocaleHelper.output_locale from config/locales/client.*.yml (lib/js_locale_helper.rb); the URL digest is SHA1(CACHE_VERSION|body)."
+    },
+    {
+      "pattern": "/theme-javascripts/",
+      "kind": "generated-data",
+      "provenance": "Theme translation data stored in a JavascriptCache row; app/models/theme_field.rb#process_translation sets source_map to nil, so app/controllers/theme_javascripts_controller.rb never publishes a map."
+    },
+    {
+      "pattern": "/svg-sprite/",
+      "kind": "generated-data",
+      "provenance": "Runtime SVG sprite: app/controllers/svg_sprite_controller.rb renders window.__svg_sprite from SvgSprite.bundle (lib/svg_sprite.rb), inlined as data."
+    },
+    {
+      "pattern": "footnote_extra",
+      "kind": "vendored-third-party",
+      "provenance": "plugins/footnote/plugin.rb registers vendor/javascripts/markdown-it-footnote.js as a vendored asset; lib/plugin/instance.rb#write_extra_js! concatenates it verbatim into app/assets/generated/footnote/plugins/footnote_extra.js. Vendor, generated and served bytes are identical."
+    }
+  ],
+  "generateEnvironment": ["POSTGRES_PASSWORD"],
+  "generateHexEnvironment": {"DISCOURSE_SECRET_KEY_BASE": 64},
+  "environmentTemplates": {
+    "DISCOURSE_DB_HOST": "db",
+    "DISCOURSE_DB_NAME": "discourse",
+    "DISCOURSE_DB_USERNAME": "discourse",
+    "DISCOURSE_DB_PASSWORD": "{POSTGRES_PASSWORD}",
+    "DISCOURSE_REDIS_HOST": "redis",
+    "DISCOURSE_HOSTNAME": "127.0.0.1",
+    "DISCOURSE_PORT": "{port}",
+    "DISCOURSE_FORCE_HTTPS": "false"
+  }
+}

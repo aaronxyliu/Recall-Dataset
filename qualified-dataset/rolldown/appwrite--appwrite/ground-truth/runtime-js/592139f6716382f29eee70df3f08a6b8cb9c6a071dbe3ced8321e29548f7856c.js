@@ -1,0 +1,3 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/projects._projectId.environments.create-y5RLe3rV.js","assets/index-ARRzLOvi.js","assets/index-CzzUskj_.css"])))=>i.map(i=>d[i]);
+import{n as e,t}from"./lazyRouteComponent-DuwTJ5fo.js";import{Uet as n,r}from"./index-ARRzLOvi.js";const i=e(`/_public/projects/$projectId/environments/create`)({head:()=>({meta:[{title:r(`Create environment`,`Environments`)}]}),component:t(()=>n(()=>import(`./projects._projectId.environments.create-y5RLe3rV.js`),__vite__mapDeps([0,1,2])),`component`)});export{i as t};
+//# sourceMappingURL=projects._projectId.environments.create-C90QAnyB.js.map

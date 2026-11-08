@@ -1,0 +1,66 @@
+{
+  "repository": "DayuanJiang/next-ai-draw-io",
+  "commit": "e3d4d11d5916daf8d68a9f087b36c8ca9a79200e",
+  "sourceDirectory": "builds/dayuanjiang--next-ai-draw-io",
+  "applicationDirectory": ".",
+  "packageManifest": "package.json",
+  "declaredPackageManager": null,
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {},
+    "root": {}
+  },
+  "upstreamProductionScripts": {
+    "build": "next build"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "enable-maps.cjs",
+  "dockerRuntimeBases": [
+    "node:24-alpine AS deps",
+    "node:24-alpine AS builder",
+    "node:24-alpine AS runner"
+  ],
+  "expectedOutput": ".next/standalone",
+  "serverCommand": [
+    "[\"sh\", \"-c\", \"HOSTNAME=0.0.0.0 exec node server.js\"]"
+  ],
+  "containerPort": 3000,
+  "pageRoute": "/",
+  "expectedInterface": "diagram|draw|AI",
+  "serviceRecipe": null,
+  "runtimeConfigurationNames": [],
+  "referenceURL": "https://next-ai-drawio.jiang.jp/en",
+  "bundler": "Turbopack",
+  "bundlerEvidence": "目标脚本使用 next build，清单声明 Next.js ^16.0.7，该主版本默认使用 Turbopack。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "package.json",
+      "url": "https://github.com/DayuanJiang/next-ai-draw-io/blob/e3d4d11d5916daf8d68a9f087b36c8ca9a79200e/package.json"
+    },
+    {
+      "path": "Dockerfile",
+      "url": "https://github.com/DayuanJiang/next-ai-draw-io/blob/e3d4d11d5916daf8d68a9f087b36c8ca9a79200e/Dockerfile"
+    },
+    {
+      "path": "docker-compose.yml",
+      "url": "https://github.com/DayuanJiang/next-ai-draw-io/blob/e3d4d11d5916daf8d68a9f087b36c8ca9a79200e/docker-compose.yml"
+    },
+    {
+      "path": "next.config.ts",
+      "url": "https://github.com/DayuanJiang/next-ai-draw-io/blob/e3d4d11d5916daf8d68a9f087b36c8ca9a79200e/next.config.ts"
+    },
+    {
+      "path": "package-lock.json",
+      "url": "https://github.com/DayuanJiang/next-ai-draw-io/blob/e3d4d11d5916daf8d68a9f087b36c8ca9a79200e/package-lock.json"
+    }
+  ],
+  "dependencyLocks": [
+    "package-lock.json"
+  ],
+  "localVerificationURL": "http://127.0.0.1:43108/",
+  "expectedSelector": "iframe, textarea, [contenteditable]",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [],
+  "resolvedDependencySnapshots": {}
+}

@@ -1,0 +1,2 @@
+const e=`@container/service-header`,t=`@container/service-header-title`,n=`hidden @[640px]:inline`,r=`h-9 w-9 shrink-0 gap-0 p-0 @[640px]:h-9 @[640px]:w-auto @[640px]:gap-2 @[640px]:px-4`,i=`h-9 shrink-0 gap-0 px-2.5 @[560px]:gap-1.5 @[560px]:px-3`,a=`sr-only @[560px]:not-sr-only`;export{r as a,a as i,t as n,n as o,i as r,e as t};
+//# sourceMappingURL=service-header-container-BXvRwSmn.js.map

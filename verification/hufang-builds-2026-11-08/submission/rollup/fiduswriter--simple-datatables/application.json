@@ -1,0 +1,61 @@
+{
+  "repository": "fiduswriter/simple-datatables",
+  "commit": "ff80161244e78c10f2183e7a238f3a6c0cb14023",
+  "sourceDirectory": "builds/fiduswriter--simple-datatables",
+  "applicationDirectory": ".",
+  "packageManifest": "package.json",
+  "declaredPackageManager": null,
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {},
+    "root": {}
+  },
+  "upstreamProductionScripts": {
+    "build_demos": "npm run build_demos_js && shx cp -R src/css docs/demos/dist/",
+    "build_demos_js": "rollup -c rollup.demos.config.mjs"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "Existing upstream sourcemap configuration",
+  "dockerRuntimeBases": [
+    "node:24-bookworm AS build",
+    "nginx:stable-alpine AS runtime"
+  ],
+  "expectedOutput": "docs/demos/dist/module.js",
+  "serverCommand": [
+    "/docker-entrypoint.sh",
+    "nginx",
+    "-g",
+    "daemon off;"
+  ],
+  "containerPort": 80,
+  "pageRoute": "/demos/1-simple/",
+  "expectedInterface": "Simple",
+  "serviceRecipe": null,
+  "runtimeConfigurationNames": [],
+  "referenceURL": "https://fiduswriter.github.io/simple-datatables/demos/1-simple/",
+  "bundler": "Rollup",
+  "bundlerEvidence": "已在锁定提交的目标构建命令或其调用链中找到 rollup。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "package.json",
+      "url": "https://github.com/fiduswriter/simple-datatables/blob/ff80161244e78c10f2183e7a238f3a6c0cb14023/package.json"
+    },
+    {
+      "path": "rollup.demos.config.mjs",
+      "url": "https://github.com/fiduswriter/simple-datatables/blob/ff80161244e78c10f2183e7a238f3a6c0cb14023/rollup.demos.config.mjs"
+    },
+    {
+      "path": "docs/demos/1-simple/index.html",
+      "url": "https://github.com/fiduswriter/simple-datatables/blob/ff80161244e78c10f2183e7a238f3a6c0cb14023/docs/demos/1-simple/index.html"
+    }
+  ],
+  "dependencyLocks": [],
+  "localVerificationURL": "http://127.0.0.1:43118/demos/1-simple/",
+  "expectedSelector": "table",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [],
+  "resolvedDependencySnapshots": {
+    "package-lock.json": "8dd7626ff99815a65bc6ac791cf3c6add15dd19e6ac7368646c5793ef69e33ed"
+  }
+}

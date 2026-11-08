@@ -1,0 +1,2 @@
+import{WC as e,jq as t}from"./index-ARRzLOvi.js";async function n(n,r,i){return await n.ensureQueryData(t(r)),{database:await n.ensureQueryData(e(r,i))}}export{n as t};
+//# sourceMappingURL=mysql-tab-route-loader-U6edyV82.js.map

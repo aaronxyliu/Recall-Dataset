@@ -1,0 +1,2 @@
+import{qet as e}from"./index-ARRzLOvi.js";const t=`bg-accent/60`;function n(n){return e(`rounded-md px-2 py-1.5 text-[13px] font-medium leading-5 transition-colors`,n?e(t,`text-foreground`):`text-muted-foreground hover:bg-accent/50 hover:text-foreground`)}function r(n){return e(`flex w-full max-w-full min-w-0 cursor-pointer flex-col gap-1 rounded-md px-2 py-1.5 text-start transition-colors`,n?e(t,`text-foreground`):`text-muted-foreground hover:bg-accent/50 hover:text-foreground`)}export{n,r,t};
+//# sourceMappingURL=nav-styles-y3R1GMPI.js.map

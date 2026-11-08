@@ -1,0 +1,2 @@
+import{IZ as e}from"./index-ARRzLOvi.js";function t(e){return e instanceof Error&&e.message===`API_REFERENCE_NOT_FOUND`}function n(t){let n=t.replace(/^\/+|\/+$/g,``),r=n.match(/^references\/([^/]+)\/(.+)$/);if(!r)return n;let[,i,a]=r;return i===`cloud`||!e(i)?n:`references/cloud/${a}`}export{t as n,n as t};
+//# sourceMappingURL=seo-BNe_aWUC.js.map

@@ -1,0 +1,3 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/auth.alerts.unsubscribe-pNlcHR5v.js","assets/index-ARRzLOvi.js","assets/index-CzzUskj_.css","assets/AppwriteLogo-DmqsI9uJ.js","assets/AuthFlowShell-CprzUk7I.js","assets/card-BjYdHmbk.js"])))=>i.map(i=>d[i]);
+import{n as e,t}from"./lazyRouteComponent-DuwTJ5fo.js";import{CN as n,SN as r,Uet as i,r as a}from"./index-ARRzLOvi.js";var o=()=>i(()=>import(`./auth.alerts.unsubscribe-pNlcHR5v.js`),__vite__mapDeps([0,1,2,3,4,5])),s=r({token:n().catch(``)});const c=e(`/_auth/auth/alerts/unsubscribe`)({validateSearch:s,head:()=>({meta:[{title:a(`Alert emails`)}]}),component:t(o,`component`)});export{c as t};
+//# sourceMappingURL=auth.alerts.unsubscribe-DkqFIjs2.js.map

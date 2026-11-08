@@ -1,0 +1,88 @@
+{
+  "repository": "CapSoftware/Cap",
+  "commit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
+  "sourceDirectory": "builds/capsoftware--cap",
+  "applicationDirectory": "apps/web",
+  "packageManifest": "apps/web/package.json",
+  "declaredPackageManager": "bun@1.4.4",
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {
+      "node": "24.x"
+    },
+    "root": {
+      "node": ">=24",
+      "bun": "1.4.4"
+    }
+  },
+  "upstreamProductionScripts": {
+    "build": "next build --turbopack",
+    "build:web": "next build --turbopack"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "enable-maps.cjs",
+  "dockerRuntimeBases": [
+    "oven/bun:1.4.4-alpine AS bun",
+    "node:24.22.1-alpine AS base",
+    "base AS builder",
+    "base AS runner"
+  ],
+  "expectedOutput": "apps/web/.next/standalone",
+  "serverCommand": [
+    "HOSTNAME=\"0.0.0.0\" node apps/web/server.js"
+  ],
+  "containerPort": 3000,
+  "pageRoute": "/",
+  "expectedInterface": "Cap|Sign in",
+  "serviceRecipe": "compose.yaml",
+  "runtimeConfigurationNames": [
+    "CAP_URL",
+    "DATABASE_ENCRYPTION_KEY",
+    "MEDIA_SERVER_WEBHOOK_SECRET",
+    "MINIO_ROOT_PASSWORD",
+    "MYSQL_PASSWORD",
+    "MYSQL_ROOT_PASSWORD",
+    "NEXTAUTH_SECRET",
+    "S3_PUBLIC_URL"
+  ],
+  "referenceURL": "https://cap.so/",
+  "bundler": "Turbopack",
+  "bundlerEvidence": "目标脚本显式启用 Turbopack。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "apps/web/package.json",
+      "url": "https://github.com/CapSoftware/Cap/blob/bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca/apps/web/package.json"
+    },
+    {
+      "path": "package.json",
+      "url": "https://github.com/CapSoftware/Cap/blob/bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca/package.json"
+    },
+    {
+      "path": "apps/web/Dockerfile",
+      "url": "https://github.com/CapSoftware/Cap/blob/bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca/apps/web/Dockerfile"
+    },
+    {
+      "path": "docker-compose.yml",
+      "url": "https://github.com/CapSoftware/Cap/blob/bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca/docker-compose.yml"
+    },
+    {
+      "path": "apps/web/next.config.mjs",
+      "url": "https://github.com/CapSoftware/Cap/blob/bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca/apps/web/next.config.mjs"
+    },
+    {
+      "path": "bun.lock",
+      "url": "https://github.com/CapSoftware/Cap/blob/bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca/bun.lock"
+    }
+  ],
+  "dependencyLocks": [
+    "bun.lock"
+  ],
+  "localVerificationURL": "http://127.0.0.1:43110/",
+  "expectedSelector": "main, form",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [
+    "Self-hosted landing/login scope. Recording upload, email and media processing actions are outside this observation."
+  ],
+  "resolvedDependencySnapshots": {}
+}

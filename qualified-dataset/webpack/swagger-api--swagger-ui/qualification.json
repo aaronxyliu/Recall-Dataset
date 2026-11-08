@@ -1,0 +1,885 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "f4a95c2bb796c5ffe0e263fc7de938f87ca24683f651de2fd067b91dcdb8d5b7",
+    "manifestSHA256": "1ce02ba05d9dcf5ba3de1bd54b1e937af273af70ccd09a6f5f031fad31a76ae8",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@babel/runtime-corejs3",
+    "@scarf/scarf",
+    "@tanstack/react-virtual",
+    "base64-js",
+    "buffer",
+    "classnames",
+    "css.escape",
+    "deep-extend",
+    "dompurify",
+    "ieee754",
+    "immutable",
+    "js-file-download",
+    "js-yaml",
+    "lodash",
+    "prop-types",
+    "randexp",
+    "randombytes",
+    "react",
+    "react-copy-to-clipboard",
+    "react-debounce-input",
+    "react-dom",
+    "react-immutable-proptypes",
+    "react-immutable-pure-component",
+    "react-inspector",
+    "react-redux",
+    "react-syntax-highlighter",
+    "redux",
+    "remarkable",
+    "reselect",
+    "serialize-error",
+    "sha.js",
+    "swagger-client",
+    "url-parse",
+    "xml",
+    "xml-but-prettier",
+    "zenscroll"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@babel/runtime-corejs3",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@babel/runtime-corejs3"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 3
+    },
+    {
+      "library": "@scarf/scarf",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tanstack/react-virtual",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 14,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "base64-js",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "base64-js"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 7,
+      "sourceFiles": 1
+    },
+    {
+      "library": "buffer",
+      "initialAnchors": 11,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 133,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 11
+    },
+    {
+      "library": "classnames",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "classnames"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 5,
+      "sourceFiles": 1
+    },
+    {
+      "library": "css.escape",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "css.escape"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 3,
+      "sourceFiles": 1
+    },
+    {
+      "library": "deep-extend",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "deep-extend"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 8,
+      "sourceFiles": 1
+    },
+    {
+      "library": "dompurify",
+      "initialAnchors": 7,
+      "trialLibraries": [
+        "react-immutable-proptypes",
+        "css.escape",
+        "prop-types",
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "@babel/runtime-corejs3",
+        "xml",
+        "js-file-download",
+        "zenscroll"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 118,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 7
+    },
+    {
+      "library": "ieee754",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "ieee754"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "immutable",
+      "initialAnchors": 41,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "immutable"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 712,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 41
+    },
+    {
+      "library": "js-file-download",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "js-file-download"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "js-yaml",
+      "initialAnchors": 44,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "immutable",
+        "js-yaml"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 182,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 44
+    },
+    {
+      "library": "lodash",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "react-immutable-proptypes",
+        "css.escape",
+        "prop-types",
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "@babel/runtime-corejs3",
+        "xml",
+        "js-file-download",
+        "zenscroll"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 347,
+      "sourceFiles": 275,
+      "finalInitialAnchors": 9
+    },
+    {
+      "library": "prop-types",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "prop-types"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 5,
+      "sourceFiles": 3
+    },
+    {
+      "library": "randexp",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "immutable",
+        "js-yaml",
+        "randexp"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 14,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "randombytes",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 3,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 54,
+      "sourceFiles": 2
+    },
+    {
+      "library": "react-copy-to-clipboard",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 32,
+      "sourceFiles": 2
+    },
+    {
+      "library": "react-debounce-input",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 43,
+      "sourceFiles": 2
+    },
+    {
+      "library": "react-dom",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 488,
+      "sourceFiles": 2
+    },
+    {
+      "library": "react-immutable-proptypes",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "react-immutable-proptypes"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 30,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react-immutable-pure-component",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 31,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react-inspector",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-redux",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 117,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react-syntax-highlighter",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 46,
+      "sourceFiles": 18
+    },
+    {
+      "library": "redux",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 46,
+      "sourceFiles": 1
+    },
+    {
+      "library": "remarkable",
+      "initialAnchors": 53,
+      "trialLibraries": [
+        "react-immutable-proptypes",
+        "css.escape",
+        "prop-types",
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "@babel/runtime-corejs3",
+        "xml",
+        "js-file-download",
+        "zenscroll"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 202,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 53
+    },
+    {
+      "library": "reselect",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 92,
+      "sourceFiles": 1
+    },
+    {
+      "library": "serialize-error",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 6,
+      "sourceFiles": 1
+    },
+    {
+      "library": "sha.js",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 51,
+      "sourceFiles": 8
+    },
+    {
+      "library": "swagger-client",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 439,
+      "sourceFiles": 75
+    },
+    {
+      "library": "url-parse",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 9,
+      "sourceFiles": 1
+    },
+    {
+      "library": "xml",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "react-immutable-proptypes",
+        "css.escape",
+        "prop-types",
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "@babel/runtime-corejs3",
+        "xml",
+        "js-file-download",
+        "zenscroll"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 25,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "xml-but-prettier",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 13,
+      "sourceFiles": 1
+    },
+    {
+      "library": "zenscroll",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "react-immutable-proptypes",
+        "css.escape",
+        "prop-types",
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "@babel/runtime-corejs3",
+        "xml",
+        "js-file-download",
+        "zenscroll"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 32,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    }
+  ],
+  "selectedLibraries": [
+    "remarkable",
+    "lodash",
+    "dompurify",
+    "xml",
+    "zenscroll",
+    "@tanstack/react-virtual",
+    "buffer",
+    "immutable",
+    "js-yaml",
+    "randexp"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 416,
+  "bundleUnits": 3,
+  "candidateOrder": [
+    "remarkable",
+    "lodash",
+    "dompurify",
+    "xml",
+    "zenscroll",
+    "react-immutable-proptypes",
+    "css.escape",
+    "prop-types",
+    "@babel/runtime-corejs3",
+    "js-file-download",
+    "@scarf/scarf",
+    "@tanstack/react-virtual",
+    "base64-js",
+    "buffer",
+    "classnames",
+    "deep-extend",
+    "ieee754",
+    "immutable",
+    "js-yaml",
+    "randexp",
+    "randombytes",
+    "react",
+    "react-copy-to-clipboard",
+    "react-debounce-input",
+    "react-dom",
+    "react-immutable-pure-component",
+    "react-inspector",
+    "react-redux",
+    "react-syntax-highlighter",
+    "redux",
+    "reselect",
+    "serialize-error",
+    "sha.js",
+    "swagger-client",
+    "url-parse",
+    "xml-but-prettier"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "react-immutable-proptypes",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "react-immutable-proptypes"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "css.escape",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "css.escape"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "prop-types",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "prop-types"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@babel/runtime-corejs3",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@babel/runtime-corejs3"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "js-file-download",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "js-file-download"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@tanstack/react-virtual",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "base64-js",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "base64-js"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "buffer",
+      "initialAnchors": 11,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "classnames",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "classnames"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "deep-extend",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "deep-extend"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "ieee754",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "ieee754"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "immutable",
+      "initialAnchors": 41,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "immutable"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "js-yaml",
+      "initialAnchors": 44,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "immutable",
+        "js-yaml"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "randexp",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "remarkable",
+        "lodash",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "buffer",
+        "immutable",
+        "js-yaml",
+        "randexp"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "91d0e146c6c863a6e490471a3da83501dd0485e72e2b41086f868dbf0a131517",
+  "bundleDigest": "162323948a5ed390aea0943865d29d152c7c5bef5532134d0ed03a6bbddd4630",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "dad404d1422d3bb24f9910e6eb3f8e662c12a0c01b9c875a671f85662cb62b2f",
+  "reason": null,
+  "organizationSignature": "bf52e357cdf783e7503cb19005483ec5889ebd9fcc0694644324b7a812689d0f"
+}

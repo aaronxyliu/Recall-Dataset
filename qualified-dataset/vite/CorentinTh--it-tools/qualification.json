@@ -1,0 +1,1179 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "6c1079dcd362ed5d249acb4dc27a857d531966af2e3b941d40efe032de3a3563",
+    "manifestSHA256": "f80cf1b724124a495e57c36996114bed138849ea42c8a97bcbc809782aa3d7f5",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@it-tools/bip39",
+    "@it-tools/oggen",
+    "@regexper/render",
+    "@sindresorhus/slugify",
+    "@tabler/icons-vue",
+    "@tiptap/pm",
+    "@tiptap/starter-kit",
+    "@tiptap/vue-3",
+    "@types/figlet",
+    "@types/markdown-it",
+    "@vicons/material",
+    "@vicons/tabler",
+    "@vueuse/core",
+    "@vueuse/head",
+    "@vueuse/router",
+    "bcryptjs",
+    "change-case",
+    "colord",
+    "composerize-ts",
+    "country-code-lookup",
+    "cron-validator",
+    "cronstrue",
+    "crypto-js",
+    "date-fns",
+    "dompurify",
+    "email-normalizer",
+    "emojilib",
+    "figlet",
+    "figue",
+    "fuse.js",
+    "highlight.js",
+    "iarna-toml-esm",
+    "ibantools",
+    "js-base64",
+    "json5",
+    "jwt-decode",
+    "libphonenumber-js",
+    "lodash",
+    "markdown-it",
+    "marked",
+    "mathjs",
+    "mime-types",
+    "monaco-editor",
+    "naive-ui",
+    "netmask",
+    "node-forge",
+    "oui-data",
+    "pdf-signature-reader",
+    "pinia",
+    "plausible-tracker",
+    "qrcode",
+    "randexp",
+    "sql-formatter",
+    "ua-parser-js",
+    "ulid",
+    "unicode-emoji-json",
+    "unplugin-auto-import",
+    "uuid",
+    "vue",
+    "vue-i18n",
+    "vue-router",
+    "vue-shadow-dom",
+    "vue-tsc",
+    "vuedraggable",
+    "xml-formatter",
+    "xml-js",
+    "yaml"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@it-tools/bip39",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@it-tools/oggen",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@regexper/render",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@sindresorhus/slugify",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tabler/icons-vue",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@tabler/icons-vue"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 3,
+      "sourceFiles": 9
+    },
+    {
+      "library": "@tiptap/pm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tiptap/starter-kit",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tiptap/vue-3",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@types/figlet",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@types/markdown-it",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@vicons/material",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vicons/material"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 10,
+      "sourceFiles": 10
+    },
+    {
+      "library": "@vicons/tabler",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vicons/tabler"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 57,
+      "sourceFiles": 57
+    },
+    {
+      "library": "@vueuse/core",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 1126,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 9
+    },
+    {
+      "library": "@vueuse/head",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "@vueuse/head"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 14,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@vueuse/router",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "bcryptjs",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "change-case",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "colord",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "composerize-ts",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "country-code-lookup",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "cron-validator",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "cronstrue",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "crypto-js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "date-fns",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "date-fns"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 10,
+      "sourceFiles": 7
+    },
+    {
+      "library": "dompurify",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "pinia",
+        "naive-ui",
+        "fuse.js",
+        "vue",
+        "lodash",
+        "dompurify",
+        "figue",
+        "plausible-tracker",
+        "vue-router",
+        "date-fns"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 45,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 8
+    },
+    {
+      "library": "email-normalizer",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "emojilib",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "figlet",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "figue",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "figue"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 29,
+      "sourceFiles": 1
+    },
+    {
+      "library": "fuse.js",
+      "initialAnchors": 14,
+      "trialLibraries": [
+        "pinia",
+        "naive-ui",
+        "fuse.js",
+        "vue",
+        "lodash",
+        "dompurify",
+        "figue",
+        "plausible-tracker",
+        "vue-router",
+        "date-fns"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 147,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 14
+    },
+    {
+      "library": "highlight.js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "iarna-toml-esm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ibantools",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "js-base64",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "json5",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "jwt-decode",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "libphonenumber-js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "lodash",
+      "initialAnchors": 18,
+      "trialLibraries": [
+        "pinia",
+        "naive-ui",
+        "fuse.js",
+        "vue",
+        "lodash",
+        "dompurify",
+        "figue",
+        "plausible-tracker",
+        "vue-router",
+        "date-fns"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 691,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 18
+    },
+    {
+      "library": "markdown-it",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "marked",
+      "initialAnchors": 33,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 128,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 33
+    },
+    {
+      "library": "mathjs",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "mime-types",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "monaco-editor",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "naive-ui",
+      "initialAnchors": 105,
+      "trialLibraries": [
+        "pinia",
+        "naive-ui",
+        "fuse.js",
+        "vue",
+        "lodash",
+        "dompurify",
+        "figue",
+        "plausible-tracker",
+        "vue-router",
+        "date-fns"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 644,
+      "sourceFiles": 293,
+      "finalInitialAnchors": 105
+    },
+    {
+      "library": "netmask",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "node-forge",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "oui-data",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "pdf-signature-reader",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "pinia",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "pinia"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 173,
+      "sourceFiles": 1
+    },
+    {
+      "library": "plausible-tracker",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "plausible-tracker"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 19,
+      "sourceFiles": 2
+    },
+    {
+      "library": "qrcode",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "randexp",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "sql-formatter",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ua-parser-js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ulid",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "unicode-emoji-json",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "unplugin-auto-import",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "uuid",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vue",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "vue"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "vue-i18n",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked",
+        "vue-i18n"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 324,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "vue-router",
+      "initialAnchors": 21,
+      "trialLibraries": [
+        "pinia",
+        "naive-ui",
+        "fuse.js",
+        "vue",
+        "lodash",
+        "dompurify",
+        "figue",
+        "plausible-tracker",
+        "vue-router",
+        "date-fns"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 272,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 21
+    },
+    {
+      "library": "vue-shadow-dom",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked",
+        "vue-i18n",
+        "vue-shadow-dom"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 16,
+      "sourceFiles": 1
+    },
+    {
+      "library": "vue-tsc",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vuedraggable",
+      "initialAnchors": 29,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked",
+        "vue-i18n",
+        "vuedraggable"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 482,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 29
+    },
+    {
+      "library": "xml-formatter",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "xml-js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "yaml",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    }
+  ],
+  "selectedLibraries": [
+    "naive-ui",
+    "fuse.js",
+    "lodash",
+    "dompurify",
+    "vue-router",
+    "@vueuse/core",
+    "marked",
+    "vue-i18n",
+    "vuedraggable"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 391,
+  "bundleUnits": 5,
+  "candidateOrder": [
+    "naive-ui",
+    "fuse.js",
+    "lodash",
+    "dompurify",
+    "vue-router",
+    "pinia",
+    "vue",
+    "figue",
+    "plausible-tracker",
+    "date-fns",
+    "@it-tools/bip39",
+    "@it-tools/oggen",
+    "@regexper/render",
+    "@sindresorhus/slugify",
+    "@tabler/icons-vue",
+    "@tiptap/pm",
+    "@tiptap/starter-kit",
+    "@tiptap/vue-3",
+    "@types/figlet",
+    "@types/markdown-it",
+    "@vicons/material",
+    "@vicons/tabler",
+    "@vueuse/core",
+    "@vueuse/head",
+    "@vueuse/router",
+    "bcryptjs",
+    "change-case",
+    "colord",
+    "composerize-ts",
+    "country-code-lookup",
+    "cron-validator",
+    "cronstrue",
+    "crypto-js",
+    "email-normalizer",
+    "emojilib",
+    "figlet",
+    "highlight.js",
+    "iarna-toml-esm",
+    "ibantools",
+    "js-base64",
+    "json5",
+    "jwt-decode",
+    "libphonenumber-js",
+    "markdown-it",
+    "marked",
+    "mathjs",
+    "mime-types",
+    "monaco-editor",
+    "netmask",
+    "node-forge",
+    "oui-data",
+    "pdf-signature-reader",
+    "qrcode",
+    "randexp",
+    "sql-formatter",
+    "ua-parser-js",
+    "ulid",
+    "unicode-emoji-json",
+    "unplugin-auto-import",
+    "uuid",
+    "vue-i18n",
+    "vue-shadow-dom",
+    "vue-tsc",
+    "vuedraggable",
+    "xml-formatter",
+    "xml-js",
+    "yaml"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "pinia",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "pinia"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "vue",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "vue"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "figue",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "figue"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "plausible-tracker",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "plausible-tracker"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "date-fns",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "date-fns"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@tabler/icons-vue",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@tabler/icons-vue"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@vicons/material",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vicons/material"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@vicons/tabler",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vicons/tabler"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@vueuse/core",
+      "initialAnchors": 9,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@vueuse/head",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "@vueuse/head"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "marked",
+      "initialAnchors": 33,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "vue-i18n",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked",
+        "vue-i18n"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "vue-shadow-dom",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked",
+        "vue-i18n",
+        "vue-shadow-dom"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "vuedraggable",
+      "initialAnchors": 29,
+      "trialLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked",
+        "vue-i18n",
+        "vuedraggable"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "a25535b85f1cb58b10d244e1a0df6e1e43ac5da21289f774221ebbd63a7cbac7",
+  "bundleDigest": "36e02aac60dded9862e990f89f17efb5f0bc5e2c14674bb1341213f9e38f273f",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "ea9324a3cbd72edaa394973cdf3caab992f8435bcdcd23a6a8b97b67cdc3ee28",
+  "reason": null,
+  "organizationSignature": "6c660d3b35e3c48609adc7cd91d0cb71379b1ec1f2bbb65fda75ecb9ec713966"
+}

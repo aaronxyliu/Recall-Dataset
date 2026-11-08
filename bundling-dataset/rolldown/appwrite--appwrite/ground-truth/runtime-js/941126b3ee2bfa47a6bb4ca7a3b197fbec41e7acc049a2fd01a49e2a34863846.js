@@ -1,0 +1,2 @@
+import{Not as e,Pot as t,_st as n,xst as r}from"./index-ARRzLOvi.js";var i=r(n(),1);function a(n,r){let a=e(r),o=a.getQueryCache();return i.useSyncExternalStore(i.useCallback(e=>o.subscribe(t.batchCalls(e)),[o]),()=>a.isFetching(n),()=>a.isFetching(n))}export{a as t};
+//# sourceMappingURL=useIsFetching-C50VaK5Z.js.map

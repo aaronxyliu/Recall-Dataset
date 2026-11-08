@@ -1,0 +1,2 @@
+import{Dt as e,est as t,qet as n,xst as r}from"./index-ARRzLOvi.js";var i=r(t());function a({value:t,className:r}){return(0,i.jsxs)(`div`,{className:n(`flex items-center gap-2 mb-2`,r),children:[(0,i.jsx)(e,{value:t,className:`h-1.5 flex-1`}),(0,i.jsxs)(`span`,{className:`text-[11px] text-muted-foreground shrink-0`,children:[Math.round(t),`%`]})]})}export{a as t};
+//# sourceMappingURL=ProgressBarRow-C-k1Tvxe.js.map

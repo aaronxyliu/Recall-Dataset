@@ -1,0 +1,261 @@
+#0 building with "colima" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 819B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:20-bookworm
+#2 DONE 0.9s
+
+#3 [internal] load metadata for docker.io/library/nginx:stable-alpine
+#3 DONE 3.3s
+
+#4 [build 1/7] FROM docker.io/library/node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5
+#4 resolve docker.io/library/node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5 0.0s done
+#4 CACHED
+
+#5 [runtime 1/3] FROM docker.io/library/nginx:stable-alpine@sha256:583b7f2fce1cdb8da5ad5c39ebd3c33b98b87d493190e548bdee1fa8c619c311
+#5 resolve docker.io/library/nginx:stable-alpine@sha256:583b7f2fce1cdb8da5ad5c39ebd3c33b98b87d493190e548bdee1fa8c619c311 0.0s done
+#5 ...
+
+#6 [internal] load build context
+#6 transferring context: 509.28kB 0.0s done
+#6 DONE 0.4s
+
+#7 [build 2/7] WORKDIR /src
+#7 DONE 0.4s
+
+#5 [runtime 1/3] FROM docker.io/library/nginx:stable-alpine@sha256:583b7f2fce1cdb8da5ad5c39ebd3c33b98b87d493190e548bdee1fa8c619c311
+#5 DONE 0.6s
+
+#8 [build 3/7] RUN npm install --global pnpm@9.8.0
+#8 2.128 
+#8 2.128 added 1 package in 2s
+#8 2.128 
+#8 2.128 1 package is looking for funding
+#8 2.128   run `npm fund` for details
+#8 2.129 npm notice
+#8 2.129 npm notice New major version of npm available! 10.8.2 -> 12.2.2
+#8 2.129 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#8 2.129 npm notice To update run: npm install -g npm@12.2.2
+#8 2.129 npm notice
+#8 DONE 2.4s
+
+#9 [build 4/7] COPY . .
+#9 DONE 0.1s
+
+#10 [build 5/7] RUN pnpm install --frozen-lockfile
+#10 0.566 Lockfile is up to date, resolution step is skipped
+#10 0.616 Progress: resolved 1, reused 0, downloaded 0, added 0
+#10 0.731 Packages: +660
+#10 0.731 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#10 1.244 
+#10 1.244    ╭───────────────────────────────────────────────────────────────────╮
+#10 1.244    │                                                                   │
+#10 1.244    │                Update available! 9.8.0 → 12.18.0.                 │
+#10 1.244    │   Changelog: https://github.com/pnpm/pnpm/releases/tag/v12.18.0   │
+#10 1.244    │                 Run "pnpm add -g pnpm" to update.                 │
+#10 1.244    │                                                                   │
+#10 1.244    │         Follow @pnpmjs for updates: https://x.com/pnpmjs          │
+#10 1.244    │                                                                   │
+#10 1.244    ╰───────────────────────────────────────────────────────────────────╯
+#10 1.244 
+#10 1.619 Progress: resolved 660, reused 0, downloaded 14, added 14
+#10 2.619 Progress: resolved 660, reused 0, downloaded 52, added 52
+#10 3.619 Progress: resolved 660, reused 0, downloaded 75, added 75
+#10 4.619 Progress: resolved 660, reused 0, downloaded 101, added 101
+#10 5.620 Progress: resolved 660, reused 0, downloaded 127, added 127
+#10 6.620 Progress: resolved 660, reused 0, downloaded 153, added 153
+#10 7.621 Progress: resolved 660, reused 0, downloaded 176, added 176
+#10 8.171  WARN  GET https://registry.npmjs.org/is-extglob/-/is-extglob-2.1.1.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 8.621 Progress: resolved 660, reused 0, downloaded 200, added 200
+#10 9.621 Progress: resolved 660, reused 0, downloaded 220, added 220
+#10 10.62 Progress: resolved 660, reused 0, downloaded 240, added 240
+#10 11.62 Progress: resolved 660, reused 0, downloaded 262, added 262
+#10 12.62 Progress: resolved 660, reused 0, downloaded 285, added 285
+#10 13.62 Progress: resolved 660, reused 0, downloaded 308, added 308
+#10 14.63 Progress: resolved 660, reused 0, downloaded 329, added 329
+#10 15.63 Progress: resolved 660, reused 0, downloaded 349, added 349
+#10 16.63 Progress: resolved 660, reused 0, downloaded 369, added 369
+#10 17.32  WARN  GET https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 17.63 Progress: resolved 660, reused 0, downloaded 389, added 389
+#10 18.63 Progress: resolved 660, reused 0, downloaded 409, added 409
+#10 19.63 Progress: resolved 660, reused 0, downloaded 434, added 434
+#10 20.63 Progress: resolved 660, reused 0, downloaded 456, added 456
+#10 21.63 Progress: resolved 660, reused 0, downloaded 480, added 480
+#10 22.63 Progress: resolved 660, reused 0, downloaded 502, added 502
+#10 22.73  WARN  GET https://registry.npmjs.org/https-proxy-agent/-/https-proxy-agent-5.0.1.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 23.63 Progress: resolved 660, reused 0, downloaded 521, added 520
+#10 24.64 Progress: resolved 660, reused 0, downloaded 537, added 537
+#10 25.64 Progress: resolved 660, reused 0, downloaded 556, added 556
+#10 26.50  WARN  GET https://registry.npmjs.org/rollup/-/rollup-4.21.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 26.64 Progress: resolved 660, reused 0, downloaded 573, added 573
+#10 27.54  WARN  GET https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz error (ECONNRESET). Will retry in 1 minute. 1 retries left.
+#10 27.64 Progress: resolved 660, reused 0, downloaded 585, added 585
+#10 28.64 Progress: resolved 660, reused 0, downloaded 604, added 604
+#10 29.64 Progress: resolved 660, reused 0, downloaded 618, added 618
+#10 30.64 Progress: resolved 660, reused 0, downloaded 630, added 630
+#10 31.64 Progress: resolved 660, reused 0, downloaded 644, added 644
+#10 32.65 Progress: resolved 660, reused 0, downloaded 650, added 650
+#10 33.65 Progress: resolved 660, reused 0, downloaded 651, added 651
+#10 37.32 Progress: resolved 660, reused 0, downloaded 652, added 651
+#10 38.32 Progress: resolved 660, reused 0, downloaded 652, added 652
+#10 48.68  WARN  GET https://registry.npmjs.org/@types/yargs-parser/-/yargs-parser-21.0.3.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 52.20  WARN  GET https://registry.npmjs.org/js-yaml/-/js-yaml-3.14.1.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 53.66  WARN  GET https://registry.npmjs.org/picomatch/-/picomatch-2.3.1.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 57.71  WARN  GET https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 59.11 Progress: resolved 660, reused 0, downloaded 653, added 652
+#10 60.12 Progress: resolved 660, reused 0, downloaded 653, added 653
+#10 62.66 Progress: resolved 660, reused 0, downloaded 654, added 653
+#10 63.04  WARN  GET https://registry.npmjs.org/function-bind/-/function-bind-1.1.2.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 63.66 Progress: resolved 660, reused 0, downloaded 654, added 654
+#10 64.67 Progress: resolved 660, reused 0, downloaded 655, added 655
+#10 67.82  WARN  GET https://registry.npmjs.org/tr46/-/tr46-3.0.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 68.13 Progress: resolved 660, reused 0, downloaded 656, added 655
+#10 69.13 Progress: resolved 660, reused 0, downloaded 656, added 656
+#10 73.46 Progress: resolved 660, reused 0, downloaded 657, added 656
+#10 74.46 Progress: resolved 660, reused 0, downloaded 657, added 657
+#10 77.08  WARN  GET https://registry.npmjs.org/fs-minipass/-/fs-minipass-2.1.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#10 78.26 Progress: resolved 660, reused 0, downloaded 658, added 657
+#10 79.26 Progress: resolved 660, reused 0, downloaded 658, added 658
+#10 87.50 Progress: resolved 660, reused 0, downloaded 659, added 658
+#10 87.97 Progress: resolved 660, reused 0, downloaded 660, added 660, done
+#10 88.18 .../esbuild@0.23.1/node_modules/esbuild postinstall$ node install.js
+#10 88.18 .../canvas@2.11.2/node_modules/canvas install$ node-pre-gyp install --fallback-to-build --update-binary
+#10 88.24 .../esbuild@0.23.1/node_modules/esbuild postinstall: Done
+#10 88.25 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp info it worked if it ends with ok
+#10 88.25 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp info using node-pre-gyp@1.0.11
+#10 88.25 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp info using node@20.20.2 | linux | arm64
+#10 88.30 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp http GET https://github.com/Automattic/node-canvas/releases/download/v2.11.2/canvas-v2.11.2-node-v115-linux-glibc-arm64.tar.gz
+#10 88.30 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp http download proxy agent configured using: "http://host.docker.internal:7897"
+#10 89.05 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! install response status 404 Not Found on https://github.com/Automattic/node-canvas/releases/download/v2.11.2/canvas-v2.11.2-node-v115-linux-glibc-arm64.tar.gz 
+#10 89.05 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp WARN Pre-built binaries not installable for canvas@2.11.2 and node@20.20.2 (node-v115 ABI, glibc) (falling back to source compile with node-gyp) 
+#10 89.05 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp WARN Hit error response status 404 Not Found on https://github.com/Automattic/node-canvas/releases/download/v2.11.2/canvas-v2.11.2-node-v115-linux-glibc-arm64.tar.gz 
+#10 89.08 .../canvas@2.11.2/node_modules/canvas install: gyp info it worked if it ends with ok
+#10 89.08 .../canvas@2.11.2/node_modules/canvas install: gyp info using node-gyp@10.1.0
+#10 89.08 .../canvas@2.11.2/node_modules/canvas install: gyp info using node@20.20.2 | linux | arm64
+#10 89.08 .../canvas@2.11.2/node_modules/canvas install: gyp info ok 
+#10 89.11 .../canvas@2.11.2/node_modules/canvas install: gyp info it worked if it ends with ok
+#10 89.11 .../canvas@2.11.2/node_modules/canvas install: gyp info using node-gyp@10.1.0
+#10 89.11 .../canvas@2.11.2/node_modules/canvas install: gyp info using node@20.20.2 | linux | arm64
+#10 89.16 .../canvas@2.11.2/node_modules/canvas install: gyp info find Python using Python version 3.11.2 found at "/usr/bin/python3"
+#10 89.24 .../canvas@2.11.2/node_modules/canvas install: gyp http GET https://nodejs.org/download/release/v20.20.2/node-v20.20.2-headers.tar.gz
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp WARN install got an error, rolling back install
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! configure error 
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! stack FetchError: request to https://nodejs.org/download/release/v20.20.2/node-v20.20.2-headers.tar.gz failed, reason: socket hang up
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! stack at ClientRequest.<anonymous> (/usr/local/lib/node_modules/pnpm/dist/node_modules/minipass-fetch/lib/index.js:130:14)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! stack at ClientRequest.emit (node:events:524:28)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! stack at emitErrorEvent (node:_http_client:101:11)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! stack at TLSSocket.socketOnEnd (node:_http_client:528:5)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! stack at TLSSocket.emit (node:events:536:35)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! stack at endReadableNT (node:internal/streams/readable:1698:12)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! stack at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! System Linux 6.8.0-117-generic
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! command "/usr/local/bin/node" "/usr/local/lib/node_modules/pnpm/dist/node_modules/node-gyp/bin/node-gyp.js" "configure" "--fallback-to-build" "--update-binary" "--module=/src/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/build/Release/canvas.node" "--module_name=canvas" "--module_path=/src/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/build/Release" "--napi_version=9" "--node_abi_napi=napi" "--napi_build_version=0" "--node_napi_label=node-v115"
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! cwd /src/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! node -v v20.20.2
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! node-gyp -v v10.1.0
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: gyp ERR! not ok 
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! build error 
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! stack Error: Failed to execute '/usr/local/bin/node /usr/local/lib/node_modules/pnpm/dist/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --update-binary --module=/src/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/build/Release/canvas.node --module_name=canvas --module_path=/src/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/build/Release --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v115' (1)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! stack     at ChildProcess.<anonymous> (/src/node_modules/.pnpm/@mapbox+node-pre-gyp@1.0.11/node_modules/@mapbox/node-pre-gyp/lib/util/compile.js:89:23)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! stack     at ChildProcess.emit (node:events:524:28)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! stack     at maybeClose (node:internal/child_process:1104:16)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! stack     at ChildProcess._handle.onexit (node:internal/child_process:304:5)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! System Linux 6.8.0-117-generic
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! command "/usr/local/bin/node" "/src/node_modules/.pnpm/@mapbox+node-pre-gyp@1.0.11/node_modules/@mapbox/node-pre-gyp/bin/node-pre-gyp" "install" "--fallback-to-build" "--update-binary"
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! cwd /src/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! node -v v20.20.2
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! node-pre-gyp -v v1.0.11
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: node-pre-gyp ERR! not ok 
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: Failed to execute '/usr/local/bin/node /usr/local/lib/node_modules/pnpm/dist/node_modules/node-gyp/bin/node-gyp.js configure --fallback-to-build --update-binary --module=/src/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/build/Release/canvas.node --module_name=canvas --module_path=/src/node_modules/.pnpm/canvas@2.11.2/node_modules/canvas/build/Release --napi_version=9 --node_abi_napi=napi --napi_build_version=0 --node_napi_label=node-v115' (1)
+#10 135.1 .../canvas@2.11.2/node_modules/canvas install: Failed
+#10 135.2 
+#10 135.2 devDependencies:
+#10 135.2 + @jest/globals 29.7.0
+#10 135.2 + @testing-library/dom 10.4.0
+#10 135.2 + @testing-library/jest-dom 6.5.0
+#10 135.2 + @testing-library/react 16.1.0
+#10 135.2 + @types/node 20.16.1
+#10 135.2 + @types/react 19.0.1
+#10 135.2 + @types/react-dom 19.0.2
+#10 135.2 + @typescript-eslint/eslint-plugin 6.21.0
+#10 135.2 + @typescript-eslint/parser 6.21.0
+#10 135.2 + eslint 8.57.0
+#10 135.2 + eslint-config-prettier 9.1.0
+#10 135.2 + eslint-plugin-jest 27.9.0
+#10 135.2 + eslint-plugin-prettier 5.2.1
+#10 135.2 + eslint-plugin-react 7.35.0
+#10 135.2 + eslint-plugin-react-hooks 4.6.2
+#10 135.2 + gh-pages 6.1.1
+#10 135.2 + jest 29.7.0
+#10 135.2 + jest-environment-jsdom 29.7.0
+#10 135.2 + prettier 3.3.3
+#10 135.2 + react 19.0.0
+#10 135.2 + react-dom 19.0.0
+#10 135.2 + ts-jest 29.2.5
+#10 135.2 + tsup 8.2.4
+#10 135.2 + typescript 5.5.4
+#10 135.2 
+#10 135.2 Done in 2m 14.9s
+#10 DONE 135.7s
+
+#11 [build 6/7] RUN node -e "const fs=require('fs');const p='tsup.config.ts';const s=fs.readFileSync(p,'utf8');if(!s.includes('defineConfig({'))throw Error('config anchor missing');fs.writeFileSync(p,s.replace('defineConfig({','defineConfig({sourcemap: true,'));"
+#11 DONE 0.7s
+
+#12 [build 7/7] RUN pnpm run build     && test -s examples/index.html     && test -s examples/iife/demo.js     && test -s examples/iife/demo.js.map
+#12 0.407 
+#12 0.407 > qrcode.react@4.2.0 build /src
+#12 0.407 > pnpm run build:code && pnpm run build:examples
+#12 0.407 
+#12 0.622 
+#12 0.622 > qrcode.react@4.2.0 build:code /src
+#12 0.622 > tsup src/index.tsx -d lib --format esm,cjs --dts --legacy-output --target=es2017 --platform=browser
+#12 0.622 
+#12 0.868 CLI Building entry: src/index.tsx
+#12 0.868 CLI Using tsconfig: tsconfig.json
+#12 0.868 CLI tsup v8.2.4
+#12 0.868 CLI Using tsup config: /src/tsup.config.ts
+#12 0.872 CLI Target: es2017
+#12 0.874 ESM Build start
+#12 0.874 CJS Build start
+#12 0.892 ESM lib/esm/index.js     43.82 KB
+#12 0.892 ESM lib/esm/index.js.map 84.25 KB
+#12 0.892 ESM ⚡️ Build success in 18ms
+#12 0.892 CJS lib/index.js     45.51 KB
+#12 0.892 CJS lib/index.js.map 84.46 KB
+#12 0.892 CJS ⚡️ Build success in 17ms
+#12 1.116 DTS Build start
+#12 2.133 DTS ⚡️ Build success in 1016ms
+#12 2.133 DTS lib/index.d.mts 4.06 KB
+#12 2.133 DTS lib/index.d.ts  4.06 KB
+#12 2.448 
+#12 2.448 > qrcode.react@4.2.0 build:examples /src
+#12 2.448 > tsup examples/demo.tsx -d examples --format iife --env.NODE_ENV production --minify --target=es2017 --legacy-output
+#12 2.448 
+#12 2.663 CLI Building entry: examples/demo.tsx
+#12 2.663 CLI Using tsconfig: tsconfig.json
+#12 2.663 CLI tsup v8.2.4
+#12 2.663 CLI Using tsup config: /src/tsup.config.ts
+#12 2.665 CLI Target: es2017
+#12 2.665 IIFE Build start
+#12 2.738 IIFE examples/iife/demo.js     208.01 KB
+#12 2.738 IIFE examples/iife/demo.js.map 962.55 KB
+#12 2.738 IIFE ⚡️ Build success in 73ms
+#12 DONE 2.9s
+
+#13 [runtime 2/3] COPY --from=build /src/examples/index.html /usr/share/nginx/html/index.html
+#13 DONE 0.2s
+
+#14 [runtime 3/3] COPY --from=build /src/examples/iife/ /usr/share/nginx/html/iife/
+#14 DONE 0.0s
+
+#15 exporting to image
+#15 exporting layers 0.1s done
+#15 exporting manifest sha256:2a095c152299ab0288ec3bc796b64afa70b04242d7c8234b32b4b99c60149aa1 done
+#15 exporting config sha256:47551a8fa875c35249c6e7eca68b8f6b3c5c8d8560678ae3e70bc443fbc6986e done
+#15 exporting attestation manifest sha256:2f64291998fa00745555799b72aafa0980b4eb94135a57c3039877f64fba696f 0.0s done
+#15 exporting manifest list sha256:a8d658a0376a270dd6ab7d788742cd9eda70e5cbf9c6f92c2249e82e9307d3b5 done
+#15 naming to docker.io/recall-hufang/zpao--qrcode.react:f91d2bdcc39d done
+#15 unpacking to docker.io/recall-hufang/zpao--qrcode.react:f91d2bdcc39d 0.0s done
+#15 DONE 0.2s

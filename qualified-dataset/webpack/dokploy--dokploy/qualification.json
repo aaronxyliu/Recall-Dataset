@@ -1,0 +1,1748 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "b85eb3568c86c2d1caa0b35ee7fd24f62dc3029ed1b6a626661c6538b030e91e",
+    "manifestSHA256": "53a4bb794faa71fe88f01fb807e15d80ab17e0ea254ee3a0fc612aad569a1ed4",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@ai-sdk/anthropic",
+    "@ai-sdk/azure",
+    "@ai-sdk/cohere",
+    "@ai-sdk/deepinfra",
+    "@ai-sdk/mistral",
+    "@ai-sdk/openai",
+    "@ai-sdk/openai-compatible",
+    "@aws-sdk/client-cloudwatch",
+    "@aws-sdk/client-cloudwatch-logs",
+    "@aws-sdk/client-route-53",
+    "@aws-sdk/client-secrets-manager",
+    "@aws-sdk/client-ssm",
+    "@better-auth/api-key",
+    "@better-auth/passkey",
+    "@better-auth/scim",
+    "@better-auth/sso",
+    "@codemirror/autocomplete",
+    "@codemirror/lang-css",
+    "@codemirror/lang-json",
+    "@codemirror/lang-yaml",
+    "@codemirror/language",
+    "@codemirror/legacy-modes",
+    "@codemirror/search",
+    "@codemirror/view",
+    "@dokploy/server",
+    "@dokploy/trpc-openapi",
+    "@faker-js/faker",
+    "@hookform/resolvers",
+    "@octokit/auth-app",
+    "@octokit/webhooks",
+    "@openpanel/nextjs",
+    "@react-email/components",
+    "@stepperize/react",
+    "@stripe/stripe-js",
+    "@tailwindcss/typography",
+    "@tanstack/react-query",
+    "@tanstack/react-table",
+    "@tanstack/react-virtual",
+    "@trpc/client",
+    "@trpc/next",
+    "@trpc/react-query",
+    "@trpc/server",
+    "@uiw/codemirror-theme-github",
+    "@uiw/react-codemirror",
+    "@xterm/addon-attach",
+    "@xterm/addon-clipboard",
+    "@xterm/xterm",
+    "adm-zip",
+    "ai",
+    "ai-sdk-ollama",
+    "bcrypt",
+    "better-auth",
+    "bl",
+    "boxen",
+    "class-variance-authority",
+    "clsx",
+    "cmdk",
+    "copy-to-clipboard",
+    "date-fns",
+    "dockerode",
+    "dompurify",
+    "dotenv",
+    "drizzle-orm",
+    "drizzle-zod",
+    "fancy-ansi",
+    "input-otp",
+    "js-cookie",
+    "lodash",
+    "lucide-react",
+    "micromatch",
+    "nanoid",
+    "next",
+    "next-themes",
+    "nextjs-toploader",
+    "node-os-utils",
+    "node-pty",
+    "node-schedule",
+    "nodemailer",
+    "octokit",
+    "pino",
+    "pino-pretty",
+    "postgres",
+    "posthog-js",
+    "public-ip",
+    "qrcode",
+    "radix-ui",
+    "react",
+    "react-confetti-explosion",
+    "react-day-picker",
+    "react-dom",
+    "react-hook-form",
+    "react-markdown",
+    "recharts",
+    "resend",
+    "semver",
+    "shadcn",
+    "shell-quote",
+    "slugify",
+    "sonner",
+    "ssh2",
+    "stripe",
+    "superjson",
+    "swagger-ui-react",
+    "tailwind-merge",
+    "tailwindcss-animate",
+    "toml",
+    "tw-animate-css",
+    "undici",
+    "use-resize-observer",
+    "ws",
+    "xterm-addon-fit",
+    "yaml",
+    "zod",
+    "zod-form-data"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@ai-sdk/anthropic",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@ai-sdk/azure",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@ai-sdk/cohere",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@ai-sdk/deepinfra",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@ai-sdk/mistral",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@ai-sdk/openai",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@ai-sdk/openai-compatible",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@aws-sdk/client-cloudwatch",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@aws-sdk/client-cloudwatch-logs",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@aws-sdk/client-route-53",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@aws-sdk/client-secrets-manager",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@aws-sdk/client-ssm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@better-auth/api-key",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@better-auth/api-key"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 1,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@better-auth/passkey",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@better-auth/passkey"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 8,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@better-auth/scim",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@better-auth/sso",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@better-auth/sso"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 1,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@codemirror/autocomplete",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/lang-css",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/lang-json",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/lang-yaml",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/language",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/legacy-modes",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/search",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@codemirror/view",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@dokploy/server",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@dokploy/trpc-openapi",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@faker-js/faker",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@hookform/resolvers",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@hookform/resolvers"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 15,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@octokit/auth-app",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@octokit/webhooks",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@openpanel/nextjs",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@openpanel/nextjs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 21,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@react-email/components",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@stepperize/react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@stripe/stripe-js",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tailwindcss/typography",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tanstack/react-query",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 64,
+      "sourceFiles": 18,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "@tanstack/react-table",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@tanstack/react-virtual",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@trpc/client",
+      "initialAnchors": 18,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 323,
+      "sourceFiles": 10,
+      "finalInitialAnchors": 18
+    },
+    {
+      "library": "@trpc/next",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/next"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 32,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@trpc/react-query",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 154,
+      "sourceFiles": 3,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "@trpc/server",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "@trpc/server"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 160,
+      "sourceFiles": 5
+    },
+    {
+      "library": "@uiw/codemirror-theme-github",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@uiw/react-codemirror",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@xterm/addon-attach",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@xterm/addon-clipboard",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@xterm/xterm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "adm-zip",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ai",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ai-sdk-ollama",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "bcrypt",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "better-auth",
+      "initialAnchors": 10,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "@better-auth/passkey",
+        "next",
+        "react"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 169,
+      "sourceFiles": 29,
+      "finalInitialAnchors": 10
+    },
+    {
+      "library": "bl",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "boxen",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "class-variance-authority",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "class-variance-authority"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 7,
+      "sourceFiles": 1
+    },
+    {
+      "library": "clsx",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "clsx"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2,
+      "sourceFiles": 1
+    },
+    {
+      "library": "cmdk",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 100,
+      "sourceFiles": 2,
+      "finalInitialAnchors": 8
+    },
+    {
+      "library": "copy-to-clipboard",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "copy-to-clipboard"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 3,
+      "sourceFiles": 1
+    },
+    {
+      "library": "date-fns",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "dockerode",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "dompurify",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "dotenv",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "drizzle-orm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "drizzle-zod",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "fancy-ansi",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "input-otp",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "js-cookie",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "lodash",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "lucide-react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "micromatch",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "nanoid",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "next",
+      "initialAnchors": 5,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "@better-auth/passkey",
+        "next",
+        "react"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 127,
+      "sourceFiles": 13,
+      "finalInitialAnchors": 5
+    },
+    {
+      "library": "next-themes",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "next-themes"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 25,
+      "sourceFiles": 1
+    },
+    {
+      "library": "nextjs-toploader",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "nextjs-toploader"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 36,
+      "sourceFiles": 1
+    },
+    {
+      "library": "node-os-utils",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "node-pty",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "node-schedule",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "nodemailer",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "octokit",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "pino",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "pino-pretty",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "postgres",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "posthog-js",
+      "initialAnchors": 149,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "posthog-js"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 2041,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 149
+    },
+    {
+      "library": "public-ip",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "qrcode",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "radix-ui",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "@better-auth/passkey",
+        "next",
+        "react"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 68,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 4
+    },
+    {
+      "library": "react-confetti-explosion",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-day-picker",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-dom",
+      "initialAnchors": 104,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "@better-auth/passkey",
+        "next",
+        "react"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 653,
+      "sourceFiles": 4,
+      "finalInitialAnchors": 104
+    },
+    {
+      "library": "react-hook-form",
+      "initialAnchors": 21,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "posthog-js",
+        "react-hook-form"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 255,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 21
+    },
+    {
+      "library": "react-markdown",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "recharts",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "resend",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "semver",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "shadcn",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "shell-quote",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "slugify",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "sonner",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 138,
+      "sourceFiles": 1
+    },
+    {
+      "library": "ssh2",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "stripe",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "superjson",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 132,
+      "sourceFiles": 11
+    },
+    {
+      "library": "swagger-ui-react",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "tailwind-merge",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 78,
+      "sourceFiles": 1
+    },
+    {
+      "library": "tailwindcss-animate",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "toml",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "tw-animate-css",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "undici",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "use-resize-observer",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ws",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "xterm-addon-fit",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "yaml",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "zod",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 1275,
+      "sourceFiles": 18
+    },
+    {
+      "library": "zod-form-data",
+      "initialAnchors": null,
+      "qualified": null,
+      "status": "not needed: ten qualifying libraries already selected",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    }
+  ],
+  "selectedLibraries": [
+    "better-auth",
+    "react-dom",
+    "next",
+    "react",
+    "@tanstack/react-query",
+    "@trpc/client",
+    "@trpc/react-query",
+    "cmdk",
+    "posthog-js",
+    "react-hook-form"
+  ],
+  "status": "included",
+  "referenceFailures": [
+    {
+      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/client-only/index.js",
+      "error": "missing source text"
+    }
+  ],
+  "referenceFiles": 137,
+  "bundleUnits": 12,
+  "candidateOrder": [
+    "better-auth",
+    "react-dom",
+    "next",
+    "react",
+    "@better-auth/passkey",
+    "@ai-sdk/anthropic",
+    "@ai-sdk/azure",
+    "@ai-sdk/cohere",
+    "@ai-sdk/deepinfra",
+    "@ai-sdk/mistral",
+    "@ai-sdk/openai",
+    "@ai-sdk/openai-compatible",
+    "@aws-sdk/client-cloudwatch",
+    "@aws-sdk/client-cloudwatch-logs",
+    "@aws-sdk/client-route-53",
+    "@aws-sdk/client-secrets-manager",
+    "@aws-sdk/client-ssm",
+    "@better-auth/api-key",
+    "@better-auth/scim",
+    "@better-auth/sso",
+    "@codemirror/autocomplete",
+    "@codemirror/lang-css",
+    "@codemirror/lang-json",
+    "@codemirror/lang-yaml",
+    "@codemirror/language",
+    "@codemirror/legacy-modes",
+    "@codemirror/search",
+    "@codemirror/view",
+    "@dokploy/server",
+    "@dokploy/trpc-openapi",
+    "@faker-js/faker",
+    "@hookform/resolvers",
+    "@octokit/auth-app",
+    "@octokit/webhooks",
+    "@openpanel/nextjs",
+    "@react-email/components",
+    "@stepperize/react",
+    "@stripe/stripe-js",
+    "@tailwindcss/typography",
+    "@tanstack/react-query",
+    "@tanstack/react-table",
+    "@tanstack/react-virtual",
+    "@trpc/client",
+    "@trpc/next",
+    "@trpc/react-query",
+    "@trpc/server",
+    "@uiw/codemirror-theme-github",
+    "@uiw/react-codemirror",
+    "@xterm/addon-attach",
+    "@xterm/addon-clipboard",
+    "@xterm/xterm",
+    "adm-zip",
+    "ai",
+    "ai-sdk-ollama",
+    "bcrypt",
+    "bl",
+    "boxen",
+    "class-variance-authority",
+    "clsx",
+    "cmdk",
+    "copy-to-clipboard",
+    "date-fns",
+    "dockerode",
+    "dompurify",
+    "dotenv",
+    "drizzle-orm",
+    "drizzle-zod",
+    "fancy-ansi",
+    "input-otp",
+    "js-cookie",
+    "lodash",
+    "lucide-react",
+    "micromatch",
+    "nanoid",
+    "next-themes",
+    "nextjs-toploader",
+    "node-os-utils",
+    "node-pty",
+    "node-schedule",
+    "nodemailer",
+    "octokit",
+    "pino",
+    "pino-pretty",
+    "postgres",
+    "posthog-js",
+    "public-ip",
+    "qrcode",
+    "radix-ui",
+    "react-confetti-explosion",
+    "react-day-picker",
+    "react-hook-form",
+    "react-markdown",
+    "recharts",
+    "resend",
+    "semver",
+    "shadcn",
+    "shell-quote",
+    "slugify",
+    "sonner",
+    "ssh2",
+    "stripe",
+    "superjson",
+    "swagger-ui-react",
+    "tailwind-merge",
+    "tailwindcss-animate",
+    "toml",
+    "tw-animate-css",
+    "undici",
+    "use-resize-observer",
+    "ws",
+    "xterm-addon-fit",
+    "yaml",
+    "zod",
+    "zod-form-data"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "@better-auth/passkey",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@better-auth/passkey"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@better-auth/api-key",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@better-auth/api-key"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@better-auth/sso",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@better-auth/sso"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@hookform/resolvers",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@hookform/resolvers"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@openpanel/nextjs",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@openpanel/nextjs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@tanstack/react-query",
+      "initialAnchors": 4,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@trpc/client",
+      "initialAnchors": 18,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@trpc/next",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/next"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@trpc/react-query",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@trpc/server",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "@trpc/server"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "class-variance-authority",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "class-variance-authority"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "clsx",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "clsx"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "cmdk",
+      "initialAnchors": 8,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "copy-to-clipboard",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "copy-to-clipboard"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "next-themes",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "next-themes"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "nextjs-toploader",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "nextjs-toploader"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "posthog-js",
+      "initialAnchors": 149,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "posthog-js"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "react-hook-form",
+      "initialAnchors": 21,
+      "trialLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "posthog-js",
+        "react-hook-form"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "96f9778a7f2a5f778b273270a5c53e64459ca9046d3a135a2f5acee1e0254d5c",
+  "bundleDigest": "7617c55a0b8a8c1acccfb4d7201384cddf2073ede38adb544c8e8f338f61dafe",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "fef2bc68f3014cd86489bcc4d58eb6586d53c7eb549c88afa55f494673728f6b",
+  "reason": null,
+  "organizationSignature": "2f0f1773cdfc5e79a9d05ef1b3d8561c0ed3942c58c12eb3652b74923bc71efd"
+}

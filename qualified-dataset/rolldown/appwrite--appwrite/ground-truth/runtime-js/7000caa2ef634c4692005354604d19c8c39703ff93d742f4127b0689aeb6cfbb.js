@@ -1,0 +1,2 @@
+import{$G as e,_st as t,xst as n}from"./index-ARRzLOvi.js";t();var r=null,i=new Set,a=null;function o(){a?.()}function s(e){r=e,i.forEach(e=>e())}function c(){return r}function l(t){return e(t)===`sql`}function u(){return typeof document>`u`?!1:document.querySelector(`[data-mysql-sql-workbench]`)?.querySelector(`.monaco-editor:focus-within`)!=null}export{s as a,o as i,l as n,u as r,c as t};
+//# sourceMappingURL=mysql-sql-editor-actions-DbwbORYT.js.map

@@ -1,0 +1,1165 @@
+{
+  "schema": "recall.dataset-anchor-qualification/v1",
+  "policy": {
+    "candidateField": "dependencies",
+    "minInitialAnchors": 3,
+    "minLibraries": 5,
+    "maxLibraries": 10,
+    "counting": "distinct source functions before propagation; repeated target copies count once",
+    "options": {
+      "minFeatures": 10,
+      "featureMetric": "propertyOperations",
+      "minAnchors": 3,
+      "uniqueBundle": true
+    }
+  },
+  "provenance": {
+    "groundTruthSHA256": "a52877e6c997fd6ba467e7d6643e24c22b5d997d1166efc7921793916e4e4544",
+    "manifestSHA256": "c7adaa54649002008761e50eb182d3c3cc49c2e6d76b64b0f6d30619c26d38f1",
+    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
+    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
+    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
+    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
+  },
+  "candidates": [
+    "@bsmnt/scrollytelling",
+    "@code-hike/mdx",
+    "@codesandbox/sandpack-react",
+    "@hcaptcha/react-hcaptcha",
+    "@heroicons/react",
+    "@mdx-js/mdx",
+    "@mdx-js/react",
+    "@next/bundle-analyzer",
+    "@next/mdx",
+    "@octokit/auth-app",
+    "@octokit/core",
+    "@octokit/graphql",
+    "@octokit/plugin-paginate-graphql",
+    "@octokit/rest",
+    "@sentry/nextjs",
+    "@supabase/ssr",
+    "@supabase/supabase-js",
+    "@typescript/native",
+    "@vercel/og",
+    "ai-commands",
+    "animejs",
+    "class-variance-authority",
+    "classnames",
+    "cobe",
+    "common",
+    "common-tags",
+    "config",
+    "d3-geo",
+    "dayjs",
+    "dev-tools",
+    "eslint-config-supabase",
+    "globby",
+    "gray-matter",
+    "gsap",
+    "icons",
+    "js-yaml",
+    "lucide-react",
+    "markdown-toc",
+    "marketing",
+    "mdast-util-from-markdown",
+    "mdast-util-gfm",
+    "mdast-util-mdx",
+    "mdast-util-mdx-jsx",
+    "mdast-util-to-markdown",
+    "micromark-extension-gfm",
+    "micromark-extension-mdxjs",
+    "motion",
+    "next",
+    "next-mdx-remote-client",
+    "next-seo",
+    "next-themes",
+    "nuqs",
+    "ogl",
+    "openai",
+    "parse-numeric-range",
+    "radix-ui",
+    "react",
+    "react-copy-to-clipboard",
+    "react-countdown",
+    "react-dom",
+    "react-markdown",
+    "react-simple-maps",
+    "react-syntax-highlighter",
+    "react-transition-group",
+    "react-use",
+    "recharts",
+    "rehype-slug",
+    "remark",
+    "remark-gfm",
+    "shared-data",
+    "shiki",
+    "swiper",
+    "typed.js",
+    "typescript",
+    "ui",
+    "ui-patterns",
+    "unicornstudio-react",
+    "use-debounce",
+    "vanilla-tilt"
+  ],
+  "excludedPreviouslySelected": [],
+  "libraries": [
+    {
+      "library": "@bsmnt/scrollytelling",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@code-hike/mdx",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@code-hike/mdx"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 0,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@codesandbox/sandpack-react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@hcaptcha/react-hcaptcha",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@heroicons/react",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@heroicons/react"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 1,
+      "sourceFiles": 1
+    },
+    {
+      "library": "@mdx-js/mdx",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@mdx-js/react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@next/bundle-analyzer",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@next/mdx",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@octokit/auth-app",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@octokit/core",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@octokit/graphql",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@octokit/plugin-paginate-graphql",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@octokit/rest",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@sentry/nextjs",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@sentry/nextjs"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 43,
+      "sourceFiles": 12,
+      "finalInitialAnchors": 3
+    },
+    {
+      "library": "@supabase/ssr",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@supabase/supabase-js",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@supabase/supabase-js"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 56,
+      "sourceFiles": 2
+    },
+    {
+      "library": "@typescript/native",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "@vercel/og",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ai-commands",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "animejs",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "class-variance-authority",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "class-variance-authority"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 7,
+      "sourceFiles": 1
+    },
+    {
+      "library": "classnames",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "classnames"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 8,
+      "sourceFiles": 2
+    },
+    {
+      "library": "cobe",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "common",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "common-tags",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "config",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "d3-geo",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "dayjs",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "dev-tools",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "eslint-config-supabase",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "globby",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "gray-matter",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "gsap",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "icons",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "js-yaml",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "lucide-react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "markdown-toc",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "marketing",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "mdast-util-from-markdown",
+      "initialAnchors": 11,
+      "trialLibraries": [
+        "recharts",
+        "react-use",
+        "@supabase/supabase-js",
+        "classnames",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "nuqs",
+        "react-markdown",
+        "class-variance-authority"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 67,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 11
+    },
+    {
+      "library": "mdast-util-gfm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "mdast-util-mdx",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "mdast-util-mdx-jsx",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "mdast-util-to-markdown",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "micromark-extension-gfm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "micromark-extension-mdxjs",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "motion",
+      "initialAnchors": 33,
+      "trialLibraries": [
+        "recharts",
+        "react-use",
+        "@supabase/supabase-js",
+        "classnames",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "nuqs",
+        "react-markdown",
+        "class-variance-authority"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 991,
+      "sourceFiles": 271,
+      "finalInitialAnchors": 33
+    },
+    {
+      "library": "next",
+      "initialAnchors": 164,
+      "trialLibraries": [
+        "recharts",
+        "react-use",
+        "@supabase/supabase-js",
+        "classnames",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "nuqs",
+        "react-markdown",
+        "class-variance-authority"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 1173,
+      "sourceFiles": 39,
+      "finalInitialAnchors": 164
+    },
+    {
+      "library": "next-mdx-remote-client",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "next-seo",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "next-themes",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@sentry/nextjs",
+        "next-themes"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 29,
+      "sourceFiles": 1
+    },
+    {
+      "library": "nuqs",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "nuqs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 101,
+      "sourceFiles": 5
+    },
+    {
+      "library": "ogl",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "openai",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "parse-numeric-range",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "radix-ui",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-copy-to-clipboard",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-countdown",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-dom",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-markdown",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "react-markdown"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 11,
+      "sourceFiles": 1
+    },
+    {
+      "library": "react-simple-maps",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-syntax-highlighter",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-transition-group",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "react-use",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "react-use"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 26,
+      "sourceFiles": 9
+    },
+    {
+      "library": "recharts",
+      "initialAnchors": 5,
+      "trialLibraries": [
+        "recharts",
+        "react-use",
+        "@supabase/supabase-js",
+        "classnames",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "nuqs",
+        "react-markdown",
+        "class-variance-authority"
+      ],
+      "qualified": true,
+      "status": "retained-existing",
+      "referenceFunctions": 286,
+      "sourceFiles": 16,
+      "finalInitialAnchors": 5
+    },
+    {
+      "library": "rehype-slug",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "remark",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "remark-gfm",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "shared-data",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "shiki",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "swiper",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "typed.js",
+      "initialAnchors": 14,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@sentry/nextjs",
+        "typed.js"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement",
+      "referenceFunctions": 54,
+      "sourceFiles": 1,
+      "finalInitialAnchors": 14
+    },
+    {
+      "library": "typescript",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ui",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "ui-patterns",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "unicornstudio-react",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "use-debounce",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    },
+    {
+      "library": "vanilla-tilt",
+      "initialAnchors": 0,
+      "qualified": false,
+      "status": "no supplied source-reference text",
+      "referenceFunctions": 0,
+      "sourceFiles": 0
+    }
+  ],
+  "selectedLibraries": [
+    "recharts",
+    "mdast-util-from-markdown",
+    "next",
+    "motion",
+    "@sentry/nextjs",
+    "typed.js"
+  ],
+  "status": "included",
+  "referenceFailures": [],
+  "referenceFiles": 363,
+  "bundleUnits": 53,
+  "candidateOrder": [
+    "recharts",
+    "mdast-util-from-markdown",
+    "next",
+    "motion",
+    "react-use",
+    "@supabase/supabase-js",
+    "classnames",
+    "nuqs",
+    "react-markdown",
+    "class-variance-authority",
+    "@bsmnt/scrollytelling",
+    "@code-hike/mdx",
+    "@codesandbox/sandpack-react",
+    "@hcaptcha/react-hcaptcha",
+    "@heroicons/react",
+    "@mdx-js/mdx",
+    "@mdx-js/react",
+    "@next/bundle-analyzer",
+    "@next/mdx",
+    "@octokit/auth-app",
+    "@octokit/core",
+    "@octokit/graphql",
+    "@octokit/plugin-paginate-graphql",
+    "@octokit/rest",
+    "@sentry/nextjs",
+    "@supabase/ssr",
+    "@typescript/native",
+    "@vercel/og",
+    "ai-commands",
+    "animejs",
+    "cobe",
+    "common",
+    "common-tags",
+    "config",
+    "d3-geo",
+    "dayjs",
+    "dev-tools",
+    "eslint-config-supabase",
+    "globby",
+    "gray-matter",
+    "gsap",
+    "icons",
+    "js-yaml",
+    "lucide-react",
+    "markdown-toc",
+    "marketing",
+    "mdast-util-gfm",
+    "mdast-util-mdx",
+    "mdast-util-mdx-jsx",
+    "mdast-util-to-markdown",
+    "micromark-extension-gfm",
+    "micromark-extension-mdxjs",
+    "next-mdx-remote-client",
+    "next-seo",
+    "next-themes",
+    "ogl",
+    "openai",
+    "parse-numeric-range",
+    "radix-ui",
+    "react",
+    "react-copy-to-clipboard",
+    "react-countdown",
+    "react-dom",
+    "react-simple-maps",
+    "react-syntax-highlighter",
+    "react-transition-group",
+    "rehype-slug",
+    "remark",
+    "remark-gfm",
+    "shared-data",
+    "shiki",
+    "swiper",
+    "typed.js",
+    "typescript",
+    "ui",
+    "ui-patterns",
+    "unicornstudio-react",
+    "use-debounce",
+    "vanilla-tilt"
+  ],
+  "selectionAttempts": [
+    {
+      "library": "react-use",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "react-use"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@supabase/supabase-js",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@supabase/supabase-js"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "classnames",
+      "initialAnchors": 2,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "classnames"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "nuqs",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "nuqs"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "react-markdown",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "react-markdown"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "class-variance-authority",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "class-variance-authority"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@code-hike/mdx",
+      "initialAnchors": 0,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@code-hike/mdx"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@heroicons/react",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@heroicons/react"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "@sentry/nextjs",
+      "initialAnchors": 3,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@sentry/nextjs"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "next-themes",
+      "initialAnchors": 1,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@sentry/nextjs",
+        "next-themes"
+      ],
+      "qualified": false,
+      "status": "fewer-than-three-initial-anchors",
+      "conflicts": [],
+      "phase": "replacement"
+    },
+    {
+      "library": "typed.js",
+      "initialAnchors": 14,
+      "trialLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "next",
+        "motion",
+        "@sentry/nextjs",
+        "typed.js"
+      ],
+      "qualified": true,
+      "status": "accepted-replacement",
+      "conflicts": [],
+      "phase": "replacement"
+    }
+  ],
+  "sourceDiagnostics": [],
+  "bundleDiagnostics": [],
+  "sourceDigest": "46bd613f3725b734814cdb6385dd5cef9318662d42682fe2edd4051d7a516b6a",
+  "bundleDigest": "ce2bee50e9d2d92f8060e9e2b9ab1ec09f98f24b46374d1a0d5bc7b76f83c56b",
+  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
+  "finalSourceDigest": "55b904587885c7c20ab3af63885688aa88a5fce3f39907a3cf0719ccba4720d9",
+  "reason": null,
+  "organizationSignature": "bfaa2118d8c98f97bf170e05ec4b08cd91f08991386e938599e6f98f7d7f455e"
+}

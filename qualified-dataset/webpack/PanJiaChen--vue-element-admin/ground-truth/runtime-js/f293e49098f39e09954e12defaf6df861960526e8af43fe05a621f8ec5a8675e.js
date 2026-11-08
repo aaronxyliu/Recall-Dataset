@@ -1,0 +1,1 @@
+(function(){ return [].splice.call(arguments, 0 ) })(0, 100, 2, 2)

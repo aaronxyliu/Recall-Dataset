@@ -1,0 +1,8 @@
+{
+  "context": ".",
+  "upstreamDockerfile": "apps/web/Dockerfile",
+  "note": "Upstream production workspace build and local build-secret fallback. Reuse the inspected Node 24.22.2 Alpine binary and select the patched OS CA store with the image's Node launcher. Keep the pinned dependency age and integrity checks with lower download concurrency.",
+  "sourceMapsRequested": true,
+  "namedRecipeContext": true,
+  "imageTagSuffix": "-maps"
+}
