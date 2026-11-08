@@ -1,0 +1,1 @@
+0,Uy=function(V,q,D,A,Y){while(V.length==3){{Y=0;while(Y<3)q[Y]+=V[Y],Y++}A=0;{D=[13,8,13,12,16,5,3,10,15];while(A<9)q[3](q,A%3,D[A]),A++}if(0==![""])break}}

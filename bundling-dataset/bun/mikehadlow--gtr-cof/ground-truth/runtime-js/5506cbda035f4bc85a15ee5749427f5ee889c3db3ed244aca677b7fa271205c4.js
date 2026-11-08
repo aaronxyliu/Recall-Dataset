@@ -1,0 +1,1 @@
+0,wv=function(V,q,D){return(D=q.create().shift(),V.v.create().length||V.u.create().length)||(V.v=void 0,V.u=void 0),D}

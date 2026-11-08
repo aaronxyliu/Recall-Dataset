@@ -1,0 +1,62 @@
+#0 building with "colima" instance using docker driver
+
+#1 [stage-1 1/2] FROM docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10
+#1 resolve docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10 0.0s done
+#1 CACHED
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 563B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/nginx:1.27-alpine
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:22.23.4-bookworm
+#4 DONE 0.0s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [build 1/8] FROM docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f
+#6 resolve docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 12.95kB done
+#7 DONE 0.0s
+
+#8 [build 2/8] WORKDIR /app
+#8 CACHED
+
+#9 [build 6/8] RUN bun build ./src/index.ts --outfile /app/docs/gtr-cof.js --target=browser --sourcemap=linked
+#9 CACHED
+
+#10 [build 5/8] RUN bun install --frozen-lockfile || bun install
+#10 CACHED
+
+#11 [build 3/8] RUN npm i -g bun@1.4.4
+#11 CACHED
+
+#12 [build 4/8] COPY . .
+#12 CACHED
+
+#13 [build 7/8] RUN bun build ./src/styles/index.css --outfile /app/docs/gtr-cof.css
+#13 CACHED
+
+#14 [build 8/8] RUN cp /app/src/gtr-cof.js /app/src/gtr-cof.js.map /app/docs/ && find /app -name gtr-cof.css -not -path /app/docs/gtr-cof.css -exec cp {} /app/docs/ ;
+#14 DONE 0.2s
+
+#15 [stage-1 2/2] COPY --from=build /app/docs/ /usr/share/nginx/html/
+#15 DONE 0.0s
+
+#16 exporting to image
+#16 exporting layers 0.0s done
+#16 exporting manifest sha256:7be3f7878a5244488cd1e28b4d6ccc7bef28cba6dcf1977fefe6ff3a169a2ccb done
+#16 exporting config sha256:3ef9ab944eb6117de279f435d89e8bfa6de05e357665cb50dd35e57208327368 done
+#16 exporting attestation manifest sha256:5dd3cc8ae221b2348d85124e8a887cd1cc6b90a4f0c5c5cf26b3e3a5cc1e240e done
+#16 exporting manifest list sha256:ec1b3b4a6eedab4dc2e255f1a4aada61c8fc40e5ce7a7ffa028b766a58ec67de
+#16 exporting manifest list sha256:ec1b3b4a6eedab4dc2e255f1a4aada61c8fc40e5ce7a7ffa028b766a58ec67de done
+#16 naming to docker.io/recall70/mikehadlow--gtr-cof:7fa1f50f9a84 done
+#16 unpacking to docker.io/recall70/mikehadlow--gtr-cof:7fa1f50f9a84 0.0s done
+#16 DONE 0.1s

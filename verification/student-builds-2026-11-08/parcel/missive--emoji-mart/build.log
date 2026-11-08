@@ -1,0 +1,151 @@
+#0 building with "colima" instance using docker driver
+
+#1 [stage-1 1/2] FROM docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10
+#1 resolve docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10 0.0s done
+#1 CACHED
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 648B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/nginx:1.27-alpine
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:20-bookworm
+#4 DONE 0.0s
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [build 1/9] FROM docker.io/library/node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5
+#6 resolve docker.io/library/node:20-bookworm@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 14.88kB done
+#7 DONE 0.0s
+
+#8 [build 2/9] WORKDIR /app
+#8 CACHED
+
+#9 [build 3/9] COPY . .
+#9 CACHED
+
+#10 [build 4/9] RUN npm install -g yarn@1.22.22 --force
+#10 0.398 npm warn using --force Recommended protections disabled.
+#10 1.555 
+#10 1.555 added 1 package in 1s
+#10 1.555 npm notice
+#10 1.555 npm notice New major version of npm available! 10.8.2 -> 12.2.2
+#10 1.555 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#10 1.555 npm notice To update run: npm install -g npm@12.2.2
+#10 1.555 npm notice
+#10 DONE 1.6s
+
+#11 [build 5/9] RUN find /app -name yarn.lock -exec sed -i 's@https://registry.yarnpkg.com/@https://registry.npmjs.org/@g' {} ;
+#11 DONE 0.2s
+
+#12 [build 6/9] RUN yarn config set registry https://registry.npmjs.org
+#12 0.346 yarn config v1.22.22
+#12 0.366 success Set "registry" to "https://registry.npmjs.org".
+#12 0.366 Done in 0.02s.
+#12 DONE 0.4s
+
+#13 [build 7/9] RUN yarn install --network-concurrency 4 --network-timeout 120000 --frozen-lockfile --ignore-engines
+#13 0.193 yarn install v1.22.22
+#13 0.232 [1/4] Resolving packages...
+#13 0.295 [2/4] Fetching packages...
+#13 49.29 info There appears to be trouble with your network connection. Retrying...
+#13 72.28 info There appears to be trouble with your network connection. Retrying...
+#13 75.75 info There appears to be trouble with your network connection. Retrying...
+#13 106.2 info There appears to be trouble with your network connection. Retrying...
+#13 120.5 info There appears to be trouble with your network connection. Retrying...
+#13 125.0 info There appears to be trouble with your network connection. Retrying...
+#13 151.6 info There appears to be trouble with your network connection. Retrying...
+#13 177.0 info There appears to be trouble with your network connection. Retrying...
+#13 181.9 info There appears to be trouble with your network connection. Retrying...
+#13 194.1 info There appears to be trouble with your network connection. Retrying...
+#13 211.7 info There appears to be trouble with your network connection. Retrying...
+#13 249.5 info There appears to be trouble with your network connection. Retrying...
+#13 253.0 info There appears to be trouble with your network connection. Retrying...
+#13 270.1 info There appears to be trouble with your network connection. Retrying...
+#13 276.3 info There appears to be trouble with your network connection. Retrying...
+#13 291.1 info There appears to be trouble with your network connection. Retrying...
+#13 306.8 info There appears to be trouble with your network connection. Retrying...
+#13 313.9 info There appears to be trouble with your network connection. Retrying...
+#13 321.1 [3/4] Linking dependencies...
+#13 321.1 warning " > @emoji-mart/react@1.1.1" has unmet peer dependency "react@^16.8 || ^17 || ^18".
+#13 323.2 [4/4] Building fresh packages...
+#13 332.6 Done in 332.44s.
+#13 DONE 332.8s
+
+#14 [build 8/9] RUN yarn build
+#14 0.417 yarn run v1.22.22
+#14 0.436 $ yarn workspace emoji-mart build
+#14 0.624 $ parcel build --no-autoinstall
+#14 0.829 Building...
+#14 0.856 
+#14 0.857 console: Browserslist: caniuse-lite is outdated. Please run:
+#14 0.857   npx browserslist@latest --update-db
+#14 0.857   Why you should do it regularly: 
+#14 0.857 https://github.com/browserslist/browserslist#browsers-data-updating
+#14 0.857 
+#14 1.603 Bundling...
+#14 1.653 Packaging & Optimizing...
+#14 1.981 ✨ Built in 1.26s
+#14 1.981 
+#14 1.981 dist/browser.js     95.81 KB    330ms
+#14 1.981 dist/main.js       267.59 KB     46ms
+#14 1.981 dist/module.js     159.15 KB     42ms
+#14 1.981 dist/index.d.ts      4.31 KB      7ms
+#14 2.120 Done in 1.71s.
+#14 DONE 2.2s
+
+#15 [build 9/9] RUN cd packages/emoji-mart-website && npx parcel build index.html --no-autoinstall --public-url ./ --dist-dir emoji-mart
+#15 0.644 Building...
+#15 0.726 
+#15 0.726 
+#15 0.726 console: Browserslist: caniuse-lite is outdated. Please run:
+#15 0.726   npx browserslist@latest --update-db
+#15 0.726   Why you should do it regularly: 
+#15 0.726 https://github.com/browserslist/browserslist#browsers-data-updating
+#15 1.078 Bundling...
+#15 1.128 Packaging & Optimizing...
+#15 1.752 ✨ Built in 1.23s
+#15 1.753 
+#15 1.753 emoji-mart/index.html                           11.27 KB    416ms
+#15 1.753 emoji-mart/assets/EmojiMart-Social.png          96.52 KB    240ms
+#15 1.753 emoji-mart/examples.html                         4.16 KB    431ms
+#15 1.753 emoji-mart/example-categories.html               4.81 KB    530ms
+#15 1.754 emoji-mart/missive.8d929d8f.png                  5.62 KB     82ms
+#15 1.754 emoji-mart/coin.9f2955a2.mp3                    64.43 KB    199ms
+#15 1.754 emoji-mart/indeed.8e433a78.png                    2.2 KB    144ms
+#15 1.754 emoji-mart/index.46e8bbb5.css                     4.5 KB     40ms
+#15 1.754 emoji-mart/coin.d59a6f64.png                     1.01 KB     82ms
+#15 1.754 emoji-mart/example-categories.ca4f408c.js       82.77 KB    527ms
+#15 1.754 emoji-mart/example-categories.ba7dc3f2.js       423.2 KB    177ms
+#15 1.754 emoji-mart/example-custom-font.html            414.13 KB    530ms
+#15 1.754 emoji-mart/seguiemj.0221cf01.ttf             ⚠️  2.64 MB     60ms
+#15 1.754 emoji-mart/example-custom-styles.html            4.39 KB    616ms
+#15 1.754 emoji-mart/example-dynamic-width.html            3.99 KB    430ms
+#15 1.754 emoji-mart/example-emoji-component.html        468.58 KB    530ms
+#15 1.754 emoji-mart/parrot.6a845cb2.gif                  14.66 KB     56ms
+#15 1.754 emoji-mart/example-headless-search.html          4.28 KB    616ms
+#15 1.754 emoji-mart/example-slack-colors.html             4.06 KB    430ms
+#15 1.754 emoji-mart/octocat.5d6e1891.png                  2.41 KB     43ms
+#15 1.754 emoji-mart/shipit.3a3eb70f.png                   4.42 KB     82ms
+#15 DONE 2.0s
+
+#16 [stage-1 2/2] COPY --from=build /app/packages/emoji-mart-website/emoji-mart/ /usr/share/nginx/html/
+#16 DONE 0.0s
+
+#17 exporting to image
+#17 exporting layers 0.1s done
+#17 exporting manifest sha256:28b56d691036b7ac453224a7ed143726c5289fbb9ce9930367be2121d2ed617c done
+#17 exporting config sha256:e9aeb673951603cc3e2c1679bdd3f4e3369d92ab911c302041efecd2e2f70f77 done
+#17 exporting attestation manifest sha256:51ff2ba7d0b2dc0a2ac46a7943d849c2a7c9eb0d3332b705991be08918db0d1b done
+#17 exporting manifest list sha256:e72916b6905014c252470fe6b37852cb12a6451f43666a8304afc0f11823afd6 done
+#17 naming to docker.io/recall70/missive--emoji-mart:16978d04a766 done
+#17 unpacking to docker.io/recall70/missive--emoji-mart:16978d04a766 0.0s done
+#17 DONE 0.2s

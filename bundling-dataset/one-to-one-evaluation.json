@@ -1,7 +1,7 @@
 {
   "pairDefinition": "reciprocal-mapped-v1",
-  "repositoryCount": 26,
-  "oneToOnePairs": 78884,
+  "repositoryCount": 23,
+  "oneToOnePairs": 35617,
   "subjects": [
     {
       "repo": "jlfwong/speedscope",
@@ -38,81 +38,6 @@
       "imageID": "sha256:36e094597a8731e17370336f498020134259af1f2352948e3e1aeff99742c497",
       "records": "esbuild/mattlewis92--angular-calendar/ground-truth/func-mapping.json",
       "recordsSHA256": "4a8cae6b678ccd5da23777dff3d8ba3460a8632ddb9ccdf21453cf22e07abece",
-      "status": "pairs-observed"
-    },
-    {
-      "repo": "ng-bootstrap/ng-bootstrap",
-      "commit": "2a45c97082c66c955ac9c4865cf66d8d4dfd27fc",
-      "subject": "esbuild/ng-bootstrap--ng-bootstrap",
-      "oneToOnePairs": 29,
-      "samplingRule": "manifest-only-v1",
-      "selectedLibraries": [
-        "tslib"
-      ],
-      "imageID": "sha256:0ce3867463aa949befddeee7563393b7a0dacace4e2835f0ca6aa7ea49a00730",
-      "records": "esbuild/ng-bootstrap--ng-bootstrap/ground-truth/func-mapping.json",
-      "recordsSHA256": "decc033fa6da28b6df25442131b976e73fe69572274930055515854cac7cf2a2",
-      "status": "pairs-observed"
-    },
-    {
-      "repo": "okikio/bundlejs",
-      "commit": "96033c66d7361f79e25bb9b511f4286805fcb9fb",
-      "subject": "esbuild/okikio--bundlejs",
-      "oneToOnePairs": 43064,
-      "samplingRule": "frontend-counterpart-fill-v1",
-      "selectedLibraries": [
-        "@okikio/sharedworker",
-        "@okikio/native",
-        "parse-package-name",
-        "workbox-window",
-        "@okikio/animate",
-        "@dprint/formatter",
-        "esbuild-wasm",
-        "monaco-editor",
-        "solid-js",
-        "@okikio/emitter"
-      ],
-      "sampleCompletion": {
-        "seed": "recall-counterpart-fill-v1",
-        "retainedLibraries": [
-          "@okikio/native",
-          "@okikio/sharedworker",
-          "parse-package-name"
-        ],
-        "candidatePairCounts": {
-          "@amoutonbrady/lz-string": 7,
-          "@dprint/formatter": 69,
-          "@dprint/typescript": 0,
-          "@okikio/animate": 263,
-          "@okikio/emitter": 38,
-          "@okikio/native": 160,
-          "@okikio/sharedworker": 15,
-          "@std/media-types": 0,
-          "@std/path": 0,
-          "@std/streams": 0,
-          "@std/tar": 0,
-          "@typescript/ata": 0,
-          "d3": 0,
-          "d3-array": 0,
-          "d3-color": 0,
-          "d3-hierarchy": 0,
-          "d3-scale": 0,
-          "d3-shape": 0,
-          "esbuild-wasm": 320,
-          "monaco-editor": 42085,
-          "parse-package-name": 2,
-          "preact": 0,
-          "resolve.exports": 0,
-          "solid-js": 107,
-          "web-animations-js": 0,
-          "webcola": 0,
-          "workbox-window": 5
-        },
-        "outcome": "limit-reached"
-      },
-      "imageID": "sha256:7d8a84a4694f3baa55946927d01a9ed8309a646a14b10384276d53bf9beccdd0",
-      "records": "esbuild/okikio--bundlejs/ground-truth/func-mapping.json",
-      "recordsSHA256": "bb9a016c6a2915adbf5507e33b84be675b9c6c2fe6d079b7fa3073e69cd555f0",
       "status": "pairs-observed"
     },
     {
@@ -262,42 +187,6 @@
       "imageID": "sha256:ea908782be4b9f0e5c256e46bb7abdadf1bf128d7bc85bad0895d25d8a371935",
       "records": "esbuild/swimlane--ngx-charts/ground-truth/func-mapping.json",
       "recordsSHA256": "f29eb1e7ec52428ff4119335b87237cb7fc07897e7276666ee5af8633c312c2e",
-      "status": "pairs-observed"
-    },
-    {
-      "repo": "swimlane/ngx-datatable",
-      "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
-      "subject": "esbuild/swimlane--ngx-datatable",
-      "oneToOnePairs": 174,
-      "samplingRule": "frontend-counterpart-fill-v1",
-      "selectedLibraries": [
-        "tslib",
-        "rxjs"
-      ],
-      "sampleCompletion": {
-        "seed": "recall-counterpart-fill-v1",
-        "retainedLibraries": [
-          "tslib"
-        ],
-        "candidatePairCounts": {
-          "@angular/animations": 0,
-          "@angular/cdk": 0,
-          "@angular/common": 0,
-          "@angular/compiler": 0,
-          "@angular/core": 0,
-          "@angular/forms": 0,
-          "@angular/platform-browser": 0,
-          "@angular/platform-browser-dynamic": 0,
-          "@angular/router": 0,
-          "rxjs": 151,
-          "tslib": 23,
-          "zone.js": 0
-        },
-        "outcome": "eligible-pool-exhausted"
-      },
-      "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d",
-      "records": "esbuild/swimlane--ngx-datatable/ground-truth/func-mapping.json",
-      "recordsSHA256": "852b5e66dc56286b37cec915c962de325bb7771c663db8f6f731608c2b4e9f62",
       "status": "pairs-observed"
     },
     {
@@ -1559,5 +1448,6 @@
       "recordsSHA256": "958d8129272f99aed7a47c4d6662078ae2f866eb40258d43b265eb694b13eef4",
       "status": "pairs-observed"
     }
-  ]
+  ],
+  "cohortExclusions": "experiment-exclusions.json"
 }

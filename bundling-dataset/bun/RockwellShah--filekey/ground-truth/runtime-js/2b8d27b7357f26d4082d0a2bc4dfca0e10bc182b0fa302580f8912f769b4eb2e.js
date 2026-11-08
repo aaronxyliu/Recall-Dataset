@@ -1,0 +1,1 @@
+/* apply saved theme before paint; default auto (follows the OS unless set to light), avoids a flash */try{var t=localStorage.getItem('filekey-theme');if(t==='dark'||(t!=='light'&&matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.dataset.theme='dark';var m=document.querySelector('meta[name="theme-color"]');if(m)m.content='#0c0c0e';}}catch(e){}

@@ -1,0 +1,1 @@
+0,function($,_){return $[_].match(/[utwcbm.oey]{15}/)-1}

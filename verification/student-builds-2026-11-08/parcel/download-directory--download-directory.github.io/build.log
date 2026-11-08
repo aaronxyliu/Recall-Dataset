@@ -1,0 +1,108 @@
+#0 building with "colima" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 216B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/node:22.23.4-bookworm
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/nginx:1.27-alpine
+#3 DONE 0.0s
+
+#4 [stage-1 1/2] FROM docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10
+#4 resolve docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10 0.0s done
+#4 CACHED
+
+#5 [internal] load .dockerignore
+#5 transferring context: 2B done
+#5 DONE 0.0s
+
+#6 [build 1/5] FROM docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f
+#6 resolve docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f 0.0s done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 627.73kB 0.0s done
+#7 DONE 0.0s
+
+#8 [build 2/5] WORKDIR /app
+#8 CACHED
+
+#9 [build 3/5] COPY . .
+#9 DONE 0.1s
+
+#10 [build 4/5] RUN npm install
+#10 2.015 npm warn deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility
+#10 2.352 npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+#10 4.251 npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+#10 4.632 npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+#10 9.015 npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+#10 9.122 npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+#10 70.94 
+#10 70.94 added 683 packages, and audited 684 packages in 1m
+#10 70.94 
+#10 70.94 273 packages are looking for funding
+#10 70.94   run `npm fund` for details
+#10 70.99 
+#10 70.99 28 vulnerabilities (8 moderate, 17 high, 3 critical)
+#10 70.99 
+#10 70.99 To address all issues, run:
+#10 70.99   npm audit fix
+#10 70.99 
+#10 70.99 Run `npm audit` for details.
+#10 70.99 npm notice
+#10 70.99 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#10 70.99 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#10 70.99 npm notice To update run: npm install -g npm@12.2.2
+#10 70.99 npm notice
+#10 DONE 71.3s
+
+#11 [build 5/5] RUN npm run build:bundle
+#11 0.264 
+#11 0.264 > build:bundle
+#11 0.264 > parcel build --dist-dir public --no-scope-hoist
+#11 0.264 
+#11 0.528 Building...
+#11 0.607 Browserslist: caniuse-lite is outdated. Please run:
+#11 0.607   npx update-browserslist-db@latest
+#11 0.607   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#11 0.635 Skipped /?url=https://github.com/mrdoob/three.js/tree/dev/build
+#11 0.635 Skipped /?url=https://github.com/mrdoob/three.js/tree/dev/build&filename=three-js-build
+#11 0.654 Browserslist: caniuse-lite is outdated. Please run:
+#11 0.654   npx update-browserslist-db@latest
+#11 0.654   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#11 0.654 Browserslist: caniuse-lite is outdated. Please run:
+#11 0.654   npx update-browserslist-db@latest
+#11 0.654   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#11 0.708 Browserslist: caniuse-lite is outdated. Please run:
+#11 0.708   npx update-browserslist-db@latest
+#11 0.708   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#11 0.746 Bundling...
+#11 0.760 Browserslist: caniuse-lite is outdated. Please run:
+#11 0.760   npx update-browserslist-db@latest
+#11 0.760   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#11 0.781 Packaging & Optimizing...
+#11 0.920 ✨ Built in 545ms
+#11 0.920 
+#11 0.920 public/index.html                 4.39 KB     95ms
+#11 0.920 public/favicon.5654fcee.ico      14.73 KB     17ms
+#11 0.920 public/index.05e78c6e.css          2.8 KB     48ms
+#11 0.920 public/logo.ccca7fb1.svg            299 B    137ms
+#11 0.920 public/index.ea5e85a1.js         20.85 KB     86ms
+#11 0.920 public/jszip.min.56cb75cc.js    122.66 KB    132ms
+#11 DONE 1.1s
+
+#12 [stage-1 2/2] COPY --from=build /app/public/ /usr/share/nginx/html/
+#12 DONE 0.0s
+
+#13 exporting to image
+#13 exporting layers 0.1s done
+#13 exporting manifest sha256:d38fe124d101fa4260f3cbdd2918b607a6a93dc2bd17cbcb0ba404d943a7ea60 done
+#13 exporting config sha256:b4716db32b3bdc0339f4e9c168c5d0f5afb2b8a85d71109159ee549c0a2ca759 done
+#13 exporting attestation manifest sha256:8060a623a42a817be10c6db26de0da899c153bb6711819596f9091264ef0d876
+#13 exporting attestation manifest sha256:8060a623a42a817be10c6db26de0da899c153bb6711819596f9091264ef0d876 done
+#13 exporting manifest list sha256:e6b3700bed794ab6ca677baa74b13d7fd6498a575839dd9cf18ed713e16aed53 done
+#13 naming to docker.io/recall70/download-directory--download-directory.github.io:eee887009ab9 done
+#13 unpacking to docker.io/recall70/download-directory--download-directory.github.io:eee887009ab9 done
+#13 DONE 0.1s

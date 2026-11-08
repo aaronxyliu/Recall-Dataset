@@ -1,0 +1,275 @@
+{
+  "schema": "recall.experiment-exclusions/v1",
+  "exclusions": [
+    {
+      "subject": "esbuild/ng-bootstrap--ng-bootstrap",
+      "excludedAt": "2026-11-08T08:49:39.473097+00:00",
+      "reason": "Removed from the experiment cohort at the user's explicit request.",
+      "priorIndexRows": {
+        "one-to-one-evaluation.json": {
+          "repo": "ng-bootstrap/ng-bootstrap",
+          "commit": "2a45c97082c66c955ac9c4865cf66d8d4dfd27fc",
+          "subject": "esbuild/ng-bootstrap--ng-bootstrap",
+          "oneToOnePairs": 29,
+          "samplingRule": "manifest-only-v1",
+          "selectedLibraries": [
+            "tslib"
+          ],
+          "imageID": "sha256:0ce3867463aa949befddeee7563393b7a0dacace4e2835f0ca6aa7ea49a00730",
+          "records": "esbuild/ng-bootstrap--ng-bootstrap/ground-truth/func-mapping.json",
+          "recordsSHA256": "decc033fa6da28b6df25442131b976e73fe69572274930055515854cac7cf2a2",
+          "status": "pairs-observed"
+        },
+        "one-to-one-evaluation-v2.json": {
+          "repo": "ng-bootstrap/ng-bootstrap",
+          "commit": "2a45c97082c66c955ac9c4865cf66d8d4dfd27fc",
+          "subject": "esbuild/ng-bootstrap--ng-bootstrap",
+          "oneToOnePairs": 29,
+          "samplingRule": "manifest-only-v1",
+          "selectedLibraries": [
+            "tslib"
+          ],
+          "imageID": "sha256:0ce3867463aa949befddeee7563393b7a0dacace4e2835f0ca6aa7ea49a00730",
+          "records": "esbuild/ng-bootstrap--ng-bootstrap/ground-truth-v2/func-mapping.json",
+          "recordsSHA256": "4615b1e1398a15cf471ccac6347e35a05c6f5ea07bf284cd60a07ebf963222f6",
+          "status": "pairs-observed",
+          "revisionComparison": {
+            "oldPairs": 29,
+            "newPairs": 29,
+            "retained": 29,
+            "added": 0,
+            "removed": 0,
+            "failureCount": 0,
+            "missingSourceContentCount": 0
+          }
+        }
+      }
+    },
+    {
+      "subject": "esbuild/okikio--bundlejs",
+      "excludedAt": "2026-11-08T08:49:39.473097+00:00",
+      "reason": "Removed from the experiment cohort at the user's explicit request.",
+      "priorIndexRows": {
+        "one-to-one-evaluation.json": {
+          "repo": "okikio/bundlejs",
+          "commit": "96033c66d7361f79e25bb9b511f4286805fcb9fb",
+          "subject": "esbuild/okikio--bundlejs",
+          "oneToOnePairs": 43064,
+          "samplingRule": "frontend-counterpart-fill-v1",
+          "selectedLibraries": [
+            "@okikio/sharedworker",
+            "@okikio/native",
+            "parse-package-name",
+            "workbox-window",
+            "@okikio/animate",
+            "@dprint/formatter",
+            "esbuild-wasm",
+            "monaco-editor",
+            "solid-js",
+            "@okikio/emitter"
+          ],
+          "sampleCompletion": {
+            "seed": "recall-counterpart-fill-v1",
+            "retainedLibraries": [
+              "@okikio/native",
+              "@okikio/sharedworker",
+              "parse-package-name"
+            ],
+            "candidatePairCounts": {
+              "@amoutonbrady/lz-string": 7,
+              "@dprint/formatter": 69,
+              "@dprint/typescript": 0,
+              "@okikio/animate": 263,
+              "@okikio/emitter": 38,
+              "@okikio/native": 160,
+              "@okikio/sharedworker": 15,
+              "@std/media-types": 0,
+              "@std/path": 0,
+              "@std/streams": 0,
+              "@std/tar": 0,
+              "@typescript/ata": 0,
+              "d3": 0,
+              "d3-array": 0,
+              "d3-color": 0,
+              "d3-hierarchy": 0,
+              "d3-scale": 0,
+              "d3-shape": 0,
+              "esbuild-wasm": 320,
+              "monaco-editor": 42085,
+              "parse-package-name": 2,
+              "preact": 0,
+              "resolve.exports": 0,
+              "solid-js": 107,
+              "web-animations-js": 0,
+              "webcola": 0,
+              "workbox-window": 5
+            },
+            "outcome": "limit-reached"
+          },
+          "imageID": "sha256:7d8a84a4694f3baa55946927d01a9ed8309a646a14b10384276d53bf9beccdd0",
+          "records": "esbuild/okikio--bundlejs/ground-truth/func-mapping.json",
+          "recordsSHA256": "bb9a016c6a2915adbf5507e33b84be675b9c6c2fe6d079b7fa3073e69cd555f0",
+          "status": "pairs-observed"
+        },
+        "one-to-one-evaluation-v2.json": {
+          "repo": "okikio/bundlejs",
+          "commit": "96033c66d7361f79e25bb9b511f4286805fcb9fb",
+          "subject": "esbuild/okikio--bundlejs",
+          "oneToOnePairs": 43097,
+          "samplingRule": "frontend-counterpart-fill-v1",
+          "selectedLibraries": [
+            "@okikio/sharedworker",
+            "@okikio/native",
+            "parse-package-name",
+            "workbox-window",
+            "@okikio/animate",
+            "@dprint/formatter",
+            "esbuild-wasm",
+            "monaco-editor",
+            "solid-js",
+            "@okikio/emitter"
+          ],
+          "sampleCompletion": {
+            "seed": "recall-counterpart-fill-v1",
+            "retainedLibraries": [
+              "@okikio/native",
+              "@okikio/sharedworker",
+              "parse-package-name"
+            ],
+            "candidatePairCounts": {
+              "@amoutonbrady/lz-string": 7,
+              "@dprint/formatter": 69,
+              "@dprint/typescript": 0,
+              "@okikio/animate": 263,
+              "@okikio/emitter": 38,
+              "@okikio/native": 160,
+              "@okikio/sharedworker": 15,
+              "@std/media-types": 0,
+              "@std/path": 0,
+              "@std/streams": 0,
+              "@std/tar": 0,
+              "@typescript/ata": 0,
+              "d3": 0,
+              "d3-array": 0,
+              "d3-color": 0,
+              "d3-hierarchy": 0,
+              "d3-scale": 0,
+              "d3-shape": 0,
+              "esbuild-wasm": 320,
+              "monaco-editor": 42085,
+              "parse-package-name": 2,
+              "preact": 0,
+              "resolve.exports": 0,
+              "solid-js": 107,
+              "web-animations-js": 0,
+              "webcola": 0,
+              "workbox-window": 5
+            },
+            "outcome": "limit-reached"
+          },
+          "imageID": "sha256:7d8a84a4694f3baa55946927d01a9ed8309a646a14b10384276d53bf9beccdd0",
+          "records": "esbuild/okikio--bundlejs/ground-truth-v2/func-mapping.json",
+          "recordsSHA256": "d34ff239275c89666f5935f9e803d7bd60bdcec40c036df3e8f6b5569678c2d1",
+          "status": "pairs-observed",
+          "revisionComparison": {
+            "oldPairs": 43064,
+            "newPairs": 43097,
+            "retained": 43064,
+            "added": 33,
+            "removed": 0,
+            "failureCount": 1,
+            "missingSourceContentCount": 0
+          }
+        }
+      }
+    },
+    {
+      "subject": "esbuild/swimlane--ngx-datatable",
+      "excludedAt": "2026-11-08T08:49:39.473097+00:00",
+      "reason": "Removed from the experiment cohort at the user's explicit request.",
+      "priorIndexRows": {
+        "one-to-one-evaluation.json": {
+          "repo": "swimlane/ngx-datatable",
+          "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+          "subject": "esbuild/swimlane--ngx-datatable",
+          "oneToOnePairs": 174,
+          "samplingRule": "frontend-counterpart-fill-v1",
+          "selectedLibraries": [
+            "tslib",
+            "rxjs"
+          ],
+          "sampleCompletion": {
+            "seed": "recall-counterpart-fill-v1",
+            "retainedLibraries": [
+              "tslib"
+            ],
+            "candidatePairCounts": {
+              "@angular/animations": 0,
+              "@angular/cdk": 0,
+              "@angular/common": 0,
+              "@angular/compiler": 0,
+              "@angular/core": 0,
+              "@angular/forms": 0,
+              "@angular/platform-browser": 0,
+              "@angular/platform-browser-dynamic": 0,
+              "@angular/router": 0,
+              "rxjs": 151,
+              "tslib": 23,
+              "zone.js": 0
+            },
+            "outcome": "eligible-pool-exhausted"
+          },
+          "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d",
+          "records": "esbuild/swimlane--ngx-datatable/ground-truth/func-mapping.json",
+          "recordsSHA256": "852b5e66dc56286b37cec915c962de325bb7771c663db8f6f731608c2b4e9f62",
+          "status": "pairs-observed"
+        },
+        "one-to-one-evaluation-v2.json": {
+          "repo": "swimlane/ngx-datatable",
+          "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+          "subject": "esbuild/swimlane--ngx-datatable",
+          "oneToOnePairs": 336,
+          "samplingRule": "frontend-counterpart-fill-v1",
+          "selectedLibraries": [
+            "tslib",
+            "rxjs"
+          ],
+          "sampleCompletion": {
+            "seed": "recall-counterpart-fill-v1",
+            "retainedLibraries": [
+              "tslib"
+            ],
+            "candidatePairCounts": {
+              "@angular/animations": 0,
+              "@angular/cdk": 0,
+              "@angular/common": 0,
+              "@angular/compiler": 0,
+              "@angular/core": 0,
+              "@angular/forms": 0,
+              "@angular/platform-browser": 0,
+              "@angular/platform-browser-dynamic": 0,
+              "@angular/router": 0,
+              "rxjs": 151,
+              "tslib": 23,
+              "zone.js": 0
+            },
+            "outcome": "eligible-pool-exhausted"
+          },
+          "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d",
+          "records": "esbuild/swimlane--ngx-datatable/ground-truth-v2/func-mapping.json",
+          "recordsSHA256": "8e610b537670de07a60b5a648dc34dd8988b837397412c11745fc300dec7686d",
+          "status": "pairs-observed",
+          "revisionComparison": {
+            "oldPairs": 174,
+            "newPairs": 336,
+            "retained": 174,
+            "added": 162,
+            "removed": 0,
+            "failureCount": 0,
+            "missingSourceContentCount": 0
+          }
+        }
+      }
+    }
+  ]
+}

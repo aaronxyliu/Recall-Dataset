@@ -1,0 +1,1 @@
+0,{0:1,no:1,1:2,yes:2,undefined:3,unspecified:3,null:3}

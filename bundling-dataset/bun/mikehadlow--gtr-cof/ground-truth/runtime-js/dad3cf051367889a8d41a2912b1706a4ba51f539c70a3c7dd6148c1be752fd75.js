@@ -1,0 +1,1 @@
+wp=function(V,q,D,A){try{A=V[((q|0)+2)%3],V[q]=(V[q]|0)-(V[((q|0)+1)%3]|0)-(A|0)^(q==1?A<<D:A>>>D)}catch(Y){throw Y;}}

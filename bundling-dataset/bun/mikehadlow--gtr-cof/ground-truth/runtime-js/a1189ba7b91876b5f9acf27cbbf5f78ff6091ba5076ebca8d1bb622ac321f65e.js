@@ -1,0 +1,1 @@
+0,function(V,q,D,A){{A=0;while(A<V.length)q.push(V.charAt?255&V.charCodeAt(A):V[A]),A++}while(true)if(q.d.push(V.length,D),{})break}

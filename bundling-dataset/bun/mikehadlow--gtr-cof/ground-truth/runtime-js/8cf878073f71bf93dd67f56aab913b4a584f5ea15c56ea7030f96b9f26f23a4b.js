@@ -1,0 +1,1 @@
+(function(z,G,V,A,M,N,a,r,K,u){for(K=r=0;V>0;V--)u=z[V]|0,a=(G[V]|0)+u,M&&(r+=u,A(M,u),z[V]=0,G[V]=a),K+=a,A(N,a);return K?r?K>r?3:2:1:0})

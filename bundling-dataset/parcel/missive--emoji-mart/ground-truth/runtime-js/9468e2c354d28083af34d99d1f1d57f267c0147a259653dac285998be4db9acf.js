@@ -1,0 +1,1 @@
+const e=document.querySelector("#coin-box"),n=document.querySelector("#coin-audio");e.addEventListener("mousedown",(()=>{const o=document.createElement("span");o.className="coin-wrap",o.innerHTML='<span class="coin"></span>',e.appendChild(o);const c=new Audio(n.src);c.currentTime=.25,c.volume=.33,c.play(),o.addEventListener("animationend",(()=>{e.removeChild(o)}))}));
