@@ -1,0 +1,17 @@
+{
+  "containerPort": 3000,
+  "route": "/auth/login",
+  "expectedSelector": "form",
+  "expectedText": "Sign in|Log in|Email",
+  "composeFile": "compose.yaml",
+  "readinessTimeoutSeconds": 360,
+  "generateEnvironment": ["POSTGRES_PASSWORD", "NEXTAUTH_SECRET", "CALENDSO_ENCRYPTION_KEY"],
+  "generateEnvironmentBytes": {"CALENDSO_ENCRYPTION_KEY": 24},
+  "environmentTemplates": {
+    "DATABASE_URL": "postgresql://calcom:{POSTGRES_PASSWORD}@db:5432/calcom",
+    "DATABASE_DIRECT_URL": "postgresql://calcom:{POSTGRES_PASSWORD}@db:5432/calcom",
+    "DATABASE_HOST": "db:5432",
+    "NEXT_PUBLIC_WEBAPP_URL": "http://127.0.0.1:{port}",
+    "NEXTAUTH_URL": "http://127.0.0.1:{port}"
+  }
+}

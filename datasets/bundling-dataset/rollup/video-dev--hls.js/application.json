@@ -1,0 +1,75 @@
+{
+  "repository": "video-dev/hls.js",
+  "commit": "142fcab1fd0de99beafb0e1b07102ec674a9ddf9",
+  "sourceDirectory": "builds/video-dev--hls.js",
+  "applicationDirectory": ".",
+  "packageManifest": "package.json",
+  "declaredPackageManager": null,
+  "runtimeDeclarations": {
+    ".node-version": "24.19.0"
+  },
+  "engines": {
+    "workspace": {},
+    "root": {}
+  },
+  "upstreamProductionScripts": {
+    "build": "rollup --config && npm run build:types",
+    "build:debug": "rollup --config --configType full --configType demo"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "Existing upstream sourcemap configuration",
+  "dockerRuntimeBases": [
+    "node:24-bookworm AS build",
+    "nginx:stable-alpine AS runtime"
+  ],
+  "expectedOutput": "demo/、dist/",
+  "serverCommand": [
+    "/docker-entrypoint.sh",
+    "nginx",
+    "-g",
+    "daemon off;"
+  ],
+  "containerPort": 80,
+  "pageRoute": "/demo/",
+  "expectedInterface": "HLS",
+  "serviceRecipe": null,
+  "runtimeConfigurationNames": [],
+  "referenceURL": "https://hlsjs.video-dev.org/demo/",
+  "bundler": "Rollup",
+  "bundlerEvidence": "已在锁定提交的目标构建命令或其调用链中找到 rollup。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "package.json",
+      "url": "https://github.com/video-dev/hls.js/blob/142fcab1fd0de99beafb0e1b07102ec674a9ddf9/package.json"
+    },
+    {
+      "path": "rollup.config.js",
+      "url": "https://github.com/video-dev/hls.js/blob/142fcab1fd0de99beafb0e1b07102ec674a9ddf9/rollup.config.js"
+    },
+    {
+      "path": "build-config.js",
+      "url": "https://github.com/video-dev/hls.js/blob/142fcab1fd0de99beafb0e1b07102ec674a9ddf9/build-config.js"
+    },
+    {
+      "path": "demo/index.html",
+      "url": "https://github.com/video-dev/hls.js/blob/142fcab1fd0de99beafb0e1b07102ec674a9ddf9/demo/index.html"
+    },
+    {
+      "path": ".node-version",
+      "url": "https://github.com/video-dev/hls.js/blob/142fcab1fd0de99beafb0e1b07102ec674a9ddf9/.node-version"
+    },
+    {
+      "path": "package-lock.json",
+      "url": "https://github.com/video-dev/hls.js/blob/142fcab1fd0de99beafb0e1b07102ec674a9ddf9/package-lock.json"
+    }
+  ],
+  "dependencyLocks": [
+    "package-lock.json"
+  ],
+  "localVerificationURL": "http://127.0.0.1:43114/demo/",
+  "expectedSelector": "video",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [],
+  "resolvedDependencySnapshots": {}
+}

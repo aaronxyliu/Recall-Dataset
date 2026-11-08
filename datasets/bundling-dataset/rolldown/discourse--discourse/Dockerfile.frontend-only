@@ -1,0 +1,9 @@
+FROM node:24-bookworm AS build
+WORKDIR /app
+RUN --mount=type=cache,target=/root/.npm npm install -g pnpm@12.11.2
+COPY . .
+RUN --mount=type=cache,id=recall-pnpm,target=/pnpm-store pnpm install --frozen-lockfile --store-dir=/pnpm-store
+RUN pnpm run build && test -s frontend/discourse/dist/manifest/manifest.json
+
+FROM scratch AS frontend
+COPY --from=build /app/frontend/discourse/dist/ /dist/

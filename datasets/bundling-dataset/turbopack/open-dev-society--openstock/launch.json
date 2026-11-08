@@ -1,0 +1,18 @@
+{
+  "containerPort": 3000,
+  "route": "/",
+  "expectedSelector": "main, form",
+  "expectedText": "stock|sign in|market",
+  "composeFile": "compose.yaml",
+  "generateEnvironment": [
+    "BETTER_AUTH_SECRET",
+    "MONGO_INITDB_ROOT_PASSWORD"
+  ],
+  "environmentTemplates": {
+    "BETTER_AUTH_URL": "http://127.0.0.1:{port}",
+    "MONGODB_URI": "mongodb://recall:{MONGO_INITDB_ROOT_PASSWORD}@mongodb:27017/openstock?authSource=admin"
+  },
+  "externalServicesUnverified": [
+    "Finnhub live market quotes"
+  ]
+}

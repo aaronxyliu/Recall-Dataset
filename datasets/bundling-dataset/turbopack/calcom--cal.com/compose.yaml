@@ -1,0 +1,26 @@
+services:
+  app:
+    image: ${RECALL_IMAGE}
+    container_name: ${RECALL_CONTAINER}
+    env_file: ${RECALL_ENV_FILE}
+    ports:
+      - "127.0.0.1:${RECALL_PORT}:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    labels:
+      io.recall.dataset: browser-source-maps
+      io.recall.repo: CalCom/cal.com
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: calcom
+      POSTGRES_USER: calcom
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "calcom", "-d", "calcom"]
+      interval: 3s
+      timeout: 5s
+      retries: 30
+    labels:
+      io.recall.dataset: browser-source-maps

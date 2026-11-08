@@ -1,0 +1,29 @@
+{
+  "repository": "metabase/metabase",
+  "commit": "0c644f3bc99d5dece16391d53135a0a7618f95bc",
+  "version": "v0.65.3",
+  "bundler": "Rspack",
+  "repo": "metabase/metabase",
+  "applicationDirectory": ".",
+  "packageManifest": "package.json",
+  "upstreamProductionScripts": {
+    "build": "bin/build.sh :version v0.65.3",
+    "frontend": "WEBPACK_BUNDLE=production rspack build"
+  },
+  "production": [
+    "bin/build.sh :version v0.65.3",
+    "build-release:cljs",
+    "WEBPACK_BUNDLE=production rspack build"
+  ],
+  "sourceMapConfig": "rspack.main.config.js: production devtool source-map",
+  "buildRecipe": "Dockerfile",
+  "expectedOutput": "target/uberjar/metabase.jar",
+  "output": "target/uberjar/metabase.jar",
+  "serverCommand": [
+    "/app/run_metabase.sh"
+  ],
+  "containerPort": 3000,
+  "pageRoute": "/setup/",
+  "runtime": "Java 25, upstream run_metabase.sh",
+  "verificationUrl": "http://127.0.0.1:43220/setup/"
+}

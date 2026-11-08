@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "cohort": "parcel",
+  "subjects": [
+    {
+      "repo": "tensorflow/tfjs",
+      "canonicalRepo": "tensorflow/tfjs",
+      "repoUrl": "https://github.com/tensorflow/tfjs",
+      "cloneUrl": "https://github.com/tensorflow/tfjs.git",
+      "slug": "tensorflow--tfjs",
+      "checkoutDir": "builds/tensorflow--tfjs",
+      "datasetRank": 35,
+      "siteUrl": "https://tensorflow.github.io/tfjs/tfjs-automl/demo/img_classification/",
+      "bundler": "Parcel",
+      "bundlerId": "parcel",
+      "commit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
+      "commitUrl": "https://github.com/tensorflow/tfjs/commit/e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
+      "refType": "release",
+      "selectedRef": "refs/tags/tfjs-v4.22.0",
+      "releaseTag": "tfjs-v4.22.0",
+      "defaultBranch": "master",
+      "latestReleaseObserved": {
+        "tag": "tfjs-v4.22.0",
+        "url": "https://github.com/tensorflow/tfjs/releases/tag/tfjs-v4.22.0",
+        "selected": true,
+        "method": "GitHub Latest Release redirect"
+      },
+      "resolutionMethod": "git ls-remote --symref，使用 tag 指向的 commit 或 HEAD。",
+      "selectionReason": "GitHub 标为 Latest 的正式 Release，标签提交包含清单所列目标及其生产构建入口。",
+      "packageManifest": "tfjs-automl/demo/img_classification/package.json",
+      "packageManifestUrl": "https://github.com/tensorflow/tfjs/blob/e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7/tfjs-automl/demo/img_classification/package.json",
+      "bundlerEvidence": "已在锁定提交的目标构建命令或其调用链中找到 parcel build。",
+      "bundlerCheck": "matches-original-group-in-source",
+      "build": {
+        "workingDirectory": "tfjs-automl/demo/img_classification",
+        "dependencyInstallDirectory": "tfjs-automl/demo/img_classification",
+        "packageManager": "yarn",
+        "declaredPackageManager": null,
+        "runtimeDeclarations": {},
+        "engines": {
+          "workspace": {},
+          "root": {}
+        },
+        "dependencyLocks": [
+          "tfjs-automl/demo/img_classification/yarn.lock",
+          "yarn.lock"
+        ],
+        "suggestedInstallCommand": "yarn install --frozen-lockfile",
+        "buildScript": "build",
+        "manifestScripts": {
+          "build": "cross-env NODE_ENV=production parcel build index.html --public-url ./"
+        },
+        "manifestBundlerDependencies": {
+          "parcel": "~2.8.3"
+        },
+        "artifactHint": "tfjs-automl/demo/img_classification/dist",
+        "upstreamDockerFiles": [],
+        "notes": "采样 AutoML 图像分类 Demo，按该目录自己的 yarn.lock 安装。",
+        "verification": "source-reviewed; container build pending"
+      },
+      "imageTag": "recall/tensorflow--tfjs:e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
+      "sourceEvidence": [
+        {
+          "path": "tfjs-automl/demo/img_classification/package.json",
+          "url": "https://github.com/tensorflow/tfjs/blob/e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7/tfjs-automl/demo/img_classification/package.json"
+        },
+        {
+          "path": "package.json",
+          "url": "https://github.com/tensorflow/tfjs/blob/e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7/package.json"
+        },
+        {
+          "path": "tfjs-automl/demo/img_classification/yarn.lock",
+          "url": "https://github.com/tensorflow/tfjs/blob/e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7/tfjs-automl/demo/img_classification/yarn.lock"
+        },
+        {
+          "path": "yarn.lock",
+          "url": "https://github.com/tensorflow/tfjs/blob/e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7/yarn.lock"
+        }
+      ]
+    }
+  ]
+}

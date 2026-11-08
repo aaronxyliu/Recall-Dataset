@@ -1,0 +1,79 @@
+{
+  "repository": "umami-software/umami",
+  "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
+  "sourceDirectory": "builds/umami-software--umami",
+  "applicationDirectory": ".",
+  "packageManifest": "package.json",
+  "declaredPackageManager": null,
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {
+      "pnpm": "12.3.4"
+    },
+    "root": {
+      "pnpm": "12.3.4"
+    }
+  },
+  "upstreamProductionScripts": {
+    "build:app": "next build --turbo"
+  },
+  "buildRecipe": "Dockerfile",
+  "sourceMapPatch": "enable-maps.cjs",
+  "dockerRuntimeBases": [
+    "node:${NODE_IMAGE_VERSION} AS deps",
+    "node:${NODE_IMAGE_VERSION} AS builder",
+    "node:${NODE_IMAGE_VERSION} AS runner"
+  ],
+  "expectedOutput": ".next/standalone",
+  "serverCommand": [
+    "[\"sh\", \"scripts/start-docker.sh\"]"
+  ],
+  "containerPort": 3000,
+  "pageRoute": "/login",
+  "expectedInterface": "Username|Login|Log in",
+  "serviceRecipe": "compose.yaml",
+  "runtimeConfigurationNames": [
+    "APP_SECRET",
+    "DATABASE_URL",
+    "POSTGRES_PASSWORD",
+    "TWO_FACTOR_ENCRYPTION_KEY"
+  ],
+  "referenceURL": "https://cloud.umami.is/",
+  "bundler": "Turbopack",
+  "bundlerEvidence": "目标脚本显式启用 Turbopack。",
+  "upstreamSourceEvidence": [
+    {
+      "path": "package.json",
+      "url": "https://github.com/umami-software/umami/blob/559e3c607c23d2c72d9bd4f6481bda428255323c/package.json"
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "url": "https://github.com/umami-software/umami/blob/559e3c607c23d2c72d9bd4f6481bda428255323c/pnpm-workspace.yaml"
+    },
+    {
+      "path": "Dockerfile",
+      "url": "https://github.com/umami-software/umami/blob/559e3c607c23d2c72d9bd4f6481bda428255323c/Dockerfile"
+    },
+    {
+      "path": "docker-compose.yml",
+      "url": "https://github.com/umami-software/umami/blob/559e3c607c23d2c72d9bd4f6481bda428255323c/docker-compose.yml"
+    },
+    {
+      "path": "next.config.ts",
+      "url": "https://github.com/umami-software/umami/blob/559e3c607c23d2c72d9bd4f6481bda428255323c/next.config.ts"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "url": "https://github.com/umami-software/umami/blob/559e3c607c23d2c72d9bd4f6481bda428255323c/pnpm-lock.yaml"
+    }
+  ],
+  "dependencyLocks": [
+    "pnpm-lock.yaml"
+  ],
+  "localVerificationURL": "http://127.0.0.1:43107/login",
+  "expectedSelector": "input",
+  "launchRecipe": "launch.json",
+  "externalServicesUnverified": [],
+  "scopeNotes": [],
+  "resolvedDependencySnapshots": {}
+}

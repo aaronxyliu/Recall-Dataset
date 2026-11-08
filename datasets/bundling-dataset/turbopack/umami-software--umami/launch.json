@@ -1,0 +1,12 @@
+{
+  "containerPort": 3000,
+  "route": "/login",
+  "expectedSelector": "input",
+  "expectedText": "Username|Login|Log in",
+  "composeFile": "compose.yaml",
+  "generateEnvironment": ["POSTGRES_PASSWORD", "APP_SECRET"],
+  "generateHexEnvironment": {"TWO_FACTOR_ENCRYPTION_KEY": 32},
+  "environmentTemplates": {
+    "DATABASE_URL": "postgresql://umami:{POSTGRES_PASSWORD}@db:5432/umami"
+  }
+}
