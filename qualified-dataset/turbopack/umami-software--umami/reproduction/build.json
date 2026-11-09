@@ -1,0 +1,31 @@
+{
+  "schema": "recall.reproduction/v1",
+  "subject": "turbopack/umami-software--umami",
+  "repo": "umami-software/umami",
+  "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
+  "frontendManifest": "package.json",
+  "context": ".",
+  "image": "recall-hufang/umami-software--umami:559e3c607c23",
+  "buildArgs": {},
+  "target": null,
+  "platform": null,
+  "launch": {
+    "containerPort": 3000,
+    "route": "/login",
+    "expectedSelector": "input",
+    "expectedText": "Username|Login|Log in",
+    "composeFile": "compose.yaml",
+    "generateEnvironment": [
+      "POSTGRES_PASSWORD",
+      "APP_SECRET"
+    ],
+    "generateHexEnvironment": {
+      "TWO_FACTOR_ENCRYPTION_KEY": 32
+    },
+    "environmentTemplates": {
+      "DATABASE_URL": "postgresql://umami:{POSTGRES_PASSWORD}@db:5432/umami"
+    }
+  },
+  "dockerfileSHA256": "68b7f7eb9b5143a8ec2059dde514c1be885e05cba4f73ff9815e8ed4b78c1914",
+  "capturedImageID": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6"
+}

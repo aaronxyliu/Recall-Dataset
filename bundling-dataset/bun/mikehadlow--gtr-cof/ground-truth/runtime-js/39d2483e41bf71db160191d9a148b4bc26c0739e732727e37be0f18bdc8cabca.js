@@ -1,1 +1,0 @@
-(function(V){return V?V.length===1?1:{Alt:2,Control:2,Meta:2,Shift:2,Tab:3,Enter:4,Backspace:5,Delete:5,ArrowDown:6,ArrowLeft:6,ArrowUp:6,ArrowRight:6,Home:6,End:6,PageDown:6,PageUp:6}[V]||7:7})

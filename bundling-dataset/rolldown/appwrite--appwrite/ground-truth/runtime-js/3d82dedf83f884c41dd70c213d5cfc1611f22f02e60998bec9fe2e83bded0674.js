@@ -1,2 +1,0 @@
-import{Cot as e}from"./index-ARRzLOvi.js";var t=[[`rect`,{width:`18`,height:`14`,x:`3`,y:`5`,rx:`2`,ry:`2`,key:`12ruh7`}],[`path`,{d:`M7 15h4M15 15h2M7 11h2M13 11h4`,key:`1ueiar`}]],n=e(`captions`,t);export{t as n,n as t};
-//# sourceMappingURL=captions-OvzCXmMm.js.map

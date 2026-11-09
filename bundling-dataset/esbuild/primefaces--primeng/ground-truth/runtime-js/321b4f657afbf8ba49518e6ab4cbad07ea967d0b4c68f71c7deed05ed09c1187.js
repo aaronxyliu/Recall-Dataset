@@ -1,1 +1,0 @@
-this.media='all'

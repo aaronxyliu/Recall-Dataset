@@ -1,192 +1,0 @@
-#0 building with "colima" instance using docker driver
-
-#1 [stage-1 1/2] FROM docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10
-#1 resolve docker.io/library/nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10 0.0s done
-#1 CACHED
-
-#2 [internal] load build definition from Dockerfile
-#2 transferring dockerfile: 1.05kB done
-#2 DONE 0.0s
-
-#3 [internal] load metadata for docker.io/library/nginx:1.27-alpine
-#3 DONE 0.0s
-
-#4 [internal] load metadata for docker.io/library/node:24-bookworm
-#4 DONE 0.0s
-
-#5 [internal] load .dockerignore
-#5 transferring context: 2B done
-#5 DONE 0.0s
-
-#6 [build  1/14] FROM docker.io/library/node:24-bookworm@sha256:6dac556d980b7f0e5498d08f08cee0ca67798b4ad6c23964a9214920e67758d0
-#6 resolve docker.io/library/node:24-bookworm@sha256:6dac556d980b7f0e5498d08f08cee0ca67798b4ad6c23964a9214920e67758d0 done
-#6 DONE 0.0s
-
-#7 [internal] load build context
-#7 transferring context: 20.54MB 0.1s done
-#7 DONE 0.1s
-
-#8 [build  2/14] WORKDIR /app
-#8 CACHED
-
-#9 [build  3/14] COPY . .
-#9 DONE 0.1s
-
-#10 [build  4/14] RUN apt-get update && apt-get install -y --no-install-recommends binaryen curl ca-certificates build-essential python3
-#10 0.648 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
-#10 0.986 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
-#10 1.218 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
-#10 1.511 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8689 kB]
-#10 3.052 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
-#10 3.294 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [360 kB]
-#10 3.604 Fetched 9297 kB in 3s (2795 kB/s)
-#10 3.604 Reading package lists...
-#10 3.840 Reading package lists...
-#10 4.061 Building dependency tree...
-#10 4.120 Reading state information...
-#10 4.208 curl is already the newest version (7.88.1-10+deb12u15).
-#10 4.208 python3 is already the newest version (3.11.2-1+b1).
-#10 4.208 python3 set to manually installed.
-#10 4.208 The following NEW packages will be installed:
-#10 4.208   binaryen build-essential
-#10 4.208 The following packages will be upgraded:
-#10 4.209   ca-certificates
-#10 4.537 1 upgraded, 2 newly installed, 0 to remove and 57 not upgraded.
-#10 4.537 Need to get 3099 kB of archives.
-#10 4.537 After this operation, 16.0 MB of additional disk space will be used.
-#10 4.537 Get:1 http://deb.debian.org/debian-security bookworm-security/main arm64 ca-certificates all 20250419~deb12u2 [161 kB]
-#10 5.465 Get:2 http://deb.debian.org/debian bookworm/main arm64 binaryen arm64 108-1 [2930 kB]
-#10 6.361 Get:3 http://deb.debian.org/debian bookworm/main arm64 build-essential arm64 12.9 [7704 B]
-#10 6.462 debconf: delaying package configuration, since apt-utils is not installed
-#10 6.476 Fetched 3099 kB in 2s (1442 kB/s)
-#10 6.497 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23287 files and directories currently installed.)
-#10 6.561 Preparing to unpack .../ca-certificates_20250419~deb12u2_all.deb ...
-#10 6.563 Unpacking ca-certificates (20250419~deb12u2) over (20250419~deb12u1) ...
-#10 6.701 Selecting previously unselected package binaryen.
-#10 6.702 Preparing to unpack .../binaryen_108-1_arm64.deb ...
-#10 6.703 Unpacking binaryen (108-1) ...
-#10 6.854 Selecting previously unselected package build-essential.
-#10 6.856 Preparing to unpack .../build-essential_12.9_arm64.deb ...
-#10 6.858 Unpacking build-essential (12.9) ...
-#10 6.875 Setting up binaryen (108-1) ...
-#10 6.878 Setting up ca-certificates (20250419~deb12u2) ...
-#10 6.922 debconf: unable to initialize frontend: Dialog
-#10 6.922 debconf: (TERM is not set, so the dialog frontend is not usable.)
-#10 6.922 debconf: falling back to frontend: Readline
-#10 6.926 debconf: unable to initialize frontend: Readline
-#10 6.926 debconf: (This frontend requires a controlling tty.)
-#10 6.926 debconf: falling back to frontend: Teletype
-#10 7.381 Updating certificates in /etc/ssl/certs...
-#10 7.612 rehash: warning: skipping ca-certificates.crt,it does not contain exactly one certificate or CRL
-#10 7.614 0 added, 2 removed; done.
-#10 7.626 Setting up build-essential (12.9) ...
-#10 7.628 Processing triggers for ca-certificates (20250419~deb12u2) ...
-#10 7.632 Updating certificates in /etc/ssl/certs...
-#10 7.765 0 added, 0 removed; done.
-#10 7.765 Running hooks in /etc/ca-certificates/update.d...
-#10 7.774 done.
-#10 DONE 7.9s
-
-#11 [build  5/14] RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-#11 0.534 info: downloading installer
-#11 3.663 info: profile set to default
-#11 3.663 info: default host tuple is aarch64-unknown-linux-gnu
-#11 3.664 info: syncing channel updates for stable-aarch64-unknown-linux-gnu
-#11 4.783 info: latest update on 2026-10-15 for version 1.99.1 (58cf8f9c3 2026-10-13)
-#11 4.783 info: downloading 6 components
-#11 33.89 
-#11 33.89 info: default toolchain set to stable-aarch64-unknown-linux-gnu
-#11 33.90   stable-aarch64-unknown-linux-gnu installed - rustc 1.99.1 (58cf8f9c3 2026-10-13)
-#11 33.90 
-#11 33.90 
-#11 33.90 Rust is installed now. Great!
-#11 33.90 
-#11 33.90 To get started you may need to restart your current shell.
-#11 33.90 This would reload your PATH environment variable to include
-#11 33.90 Cargo's bin directory ($HOME/.cargo/bin).
-#11 33.90 
-#11 33.90 To configure your current shell, you need to source the
-#11 33.90 corresponding env file under $HOME/.cargo.
-#11 33.90 
-#11 33.90 Consider running the right command for your shell (note the leading DOT):
-#11 33.90 . "$HOME/.cargo/env" # For sh/ash/dash/pdksh/bash
-#11 33.90 cargo:rerun-if-env-changed=CC_aarch64-unknown-linux-gnu
-#11 33.90 CC_aarch64-unknown-linux-gnu = None
-#11 33.90 cargo:rerun-if-env-changed=CC_aarch64_unknown_linux_gnu
-#11 33.90 CC_aarch64_unknown_linux_gnu = None
-#11 33.90 cargo:rerun-if-env-changed=HOST_CC
-#11 33.90 HOST_CC = None
-#11 33.90 cargo:rerun-if-env-changed=CC
-#11 33.90 CC = None
-#11 33.90 cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
-#11 33.92 cargo:rerun-if-env-changed=CPATH
-#11 33.92 cargo:rerun-if-env-changed=C_INCLUDE_PATH
-#11 33.92 cargo:rerun-if-env-changed=CPLUS_INCLUDE_PATH
-#11 33.92 cargo:rerun-if-env-changed=OBJC_INCLUDE_PATH
-#11 33.92 cargo:rerun-if-env-changed=OBJCPLUS_INCLUDE_PATH
-#11 33.92 cargo:rerun-if-env-changed=COMPILER_PATH
-#11 33.92 cargo:rerun-if-env-changed=SOURCE_DATE_EPOCH
-#11 33.92 cargo:rerun-if-env-changed=GCC_EXEC_PREFIX
-#11 33.92 cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
-#11 33.92 CRATE_CC_NO_DEFAULTS = None
-#11 33.92 cargo:rerun-if-env-changed=CFLAGS
-#11 33.92 CFLAGS = None
-#11 33.92 cargo:rerun-if-env-changed=HOST_CFLAGS
-#11 33.92 HOST_CFLAGS = None
-#11 33.92 cargo:rerun-if-env-changed=CFLAGS_aarch64_unknown_linux_gnu
-#11 33.92 CFLAGS_aarch64_unknown_linux_gnu = None
-#11 33.92 cargo:rerun-if-env-changed=CFLAGS_aarch64-unknown-linux-gnu
-#11 33.92 CFLAGS_aarch64-unknown-linux-gnu = None
-#11 DONE 34.1s
-
-#12 [build  6/14] RUN corepack enable
-#12 DONE 0.3s
-
-#13 [build  7/14] RUN corepack prepare yarn@1.22.22 --activate
-#13 0.143 Preparing yarn@1.22.22 for immediate activation...
-#13 DONE 5.8s
-
-#14 [build  8/14] RUN yarn install --frozen-lockfile --ignore-engines
-#14 0.282 yarn install v1.22.22
-#14 0.318 (node:6) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
-#14 0.318 (Use `node --trace-deprecation ...` to show where the warning was created)
-#14 0.318 [1/4] Resolving packages...
-#14 0.355 [2/4] Fetching packages...
-#14 17.54 info There appears to be trouble with your network connection. Retrying...
-#14 53.36 info There appears to be trouble with your network connection. Retrying...
-#14 59.57 info There appears to be trouble with your network connection. Retrying...
-#14 62.88 info There appears to be trouble with your network connection. Retrying...
-#14 81.12 info There appears to be trouble with your network connection. Retrying...
-#14 102.6 info There appears to be trouble with your network connection. Retrying...
-#14 116.3 info There appears to be trouble with your network connection. Retrying...
-#14 123.6 info There appears to be trouble with your network connection. Retrying...
-#14 130.0 info There appears to be trouble with your network connection. Retrying...
-#14 141.8 info There appears to be trouble with your network connection. Retrying...
-#14 146.3 info There appears to be trouble with your network connection. Retrying...
-#14 159.1 info There appears to be trouble with your network connection. Retrying...
-#14 184.9 info There appears to be trouble with your network connection. Retrying...
-#14 193.9 info There appears to be trouble with your network connection. Retrying...
-#14 200.9 info There appears to be trouble with your network connection. Retrying...
-#14 204.8 info There appears to be trouble with your network connection. Retrying...
-#14 213.1 info There appears to be trouble with your network connection. Retrying...
-#14 226.1 info There appears to be trouble with your network connection. Retrying...
-#14 229.3 info There appears to be trouble with your network connection. Retrying...
-#14 248.8 info There appears to be trouble with your network connection. Retrying...
-#14 259.3 info There appears to be trouble with your network connection. Retrying...
-#14 264.0 info There appears to be trouble with your network connection. Retrying...
-#14 269.8 info There appears to be trouble with your network connection. Retrying...
-#14 275.6 info There appears to be trouble with your network connection. Retrying...
-#14 282.1 info There appears to be trouble with your network connection. Retrying...
-#14 312.7 info There appears to be trouble with your network connection. Retrying...
-#14 316.3 info There appears to be trouble with your network connection. Retrying...
-#14 320.1 info There appears to be trouble with your network connection. Retrying...
-#14 326.5 info There appears to be trouble with your network connection. Retrying...
-#14 354.7 info There appears to be trouble with your network connection. Retrying...
-#14 360.6 info There appears to be trouble with your network connection. Retrying...
-#14 365.3 info There appears to be trouble with your network connection. Retrying...
-#14 370.4 info There appears to be trouble with your network connection. Retrying...
-#14 373.6 info There appears to be trouble with your network connection. Retrying...
-#14 378.2 info There appears to be trouble with your network connection. Retrying...
-#14 381.6 info There appears to be trouble with your network connection. Retrying...
-#14 CANCELED
-ERROR: failed to build: failed to solve: Canceled: context canceled

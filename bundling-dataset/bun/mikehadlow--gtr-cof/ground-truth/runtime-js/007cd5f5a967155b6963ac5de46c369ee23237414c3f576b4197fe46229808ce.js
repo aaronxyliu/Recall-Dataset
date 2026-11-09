@@ -1,1 +1,0 @@
-(function(r,a,K,u){return a=r=K=0,u=-300,function(V,z){return((z=0,(V=(K+=(r+=V.movementY,V.movementX),V.timeStamp),a+=V-u,u=V,a)>300)&&(a=r=K=0),V=Math.sqrt(K*K+r*r),V)>=5&&a>0&&(z=V/a,a=r=K=0),z}})

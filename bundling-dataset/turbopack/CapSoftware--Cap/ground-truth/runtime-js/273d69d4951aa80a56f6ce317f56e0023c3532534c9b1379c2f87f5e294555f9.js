@@ -1,1 +1,0 @@
-(self.__next_s=self.__next_s||[]).push(["/theme-script.js",{}])

@@ -1,1 +1,0 @@
-(self.__next_s=self.__next_s||[]).push([0,{"children":"(function(){try{var v=localStorage.getItem(\"next-ai-draw-io-dark-mode\");var d=v===\"true\"||(v===null\u0026\u0026window.matchMedia(\"(prefers-color-scheme: dark)\").matches);if(d)document.documentElement.classList.add(\"dark\")}catch(e){}})()","id":"theme-init"}])

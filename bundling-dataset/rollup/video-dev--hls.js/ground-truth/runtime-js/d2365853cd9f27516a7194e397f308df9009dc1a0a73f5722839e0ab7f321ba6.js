@@ -1,1 +1,0 @@
-importScripts('https://cdnjs.cloudflare.com/ajax/libs/ace/1.37.5/worker-json.js');

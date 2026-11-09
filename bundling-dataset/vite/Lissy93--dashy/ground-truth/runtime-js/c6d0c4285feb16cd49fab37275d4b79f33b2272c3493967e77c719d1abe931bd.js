@@ -1,5 +1,0 @@
-import{f as e,gt as t,k as n,l as r,t as i}from"./_plugin-vue_export-helper-CAHBAP5Q.js";import{t as a}from"./WidgetMixin-CbFKsHb1.js";var o={mixins:[a],data:()=>({updateCount:0}),computed:{imagePath(){return this.options.imagePath||this.error(`You must specify an imagePath`),`${this.options.imagePath}${this.updatePathParam}`},imageDimensions(){if(!this.options.imageWidth&&!this.options.imageHeight)return null;let e=e=>e?Number.isNaN(Number(e))?e:`${e}px`:`auto`;return`
-        width: ${e(this.options.imageWidth)};
-        height: ${e(this.options.imageHeight)};
-      `},updatePathParam(){return!this.updateCount||!this.options.imagePath?``:`${this.options.imagePath.includes(`?`)?`&`:`?`}dashy-update=${this.updateCount}`}},methods:{update(){this.startLoading(),this.updateCount+=1,this.finishLoading()}}},s={class:`image-widget`},c=[`src`];function l(i,a,o,l,u,d){return n(),e(`div`,s,[r(`img`,{src:d.imagePath,style:t(d.imageDimensions),class:`embedded-image`},null,12,c)])}var u=i(o,[[`render`,l],[`__scopeId`,`data-v-611911d3`]]);export{u as default};
-//# sourceMappingURL=ImageWidget-DQE8T9Zh.js.map

@@ -1,1 +1,0 @@
-self.__next_f.push([1,"10:\"$Sreact.suspense\"\n"])

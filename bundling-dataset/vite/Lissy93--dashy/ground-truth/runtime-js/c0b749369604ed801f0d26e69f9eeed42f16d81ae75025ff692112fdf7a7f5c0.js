@@ -1,4 +1,0 @@
-(function anonymous(self,scope
-) {
-const schema2 = scope.schema[2];const schema1 = scope.schema[1];return function validate1(data, {instancePath="", parentData, parentDataProperty, rootData=data}={}){let vErrors = null;let errors = 0;if(!((typeof data == "number") && (!(data % 1) && !isNaN(data)))){const err0 = {instancePath,schemaPath:"#/definitions/nonNegativeInteger/type",keyword:"type",params:{type: "integer"},message:"must be integer"};if(vErrors === null){vErrors = [err0];}else {vErrors.push(err0);}errors++;}if(typeof data == "number"){if(data < 0 || isNaN(data)){const err1 = {instancePath,schemaPath:"#/definitions/nonNegativeInteger/minimum",keyword:"minimum",params:{comparison: ">=", limit: 0},message:"must be >= 0"};if(vErrors === null){vErrors = [err1];}else {vErrors.push(err1);}errors++;}}validate1.errors = vErrors;return errors === 0;}
-})

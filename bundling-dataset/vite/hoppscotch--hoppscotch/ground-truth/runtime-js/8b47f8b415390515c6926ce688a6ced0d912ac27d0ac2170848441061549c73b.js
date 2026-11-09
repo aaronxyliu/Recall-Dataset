@@ -1,2 +1,0 @@
-import{l8 as l,ia as a,hY as r,ly as h,hW as s}from"./index--ZPpORdW.js";function f(n){const e=l(a.auth.getCurrentUserStream(),a.auth.getCurrentUser());let t=null;r(()=>{e.value&&n(e.value),t=h(e,(u,o)=>{o===null&&u!==null&&n(u)})}),s(()=>{t==null||t()})}function m(n){const e=a.auth.getAuthEventsStream();let t=null;r(()=>{t=e.subscribe(u=>{n(u)})}),s(()=>{t==null||t.unsubscribe()})}export{f as a,m as o};
-//# sourceMappingURL=auth-B5dDfeL_.js.map

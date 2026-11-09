@@ -1,1 +1,0 @@
-(function(r,K,a,V){for(V=(a=[],0);V<r.length;V++)a[V]=r[V]^K[V%K.length];return a})

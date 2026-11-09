@@ -1,2 +1,0 @@
-import{Cot as e}from"./index-ARRzLOvi.js";var t=[[`rect`,{x:`2`,y:`4`,width:`20`,height:`16`,rx:`2`,key:`izxlao`}],[`path`,{d:`M10 4v4`,key:`pp8u80`}],[`path`,{d:`M2 8h20`,key:`d11cs7`}],[`path`,{d:`M6 4v4`,key:`1svtjw`}]],n=e(`app-window`,t);export{t as n,n as t};
-//# sourceMappingURL=app-window-CYNu_aFY.js.map

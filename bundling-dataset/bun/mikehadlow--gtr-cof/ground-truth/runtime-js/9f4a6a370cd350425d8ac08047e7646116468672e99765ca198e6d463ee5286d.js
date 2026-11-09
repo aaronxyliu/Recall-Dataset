@@ -1,1 +1,0 @@
-/((.+[.])?(google|youtube|youtubeeducation|youtubekids|ytimg|gstatic|googlesyndication|googleadservices|googletagservices|googletagmanager|google-analytics|doubleclick|cdn[.]ampproject)[.](com|net|org))/

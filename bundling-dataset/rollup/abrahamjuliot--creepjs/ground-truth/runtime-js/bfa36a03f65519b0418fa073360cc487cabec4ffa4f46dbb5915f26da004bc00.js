@@ -1,4 +1,0 @@
-(function anonymous(
-) {
-null.bar
-})

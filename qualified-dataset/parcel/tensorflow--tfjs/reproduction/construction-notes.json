@@ -1,0 +1,15 @@
+{
+  "repository": "tensorflow/tfjs",
+  "commit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
+  "packageManifest": "tfjs-automl/demo/img_classification/package.json",
+  "packageManager": "Yarn Classic 1.22.19",
+  "dependencyLocks": [
+    "tfjs-automl/yarn.lock",
+    "tfjs-automl/demo/img_classification/yarn.lock"
+  ],
+  "upstreamProductionScripts": {
+    "tfjs-automl": "tsc && yarn bundle",
+    "tfjs-automl/demo/img_classification": "cross-env NODE_ENV=production parcel build index.html --public-url ./"
+  },
+  "sourceMapPatch": "Use the upstream Rollup and Parcel source maps and verify the final Parcel output."
+}

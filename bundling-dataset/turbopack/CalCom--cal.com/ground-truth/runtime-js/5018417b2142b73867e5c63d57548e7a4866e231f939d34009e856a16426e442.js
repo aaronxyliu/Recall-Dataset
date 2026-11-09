@@ -1,1 +1,0 @@
-!function(){var d=document.documentElement,c=d.classList;c.remove('light','dark');c.add('light')}()

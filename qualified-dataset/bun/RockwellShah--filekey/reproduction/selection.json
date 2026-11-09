@@ -1,0 +1,60 @@
+{
+  "repo": "RockwellShah/filekey",
+  "commit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
+  "selected": [
+    "@hpke/core",
+    "@noble/curves",
+    "@noble/hashes",
+    "fflate",
+    "qrcode-generator",
+    "@scure/base"
+  ],
+  "sourceOwnership": {},
+  "moduleScope": {
+    "schema": "recall.module-ingress-scope/v1",
+    "subject": "bun/RockwellShah--filekey",
+    "repo": "RockwellShah/filekey",
+    "commit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
+    "policy": "module-dependencies-only",
+    "outputFormatIndependent": true,
+    "moduleOutputPattern": "^<local>/dist/app\\.js$",
+    "angularGlobalBundleNames": [],
+    "evidence": [
+      {
+        "path": "module-evidence/reference/package.json",
+        "sha256": "33bf35f78e40086f51e51ee7858ff2dc0831b45ddf315846abaf7754822b0ae1",
+        "kind": "pinned-source",
+        "upstreamPath": "reference/package.json"
+      },
+      {
+        "path": "module-evidence/dataset-recipe.Dockerfile",
+        "sha256": "9684976920ee55abab7b4e62da26a1a982fa0e3ef62cbc687c8423b2040e8463",
+        "kind": "verified-build-recipe",
+        "upstreamPath": "dataset-recipe.Dockerfile"
+      }
+    ],
+    "assets": [
+      {
+        "url": "<local>/",
+        "sha256": "2b8d27b7357f26d4082d0a2bc4dfca0e10bc182b0fa302580f8912f769b4eb2e",
+        "mapSHA256": null,
+        "role": "not-reviewed-as-module-output",
+        "reason": "Outside the reviewed module build output; no module-ingress claim."
+      },
+      {
+        "url": "<local>/dist/app.js",
+        "sha256": "405b6c4b50ff14aef656897794e3c19e0c1ebe63bb644511cac8325a0a6c382e",
+        "mapSHA256": "ae393edfa78c17d37e03a5a354cc8565f08a61f9dd3dc162f45af300c23e9bc6",
+        "role": "module-build-output",
+        "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+      },
+      {
+        "url": "<local>/sw.js",
+        "sha256": "bb5f54eff7df965a1982d311bebb871ca673acb2df1d87bc21a204d633753f49",
+        "mapSHA256": null,
+        "role": "not-reviewed-as-module-output",
+        "reason": "Outside the reviewed module build output; no module-ingress claim."
+      }
+    ]
+  }
+}

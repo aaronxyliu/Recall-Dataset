@@ -1,0 +1,23 @@
+{
+  "repository": "CalCom/cal.com",
+  "commit": "1c193cca8682b33b9866c792186033f7ef886682",
+  "packageManifest": "apps/web/package.json",
+  "declaredPackageManager": "yarn@4.12.0",
+  "dependencyLocks": [
+    "yarn.lock"
+  ],
+  "upstreamProductionScripts": {
+    "build": "next build && yarn sentry:release"
+  },
+  "sourceMapPatch": "Existing upstream sourcemap configuration",
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {
+      "yarn": "3.4.1"
+    },
+    "root": {
+      "npm": ">=7.0.0",
+      "yarn": ">=4.12.0"
+    }
+  }
+}

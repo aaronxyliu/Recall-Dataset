@@ -1,1 +1,0 @@
-self.__next_f.push([1,"231aa817254af.js\",\"/_next/static/chunks/db8560b3df317e97.js\",\"/_next/static/chunks/3eab4fffee0a7f12.js\",\"/_next/static/chunks/327cc20876a47c35.js\",\"/_next/static/chunks/2a793d5e25c1015b.js\"],\"HeroLogo\"]\n"])

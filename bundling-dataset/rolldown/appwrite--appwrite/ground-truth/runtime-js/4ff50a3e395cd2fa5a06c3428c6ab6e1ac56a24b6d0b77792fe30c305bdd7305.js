@@ -1,2 +1,0 @@
-var e=BigInt(2**53-1);function t(t){return t==null?0:typeof t==`bigint`?t<=0n||t>=e?0:Number(t):!Number.isFinite(t)||t<=0||t>=2**53-1?0:t}function n(e){return t(e?.backupPolicies)}function r(e,t){return t>0&&e>=t}function i(e,t){return t<=0?null:Math.max(0,t-e)}function a(e){return e===0||e>1}export{t as a,a as i,i as n,r,n as t};
-//# sourceMappingURL=backup-policy-plan-limits-uAn9nzh2.js.map

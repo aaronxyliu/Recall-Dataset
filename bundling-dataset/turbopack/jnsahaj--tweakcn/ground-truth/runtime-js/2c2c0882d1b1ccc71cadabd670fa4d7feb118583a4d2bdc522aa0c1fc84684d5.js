@@ -1,1 +1,0 @@
-self.__next_f.push([1,"28:I[320780,[\"/_next/static/chunks/b7519f9d32d4f9b1.js\",\"/_next/static/chunks/1a9573986a5c38f9.js\"],\"IconMark\"]\n:HL[\"/_next/static/chunks/f715b70c7608d5c7.css\",\"style\"]\n4:T575,"])

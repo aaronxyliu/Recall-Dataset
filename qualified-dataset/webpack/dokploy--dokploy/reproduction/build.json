@@ -1,0 +1,23 @@
+{
+  "schema": "recall.reproduction/v1",
+  "subject": "webpack/dokploy--dokploy",
+  "repo": "dokploy/dokploy",
+  "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
+  "frontendManifest": "apps/dokploy/package.json",
+  "context": ".",
+  "image": "recall-web/dokploy--dokploy:fe9ae2a7db22",
+  "buildArgs": {},
+  "target": null,
+  "platform": null,
+  "launch": {
+    "containerPort": 3000,
+    "route": "/",
+    "expectedSelector": "body",
+    "composeFile": "compose.yaml",
+    "generateEnvironment": [
+      "BETTER_AUTH_SECRET"
+    ]
+  },
+  "dockerfileSHA256": "1c61d2ee08fd7931e7283d60a1e04232b39987623b6909720629be50d127c690",
+  "capturedImageID": "sha256:6fdac03eee413572b38609316f90bda393b401a5651011d851368a959520fbc1"
+}

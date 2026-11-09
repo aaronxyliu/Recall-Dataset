@@ -1,2 +1,0 @@
-import{er as e}from"./BDt1khSy.js";import{Pt as t,cn as n,on as r}from"./DHn4i6Qo.js";import{fl as i}from"./BWGXZOld.js";var a=new class{#e=n();constructor(){i.on({SystemConfigUpdate:()=>void this.#t()})}async init(){await this.#t()}get value(){if(!t(this.#e))throw Error(`Feature flags manager must be initialized first`);return t(this.#e)}async#t(){r(this.#e,await e(),!0)}};export{a as t};
-//# sourceMappingURL=B-OCdmCI.js.map

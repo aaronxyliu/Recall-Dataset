@@ -1,1 +1,0 @@
-document.currentScript.remove();/*$tsr-stream-boundary*/

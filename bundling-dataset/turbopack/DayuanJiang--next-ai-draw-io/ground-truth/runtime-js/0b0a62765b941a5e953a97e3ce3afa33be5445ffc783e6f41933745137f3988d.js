@@ -1,1 +1,0 @@
-(function(){try{var v=localStorage.getItem("next-ai-draw-io-dark-mode");var d=v==="true"||(v===null&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark")}catch(e){}})()

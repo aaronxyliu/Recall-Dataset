@@ -1,0 +1,24 @@
+{
+  "repository": "omnibrain/svguitar",
+  "commit": "3b465fdc8af57a9ed948e168ada1c87c9aafd574",
+  "packageManifest": "package.json",
+  "declaredPackageManager": null,
+  "dependencyLocks": [
+    "yarn.lock"
+  ],
+  "upstreamProductionScripts": {
+    "build": "run-s build:tsc build:rollup build:typedoc build:demo",
+    "build:rollup": "rollup -c rollup.config.ts",
+    "build:demo": "ts-node tools/build-demo"
+  },
+  "sourceMapPatch": "Existing upstream sourcemap configuration",
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {
+      "node": ">=10.0.0"
+    },
+    "root": {
+      "node": ">=10.0.0"
+    }
+  }
+}

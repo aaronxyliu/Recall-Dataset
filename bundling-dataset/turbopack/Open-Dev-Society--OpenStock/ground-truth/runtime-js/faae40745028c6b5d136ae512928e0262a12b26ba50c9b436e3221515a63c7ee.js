@@ -1,3 +1,0 @@
-
-		(()=>{"use strict";const e={whitelabel:!0,permissionOverrides:!0,linkCapturingAllowed:!0,symbol_search_default_exchange:!0,symbol_search_allowed_exchanges:!0};function t(t,n=[]){return Object.keys(t).forEach((a=>{(Object.prototype.hasOwnProperty.call(e,a)||n.includes(a))&&delete t[a]})),t}const n=window;n.initData=n.initData||{};const a=/\+/g,c=/<\/?[^>]+(>|$)/g,o=e=>decodeURIComponent(e.replace(a," ")).replace(c,""),s=n.location.search.substring(1),i=/([^&=]+)=?([^&]*)/g;let l,r={};try{let e=i.exec(s);for(;null!==e;)r[o(e[1])]=o(e[2]),e=i.exec(s)}catch(e){r={}}try{const e=JSON.parse(decodeURIComponent(n.location.hash.substring(1)));l="object"==typeof e&&null!==e?e:{}}catch(e){l={}}n.initData.querySettings=t(r),n.initData.hashSettings=t(l)})();
-	

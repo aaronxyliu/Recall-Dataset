@@ -1,0 +1,40 @@
+{
+  "schema": "recall.reproduction/v1",
+  "subject": "turbopack/CapSoftware--Cap",
+  "repo": "CapSoftware/Cap",
+  "commit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
+  "frontendManifest": "apps/web/package.json",
+  "context": ".",
+  "image": "recall-hufang/capsoftware--cap:bb16822e00a5",
+  "buildArgs": {},
+  "target": null,
+  "platform": null,
+  "launch": {
+    "containerPort": 3000,
+    "route": "/",
+    "expectedSelector": "main, form",
+    "expectedText": "Cap|Sign in",
+    "composeFile": "compose.yaml",
+    "composeWaitSeconds": 480,
+    "readinessTimeoutSeconds": 240,
+    "generateEnvironment": [
+      "MYSQL_PASSWORD",
+      "MYSQL_ROOT_PASSWORD",
+      "MINIO_ROOT_PASSWORD",
+      "NEXTAUTH_SECRET",
+      "MEDIA_SERVER_WEBHOOK_SECRET"
+    ],
+    "generateHexEnvironment": {
+      "DATABASE_ENCRYPTION_KEY": 32
+    },
+    "environmentTemplates": {
+      "CAP_URL": "http://127.0.0.1:{port}",
+      "S3_PUBLIC_URL": "http://127.0.0.1:43210"
+    },
+    "scopeNotes": [
+      "Self-hosted landing/login scope. Recording upload, email and media processing actions are outside this observation."
+    ]
+  },
+  "dockerfileSHA256": "dd694cd84c33dc6f639ee8a63fc7b17b4110ce6e2320743332096bc20fed0b1d",
+  "capturedImageID": "sha256:5e2b15a032e2433f0177fd15edbf62bce866dfab865a46e2e1d85612c0b30326"
+}

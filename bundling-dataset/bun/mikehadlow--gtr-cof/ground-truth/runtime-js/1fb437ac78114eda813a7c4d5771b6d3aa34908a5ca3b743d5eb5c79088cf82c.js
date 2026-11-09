@@ -1,1 +1,0 @@
-(function(N,u,V,z){return z=(V=this,V.length),function(G,a,A,r){function M(K){return(V[K+2]<<8|V[K]<<24)+V[K+3]|V[K+1]<<16}for(r=0;r<G.length;r++)a=V.length,(A=a-z&7)||(u=N(M(a-8),M(a-4))),V[a]=G[r]^u[A]}})

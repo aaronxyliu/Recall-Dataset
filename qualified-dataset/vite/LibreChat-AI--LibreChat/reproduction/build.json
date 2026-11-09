@@ -1,0 +1,26 @@
+{
+  "schema": "recall.reproduction/v1",
+  "subject": "vite/LibreChat-AI--LibreChat",
+  "repo": "LibreChat-AI/LibreChat",
+  "commit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
+  "frontendManifest": "client/package.json",
+  "context": ".",
+  "image": "recall-web/librechat-ai--librechat:f4154b649efa",
+  "buildArgs": {},
+  "target": null,
+  "platform": null,
+  "launch": {
+    "containerPort": 3080,
+    "route": "/login",
+    "expectedSelector": "body",
+    "composeFile": "compose.yaml",
+    "generateEnvironment": [
+      "CREDS_KEY",
+      "CREDS_IV",
+      "JWT_SECRET",
+      "JWT_REFRESH_SECRET"
+    ]
+  },
+  "dockerfileSHA256": "cf6e8e6127ccac80e4c31088c7f5f14adfaaf644ef43bfc191aa88b747cacd5f",
+  "capturedImageID": "sha256:ea575f1421ddb62a3e691d433170cdc24fc8d71f0c5ed4b109b33311dc36f207"
+}

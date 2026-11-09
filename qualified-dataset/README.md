@@ -1,34 +1,10 @@
-# Qualified ReCall Dataset
+# Final repository inventory
 
-**38 repositories, 305 repository/library instances, and 58,268 one-to-one function pairs.**
+This directory contains the sole final dataset. Use [index.json](index.json) for machine-readable membership and artifact paths, and the [dataset guide](../README.md) for construction, usage, and reproduction.
 
-Every included repository has **3–10 declared production libraries**. Each selected library has at least **three independently checkable source-function witnesses with ≥10 own-body POG property-operation features**. Source eligibility is checked before new builds. Existing archives are re-filtered with the same source-only rule. **No initial-anchor or target-matching threshold is used.**
+**38 repositories · 305 repository/library instances · 58,268 one-to-one function pairs**
 
-Only function pairs from reviewed **module dependencies** are counted. Standalone vendor/global-script copies are excluded before the correspondence graph is built; UMD/IIFE module output remains eligible. See the [module policy](../qualification/module-dependencies/POLICY.md) and per-repository `module-scope.json` / `module-evidence/`. Captured JS/maps are retained in full for provenance, while map-reference snapshots follow module-only scope.
-
-| Bundler | Repositories | Library instances | Function pairs |
-|---|---:|---:|---:|
-| webpack | 8 | 75 | 19,055 |
-| vite | 8 | 79 | 19,630 |
-| esbuild | 6 | 41 | 5,208 |
-| rollup | 3 | 9 | 1,062 |
-| turbopack | 8 | 80 | 8,729 |
-| parcel | 3 | 12 | 2,896 |
-| bun | 2 | 9 | 1,688 |
-
-The source evidence contains 915 function witnesses; these are lower-bound certificates, not a census of every function. 107 selected library instances have zero accepted one-to-one pairs. Correspondence counts are reported separately and do not determine source eligibility.
-
-The [index](index.json) defines active membership. Each subject includes captured runtime JS, source maps, independently span-verified function pairs, the original frontend manifest, and source witnesses under `eligibility/`. `reference-manifest.json` separately lists available original text from captured maps. Source eligibility uses locked package/workspace code; correspondence attribution follows the existing package-name collector and does not prove that every captured copy is one installed version.
-
-See the [policy](../qualification/source-functions-3/POLICY.md), [all-catalog decisions](../qualification/source-functions-3/catalog-decisions.json), and [standalone audit](../qualification/source-functions-3/audit-result.json). Source failures, incomplete source evidence, and technical build/page failures are separate statuses. The broader `bundling-dataset/` is a build/capture archive and may include excluded subjects or older sampling rules.
-
-To reproduce the source gate, install the frozen POG runtime and `qualification/source-functions-3/` dependencies with `npm ci`, prepare pinned source checkouts, then run `prepare-plan.py` and `preflight.mjs`. `verification/hufang-builds-2026-11-08/run-source-pipeline.py` gates remaining builds on those source certificates. Run `organize.py`, `audit.mjs`, and `publish.py` after verified captures. The organized output and audit do not require local source checkouts.
-
-## Final repository tables
-
-Duplicate libraries are permitted. Only reviewed module-imported code contributes function pairs; standalone vendor/global-script copies remain excluded.
-
-### webpack
+## webpack
 
 | Repository | Libraries | Function pairs |
 |---|---:|---:|
@@ -42,7 +18,7 @@ Duplicate libraries are permitted. Only reviewed module-imported code contribute
 | [swagger-api/swagger-ui](webpack/swagger-api--swagger-ui/README.md) | 10 | 2,730 |
 | **Subtotal: 8 repositories** | **75** | **19,055** |
 
-### vite
+## vite
 
 | Repository | Libraries | Function pairs |
 |---|---:|---:|
@@ -56,7 +32,7 @@ Duplicate libraries are permitted. Only reviewed module-imported code contribute
 | [Lissy93/dashy](vite/Lissy93--dashy/README.md) | 10 | 2,063 |
 | **Subtotal: 8 repositories** | **79** | **19,630** |
 
-### esbuild
+## esbuild
 
 | Repository | Libraries | Function pairs |
 |---|---:|---:|
@@ -68,7 +44,7 @@ Duplicate libraries are permitted. Only reviewed module-imported code contribute
 | [swimlane/ngx-datatable](esbuild/swimlane--ngx-datatable/README.md) | 10 | 336 |
 | **Subtotal: 6 repositories** | **41** | **5,208** |
 
-### rollup
+## rollup
 
 | Repository | Libraries | Function pairs |
 |---|---:|---:|
@@ -77,7 +53,7 @@ Duplicate libraries are permitted. Only reviewed module-imported code contribute
 | [vega/vega-lite](rollup/vega--vega-lite/README.md) | 3 | 87 |
 | **Subtotal: 3 repositories** | **9** | **1,062** |
 
-### turbopack
+## turbopack
 
 | Repository | Libraries | Function pairs |
 |---|---:|---:|
@@ -91,7 +67,7 @@ Duplicate libraries are permitted. Only reviewed module-imported code contribute
 | [umami-software/umami](turbopack/umami-software--umami/README.md) | 10 | 796 |
 | **Subtotal: 8 repositories** | **80** | **8,729** |
 
-### parcel
+## parcel
 
 | Repository | Libraries | Function pairs |
 |---|---:|---:|
@@ -100,7 +76,7 @@ Duplicate libraries are permitted. Only reviewed module-imported code contribute
 | [tensorflow/tfjs](parcel/tensorflow--tfjs/README.md) | 3 | 2,428 |
 | **Subtotal: 3 repositories** | **12** | **2,896** |
 
-### bun
+## bun
 
 | Repository | Libraries | Function pairs |
 |---|---:|---:|

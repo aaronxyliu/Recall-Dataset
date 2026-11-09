@@ -1,5 +1,46 @@
 # excalidraw/excalidraw
 
-Pinned commit `701b901a0f1ba3d0b390d9cdf63d112e25abac4b`. 9 declared production libraries each have at least three verified source functions with at least ten own-body POG property-operation features. No initial-anchor or matching-count criterion is used. See `qualification.json`, `eligibility/`, and `frontend-package.json` for standalone source witnesses.
+Bundler: **vite**. Pinned commit: [`701b901a0f1ba3d0b390d9cdf63d112e25abac4b`](https://github.com/excalidraw/excalidraw/commit/701b901a0f1ba3d0b390d9cdf63d112e25abac4b).
 
-`ground-truth/func-mapping.json` contains 809 independently span-verified one-to-one pairs for the selected libraries. Pair counts may be zero for a selected library; they are not an acceptance condition. Only dependencies imported into reviewed module build outputs contribute pairs; global script lists, copied standalone vendors and unreviewed/external assets are excluded before building the correspondence graph. Output format is independent of module ingress. See `module-scope.json` and `module-evidence/`. All captured JS and maps are preserved byte-for-byte. `reference-manifest.json` lists available original source text from those maps separately from the source-only eligibility proof. The existing collector attributes pairs by package name and does not establish one installed version for every captured copy.
+**9 selected production libraries; 809 one-to-one function pairs.**
+
+| Library | Function pairs |
+|---|---:|
+| `react-dom` | 614 |
+| `@sentry/browser` | 102 |
+| `i18next-browser-languagedetector` | 28 |
+| `react` | 65 |
+| `jotai` | 0 |
+| `firebase` | 0 |
+| `socket.io-client` | 0 |
+| `uqr` | 0 |
+| `vite-plugin-html` | 0 |
+
+Every selected library has at least three distinct source-function witnesses with at least ten own-body POG property operations. No initial-anchor or accepted-pair threshold determines membership. Duplicate libraries are permitted; global/vendor script copies are outside the correspondence graph.
+
+## Files
+
+- `ground-truth/func-mapping.json`: oracle pairs, complete capture inventory, diagnostics and provenance.
+- `ground-truth/runtime-js/` and `source-maps/`: exact hash-addressed captured bytes.
+- `module-scope.json` and `module-evidence/`: reviewed module ingress and pinned evidence.
+- `reference-manifest.json` and `reference-js/`: available original source snapshots; not a complete installed-package/version inventory.
+- `qualification.json`, `frontend-package.json`, and `eligibility/`: source-only eligibility certificates and licenses.
+- `reproduction/`: pinned recipe, configuration, exact collection selection and build/browser evidence.
+
+## Use and reproduce
+
+Run these commands from the dataset repository root. `checkout`, `build`, `serve`, and `capture` print a plan unless `--execute` is supplied.
+
+```sh
+node tools/export-inputs.mjs vite/excalidraw--excalidraw .work/inputs/vite/excalidraw--excalidraw
+python3 tools/rebuild-pairs.py vite/excalidraw--excalidraw --out .work/pairs/vite/excalidraw--excalidraw
+python3 tools/reproduce.py checkout vite/excalidraw--excalidraw --execute
+python3 tools/reproduce.py build vite/excalidraw--excalidraw --execute
+python3 tools/reproduce.py serve vite/excalidraw--excalidraw --execute
+python3 tools/reproduce.py capture vite/excalidraw--excalidraw --out .work/captures/vite/excalidraw--excalidraw --execute
+python3 tools/reproduce.py stop vite/excalidraw--excalidraw --execute
+```
+
+Build context: `.`; frontend production manifest: `excalidraw-app/package.json`; container port: `80`; observed route: `/`.
+
+The archive is verified offline. Fresh builds require upstream sources, registries and Docker; recaptured assets need a fresh module-ingress review before relabeling. Existing raw captures are never overwritten. See the [dataset guide](../../../README.md) for requirements, scoring scope, and limitations.

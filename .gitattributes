@@ -1,4 +1,6 @@
-
-# Preserve exact captured bytes and suppress minified payload diffs.
-bundling-dataset/**/ground-truth/runtime-js/*.js -text -diff
-bundling-dataset/**/ground-truth/source-maps/*.map -text -diff
+# Every released payload is hash-addressed: preserve its exact bytes on checkout.
+* -text
+qualified-dataset/**/ground-truth/runtime-js/*.js -diff
+qualified-dataset/**/ground-truth/source-maps/*.map -diff
+qualified-dataset/**/reference-js/*.js -diff
+qualified-dataset/**/eligibility/**/*.js -diff

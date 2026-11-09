@@ -1,2 +1,0 @@
-import{$t as e,St as t,ft as n,mt as r,pt as i,r as a,vn as o,xt as s,yn as c}from"./DHn4i6Qo.js";import{C as l,S as u}from"./BWGXZOld.js";function d(d,f){c(f,!0);let p=a(f,`client`,19,()=>new l);i(()=>{p().mount()}),u(p()),n(()=>{p().unmount()});var m=t(),h=e(m);r(h,()=>f.children),s(d,m),o()}export{d as t};
-//# sourceMappingURL=CFuMN6C-.js.map

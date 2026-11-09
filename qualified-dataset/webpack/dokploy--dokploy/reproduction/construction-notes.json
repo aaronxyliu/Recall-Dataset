@@ -1,0 +1,7 @@
+[
+  "Commit `fe9ae2a7db22730ff1ab72939e10806848c7cccd`. The upstream production build compiles the server workspace dependency, then the Next.js panel with webpack. This local recipe serves the panel with PostgreSQL, runs the migrations and leaves the host Docker socket unmounted. It uses C++20 for native dependencies and substitutes pinned local copies of Inter and Fraunces for the Google Fonts downloads. The Dockerfile records the font archive versions and checksums. [Upstream build](https://github.com/dokploy/dokploy/blob/fe9ae2a7db22730ff1ab72939e10806848c7cccd/Dockerfile)",
+  "From the dataset root:",
+  "Open http://127.0.0.1:8080/ once PostgreSQL is healthy and the panel has run its migrations. Chrome reached the initial registration form and loaded the local webpack runtime; see browser-stack.json. The check ended before account creation or deployment operations.",
+  "Stop the stack:",
+  "[Verification record](result.json)\n"
+]

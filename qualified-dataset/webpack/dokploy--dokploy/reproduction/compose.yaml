@@ -1,0 +1,25 @@
+services:
+  panel:
+    image: recall-web/dokploy--dokploy:fe9ae2a7db22
+    build:
+      context: ${RECALL_SOURCE_DIR}
+      dockerfile: ${RECALL_RECIPE_DIR}/Dockerfile
+    command: ["sh", "-c", "node dist/migration.mjs && exec pnpm exec next start -H 0.0.0.0 -p 3000"]
+    environment:
+      BETTER_AUTH_SECRET: ${BETTER_AUTH_SECRET:?set in the local env file}
+      DATABASE_URL: postgres://dokploy:local-dokploy@database:5432/dokploy
+    ports: ["127.0.0.1:8080:3000"]
+    depends_on:
+      database:
+        condition: service_healthy
+  database:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: dokploy
+      POSTGRES_USER: dokploy
+      POSTGRES_PASSWORD: local-dokploy
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dokploy -d dokploy"]
+      interval: 3s
+      timeout: 3s
+      retries: 30

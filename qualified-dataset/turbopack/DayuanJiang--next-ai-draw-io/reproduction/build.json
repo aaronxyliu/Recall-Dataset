@@ -1,0 +1,27 @@
+{
+  "schema": "recall.reproduction/v1",
+  "subject": "turbopack/DayuanJiang--next-ai-draw-io",
+  "repo": "DayuanJiang/next-ai-draw-io",
+  "commit": "e3d4d11d5916daf8d68a9f087b36c8ca9a79200e",
+  "frontendManifest": "package.json",
+  "context": ".",
+  "image": "recall-hufang/dayuanjiang--next-ai-draw-io:e3d4d11d5916",
+  "buildArgs": {},
+  "target": null,
+  "platform": null,
+  "launch": {
+    "containerPort": 3000,
+    "route": "/",
+    "expectedSelector": "iframe, textarea, [contenteditable]",
+    "expectedText": "diagram|draw|AI",
+    "nonBuildScripts": [
+      {
+        "pattern": "/drawio/js/",
+        "kind": "vendored-third-party",
+        "provenance": "scripts/fetch-drawio.mjs (package.json prebuild) downloads the pinned drawio release draw.war (packages/mcp-server/src/drawio-version.json: v32.0.2, sha256 3cb8abec\u2026), verifies the archive hash and inflates every entry verbatim into public/drawio. app.min.js keeps the upstream-broken sourceMappingURL=purify.min.js.map, which does not exist in the release."
+      }
+    ]
+  },
+  "dockerfileSHA256": "8850c6b718438292377c9f8f726c8821ab5f1f9d9bd83359ade718bb603b7ea2",
+  "capturedImageID": "sha256:079245223f1ad23b1a565e0cbb50050d93249448e0fb1fce3d5c2621580d28ca"
+}

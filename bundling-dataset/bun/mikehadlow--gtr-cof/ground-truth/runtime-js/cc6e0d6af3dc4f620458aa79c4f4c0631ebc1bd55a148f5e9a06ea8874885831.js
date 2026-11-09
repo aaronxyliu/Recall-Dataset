@@ -1,1 +1,0 @@
-0,function($){for($ in $)this.push($)}

@@ -1,4 +1,0 @@
-(function anonymous(
-) {
-return this
-})

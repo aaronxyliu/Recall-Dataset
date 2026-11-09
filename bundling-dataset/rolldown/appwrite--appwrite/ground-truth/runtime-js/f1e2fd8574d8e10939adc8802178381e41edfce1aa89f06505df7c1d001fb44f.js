@@ -1,2 +1,0 @@
-import{Cf as e}from"./index-ARRzLOvi.js";import{t}from"./page-meta-CaDt-YcQ.js";var n=`${e}/#organization`,r=[`https://github.com/appwrite`,`https://x.com/appwrite`,`https://youtube.com/@appwrite`,`https://www.linkedin.com/company/appwrite/`];function i(){return{"@type":`Organization`,"@id":n,name:t,url:e,logo:{"@type":`ImageObject`,url:`${e}/apple-touch-icon.png`},sameAs:r}}function a(){return{"@type":`WebSite`,"@id":`${e}/#website`,name:t,url:e,publisher:{"@id":n}}}export{a as n,i as t};
-//# sourceMappingURL=organization-CoS4jRLQ.js.map

@@ -1,0 +1,24 @@
+{
+  "repository": "CapSoftware/Cap",
+  "commit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
+  "packageManifest": "apps/web/package.json",
+  "declaredPackageManager": "bun@1.4.4",
+  "dependencyLocks": [
+    "bun.lock"
+  ],
+  "upstreamProductionScripts": {
+    "build": "next build --turbopack",
+    "build:web": "next build --turbopack"
+  },
+  "sourceMapPatch": "enable-maps.cjs",
+  "runtimeDeclarations": {},
+  "engines": {
+    "workspace": {
+      "node": "24.x"
+    },
+    "root": {
+      "node": ">=24",
+      "bun": "1.4.4"
+    }
+  }
+}

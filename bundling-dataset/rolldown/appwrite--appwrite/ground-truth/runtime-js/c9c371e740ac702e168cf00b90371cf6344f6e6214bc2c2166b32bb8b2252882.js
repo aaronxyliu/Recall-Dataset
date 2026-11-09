@@ -1,3 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/account.sessions-Km8dO-SA.js","assets/index-ARRzLOvi.js","assets/index-CzzUskj_.css","assets/tablet-DdYLIvSq.js","assets/format-ip--P9Uhbb6.js"])))=>i.map(i=>d[i]);
-import{n as e,t}from"./lazyRouteComponent-DuwTJ5fo.js";import{FP as n,Uet as r,r as i}from"./index-ARRzLOvi.js";const a=e(`/_public/account/sessions`)({head:()=>({meta:[{title:i(`Sessions`,`Account`)}]}),loader:async({context:e})=>{if(typeof window>`u`)return;let{queryClient:t}=e;return await t.ensureQueryData(n())},component:t(()=>r(()=>import(`./account.sessions-Km8dO-SA.js`),__vite__mapDeps([0,1,2,3,4])),`component`)});export{a as t};
-//# sourceMappingURL=account.sessions-vuVvs4Xd.js.map

@@ -1,1 +1,0 @@
-0,Ey=function(V,q,D){for(D=70;D!=25;){if(D==8)return q;D==37?D=V--?6:8:D==6?(q.push(Math.random()*255|0),D=20):D==35?D=37:D==20?D=37:D==70&&(q=[],D=35)}}
