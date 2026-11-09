@@ -8,10 +8,11 @@ from ownership import build as build_ownership
 
 base=pathlib.Path(__file__).resolve().parent;root=base.parents[1];dataset=root/'qualified-dataset';collector=root/'verification/hufang-builds-2026-11-08/collector'
 read=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-policy=read(base/'policy.json');entries=[];decisions=[]
+policy=read(base/'policy.json');entries=[];decisions=[];excluded=read(base/'excluded-subjects.json')
 previous={row['subject']:row for row in read(dataset/'index.json')['subjects']} if (dataset/'index.json').exists() else {}
 for subject in read(base/'plan.json'):
  key=subject['subject'];receipt=base/'results'/key/'qualification.json'
+ if key in excluded:decisions.append({'subject':key,'status':'excluded','reason':excluded[key]['reason'],'exclusionType':'user-request'});continue
  if not receipt.exists():decisions.append({'subject':key,'status':'unassessed','reason':'source preflight incomplete'});continue
  q=read(receipt);decision={'subject':key,'sourceEligibility':q['status'],'selectedLibraries':q['selectedLibraries'],'candidateCount':len(q['candidates']),'qualification':str(receipt.relative_to(root))}
  if q['status']!='passed':decision.update(status='excluded' if q['status']=='not-qualified' else 'unassessed',reason=q.get('reason'));decisions.append(decision);continue

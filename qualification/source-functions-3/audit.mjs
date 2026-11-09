@@ -6,6 +6,7 @@ import {enumerate,measure} from '../initial-anchors-3/runtime/src/analysis/measu
 import {normalizedFunction,sha} from './functions.mjs';
 const base=path.dirname(fileURLToPath(import.meta.url)),dataset=path.resolve(base,'../../qualified-dataset');
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8')),index=read(path.join(dataset,'index.json')),policy=read(path.join(base,'policy.json'));
+const exclusions=read(path.join(base,'excluded-subjects.json'));assert(index.subjects.every(entry=>!Object.hasOwn(exclusions,entry.subject)));
 assert.deepEqual(index.policy,policy);assert.equal(policy.requireInitialAnchors,false);
 const featureCache=new Map();let libraries=0,witnesses=0,pairs=0,zeroPairLibraries=0;
 for(const entry of index.subjects) {

@@ -1,13 +1,13 @@
 # Qualified ReCall Dataset
 
-**43 repositories, 350 repository/library instances, and 119,327 one-to-one function pairs.**
+**42 repositories, 340 repository/library instances, and 76,283 one-to-one function pairs.**
 
 Every included repository has **3–10 declared production libraries**. Each selected library has at least **three independently checkable source-function witnesses with ≥10 own-body POG property-operation features**. Source eligibility is checked before new builds. Existing archives are re-filtered with the same source-only rule. **No initial-anchor or target-matching threshold is used.**
 
 | Bundler | Repositories | Library instances | Function pairs |
 |---|---:|---:|---:|
 | bun | 2 | 9 | 1,688 |
-| esbuild | 7 | 51 | 48,252 |
+| esbuild | 6 | 41 | 5,208 |
 | parcel | 3 | 12 | 2,896 |
 | rolldown | 2 | 20 | 9,803 |
 | rollup | 3 | 9 | 1,062 |
@@ -17,7 +17,7 @@ Every included repository has **3–10 declared production libraries**. Each sel
 | vite | 8 | 79 | 19,630 |
 | webpack | 8 | 75 | 25,193 |
 
-The source evidence contains 1,050 function witnesses; these are lower-bound certificates, not a census of every function. 110 selected library instances have zero accepted one-to-one pairs. Correspondence counts are reported separately and do not determine source eligibility.
+The source evidence contains 1,020 function witnesses; these are lower-bound certificates, not a census of every function. 108 selected library instances have zero accepted one-to-one pairs. Correspondence counts are reported separately and do not determine source eligibility.
 
 The [index](index.json) defines active membership. Each subject includes captured runtime JS, source maps, independently span-verified function pairs, the original frontend manifest, and source witnesses under `eligibility/`. `reference-manifest.json` separately lists available original text from captured maps. Source eligibility uses locked package/workspace code; correspondence attribution follows the existing package-name collector and does not prove that every captured copy is one installed version.
 

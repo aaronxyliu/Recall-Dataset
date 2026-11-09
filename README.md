@@ -1,6 +1,6 @@
 # ReCall Dataset
 
-The active [organized dataset](qualified-dataset/README.md) contains **43 repositories, 350 library instances, and 119,327 one-to-one function pairs**.
+The active [organized dataset](qualified-dataset/README.md) contains **42 repositories, 340 library instances, and 76,283 one-to-one function pairs**.
 
 Each repository has **3–10 production libraries**, each with **at least three source functions containing ≥10 POG features**, using the existing own-body property-operation counter. **Initial anchors are not required.** The [source-only policy](qualification/source-functions-3/POLICY.md) is enforced before new Docker builds and applied retrospectively to existing archives.
 

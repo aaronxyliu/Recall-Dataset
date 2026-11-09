@@ -12,7 +12,7 @@ DrawDB excludes `@dbml/core` and selects `@dnd-kit/sortable` instead (62 verifie
 | CapSoftware/Cap | 0 | 1,375 | The old sample mostly selected server-side AI/AWS packages, absent from the login page. Replaced the sample with eligible declared production libraries observed in the page maps. |
 | DavidHDev/react-bits | 0 | 881 | The old sample selected libraries for unloaded component demos and build tooling. Prefer eligible declared production dependencies present on the captured page. |
 
-Current active dataset: **43 repositories, 350 library instances, 119,327 pairs; zero repositories with zero pairs**. Shadcn UI and Umami have also finished independent build/page verification since the earlier 41-repository table. Technical failures outside active membership remain explicitly unassessed in catalog-decisions.json.
+Current active dataset: **42 repositories, 340 library instances, 76,283 pairs; zero repositories with zero pairs**. Shadcn UI and Umami have also finished independent build/page verification since the earlier 41-repository table. Technical failures outside active membership remain explicitly unassessed in catalog-decisions.json.
 
 No initial-anchor or minimum-pair acceptance gate was introduced. Existing source-function eligibility is unchanged. Selected libraries may still have zero pairs; these remain explicit.
 

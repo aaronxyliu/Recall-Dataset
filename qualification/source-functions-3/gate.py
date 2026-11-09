@@ -7,6 +7,9 @@ base = pathlib.Path(__file__).resolve().parent
 sha = lambda path: hashlib.sha256(path.read_bytes()).hexdigest()
 
 def check(subject, repository, manifest_relative, commit):
+    exclusions = json.loads((base / 'excluded-subjects.json').read_text())
+    if subject in exclusions:
+        return {'passed': False, 'status': 'excluded-by-user', 'reason': exclusions[subject]['reason']}
     receipt = base / 'results' / subject / 'qualification.json'
     if not receipt.exists():
         return {'passed': False, 'status': 'required', 'reason': 'source-function preflight has not completed'}
