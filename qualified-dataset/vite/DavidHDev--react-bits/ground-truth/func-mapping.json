@@ -20,7 +20,10 @@
     "react-dom": 4,
     "react-haiku": 1,
     "react-icons": 5,
-    "react-router-dom": 1
+    "react-router-dom": 1,
+    "@chakra-ui/react": 0,
+    "@emotion/react": 0,
+    "@gsap/react": 0
   },
   "pairs": [
     {
@@ -9065,9 +9068,11 @@
     "react-dom",
     "react-haiku",
     "react-icons",
-    "react-router-dom"
+    "react-router-dom",
+    "@chakra-ui/react",
+    "@emotion/react",
+    "@gsap/react"
   ],
-  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -9090,38 +9095,13 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
-  "libraryMultiplicityPolicy": {
-    "schema": "recall.no-duplicate-library-policy/v1",
-    "scope": "repository-library-instance",
-    "inspectAllCapturedRuntimeAssets": true,
-    "excludeConfirmedDuplicateLibraries": true,
-    "excludeUnassessedLibrariesFromScoring": true,
-    "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": false,
-    "unobservedLibrariesContributeNoEvaluationPairs": true,
-    "sourceFunctionThresholdUnchanged": true,
-    "requireInitialAnchors": false,
-    "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10,
-    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
-  },
   "provenance": {
     "upstreamCommit": "4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4",
     "archiveRecord": "bundling-dataset/vite/DavidHDev--react-bits/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "7995bb989286017844df1a5fc4a3084637641cd43d44e00f5b516663dec91f05",
-    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
-    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "75c5b4adfd36cbda18499362b6fd388658792559007d7613f777280796bab565",
-    "moduleScopeSHA256": "8db03b75973f22244ea2ec79b37a214a1cecebe0697dd66e67435a8bcb37619a",
-    "duplicateAuditSHA256": "e3af0ce0f1873ff42acecc44a308cef89afeb47753e5d119f181203780d3095c"
-  },
-  "evaluationLibraries": [
-    "lucide-react",
-    "nuqs",
-    "react",
-    "react-dom",
-    "react-haiku",
-    "react-icons",
-    "react-router-dom"
-  ]
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "b5fe21826ae1a3d2bf9930e9560aa84bf515df3f08194391bef5fb70f4e67b9e",
+    "moduleScopeSHA256": "8db03b75973f22244ea2ec79b37a214a1cecebe0697dd66e67435a8bcb37619a"
+  }
 }

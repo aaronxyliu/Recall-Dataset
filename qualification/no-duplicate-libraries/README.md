@@ -1,3 +1,5 @@
+> Historical and superseded. The active dataset restores the exact module-only cohort from `cc5df6cf50c33092cd4522e850934add762a8ede` (41 repositories, 335 library instances, 69,580 pairs). Duplicate libraries are permitted; standalone vendor/global-script copies remain excluded from correspondence collection. The evidence below describes the superseded exclusion cohort at `ffffcd656df801b4d90898ac559c981c1bbeb595`. Reproduce that audit using its Git revision.
+
 # Full-runtime duplicate-library exclusions — 2026-11-09
 
 Reviewed **41 repositories** from module-only baseline `cc5df6cf`. Current active dataset: **31 repositories, 259 source-eligible library instances, 49,946 one-to-one function pairs**.

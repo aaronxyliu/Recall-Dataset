@@ -1,0 +1,4 @@
+(function anonymous(item,_
+) {
+var o=item,datum=o.datum,m=0,$;$="#000";if(o["fill"]!==$)o["fill"]=$,m=1;$="sans-serif";if(o["font"]!==$)o["font"]=$,m=1;$=11;if(o["fontSize"]!==$)o["fontSize"]=$,m=1;$="bold";if(o["fontWeight"]!==$)o["fontWeight"]=$,m=1;$=0;if(o["opacity"]!==$)o["opacity"]=$,m=1;$=null;if(o["anchor"]!==$)o["anchor"]=$,m=1;$=((item.anchor === 'start')?"left":((item.anchor === 'end')?"right":"center"));if(o["align"]!==$)o["align"]=$,m=1;$=(-90);if(o["angle"]!==$)o["angle"]=$,m=1;$="bottom";if(o["baseline"]!==$)o["baseline"]=$,m=1;$=true;if(o["auto"]!==$)o["auto"]=$,m=1;return m;
+})

@@ -24384,7 +24384,6 @@
     "@tensorflow/tfjs-converter",
     "@tensorflow/tfjs-core"
   ],
-  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -24407,34 +24406,13 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
-  "libraryMultiplicityPolicy": {
-    "schema": "recall.no-duplicate-library-policy/v1",
-    "scope": "repository-library-instance",
-    "inspectAllCapturedRuntimeAssets": true,
-    "excludeConfirmedDuplicateLibraries": true,
-    "excludeUnassessedLibrariesFromScoring": true,
-    "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": false,
-    "unobservedLibrariesContributeNoEvaluationPairs": true,
-    "sourceFunctionThresholdUnchanged": true,
-    "requireInitialAnchors": false,
-    "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10,
-    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
-  },
   "provenance": {
     "upstreamCommit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
     "archiveRecord": "bundling-dataset/parcel/tensorflow--tfjs/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "9e4b3e2d81490c370669cbdf51b88088a16c8e983f3188e0701355428584f8bb",
-    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
-    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "701f8b5f9bc838ea8df1a67cec9bd28a157a54d80123d660f70bab9e212f4f6a",
-    "moduleScopeSHA256": "d016360c7e5503a459bd60988b5ac4e2466c4a262789e0a69a251facd7f4fa9a",
-    "duplicateAuditSHA256": "80a107aba56d83f3038a7d0ce1afb4673a401c169f60171299a2d7a211ea6b1c"
-  },
-  "evaluationLibraries": [
-    "@tensorflow/tfjs-backend-webgl",
-    "@tensorflow/tfjs-converter",
-    "@tensorflow/tfjs-core"
-  ]
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "ca419f76ddd17f3439da8a4a7a6589410e74b49b21d80fc8f7acc27266d3ba8a",
+    "moduleScopeSHA256": "d016360c7e5503a459bd60988b5ac4e2466c4a262789e0a69a251facd7f4fa9a"
+  }
 }

@@ -14,120 +14,92 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {
-    "excludeLibraries": [
-      "@codemirror/autocomplete",
-      "@codemirror/commands",
-      "@codemirror/lang-javascript",
-      "@codemirror/language",
-      "@codemirror/state",
-      "@codemirror/view",
-      "@dagrejs/dagre",
-      "@discourse/gif",
-      "@discourse/heic",
-      "@discourse/jpeg",
-      "@discourse/jxl",
-      "@discourse/png",
-      "@discourse/resize",
-      "@discourse/webp",
-      "@faker-js/faker",
-      "@fullcalendar/core",
-      "@fullcalendar/daygrid",
-      "@fullcalendar/interaction",
-      "@fullcalendar/list",
-      "@fullcalendar/moment",
-      "@fullcalendar/moment-timezone",
-      "@fullcalendar/timegrid",
-      "@glimmer/syntax",
-      "@glint/ember-tsc",
-      "@glint/template",
-      "@highlightjs/cdn-assets",
-      "@json-editor/json-editor",
-      "@lezer/common",
-      "@lezer/highlight",
-      "@lezer/javascript",
-      "@lezer/lr",
-      "ace-builds",
-      "chart.js",
-      "chartjs-adapter-moment",
-      "chartjs-plugin-datalabels",
-      "codemirror",
-      "diff",
-      "dom-accessibility-api",
-      "ember-source",
-      "highlight.js",
-      "minimasonry",
-      "morphlex",
-      "orderedmap",
-      "photoswipe",
-      "pikaday",
-      "pretty-text",
-      "prosemirror-codemark",
-      "prosemirror-commands",
-      "prosemirror-dropcursor",
-      "prosemirror-gapcursor",
-      "prosemirror-highlightjs",
-      "prosemirror-history",
-      "prosemirror-inputrules",
-      "prosemirror-keymap",
-      "prosemirror-markdown",
-      "prosemirror-model",
-      "prosemirror-schema-list",
-      "prosemirror-state",
-      "prosemirror-transform",
-      "prosemirror-view",
-      "rete",
-      "rete-area-plugin",
-      "rete-comment-plugin",
-      "rete-connection-plugin",
-      "rete-history-plugin",
-      "rete-render-utils",
-      "rrule",
-      "strip-test-selectors"
-    ],
-    "preferredLibraries": [
-      "@atlaskit/pragmatic-drag-and-drop",
-      "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-      "@warp-drive/core",
-      "@warp-drive/json-api",
-      "@warp-drive/legacy",
-      "@warp-drive/utilities",
-      "ember-resolver",
-      "immer",
-      "moment",
-      "@embroider/legacy-inspector-support",
-      "@warp-drive/ember",
-      "decorator-transforms",
-      "ember-curry-component",
-      "ember-route-template",
-      "moment-timezone",
-      "picomatch"
-    ],
-    "duplicateAudit": {
-      "record": "qualification/no-duplicate-libraries/results/rolldown/discourse--discourse/audit.json",
-      "sha256": "7e7e9b9309127d03e3ca924dad0d6a1421f1a4699a4709cee9802436ea84e32d",
-      "retainedUnobservedZeroPairLibraries": [],
-      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
-    },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
-  },
+  "selectionOverride": {},
   "candidates": [
     "@atlaskit/pragmatic-drag-and-drop",
     "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+    "@codemirror/autocomplete",
+    "@codemirror/commands",
+    "@codemirror/lang-javascript",
+    "@codemirror/language",
+    "@codemirror/state",
+    "@codemirror/view",
+    "@dagrejs/dagre",
+    "@discourse/gif",
+    "@discourse/heic",
+    "@discourse/jpeg",
+    "@discourse/jxl",
+    "@discourse/png",
+    "@discourse/resize",
+    "@discourse/webp",
     "@embroider/legacy-inspector-support",
+    "@faker-js/faker",
+    "@fullcalendar/core",
+    "@fullcalendar/daygrid",
+    "@fullcalendar/interaction",
+    "@fullcalendar/list",
+    "@fullcalendar/moment",
+    "@fullcalendar/moment-timezone",
+    "@fullcalendar/timegrid",
+    "@glimmer/syntax",
+    "@glint/ember-tsc",
+    "@glint/template",
+    "@highlightjs/cdn-assets",
+    "@json-editor/json-editor",
+    "@lezer/common",
+    "@lezer/highlight",
+    "@lezer/javascript",
+    "@lezer/lr",
     "@warp-drive/core",
     "@warp-drive/ember",
     "@warp-drive/json-api",
     "@warp-drive/legacy",
     "@warp-drive/utilities",
+    "ace-builds",
+    "chart.js",
+    "chartjs-adapter-moment",
+    "chartjs-plugin-datalabels",
+    "codemirror",
     "decorator-transforms",
+    "diff",
+    "dom-accessibility-api",
     "ember-curry-component",
     "ember-resolver",
     "ember-route-template",
+    "ember-source",
+    "highlight.js",
     "immer",
+    "minimasonry",
     "moment",
     "moment-timezone",
-    "picomatch"
+    "morphlex",
+    "orderedmap",
+    "photoswipe",
+    "picomatch",
+    "pikaday",
+    "pretty-text",
+    "prosemirror-codemark",
+    "prosemirror-commands",
+    "prosemirror-dropcursor",
+    "prosemirror-gapcursor",
+    "prosemirror-highlightjs",
+    "prosemirror-history",
+    "prosemirror-inputrules",
+    "prosemirror-keymap",
+    "prosemirror-markdown",
+    "prosemirror-model",
+    "prosemirror-schema-list",
+    "prosemirror-state",
+    "prosemirror-transform",
+    "prosemirror-view",
+    "rete",
+    "rete-area-plugin",
+    "rete-comment-plugin",
+    "rete-connection-plugin",
+    "rete-history-plugin",
+    "rete-render-utils",
+    "rrule",
+    "strip-test-selectors"
   ],
   "libraries": [
     {
@@ -814,6 +786,103 @@
       "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
+      "library": "ember-source",
+      "declaredVersion": "~7.3.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "ember-source",
+        "version": "7.3.0",
+        "integrity": "sha512-N6KJ02uztRAzMWo5ZjSNW7qDRVRaw5+rBMUtcwYaGOExQmIp1X82243Mk8RC3RfZuugqjnRZ5u2QQeSHXMJSrg==",
+        "shasum": "70dd5ba2a0707b870bd0654b96d0ac63e2dc9ec5",
+        "tarballSHA256": "df16e7f8908747e64a9ac8375ff47e87fa7886682c0fc4a52c8f8eb77e9625e8",
+        "bytes": 1435338,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 9,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "lib/index.cjs",
+          "source": "source-js/df68dafde1655f3e2ebaab98e0951fd48d4879270d3058a72b24a7cfdd612656.js",
+          "sourceSHA256": "df68dafde1655f3e2ebaab98e0951fd48d4879270d3058a72b24a7cfdd612656",
+          "span": [
+            10171,
+            10576
+          ],
+          "name": "init",
+          "normalizedASTSHA256": "7aea9a00c37ab4f66b01b87fc467c3c6bedc54f70300b83dff184c8070d5530c",
+          "codeSHA256": "a454e9874a6ce818ad1416702151916686bb34903dfcaad7c1bd2773f97319a8",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "149606e833d2bce1",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/index.cjs",
+          "source": "source-js/df68dafde1655f3e2ebaab98e0951fd48d4879270d3058a72b24a7cfdd612656.js",
+          "sourceSHA256": "df68dafde1655f3e2ebaab98e0951fd48d4879270d3058a72b24a7cfdd612656",
+          "span": [
+            10730,
+            11204
+          ],
+          "name": "included",
+          "normalizedASTSHA256": "794e758723cf5fb4c903661f0eb47162f43eeb739798841ae72a901e78887f72",
+          "codeSHA256": "31ecac69ac66f6ff80741308eda192658c0ebd9de815a2d01575ef6f62a4c7ce",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "d0108673a4a07e9a",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 19,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/overrides.cjs",
+          "source": "source-js/9e89855984732bec094527f31dedfa514ae6b81cfd100eed9689dd158a1aa822.js",
+          "sourceSHA256": "9e89855984732bec094527f31dedfa514ae6b81cfd100eed9689dd158a1aa822",
+          "span": [
+            1079,
+            2805
+          ],
+          "name": "addonsInfoFor",
+          "normalizedASTSHA256": "5f398e33e4cd69f9852763fe2a9aba95aff3b8663c9d8aaa72ee1624bf605246",
+          "codeSHA256": "c40f9958b6eddb2f28bef1c019862dfe45de82f753e4a1fd04ceaa1806bed4c4",
+          "features": {
+            "propertyOperations": 46,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "ff730ab01c9bcef1",
+            "graphNodes": 31,
+            "graphEdges": 39,
+            "graphOperationOccurrences": 59,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/86a0960a3c82473524eb",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0830355dc2c3c09e0ebb5f81de394b38e06b8e0b5e02341d450e6b7c39410760"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
+    },
+    {
       "library": "immer",
       "declaredVersion": "^11.1.21",
       "origin": {
@@ -1063,98 +1132,6 @@
       ],
       "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
       "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
-    },
-    {
-      "library": "decorator-transforms",
-      "declaredVersion": "^2.4.0",
-      "origin": {
-        "kind": "npm-package",
-        "name": "decorator-transforms",
-        "version": "2.4.0",
-        "integrity": "sha512-IB+0RqnJpuS7ndH4dVY5dfWTZsrCzN3avWFdjSiET0uT2U24jKywjpVEK97TflnZkZgiSRfmeqc1WfS+1CI23w==",
-        "shasum": "154f08d81b4e1261582ce005c6c5c52c2e86587c",
-        "tarballSHA256": "c5376392e5349461f9ae76a0f7e3b3c46d3c49336f6be5e4b51d3ca95377c89a",
-        "bytes": 48962,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 23,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/index.cjs",
-          "source": "source-js/74809e6231efbcc32470a973e03be42e8db2bfaa9dbb0e8cb7f9f8f140281afb.js",
-          "sourceSHA256": "74809e6231efbcc32470a973e03be42e8db2bfaa9dbb0e8cb7f9f8f140281afb",
-          "span": [
-            2489,
-            3986
-          ],
-          "name": "unreferencedImport",
-          "normalizedASTSHA256": "87586fda9ad94e84904f80efa61cca8f3d90a5b4c67f86fb557039222b9634a9",
-          "codeSHA256": "9b60684ba1dae7ac859e6082d698edb89d5ca8a7cea10596a589fa2f03434a37",
-          "features": {
-            "propertyOperations": 27,
-            "distinctOperationPropertyPairs": 16,
-            "pogHash": "58fe726440c9113f",
-            "graphNodes": 33,
-            "graphEdges": 47,
-            "graphOperationOccurrences": 47,
-            "distinctGraphOperationPropertyPairs": 16,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.cjs",
-          "source": "source-js/74809e6231efbcc32470a973e03be42e8db2bfaa9dbb0e8cb7f9f8f140281afb.js",
-          "sourceSHA256": "74809e6231efbcc32470a973e03be42e8db2bfaa9dbb0e8cb7f9f8f140281afb",
-          "span": [
-            5134,
-            5676
-          ],
-          "name": "updateReference",
-          "normalizedASTSHA256": "6e1b42205b12d7051086f3bafbe5f6f39314d978d2578e5a02e559bac9dfdb44",
-          "codeSHA256": "989a6bd8127559611c9cb07790208a6e4df834ff1e98e6b81ea5eb2a0d4aed77",
-          "features": {
-            "propertyOperations": 13,
-            "distinctOperationPropertyPairs": 12,
-            "pogHash": "60de6e2f3369cb71",
-            "graphNodes": 10,
-            "graphEdges": 11,
-            "graphOperationOccurrences": 13,
-            "distinctGraphOperationPropertyPairs": 12,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.cjs",
-          "source": "source-js/74809e6231efbcc32470a973e03be42e8db2bfaa9dbb0e8cb7f9f8f140281afb.js",
-          "sourceSHA256": "74809e6231efbcc32470a973e03be42e8db2bfaa9dbb0e8cb7f9f8f140281afb",
-          "span": [
-            5927,
-            6521
-          ],
-          "name": "addSpecifier",
-          "normalizedASTSHA256": "fdf2751033866a2956f52d565798b59393a38dbc166a0df9b860ef203a096c10",
-          "codeSHA256": "0b608115c41200ee388ec50dc5004d40e67b94666a7068e7768fec49a6d47cf1",
-          "features": {
-            "propertyOperations": 17,
-            "distinctOperationPropertyPairs": 12,
-            "pogHash": "4d10f51b81897146",
-            "graphNodes": 7,
-            "graphEdges": 6,
-            "graphOperationOccurrences": 19,
-            "distinctGraphOperationPropertyPairs": 12,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/dad0e45216035358bafb",
-      "licenses": [],
-      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
-      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
@@ -1165,28 +1142,28 @@
     "@warp-drive/legacy",
     "@warp-drive/utilities",
     "ember-resolver",
+    "ember-source",
     "immer",
-    "moment",
-    "decorator-transforms"
+    "moment"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
+    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
+      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
     },
     "frontendManifestSHA256": "5e35875ce22c9fb8af95dcaa7ffeb13c387610fbe048aac81d3809a8581682ed",
     "manifestRelative": "frontend/discourse/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:55:43.290Z",
+  "started": "2026-11-09T05:04:03.458Z",
   "reason": null,
-  "finished": "2026-11-09T10:55:43.517Z",
+  "finished": "2026-11-09T05:04:03.716Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/rolldown/discourse--discourse/qualification.json",
-  "sourceEligibilityRecordSHA256": "2f36db2dcf89890970dcf99993a25cf24edb7b11f8bb68ce796299d8b08eb2e3",
-  "organizationSignature": "89e31d04f0aa85a916639da5e3dcce8de7c166820c966298c6ccb3fbb1208438"
+  "sourceEligibilityRecordSHA256": "a620b1ae0130ae3b527096d3a7ca65783a3c9d2d55d3e84b21ad1d8fdb0b2da9",
+  "organizationSignature": "656ddb8a0e46dc4b130194f61d9b792e9b578e021d3b69bf2a37bbce9a8b8f9d"
 }

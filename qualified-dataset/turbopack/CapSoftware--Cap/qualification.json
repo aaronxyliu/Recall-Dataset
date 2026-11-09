@@ -16,167 +16,164 @@
   },
   "selectionOverride": {
     "preferredLibraries": [
+      "@fortawesome/free-brands-svg-icons",
+      "@fortawesome/free-solid-svg-icons",
       "@fortawesome/react-fontawesome",
+      "@radix-ui/react-slot",
       "@radix-ui/react-tooltip",
       "@sentry/nextjs",
       "@tanstack/react-query",
+      "class-variance-authority",
+      "clsx",
       "framer-motion",
       "js-cookie",
+      "lucide-react",
+      "next",
       "next-auth",
-      "react",
-      "react-dom",
       "sonner",
       "tailwind-merge"
     ],
-    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
-    "excludeLibraries": [
-      "@ai-sdk/anthropic",
-      "@ai-sdk/groq",
-      "@ai-sdk/openai",
-      "@ai-sdk/openai-compatible",
-      "@aws-sdk/client-cloudfront",
-      "@aws-sdk/client-mediaconvert",
-      "@aws-sdk/client-s3",
-      "@aws-sdk/cloudfront-signer",
-      "@aws-sdk/s3-presigned-post",
-      "@aws-sdk/s3-request-presigner",
-      "@cap/database",
-      "@cap/env",
-      "@cap/recorder-core",
-      "@cap/ui",
-      "@cap/utils",
-      "@cap/web-api-contract",
-      "@cap/web-api-contract-effect",
-      "@cap/web-backend",
-      "@cap/web-domain",
-      "@dnd-kit/core",
-      "@dnd-kit/utilities",
-      "@effect/experimental",
-      "@effect/opentelemetry",
-      "@effect/platform",
-      "@effect/platform-node",
-      "@effect/rpc",
-      "@effect/sql-mysql2",
-      "@fortawesome/free-brands-svg-icons",
-      "@fortawesome/free-solid-svg-icons",
-      "@headlessui/react",
-      "@hono/zod-validator",
-      "@hookform/resolvers",
-      "@kubiks/otel-drizzle",
-      "@modelcontextprotocol/ext-apps",
-      "@modelcontextprotocol/server",
-      "@mux/mux-node",
-      "@number-flow/react",
-      "@octokit/rest",
-      "@openpanel/nextjs",
-      "@openpanel/sdk",
-      "@opentelemetry/api",
-      "@opentelemetry/exporter-trace-otlp-http",
-      "@opentelemetry/sdk-trace-base",
-      "@opentelemetry/sdk-trace-node",
-      "@opentelemetry/sdk-trace-web",
-      "@radix-ui/colors",
-      "@radix-ui/react-dialog",
-      "@radix-ui/react-dropdown-menu",
-      "@radix-ui/react-popover",
-      "@radix-ui/react-select",
-      "@radix-ui/react-slider",
-      "@radix-ui/react-slot",
-      "@react-email/components",
-      "@react-email/render",
-      "@remotion/media-parser",
-      "@remotion/webcodecs",
-      "@rive-app/react-canvas",
-      "@stripe/react-stripe-js",
-      "@stripe/stripe-js",
-      "@t3-oss/env-nextjs",
-      "@tanstack/react-devtools",
-      "@tanstack/react-query-devtools",
-      "@tanstack/react-store",
-      "@tanstack/store",
-      "@ts-rest/core",
-      "@uidotdev/usehooks",
-      "@vercel/firewall",
-      "@vercel/functions",
-      "@virtual-grid/react",
-      "@workos-inc/node",
-      "ai",
-      "assemblyai",
-      "aws-sdk",
-      "canvas-confetti",
-      "class-variance-authority",
-      "clsx",
-      "cookies-next",
-      "country-flag-icons",
-      "date-fns",
-      "dompurify",
-      "dotenv",
-      "drizzle-orm",
-      "dub",
-      "effect",
-      "ffmpeg-static",
-      "file-saver",
-      "geist",
-      "gif.js",
-      "hls.js",
-      "hono",
-      "jsdom",
-      "jszip",
-      "lodash",
-      "lucide-react",
-      "media-chrome",
-      "mediabunny",
-      "moment",
-      "motion",
-      "next",
-      "next-mdx-remote",
-      "pdf-lib",
-      "prettier",
-      "react-email",
-      "react-hls-player",
-      "react-hook-form",
-      "react-hot-toast",
-      "react-markdown",
-      "react-rnd",
-      "react-scroll-parallax",
-      "react-tooltip",
-      "react-tweet",
-      "recharts",
-      "rehype-pretty-code",
-      "remark-gfm",
-      "replicate",
-      "resend",
-      "server-only",
-      "shiki",
-      "stripe-v23",
-      "subtitles-parser-vtt",
-      "supermemory",
-      "tailwindcss-animate",
-      "tldts",
-      "ua-parser-js",
-      "uuid",
-      "workflow",
-      "zod"
-    ],
-    "duplicateAudit": {
-      "record": "qualification/no-duplicate-libraries/results/turbopack/CapSoftware--Cap/audit.json",
-      "sha256": "3a257d67d009463e9fadea154bdd42b18835c620822a775e44529cc044b51e9e",
-      "retainedUnobservedZeroPairLibraries": [],
-      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
-    }
+    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged."
   },
   "candidates": [
+    "@ai-sdk/anthropic",
+    "@ai-sdk/groq",
+    "@ai-sdk/openai",
+    "@ai-sdk/openai-compatible",
+    "@aws-sdk/client-cloudfront",
+    "@aws-sdk/client-mediaconvert",
+    "@aws-sdk/client-s3",
+    "@aws-sdk/cloudfront-signer",
+    "@aws-sdk/s3-presigned-post",
+    "@aws-sdk/s3-request-presigner",
+    "@cap/database",
+    "@cap/env",
+    "@cap/recorder-core",
+    "@cap/ui",
+    "@cap/utils",
+    "@cap/web-api-contract",
+    "@cap/web-api-contract-effect",
+    "@cap/web-backend",
+    "@cap/web-domain",
+    "@dnd-kit/core",
+    "@dnd-kit/utilities",
+    "@effect/experimental",
+    "@effect/opentelemetry",
+    "@effect/platform",
+    "@effect/platform-node",
+    "@effect/rpc",
+    "@effect/sql-mysql2",
+    "@fortawesome/free-brands-svg-icons",
+    "@fortawesome/free-solid-svg-icons",
     "@fortawesome/react-fontawesome",
+    "@headlessui/react",
+    "@hono/zod-validator",
+    "@hookform/resolvers",
+    "@kubiks/otel-drizzle",
+    "@modelcontextprotocol/ext-apps",
+    "@modelcontextprotocol/server",
+    "@mux/mux-node",
+    "@number-flow/react",
+    "@octokit/rest",
+    "@openpanel/nextjs",
+    "@openpanel/sdk",
+    "@opentelemetry/api",
+    "@opentelemetry/exporter-trace-otlp-http",
+    "@opentelemetry/sdk-trace-base",
+    "@opentelemetry/sdk-trace-node",
+    "@opentelemetry/sdk-trace-web",
+    "@radix-ui/colors",
+    "@radix-ui/react-dialog",
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-popover",
+    "@radix-ui/react-select",
+    "@radix-ui/react-slider",
+    "@radix-ui/react-slot",
     "@radix-ui/react-tooltip",
+    "@react-email/components",
+    "@react-email/render",
+    "@remotion/media-parser",
+    "@remotion/webcodecs",
+    "@rive-app/react-canvas",
     "@sentry/nextjs",
+    "@stripe/react-stripe-js",
+    "@stripe/stripe-js",
+    "@t3-oss/env-nextjs",
+    "@tanstack/react-devtools",
     "@tanstack/react-query",
+    "@tanstack/react-query-devtools",
+    "@tanstack/react-store",
+    "@tanstack/store",
+    "@ts-rest/core",
+    "@uidotdev/usehooks",
+    "@vercel/firewall",
+    "@vercel/functions",
+    "@virtual-grid/react",
+    "@workos-inc/node",
+    "ai",
+    "assemblyai",
+    "aws-sdk",
+    "canvas-confetti",
+    "class-variance-authority",
+    "clsx",
+    "cookies-next",
+    "country-flag-icons",
+    "date-fns",
+    "dompurify",
+    "dotenv",
+    "drizzle-orm",
+    "dub",
+    "effect",
+    "ffmpeg-static",
+    "file-saver",
     "framer-motion",
+    "geist",
+    "gif.js",
+    "hls.js",
+    "hono",
     "js-cookie",
+    "jsdom",
+    "jszip",
+    "lodash",
+    "lucide-react",
+    "media-chrome",
+    "mediabunny",
+    "moment",
+    "motion",
+    "next",
     "next-auth",
+    "next-mdx-remote",
+    "pdf-lib",
+    "prettier",
     "react",
     "react-dom",
+    "react-email",
+    "react-hls-player",
+    "react-hook-form",
+    "react-hot-toast",
+    "react-markdown",
+    "react-rnd",
+    "react-scroll-parallax",
+    "react-tooltip",
+    "react-tweet",
+    "recharts",
+    "rehype-pretty-code",
+    "remark-gfm",
+    "replicate",
+    "resend",
+    "server-only",
+    "shiki",
     "sonner",
-    "tailwind-merge"
+    "stripe-v23",
+    "subtitles-parser-vtt",
+    "supermemory",
+    "tailwind-merge",
+    "tailwindcss-animate",
+    "tldts",
+    "ua-parser-js",
+    "uuid",
+    "workflow",
+    "zod"
   ],
   "libraries": [
     {
@@ -271,6 +268,103 @@
         {
           "path": "licenses/LICENSE.txt",
           "sha256": "aaeca2af41f9d13e49205099914902115ca197cdae49f7d2b31bc5d6aa2bbd83"
+        }
+      ],
+      "lockfileSHA256": "8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1",
+      "lockfileSnapshot": "lockfiles/8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1-bun.lock"
+    },
+    {
+      "library": "@radix-ui/react-slot",
+      "declaredVersion": "^1.2.3",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@radix-ui/react-slot",
+        "version": "1.3.0",
+        "integrity": "sha512-MojKku4U/miO8Av4Dkb+ctMAQx7JmY96LmtDQlAarCRtd7rN52QCSzBF+XAvr5S6coSVj9HEPBgHAHKEJVk/WA==",
+        "shasum": "e311c7a6c8d65b1af9e69af8e3318c6c7105a212",
+        "tarballSHA256": "cfb5726a16739373480c14192c1d94b54bcfff648a15eb348a9a4f1ae5dcfbed",
+        "bytes": 8136,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 16,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/533ddcdc94fca12b3d8dc8209611da5a36cceed0e15fe30a092f011a63ca8c13.js",
+          "sourceSHA256": "533ddcdc94fca12b3d8dc8209611da5a36cceed0e15fe30a092f011a63ca8c13",
+          "span": [
+            2187,
+            2746
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "3b9668421c1592db285d5f018bb2660e2beb0606d158cfacafff4e1d3e879531",
+          "codeSHA256": "13dfd5ab69e4b2ee6186353d9c7d95b11dc84c2c0eac78d516188e5d44cff1ad",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "73a8f18ff326430f",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/533ddcdc94fca12b3d8dc8209611da5a36cceed0e15fe30a092f011a63ca8c13.js",
+          "sourceSHA256": "533ddcdc94fca12b3d8dc8209611da5a36cceed0e15fe30a092f011a63ca8c13",
+          "span": [
+            1875,
+            4037
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "f2a8c22044a10bb57bce8ed6674905b45284c86c21ee1956722876da51b1f9d7",
+          "codeSHA256": "4667aa1403564edacba617f7511b570aeee2b2b145045e556ad97c50683aa216",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "32e3667e4fb0add1",
+            "graphNodes": 31,
+            "graphEdges": 43,
+            "graphOperationOccurrences": 23,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/533ddcdc94fca12b3d8dc8209611da5a36cceed0e15fe30a092f011a63ca8c13.js",
+          "sourceSHA256": "533ddcdc94fca12b3d8dc8209611da5a36cceed0e15fe30a092f011a63ca8c13",
+          "span": [
+            4589,
+            4897
+          ],
+          "name": "getSlottableElementFromSlottable",
+          "normalizedASTSHA256": "61ba0ce698fc4119499582f1a3b8b2107060105e9e7f0e060f4464950f6103f4",
+          "codeSHA256": "f121b31d2b250a8489f1d01e3fc13d22bc55075f6a201130e0e67d355d4d7eb9",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "8d5f2161216ffb52",
+            "graphNodes": 10,
+            "graphEdges": 11,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/b0d4ee3a0758616f0417",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
         }
       ],
       "lockfileSHA256": "8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1",
@@ -847,6 +941,200 @@
       "lockfileSnapshot": "lockfiles/8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1-bun.lock"
     },
     {
+      "library": "lucide-react",
+      "declaredVersion": "^0.525.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "lucide-react",
+        "version": "0.525.0",
+        "integrity": "sha512-Tm1txJ2OkymCGkvwoHt33Y2JpN5xucVq1slHcgE6Lk0WjDfjgKWor5CdVER8U6DvcfMwh4M8XxmpTiyzfmfDYQ==",
+        "shasum": "5f7bcecd65e4f9b2b5b6b5d295e3376df032d5e3",
+        "tarballSHA256": "7777f178bd197a534d16f2221f2ac76401320fbc4bb2646eb55ece3070fca077",
+        "bytes": 3173330,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 12,
+      "parsedFunctions": 1875,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/cjs/lucide-react.js",
+          "source": "source-js/1fdec6d8314da3c717fe63d115b8d3d889edb6a7f6bf4d10f2bc5a348b3bca79.js",
+          "sourceSHA256": "1fdec6d8314da3c717fe63d115b8d3d889edb6a7f6bf4d10f2bc5a348b3bca79",
+          "span": [
+            1231,
+            1919
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "d358e6e2d0a1a64aad62ad107109fc4dbd448a707e2f2d81c829ca3128038e51",
+          "codeSHA256": "4e867e61a2686ef4f75a7f0be298e9a1a6fa690066e7b47ef97bca6ed7f502b6",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "53391b6a5c9d8fa2",
+            "graphNodes": 8,
+            "graphEdges": 8,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/umd/lucide-react.js",
+          "source": "source-js/be0d71b8c4ecc620ebf6410426af244372366a9ea6ed86d52d84514c97a42341.js",
+          "sourceSHA256": "be0d71b8c4ecc620ebf6410426af244372366a9ea6ed86d52d84514c97a42341",
+          "span": [
+            529,
+            901704
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "f64490a38ee8da3727b526fa0a9d24a8b1cafef505e3e415aaf38f6feb59039b",
+          "codeSHA256": "62b1a4c78963bc06992e5cdb41176545eaf5bdcb7127652378b29497a4c0793b",
+          "features": {
+            "propertyOperations": 23032,
+            "distinctOperationPropertyPairs": 7106,
+            "pogHash": "be1078a9f37d8874",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 23031,
+            "distinctGraphOperationPropertyPairs": 5494,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/umd/lucide-react.min.js",
+          "source": "source-js/df56f0e6dc6af0a2cb357abf8e1b6e51a9bfd724194e8524fe20f74d1b93a334.js",
+          "sourceSHA256": "df56f0e6dc6af0a2cb357abf8e1b6e51a9bfd724194e8524fe20f74d1b93a334",
+          "span": [
+            1018,
+            1393
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "f55b78bf5a6396b384afe3b46237ac66b9f821ce37891db17d14e23574b2084c",
+          "codeSHA256": "67484a10ec0359aaa475478925bfd984a38765133b449390be95f99ad1c73587",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "53391b6a5c9d8fa2",
+            "graphNodes": 8,
+            "graphEdges": 8,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/cedfe168c3bdac64d606",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+        }
+      ],
+      "lockfileSHA256": "8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1",
+      "lockfileSnapshot": "lockfiles/8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1-bun.lock"
+    },
+    {
+      "library": "next",
+      "declaredVersion": "16.4.5",
+      "origin": {
+        "kind": "npm-package",
+        "name": "next",
+        "version": "16.4.5",
+        "integrity": "sha512-rmdfsWosjTUO+6R0S3KokoIk6Kj0sWDRTe86tZHdqaWH/oXq/udX3/4xb+YQi7aWbyEFoglDU54kaifLCdXbBw==",
+        "shasum": "d3c412534744de98eb0bfc6dc59121d25dd73ed0",
+        "tarballSHA256": "a9b934c4deda237c1a269da4e68be28f39c7c5e07296a891e0a8346ce847ef97",
+        "bytes": 43659658,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/build/adapter/build-complete.js",
+          "source": "source-js/9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550.js",
+          "sourceSHA256": "9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550",
+          "span": [
+            2921,
+            3962
+          ],
+          "name": "_interop_require_wildcard",
+          "normalizedASTSHA256": "91c7159087b73589f1efadfce31fed37bdc2183883bfe478f7a3d8a2b446fa4a",
+          "codeSHA256": "45629495911ae4198756845c82ad30a6cfb144bb09cb2cec8275261207365a1d",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "4c07a80ddd72876a",
+            "graphNodes": 36,
+            "graphEdges": 51,
+            "graphOperationOccurrences": 19,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/build/adapter/build-complete.js",
+          "source": "source-js/9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550.js",
+          "sourceSHA256": "9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550",
+          "span": [
+            5540,
+            6045
+          ],
+          "name": "normalizePathnames",
+          "normalizedASTSHA256": "ce0bac5cd0fdf42e0c01fe22a801e1d69dda6a92f2ce39c0f0305df2f294904d",
+          "codeSHA256": "430fc1f179373630b8d273fe45e54cdc051d806a4f9fa96d1d447c778895f3a3",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "6ad8ed5fd54af195",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/build/adapter/build-complete.js",
+          "source": "source-js/9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550.js",
+          "sourceSHA256": "9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550",
+          "span": [
+            13651,
+            14360
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "bab421be23091bcc8183eb6fceb29d3a5187fffb577c8cf55224919e9b6319b7",
+          "codeSHA256": "c6c6748d30ded49770cb0b5c0ab3c2f8cafd317e5ca2b6504b4451ce1a4f0e5b",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "109018fa0856c895",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/c6c1c9a9c8543f1e4cd9",
+      "licenses": [
+        {
+          "path": "licenses/license.md",
+          "sha256": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224"
+        }
+      ],
+      "lockfileSHA256": "8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1",
+      "lockfileSnapshot": "lockfiles/8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1-bun.lock"
+    },
+    {
       "library": "next-auth",
       "declaredVersion": "^4.24.15",
       "origin": {
@@ -1118,329 +1406,38 @@
       "licenses": [],
       "lockfileSHA256": "8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1",
       "lockfileSnapshot": "lockfiles/8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1-bun.lock"
-    },
-    {
-      "library": "react",
-      "declaredVersion": "19.2.4",
-      "origin": {
-        "kind": "npm-package",
-        "name": "react",
-        "version": "19.2.0",
-        "integrity": "sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==",
-        "shasum": "d33dd1721698f4376ae57a54098cb47fc75d93a5",
-        "tarballSHA256": "4de5ae8fd4773b2356f95a22e58cb154a161c35376aef7c006490fb964556d66",
-        "bytes": 24804,
-        "lockfile": "bun.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 4,
-      "parsedFunctions": 17,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "cjs/react-jsx-dev-runtime.development.js",
-          "source": "source-js/5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6.js",
-          "sourceSHA256": "5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6",
-          "span": [
-            329,
-            2411
-          ],
-          "name": "getComponentNameFromType",
-          "normalizedASTSHA256": "86dd4c4b399fdf5fe368ddf1543c81735901e6afddd8c7f0e4288023215da3f4",
-          "codeSHA256": "b98b702c059597904ffd1563d0137ad96b3ba5529bd41255c4b54a9599422cb0",
-          "features": {
-            "propertyOperations": 17,
-            "distinctOperationPropertyPairs": 10,
-            "pogHash": "c1756c041d3cccfb",
-            "graphNodes": 46,
-            "graphEdges": 73,
-            "graphOperationOccurrences": 18,
-            "distinctGraphOperationPropertyPairs": 10,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "cjs/react-jsx-dev-runtime.development.js",
-          "source": "source-js/5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6.js",
-          "sourceSHA256": "5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6",
-          "span": [
-            5443,
-            6710
-          ],
-          "name": "ReactElement",
-          "normalizedASTSHA256": "b18cc8facd1bd73f3368c10c7c5f031688201b1b722acec17670f7ffebfbb594",
-          "codeSHA256": "fe2e3d588fce318b699bbc9b6ddfe9524709bf422e494bbc1a22ec31dc713dd3",
-          "features": {
-            "propertyOperations": 38,
-            "distinctOperationPropertyPairs": 16,
-            "pogHash": "8d3675760b68c9c8",
-            "graphNodes": 10,
-            "graphEdges": 11,
-            "graphOperationOccurrences": 47,
-            "distinctGraphOperationPropertyPairs": 14,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "cjs/react-jsx-dev-runtime.development.js",
-          "source": "source-js/5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6.js",
-          "sourceSHA256": "5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6",
-          "span": [
-            6715,
-            9241
-          ],
-          "name": "jsxDEVImpl",
-          "normalizedASTSHA256": "8df55cec69d114e5e279ac24ce16773ec136ba8d9a943aa6345d591381066ecf",
-          "codeSHA256": "eb360597528102e2cb99492a47784e50a4b2624060c29bbf16ce148fa12fe910",
-          "features": {
-            "propertyOperations": 22,
-            "distinctOperationPropertyPairs": 13,
-            "pogHash": "c843a45f0e5bbdba",
-            "graphNodes": 40,
-            "graphEdges": 56,
-            "graphOperationOccurrences": 26,
-            "distinctGraphOperationPropertyPairs": 11,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/275976081ce1abf67779",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
-        }
-      ],
-      "lockfileSHA256": "8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1",
-      "lockfileSnapshot": "lockfiles/8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1-bun.lock"
-    },
-    {
-      "library": "react-dom",
-      "declaredVersion": "19.2.4",
-      "origin": {
-        "kind": "npm-package",
-        "name": "react-dom",
-        "version": "19.2.0",
-        "integrity": "sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==",
-        "shasum": "00ed1e959c365e9a9d48f8918377465466ec3af8",
-        "tarballSHA256": "6c47e801364162210540ccee8bc5d813e032ae361ba4e2be72102e76093ecf5b",
-        "bytes": 1276384,
-        "lockfile": "bun.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 26,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "cjs/react-dom-client.development.js",
-          "source": "source-js/b88ee1abef622d46a74419c53e73192bc68ea07e94772a0f8a1760740598e44f.js",
-          "sourceSHA256": "b88ee1abef622d46a74419c53e73192bc68ea07e94772a0f8a1760740598e44f",
-          "span": [
-            1354,
-            1896
-          ],
-          "name": "copyWithRenameImpl",
-          "normalizedASTSHA256": "a541518110416de447df2ef869f46e63ff8e3b745fbbbcfd523af8d32c6cacff",
-          "codeSHA256": "d5ecc063a17ba365cfcc4c41cd8bfbfa5910469b37defd54dc3dae1da97cd336",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 5,
-            "pogHash": "f9613c5bf1174628",
-            "graphNodes": 13,
-            "graphEdges": 14,
-            "graphOperationOccurrences": 11,
-            "distinctGraphOperationPropertyPairs": 5,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "cjs/react-dom-client.development.js",
-          "source": "source-js/b88ee1abef622d46a74419c53e73192bc68ea07e94772a0f8a1760740598e44f.js",
-          "sourceSHA256": "b88ee1abef622d46a74419c53e73192bc68ea07e94772a0f8a1760740598e44f",
-          "span": [
-            5573,
-            8199
-          ],
-          "name": "findCurrentFiberUsingSlowPath",
-          "normalizedASTSHA256": "b3c49c63101b3cf452f7a5a07fefb6ba962bf11f7675ccdc06db2044624bfa63",
-          "codeSHA256": "ef95cd900b9075a6620b8180b5958771013bbe32ad41eb0fb14c2bceac53990f",
-          "features": {
-            "propertyOperations": 18,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "90c38d3830c80b61",
-            "graphNodes": 50,
-            "graphEdges": 70,
-            "graphOperationOccurrences": 25,
-            "distinctGraphOperationPropertyPairs": 7,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "cjs/react-dom-client.development.js",
-          "source": "source-js/b88ee1abef622d46a74419c53e73192bc68ea07e94772a0f8a1760740598e44f.js",
-          "sourceSHA256": "b88ee1abef622d46a74419c53e73192bc68ea07e94772a0f8a1760740598e44f",
-          "span": [
-            8895,
-            10977
-          ],
-          "name": "getComponentNameFromType",
-          "normalizedASTSHA256": "86dd4c4b399fdf5fe368ddf1543c81735901e6afddd8c7f0e4288023215da3f4",
-          "codeSHA256": "b98b702c059597904ffd1563d0137ad96b3ba5529bd41255c4b54a9599422cb0",
-          "features": {
-            "propertyOperations": 17,
-            "distinctOperationPropertyPairs": 10,
-            "pogHash": "c1756c041d3cccfb",
-            "graphNodes": 46,
-            "graphEdges": 73,
-            "graphOperationOccurrences": 18,
-            "distinctGraphOperationPropertyPairs": 10,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/de7f2df91c095f0cd45d",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
-        }
-      ],
-      "lockfileSHA256": "8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1",
-      "lockfileSnapshot": "lockfiles/8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1-bun.lock"
-    },
-    {
-      "library": "sonner",
-      "declaredVersion": "^2.0.3",
-      "origin": {
-        "kind": "npm-package",
-        "name": "sonner",
-        "version": "2.0.7",
-        "integrity": "sha512-W6ZN4p58k8aDKA4XPcx2hpIQXBRAgyiWVkYhT7CvK6D3iAu7xjvVyhQHg2/iaKJZ1XVJ4r7XuwGL+WGEK37i9w==",
-        "shasum": "810c1487a67ec3370126e0f400dfb9edddc3e4f6",
-        "tarballSHA256": "eb0f5dd35d890d38e8dcba1b242e9ac38cf45cc92c02aa914f144d98cfa7ce8f",
-        "bytes": 32474,
-        "lockfile": "bun.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 17,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/index.js",
-          "source": "source-js/02d27b81196b5d6bf04cbff9ae8c8a4fca0cc9e3026d56ac73c9a8c8f24620e2.js",
-          "sourceSHA256": "02d27b81196b5d6bf04cbff9ae8c8a4fca0cc9e3026d56ac73c9a8c8f24620e2",
-          "span": [
-            14,
-            374
-          ],
-          "name": "__insertCSS",
-          "normalizedASTSHA256": "fe63891ccfb8138eceb83ff6fafa65b3a20e509a06e6201f8c2663cc8ac87b60",
-          "codeSHA256": "61213fe7ea247b415ae7cf98d6236530e1de066d843183aa64e9c25adb9a02e2",
-          "features": {
-            "propertyOperations": 11,
-            "distinctOperationPropertyPairs": 9,
-            "pogHash": "271b6549e44f26d2",
-            "graphNodes": 12,
-            "graphEdges": 14,
-            "graphOperationOccurrences": 15,
-            "distinctGraphOperationPropertyPairs": 9,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/02d27b81196b5d6bf04cbff9ae8c8a4fca0cc9e3026d56ac73c9a8c8f24620e2.js",
-          "sourceSHA256": "02d27b81196b5d6bf04cbff9ae8c8a4fca0cc9e3026d56ac73c9a8c8f24620e2",
-          "span": [
-            1069,
-            1602
-          ],
-          "name": "Loader",
-          "normalizedASTSHA256": "3b6f62cc595cd0d3c5fb74b49bf66e5372de68731ce4251095daff3a0c0f0b72",
-          "codeSHA256": "dd59eeda3f65668262473e526f641175dece32b46002f8ea5d53b57b5ee37630",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "621079fcfcd27c0f",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 10,
-            "distinctGraphOperationPropertyPairs": 7,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/02d27b81196b5d6bf04cbff9ae8c8a4fca0cc9e3026d56ac73c9a8c8f24620e2.js",
-          "sourceSHA256": "02d27b81196b5d6bf04cbff9ae8c8a4fca0cc9e3026d56ac73c9a8c8f24620e2",
-          "span": [
-            5394,
-            6884
-          ],
-          "name": "create",
-          "normalizedASTSHA256": "ab0e3be765c74f7a2b93b9e5c12ccdc5acabb980d5976fe44e1fc815668cc813",
-          "codeSHA256": "25c646ccd2c423de5f63a72ee4e76d6f739323dfb894b0a9ddaab757a70aa5e9",
-          "features": {
-            "propertyOperations": 19,
-            "distinctOperationPropertyPairs": 14,
-            "pogHash": "836f750f72961b39",
-            "graphNodes": 21,
-            "graphEdges": 26,
-            "graphOperationOccurrences": 28,
-            "distinctGraphOperationPropertyPairs": 14,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/8e775bd5fa634e5d38be",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE.md",
-          "sha256": "da9201378c36ffd81f51ad0b305f3f0981e90bc558789210ad65d1161eec3b7d"
-        }
-      ],
-      "lockfileSHA256": "8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1",
-      "lockfileSnapshot": "lockfiles/8a112ea5469bc7bde85fab82bba41898752d03dd4a79bba97b888940faf6b8a1-bun.lock"
     }
   ],
   "selectedLibraries": [
     "@fortawesome/react-fontawesome",
+    "@radix-ui/react-slot",
     "@radix-ui/react-tooltip",
     "@sentry/nextjs",
     "@tanstack/react-query",
     "framer-motion",
     "js-cookie",
-    "next-auth",
-    "react",
-    "react-dom",
-    "sonner"
+    "lucide-react",
+    "next",
+    "next-auth"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
+    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
+      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
     },
     "frontendManifestSHA256": "6f3c49d01af691b6fddee569304e3453ca82999e8b7b3e05f1c5b500e70165cf",
     "manifestRelative": "apps/web/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:55:47.292Z",
+  "started": "2026-11-09T05:04:04.882Z",
   "reason": null,
-  "finished": "2026-11-09T10:55:47.520Z",
+  "finished": "2026-11-09T05:04:05.829Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/turbopack/CapSoftware--Cap/qualification.json",
-  "sourceEligibilityRecordSHA256": "30ee9362d9c6a509753519116a196dcef50d337f2757ba842d30ed1244debcaf",
-  "organizationSignature": "223057d1f10fdad907994022a0376c6807bdbca0d01b3ed75bc408a72e60ae44"
+  "sourceEligibilityRecordSHA256": "b519fca473c822c890ae0ccdd27e9e7e961653d9109b23451fb1c03a2c426c53",
+  "organizationSignature": "d50d95f969d68c9c8f4a6dbc015bc452355666705d89241349f3e9cfecdb89ba"
 }

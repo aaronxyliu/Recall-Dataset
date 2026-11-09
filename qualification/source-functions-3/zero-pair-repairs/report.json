@@ -5,19 +5,35 @@
       "subject": "esbuild/primefaces--primeng",
       "repo": "primefaces/primeng",
       "beforePairs": 0,
-      "afterPairs": 0,
-      "selectedLibraries": [],
-      "libraryPairs": {},
-      "causeAndRepair": "Excluded under subsequent scope/duplication rules: fewer than three source-eligible libraries remain after duplicate-safe candidate filtering"
+      "afterPairs": 251,
+      "selectedLibraries": [
+        "@primeuix/styled",
+        "@primeuix/utils",
+        "@primeuix/motion"
+      ],
+      "libraryPairs": {
+        "@primeuix/styled": 98,
+        "@primeuix/utils": 127,
+        "@primeuix/motion": 26
+      },
+      "causeAndRepair": "The showcase manifest declared CSS build tools. Corrected the scope to the built PrimeNG library production manifest; peer-only Angular and root dev dependencies remain excluded."
     },
     {
       "subject": "parcel/jonasschmedtmann--complete-javascript-course",
       "repo": "jonasschmedtmann/complete-javascript-course",
       "beforePairs": 0,
-      "afterPairs": 0,
-      "selectedLibraries": [],
-      "libraryPairs": {},
-      "causeAndRepair": "Excluded under subsequent scope/duplication rules: fewer than three source-eligible libraries remain after duplicate-safe candidate filtering"
+      "afterPairs": 16,
+      "selectedLibraries": [
+        "core-js",
+        "fractional",
+        "regenerator-runtime"
+      ],
+      "libraryPairs": {
+        "core-js": 16,
+        "fractional": 0,
+        "regenerator-runtime": 0
+      },
+      "causeAndRepair": "Parcel 2.0.0-beta.1 scope-hoisting produced out-of-bounds generated map coordinates. Rebuilt with --no-scope-hoist, retaining production minification, and recaptured the page; no page or map-processing errors."
     },
     {
       "subject": "parcel/tensorflow--tfjs",
@@ -40,7 +56,7 @@
       "subject": "rspack/metabase--metabase",
       "repo": "metabase/metabase",
       "beforePairs": 0,
-      "afterPairs": 773,
+      "afterPairs": 1509,
       "selectedLibraries": [
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
@@ -49,9 +65,9 @@
         "@emotion/react",
         "@emotion/styled",
         "@floating-ui/dom",
+        "@floating-ui/react",
         "@juggle/resize-observer",
-        "@mantine/dates",
-        "@mantine/hooks"
+        "@mantine/core"
       ],
       "libraryPairs": {
         "@dnd-kit/core": 230,
@@ -61,9 +77,9 @@
         "@emotion/react": 11,
         "@emotion/styled": 11,
         "@floating-ui/dom": 34,
+        "@floating-ui/react": 163,
         "@juggle/resize-observer": 60,
-        "@mantine/dates": 254,
-        "@mantine/hooks": 144
+        "@mantine/core": 971
       },
       "causeAndRepair": "The first ten alphabetically selected CodeMirror libraries were absent from the landing page capture. Prefer source-eligible declared production libraries present in the captured maps."
     },
@@ -74,36 +90,36 @@
       "afterPairs": 0,
       "selectedLibraries": [],
       "libraryPairs": {},
-      "causeAndRepair": "Excluded under subsequent scope/duplication rules: Module-only scope: docs production candidates are copied standalone vendors or docs/test tooling, not imported dependencies of the built docs frontend; fewer than three eligible module libraries."
+      "causeAndRepair": "Excluded by the subsequent module-only rule: standalone docs vendors do not supply three eligible module libraries."
     },
     {
       "subject": "turbopack/CapSoftware--Cap",
       "repo": "CapSoftware/Cap",
       "beforePairs": 0,
-      "afterPairs": 428,
+      "afterPairs": 1375,
       "selectedLibraries": [
         "@fortawesome/react-fontawesome",
+        "@radix-ui/react-slot",
         "@radix-ui/react-tooltip",
         "@sentry/nextjs",
         "@tanstack/react-query",
         "framer-motion",
         "js-cookie",
-        "next-auth",
-        "react",
-        "react-dom",
-        "sonner"
+        "lucide-react",
+        "next",
+        "next-auth"
       ],
       "libraryPairs": {
         "@fortawesome/react-fontawesome": 30,
+        "@radix-ui/react-slot": 8,
         "@radix-ui/react-tooltip": 48,
         "@sentry/nextjs": 9,
         "@tanstack/react-query": 3,
         "framer-motion": 89,
         "js-cookie": 9,
-        "next-auth": 119,
-        "react": 0,
-        "react-dom": 0,
-        "sonner": 121
+        "lucide-react": 0,
+        "next": 1060,
+        "next-auth": 119
       },
       "causeAndRepair": "The old sample mostly selected server-side AI/AWS packages, absent from the login page. Replaced the sample with eligible declared production libraries observed in the page maps."
     },
@@ -119,7 +135,10 @@
         "react-dom",
         "react-haiku",
         "react-icons",
-        "react-router-dom"
+        "react-router-dom",
+        "@chakra-ui/react",
+        "@emotion/react",
+        "@gsap/react"
       ],
       "libraryPairs": {
         "lucide-react": 11,
@@ -128,7 +147,10 @@
         "react-dom": 623,
         "react-haiku": 3,
         "react-icons": 51,
-        "react-router-dom": 25
+        "react-router-dom": 25,
+        "@chakra-ui/react": 0,
+        "@emotion/react": 0,
+        "@gsap/react": 0
       },
       "causeAndRepair": "The old sample selected libraries for unloaded component demos and build tooling. Prefer eligible declared production dependencies present on the captured page."
     }
@@ -141,10 +163,10 @@
     "replacementPairs": 62
   },
   "dataset": {
-    "repositoryCount": 31,
-    "libraryInstanceCount": 259,
-    "oneToOnePairs": 49946,
-    "zeroPairLibraryInstances": 29
+    "repositoryCount": 41,
+    "libraryInstanceCount": 335,
+    "oneToOnePairs": 69580,
+    "zeroPairLibraryInstances": 107
   },
   "zeroPairRepositories": [],
   "remainingMapDiagnostics": {

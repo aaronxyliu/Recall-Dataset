@@ -1,0 +1,33 @@
+{
+  "schema": "recall.module-ingress-scope/v1",
+  "subject": "bun/micahkepe--jsongrep",
+  "repo": "micahkepe/jsongrep",
+  "commit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
+  "policy": "module-dependencies-only",
+  "outputFormatIndependent": true,
+  "moduleOutputPattern": "^<local>/index-[^/]+\\.js$",
+  "angularGlobalBundleNames": [],
+  "evidence": [
+    {
+      "path": "module-evidence/playground/package.json",
+      "sha256": "8e11e5f1cec9223c8ac80a69689bebefb929cb50cdd744f6620441c6cdf19bf4",
+      "kind": "pinned-source",
+      "upstreamPath": "playground/package.json"
+    },
+    {
+      "path": "module-evidence/dataset-recipe.Dockerfile",
+      "sha256": "66acc53b0cb10f23db435f8d3aa7a002907ab8fde4832cd9ef640cae3beae918",
+      "kind": "verified-build-recipe",
+      "upstreamPath": "dataset-recipe.Dockerfile"
+    }
+  ],
+  "assets": [
+    {
+      "url": "<local>/index-000bnfeg.js",
+      "sha256": "8905ef94aaba2bc50c46dc352a165adf40ad4921b939bad8791137a961523489",
+      "mapSHA256": "58aa5d55a960c59db1f61d74e9a35d8b3218da1d07cf6f50827102f73262abb1",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    }
+  ]
+}

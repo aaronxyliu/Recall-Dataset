@@ -14,37 +14,604 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {
-    "excludeLibraries": [
-      "@angular/animations",
-      "@angular/cdk",
-      "@angular/common",
-      "@angular/compiler",
-      "@angular/core",
-      "@angular/forms",
-      "@angular/platform-browser-dynamic",
-      "@angular/router",
-      "zone.js"
-    ],
-    "preferredLibraries": [
-      "@angular/platform-browser",
-      "rxjs",
-      "tslib"
-    ],
-    "duplicateAudit": {
-      "record": "qualification/no-duplicate-libraries/results/esbuild/swimlane--ngx-datatable/audit.json",
-      "sha256": "26cdcfebc141f918ee68dc05e50a0290a3867ad155b9a8a1025c0649020a5fe9",
-      "retainedUnobservedZeroPairLibraries": [],
-      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
-    },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
-  },
+  "selectionOverride": {},
   "candidates": [
+    "@angular/animations",
+    "@angular/cdk",
+    "@angular/common",
+    "@angular/compiler",
+    "@angular/core",
+    "@angular/forms",
     "@angular/platform-browser",
+    "@angular/platform-browser-dynamic",
+    "@angular/router",
     "rxjs",
-    "tslib"
+    "tslib",
+    "zone.js"
   ],
   "libraries": [
+    {
+      "library": "@angular/animations",
+      "declaredVersion": "22.0.8",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/animations",
+        "version": "22.0.8",
+        "integrity": "sha512-hdBlckl5mARzuc5gt2siydIAxeJbBiRneg8V0kazEDH6xNkNp/1siro68ZaHgTY5dCUEOec/eC4zbhB8AlSLhQ==",
+        "shasum": "cfa28b35482895a984fdae2c8688c74a1e8b9f80",
+        "tarballSHA256": "adc9cebc0649207d576b2bac9455dbd13e898f910530e9fe35fc398b3818567b",
+        "bytes": 170983,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 142,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "fesm2022/_private_export-chunk.mjs",
+          "source": "source-js/d42db09431d57350ebe5de070d278589a98f138acf402bb592d29b6af3feeecd.js",
+          "sourceSHA256": "d42db09431d57350ebe5de070d278589a98f138acf402bb592d29b6af3feeecd",
+          "span": [
+            131,
+            1161
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "5108ffd739ceeef4bb40db60334dfbaaa883eb982f7e014b80874253956554b8",
+          "codeSHA256": "935861246022d634d915054c9aa7629ca442254b99ee1c54f8379074649f1b8b",
+          "features": {
+            "propertyOperations": 26,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "6944533079e1d91e",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_util-chunk.mjs",
+          "source": "source-js/3f680142e384f9834d26d0f85320e144c3502b5f98553150573ffc978aa14b01.js",
+          "sourceSHA256": "3f680142e384f9834d26d0f85320e144c3502b5f98553150573ffc978aa14b01",
+          "span": [
+            12069,
+            12479
+          ],
+          "name": "copyAnimationEvent",
+          "normalizedASTSHA256": "708e827f12168ce313b4a269671b7fa3ac5dd199dc23019312e11e319563133a",
+          "codeSHA256": "2ae11c60a06081b7663d164710317ae8c5b35792b31c03f796cc5bc17182c409",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "b7fb5574d563a016",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_util-chunk.mjs",
+          "source": "source-js/3f680142e384f9834d26d0f85320e144c3502b5f98553150573ffc978aa14b01.js",
+          "sourceSHA256": "3f680142e384f9834d26d0f85320e144c3502b5f98553150573ffc978aa14b01",
+          "span": [
+            15645,
+            16799
+          ],
+          "name": "parseTimeExpression",
+          "normalizedASTSHA256": "b904eca47ae0d855f7bc84bba7406c7495f445d5be8cc63fe1954cd132a22640",
+          "codeSHA256": "40278c8243dd7d8a26d7d3dbd5dcdf4d2154bdf45f083d2138da8a883eca8305",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "89e9c02efe6060d8",
+            "graphNodes": 22,
+            "graphEdges": 28,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/057def2e0275d899723a",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
+        }
+      ],
+      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
+      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
+    },
+    {
+      "library": "@angular/cdk",
+      "declaredVersion": "22.0.6",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/cdk",
+        "version": "22.0.6",
+        "integrity": "sha512-b36f4b+7yQpuulG9Ai2O38SV2tsqyNeYTYCH9TehMir18XlTx+NtLELwA8Sfi24tHByJHEDADQZtHPWWUj71/w==",
+        "shasum": "159accfd6b4ba655f756669d585f2ab544020eb6",
+        "tarballSHA256": "7f6ecfd93ddb829496c2322267a9f090460bfa849b33007aee345f5d77efb070",
+        "bytes": 841316,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 23,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "fesm2022/_a11y-module-chunk.mjs",
+          "source": "source-js/bfc0028755780cbd37c74b5b4fdabd5c805c8d7b027b15674843d846a45b6a5f.js",
+          "sourceSHA256": "bfc0028755780cbd37c74b5b4fdabd5c805c8d7b027b15674843d846a45b6a5f",
+          "span": [
+            1047,
+            2192
+          ],
+          "name": "isTabbable",
+          "normalizedASTSHA256": "bfd551c0b9ff3df512a8e017dccd076f581c353f27f12b7574ecbcbef177b3d2",
+          "codeSHA256": "c43af62577473433be115282b43215878e8c2cc2c7ce408dc2d73d4236ab539d",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "802cbb1150b9c7dd",
+            "graphNodes": 29,
+            "graphEdges": 43,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_a11y-module-chunk.mjs",
+          "source": "source-js/bfc0028755780cbd37c74b5b4fdabd5c805c8d7b027b15674843d846a45b6a5f.js",
+          "sourceSHA256": "bfc0028755780cbd37c74b5b4fdabd5c805c8d7b027b15674843d846a45b6a5f",
+          "span": [
+            5673,
+            6096
+          ],
+          "name": "destroy",
+          "normalizedASTSHA256": "d7f94a68961d2d43cb67dd2c2ffdf2484be2b136ed9f600bdfd4460bf8693ad4",
+          "codeSHA256": "245d4d37d1db91b3c94abd686a951805da94a040d7c48256f3967ff2d3756d26",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "3441a41a911dc0b1",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_a11y-module-chunk.mjs",
+          "source": "source-js/bfc0028755780cbd37c74b5b4fdabd5c805c8d7b027b15674843d846a45b6a5f.js",
+          "sourceSHA256": "bfc0028755780cbd37c74b5b4fdabd5c805c8d7b027b15674843d846a45b6a5f",
+          "span": [
+            6206,
+            6549
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "13e5b71ace261259ee071f61be1b6afe50daa213658cdb09e327cbe9ef7a12f7",
+          "codeSHA256": "2f6e88e4d072b3d119398b48c6f697575b1ad434555b8d3b50841d38961c29a0",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "74b9bfd094f07bc9",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/b170efff09bd93e29836",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "adb40d7d256e33c3c20a67869de175e7ca249afee92f587ccc48b5bec0ac24e4"
+        }
+      ],
+      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
+      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
+    },
+    {
+      "library": "@angular/common",
+      "declaredVersion": "22.0.8",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/common",
+        "version": "22.0.8",
+        "integrity": "sha512-FnwkXndUgAyWk1/p5flMfocIUtuuneJ01mxC1FxRc5/bdWTyNVeQDsM9Lw4PEAPc0AHu//EnblegRq8o6LGdUQ==",
+        "shasum": "833d0c8ad1a1b07f868dab3db28c9ceb4c969e98",
+        "tarballSHA256": "42936cb861ec74e088633a606e82f35c1c912413bd44f4832f2117f6b9c0f151",
+        "bytes": 951942,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 30,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "fesm2022/_common_module-chunk.mjs",
+          "source": "source-js/1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8.js",
+          "sourceSHA256": "1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8",
+          "span": [
+            8005,
+            8256
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "dc4842bbc53f03ff7c612e5b9a4775d4162b99a5ff617d262c1a74a4926f874a",
+          "codeSHA256": "9b6d05102e930521de8455613d03819b1fe401795f16b2248d649a3f62941d18",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "ccaf541205ae5690",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_common_module-chunk.mjs",
+          "source": "source-js/1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8.js",
+          "sourceSHA256": "1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8",
+          "span": [
+            9384,
+            9737
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "0fa7790256865b61c1d22e709e69c4ab37f4f4159ff68a89f9a563a1d199be06",
+          "codeSHA256": "2ea403919eee0afdcb2f3455acb87412d92d4b3e82c1819a47d06c6c1529e6e6",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "6818daff84245f7a",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_common_module-chunk.mjs",
+          "source": "source-js/1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8.js",
+          "sourceSHA256": "1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8",
+          "span": [
+            11745,
+            12206
+          ],
+          "name": "getLocaleNumberSymbol",
+          "normalizedASTSHA256": "48c01ede63707810579e6e966522c635dcf7d8e2a98bee9d9930945c8a2ea588",
+          "codeSHA256": "266636f3694909c159a0684a6c4b74e767f1137a734afd14a032c4a40ae72175",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "8dac635660ed1d96",
+            "graphNodes": 11,
+            "graphEdges": 12,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/86224547373741cd99de",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
+        }
+      ],
+      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
+      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
+    },
+    {
+      "library": "@angular/compiler",
+      "declaredVersion": "22.0.8",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/compiler",
+        "version": "22.0.8",
+        "integrity": "sha512-ot7rvntfkZsPHmp8yl6PWUj/yG4e50X0+YeR7QYy/rEYKBiIg91w8GwjxSzaF4g5+bzJGDv7l/XnachKm0IySg==",
+        "shasum": "ac3b7d3d8efff7a23e79cef189146f8a751526a9",
+        "tarballSHA256": "2e22e22fb94cc31b46c135c1f6741328c0154d12898dae9a651d1561eb0cc4a7",
+        "bytes": 1016297,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 16,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "fesm2022/compiler.mjs",
+          "source": "source-js/e3179770190542dc1ecf57e76eb9725935cd6f2272d7850dcbf1cb0a01b6e82e.js",
+          "sourceSHA256": "e3179770190542dc1ecf57e76eb9725935cd6f2272d7850dcbf1cb0a01b6e82e",
+          "span": [
+            381,
+            1929
+          ],
+          "name": "parse",
+          "normalizedASTSHA256": "2ee10b96f5c21c25893c98ca75cc3f52be72c634f8589f7e9621809145ade03d",
+          "codeSHA256": "deb7a7fbc4981a0bc28469f971269a6ef64cd03cb5898bc48fbe08f6e753d907",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "ae928fd30621fdf6",
+            "graphNodes": 27,
+            "graphEdges": 35,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/compiler.mjs",
+          "source": "source-js/e3179770190542dc1ecf57e76eb9725935cd6f2272d7850dcbf1cb0a01b6e82e.js",
+          "sourceSHA256": "e3179770190542dc1ecf57e76eb9725935cd6f2272d7850dcbf1cb0a01b6e82e",
+          "span": [
+            3146,
+            3619
+          ],
+          "name": "toString",
+          "normalizedASTSHA256": "0de30e686054de26fe535f54f14c3df3c131bca68d1bba185dcbf86dbfd7ed5d",
+          "codeSHA256": "5f506744e22cee5f1bc27a8ad3cbfd5009aec24879baaae35ac95fa535b83ec6",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "3b698c44b5817260",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/compiler.mjs",
+          "source": "source-js/e3179770190542dc1ecf57e76eb9725935cd6f2272d7850dcbf1cb0a01b6e82e.js",
+          "sourceSHA256": "e3179770190542dc1ecf57e76eb9725935cd6f2272d7850dcbf1cb0a01b6e82e",
+          "span": [
+            4385,
+            6248
+          ],
+          "name": "_addSelectable",
+          "normalizedASTSHA256": "d9a7fd4736676f4927d6024f96502b16d859673d1be667a9cc39c9b702bf1a2b",
+          "codeSHA256": "475c79c6317bea29dff6bef0c6521585776f8a586ae110b08a398f706f0e70f6",
+          "features": {
+            "propertyOperations": 29,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "74cea0d3f9741b5f",
+            "graphNodes": 35,
+            "graphEdges": 45,
+            "graphOperationOccurrences": 34,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/01a8ce8bf523a95d09a9",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
+        }
+      ],
+      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
+      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
+    },
+    {
+      "library": "@angular/core",
+      "declaredVersion": "22.0.8",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/core",
+        "version": "22.0.8",
+        "integrity": "sha512-HagZZVzbtXd+ZhMb++k/HOtr/UTiBROHHH7xutgYgnSnPRXX0kCca5EQ02OZ/OCWfsMP5liSJDfwiePFULKA6Q==",
+        "shasum": "583a71d7d8e589643f5e1e681bd3d38473faf271",
+        "tarballSHA256": "7374c345d547815efc5a33661b1500645e9f9845e424c0c1b3e87674466ba6a3",
+        "bytes": 1657748,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 19,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "fesm2022/_debug_node-chunk.mjs",
+          "source": "source-js/c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6.js",
+          "sourceSHA256": "c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6",
+          "span": [
+            6000,
+            8194
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "117cb732d470d3a3ea0af5a6c81a059bcf5e7873327e40435165e0539b22ab75",
+          "codeSHA256": "3cb7061e7380dd4f5b90e7f45a6ff6a11eca45b6ff5a5f6747ce93dd732fcf34",
+          "features": {
+            "propertyOperations": 52,
+            "distinctOperationPropertyPairs": 27,
+            "pogHash": "b6d358980bacdcda",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 52,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_debug_node-chunk.mjs",
+          "source": "source-js/c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6.js",
+          "sourceSHA256": "c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6",
+          "span": [
+            9824,
+            10587
+          ],
+          "name": "ngOnChangesSetInput",
+          "normalizedASTSHA256": "bb49d0dda83b5309d8c76d3264461ebdcac741219cb16bce89c4638df3e0610d",
+          "codeSHA256": "03b0f8971cd18de4a1dce3603e614b7d26505331fa4dfc0d8fc2a0d05ca07ccf",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "5011241988235524",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_debug_node-chunk.mjs",
+          "source": "source-js/c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6.js",
+          "sourceSHA256": "c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6",
+          "span": [
+            11643,
+            12348
+          ],
+          "name": "registerPreOrderHooks",
+          "normalizedASTSHA256": "1494f978a92f4a55a081bc76f30168fa7897fdb066adeeb7a943989ec8c93594",
+          "codeSHA256": "e608ac133bc963600024a17776173166271b5b08c92b6c9be6a4b43dd89e8f06",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "7c4061a4e17d920b",
+            "graphNodes": 12,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/69b1abc2e958fff0c1d7",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
+        }
+      ],
+      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
+      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
+    },
+    {
+      "library": "@angular/forms",
+      "declaredVersion": "22.0.8",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/forms",
+        "version": "22.0.8",
+        "integrity": "sha512-KlLJE8rgziSBqCQy+cqCHPEQPGjJEY53i1vZbpnBoLXhnwswLJ3O0c76RHNpIrlrvr9v4p3b2/LxSE8wQmdStg==",
+        "shasum": "38cb5da27c03d9f44efa0a13b5690127cd53aaea",
+        "tarballSHA256": "6a30445a85af0ef84cf1a5a0756d8b28940bc1137377f1f30e0e030eb3c74c7b",
+        "bytes": 352319,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 30,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "fesm2022/_validation_errors-chunk.mjs",
+          "source": "source-js/913efdcf72742824d1d4c16a4fb7a696dbdb393be2ece222eeb18d35acd611bf.js",
+          "sourceSHA256": "913efdcf72742824d1d4c16a4fb7a696dbdb393be2ece222eeb18d35acd611bf",
+          "span": [
+            3018,
+            3352
+          ],
+          "name": "compute",
+          "normalizedASTSHA256": "c4f6d1ea4a97182356bd3c698823e9013c65b62307d64b65ad68d9e7d0998ed0",
+          "codeSHA256": "d716ce96a41c68639c834a951a3b894a7961e0b5d9d402713581430f64dc38fa",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "583353df128e2df2",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_validation_errors-chunk.mjs",
+          "source": "source-js/913efdcf72742824d1d4c16a4fb7a696dbdb393be2ece222eeb18d35acd611bf.js",
+          "sourceSHA256": "913efdcf72742824d1d4c16a4fb7a696dbdb393be2ece222eeb18d35acd611bf",
+          "span": [
+            3472,
+            3901
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "9a286d87f0c78071b99f036847295d802932e6e3c72fa07312311ad404d2bb0a",
+          "codeSHA256": "bfa8cb134e88e0696e40cecadd1f472f02fc56e75fb8aa66d35450f95f4f2950",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "836e56cd973dc324",
+            "graphNodes": 11,
+            "graphEdges": 12,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_validation_errors-chunk.mjs",
+          "source": "source-js/913efdcf72742824d1d4c16a4fb7a696dbdb393be2ece222eeb18d35acd611bf.js",
+          "sourceSHA256": "913efdcf72742824d1d4c16a4fb7a696dbdb393be2ece222eeb18d35acd611bf",
+          "span": [
+            4067,
+            4490
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "a8a7c50f16cd5e0e02836698b1fb6ecf7a9ec0ddd5864e45ad42abce951bcaeb",
+          "codeSHA256": "fb62dd964f4c6fe2dd46a41bde0374ac63d08a747906439fdf870fca2bd65aa7",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "a05a8e696be68cb7",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/ce285d2aa4b99bed5e3c",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
+        }
+      ],
+      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
+      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
+    },
     {
       "library": "@angular/platform-browser",
       "declaredVersion": "22.0.8",
@@ -133,6 +700,103 @@
         }
       ],
       "proofDirectory": "eligibility/libraries/95c35c42514970be4986",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
+        }
+      ],
+      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
+      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
+    },
+    {
+      "library": "@angular/router",
+      "declaredVersion": "22.0.8",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/router",
+        "version": "22.0.8",
+        "integrity": "sha512-9NO5K03QqfWMWWZ+Uu4WqBSLw/YAot918cBUFdgl6mTUOfoHi/xWO5pAt0SEpbXMHmWafJBdb99GRlAGybGSTg==",
+        "shasum": "5971cb3b96c4cda4d3fe6e7fcafe75c4130e9f87",
+        "tarballSHA256": "8ed9c4bce282451c1da7239ffd67fda0f9186d695e18ae1d67df5be27cd5453e",
+        "bytes": 281598,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 37,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "fesm2022/_router_module-chunk.mjs",
+          "source": "source-js/e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779.js",
+          "sourceSHA256": "e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779",
+          "span": [
+            2933,
+            3183
+          ],
+          "name": "updateState",
+          "normalizedASTSHA256": "ec51f5b20b5727652129ca8398bda258207b6aedb991f2525c453bfe7357d549",
+          "codeSHA256": "6d3cbfce049d44e550e52f7af9b01c6ab1ac265000cac7aff1fce8167b69479d",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "8d16ceca2ee3c6b4",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_router_module-chunk.mjs",
+          "source": "source-js/e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779.js",
+          "sourceSHA256": "e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779",
+          "span": [
+            6966,
+            7900
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "6ab4f1b23b18f6c720791e818a0e94e9371801b95eece4afec0e0bbf09d1c8ba",
+          "codeSHA256": "dfc6e6ca1644a4369184e1cc44fb5da572d6ccb1e43838af64314ec45ba45eeb",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "e32f3d31a66edf36",
+            "graphNodes": 13,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "fesm2022/_router_module-chunk.mjs",
+          "source": "source-js/e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779.js",
+          "sourceSHA256": "e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779",
+          "span": [
+            8710,
+            9501
+          ],
+          "name": "onClick",
+          "normalizedASTSHA256": "d9ef26ad9e5c64b2bb4fb8d4dcd9ab36ae83c2f38e11b167a8325d8c6d486917",
+          "codeSHA256": "ebddba0a066568e4dfaa21dea20f713b07392ec7e7817304d2037cae638e3566",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "cc9b3876145f08e9",
+            "graphNodes": 19,
+            "graphEdges": 26,
+            "graphOperationOccurrences": 43,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/a58a5f598655b5b17445",
       "licenses": [
         {
           "path": "licenses/LICENSE",
@@ -1231,28 +1895,35 @@
     }
   ],
   "selectedLibraries": [
+    "@angular/animations",
+    "@angular/cdk",
+    "@angular/common",
+    "@angular/compiler",
+    "@angular/core",
+    "@angular/forms",
     "@angular/platform-browser",
+    "@angular/router",
     "rxjs",
     "tslib"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
+    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
+      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
     },
     "frontendManifestSHA256": "1803c245acde0a2f0a41d4e5608d5a63554c4ba22c3194cb4bb4206c9c925514",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:55:42.618Z",
+  "started": "2026-11-09T05:04:02.277Z",
   "reason": null,
-  "finished": "2026-11-09T10:55:42.739Z",
+  "finished": "2026-11-09T05:04:02.778Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/esbuild/swimlane--ngx-datatable/qualification.json",
-  "sourceEligibilityRecordSHA256": "40dc91b417cd064733d9dd23f23d4b4e8b3e946a5c9ee7b2cfe36cbfe5377f40",
-  "organizationSignature": "5f399a9532adab5a1bc43d2c0cb23899190daa9265b99248b92bf398d94fb34e"
+  "sourceEligibilityRecordSHA256": "6051c4058f9039cd45ff630791a450176c0497af4b7d013b37c4433a3294db4a",
+  "organizationSignature": "dddd8479a917869030e16d86862c9f495fe7d8f0233541715b1d9f6051db03a1"
 }

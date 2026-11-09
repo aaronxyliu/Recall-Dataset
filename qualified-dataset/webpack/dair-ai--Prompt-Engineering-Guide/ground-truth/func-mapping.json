@@ -15,6 +15,9 @@
   "commit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
   "imageID": "sha256:762d82fcf838c12afddeca97b5271468ad1ee5e37c74d73f448e9848ad6a1a18",
   "coverage": {
+    "@fortawesome/fontawesome-svg-core": 0,
+    "@fortawesome/react-fontawesome": 0,
+    "katex": 0,
     "next": 114,
     "nextra": 36,
     "nextra-theme-docs": 1,
@@ -14704,13 +14707,15 @@
     "imageID": "sha256:762d82fcf838c12afddeca97b5271468ad1ee5e37c74d73f448e9848ad6a1a18"
   },
   "selectedLibraries": [
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/react-fontawesome",
+    "katex",
     "next",
     "nextra",
     "nextra-theme-docs",
     "react",
     "react-dom"
   ],
-  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -14733,36 +14738,13 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
-  "libraryMultiplicityPolicy": {
-    "schema": "recall.no-duplicate-library-policy/v1",
-    "scope": "repository-library-instance",
-    "inspectAllCapturedRuntimeAssets": true,
-    "excludeConfirmedDuplicateLibraries": true,
-    "excludeUnassessedLibrariesFromScoring": true,
-    "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": false,
-    "unobservedLibrariesContributeNoEvaluationPairs": true,
-    "sourceFunctionThresholdUnchanged": true,
-    "requireInitialAnchors": false,
-    "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10,
-    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
-  },
   "provenance": {
     "upstreamCommit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
     "archiveRecord": "bundling-dataset/webpack/dair-ai--Prompt-Engineering-Guide/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "370d630b8c212133771eb2cc7b1092340028025106c8bdf28d726f6d47ee6147",
-    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
-    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "1f6c047258c567622eb701f12dbd699bc13926e9d556301bf36b46374b60021a",
-    "moduleScopeSHA256": "4fbc85cae71d40a84d59577794e67d22033715554be595ef54df04592a9188a4",
-    "duplicateAuditSHA256": "cc8c2c004513a9f18aeeb6236fd331e06b56144fafdd0c32ed821e6874f54092"
-  },
-  "evaluationLibraries": [
-    "next",
-    "nextra",
-    "nextra-theme-docs",
-    "react",
-    "react-dom"
-  ]
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "02969f8b547c81628771a9219feda6dccf8ba20cb49ba11d51817effd850e9d2",
+    "moduleScopeSHA256": "4fbc85cae71d40a84d59577794e67d22033715554be595ef54df04592a9188a4"
+  }
 }

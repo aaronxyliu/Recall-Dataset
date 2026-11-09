@@ -18,7 +18,12 @@
     "react-dom": 4,
     "@sentry/browser": 15,
     "i18next-browser-languagedetector": 1,
-    "react": 4
+    "react": 4,
+    "jotai": 2,
+    "firebase": 0,
+    "socket.io-client": 0,
+    "uqr": 0,
+    "vite-plugin-html": 0
   },
   "pairs": [
     {
@@ -8099,15 +8104,26 @@
   "removePercent": null,
   "createPercent": null,
   "missingSourceContents": [],
-  "failures": [],
+  "failures": [
+    {
+      "asset": "<local>/assets/index-7jDlGimp.js",
+      "source": "../../../node_modules/jotai/esm/vanilla.mjs",
+      "reason": "original coordinate out of bounds"
+    },
+    {
+      "asset": "<local>/assets/index-7jDlGimp.js",
+      "source": "../../../node_modules/jotai/esm/react.mjs",
+      "reason": "original coordinate out of bounds"
+    }
+  ],
   "sourceFunctionAccounting": {
-    "total": 821,
+    "total": 924,
     "oneToOne": 809,
     "multipleTargets": 0,
     "multipleContributors": 0,
     "unresolvedBody": 0,
     "insufficientEvidence": 0,
-    "noBodyEdge": 12
+    "noBodyEdge": 115
   },
   "relationshipCaution": "Mapping multiplicity is positional provenance, not proof of semantic splitting or combining.",
   "capture": {
@@ -8329,9 +8345,13 @@
     "react-dom",
     "@sentry/browser",
     "i18next-browser-languagedetector",
-    "react"
+    "react",
+    "jotai",
+    "firebase",
+    "socket.io-client",
+    "uqr",
+    "vite-plugin-html"
   ],
-  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -8354,35 +8374,13 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
-  "libraryMultiplicityPolicy": {
-    "schema": "recall.no-duplicate-library-policy/v1",
-    "scope": "repository-library-instance",
-    "inspectAllCapturedRuntimeAssets": true,
-    "excludeConfirmedDuplicateLibraries": true,
-    "excludeUnassessedLibrariesFromScoring": true,
-    "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": false,
-    "unobservedLibrariesContributeNoEvaluationPairs": true,
-    "sourceFunctionThresholdUnchanged": true,
-    "requireInitialAnchors": false,
-    "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10,
-    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
-  },
   "provenance": {
     "upstreamCommit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
     "archiveRecord": "bundling-dataset/vite/excalidraw--excalidraw/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "0f6a291637f75436cda88a6ed0f6575632f96fd0239084ed79ba85cf0ef39424",
-    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
-    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "31527d6a486c23dc39eec82aab9186b7edf0ecc380cb51dab26f779a5547859b",
-    "moduleScopeSHA256": "09c8bb599dcea3ae2c8b5ec7c4e0cc021f27bd69a98c621a21dde556b846824e",
-    "duplicateAuditSHA256": "d723efc1f035c0eb48ba7f8fbe983d9be88fd25a16e9c09f7b8a753d27f14693"
-  },
-  "evaluationLibraries": [
-    "react-dom",
-    "@sentry/browser",
-    "i18next-browser-languagedetector",
-    "react"
-  ]
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "13497b00f011953dcad616f50faea6e9042943862855f87ff30172b00a52df4f",
+    "moduleScopeSHA256": "09c8bb599dcea3ae2c8b5ec7c4e0cc021f27bd69a98c621a21dde556b846824e"
+  }
 }

@@ -1,3 +1,5 @@
+> Historical and superseded. The active dataset restores the exact module-only cohort from `cc5df6cf50c33092cd4522e850934add762a8ede` (41 repositories, 335 library instances, 69,580 pairs). Duplicate libraries are permitted; standalone vendor/global-script copies remain excluded from correspondence collection. The evidence below describes the superseded exclusion cohort at `ffffcd656df801b4d90898ac559c981c1bbeb595`. Reproduce that audit using its Git revision.
+
 # Exclude duplicated library instances
 
 User instruction (2026-11-09): a recovery tool might match only one of several copies and receive a falsely low recovery rate. Exclude the affected library and choose another eligible library.

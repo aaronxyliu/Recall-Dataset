@@ -1,0 +1,1 @@
+let t=window.matchMedia("(max-width: 1024px)"),a=window.matchMedia("(max-width: 640px)"),e=()=>{for(let e of document.querySelectorAll("object[data-sm]"))a.matches?e.data=e.dataset.sm:t.matches?e.data=e.dataset.md:e.data=e.dataset.lg};for(let t of document.querySelectorAll("object[data-sm]"))t.dataset.lg=t.data;t.addEventListener("change",e),a.addEventListener("change",e),e();

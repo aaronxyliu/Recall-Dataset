@@ -14,82 +14,252 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {
-    "excludeLibraries": [
-      "@formatjs/icu-messageformat-parser",
-      "@immich/sdk",
-      "@immich/ui",
-      "@mdi/js",
-      "@noble/hashes",
-      "@photo-sphere-viewer/core",
-      "@photo-sphere-viewer/equirectangular-video-adapter",
-      "@photo-sphere-viewer/markers-plugin",
-      "@photo-sphere-viewer/resolution-plugin",
-      "@photo-sphere-viewer/settings-plugin",
-      "@photo-sphere-viewer/video-plugin",
-      "@simplewebauthn/browser",
-      "@tanstack/svelte-query",
-      "@types/geojson",
-      "@zoom-image/core",
-      "@zoom-image/svelte",
-      "dom-to-image",
-      "fabric",
-      "geo-coordinates-parser",
-      "geojson",
-      "handlebars",
-      "hash-wasm",
-      "hls-video-element",
-      "hls.js",
-      "intl-messageformat",
-      "maplibre-gl",
-      "pmtiles",
-      "qrcode",
-      "simple-icons",
-      "svelte-confetti",
-      "svelte-gestures",
-      "svelte-jsoneditor",
-      "svelte-maplibre",
-      "thumbhash",
-      "transformation-matrix",
-      "uplot"
-    ],
-    "preferredLibraries": [
-      "tailwind-merge",
-      "tabbable",
-      "tailwind-variants",
-      "justified-layout",
-      "lodash-es",
-      "luxon",
-      "socket.io-client",
-      "@futo-org/backups-orchestrator-ui",
-      "@immich/justified-layout-wasm",
-      "media-chrome",
-      "svelte-i18n",
-      "svelte-persisted-store"
-    ],
-    "duplicateAudit": {
-      "record": "qualification/no-duplicate-libraries/results/vite/immich-app--immich/audit.json",
-      "sha256": "8ab000517e047bb89d99bf7b85fa7324cedde13233caa7c3936ded6fb84d0900",
-      "retainedUnobservedZeroPairLibraries": [],
-      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
-    },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
-  },
+  "selectionOverride": {},
   "candidates": [
+    "@formatjs/icu-messageformat-parser",
     "@futo-org/backups-orchestrator-ui",
     "@immich/justified-layout-wasm",
+    "@immich/sdk",
+    "@immich/ui",
+    "@mdi/js",
+    "@noble/hashes",
+    "@photo-sphere-viewer/core",
+    "@photo-sphere-viewer/equirectangular-video-adapter",
+    "@photo-sphere-viewer/markers-plugin",
+    "@photo-sphere-viewer/resolution-plugin",
+    "@photo-sphere-viewer/settings-plugin",
+    "@photo-sphere-viewer/video-plugin",
+    "@simplewebauthn/browser",
+    "@tanstack/svelte-query",
+    "@types/geojson",
+    "@zoom-image/core",
+    "@zoom-image/svelte",
+    "dom-to-image",
+    "fabric",
+    "geo-coordinates-parser",
+    "geojson",
+    "handlebars",
+    "hash-wasm",
+    "hls-video-element",
+    "hls.js",
+    "intl-messageformat",
     "justified-layout",
     "lodash-es",
     "luxon",
+    "maplibre-gl",
     "media-chrome",
+    "pmtiles",
+    "qrcode",
+    "simple-icons",
     "socket.io-client",
+    "svelte-confetti",
+    "svelte-gestures",
     "svelte-i18n",
+    "svelte-jsoneditor",
+    "svelte-maplibre",
     "svelte-persisted-store",
     "tabbable",
     "tailwind-merge",
-    "tailwind-variants"
+    "tailwind-variants",
+    "thumbhash",
+    "transformation-matrix",
+    "uplot"
   ],
   "libraries": [
+    {
+      "library": "@immich/ui",
+      "declaredVersion": "^0.91.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@immich/ui",
+        "version": "0.91.1",
+        "integrity": "sha512-RIicH0+vQxrfCd4Pm1uVwQhmBM1zHsCmSe9k1OmTPDEe18m8grJ8dTQe0so8cg5CjJfN6riYiT0b2Rqq6+6IOA==",
+        "shasum": "6000c9ebb9332351021426ee1671861ad1347a06",
+        "tarballSHA256": "9612beb9c1c1b1cfee9c27d62984ada0868ae1faf847fe81a6a9e338afe2ec1c",
+        "bytes": 258759,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 5,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/actions/shortcut.js",
+          "source": "source-js/91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324.js",
+          "sourceSHA256": "91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324",
+          "span": [
+            1150,
+            1451
+          ],
+          "name": "matchesShortcut",
+          "normalizedASTSHA256": "a7b5b8f2f5e188931551d10952e4d35f4fe50dfee1e6bee6fd73dfdee33a09c1",
+          "codeSHA256": "4f2942f2b2a674b7db97022ce7489e0f7c09dcb4281a3d5febef19c291290e47",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "f21fa2214e96acde",
+            "graphNodes": 12,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/actions/shortcut.js",
+          "source": "source-js/91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324.js",
+          "sourceSHA256": "91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324",
+          "span": [
+            1575,
+            2344
+          ],
+          "name": "renderKeyboardEvent",
+          "normalizedASTSHA256": "7dc311c095ffba2744c36ff328bbd88dcf98cdd4b4a6ee727797c5bd287a1fb4",
+          "codeSHA256": "16928a16dc71015f7129e0669b3b42c0b787b9f42bd506be3a08b0fc9c035604",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 4,
+            "pogHash": "a8ddecaa7676f827",
+            "graphNodes": 25,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/actions/shortcut.js",
+          "source": "source-js/91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324.js",
+          "sourceSHA256": "91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324",
+          "span": [
+            2376,
+            3099
+          ],
+          "name": "renderShortcut",
+          "normalizedASTSHA256": "08d2006b696a036e35e14492b2f334d6370a71744e3825ec6d32d85798dc83f7",
+          "codeSHA256": "d4f15da04237b62530c2868f2445e8a221250f0b5aeaf47428cdeaf72f881978",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "8f0a585c8cc62f89",
+            "graphNodes": 32,
+            "graphEdges": 41,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/ae8338e2e8fea5a0c422",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "39121dfe51a7919c78393a9a905f2ab64e02ba5c8e3be277631db4520fcb789f"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
+    },
+    {
+      "library": "@formatjs/icu-messageformat-parser",
+      "declaredVersion": "^3.0.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@formatjs/icu-messageformat-parser",
+        "version": "3.5.22",
+        "integrity": "sha512-YuwN+dDKgssfuYwtOyGQD0CSn7K46g9cv1Fp0VgKpjZDDFvv8b8crzP990IcJhRPWHhKzCGsbUSJVIguyyFA5A==",
+        "shasum": "8715bd7958ef43919bb9d7d1779518e11084e9eb",
+        "tarballSHA256": "d659dc2935407ba253cfa15dd0497a3388172d69ba2f964a6c8d5e8dfe153403",
+        "bytes": 50697,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "index.js",
+          "source": "source-js/643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268.js",
+          "sourceSHA256": "643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268",
+          "span": [
+            208,
+            4446
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "e0ddff82afd95d7d11491d7780c1f2dd6347d3c28d70981a93514bebbd3a3cf9",
+          "codeSHA256": "30996ce44c3a890593785e689ed9e0c675d0b3da9b528a4f59bc1c5812db4794",
+          "features": {
+            "propertyOperations": 52,
+            "distinctOperationPropertyPairs": 27,
+            "pogHash": "30fbf0ad5fb61018",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 52,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268.js",
+          "sourceSHA256": "643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268",
+          "span": [
+            4545,
+            5326
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "863b06742d4e74a3b94ad693b3a8456b9776c86538ec8c9d08763e524dc8bb39",
+          "codeSHA256": "0797f9a61a589bcc20f82101661a0d3e81349aa207ca2e133410b746e24ddd70",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "dc862ddfa1c045cf",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268.js",
+          "sourceSHA256": "643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268",
+          "span": [
+            17900,
+            18645
+          ],
+          "name": "getDefaultHourSymbolFromLocale",
+          "normalizedASTSHA256": "8a06b6997ecc75de6c5591c404e3dadb3bddab2e73e37ee0de5c59c42c751256",
+          "codeSHA256": "be418fce7ce3f820f28530abd36398ad319641838b5f43c367175570d1edd188",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "c6979f7b4bf6479a",
+            "graphNodes": 36,
+            "graphEdges": 49,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/307bd2b544634255984e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
+    },
     {
       "library": "tailwind-merge",
       "declaredVersion": "^3.5.0",
@@ -544,6 +714,103 @@
       "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     },
     {
+      "library": "intl-messageformat",
+      "declaredVersion": "^12.0.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "intl-messageformat",
+        "version": "12.1.4",
+        "integrity": "sha512-JUkmv3cAEyijN3oiRiV3ctel7yVMuUCgfh7Pu8pj1/z6L1DSEPRyhuMaLjVw3pGmGJ5RDH54WVFxfMHZWTwyHw==",
+        "shasum": "6d3ad7a0256dca2aae8ee76a25e44c61f6bc2d09",
+        "tarballSHA256": "a99a5b7760d5566f074973abc52fc8959db5e21da767650a4125968c58baa000",
+        "bytes": 28420,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 31,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "index.js",
+          "source": "source-js/3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d.js",
+          "sourceSHA256": "3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d",
+          "span": [
+            2133,
+            6327
+          ],
+          "name": "formatToParts",
+          "normalizedASTSHA256": "c45feb09170cb4fda4243cbbb15b42261910b019c668e5e99ad7cddf37765a87",
+          "codeSHA256": "8346442d23fb080ad427c28f1c8795430c1c9d7554b72a06f497b2ee3b6ba691",
+          "features": {
+            "propertyOperations": 104,
+            "distinctOperationPropertyPairs": 31,
+            "pogHash": "b550f043dd1f749a",
+            "graphNodes": 108,
+            "graphEdges": 155,
+            "graphOperationOccurrences": 153,
+            "distinctGraphOperationPropertyPairs": 26,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d.js",
+          "sourceSHA256": "3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d",
+          "span": [
+            7003,
+            7602
+          ],
+          "name": "createDefaultFormatters",
+          "normalizedASTSHA256": "f39ba647b2c37a08e05a1248ebe151117c59343f336300d6c74f556477da89f2",
+          "codeSHA256": "9a6953eb2f4e065717a9a8e2d1815f03e0c4a15c6e6f6c4eb0d2b136e1ef1729",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "b381b6fa007f8232",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d.js",
+          "sourceSHA256": "3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d",
+          "span": [
+            7665,
+            9295
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "7410054f24accab43eac097ce09a906867d1b078e629406c23d058d6f5082399",
+          "codeSHA256": "536520fbeb20b2e37c78dca7aa777cfa69d9b833c35d41cacd02797d6bc6b233",
+          "features": {
+            "propertyOperations": 25,
+            "distinctOperationPropertyPairs": 23,
+            "pogHash": "4df98568561bc40e",
+            "graphNodes": 19,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 33,
+            "distinctGraphOperationPropertyPairs": 22,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/bc7fdc25d9a39e8815aa",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "cc4143615b27c66eafbe913f132a9e41ac14c1e2ec6b2df24dafeaa97f028850"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
+    },
+    {
       "library": "lodash-es",
       "declaredVersion": "^4.17.21",
       "origin": {
@@ -833,602 +1100,38 @@
       ],
       "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
       "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
-    },
-    {
-      "library": "@futo-org/backups-orchestrator-ui",
-      "declaredVersion": "1.12.1",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@futo-org/backups-orchestrator-ui",
-        "version": "1.12.1",
-        "integrity": "sha512-GejBWdU3w3dnVfK5llQVn/r6vGLrcZ/0ozzBnFlM5YdiCPr9NJebFcL9WMvghxjvw+CPTfDmYQfVbm35qFAfmA==",
-        "shasum": "0f769213fb5e2508322e541faa89428441356a61",
-        "tarballSHA256": "970a076366b647cf15e649a5b4d13f2efa4b5360e4b698eacf5fb259aeaf5713",
-        "bytes": 129761,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 7,
-      "parsedFunctions": 105,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/providers.js",
-          "source": "source-js/d12e06f9924033267824c6507482590da125cb804b458526f699cd2dad7a98b6.js",
-          "sourceSHA256": "d12e06f9924033267824c6507482590da125cb804b458526f699cd2dad7a98b6",
-          "span": [
-            484,
-            878
-          ],
-          "name": "configureYucca",
-          "normalizedASTSHA256": "b17dc444da5ad847d8865f7cafefc602afdfd406a07c25d4ee9bff79972a7490",
-          "codeSHA256": "37b62c7cbacf2d95c8dd21758a7a636b0fa81840f66e639295e1b1b9acfe0034",
-          "features": {
-            "propertyOperations": 11,
-            "distinctOperationPropertyPairs": 9,
-            "pogHash": "7bd33bff4e42e5f",
-            "graphNodes": 7,
-            "graphEdges": 6,
-            "graphOperationOccurrences": 19,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/services/backend.service.js",
-          "source": "source-js/c1f8cd6c88e5ac486f782d728648ba2b8d0886e323fc65ac42b48e850cd322f5.js",
-          "sourceSHA256": "c1f8cd6c88e5ac486f782d728648ba2b8d0886e323fc65ac42b48e850cd322f5",
-          "span": [
-            2252,
-            3275
-          ],
-          "name": "getBackendActions",
-          "normalizedASTSHA256": "d7ee3386df33fffcfb6a02a7e1b9358807c51b7afcd5c5fe2ffc9135f583b432",
-          "codeSHA256": "b98a5c47d38fd3a31280854f106f691fe60c4cef8233477ce742944b79e916a6",
-          "features": {
-            "propertyOperations": 15,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "f32f4dc4852aefc4",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 15,
-            "distinctGraphOperationPropertyPairs": 7,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/services/deviceFlow.service.svelte.js",
-          "source": "source-js/84a10332eeb37743882fad825c645f78823c08bafa25bc78fdba5057e4ab8a16.js",
-          "sourceSHA256": "84a10332eeb37743882fad825c645f78823c08bafa25bc78fdba5057e4ab8a16",
-          "span": [
-            1194,
-            1938
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "664ba8e8d66bb71d322d5fa6da672fd3aa792ec567d054c244112c6fb1011113",
-          "codeSHA256": "5fd7e17b7f265523a67d0ed58400b7f38288d57f601269d1f12c91481332ce3f",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 11,
-            "pogHash": "cfc6bcddf10cdd42",
-            "graphNodes": 12,
-            "graphEdges": 14,
-            "graphOperationOccurrences": 16,
-            "distinctGraphOperationPropertyPairs": 11,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/e4ddb007712e719df8f6",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "8aa9329fd0d377865d12828eda7a94fafbc834b3ae44da60a62525744a5ab050"
-        }
-      ],
-      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
-      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
-    },
-    {
-      "library": "media-chrome",
-      "declaredVersion": "^4.19.0",
-      "origin": {
-        "kind": "npm-package",
-        "name": "media-chrome",
-        "version": "4.19.4",
-        "integrity": "sha512-QAL48kT03+InLijPzXN1end9fcsl0/l53j1laCfbt/79vF2iZ45dovv4wQMw2q9zOLEiDwWsB718NJPhtZUBDg==",
-        "shasum": "aec1a1b92d99da2c5c902f2a882b65ad439824c5",
-        "tarballSHA256": "8e5a6d0cdfbc0596d98cf5937626295e7bd099c36e8afeeb0e23e77ed4b9dd92",
-        "bytes": 813772,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 4,
-      "parsedFunctions": 53,
-      "diagnostics": [
-        {
-          "file": "src/js/constants.ts",
-          "error": "SyntaxError: [28:2-28:4]: Unexpected token: 'as'"
-        },
-        {
-          "file": "src/js/extras/media-clip-selector/index.ts",
-          "error": "SyntaxError: [5:14-5:15]: Missing initializer in const declaration"
-        },
-        {
-          "file": "src/js/labels/labels.ts",
-          "error": "SyntaxError: [3:7-3:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/media-airplay-button.ts",
-          "error": "SyntaxError: [17:35-17:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-captions-button.ts",
-          "error": "SyntaxError: [20:35-20:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-cast-button.ts",
-          "error": "SyntaxError: [16:35-16:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-chrome-button.ts",
-          "error": "SyntaxError: [22:31-22:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-chrome-dialog.ts",
-          "error": "SyntaxError: [21:31-21:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-chrome-range.ts",
-          "error": "SyntaxError: [11:31-11:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-container.ts",
-          "error": "SyntaxError: [40:31-40:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-control-bar.ts",
-          "error": "SyntaxError: [7:12-7:27]: Expected 'from'"
-        },
-        {
-          "file": "src/js/media-controller.ts",
-          "error": "SyntaxError: [126:21-126:22]: Unexpected token: ':'"
-        },
-        {
-          "file": "src/js/media-duration-display.ts",
-          "error": "SyntaxError: [8:35-8:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-error-dialog.ts",
-          "error": "SyntaxError: [13:5-13:19]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/media-fullscreen-button.ts",
-          "error": "SyntaxError: [28:35-28:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-gesture-receiver.ts",
-          "error": "SyntaxError: [15:31-15:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-keyboard-shortcuts-dialog.ts",
-          "error": "SyntaxError: [9:5-9:13]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/media-live-button.ts",
-          "error": "SyntaxError: [13:35-13:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-loading-indicator.ts",
-          "error": "SyntaxError: [39:31-39:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-loop-button.ts",
-          "error": "SyntaxError: [11:35-11:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-mute-button.ts",
-          "error": "SyntaxError: [19:35-19:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-pip-button.ts",
-          "error": "SyntaxError: [16:35-16:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-play-button.ts",
-          "error": "SyntaxError: [15:35-15:36]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-playback-rate-button.ts",
-          "error": "SyntaxError: [17:42-17:43]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-poster-image.ts",
-          "error": "SyntaxError: [9:31-9:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-preview-thumbnail.ts",
-          "error": "SyntaxError: [14:31-14:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-seek-backward-button.ts",
-          "error": "SyntaxError: [13:32-13:33]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-seek-forward-button.ts",
-          "error": "SyntaxError: [13:31-13:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-store/media-store.ts",
-          "error": "SyntaxError: [34:7-34:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/media-store/request-map.ts",
-          "error": "SyntaxError: [17:7-17:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/media-store/state-mediator.ts",
-          "error": "SyntaxError: [30:7-30:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/media-store/util.ts",
-          "error": "SyntaxError: [6:46-6:47]: Unexpected token: ':'"
-        },
-        {
-          "file": "src/js/media-text-display.ts",
-          "error": "SyntaxError: [7:31-7:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-theme-element.ts",
-          "error": "SyntaxError: [53:17-53:18]: Unexpected token: ':'"
-        },
-        {
-          "file": "src/js/media-time-display.ts",
-          "error": "SyntaxError: [34:4-34:5]: Expected ')'"
-        },
-        {
-          "file": "src/js/media-time-range.ts",
-          "error": "SyntaxError: [25:5-25:10]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/media-tooltip.ts",
-          "error": "SyntaxError: [16:7-16:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/media-volume-range.ts",
-          "error": "SyntaxError: [16:20-16:21]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-audio-track-menu-button.ts",
-          "error": "SyntaxError: [31:27-31:28]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-audio-track-menu.ts",
-          "error": "SyntaxError: [36:17-36:18]: Unexpected token: ':'"
-        },
-        {
-          "file": "src/js/menu/media-captions-menu-button.ts",
-          "error": "SyntaxError: [49:29-49:30]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-captions-menu.ts",
-          "error": "SyntaxError: [22:31-22:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-chrome-menu-item.ts",
-          "error": "SyntaxError: [8:12-8:27]: Expected 'from'"
-        },
-        {
-          "file": "src/js/menu/media-chrome-menu.ts",
-          "error": "SyntaxError: [24:1-24:2]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-context-menu-item.ts",
-          "error": "SyntaxError: [4:31-4:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-context-menu.ts",
-          "error": "SyntaxError: [5:31-5:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-playback-rate-menu-button.ts",
-          "error": "SyntaxError: [14:34-14:35]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-playback-rate-menu.ts",
-          "error": "SyntaxError: [35:33-35:34]: Expected '{'"
-        },
-        {
-          "file": "src/js/menu/media-rendition-menu-button.ts",
-          "error": "SyntaxError: [51:21-51:22]: Expected '{'"
-        },
-        {
-          "file": "src/js/menu/media-rendition-menu.ts",
-          "error": "SyntaxError: [19:7-19:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/menu/media-settings-menu-button.ts",
-          "error": "SyntaxError: [32:33-32:34]: Expected '{'"
-        },
-        {
-          "file": "src/js/menu/media-settings-menu-item.ts",
-          "error": "SyntaxError: [4:31-4:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/menu/media-settings-menu.ts",
-          "error": "SyntaxError: [5:31-5:32]: Expected ')'"
-        },
-        {
-          "file": "src/js/react/media-store.tsx",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/js/react/useSyncExternalStoreWithSelector.ts",
-          "error": "SyntaxError: [25:21-25:22]: Expected ')'"
-        },
-        {
-          "file": "src/js/utils/anchor-utils.ts",
-          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
-        },
-        {
-          "file": "src/js/utils/attribute-token-list.ts",
-          "error": "SyntaxError: [2:2-2:12]: Expected '{'"
-        },
-        {
-          "file": "src/js/utils/captions.ts",
-          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
-        },
-        {
-          "file": "src/js/utils/element-utils.ts",
-          "error": "SyntaxError: [2:12-2:27]: Expected 'from'"
-        },
-        {
-          "file": "src/js/utils/i18n.ts",
-          "error": "SyntaxError: [3:18-3:19]: Missing initializer in const declaration"
-        },
-        {
-          "file": "src/js/utils/platform-tests.ts",
-          "error": "SyntaxError: [8:15-8:16]: Unexpected token: ':'"
-        },
-        {
-          "file": "src/js/utils/range-animation.ts",
-          "error": "SyntaxError: [1:5-1:10]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/utils/resize-observer.ts",
-          "error": "SyntaxError: [7:45-7:46]: Missing initializer in const declaration"
-        },
-        {
-          "file": "src/js/utils/server-safe-globals.ts",
-          "error": "SyntaxError: [12:12-12:13]: Unexpected token: ':'"
-        },
-        {
-          "file": "src/js/utils/template-parts.ts",
-          "error": "SyntaxError: [12:7-12:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/js/utils/template-processor.ts",
-          "error": "SyntaxError: [6:7-6:11]: Expected ','"
-        },
-        {
-          "file": "src/js/utils/time.ts",
-          "error": "SyntaxError: [17:2-17:4]: Unexpected token: 'as'"
-        },
-        {
-          "file": "src/js/utils/utils.ts",
-          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
-        }
-      ],
-      "witnesses": [
-        {
-          "file": "dist/cjs/extras/media-clip-selector/index.js",
-          "source": "source-js/da4e38c60ca58371d3c79a949f6b362a9acaf201219d91ef9b55ee4a487a9a26.js",
-          "sourceSHA256": "da4e38c60ca58371d3c79a949f6b362a9acaf201219d91ef9b55ee4a487a9a26",
-          "span": [
-            4120,
-            5833
-          ],
-          "name": "constructor",
-          "normalizedASTSHA256": "a2f81aca20f0d017424e1f8eb780ae4c3d270113ae69171841b957dc3d8346da",
-          "codeSHA256": "1de768cf8249199296e319aeb86c176b8f95c4552d25ef4654e4a211a1e3f9ed",
-          "features": {
-            "propertyOperations": 72,
-            "distinctOperationPropertyPairs": 35,
-            "pogHash": "b5fa016afc2cf058",
-            "graphNodes": 16,
-            "graphEdges": 18,
-            "graphOperationOccurrences": 131,
-            "distinctGraphOperationPropertyPairs": 35,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/cjs/extras/media-clip-selector/index.js",
-          "source": "source-js/da4e38c60ca58371d3c79a949f6b362a9acaf201219d91ef9b55ee4a487a9a26.js",
-          "sourceSHA256": "da4e38c60ca58371d3c79a949f6b362a9acaf201219d91ef9b55ee4a487a9a26",
-          "span": [
-            7202,
-            7444
-          ],
-          "name": "dragStart",
-          "normalizedASTSHA256": "3267d9258fd749cc21fe351eae06ebd03f1b0b46353a71c9db2debdf2d4bf967",
-          "codeSHA256": "1dd84069587ab7d30a363162d2862e93a962631362950bead51602ed257c69ce",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 6,
-            "pogHash": "5b19077bdd74b079",
-            "graphNodes": 10,
-            "graphEdges": 10,
-            "graphOperationOccurrences": 14,
-            "distinctGraphOperationPropertyPairs": 6,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/cjs/extras/media-clip-selector/index.js",
-          "source": "source-js/da4e38c60ca58371d3c79a949f6b362a9acaf201219d91ef9b55ee4a487a9a26.js",
-          "sourceSHA256": "da4e38c60ca58371d3c79a949f6b362a9acaf201219d91ef9b55ee4a487a9a26",
-          "span": [
-            7884,
-            8957
-          ],
-          "name": "drag",
-          "normalizedASTSHA256": "24a0689d9b3164ce37377be485a7c4d90ba407e7f8a2939d04bbe0a993f23bfa",
-          "codeSHA256": "030501cd18eccf2d6851609dd9048c4e01327d7d406735c466509a25b71df107",
-          "features": {
-            "propertyOperations": 25,
-            "distinctOperationPropertyPairs": 17,
-            "pogHash": "e25a487e59e8ee99",
-            "graphNodes": 12,
-            "graphEdges": 13,
-            "graphOperationOccurrences": 28,
-            "distinctGraphOperationPropertyPairs": 17,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/14326cef664a9fa7881d",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "13faec6cc4820429b213665a1fff88e1bcfad5a3aff10956f90dea08bf45e808"
-        }
-      ],
-      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
-      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
-    },
-    {
-      "library": "svelte-i18n",
-      "declaredVersion": "^4.0.1",
-      "origin": {
-        "kind": "npm-package",
-        "name": "svelte-i18n",
-        "version": "4.0.1",
-        "integrity": "sha512-jaykGlGT5PUaaq04JWbJREvivlCnALtT+m87Kbm0fxyYHynkQaxQMnIKHLm2WeIuBRoljzwgyvz0Z6/CMwfdmQ==",
-        "shasum": "e2d2ecda9d8848300b80599c2cf4d1e495f616e1",
-        "tarballSHA256": "3e4822e93719dbeaf5d0fe443d3106108f5ce6d9853b5300da46d6ceab1a14c2",
-        "bytes": 11739,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 2,
-      "parsedFunctions": 71,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/cli.js",
-          "source": "source-js/142cebd5ab1ec4c031ec0687ca465e2dcb4af6efb83f336f6810f72b0892030f.js",
-          "sourceSHA256": "142cebd5ab1ec4c031ec0687ca465e2dcb4af6efb83f336f6810f72b0892030f",
-          "span": [
-            797,
-            1054
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "6926776480e2c97a63786df85670ceef99e2be03217b4c5df625b6af3a832b52",
-          "codeSHA256": "fd8144497512ff83d6de02580c21e40373bdf3dafad4d3644ce8553144b13778",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 5,
-            "pogHash": "660e34ebc8075f6f",
-            "graphNodes": 10,
-            "graphEdges": 11,
-            "graphOperationOccurrences": 12,
-            "distinctGraphOperationPropertyPairs": 5,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/cli.js",
-          "source": "source-js/142cebd5ab1ec4c031ec0687ca465e2dcb4af6efb83f336f6810f72b0892030f.js",
-          "sourceSHA256": "142cebd5ab1ec4c031ec0687ca465e2dcb4af6efb83f336f6810f72b0892030f",
-          "span": [
-            6936,
-            9088
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "43c747949613505566bdb0973d7483a7e90a7c3eb67b0ddac3a1cffd9b790546",
-          "codeSHA256": "3dc2d5ecf91a90c1f66ef7c2ef4b2e17076adbf4aaf15e515c89e534e5b5f6fc",
-          "features": {
-            "propertyOperations": 24,
-            "distinctOperationPropertyPairs": 20,
-            "pogHash": "87166dd5080ea9e0",
-            "graphNodes": 30,
-            "graphEdges": 41,
-            "graphOperationOccurrences": 32,
-            "distinctGraphOperationPropertyPairs": 19,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/runtime.cjs",
-          "source": "source-js/9968fbd7afb1567869ce014ce5d7c9ac2a579aada9d646839bfbc0c13e612e4d.js",
-          "sourceSHA256": "9968fbd7afb1567869ce014ce5d7c9ac2a579aada9d646839bfbc0c13e612e4d",
-          "span": [
-            6732,
-            7943
-          ],
-          "name": "init",
-          "normalizedASTSHA256": "6bec70e443c1d8878ad3f3a577e11ecd15ef7d24444f7d839a5cb9e82d74d46e",
-          "codeSHA256": "5701898a73e4d88a0ed0deb4a1804b4bb90d078e2504d590a0a476eb5654b261",
-          "features": {
-            "propertyOperations": 28,
-            "distinctOperationPropertyPairs": 15,
-            "pogHash": "c9bc07174f03a11b",
-            "graphNodes": 25,
-            "graphEdges": 31,
-            "graphOperationOccurrences": 32,
-            "distinctGraphOperationPropertyPairs": 14,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/c5e9dbff1a7f1b50f053",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "ef0dd33b79c97cf26fad4a784d20a086debc24b66479269510223f0c33e776c0"
-        }
-      ],
-      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
-      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
+    "@immich/ui",
+    "@formatjs/icu-messageformat-parser",
     "tailwind-merge",
     "tabbable",
     "tailwind-variants",
     "justified-layout",
+    "intl-messageformat",
     "lodash-es",
     "luxon",
-    "socket.io-client",
-    "@futo-org/backups-orchestrator-ui",
-    "media-chrome",
-    "svelte-i18n"
+    "socket.io-client"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
+    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
+      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
     },
     "frontendManifestSHA256": "065ed2f44406e397bb9dea8d742733740566b088dd8964bbd5746f9a73b78d39",
     "manifestRelative": "web/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:56:19.146Z",
+  "started": "2026-11-09T05:04:10.541Z",
   "reason": null,
-  "finished": "2026-11-09T10:56:19.468Z",
+  "finished": "2026-11-09T05:04:10.833Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/immich-app--immich/qualification.json",
-  "sourceEligibilityRecordSHA256": "c1e3c402ae65a7cabf0f7998231e1d3d5a2664edc73161f1aaad814e69876e19",
-  "organizationSignature": "ca44b1b9dcc4f872e91a5cb06f016bec699470057b5502340a25ac7191ec4112"
+  "sourceEligibilityRecordSHA256": "8af679c4b56e1ca50f5e80f554ea509700f7bdede1f4c5ba42ca13aa9cdc0fc7",
+  "organizationSignature": "ccf3bac19050fd635e8e8e7320ac8e95db5db997e50f2fcc5a1cec2baec989a6"
 }

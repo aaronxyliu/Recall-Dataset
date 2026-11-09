@@ -1,7 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import crypto from 'node:crypto'
-import {sourceOwnerResolver} from './source-owner.mjs'
 import {functionInventory} from './function-inventory.mjs'
 import {SourceMapConsumer} from 'source-map'
 
@@ -33,7 +32,12 @@ function inventory(code,prefix,pkg){
   if(pkg)for(const fn of inv.functions)nodes.set(fn.id,fn)
   return inv.point
 }
-const resolveOwner=sourceOwnerResolver(sample)
+function packageOf(source){
+  const explicit=sample.sourceOwnership?.[source]
+  if(explicit){if(!sample.selected.includes(explicit.library))throw Error('Ownership names an unselected library');return explicit.library}
+  const matches=[...source.replaceAll('\\','/').matchAll(/(?:^|\/)(?:node_modules|~)\/((?:@[^/]+\/)?[^/]+)/g)]
+  return matches.at(-1)?.[1]
+}
 const moduleAssets=sample.moduleScope?new Set(sample.moduleScope.assets.filter(a=>a.role==='module-build-output').map(a=>JSON.stringify([a.url,a.sha256,a.mapSHA256]))):null
 for(const a of capture.assets){
   if(moduleAssets&&!moduleAssets.has(JSON.stringify([a.url,a.sha256,a.map?.sha256])))continue
@@ -46,19 +50,20 @@ for(const a of capture.assets){
     if(digest(code)!==a.sha256)throw Error('script digest mismatch')
     if(a.map.link==='adjacent'&&map.file&&path.basename(map.file)!==path.basename(a.url.split('?')[0]))throw Error('map file mismatch')
     const consumer=new SourceMapConsumer(map)
-    const sourceOwners=new Map(consumer.sources.map(source=>[source,resolveOwner(source,consumer.sourceContentFor(source,true)).library]))
-    if(!consumer.sources.some(source=>presence.has(sourceOwners.get(source))))continue
+    if(!consumer.sources.some(source=>presence.has(packageOf(source))))continue
     const lookup=inventory(code,a.url+'#'+a.sha256,null), cache=new Map(),edges=[],fullEdges=[],supportEdges=[],found=[]
     consumer.eachMapping(m=>{
       const gp=lookup(m.generatedLine,m.generatedColumn),g=gp.fn
       let s,sp
       if(m.originalLine!=null&&m.source){
         if(!cache.has(m.source)){
-          const pkg=sourceOwners.get(m.source)
+          const pkg=packageOf(m.source)
           let loc=null
           if(presence.has(pkg)){
             found.push([pkg,m.source])
             const content=consumer.sourceContentFor(m.source,true)
+            const explicit=sample.sourceOwnership?.[m.source]
+            if(explicit&&digest(content)!==explicit.sha256)throw Error('Explicit source ownership hash mismatch')
             if(content==null)missingSources.add(m.source)
             if(content!=null){try{loc=inventory(content,m.source+'#'+digest(content),pkg)}catch{failures.push({asset:a.url,source:m.source,reason:'source parse failed'})}}
           }

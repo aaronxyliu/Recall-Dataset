@@ -14,66 +14,42 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {
-    "excludeLibraries": [
-      "@codemirror/autocomplete",
-      "@codemirror/commands",
-      "@codemirror/lang-yaml",
-      "@codemirror/language",
-      "@codemirror/lint",
-      "@codemirror/search",
-      "@codemirror/state",
-      "@codemirror/view",
-      "@jsonforms/core",
-      "@jsonforms/vue",
-      "@jsonforms/vue-vanilla",
-      "@lezer/highlight",
-      "@sentry/vue",
-      "express",
-      "express-basic-auth",
-      "frappe-charts",
-      "jose",
-      "keycloak-js",
-      "oidc-client-ts",
-      "pingman",
-      "vue",
-      "yaml"
-    ],
-    "preferredLibraries": [
-      "vuex",
-      "crypto-js",
-      "sortablejs",
-      "dompurify",
-      "rsup-progress",
-      "js-yaml",
-      "vue-i18n",
-      "vue-select",
-      "ajv",
-      "vue-router",
-      "ajv-formats",
-      "simple-icons"
-    ],
-    "duplicateAudit": {
-      "record": "qualification/no-duplicate-libraries/results/vite/Lissy93--dashy/audit.json",
-      "sha256": "dae5150306023756b69bd667c7378f6874b3c52e3a50e6de6e57bff641815ae3",
-      "retainedUnobservedZeroPairLibraries": [],
-      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
-    },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
-  },
+  "selectionOverride": {},
   "candidates": [
+    "@codemirror/autocomplete",
+    "@codemirror/commands",
+    "@codemirror/lang-yaml",
+    "@codemirror/language",
+    "@codemirror/lint",
+    "@codemirror/search",
+    "@codemirror/state",
+    "@codemirror/view",
+    "@jsonforms/core",
+    "@jsonforms/vue",
+    "@jsonforms/vue-vanilla",
+    "@lezer/highlight",
+    "@sentry/vue",
     "ajv",
     "ajv-formats",
     "crypto-js",
     "dompurify",
+    "express",
+    "express-basic-auth",
+    "frappe-charts",
+    "jose",
     "js-yaml",
+    "keycloak-js",
+    "oidc-client-ts",
+    "pingman",
     "rsup-progress",
     "simple-icons",
     "sortablejs",
+    "vue",
     "vue-i18n",
     "vue-router",
     "vue-select",
-    "vuex"
+    "vuex",
+    "yaml"
   ],
   "libraries": [
     {
@@ -1391,22 +1367,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
+    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
+      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
     },
     "frontendManifestSHA256": "6515c27336fe22b3f2832c476d862455bc3ba017f9bf7900fdb78c505590bfeb",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:56:17.210Z",
+  "started": "2026-11-09T05:04:09.536Z",
   "reason": null,
-  "finished": "2026-11-09T10:56:17.307Z",
+  "finished": "2026-11-09T05:04:09.643Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/Lissy93--dashy/qualification.json",
-  "sourceEligibilityRecordSHA256": "33563b1bcb70c2ea5f4f01b6f080515a140978947197697bd8a677e4bc4f62d3",
-  "organizationSignature": "30155342b6637005a676f445468396942e75ccb21a61781515fb2a8ad9414b1e"
+  "sourceEligibilityRecordSHA256": "1b37771ffde5580d458b6e84c7e526649b40c464adcf9d853fd209ccc819e788",
+  "organizationSignature": "5a0e9d06e8adcce69d7631ab8545f45c3067c0502b69a13e93df09ffd46527b2"
 }

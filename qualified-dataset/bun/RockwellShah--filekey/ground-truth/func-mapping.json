@@ -4904,7 +4904,6 @@
     "qrcode-generator",
     "@scure/base"
   ],
-  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -4927,37 +4926,13 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
-  "libraryMultiplicityPolicy": {
-    "schema": "recall.no-duplicate-library-policy/v1",
-    "scope": "repository-library-instance",
-    "inspectAllCapturedRuntimeAssets": true,
-    "excludeConfirmedDuplicateLibraries": true,
-    "excludeUnassessedLibrariesFromScoring": true,
-    "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": false,
-    "unobservedLibrariesContributeNoEvaluationPairs": true,
-    "sourceFunctionThresholdUnchanged": true,
-    "requireInitialAnchors": false,
-    "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10,
-    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
-  },
   "provenance": {
     "upstreamCommit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
     "archiveRecord": "bundling-dataset/bun/RockwellShah--filekey/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "5cbbd224d81b08ce41f07c97e15f9019ca524786ba90dce4a54d855b1f29d9d1",
-    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
-    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "46fedf171b1791e58215f2884d4bcd105d275e794dc9aacc76a8672858c216a7",
-    "moduleScopeSHA256": "45760fae9552250824cc5847ac0990b0c1a78259d7fda920e0904ee7807080ee",
-    "duplicateAuditSHA256": "36ab300c1b5fe22884cd47789b5d8b0cdb058dbeba784b32fa941dcdd3e26ec0"
-  },
-  "evaluationLibraries": [
-    "@hpke/core",
-    "@noble/curves",
-    "@noble/hashes",
-    "fflate",
-    "qrcode-generator",
-    "@scure/base"
-  ]
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "2166b39afddd2eda95f7a1ccc58f858cea1eaa406f535461c20927eb3ae0406f",
+    "moduleScopeSHA256": "45760fae9552250824cc5847ac0990b0c1a78259d7fda920e0904ee7807080ee"
+  }
 }

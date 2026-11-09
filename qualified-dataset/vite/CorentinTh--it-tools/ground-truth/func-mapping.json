@@ -1,14 +1,14 @@
 {
   "pairDefinition": "reciprocal-body-mapped-v2",
   "evidence": {
-    "bodyToBodyPoints": 61605,
+    "bodyToBodyPoints": 61554,
     "ignoredBoundaryPoints": 22935,
     "ignoredStructuralPoints": 24190,
-    "unresolvedBodyPoints": 48910,
+    "unresolvedBodyPoints": 48961,
     "acceptanceRules": {
       "reciprocal-body": 1302,
-      "reciprocal-body-and-full-span": 1376,
-      "reciprocal-full-span": 6
+      "reciprocal-body-and-full-span": 1374,
+      "reciprocal-full-span": 5
     }
   },
   "repo": "CorentinTh/it-tools",
@@ -24,7 +24,7 @@
     "marked": 1,
     "vue-i18n": 1,
     "vuedraggable": 1,
-    "@tabler/icons-vue": 9
+    "@it-tools/bip39": 0
   },
   "pairs": [
     {
@@ -20258,26 +20258,6 @@
       "evidenceRule": "reciprocal-body-and-full-span"
     },
     {
-      "library": "@tabler/icons-vue",
-      "source": "../../node_modules/.pnpm/@tabler+icons-vue@3.20.0_vue@3.3.4/node_modules/@tabler/icons-vue/dist/esm/createVueComponent.mjs#49aaef31b6f313dc5b36458dbb6e1b04f6837ff48bacc9c587132628b8026a9d@334-990",
-      "bundled": "<local>/assets/index-33ba6200.js#1fccef596b5a16c4cd8b329075f7e6548ab33fc9e2a9bb796b976a1c6c3f69df@846198-846546",
-      "distinctOriginalPositions": 66,
-      "distinctGeneratedPositions": 72,
-      "bodyOriginalPositions": 48,
-      "bodyGeneratedPositions": 48,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@tabler/icons-vue",
-      "source": "../../node_modules/.pnpm/@tabler+icons-vue@3.20.0_vue@3.3.4/node_modules/@tabler/icons-vue/dist/esm/createVueComponent.mjs#49aaef31b6f313dc5b36458dbb6e1b04f6837ff48bacc9c587132628b8026a9d@475-497",
-      "bundled": "<local>/assets/index-33ba6200.js#1fccef596b5a16c4cd8b329075f7e6548ab33fc9e2a9bb796b976a1c6c3f69df@846303-846313",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 4,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
       "library": "vuedraggable",
       "source": "../../node_modules/.pnpm/vuedraggable@4.1.0_vue@3.3.4/node_modules/vuedraggable/dist/vuedraggable.umd.js#5a622c067f3d66ca9cd669db0113eb108b241b58892e965a30cf75a00f102c32@1-466",
       "bundled": "<local>/assets/index-33ba6200.js#1fccef596b5a16c4cd8b329075f7e6548ab33fc9e2a9bb796b976a1c6c3f69df@904990-905025",
@@ -26840,14 +26820,6 @@
       "evidenceRule": "reciprocal-full-span"
     },
     {
-      "library": "@tabler/icons-vue",
-      "source": "../../node_modules/.pnpm/@tabler+icons-vue@3.20.0_vue@3.3.4/node_modules/@tabler/icons-vue/dist/esm/createVueComponent.mjs#49aaef31b6f313dc5b36458dbb6e1b04f6837ff48bacc9c587132628b8026a9d@288-990",
-      "bundled": "<local>/assets/index-33ba6200.js#1fccef596b5a16c4cd8b329075f7e6548ab33fc9e2a9bb796b976a1c6c3f69df@846187-846546",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
       "library": "vuedraggable",
       "source": "../../node_modules/.pnpm/vuedraggable@4.1.0_vue@3.3.4/node_modules/vuedraggable/dist/vuedraggable.umd.js#5a622c067f3d66ca9cd669db0113eb108b241b58892e965a30cf75a00f102c32@45385-45412",
       "bundled": "<local>/assets/index-33ba6200.js#1fccef596b5a16c4cd8b329075f7e6548ab33fc9e2a9bb796b976a1c6c3f69df@919279-919291",
@@ -26858,12 +26830,12 @@
   ],
   "observedSplit": {
     "count": 0,
-    "denominator": 2678,
+    "denominator": 2676,
     "percent": 0
   },
   "observedCombine": {
     "count": 0,
-    "denominator": 2678,
+    "denominator": 2676,
     "percent": 0
   },
   "removePercent": null,
@@ -26871,8 +26843,8 @@
   "missingSourceContents": [],
   "failures": [],
   "sourceFunctionAccounting": {
-    "total": 3862,
-    "oneToOne": 2684,
+    "total": 3859,
+    "oneToOne": 2681,
     "multipleTargets": 0,
     "multipleContributors": 0,
     "unresolvedBody": 0,
@@ -26985,9 +26957,8 @@
     "marked",
     "vue-i18n",
     "vuedraggable",
-    "@tabler/icons-vue"
+    "@it-tools/bip39"
   ],
-  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -27010,41 +26981,13 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
-  "libraryMultiplicityPolicy": {
-    "schema": "recall.no-duplicate-library-policy/v1",
-    "scope": "repository-library-instance",
-    "inspectAllCapturedRuntimeAssets": true,
-    "excludeConfirmedDuplicateLibraries": true,
-    "excludeUnassessedLibrariesFromScoring": true,
-    "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": false,
-    "unobservedLibrariesContributeNoEvaluationPairs": true,
-    "sourceFunctionThresholdUnchanged": true,
-    "requireInitialAnchors": false,
-    "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10,
-    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
-  },
   "provenance": {
     "upstreamCommit": "d505845f918e946ec300af7b36efc107e2f66e9e",
     "archiveRecord": "bundling-dataset/vite/CorentinTh--it-tools/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "6c1079dcd362ed5d249acb4dc27a857d531966af2e3b941d40efe032de3a3563",
-    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
-    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "daa195824b09959ebef7c6e204017b32c1c863b0f950cd19d1942ad3d914d835",
-    "moduleScopeSHA256": "3b9ae568b1e51408a8dcea88d6dd0be4940ee6cde9d926d9dab57b8be63aca93",
-    "duplicateAuditSHA256": "197aef43170a031d945f25f247665eaef17329684f499dce4df79b6d002bb5d1"
-  },
-  "evaluationLibraries": [
-    "naive-ui",
-    "fuse.js",
-    "lodash",
-    "dompurify",
-    "vue-router",
-    "@vueuse/core",
-    "marked",
-    "vue-i18n",
-    "vuedraggable",
-    "@tabler/icons-vue"
-  ]
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "15e3367d62975e6491ba01d92c3463ab658c45fc6dff48a804ace35a4fdd57ca",
+    "moduleScopeSHA256": "3b9ae568b1e51408a8dcea88d6dd0be4940ee6cde9d926d9dab57b8be63aca93"
+  }
 }
