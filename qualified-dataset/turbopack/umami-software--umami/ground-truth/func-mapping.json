@@ -8307,11 +8307,24 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
+  "correspondencePolicy": {
+    "schema": "recall.module-dependency-policy/v1",
+    "requireReviewedModuleIngress": true,
+    "allowedAssetRole": "module-build-output",
+    "outputFormatIndependent": true,
+    "excludeGlobalScriptLists": true,
+    "excludeCopiedStandaloneVendors": true,
+    "excludeUnreviewedAndExternalAssets": true,
+    "filterBeforeCorrespondenceGraph": true,
+    "requireInitialAnchors": false
+  },
   "provenance": {
     "upstreamCommit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
     "archiveRecord": "bundling-dataset/turbopack/umami-software--umami/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "30e6503bd9668253f03168c876e17e68c62f1c17852caae6d3c9fa9deb0f8b98",
-    "collectorSHA256": "34be0f5318d7463394d7c8b10455366562037d86db517f522d40e23afd3adf68",
-    "spanVerifierSHA256": "da36a02d7ebfcba7c4d4bd4cdb1391df52f9921ba0d97a22eba36483788816ae"
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "433df9f18b42b7072d73a4062c716bac3129c0d33c1200113e49e4a6a54ff950",
+    "moduleScopeSHA256": "0b21244f208bd1ed2bba57909c0c4aba1a1b0789eef352cfe9fbf8cb063ce832"
   }
 }

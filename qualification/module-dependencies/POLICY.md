@@ -1,0 +1,19 @@
+# Module-dependency correspondence scope
+
+User instruction, 2026-11-09: track only functions entering through module dependencies. The user confirmed that output format is independent: dependencies imported into the repository's own UMD/IIFE output still count.
+
+An eligible pair must originate in a production dependency imported, re-exported or required into a reviewed repository module build. This includes compiled application/library entries, their code-split chunks, module-imported polyfills and bundled workers. A dependency's published minified entry is not excluded merely because of its filename when that entry was resolved through the module build.
+
+Exclude standalone copied third-party distributions, Angular `scripts[]` global concatenation, third-party CDN scripts and unreviewed outputs. A filename such as `vendor.js`, a UMD wrapper or a `node_modules` map path alone does not establish the ingress. Receipts combine the pinned manifest and relevant build configuration, the actual dataset Docker recipe, documented output families, and the exact captured script/map identities. Per-asset decisions are frozen under `results/`; a changed capture requires another review. Future subjects without a review cannot enter the active dataset.
+
+Filtering happens **before** one-to-one graph construction. Otherwise an excluded global copy could still block a legitimate module correspondence through one-to-many evidence. The independent span verifier and final audit also check every accepted target against the module allowlist. The original full runtime captures remain byte-identical for provenance; excluded assets contribute neither evaluation pairs nor selected-library map-reference snapshots.
+
+The source-only criterion remains unchanged: 3–10 production libraries per repository; each selected library needs at least three distinct source functions with at least ten own-body POG property operations. No initial-anchor or minimum-pair threshold is introduced. ngx-admin's global-only TinyMCE/Pace selections are replaced with eligible Angular module dependencies. Peggy's docs production candidate pool consists of standalone vendor/docs-tool dependencies, so it cannot provide three eligible module libraries and is excluded from active membership.
+
+The rule does not claim semantic deduplication across multiple genuine module entry points. It removes the separate global/vendor ingestion path that caused the ngx-admin duplication. Measurements remain bounded to the previously captured files; no extra lazy chunks are discovered or fetched.
+
+Reproduce: prepare pinned source checkouts and install the frozen collector/source-analysis dependencies; refresh source preflight after selection changes; use `review.py` to reproduce this frozen review cohort and inspect the receipts; run `qualification/source-functions-3/organize.py`, `audit.mjs` and `publish.py`. The organized output contains self-contained module configuration snapshots in `module-evidence/` and can be audited without source checkouts.
+
+The [pair-level diff audit](pair-diff-audit.json) accounts for every pair in the immutable pre-rule cohort (`b349e2c9`), verifies that every removed pair has non-module ingress, and verifies module ingress for every retained or newly accepted pair. The [static-copy audit](static-copy-audit.json) additionally checks pinned `public/` scripts against captured outputs so a copied public vendor cannot be mistaken for a generated module chunk merely because of its URL.
+
+`review.py` deliberately reads the frozen pre-rule index and captures from Git commit `b349e2c9`, so rerunning it cannot silently reset the before/after denominator or forget the excluded Peggy case. A genuinely new capture needs an explicit new review/profile and matching script/map identities; copying an old receipt fails the capture-set audit.

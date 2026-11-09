@@ -1,0 +1,67 @@
+{
+  "schema": "recall.module-ingress-scope/v1",
+  "subject": "vite/CorentinTh--it-tools",
+  "repo": "CorentinTh/it-tools",
+  "commit": "d505845f918e946ec300af7b36efc107e2f66e9e",
+  "policy": "module-dependencies-only",
+  "outputFormatIndependent": true,
+  "moduleOutputPattern": "^<local>/(?:assets/.*\\.js|sw\\.js|workbox-[^/]+\\.js)$",
+  "angularGlobalBundleNames": [],
+  "evidence": [
+    {
+      "path": "module-evidence/package.json",
+      "sha256": "f80cf1b724124a495e57c36996114bed138849ea42c8a97bcbc809782aa3d7f5",
+      "kind": "pinned-source",
+      "upstreamPath": "package.json"
+    },
+    {
+      "path": "module-evidence/vite.config.ts",
+      "sha256": "0354a9cc8a9e7804c4d4842fdf72ceded31d129aca997f83c7e762f59eb3c0ce",
+      "kind": "pinned-source",
+      "upstreamPath": "vite.config.ts"
+    },
+    {
+      "path": "module-evidence/dataset-recipe.Dockerfile",
+      "sha256": "3329ddd5e6075bc0218de1cce315daf18e1f74c5350b4d603a70ae8b48c41c6b",
+      "kind": "verified-build-recipe",
+      "upstreamPath": "dataset-recipe.Dockerfile"
+    }
+  ],
+  "assets": [
+    {
+      "url": "<local>/assets/index-33ba6200.js",
+      "sha256": "1fccef596b5a16c4cd8b329075f7e6548ab33fc9e2a9bb796b976a1c6c3f69df",
+      "mapSHA256": "46c799e5ee7f2cc9e266dd2f2f5dcf0d491901be48da287fac9196160960820e",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "13616f3fb43d5ef1c945296857cd6bff3a5f5868ef559b4250b65c9da62afa82",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/assets/workbox-window.prod.es5-a7b12eab.js",
+      "sha256": "60ae20f00f83efcde19df13ab27a28917f068abc9d33b6e8c0e26ca528a336e1",
+      "mapSHA256": "c9129b2a92633d8c8668abd18693eb1bb77624834681fdc9a1c44382587119ab",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/sw.js",
+      "sha256": "a4dc4d031e30ec536dbb9db44e48ef43898c1b6f1f5c9221b47c8f24df9d6eef",
+      "mapSHA256": "aa7e226000a9fdf55e07fafa7803ad2f9cf1ec5c0eb6521a1fa3764b1981a998",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/workbox-3e8df8c8.js",
+      "sha256": "dc01173bba4f4f0276ce8ec5cee2aa5b65a913ba70d74706396b52fe7b36d190",
+      "mapSHA256": "94d16015fc25de10f567aa4201303fcef2820d0548398a74365bc5edc06ca0f3",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    }
+  ]
+}

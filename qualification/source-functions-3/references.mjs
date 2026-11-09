@@ -7,7 +7,9 @@ const require=createRequire(new URL('../../verification/hufang-builds-2026-11-08
 const {SourceMapConsumer}=require('source-map');
 const [recordFile,selectionFile,destination]=process.argv.slice(2);
 const record=JSON.parse(fs.readFileSync(recordFile)),selection=JSON.parse(fs.readFileSync(selectionFile)),selected=new Set(selection.selected),files=new Map(),diagnostics=[],seen=new Set();
+const moduleAssets=selection.moduleScope?new Set(selection.moduleScope.assets.filter(a=>a.role==='module-build-output').map(a=>JSON.stringify([a.url,a.sha256,a.mapSHA256]))):null;
 for(const asset of record.capture.assets) {
+  if(moduleAssets&&!moduleAssets.has(JSON.stringify([asset.url,asset.sha256,asset.map?.sha256])))continue;
   const map=asset.map;if(map?.status!=='map-found'||seen.has(map.sha256))continue;seen.add(map.sha256);
   const file=path.resolve(path.dirname(recordFile),map.localPath||'source-maps/'+map.sha256+'.map'),bytes=fs.readFileSync(file);
   if(sha(bytes)!==map.sha256)throw Error('Map hash mismatch');
@@ -23,4 +25,4 @@ for(const asset of record.capture.assets) {
 }
 const keep=new Set([...files.values()].map(file=>file.path));
 if(fs.existsSync(path.join(destination,'reference-js')))for(const file of fs.readdirSync(path.join(destination,'reference-js')))if(!keep.has('reference-js/'+file))fs.unlinkSync(path.join(destination,'reference-js',file));
-fs.writeFileSync(path.join(destination,'reference-manifest.json'),JSON.stringify({policy:'Available original source texts from captured maps. These snapshots are not an acceptance gate; source eligibility is established separately before building. Package-name attribution does not prove a single installed version.',files:[...files.values()],diagnostics},null,2)+'\n');
+fs.writeFileSync(path.join(destination,'reference-manifest.json'),JSON.stringify({policy:'Available original source texts from reviewed module-dependency maps; global and standalone vendor originals are excluded. These snapshots are not an acceptance gate; source eligibility is established separately before building. Package-name attribution does not prove a single installed version.',files:[...files.values()],diagnostics},null,2)+'\n');

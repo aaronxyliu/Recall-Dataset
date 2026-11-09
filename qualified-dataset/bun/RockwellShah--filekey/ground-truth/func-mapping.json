@@ -4915,11 +4915,24 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
+  "correspondencePolicy": {
+    "schema": "recall.module-dependency-policy/v1",
+    "requireReviewedModuleIngress": true,
+    "allowedAssetRole": "module-build-output",
+    "outputFormatIndependent": true,
+    "excludeGlobalScriptLists": true,
+    "excludeCopiedStandaloneVendors": true,
+    "excludeUnreviewedAndExternalAssets": true,
+    "filterBeforeCorrespondenceGraph": true,
+    "requireInitialAnchors": false
+  },
   "provenance": {
     "upstreamCommit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
     "archiveRecord": "bundling-dataset/bun/RockwellShah--filekey/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "5cbbd224d81b08ce41f07c97e15f9019ca524786ba90dce4a54d855b1f29d9d1",
-    "collectorSHA256": "34be0f5318d7463394d7c8b10455366562037d86db517f522d40e23afd3adf68",
-    "spanVerifierSHA256": "da36a02d7ebfcba7c4d4bd4cdb1391df52f9921ba0d97a22eba36483788816ae"
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "2166b39afddd2eda95f7a1ccc58f858cea1eaa406f535461c20927eb3ae0406f",
+    "moduleScopeSHA256": "45760fae9552250824cc5847ac0990b0c1a78259d7fda920e0904ee7807080ee"
   }
 }

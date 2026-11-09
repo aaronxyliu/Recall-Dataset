@@ -23756,11 +23756,24 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
+  "correspondencePolicy": {
+    "schema": "recall.module-dependency-policy/v1",
+    "requireReviewedModuleIngress": true,
+    "allowedAssetRole": "module-build-output",
+    "outputFormatIndependent": true,
+    "excludeGlobalScriptLists": true,
+    "excludeCopiedStandaloneVendors": true,
+    "excludeUnreviewedAndExternalAssets": true,
+    "filterBeforeCorrespondenceGraph": true,
+    "requireInitialAnchors": false
+  },
   "provenance": {
     "upstreamCommit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
     "archiveRecord": "bundling-dataset/esbuild/swimlane--ngx-charts/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "d2949647741f9ad52ccc4e159248d9d4956bf33acc81b54d1041e015abbb6aaf",
-    "collectorSHA256": "34be0f5318d7463394d7c8b10455366562037d86db517f522d40e23afd3adf68",
-    "spanVerifierSHA256": "da36a02d7ebfcba7c4d4bd4cdb1391df52f9921ba0d97a22eba36483788816ae"
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "8c8de64fd1a0a363296edba93122fde9ab02a1b44e73c82ea4737c62320f7fae",
+    "moduleScopeSHA256": "255838c10940bdaaedf1b5b8ee4d483d74bfc250c186b01a513a7f207952e9ed"
   }
 }

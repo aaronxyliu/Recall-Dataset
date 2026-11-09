@@ -1,0 +1,53 @@
+{
+  "schema": "recall.module-ingress-scope/v1",
+  "subject": "parcel/tensorflow--tfjs",
+  "repo": "tensorflow/tfjs",
+  "commit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
+  "policy": "module-dependencies-only",
+  "outputFormatIndependent": true,
+  "moduleOutputPattern": "^<local>/tfjs-automl/demo/img_classification/[^/]+\\.js$",
+  "angularGlobalBundleNames": [],
+  "evidence": [
+    {
+      "path": "module-evidence/tfjs-automl/demo/img_classification/package.json",
+      "sha256": "9df6271007c86499e1dbd2d7aa97475fd527675e5f432d4d76164b510592f7af",
+      "kind": "pinned-source",
+      "upstreamPath": "tfjs-automl/demo/img_classification/package.json"
+    },
+    {
+      "path": "module-evidence/tfjs-automl/rollup.config.mjs",
+      "sha256": "a5a32ee7d5b9b5b1e259d9003b7300eb25a18f92a4bde67406e3baef69c0fb11",
+      "kind": "pinned-source",
+      "upstreamPath": "tfjs-automl/rollup.config.mjs"
+    },
+    {
+      "path": "module-evidence/dataset-recipe.Dockerfile",
+      "sha256": "7d4feb4f52286c37e63e41c9f6d8fe45fd0c3713e0cf8449e675c2b7f227563c",
+      "kind": "verified-build-recipe",
+      "upstreamPath": "dataset-recipe.Dockerfile"
+    }
+  ],
+  "assets": [
+    {
+      "url": "<local>/tfjs-automl/demo/img_classification/index.65b789d3.js",
+      "sha256": "9d1e636cfd203a298becca98c2ffc76987bec0e9bca3f1617dd13a16db7dd9fa",
+      "mapSHA256": "7ef6c25b6740d873805922de14b4910032c2e94242dd67e2a2d07b6f5032b8a6",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "867aeba181a7514115903c7952e35a9f8e07a83b66e5804d428c1f80ff4833f2",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "e3210fcd70ea30bac80a40669252f2d99b4038df44e0a961d4adb7636c648bc3",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    }
+  ]
+}

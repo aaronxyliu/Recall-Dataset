@@ -1,0 +1,67 @@
+{
+  "schema": "recall.module-ingress-scope/v1",
+  "subject": "webpack/bailicangdu--vue2-elm",
+  "repo": "bailicangdu/vue2-elm",
+  "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
+  "policy": "module-dependencies-only",
+  "outputFormatIndependent": true,
+  "moduleOutputPattern": "^<local>/elm/static/js/[^/]+\\.js$",
+  "angularGlobalBundleNames": [],
+  "evidence": [
+    {
+      "path": "module-evidence/package.json",
+      "sha256": "fe7ad220760c2d27a9e3f84f5387d60c9cd35e1734c0d1813a2b89bbd490bd4f",
+      "kind": "pinned-source",
+      "upstreamPath": "package.json"
+    },
+    {
+      "path": "module-evidence/build/webpack.prod.conf.js",
+      "sha256": "6b8b39f09121ad31e800e6ecc7b2f053bea650e1c7ad98d989f6743421d6b590",
+      "kind": "pinned-source",
+      "upstreamPath": "build/webpack.prod.conf.js"
+    },
+    {
+      "path": "module-evidence/dataset-recipe.Dockerfile",
+      "sha256": "7a56d69c1cb10943885301da8a2b0e18fd748b729190f04a0f895a18db14a07e",
+      "kind": "verified-build-recipe",
+      "upstreamPath": "dataset-recipe.Dockerfile"
+    }
+  ],
+  "assets": [
+    {
+      "url": "<local>/elm/static/js/manifest.js",
+      "sha256": "013380232a066a59ee5d29abc2942f7ae89ba7f64eca58fe69adf5c77a1e9ddb",
+      "mapSHA256": "bbf7eec7220b0c82db4c916f878b4ac22569555b5a1a2b7d0f1209d789d7331c",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/elm/static/js/app.js",
+      "sha256": "83ba182a10d2584a054a0a13565332ee10326881b60f3fdcda0063abe5f3c3cb",
+      "mapSHA256": "4f4170a870ecc3b939bf7ddcd83d63b12afde54d432e5b284b83385c6a189348",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/elm/static/js/vendor.js",
+      "sha256": "21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392",
+      "mapSHA256": "1c99a7e9cd78042283ebc386641dabbc1850215379ca0b290f639ab6831630f4",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "5644080d805816dd2ab8a6e55ceb8dc76dbf38c5aaf8cad162b53e22d28908bc",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/elm/static/js/home.f1ef702c70651ac0a2da.min.js",
+      "sha256": "a785cc595a1dd0e5d6d903ba0b1cdaf2e302a2a599de7e6fdaf07611829abd88",
+      "mapSHA256": "43b3c13ab20212c89dc75e1c02b881c26bf44d4be869ecf550de6e6ccc31bac8",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    }
+  ]
+}

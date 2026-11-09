@@ -332,18 +332,7 @@
     "record": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/bundling-dataset/esbuild/okikio--bundlejs/ground-truth-v2/func-mapping.json",
     "pageVerified": true,
     "output": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/qualification/source-functions-3/work/esbuild/okikio--bundlejs",
-    "previousSelected": [
-      "@okikio/native",
-      "@okikio/animate",
-      "@dprint/formatter",
-      "esbuild-wasm",
-      "monaco-editor",
-      "solid-js",
-      "@amoutonbrady/lz-string",
-      "@okikio/sharedworker",
-      "@typescript/ata",
-      "d3"
-    ],
+    "previousSelected": [],
     "frontendManifestSHA256": "042e98fe4d64b5078749b27592dbbb37a1d89e2eb9deb62e11439b6432ee20ef",
     "selectionOverride": {}
   },
@@ -2423,7 +2412,25 @@
       "@angular/cdk"
     ],
     "frontendManifestSHA256": "4060df1e57f71b861c4ffe1b0f861c9d8ff6622a052fb78d84c9fca7960d3abe",
-    "selectionOverride": {}
+    "selectionOverride": {
+      "excludeLibraries": [
+        "tinymce",
+        "pace-js"
+      ],
+      "preferredLibraries": [
+        "web-animations-js",
+        "core-js",
+        "leaflet",
+        "chart.js",
+        "echarts",
+        "zone.js",
+        "@angular/animations",
+        "@angular/cdk",
+        "@angular/common",
+        "@angular/core"
+      ],
+      "reason": "Module-only rule: tinymce and pace-js enter through Angular scripts[] globals; replace with source-eligible imported Angular production dependencies."
+    }
   },
   {
     "repo": "bailicangdu/vue2-elm",

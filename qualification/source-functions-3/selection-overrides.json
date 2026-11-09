@@ -131,5 +131,24 @@
       "@primeuix/motion"
     ],
     "reason": "Evaluate the built PrimeNG library production manifest; showcase manifest only declares CSS build tools. Angular peer and root dev dependencies remain excluded."
+  },
+  "webpack/akveo--ngx-admin": {
+    "excludeLibraries": [
+      "tinymce",
+      "pace-js"
+    ],
+    "preferredLibraries": [
+      "web-animations-js",
+      "core-js",
+      "leaflet",
+      "chart.js",
+      "echarts",
+      "zone.js",
+      "@angular/animations",
+      "@angular/cdk",
+      "@angular/common",
+      "@angular/core"
+    ],
+    "reason": "Module-only rule: tinymce and pace-js enter through Angular scripts[] globals; replace with source-eligible imported Angular production dependencies."
   }
 }

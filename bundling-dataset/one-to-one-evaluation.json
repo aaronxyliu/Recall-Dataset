@@ -11,18 +11,29 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "repositoryCount": 42,
-  "libraryInstanceCount": 340,
-  "sourceFunctionWitnessCount": 1020,
-  "oneToOnePairs": 76283,
-  "zeroPairLibraryInstances": 108,
+  "correspondencePolicy": {
+    "schema": "recall.module-dependency-policy/v1",
+    "requireReviewedModuleIngress": true,
+    "allowedAssetRole": "module-build-output",
+    "outputFormatIndependent": true,
+    "excludeGlobalScriptLists": true,
+    "excludeCopiedStandaloneVendors": true,
+    "excludeUnreviewedAndExternalAssets": true,
+    "filterBeforeCorrespondenceGraph": true,
+    "requireInitialAnchors": false
+  },
+  "repositoryCount": 41,
+  "libraryInstanceCount": 335,
+  "sourceFunctionWitnessCount": 1005,
+  "oneToOnePairs": 69580,
+  "zeroPairLibraryInstances": 107,
   "subjects": [
     {
       "subject": "bun/RockwellShah--filekey",
       "repo": "RockwellShah/filekey",
       "commit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
       "records": "../qualified-dataset/bun/RockwellShah--filekey/ground-truth/func-mapping.json",
-      "recordsSHA256": "584bcf5943ad002b8809c840d6b665072ad0c91dbfa656a6dab513ba2312a183",
+      "recordsSHA256": "228731f3fd128acb57dfde34232673b3ab41e70740a7006b083169e0b095de6d",
       "selectedLibraries": [
         "@hpke/core",
         "@noble/curves",
@@ -50,14 +61,15 @@
       },
       "oneToOnePairs": 480,
       "imageID": null,
-      "qualification": "../qualified-dataset/bun/RockwellShah--filekey/qualification.json"
+      "qualification": "../qualified-dataset/bun/RockwellShah--filekey/qualification.json",
+      "moduleScope": "../qualified-dataset/bun/RockwellShah--filekey/module-scope.json"
     },
     {
       "subject": "bun/micahkepe--jsongrep",
       "repo": "micahkepe/jsongrep",
       "commit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
       "records": "../qualified-dataset/bun/micahkepe--jsongrep/ground-truth/func-mapping.json",
-      "recordsSHA256": "388953e1876daa68e9e8ff945052c6e9a80afba763ee4bbc748b94b734acb2da",
+      "recordsSHA256": "5362f1687525e28196aac2bd13e51626d50d75c92632ed9d62507dddabf94a89",
       "selectedLibraries": [
         "@bytecodealliance/jco",
         "react",
@@ -76,14 +88,15 @@
       },
       "oneToOnePairs": 1208,
       "imageID": null,
-      "qualification": "../qualified-dataset/bun/micahkepe--jsongrep/qualification.json"
+      "qualification": "../qualified-dataset/bun/micahkepe--jsongrep/qualification.json",
+      "moduleScope": "../qualified-dataset/bun/micahkepe--jsongrep/module-scope.json"
     },
     {
       "subject": "esbuild/mattlewis92--angular-calendar",
       "repo": "mattlewis92/angular-calendar",
       "commit": "9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68",
       "records": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/ground-truth/func-mapping.json",
-      "recordsSHA256": "8d0662205994feb6a45b0c5e8bc783dda59b2159be73c52cd286258bf35055ad",
+      "recordsSHA256": "3315fad7822eb2180ad96e44eb2dfe7605b8ddea8e3b27d084ff48715772c653",
       "selectedLibraries": [
         "@scarf/scarf",
         "calendar-utils",
@@ -105,14 +118,15 @@
       },
       "oneToOnePairs": 37,
       "imageID": "sha256:36e094597a8731e17370336f498020134259af1f2352948e3e1aeff99742c497",
-      "qualification": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/qualification.json"
+      "qualification": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/qualification.json",
+      "moduleScope": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/module-scope.json"
     },
     {
       "subject": "esbuild/primefaces--primeng",
       "repo": "primefaces/primeng",
       "commit": "fe82b291d6fedde177dc12c0af7ef1008dc1b1ff",
       "records": "../qualified-dataset/esbuild/primefaces--primeng/ground-truth/func-mapping.json",
-      "recordsSHA256": "9b887ce47486641e19c675b725ccbd5b4d3991683ad87c8fcf378659e95b01c7",
+      "recordsSHA256": "114e16b3585fb862973e6020ffcad7d42bdad7a0f8b0c2eb50a3a77149a86986",
       "selectedLibraries": [
         "@primeuix/styled",
         "@primeuix/utils",
@@ -131,14 +145,15 @@
       },
       "oneToOnePairs": 251,
       "imageID": "sha256:52f072fecbe4588bceb44ffaea4481d8956374fd61ccd094ac7e148a421bd1d8",
-      "qualification": "../qualified-dataset/esbuild/primefaces--primeng/qualification.json"
+      "qualification": "../qualified-dataset/esbuild/primefaces--primeng/qualification.json",
+      "moduleScope": "../qualified-dataset/esbuild/primefaces--primeng/module-scope.json"
     },
     {
       "subject": "esbuild/primefaces--sakai-ng",
       "repo": "primefaces/sakai-ng",
       "commit": "96d71496d685b5c110efd2875abaa2bf89a56ad2",
       "records": "../qualified-dataset/esbuild/primefaces--sakai-ng/ground-truth/func-mapping.json",
-      "recordsSHA256": "3a112f31f973856443b68558eb750a14dc12ab8b4ca713fe035905dd4e74273f",
+      "recordsSHA256": "81a5a91e92fada0d4dc44a265785ff8d2e6ec4d4bcf365e7c4a7781b13f3e8c2",
       "selectedLibraries": [
         "@angular/common",
         "@angular/compiler",
@@ -178,14 +193,15 @@
       },
       "oneToOnePairs": 1309,
       "imageID": "sha256:9cb7c4736a8b7a7e9b0d2d61528a0131a2767cd557b3000057bd31326f930194",
-      "qualification": "../qualified-dataset/esbuild/primefaces--sakai-ng/qualification.json"
+      "qualification": "../qualified-dataset/esbuild/primefaces--sakai-ng/qualification.json",
+      "moduleScope": "../qualified-dataset/esbuild/primefaces--sakai-ng/module-scope.json"
     },
     {
       "subject": "esbuild/sissbruecker--linkding",
       "repo": "sissbruecker/linkding",
       "commit": "27b7303baf41bb28babc610ac8eaa486e1ddfab5",
       "records": "../qualified-dataset/esbuild/sissbruecker--linkding/ground-truth/func-mapping.json",
-      "recordsSHA256": "7537e25e7f136ea21230575ba69253f4698d4cc0dc43b5d333a5568aa94636bf",
+      "recordsSHA256": "ced83b7d88085b5cbf17f271cdbc84e623a3619d4594e66f25af5d6342eb16a6",
       "selectedLibraries": [
         "@floating-ui/dom",
         "@hotwired/turbo",
@@ -207,14 +223,15 @@
       },
       "oneToOnePairs": 911,
       "imageID": "sha256:52efd7be978560adce36a4a95367d460da7671f9f30bf06e2d20263a6dbcf1e7",
-      "qualification": "../qualified-dataset/esbuild/sissbruecker--linkding/qualification.json"
+      "qualification": "../qualified-dataset/esbuild/sissbruecker--linkding/qualification.json",
+      "moduleScope": "../qualified-dataset/esbuild/sissbruecker--linkding/module-scope.json"
     },
     {
       "subject": "esbuild/swimlane--ngx-charts",
       "repo": "swimlane/ngx-charts",
       "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
       "records": "../qualified-dataset/esbuild/swimlane--ngx-charts/ground-truth/func-mapping.json",
-      "recordsSHA256": "ea9b0054374eab5daccfe173323051fb682380fbc499f83dfd076db646c05f45",
+      "recordsSHA256": "4766a3fb7b0682a5ba85990f85459da9ca376e16fbb2fdf1230eb8e55c07debc",
       "selectedLibraries": [
         "d3-format",
         "d3-interpolate",
@@ -254,14 +271,15 @@
       },
       "oneToOnePairs": 2364,
       "imageID": "sha256:ea908782be4b9f0e5c256e46bb7abdadf1bf128d7bc85bad0895d25d8a371935",
-      "qualification": "../qualified-dataset/esbuild/swimlane--ngx-charts/qualification.json"
+      "qualification": "../qualified-dataset/esbuild/swimlane--ngx-charts/qualification.json",
+      "moduleScope": "../qualified-dataset/esbuild/swimlane--ngx-charts/module-scope.json"
     },
     {
       "subject": "esbuild/swimlane--ngx-datatable",
       "repo": "swimlane/ngx-datatable",
       "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
       "records": "../qualified-dataset/esbuild/swimlane--ngx-datatable/ground-truth/func-mapping.json",
-      "recordsSHA256": "2d8f045a56027d02aa74d148cc277e127b0d5adc8c6d335899d1cff181650228",
+      "recordsSHA256": "385a488b478b4d8f0f93e5abd1bc80f841756f37a28e169f970b0e997a14f0d5",
       "selectedLibraries": [
         "@angular/animations",
         "@angular/cdk",
@@ -301,14 +319,15 @@
       },
       "oneToOnePairs": 336,
       "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d",
-      "qualification": "../qualified-dataset/esbuild/swimlane--ngx-datatable/qualification.json"
+      "qualification": "../qualified-dataset/esbuild/swimlane--ngx-datatable/qualification.json",
+      "moduleScope": "../qualified-dataset/esbuild/swimlane--ngx-datatable/module-scope.json"
     },
     {
       "subject": "parcel/jonasschmedtmann--complete-javascript-course",
       "repo": "jonasschmedtmann/complete-javascript-course",
       "commit": "76b8b79b2994dd00298b2be105aa6bc721e40a22",
       "records": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/ground-truth/func-mapping.json",
-      "recordsSHA256": "62a747a359bead55e502dacc63e8baac296e16eb97567e446141f9a0d55c9912",
+      "recordsSHA256": "6fe0b3f8dfc125a5b3729919bb28bb7d2a7c5872b6861a046ec704ccb4bac979",
       "selectedLibraries": [
         "core-js",
         "fractional",
@@ -327,14 +346,15 @@
       },
       "oneToOnePairs": 16,
       "imageID": "sha256:de49a6724e0642d647c1c816296173e861689e551797be0f62b55a82893cddb3",
-      "qualification": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/qualification.json"
+      "qualification": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/qualification.json",
+      "moduleScope": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/module-scope.json"
     },
     {
       "subject": "parcel/parcel-bundler--website",
       "repo": "parcel-bundler/website",
       "commit": "01c63ed0cb880285db774ec7c96f88da24aeaec7",
       "records": "../qualified-dataset/parcel/parcel-bundler--website/ground-truth/func-mapping.json",
-      "recordsSHA256": "c38f6380f7f334d18423474fd65bfeaadd393ab463cd85f5658d8b7f4628dc27",
+      "recordsSHA256": "5d94bf53fe13f25bed838111de3f7e7fd4b8793d528e4c38f8e08493d95873ea",
       "selectedLibraries": [
         "alpinejs",
         "focus-visible",
@@ -362,14 +382,15 @@
       },
       "oneToOnePairs": 452,
       "imageID": null,
-      "qualification": "../qualified-dataset/parcel/parcel-bundler--website/qualification.json"
+      "qualification": "../qualified-dataset/parcel/parcel-bundler--website/qualification.json",
+      "moduleScope": "../qualified-dataset/parcel/parcel-bundler--website/module-scope.json"
     },
     {
       "subject": "parcel/tensorflow--tfjs",
       "repo": "tensorflow/tfjs",
       "commit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
       "records": "../qualified-dataset/parcel/tensorflow--tfjs/ground-truth/func-mapping.json",
-      "recordsSHA256": "4f43def4242848b6e1132c76bf6685d3335fde53a1b3d2ec0d4da0b54ce391a8",
+      "recordsSHA256": "6ee79515a179b5252ca70b2acc0303a078581c5824269e3c2af39ee93cc30cd9",
       "selectedLibraries": [
         "@tensorflow/tfjs-backend-webgl",
         "@tensorflow/tfjs-converter",
@@ -388,14 +409,15 @@
       },
       "oneToOnePairs": 2428,
       "imageID": "sha256:e0353279e647932c4a074fb1283cab6f26aa0d9a9355fa3ddd396a40fcf42908",
-      "qualification": "../qualified-dataset/parcel/tensorflow--tfjs/qualification.json"
+      "qualification": "../qualified-dataset/parcel/tensorflow--tfjs/qualification.json",
+      "moduleScope": "../qualified-dataset/parcel/tensorflow--tfjs/module-scope.json"
     },
     {
       "subject": "rolldown/appwrite--appwrite",
       "repo": "appwrite/appwrite",
       "commit": "18c60abee1e2cb9d63612478f8e0e7319dfc300b",
       "records": "../qualified-dataset/rolldown/appwrite--appwrite/ground-truth/func-mapping.json",
-      "recordsSHA256": "efb3d0d484861b7c2c40b7c2b1344b8797c0fbbf65a68e46caa798634c7e751f",
+      "recordsSHA256": "d9de5524cd0ddf4abeb5b9675c0b5adc25ad66104408c9bde91513f3babc8a35",
       "selectedLibraries": [
         "@appwrite.io/console",
         "@dnd-kit/core",
@@ -435,14 +457,15 @@
       },
       "oneToOnePairs": 4531,
       "imageID": "sha256:96ecf987f0f47ba16cb99de5af6d8780a017712068c49e993ef8d037db4e1a2f",
-      "qualification": "../qualified-dataset/rolldown/appwrite--appwrite/qualification.json"
+      "qualification": "../qualified-dataset/rolldown/appwrite--appwrite/qualification.json",
+      "moduleScope": "../qualified-dataset/rolldown/appwrite--appwrite/module-scope.json"
     },
     {
       "subject": "rolldown/discourse--discourse",
       "repo": "discourse/discourse",
       "commit": "3a1b1ae930e568a8c1c2f12d6e09f8e907da608b",
       "records": "../qualified-dataset/rolldown/discourse--discourse/ground-truth/func-mapping.json",
-      "recordsSHA256": "6c8f8c5886671ac6dffa9709dd213aef1bf72a30fab5c5845d05b575c9156872",
+      "recordsSHA256": "8178e361cc2c4dd6a73a6ba3458c6567576afcb4c445378a10801485f719ea01",
       "selectedLibraries": [
         "@atlaskit/pragmatic-drag-and-drop",
         "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
@@ -482,14 +505,15 @@
       },
       "oneToOnePairs": 5272,
       "imageID": "sha256:fcedc0f47996cd281f5bc99bc6d9a710d6fa31747d3702aee0498874676cbed0",
-      "qualification": "../qualified-dataset/rolldown/discourse--discourse/qualification.json"
+      "qualification": "../qualified-dataset/rolldown/discourse--discourse/qualification.json",
+      "moduleScope": "../qualified-dataset/rolldown/discourse--discourse/module-scope.json"
     },
     {
       "subject": "rollup/daybrush--scenejs",
       "repo": "daybrush/scenejs",
       "commit": "8db057b6be85de03c5e997b53a82cb1407d6f659",
       "records": "../qualified-dataset/rollup/daybrush--scenejs/ground-truth/func-mapping.json",
-      "recordsSHA256": "4fdb3147d7654378d5a5cef22504eaf5516a1d5fd43a3fc23caac052e57c2109",
+      "recordsSHA256": "bdc040f4b57b8b117210361fdeb0b412817e0971ff60addb2d7ffe98924d673c",
       "selectedLibraries": [
         "@daybrush/page",
         "@daybrush/utils",
@@ -508,14 +532,15 @@
       },
       "oneToOnePairs": 124,
       "imageID": "sha256:a4da8d94a8476a58ee0c1ea73658daa9af8680e7e9ef3c43f73b120478cfc221",
-      "qualification": "../qualified-dataset/rollup/daybrush--scenejs/qualification.json"
+      "qualification": "../qualified-dataset/rollup/daybrush--scenejs/qualification.json",
+      "moduleScope": "../qualified-dataset/rollup/daybrush--scenejs/module-scope.json"
     },
     {
       "subject": "rollup/omnibrain--svguitar",
       "repo": "omnibrain/svguitar",
       "commit": "3b465fdc8af57a9ed948e168ada1c87c9aafd574",
       "records": "../qualified-dataset/rollup/omnibrain--svguitar/ground-truth/func-mapping.json",
-      "recordsSHA256": "9d047069f96d9ce13a56b04e72a472db522d8ce3d0201311d010b864179dd10e",
+      "recordsSHA256": "dace9c15750e757a012abf715aa61c353e7b59ae8ccc5a0ca2fbe438e0853a39",
       "selectedLibraries": [
         "@svgdotjs/svg.js",
         "roughjs",
@@ -534,14 +559,15 @@
       },
       "oneToOnePairs": 851,
       "imageID": "sha256:39c1ab0e890e959bcaf7aa908076e5c8708bbb43063700fa190ecb593b84db9d",
-      "qualification": "../qualified-dataset/rollup/omnibrain--svguitar/qualification.json"
+      "qualification": "../qualified-dataset/rollup/omnibrain--svguitar/qualification.json",
+      "moduleScope": "../qualified-dataset/rollup/omnibrain--svguitar/module-scope.json"
     },
     {
       "subject": "rollup/vega--vega-lite",
       "repo": "vega/vega-lite",
       "commit": "e415f441845e198629f2049b46849ddcfdbf6596",
       "records": "../qualified-dataset/rollup/vega--vega-lite/ground-truth/func-mapping.json",
-      "recordsSHA256": "c1049d6f09774f1c8a573a2ef584935aafec8bc393eed3afd7389fdecbd33db3",
+      "recordsSHA256": "ffce2a602044779caa088c0a9f8fa8697cf2519e304a7f7c7f0cfcc7d585ad2e",
       "selectedLibraries": [
         "tslib",
         "vega-expression",
@@ -560,14 +586,15 @@
       },
       "oneToOnePairs": 87,
       "imageID": "sha256:77ebbd8358604ab1d6fbe3b3bb45cce0707bde05a32d9062f707a8e005c68fef",
-      "qualification": "../qualified-dataset/rollup/vega--vega-lite/qualification.json"
+      "qualification": "../qualified-dataset/rollup/vega--vega-lite/qualification.json",
+      "moduleScope": "../qualified-dataset/rollup/vega--vega-lite/module-scope.json"
     },
     {
       "subject": "rspack/metabase--metabase",
       "repo": "metabase/metabase",
       "commit": "0c644f3bc99d5dece16391d53135a0a7618f95bc",
       "records": "../qualified-dataset/rspack/metabase--metabase/ground-truth/func-mapping.json",
-      "recordsSHA256": "ea8f49c797b30bc65c7ded3bbe1d6bec6d3d0b0bc0f84f93354788d532c30f99",
+      "recordsSHA256": "75268d5fe045b59ac07a51c7cef773bfa578b8f2dd0834d44f9c395be53eb8cc",
       "selectedLibraries": [
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
@@ -607,46 +634,15 @@
       },
       "oneToOnePairs": 1509,
       "imageID": "sha256:d731ac7144aac3dea4e1871c706c5fab3e014494fe55aa8dd09fd5688b29ae3f",
-      "qualification": "../qualified-dataset/rspack/metabase--metabase/qualification.json"
-    },
-    {
-      "subject": "tsup/peggyjs--peggy",
-      "repo": "peggyjs/peggy",
-      "commit": "b4014fd62ce8ba46866bb19a648b09fceb91f8cd",
-      "records": "../qualified-dataset/tsup/peggyjs--peggy/ground-truth/func-mapping.json",
-      "recordsSHA256": "b064edef32ca08e7983df59e203dd113a4a1a8c5051abf7a83ab5b4d9a7f6a59",
-      "selectedLibraries": [
-        "file-saver",
-        "jquery",
-        "jquery.scrollto",
-        "mocha",
-        "node-inspect-extracted"
-      ],
-      "libraryCount": 5,
-      "sourceFunctionWitnesses": {
-        "file-saver": 3,
-        "jquery": 3,
-        "jquery.scrollto": 3,
-        "mocha": 3,
-        "node-inspect-extracted": 3
-      },
-      "libraryPairs": {
-        "file-saver": 14,
-        "jquery": 551,
-        "jquery.scrollto": 0,
-        "mocha": 0,
-        "node-inspect-extracted": 0
-      },
-      "oneToOnePairs": 565,
-      "imageID": "sha256:21863a4c5a8d77ecf522bec521f44f8707b0067cfee2c273da927ff60b54fe95",
-      "qualification": "../qualified-dataset/tsup/peggyjs--peggy/qualification.json"
+      "qualification": "../qualified-dataset/rspack/metabase--metabase/qualification.json",
+      "moduleScope": "../qualified-dataset/rspack/metabase--metabase/module-scope.json"
     },
     {
       "subject": "turbopack/CalCom--cal.com",
       "repo": "CalCom/cal.com",
       "commit": "1c193cca8682b33b9866c792186033f7ef886682",
       "records": "../qualified-dataset/turbopack/CalCom--cal.com/ground-truth/func-mapping.json",
-      "recordsSHA256": "64d6497677d8c381734af8dba63e6bccbc59b0aa7756f3d28766cbd07264055b",
+      "recordsSHA256": "56fc47cbdfa2a54123a0fbbb3f8647bfd9400f175e845f29d8f11a175c62790c",
       "selectedLibraries": [
         "@formkit/auto-animate",
         "@radix-ui/react-tooltip",
@@ -686,14 +682,15 @@
       },
       "oneToOnePairs": 1620,
       "imageID": "sha256:b4386030f0c79ce045232229afe218e5e67a3c961be492508686eb38a8f47556",
-      "qualification": "../qualified-dataset/turbopack/CalCom--cal.com/qualification.json"
+      "qualification": "../qualified-dataset/turbopack/CalCom--cal.com/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/CalCom--cal.com/module-scope.json"
     },
     {
       "subject": "turbopack/CapSoftware--Cap",
       "repo": "CapSoftware/Cap",
       "commit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
       "records": "../qualified-dataset/turbopack/CapSoftware--Cap/ground-truth/func-mapping.json",
-      "recordsSHA256": "ddbbbe323d44f4bb8160e0c1076997a094e65ade50f04d9e5636c94a179d08db",
+      "recordsSHA256": "2415582a2e8f5d56515f54bb69dac45e7c5c5993c851c18f4f1bd0a487a88437",
       "selectedLibraries": [
         "@fortawesome/react-fontawesome",
         "@radix-ui/react-slot",
@@ -733,14 +730,15 @@
       },
       "oneToOnePairs": 1375,
       "imageID": "sha256:5e2b15a032e2433f0177fd15edbf62bce866dfab865a46e2e1d85612c0b30326",
-      "qualification": "../qualified-dataset/turbopack/CapSoftware--Cap/qualification.json"
+      "qualification": "../qualified-dataset/turbopack/CapSoftware--Cap/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/CapSoftware--Cap/module-scope.json"
     },
     {
       "subject": "turbopack/DayuanJiang--next-ai-draw-io",
       "repo": "DayuanJiang/next-ai-draw-io",
       "commit": "e3d4d11d5916daf8d68a9f087b36c8ca9a79200e",
       "records": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/ground-truth/func-mapping.json",
-      "recordsSHA256": "6d2735d40b1575b058b32685a5ef01d9d7235721a147dc25ff86332f09876ffb",
+      "recordsSHA256": "1b35cb9235b433c5b213b1e029706efbd733e84c87b021d8824d54292a9e01d6",
       "selectedLibraries": [
         "@next/third-parties",
         "@radix-ui/react-scroll-area",
@@ -780,14 +778,15 @@
       },
       "oneToOnePairs": 1193,
       "imageID": "sha256:079245223f1ad23b1a565e0cbb50050d93249448e0fb1fce3d5c2621580d28ca",
-      "qualification": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/qualification.json"
+      "qualification": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/module-scope.json"
     },
     {
       "subject": "turbopack/Open-Dev-Society--OpenStock",
       "repo": "Open-Dev-Society/OpenStock",
       "commit": "b72306d39fa27dc55252ceecf858165ecf5a3fa3",
       "records": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/ground-truth/func-mapping.json",
-      "recordsSHA256": "8d8787693feb62b4c07d3b7623af6aa1f2a358a443a9c811a6f6d4e2cb118d87",
+      "recordsSHA256": "8f99d66b289fdf0822779485b02c91115e610bab430b808691b653f2d8169a00",
       "selectedLibraries": [
         "@radix-ui/react-dialog",
         "@radix-ui/react-dropdown-menu",
@@ -827,14 +826,15 @@
       },
       "oneToOnePairs": 46,
       "imageID": "sha256:07613042e0661b6bbd5274d1fe87ada90b03b0324cb47e928fd2a82f34a8b103",
-      "qualification": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/qualification.json"
+      "qualification": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/module-scope.json"
     },
     {
       "subject": "turbopack/colinhacks--zod",
       "repo": "colinhacks/zod",
       "commit": "b500a2ee95134f81d74da7911d7378dd2853d042",
       "records": "../qualified-dataset/turbopack/colinhacks--zod/ground-truth/func-mapping.json",
-      "recordsSHA256": "a127adf94bba5a8951b344b42b9c9f66c9e79d67f7c5fc797f229f4b278df8f0",
+      "recordsSHA256": "0fb55a2c702d385ec0dfbc6e3ddd9ebbf4892e002ab84659475a819507b96e81",
       "selectedLibraries": [
         "@inkeep/cxkit-react",
         "@radix-ui/react-accordion",
@@ -874,14 +874,15 @@
       },
       "oneToOnePairs": 1970,
       "imageID": "sha256:bd8168d6ca27db6ba2045b773e2f38773072c02c8fcfccdf63e200a75d53cd5d",
-      "qualification": "../qualified-dataset/turbopack/colinhacks--zod/qualification.json"
+      "qualification": "../qualified-dataset/turbopack/colinhacks--zod/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/colinhacks--zod/module-scope.json"
     },
     {
       "subject": "turbopack/jnsahaj--tweakcn",
       "repo": "jnsahaj/tweakcn",
       "commit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
       "records": "../qualified-dataset/turbopack/jnsahaj--tweakcn/ground-truth/func-mapping.json",
-      "recordsSHA256": "d9d6879349f379df8073d179b19dcc80a7b7cdfcc10288c25f15642a78fc762e",
+      "recordsSHA256": "57de9482b6bd7188efe3709d968474aa5562423475610a75618fd8b6034a7476",
       "selectedLibraries": [
         "@ai-sdk/google",
         "@ai-sdk/react",
@@ -921,14 +922,15 @@
       },
       "oneToOnePairs": 78,
       "imageID": "sha256:0db88feca9d74650b2a56bcbe34c5804c9edbec18e9f8686fa5c4c142aacd789",
-      "qualification": "../qualified-dataset/turbopack/jnsahaj--tweakcn/qualification.json"
+      "qualification": "../qualified-dataset/turbopack/jnsahaj--tweakcn/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/jnsahaj--tweakcn/module-scope.json"
     },
     {
       "subject": "turbopack/shadcn-ui--ui",
       "repo": "shadcn-ui/ui",
       "commit": "d549251bab2e57dbf72f7c909d6458c02c43f529",
       "records": "../qualified-dataset/turbopack/shadcn-ui--ui/ground-truth/func-mapping.json",
-      "recordsSHA256": "17cb39ace2b501045f526223f1349463c5a2f94461704587dce961800a85376e",
+      "recordsSHA256": "d88f20ec7600b31fd936420a318c6145ac0730f6a17036ba625648d16cedc3c4",
       "selectedLibraries": [
         "@ai-sdk/anthropic",
         "@ai-sdk/openai",
@@ -968,14 +970,15 @@
       },
       "oneToOnePairs": 1651,
       "imageID": "sha256:2598c37904b81c0c1ae178582c87c23a73b9e08410c457aad4c6d724e581ae59",
-      "qualification": "../qualified-dataset/turbopack/shadcn-ui--ui/qualification.json"
+      "qualification": "../qualified-dataset/turbopack/shadcn-ui--ui/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/shadcn-ui--ui/module-scope.json"
     },
     {
       "subject": "turbopack/umami-software--umami",
       "repo": "umami-software/umami",
       "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
       "records": "../qualified-dataset/turbopack/umami-software--umami/ground-truth/func-mapping.json",
-      "recordsSHA256": "81755e61dff180b9b14edd33b9fa2162be0a5a75173da5eb71309ee2cc21be7f",
+      "recordsSHA256": "800fea3f625224994e696d499a234d4993ff88ec1d136e7d49bdc0db0e7765c1",
       "selectedLibraries": [
         "@clickhouse/client",
         "@dicebear/core",
@@ -1015,14 +1018,15 @@
       },
       "oneToOnePairs": 796,
       "imageID": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
-      "qualification": "../qualified-dataset/turbopack/umami-software--umami/qualification.json"
+      "qualification": "../qualified-dataset/turbopack/umami-software--umami/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/umami-software--umami/module-scope.json"
     },
     {
       "subject": "vite/CorentinTh--it-tools",
       "repo": "CorentinTh/it-tools",
       "commit": "d505845f918e946ec300af7b36efc107e2f66e9e",
       "records": "../qualified-dataset/vite/CorentinTh--it-tools/ground-truth/func-mapping.json",
-      "recordsSHA256": "8652eec0a30cb8f09677809b424dd023b672f5de4ab75125a61bef3e1a36751b",
+      "recordsSHA256": "3c88f0b25371c4070cc807e6da4b70e207d2c38f9a8fc99c10432578f4cca063",
       "selectedLibraries": [
         "naive-ui",
         "fuse.js",
@@ -1062,14 +1066,15 @@
       },
       "oneToOnePairs": 2681,
       "imageID": "sha256:397c047c5dbc8deb82ee1861d4fcf265274c7d8cd810e41a631556f772c6d47a",
-      "qualification": "../qualified-dataset/vite/CorentinTh--it-tools/qualification.json"
+      "qualification": "../qualified-dataset/vite/CorentinTh--it-tools/qualification.json",
+      "moduleScope": "../qualified-dataset/vite/CorentinTh--it-tools/module-scope.json"
     },
     {
       "subject": "vite/DavidHDev--react-bits",
       "repo": "DavidHDev/react-bits",
       "commit": "4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4",
       "records": "../qualified-dataset/vite/DavidHDev--react-bits/ground-truth/func-mapping.json",
-      "recordsSHA256": "032a73daf0dde821ec101801b1520fc850530ccba252aaf9358546036768b878",
+      "recordsSHA256": "380e9d6140025dac6dddac3e6ef286c9b753dd1b8e75178c4d4189703092e80d",
       "selectedLibraries": [
         "lucide-react",
         "nuqs",
@@ -1109,14 +1114,15 @@
       },
       "oneToOnePairs": 881,
       "imageID": "sha256:134870a088eaa8a299c9767f15c4d4c0343a8b9ed523a8f13734745b02a39b51",
-      "qualification": "../qualified-dataset/vite/DavidHDev--react-bits/qualification.json"
+      "qualification": "../qualified-dataset/vite/DavidHDev--react-bits/qualification.json",
+      "moduleScope": "../qualified-dataset/vite/DavidHDev--react-bits/module-scope.json"
     },
     {
       "subject": "vite/LibreChat-AI--LibreChat",
       "repo": "LibreChat-AI/LibreChat",
       "commit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
       "records": "../qualified-dataset/vite/LibreChat-AI--LibreChat/ground-truth/func-mapping.json",
-      "recordsSHA256": "12e7def0478508e0eab42175098c47de49eeb130f709e9980dacb6af49e7c053",
+      "recordsSHA256": "6e93af748c5cadbfcd5a1b206eaf18e6c9bb9bfde49a2a505320e896403596b3",
       "selectedLibraries": [
         "@mcp-ui/client",
         "react",
@@ -1156,14 +1162,15 @@
       },
       "oneToOnePairs": 2188,
       "imageID": "sha256:ea575f1421ddb62a3e691d433170cdc24fc8d71f0c5ed4b109b33311dc36f207",
-      "qualification": "../qualified-dataset/vite/LibreChat-AI--LibreChat/qualification.json"
+      "qualification": "../qualified-dataset/vite/LibreChat-AI--LibreChat/qualification.json",
+      "moduleScope": "../qualified-dataset/vite/LibreChat-AI--LibreChat/module-scope.json"
     },
     {
       "subject": "vite/Lissy93--dashy",
       "repo": "Lissy93/dashy",
       "commit": "002c6dd559c8d7ba662aeae9228164f6cf398c75",
       "records": "../qualified-dataset/vite/Lissy93--dashy/ground-truth/func-mapping.json",
-      "recordsSHA256": "84b29b974eaf197ef373d3d00ac6aca9b921c9ca716f2f7c0d494bfedecf8070",
+      "recordsSHA256": "2b0aa813a19bb0aefb97b89c4f965ab323042f64e9f322150601f8cbdf712659",
       "selectedLibraries": [
         "vuex",
         "crypto-js",
@@ -1203,14 +1210,15 @@
       },
       "oneToOnePairs": 2063,
       "imageID": "sha256:7bcff2bc0274261b3a66f3a6872330c6304dfc3ebd8c945336c5903b6fe29f3c",
-      "qualification": "../qualified-dataset/vite/Lissy93--dashy/qualification.json"
+      "qualification": "../qualified-dataset/vite/Lissy93--dashy/qualification.json",
+      "moduleScope": "../qualified-dataset/vite/Lissy93--dashy/module-scope.json"
     },
     {
       "subject": "vite/drawdb-io--drawdb",
       "repo": "drawdb-io/drawdb",
       "commit": "a249c7fb730c2de9b5c2ce6e863f2ea7344ac372",
       "records": "../qualified-dataset/vite/drawdb-io--drawdb/ground-truth/func-mapping.json",
-      "recordsSHA256": "e3a682748cdd702b2bd2d798b54ffc0be869e38bb585e79e08a0c7d7c44b5218",
+      "recordsSHA256": "eac25d03bf6dce8268b87feb23561a79ecf2ee42029a9f431386c3dc701bd079",
       "selectedLibraries": [
         "jsonschema",
         "oracle-sql-parser",
@@ -1250,14 +1258,15 @@
       },
       "oneToOnePairs": 6206,
       "imageID": "sha256:616bebf23e313f32307d866fbcff99d7e6666e2f672567e98be4be1cdb588e12",
-      "qualification": "../qualified-dataset/vite/drawdb-io--drawdb/qualification.json"
+      "qualification": "../qualified-dataset/vite/drawdb-io--drawdb/qualification.json",
+      "moduleScope": "../qualified-dataset/vite/drawdb-io--drawdb/module-scope.json"
     },
     {
       "subject": "vite/excalidraw--excalidraw",
       "repo": "excalidraw/excalidraw",
       "commit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
       "records": "../qualified-dataset/vite/excalidraw--excalidraw/ground-truth/func-mapping.json",
-      "recordsSHA256": "b6c7b5b40c000b2e0651689cdeb571f189d632f344bb81f1801d8fb30494d3e7",
+      "recordsSHA256": "e13f4072a97270291cb0dcb58067c6bf1b2cc9d71a404fda814a153a8e8812eb",
       "selectedLibraries": [
         "react-dom",
         "@sentry/browser",
@@ -1294,14 +1303,15 @@
       },
       "oneToOnePairs": 809,
       "imageID": "sha256:e7e4d7681ac7e1dcff8f6389714d638fbf5c038ae2fd102c0320d2ba1ee26d2d",
-      "qualification": "../qualified-dataset/vite/excalidraw--excalidraw/qualification.json"
+      "qualification": "../qualified-dataset/vite/excalidraw--excalidraw/qualification.json",
+      "moduleScope": "../qualified-dataset/vite/excalidraw--excalidraw/module-scope.json"
     },
     {
       "subject": "vite/hoppscotch--hoppscotch",
       "repo": "hoppscotch/hoppscotch",
       "commit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
       "records": "../qualified-dataset/vite/hoppscotch--hoppscotch/ground-truth/func-mapping.json",
-      "recordsSHA256": "ed4a524ca8a654a605e38b9953f237291a80df3460a0b8d9aeb3e0815a02a97e",
+      "recordsSHA256": "ce844a86c4326c73f73164c86dd52cb482415b364e9961ff568a36d38ce7aa53",
       "selectedLibraries": [
         "buffer",
         "workbox-window",
@@ -1341,14 +1351,15 @@
       },
       "oneToOnePairs": 3244,
       "imageID": "sha256:e59ec6b0d5cd5fd5913cb55219d74cea11fc1668e76265995c814dd7a58b3e43",
-      "qualification": "../qualified-dataset/vite/hoppscotch--hoppscotch/qualification.json"
+      "qualification": "../qualified-dataset/vite/hoppscotch--hoppscotch/qualification.json",
+      "moduleScope": "../qualified-dataset/vite/hoppscotch--hoppscotch/module-scope.json"
     },
     {
       "subject": "vite/immich-app--immich",
       "repo": "immich-app/immich",
       "commit": "037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9",
       "records": "../qualified-dataset/vite/immich-app--immich/ground-truth/func-mapping.json",
-      "recordsSHA256": "6079ca6e7aca34c06b4ea273cd1fb03078cea89a1cf58292aa1e267834c728d1",
+      "recordsSHA256": "838ea1c8c3d918a766424fd7cc2a8b497faf16013008e018d7a136fab6751ef7",
       "selectedLibraries": [
         "@immich/ui",
         "@formatjs/icu-messageformat-parser",
@@ -1388,14 +1399,15 @@
       },
       "oneToOnePairs": 1558,
       "imageID": "sha256:d6425984f8b69f7358beab8c3e30c57a88d6bce42879e5e1f7c94c922fe0866e",
-      "qualification": "../qualified-dataset/vite/immich-app--immich/qualification.json"
+      "qualification": "../qualified-dataset/vite/immich-app--immich/qualification.json",
+      "moduleScope": "../qualified-dataset/vite/immich-app--immich/module-scope.json"
     },
     {
       "subject": "webpack/PanJiaChen--vue-element-admin",
       "repo": "PanJiaChen/vue-element-admin",
       "commit": "6858a9ad67483025f6a9432a926beb9327037be3",
       "records": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/ground-truth/func-mapping.json",
-      "recordsSHA256": "20d73652317daf5c985ac47582285ddb21aea661a05a709f48ed26c57eb6a3b4",
+      "recordsSHA256": "60958c9fec4daffc7e1bc3d9781ef9b95bb6a92740764d9db30e364a6ac0418f",
       "selectedLibraries": [
         "vue-router",
         "fuse.js",
@@ -1435,61 +1447,63 @@
       },
       "oneToOnePairs": 5578,
       "imageID": "sha256:e6ecf7ce1479c72a71dc29b9f0f09e63fb1edca993e7e1065409a63750ec4020",
-      "qualification": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/qualification.json"
+      "qualification": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/qualification.json",
+      "moduleScope": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/module-scope.json"
     },
     {
       "subject": "webpack/akveo--ngx-admin",
       "repo": "akveo/ngx-admin",
       "commit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
       "records": "../qualified-dataset/webpack/akveo--ngx-admin/ground-truth/func-mapping.json",
-      "recordsSHA256": "6862560ea4f25cb876e68f401a64d36e26b2f5316ae9b94fdc089bc02d89d3c7",
+      "recordsSHA256": "a71e9fc4c81940bbd69b4a60c318a3153e7babc2502dd7289d967b953e4ae12b",
       "selectedLibraries": [
         "web-animations-js",
         "core-js",
-        "tinymce",
         "leaflet",
         "chart.js",
         "echarts",
-        "pace-js",
         "zone.js",
         "@angular/animations",
-        "@angular/cdk"
+        "@angular/cdk",
+        "@angular/common",
+        "@angular/core"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
         "web-animations-js": 3,
         "core-js": 3,
-        "tinymce": 3,
         "leaflet": 3,
         "chart.js": 3,
         "echarts": 3,
-        "pace-js": 3,
         "zone.js": 3,
         "@angular/animations": 3,
-        "@angular/cdk": 3
+        "@angular/cdk": 3,
+        "@angular/common": 3,
+        "@angular/core": 3
       },
       "libraryPairs": {
         "web-animations-js": 67,
         "core-js": 164,
-        "tinymce": 2412,
         "leaflet": 858,
-        "chart.js": 1284,
-        "echarts": 6907,
-        "pace-js": 60,
+        "chart.js": 708,
+        "echarts": 3817,
         "zone.js": 224,
         "@angular/animations": 0,
-        "@angular/cdk": 0
+        "@angular/cdk": 0,
+        "@angular/common": 0,
+        "@angular/core": 0
       },
-      "oneToOnePairs": 11976,
+      "oneToOnePairs": 5838,
       "imageID": "sha256:92c1e8d331293ea060730eaa634c528cec25a185807d34eb8b161c099cfe8e0f",
-      "qualification": "../qualified-dataset/webpack/akveo--ngx-admin/qualification.json"
+      "qualification": "../qualified-dataset/webpack/akveo--ngx-admin/qualification.json",
+      "moduleScope": "../qualified-dataset/webpack/akveo--ngx-admin/module-scope.json"
     },
     {
       "subject": "webpack/bailicangdu--vue2-elm",
       "repo": "bailicangdu/vue2-elm",
       "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
       "records": "../qualified-dataset/webpack/bailicangdu--vue2-elm/ground-truth/func-mapping.json",
-      "recordsSHA256": "9484b1b9185f54b53a26af64bde109ff8dd83d48e794b21fe5c73e8d69556106",
+      "recordsSHA256": "c2111ae7441c96715283529202bfcd5e283f5e2047b6d4c4d94a9c508dce6323",
       "selectedLibraries": [
         "better-scroll",
         "fastclick",
@@ -1520,14 +1534,15 @@
       },
       "oneToOnePairs": 492,
       "imageID": "sha256:961df673d8f780ccdccba3e0ac792038bb9417fa8663420e1ab5c839d2b803b2",
-      "qualification": "../qualified-dataset/webpack/bailicangdu--vue2-elm/qualification.json"
+      "qualification": "../qualified-dataset/webpack/bailicangdu--vue2-elm/qualification.json",
+      "moduleScope": "../qualified-dataset/webpack/bailicangdu--vue2-elm/module-scope.json"
     },
     {
       "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
       "repo": "dair-ai/Prompt-Engineering-Guide",
       "commit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
       "records": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/ground-truth/func-mapping.json",
-      "recordsSHA256": "adc767ba5b1156ab4febaf4a37641aaa855698351c97076e86e435d93c253b27",
+      "recordsSHA256": "68e5709df9905e7441eb912dd181380994b1178cbdbd2c5a8f13510435903c0e",
       "selectedLibraries": [
         "@fortawesome/fontawesome-svg-core",
         "@fortawesome/react-fontawesome",
@@ -1561,14 +1576,15 @@
       },
       "oneToOnePairs": 1427,
       "imageID": "sha256:762d82fcf838c12afddeca97b5271468ad1ee5e37c74d73f448e9848ad6a1a18",
-      "qualification": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/qualification.json"
+      "qualification": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/qualification.json",
+      "moduleScope": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/module-scope.json"
     },
     {
       "subject": "webpack/dokploy--dokploy",
       "repo": "dokploy/dokploy",
       "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
       "records": "../qualified-dataset/webpack/dokploy--dokploy/ground-truth/func-mapping.json",
-      "recordsSHA256": "2d5e944fe5a842276e9a498dfefaed87d68cc524958272ba40b7c39c202b006d",
+      "recordsSHA256": "e6839fc89732e1d743f24c940c20d3e62af6bb1a82c830c07deb9ebf06f694a2",
       "selectedLibraries": [
         "better-auth",
         "react-dom",
@@ -1608,14 +1624,15 @@
       },
       "oneToOnePairs": 780,
       "imageID": "sha256:6fdac03eee413572b38609316f90bda393b401a5651011d851368a959520fbc1",
-      "qualification": "../qualified-dataset/webpack/dokploy--dokploy/qualification.json"
+      "qualification": "../qualified-dataset/webpack/dokploy--dokploy/qualification.json",
+      "moduleScope": "../qualified-dataset/webpack/dokploy--dokploy/module-scope.json"
     },
     {
       "subject": "webpack/freeCodeCamp--freeCodeCamp",
       "repo": "freeCodeCamp/freeCodeCamp",
       "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
       "records": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/ground-truth/func-mapping.json",
-      "recordsSHA256": "cc5ef764ae1aee6bd4959f68a26177e7270aff8133d709cf820568e57f492a67",
+      "recordsSHA256": "d7018bfe3682b98bcc2fe5d0437b4d5c66e3340320270a6f404f36a7368bce29",
       "selectedLibraries": [
         "react-responsive",
         "date-fns-tz",
@@ -1655,14 +1672,15 @@
       },
       "oneToOnePairs": 852,
       "imageID": "sha256:ce39cccc90da044c8946872ae46536380ff8d54393ee71d4696d3c5f7055d4ee",
-      "qualification": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/qualification.json"
+      "qualification": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/qualification.json",
+      "moduleScope": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/module-scope.json"
     },
     {
       "subject": "webpack/supabase--supabase",
       "repo": "supabase/supabase",
       "commit": "aa9d04e4f77447e2b6aaf317b686007aff05aa96",
       "records": "../qualified-dataset/webpack/supabase--supabase/ground-truth/func-mapping.json",
-      "recordsSHA256": "1a4e412098caf4575931bb9ef22bade63ab541dd103b5814042399b02b7067d8",
+      "recordsSHA256": "5b71025311cfafb533e2ca53421dded2f4a49526ebdff0235677c56d1be59f4a",
       "selectedLibraries": [
         "recharts",
         "mdast-util-from-markdown",
@@ -1702,14 +1720,15 @@
       },
       "oneToOnePairs": 1358,
       "imageID": "sha256:53dce561ab2faedb349ac6a1935e293cf5ee64305dd51a0161c0e6c79f577454",
-      "qualification": "../qualified-dataset/webpack/supabase--supabase/qualification.json"
+      "qualification": "../qualified-dataset/webpack/supabase--supabase/qualification.json",
+      "moduleScope": "../qualified-dataset/webpack/supabase--supabase/module-scope.json"
     },
     {
       "subject": "webpack/swagger-api--swagger-ui",
       "repo": "swagger-api/swagger-ui",
       "commit": "d3296954a6b813898d298815ac3e68daa1cf7408",
       "records": "../qualified-dataset/webpack/swagger-api--swagger-ui/ground-truth/func-mapping.json",
-      "recordsSHA256": "20af923339de51a0142dac3450399ae2c66bb7fbc51d3d05939a6c0fa50e7dc8",
+      "recordsSHA256": "3b101604673c707135bd7f48236f55c967813e722214d74048bd13a90859c56c",
       "selectedLibraries": [
         "remarkable",
         "lodash",
@@ -1749,7 +1768,8 @@
       },
       "oneToOnePairs": 2730,
       "imageID": "sha256:403cdf53b629ac3603b6e5c2f277423da6128095071086339933257dd9807f54",
-      "qualification": "../qualified-dataset/webpack/swagger-api--swagger-ui/qualification.json"
+      "qualification": "../qualified-dataset/webpack/swagger-api--swagger-ui/qualification.json",
+      "moduleScope": "../qualified-dataset/webpack/swagger-api--swagger-ui/module-scope.json"
     }
   ],
   "pairDefinition": "reciprocal-body-mapped-v2",

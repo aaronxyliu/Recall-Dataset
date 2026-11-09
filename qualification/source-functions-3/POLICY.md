@@ -13,3 +13,5 @@ Selection repairs (2026-11-09): explicit exclusions and preferred production lib
 When a map strips package directories, `ownership.py` establishes ownership by exact source-content SHA-256 matches to the locked npm tarball, including original sources embedded in that package's own source maps. The ownership receipt records package/version, tarball SHA-256, member and embedded source path. No basename-only guess is accepted. The pair collector and independent span verifier check the source hash before accepting those labels.
 
 Explicit repository exclusions are recorded in `excluded-subjects.json` and enforced by the build gate, organizer and standalone audit. `esbuild/okikio--bundlejs` is excluded at the user's request; its historical build/capture archive is retained.
+
+Correspondence scope is additionally restricted to module dependencies under [the module policy](../module-dependencies/POLICY.md). This controls accepted pairs and map-reference snapshots separately from the unchanged source-function threshold. Global-only production libraries do not qualify as replacement module candidates.

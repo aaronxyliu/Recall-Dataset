@@ -1,0 +1,46 @@
+{
+  "schema": "recall.module-ingress-scope/v1",
+  "subject": "vite/drawdb-io--drawdb",
+  "repo": "drawdb-io/drawdb",
+  "commit": "a249c7fb730c2de9b5c2ce6e863f2ea7344ac372",
+  "policy": "module-dependencies-only",
+  "outputFormatIndependent": true,
+  "moduleOutputPattern": "^<local>/(?:assets/.*\\.js|sw\\.js|workbox-[^/]+\\.js)$",
+  "angularGlobalBundleNames": [],
+  "evidence": [
+    {
+      "path": "module-evidence/package.json",
+      "sha256": "b859a71d1c3d8dec2dcdb7086ec6edd04b40f66af4dd308c49846f806303d3dd",
+      "kind": "pinned-source",
+      "upstreamPath": "package.json"
+    },
+    {
+      "path": "module-evidence/vite.config.js",
+      "sha256": "2d8b8a9c0291a6635f5efef200ae0fae8bfd0f5d57b3e456125e71aea661be6a",
+      "kind": "pinned-source",
+      "upstreamPath": "vite.config.js"
+    },
+    {
+      "path": "module-evidence/dataset-recipe.Dockerfile",
+      "sha256": "8b806e536db6a50a8ced9f494f2e4030f14db134d5d2c53127f9701afca0f17b",
+      "kind": "verified-build-recipe",
+      "upstreamPath": "dataset-recipe.Dockerfile"
+    }
+  ],
+  "assets": [
+    {
+      "url": "<local>/config.js",
+      "sha256": "a699a82003454b3d0eb801598757a8d71ab2b8486c0f3fe4231e07e7c89b0e41",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/assets/index-CTubiCp6.js",
+      "sha256": "b4d134044b7f7a5959d459f01bfe4519007565f9636941fd491429b92703c163",
+      "mapSHA256": "c0ec7667106805203743c2af63a809ceae181eed643386b3b91f98c41320f121",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    }
+  ]
+}

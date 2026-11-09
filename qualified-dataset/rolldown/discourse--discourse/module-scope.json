@@ -1,0 +1,424 @@
+{
+  "schema": "recall.module-ingress-scope/v1",
+  "subject": "rolldown/discourse--discourse",
+  "repo": "discourse/discourse",
+  "commit": "3a1b1ae930e568a8c1c2f12d6e09f8e907da608b",
+  "policy": "module-dependencies-only",
+  "outputFormatIndependent": true,
+  "moduleOutputPattern": "^<local>/assets/js/.*\\.digested\\.js$",
+  "angularGlobalBundleNames": [],
+  "evidence": [
+    {
+      "path": "module-evidence/frontend/discourse/package.json",
+      "sha256": "5e35875ce22c9fb8af95dcaa7ffeb13c387610fbe048aac81d3809a8581682ed",
+      "kind": "pinned-source",
+      "upstreamPath": "frontend/discourse/package.json"
+    },
+    {
+      "path": "module-evidence/frontend/discourse/rolldown.config.mjs",
+      "sha256": "6a1d0d34cabdda312f7a64199ff53ef9c616437f9f3027c1cdc80dd4e357279c",
+      "kind": "pinned-source",
+      "upstreamPath": "frontend/discourse/rolldown.config.mjs"
+    },
+    {
+      "path": "module-evidence/dataset-recipe.Dockerfile",
+      "sha256": "c8afdede722d8d838fecbcb43ac3a221ca7ea68036c0db5ec6da500442136997",
+      "kind": "verified-build-recipe",
+      "upstreamPath": "dataset-recipe.Dockerfile"
+    }
+  ],
+  "assets": [
+    {
+      "url": "<local>/",
+      "sha256": "f5c8be6cb58389a870cd064c1d3239fcbcd3f4bece5f221c7ae5dc0aa45495ba",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/",
+      "sha256": "da4e204e2a7c6471f9e65e94b6a92e0332b0192ad7e487ee7e1cdfe2d1759135",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/assets/js/plugins/boards_main.rEJC10-fy3n3ewr.digested.js",
+      "sha256": "f1077841209b5771a40b93976f00be06615c5dbc66feb2d0f372c55c0e3fab77",
+      "mapSHA256": "80d4db5d770385c00e88072ac223fb0594895a190abc7c1ac3416629a263154c",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/chat_main.BQSzuc-fj7bnf4q.digested.js",
+      "sha256": "84819da5a377448e916637aa5d0f654e485c4997c930dd592f3ddc603cf2c146",
+      "mapSHA256": "ceb83fde82c3cef447e81d47aa8860c02c261207cbc988782f6f236608a7b8a6",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-local-dates_main.BgJnmu-ec8fq3qh.digested.js",
+      "sha256": "22e8dc4c3bed2ff9e3cb8b01cfcb25058c216abf5f6460158989a1395d3a5f43",
+      "mapSHA256": "ab2addc08e1f6355ea9c53e1f1eff2bd369dcdeea2c0ed4aa12a6d71c6d21223",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-lazy-videos_main.raLewU-h58zag4g.digested.js",
+      "sha256": "d22ec604f22b415f71d56b36c7220b08e14ff72b7e9b924a6cc1e7169cca400c",
+      "mapSHA256": "ca7642f02fd3918e05de40835c47118319783ce4f5f9da389cbc63e094e42980",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-details_main.hWoK3j-il5pj3p3.digested.js",
+      "sha256": "89a166ffde6cf1703834e423d2ce886d8c04eae8b8011f0cc6d308097cf1e3b0",
+      "mapSHA256": "10faae6110ea3beebb690b5fcc73170c14c324b0529408243d46c5f9e33ef199",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/checklist_main.Baa4Ik-mqwr7550.digested.js",
+      "sha256": "2a28b6e64497002421d44a2a2dc4c4eea45f0303ff6f60aae5a417326ad5979d",
+      "mapSHA256": "451c25e87cb96c8c039b4a8e5c22947de240d62229b65e7ac81eb523a1642c37",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/",
+      "sha256": "40596760ed8b97eae01512a4526b7246e6e505ceca14db1bcc5ec1ce80aa8e00",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-narrative-bot_main.C0hAQL-2adyxzuw.digested.js",
+      "sha256": "836405dac2cadf35d2297045be44c2ccceb147e08d052c21b46e76ea7e25161b",
+      "mapSHA256": "ca36713f5d0c940c4d5512f6b928c8190c39592eb7d18cef1112f379df434b2b",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-presence_main.CbW2Z--qpmmxhul.digested.js",
+      "sha256": "2779470112110f34953b8fe3690614909cf92159fd5c74370ce3feba921cf599",
+      "mapSHA256": "e2f1f8a7781ef486902a5f20044a23872b07b7f0ec6c33f7a30c01fbea0bb9b9",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-reactions_main.Bx39fk-lhjib6ff.digested.js",
+      "sha256": "b6a51ebc23b5ba15327055b29c932e8fc837c4f131cd5d0d0ae00ce5105adf22",
+      "mapSHA256": "401e220f3d3d66019a75968e181bc531b9fcd4301d37741319eeddf6c25e4674",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-solved_main.DjL0x4-o2hctp92.digested.js",
+      "sha256": "66cd114f16cdbe22a6f3e3f465ff3e94200b80f687f29ce650cef5e97abcfcc1",
+      "mapSHA256": "d262febf851b56406a109fddf367eee073ae226843dfd4163a0d034216e8478d",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-templates_main.DIkTd9-oxcjioca.digested.js",
+      "sha256": "8aa1dadeedbdf0990f141f38f6f478d7712076923178abfd5ea4da6b07c9a78e",
+      "mapSHA256": "000a304785bd4a691341b385e877cc9ff31f81f268f8a72e6e1763e06e2f22d0",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-topic-voting_main.DDRbYz-lfagyknd.digested.js",
+      "sha256": "780a9441d7b8e5bb562f78aecf71c1384191642262aef6641cfa6e9573c19cc7",
+      "mapSHA256": "bb57ff7e865ca92a0404ab96ecc4de70733df86e165015eb729de3cf96baf43c",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-workflows_main.D-j3Ya-1yijthkz.digested.js",
+      "sha256": "778e802fce5089e6aced33b8a932fa00fc5e56a65a035db64a22e2f5074a23b2",
+      "mapSHA256": "c8699a52b4ec0531a3d96396bd3292b91828477c08316f99da812f5648166c45",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/footnote_main.DEFmzz-i5ay7qv3.digested.js",
+      "sha256": "a531622cc05c7e368ccb0d89fd571abae6a3e9ee5ebdc3fd2edcf65bb3260f8f",
+      "mapSHA256": "3d85a5fc54887a43044d45000f79af6d1fed8aafcb8fc449d1480eb558d2053d",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/poll_main.BF2vjL-5re9ypo0.digested.js",
+      "sha256": "256ce8f6396282d930968c4138527c5e59762a97bb6f74eea651b7efb23555a3",
+      "mapSHA256": "c9c0c27922c70ccbf08e500153e17817ccd829cb27fb2f8f9f88cf01667b5571",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/spoiler-alert_main.DbmNra-exjv4itp.digested.js",
+      "sha256": "5d5c3563edb73196ef8df304f823fcace5f1c9a5a8f22b564b3e59be3b165e08",
+      "mapSHA256": "70d4219f07c0536a8e1b25cde89ec1d14e6993507eda8f2fcbd9e81f19fb96b2",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/boards_chunk.UELpcUsl-fy3n3ewr.digested.js",
+      "sha256": "0eb9ad81dd94d7f2a497b4ec05026121281191a30521b0c8aa231fe5bf2ae8be",
+      "mapSHA256": "f86b1d4b2f6b340d118ebde5385f88b266555005953a7a41554b9398e26f32da",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/chat_chunk.DXcD4IWy-fj7bnf4q.digested.js",
+      "sha256": "1855dc3ca2cd086c56b0af115297dcb40ef59046bcae724018736577f21fa9e9",
+      "mapSHA256": "e576d5701996b87ede6841da514f37340e4a96789e1d05e9e80eb5c4b4b22137",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/plugins/discourse-solved_chunk.DsWerPYw-o2hctp92.digested.js",
+      "sha256": "145637aee454a72e886339d06b77b1bd8fbf9b2bb955e60bd761ddbf729e8f86",
+      "mapSHA256": "50d9a98c5c1233ca77608b450325ea863eb0789ec1b3f2312cae3c1cfe7c22e9",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/extra-locales/b81560b9045a9e54057a8ee8266af7e929930f11/en/main.js",
+      "sha256": "cdce2a8a30f426bc68bdfa7f67cbf7f403407263a3fccb8114081004677950ee",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/extra-locales/0ffe7a21317d2af4f704e60d5a6802a6b9fa84f4/en/mf.js?__ws=127.0.0.1",
+      "sha256": "dd60a5398b2ecbd5481b78d578ba2a793b9caf0656137d562eb4fa0ed541a43c",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/theme-javascripts/8f64b71e16c278147124e28b7dc38680958002ba.js?__ws=127.0.0.1",
+      "sha256": "85d202766a4b586b304fd1d0d7ebe4bac9de16f4a458863a7e917013f949f5a6",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/assets/js/browser-update-f553698f.js",
+      "sha256": "7c2a82ae29a3e72c434f20419941c54b29f871945b8dcb29e515721ba554c803",
+      "mapSHA256": "326740cfa21cece09d6bcc40f62a22d94a71b54d47a070fb4dcf2e78482364ad",
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/assets/js/chunk-f96lzs6p.digested.js",
+      "sha256": "e0a79ad36c6ca1ffbc796c80aa5661803a9d1bc684e29d1587f48b4ba9a82714",
+      "mapSHA256": null,
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-hq41ku7d.digested.js",
+      "sha256": "3c4d106f71c0e8298813746bbf9d26b0c22bf6a201b56b4d5236704ab7b25117",
+      "mapSHA256": "bceebdae72b1b10f2adf68279c7344ef95f1ee507196e3230db9ab36849e518f",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-n4aw3z40.digested.js",
+      "sha256": "fcc6484e2fa350256b040402589a0b328bdbd6f68989df7c91bef8efd87b085b",
+      "mapSHA256": "be76eda3e8700b9f60b98dbfe047f6548a730799546121434ede0ca6ffbbe8c8",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-jcceqytm.digested.js",
+      "sha256": "e3442a135df3c7165bf7493336c7ccb3a4865e9eb96fa187ccf20c3a5ee3201c",
+      "mapSHA256": "a9fb6ea9c3296efe78b5958499a1166767195726cb9589b567f11b5aeba11952",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-jvsnrs13.digested.js",
+      "sha256": "2812f1c1aa935f24963bb0f8d56b56a2316e2ac87e206eed7c5e57c60fe1bfac",
+      "mapSHA256": "3f35386aac476584fc8a232e92832d6a2d84580537dfd3bb23fe1e026e95ee5c",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-npbukgo1.digested.js",
+      "sha256": "507a03d016e18656a860f4071a5c2dfb91573fbd70761889aee518cf5e135b37",
+      "mapSHA256": "46483bbd23854fd0b55f2d8c373498aa38ec0cf205af10b881d9b33f1e6045d2",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-earq0jcu.digested.js",
+      "sha256": "db1375a783f8ee269e4923c2c87c18450e1592a98bbf6aff23e30610b413ba9a",
+      "mapSHA256": "14f53882e909975511e2265140a2551ef2c5fe1fb249ec18b6dc5d395689fb47",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-b5lawyhh.digested.js",
+      "sha256": "48625b385130689ecf7b2e62e4504f3b555a35f08d640816bbe859f2c21e951e",
+      "mapSHA256": "e73a50e40bec6f97017eaa357d192a610902165d65a729b61d6dad353ac1620a",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-b0b2ldmd.digested.js",
+      "sha256": "31fa22939ba9f343b49264a864c3840d71758bcd7a4a59519a0373e4989b0cc4",
+      "mapSHA256": "98d1c0a86d53d34e43a16bd51b0cc06adb8908a5f0f01e017f9a980edeb18daf",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-fwyzjdqf.digested.js",
+      "sha256": "b737bbef6e596a76aedef5c439e9a763e43a5cf9dd1322b5fb61194eb91f71b7",
+      "mapSHA256": "c40e7a6569ffd3b654a4c060df3a2abecffb73a8bbac143089e1e15f451cedf7",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-fnb5gk1s.digested.js",
+      "sha256": "a767aa82bcb3678bb30959e4f7982e4943d1e271637292beff386a5423e50b3d",
+      "mapSHA256": "4e4e132a1eed77aa66b58ac97d413e38a4a189e83cb6f90276f8d64b74e2d619",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-gu6onvfo.digested.js",
+      "sha256": "f3e3cb1310f08d5fec3f7c1e9e0ffeabeaf81bf8ff108f16ba2385d0e711d66d",
+      "mapSHA256": "94d8a1b7c174045ab96fbc53d1b5d89673d71c645d7f67c573a62fdac3dab3cd",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/discourse-im0itjm7.digested.js",
+      "sha256": "1826179c718fb182c0e494765d568761f931150df9e44882f170483ed5958d8c",
+      "mapSHA256": "1157c5604a07593427dc7033c73fa68924826148d02eda8685ad751dff65942f",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-h11aus06.digested.js",
+      "sha256": "bbfe719e6c3d1e2995d87898498890474711cad12fa00b23b2558b2ae68a0bfe",
+      "mapSHA256": "4892c2d7da940faa0e0443d2c44e04b97477912f04a708041c544c38b11cc0ff",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-m57k1uh2.digested.js",
+      "sha256": "d0f32d369b86bf64f14c73ec7b68c46121831d17956e05332bc445e0e70c6938",
+      "mapSHA256": "7086924ae3e9a9eb525d1f364b4be10600acea5edc372dcc11530ac3be2a97fb",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-b5koh09i.digested.js",
+      "sha256": "57039a67ec1e791b6627fd2e844770da5283f48f1a78a1ffdd2b8e7f57d008f2",
+      "mapSHA256": "a045122e9f84237bf62ad08daa396fee0d2fe5562d45c8ede6be28c667139324",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-eq1gwo0y.digested.js",
+      "sha256": "689e755e180a483b2a2adf75df6bfbd9dda8de8b6384db59978a79693fadaaf9",
+      "mapSHA256": "59f8a97e3a84705c01b0646e6b1dbcc3dbd1d598e200f4a64f7b3b20abab79df",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-oe1e5mev.digested.js",
+      "sha256": "34c711c4b550e9be38ee45e55d7baf2f361e84e0e55f4e331d0be29ce0341c27",
+      "mapSHA256": "9c3ae3f41eb68f7ec3ea8ea4d4834c3d849b9a069445c6e959a26506df54c091",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-lsixrhgn.digested.js",
+      "sha256": "de6c58f60b5ff6e9cf247b7469159b6a113750b5a4b8363312fdad858ec04a96",
+      "mapSHA256": "c9e8c2db58e301b4c27985c9a2f4025d9f07ddd3c6905498660a5b786dc7a783",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-ep3qv2nj.digested.js",
+      "sha256": "e3a120a2e2531fc5f6a30940cc92f5721388c9aaa1d094117427d0b89ea82d62",
+      "mapSHA256": "10dabbde6e47d0388132c551b69f6e9611fd5f9f8c6e8ae4cb5838358445fbf2",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-lw13s40t.digested.js",
+      "sha256": "5819690074baa09dea28b60a9003052efdb145715581bd5eff407a91c3724c00",
+      "mapSHA256": "c6453981b99ebe1a9510a871296c279da25e4650794b1eb637adab7ae4e6a571",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-kg0hypea.digested.js",
+      "sha256": "7adce7e7060570c5ec3d678c50dd173ff6ba5d05e4f853768d812eb156be14f0",
+      "mapSHA256": "692012f6c398aa0e25ce69b29b11a678dd9445d3c7b42519a0e685c94c954a33",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/js/chunk-blhg1o24.digested.js",
+      "sha256": "37ff8031b31fced324e5c91445effb6ce9efb91e5bb4393210c15836e5602c0a",
+      "mapSHA256": "f278bb0343556bbc4564ec23f7422db70bde6a8e8ac77188205e0c88ae5547df",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/assets/plugins/footnote_extra-95ffab71.js",
+      "sha256": "5f912a22692a855f5af73a26a3c15e9055a2db8f3d4b84ef41c13a06c8d86e83",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/assets/js/browser-detect-0d844e05.js",
+      "sha256": "07558331c53e0ee4191db855f74fc0f9f707eb4667378c7da9629160b45b2bf7",
+      "mapSHA256": "f6fe8db15c9ec1ac882990a87156f72d270b42b6607c9e08e15497eec8a54176",
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "data:sha256:ed67fae423c1545750c6d1c90bba052314dbbd74b7b30bd9420d634bf30ecc4e",
+      "sha256": "8c0da57a9f0143df7c78a154d025d0ac1f2ae73668ca1ef2ffcff742e32d2db1",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "867aeba181a7514115903c7952e35a9f8e07a83b66e5804d428c1f80ff4833f2",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "e3210fcd70ea30bac80a40669252f2d99b4038df44e0a961d4adb7636c648bc3",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/svg-sprite/127.0.0.1/svg--1-ea00587e5f38428b5a6fdcc2e7dd6eb9f2a83161.js",
+      "sha256": "8f185b7d9da24acebff7363971f20950e5903a4825e844abb8afaa68a0a7bea9",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<local>/service-worker.js",
+      "sha256": "f39a49027c26f6d91e3ca7020d7304a9bd7b3d1f56b0a06f99bf98b8358781c0",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    }
+  ]
+}

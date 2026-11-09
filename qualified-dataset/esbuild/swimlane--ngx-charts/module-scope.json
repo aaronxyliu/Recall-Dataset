@@ -1,0 +1,67 @@
+{
+  "schema": "recall.module-ingress-scope/v1",
+  "subject": "esbuild/swimlane--ngx-charts",
+  "repo": "swimlane/ngx-charts",
+  "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
+  "policy": "module-dependencies-only",
+  "outputFormatIndependent": true,
+  "moduleOutputPattern": "^<local>/(?:[^/]+/)*(?:main|polyfills|runtime|chunk|\\d+)[-.][^/]+\\.js$",
+  "angularGlobalBundleNames": [],
+  "evidence": [
+    {
+      "path": "module-evidence/package.json",
+      "sha256": "007f98be3c2ada9fc35210bed56dfd712f6b5c8f9460ce90caec2b87c3fdef89",
+      "kind": "pinned-source",
+      "upstreamPath": "package.json"
+    },
+    {
+      "path": "module-evidence/angular.json",
+      "sha256": "ac89d5e05119b9c3014eab54b903ce8781c8bd887a3a4e69ba4586a22626067a",
+      "kind": "pinned-source",
+      "upstreamPath": "angular.json"
+    },
+    {
+      "path": "module-evidence/dataset-recipe.Dockerfile",
+      "sha256": "b0b662b147cbe8a901f1248e2df920f977509b81e8c1fbb84140443513bbc8e8",
+      "kind": "verified-build-recipe",
+      "upstreamPath": "dataset-recipe.Dockerfile"
+    }
+  ],
+  "assets": [
+    {
+      "url": "<local>/ngx-charts/polyfills-BLCX5WK5.js",
+      "sha256": "03510c1c945fe255b2329116818d28008aa88ae124226fe0e8cb6228bac1f7ce",
+      "mapSHA256": "1f2b593d02d6042ca925d1e4b01c5ea4c1f6f850925bb3dabbd4db6e063b481c",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/ngx-charts/main-WNPK7TMK.js",
+      "sha256": "6cc13f1970a9890971ffa97db37333f233074c9beda298dba0813e5f18b1b33c",
+      "mapSHA256": "514e019a1ca922327c485f6eefcf29749d067eeb9762ace976636d575f020da5",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "cea32b507d853fca729ef50238481796280427007c606a96845e14e04ccf7869",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "028e7653cdfb6107902ab4b776c5e3482976104f5fca7b17af7773724fa98c42",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "<anonymous>",
+      "sha256": "ef2e6299e42c6031adb5825c5a5ba59e5ce82123df435db11f0edebfb0240b5a",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    }
+  ]
+}

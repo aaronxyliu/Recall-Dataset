@@ -2191,11 +2191,24 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
+  "correspondencePolicy": {
+    "schema": "recall.module-dependency-policy/v1",
+    "requireReviewedModuleIngress": true,
+    "allowedAssetRole": "module-build-output",
+    "outputFormatIndependent": true,
+    "excludeGlobalScriptLists": true,
+    "excludeCopiedStandaloneVendors": true,
+    "excludeUnreviewedAndExternalAssets": true,
+    "filterBeforeCorrespondenceGraph": true,
+    "requireInitialAnchors": false
+  },
   "provenance": {
     "upstreamCommit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
     "archiveRecord": "bundling-dataset/turbopack/jnsahaj--tweakcn/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "43cadd4e065062199c818f3abd296e9afa2bd69c86386dc7d160506bb87de1a6",
-    "collectorSHA256": "34be0f5318d7463394d7c8b10455366562037d86db517f522d40e23afd3adf68",
-    "spanVerifierSHA256": "da36a02d7ebfcba7c4d4bd4cdb1391df52f9921ba0d97a22eba36483788816ae"
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "349b65b39841f4c395c95bfdf69119356bbdb79b8a1e278334a90b79edc77b79",
+    "moduleScopeSHA256": "530bc4d3f395ca4a06aab531fe9e25f90c01bfa702d7837b7538cca58eb99491"
   }
 }

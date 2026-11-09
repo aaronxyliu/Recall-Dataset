@@ -43,6 +43,7 @@ for(const pair of report.pairs){
  const g=identify(pair.bundled),s=identify(pair.source)
  const asset=capture.assets.find(a=>a.url===g.url&&a.sha256===g.hash)
  assert(asset)
+ if(selection.moduleScope)assert(selection.moduleScope.assets.some(a=>a.role==='module-build-output'&&a.url===asset.url&&a.sha256===asset.sha256&&a.mapSHA256===asset.map.sha256),'Pair comes from an unapproved module asset')
  if(!codes.has(g.hash)){
    const code=fs.readFileSync(artifactPath(g.hash,'js'),'utf8')
    assert.equal(sha(code),g.hash)

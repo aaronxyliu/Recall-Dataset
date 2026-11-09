@@ -435,18 +435,9 @@
   },
   {
     "subject": "tsup/peggyjs--peggy",
-    "sourceEligibility": "passed",
-    "selectedLibraries": [
-      "file-saver",
-      "jquery",
-      "jquery.scrollto",
-      "mocha",
-      "node-inspect-extracted"
-    ],
-    "candidateCount": 5,
-    "qualification": "qualification/source-functions-3/results/tsup/peggyjs--peggy/qualification.json",
-    "status": "included",
-    "reason": null
+    "status": "excluded",
+    "reason": "Module-only scope: docs production candidates are copied standalone vendors or docs/test tooling, not imported dependencies of the built docs frontend; fewer than three eligible module libraries.",
+    "exclusionType": "module-scope"
   },
   {
     "subject": "tsup/zpao--qrcode.react",
@@ -842,16 +833,16 @@
     "selectedLibraries": [
       "web-animations-js",
       "core-js",
-      "tinymce",
       "leaflet",
       "chart.js",
       "echarts",
-      "pace-js",
       "zone.js",
       "@angular/animations",
-      "@angular/cdk"
+      "@angular/cdk",
+      "@angular/common",
+      "@angular/core"
     ],
-    "candidateCount": 45,
+    "candidateCount": 43,
     "qualification": "qualification/source-functions-3/results/webpack/akveo--ngx-admin/qualification.json",
     "status": "included",
     "reason": null

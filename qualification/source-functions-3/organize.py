@@ -4,20 +4,27 @@ import json
 import pathlib
 import shutil
 import subprocess
+import sys
+sys.path.insert(0,str(pathlib.Path(__file__).resolve().parent.parent/'module-dependencies'))
+from scope import load as load_module_scope
 from ownership import build as build_ownership
 
 base=pathlib.Path(__file__).resolve().parent;root=base.parents[1];dataset=root/'qualified-dataset';collector=root/'verification/hufang-builds-2026-11-08/collector'
 read=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+module_policy=read(base.parent/'module-dependencies/policy.json')
 policy=read(base/'policy.json');entries=[];decisions=[];excluded=read(base/'excluded-subjects.json')
 previous={row['subject']:row for row in read(dataset/'index.json')['subjects']} if (dataset/'index.json').exists() else {}
 for subject in read(base/'plan.json'):
  key=subject['subject'];receipt=base/'results'/key/'qualification.json'
- if key in excluded:decisions.append({'subject':key,'status':'excluded','reason':excluded[key]['reason'],'exclusionType':'user-request'});continue
+ if key in excluded:decisions.append({'subject':key,'status':'excluded','reason':excluded[key]['reason'],'exclusionType':excluded[key].get('exclusionType','user-request')});continue
  if not receipt.exists():decisions.append({'subject':key,'status':'unassessed','reason':'source preflight incomplete'});continue
  q=read(receipt);decision={'subject':key,'sourceEligibility':q['status'],'selectedLibraries':q['selectedLibraries'],'candidateCount':len(q['candidates']),'qualification':str(receipt.relative_to(root))}
  if q['status']!='passed':decision.update(status='excluded' if q['status']=='not-qualified' else 'unassessed',reason=q.get('reason'));decisions.append(decision);continue
  if not subject.get('record') or not subject.get('pageVerified'):decision.update(status='unassessed',reason='source rule passed; intended production page/capture not independently verified');decisions.append(decision);continue
- record=pathlib.Path(subject['record']);gt=read(record);selected=q['selectedLibraries'];manifest=read(receipt.parent/'frontend-package.json')
+ record=pathlib.Path(subject['record']);gt=read(record)
+ try:module_scope,module_directory=load_module_scope(key,subject['commit'],gt['capture'])
+ except (ValueError,AssertionError) as error:decision.update(status='unassessed',reason=str(error));decisions.append(decision);continue
+ selected=q['selectedLibraries'];manifest=read(receipt.parent/'frontend-package.json')
  assert policy['minLibrariesPerRepository']<=len(selected)<=policy['maxLibrariesPerRepository'];assert set(selected)<=set(manifest.get('dependencies',{}));assert q['provenance']['frontendManifestSHA256']==sha(receipt.parent/'frontend-package.json')
  for name in selected:
   library=next(row for row in q['libraries'] if row['library']==name);assert library['qualified'] and len(library['witnesses'])>=policy['minFunctionsPerLibrary']
@@ -28,15 +35,19 @@ for subject in read(base/'plan.json'):
    if not digest:continue
    original=(record.parent/obj.get('localPath',folder+'/'+digest+'.'+ext)).resolve();assert sha(original)==digest;link=raw/(digest+'.'+ext)
    if not link.exists():link.symlink_to(original)
+ if (dest/'module-evidence').exists():shutil.rmtree(dest/'module-evidence')
+ shutil.copytree(module_directory/'evidence',dest/'module-evidence')
+ for evidence in module_scope['evidence']:evidence['path']=evidence['path'].replace('evidence/','module-evidence/',1)
+ (dest/'module-scope.json').write_text(json.dumps(module_scope,indent=2)+'\n')
  source_ownership=build_ownership(q,{**gt,'_path':str(record)})
  (dest/'source-ownership.json').write_text(json.dumps(source_ownership,indent=2)+'\n')
- selection={'repo':subject['repo'],'commit':subject['commit'],'selected':selected,'sourceOwnership':source_ownership};(work/'selection.json').write_text(json.dumps(selection,indent=2)+'\n');(work/'capture.json').write_text(json.dumps(gt['capture'],indent=2)+'\n')
- signature=hashlib.sha256(json.dumps({'record':sha(record),'selected':selected,'collector':sha(collector/'relations.mjs'),'verifier':sha(collector/'verify_pairs.mjs'),'policy':sha(base/'policy.json'),'sourceOwnership':source_ownership},sort_keys=True).encode()).hexdigest();complete=ground/'func-mapping.json'
+ selection={'repo':subject['repo'],'commit':subject['commit'],'selected':selected,'sourceOwnership':source_ownership,'moduleScope':module_scope};(work/'selection.json').write_text(json.dumps(selection,indent=2)+'\n');(work/'capture.json').write_text(json.dumps(gt['capture'],indent=2)+'\n')
+ signature=hashlib.sha256(json.dumps({'record':sha(record),'selected':selected,'collector':sha(collector/'relations.mjs'),'verifier':sha(collector/'verify_pairs.mjs'),'policy':sha(base/'policy.json'),'sourceOwnership':source_ownership,'moduleScope':sha(dest/'module-scope.json'),'modulePolicy':module_policy},sort_keys=True).encode()).hexdigest();complete=ground/'func-mapping.json'
  prior=read(dest/'qualification.json').get('organizationSignature') if (dest/'qualification.json').exists() else None
  if not complete.exists() or prior!=signature:
   cached=read(complete) if complete.exists() and previous.get(key,{}).get('recordsSHA256')==sha(complete) else None
   provenance=(cached or {}).get('provenance',{})
-  reuse=bool(cached and cached.get('selectedLibraries')==selected and provenance.get('archiveRecordSHA256')==sha(record) and provenance.get('collectorSHA256')==sha(collector/'relations.mjs') and provenance.get('spanVerifierSHA256')==sha(collector/'verify_pairs.mjs') and provenance.get('sourceOwnershipSHA256')==sha(base/'work'/key/'pair-rebuild/selection.json'))
+  reuse=bool(cached and cached.get('selectedLibraries')==selected and provenance.get('archiveRecordSHA256')==sha(record) and provenance.get('collectorSHA256')==sha(collector/'relations.mjs') and provenance.get('spanVerifierSHA256')==sha(collector/'verify_pairs.mjs') and provenance.get('sourceOwnershipSHA256')==sha(base/'work'/key/'pair-rebuild/selection.json') and cached.get('correspondencePolicy')==module_policy and provenance.get('moduleScopeSHA256')==sha(dest/'module-scope.json'))
   if reuse:relations=cached
   else:
    with (work/'verify.log').open('w') as log:
@@ -54,7 +65,7 @@ for subject in read(base/'plan.json'):
    if (ground/folder).exists():
     for old in (ground/folder).iterdir():
      if str(old.relative_to(ground)) not in keep:old.unlink()
-  relations.update(capture=capture,selectedLibraries=selected,qualificationPolicy=policy,provenance={'upstreamCommit':subject['commit'],'archiveRecord':str(record.relative_to(root)),'archiveRecordSHA256':sha(record),'collectorSHA256':sha(collector/'relations.mjs'),'spanVerifierSHA256':sha(collector/'verify_pairs.mjs'),'sourceOwnershipSHA256':sha(work/'selection.json')});complete.write_text(json.dumps(relations,indent=2)+'\n')
+  relations.update(capture=capture,selectedLibraries=selected,qualificationPolicy=policy,correspondencePolicy=module_policy,provenance={'upstreamCommit':subject['commit'],'archiveRecord':str(record.relative_to(root)),'archiveRecordSHA256':sha(record),'collectorSHA256':sha(collector/'relations.mjs'),'spanVerifierSHA256':sha(collector/'verify_pairs.mjs'),'sourceOwnershipSHA256':sha(work/'selection.json'),'moduleScopeSHA256':sha(dest/'module-scope.json')});complete.write_text(json.dumps(relations,indent=2)+'\n')
  if (dest/'eligibility').exists():shutil.rmtree(dest/'eligibility')
  active=json.loads(json.dumps(q));active['libraries']=[row for row in active['libraries'] if row['library'] in selected];active['candidateDecisionRecord']=str(pathlib.Path('../../..')/receipt.relative_to(root));active['sourceEligibilityRecordSHA256']=sha(receipt);active['organizationSignature']=signature
  for library in active['libraries']:
@@ -70,10 +81,10 @@ for subject in read(base/'plan.json'):
  if (dest/'initial-anchors.json').exists():(dest/'initial-anchors.json').unlink()
  subprocess.run(['node',str(base/'references.mjs'),str(record),str(work/'selection.json'),str(dest)],check=True,timeout=600)
  pairs=read(complete)['pairs'];assert all(pair['library'] in selected for pair in pairs);counts={name:sum(pair['library']==name for pair in pairs) for name in selected}
- entry={'subject':key,'repo':subject['repo'],'commit':subject['commit'],'records':str(complete.relative_to(dataset)),'recordsSHA256':sha(complete),'selectedLibraries':selected,'libraryCount':len(selected),'sourceFunctionWitnesses':{row['library']:len(row['witnesses']) for row in active['libraries']},'libraryPairs':counts,'oneToOnePairs':len(pairs),'imageID':gt.get('imageID',gt.get('capture',{}).get('imageID')),'qualification':str((dest/'qualification.json').relative_to(dataset))};entries.append(entry);decision.update(status='included',reason=None);decisions.append(decision)
- (dest/'README.md').write_text('# '+subject['repo']+'\n\nPinned commit `'+subject['commit']+'`. '+str(len(selected))+' declared production libraries each have at least three verified source functions with at least ten own-body POG property-operation features. No initial-anchor or matching-count criterion is used. See `qualification.json`, `eligibility/`, and `frontend-package.json` for standalone source witnesses.\n\n`ground-truth/func-mapping.json` contains '+str(len(pairs))+' independently span-verified one-to-one pairs for the selected libraries. Pair counts may be zero for a selected library; they are not an acceptance condition. All captured JS and maps are preserved byte-for-byte. `reference-manifest.json` lists available original source text from those maps separately from the source-only eligibility proof. The existing collector attributes pairs by package name and does not establish one installed version for every captured copy.\n')
+ entry={'subject':key,'repo':subject['repo'],'commit':subject['commit'],'records':str(complete.relative_to(dataset)),'recordsSHA256':sha(complete),'selectedLibraries':selected,'libraryCount':len(selected),'sourceFunctionWitnesses':{row['library']:len(row['witnesses']) for row in active['libraries']},'libraryPairs':counts,'oneToOnePairs':len(pairs),'imageID':gt.get('imageID',gt.get('capture',{}).get('imageID')),'qualification':str((dest/'qualification.json').relative_to(dataset)),'moduleScope':str((dest/'module-scope.json').relative_to(dataset))};entries.append(entry);decision.update(status='included',reason=None);decisions.append(decision)
+ (dest/'README.md').write_text('# '+subject['repo']+'\n\nPinned commit `'+subject['commit']+'`. '+str(len(selected))+' declared production libraries each have at least three verified source functions with at least ten own-body POG property-operation features. No initial-anchor or matching-count criterion is used. See `qualification.json`, `eligibility/`, and `frontend-package.json` for standalone source witnesses.\n\n`ground-truth/func-mapping.json` contains '+str(len(pairs))+' independently span-verified one-to-one pairs for the selected libraries. Pair counts may be zero for a selected library; they are not an acceptance condition. Only dependencies imported into reviewed module build outputs contribute pairs; global script lists, copied standalone vendors and unreviewed/external assets are excluded before building the correspondence graph. Output format is independent of module ingress. See `module-scope.json` and `module-evidence/`. All captured JS and maps are preserved byte-for-byte. `reference-manifest.json` lists available original source text from those maps separately from the source-only eligibility proof. The existing collector attributes pairs by package name and does not establish one installed version for every captured copy.\n')
  print('organized',key,len(selected),len(pairs),flush=True)
 included={entry['subject'] for entry in entries}
 for file in dataset.glob('*/*/qualification.json'):
  if str(file.parent.relative_to(dataset)) not in included:shutil.rmtree(file.parent)
-index={'schema':'recall.qualified-dataset/v2','policy':policy,'repositoryCount':len(entries),'libraryInstanceCount':sum(row['libraryCount'] for row in entries),'sourceFunctionWitnessCount':sum(sum(row['sourceFunctionWitnesses'].values()) for row in entries),'oneToOnePairs':sum(row['oneToOnePairs'] for row in entries),'zeroPairLibraryInstances':sum(sum(n==0 for n in row['libraryPairs'].values()) for row in entries),'subjects':entries};(dataset/'index.json').write_text(json.dumps(index,indent=2)+'\n');(base/'decisions.json').write_text(json.dumps(decisions,indent=2)+'\n');print('TOTAL',index['repositoryCount'],index['libraryInstanceCount'],index['oneToOnePairs'])
+index={'schema':'recall.qualified-dataset/v2','policy':policy,'correspondencePolicy':module_policy,'repositoryCount':len(entries),'libraryInstanceCount':sum(row['libraryCount'] for row in entries),'sourceFunctionWitnessCount':sum(sum(row['sourceFunctionWitnesses'].values()) for row in entries),'oneToOnePairs':sum(row['oneToOnePairs'] for row in entries),'zeroPairLibraryInstances':sum(sum(n==0 for n in row['libraryPairs'].values()) for row in entries),'subjects':entries};(dataset/'index.json').write_text(json.dumps(index,indent=2)+'\n');(base/'decisions.json').write_text(json.dumps(decisions,indent=2)+'\n');print('TOTAL',index['repositoryCount'],index['libraryInstanceCount'],index['oneToOnePairs'])

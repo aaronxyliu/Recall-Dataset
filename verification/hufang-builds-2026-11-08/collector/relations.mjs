@@ -38,7 +38,9 @@ function packageOf(source){
   const matches=[...source.replaceAll('\\','/').matchAll(/(?:^|\/)(?:node_modules|~)\/((?:@[^/]+\/)?[^/]+)/g)]
   return matches.at(-1)?.[1]
 }
+const moduleAssets=sample.moduleScope?new Set(sample.moduleScope.assets.filter(a=>a.role==='module-build-output').map(a=>JSON.stringify([a.url,a.sha256,a.mapSHA256]))):null
 for(const a of capture.assets){
+  if(moduleAssets&&!moduleAssets.has(JSON.stringify([a.url,a.sha256,a.map?.sha256])))continue
   if(a.map.status!=='map-found')continue
   try{
     const mapBytes=fs.readFileSync(artifactPath(a.map.sha256,'map'))

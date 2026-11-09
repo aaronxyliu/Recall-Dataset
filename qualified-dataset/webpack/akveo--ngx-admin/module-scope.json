@@ -1,0 +1,95 @@
+{
+  "schema": "recall.module-ingress-scope/v1",
+  "subject": "webpack/akveo--ngx-admin",
+  "repo": "akveo/ngx-admin",
+  "commit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
+  "policy": "module-dependencies-only",
+  "outputFormatIndependent": true,
+  "moduleOutputPattern": "^<local>/(?:[^/]+/)*(?:main|polyfills|runtime|chunk|\\d+)[-.][^/]+\\.js$",
+  "angularGlobalBundleNames": [
+    "scripts"
+  ],
+  "evidence": [
+    {
+      "path": "module-evidence/package.json",
+      "sha256": "4060df1e57f71b861c4ffe1b0f861c9d8ff6622a052fb78d84c9fca7960d3abe",
+      "kind": "pinned-source",
+      "upstreamPath": "package.json"
+    },
+    {
+      "path": "module-evidence/angular.json",
+      "sha256": "be8200c7b34b32a07c9e5503a57adae58834b8a35f4d9cd7728f30d970719833",
+      "kind": "pinned-source",
+      "upstreamPath": "angular.json"
+    },
+    {
+      "path": "module-evidence/src/polyfills.ts",
+      "sha256": "2a30537b7eb048f49a469e17e08416bc214d8d824675054e60a4727654ebf9a5",
+      "kind": "pinned-source",
+      "upstreamPath": "src/polyfills.ts"
+    },
+    {
+      "path": "module-evidence/src/app/app.module.ts",
+      "sha256": "93bb9fce035c90521a6731bea51dbb2648d2092d1e75dde9b8a38dda5def7e72",
+      "kind": "pinned-source",
+      "upstreamPath": "src/app/app.module.ts"
+    },
+    {
+      "path": "module-evidence/dataset-recipe.Dockerfile",
+      "sha256": "4af295baa09168695138320e8804957c3b0a4d87719ae6e03ab48b1b35ea4284",
+      "kind": "verified-build-recipe",
+      "upstreamPath": "dataset-recipe.Dockerfile"
+    }
+  ],
+  "assets": [
+    {
+      "url": "<local>/runtime.17a4589d9f42d63d.js",
+      "sha256": "3903c3692bf565152f30a6b3f16f312a85e5fcdc50882a5f1aa7ba3145ddf672",
+      "mapSHA256": "6f1604bdaa783693160fcbdd76af80856016fca5c5668982bf527faf71d0e609",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/polyfills.fb2c25923d7d7170.js",
+      "sha256": "27ea812a35557e6b0ffa10a9e4ce1dd50254203a227b5bc27cbefc7b5efd771a",
+      "mapSHA256": "e47db49f7305416d27a77355e781ee4a28ad6321d3feaee7b051535ab9e1c0b2",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/main.9d04d184f8c7281f.js",
+      "sha256": "be509a31fe6dbe2dfe7cc5f0d354ed6642b359fbd26c525b291ae8fe93bf6cd3",
+      "mapSHA256": "10f367f3c116a018dd505112e3a487b177178c706102b9dac09c1891817d0d31",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    },
+    {
+      "url": "<local>/scripts.a49dca20c040f6a4.js",
+      "sha256": "7456a8ab7659212e2e3672bb14c49b7244cb535fb0ed760fae553b5521ae0512",
+      "mapSHA256": "42982b84a6ba88c7c8b749a0bf070092ced84e14470b2b4457b92aa8d1264081",
+      "role": "global-script-list",
+      "reason": "Angular build configuration scripts[] explicitly concatenates standalone global inputs."
+    },
+    {
+      "url": "<local>/",
+      "sha256": "321b4f657afbf8ba49518e6ab4cbad07ea967d0b4c68f71c7deed05ed09c1187",
+      "mapSHA256": null,
+      "role": "not-reviewed-as-module-output",
+      "reason": "Outside the reviewed module build output; no module-ingress claim."
+    },
+    {
+      "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyCpVhQiwAllg1RAFaxMWSpQruuGARy0Y1k&libraries=places",
+      "sha256": "c6afe7ade8cc92d039f6f8292f80fc346dc88084e6bbc61d9dcfa12995f19db0",
+      "mapSHA256": null,
+      "role": "external-script",
+      "reason": "External script is not a pinned repository module output."
+    },
+    {
+      "url": "<local>/800.711685baa55e970f.js",
+      "sha256": "134f0490aa84bc9474c547d613fd32e8a8121e1086499b6a99aa7aa56cbba7b4",
+      "mapSHA256": "53224ed1139d32813b57ec6eaea7e06b85b9945720b2062817a9b575d9ed9381",
+      "role": "module-build-output",
+      "reason": "Produced by the documented repository module build; dependency function ownership remains source-map based."
+    }
+  ]
+}

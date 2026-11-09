@@ -8,6 +8,7 @@ const base=path.dirname(fileURLToPath(import.meta.url)),dataset=path.resolve(bas
 const read=file=>JSON.parse(fs.readFileSync(file,'utf8')),index=read(path.join(dataset,'index.json')),policy=read(path.join(base,'policy.json'));
 const exclusions=read(path.join(base,'excluded-subjects.json'));assert(index.subjects.every(entry=>!Object.hasOwn(exclusions,entry.subject)));
 assert.deepEqual(index.policy,policy);assert.equal(policy.requireInitialAnchors,false);
+const modulePolicy=read(path.join(base,'../module-dependencies/policy.json'));assert.deepEqual(index.correspondencePolicy,modulePolicy);
 const featureCache=new Map();let libraries=0,witnesses=0,pairs=0,zeroPairLibraries=0;
 for(const entry of index.subjects) {
   const directory=path.join(dataset,entry.subject),qualification=read(path.join(directory,'qualification.json')),selected=new Set(entry.selectedLibraries),manifest=read(path.join(directory,'frontend-package.json'));
@@ -41,14 +42,25 @@ for(const entry of index.subjects) {
   }
   assert.equal(qualification.libraries.length,selected.size);
   const recordFile=path.join(dataset,entry.records),record=read(recordFile);assert.equal(sha(fs.readFileSync(recordFile)),entry.recordsSHA256);assert.deepEqual(record.selectedLibraries,entry.selectedLibraries);assert.deepEqual(record.qualificationPolicy,policy);
+  assert.deepEqual(record.correspondencePolicy,modulePolicy);
+  const scope=read(path.join(directory,'module-scope.json'));assert.equal(scope.subject,entry.subject);assert.equal(scope.commit,entry.commit);assert.equal(sha(fs.readFileSync(path.join(directory,'module-scope.json'))),record.provenance.moduleScopeSHA256);
+  for(const evidence of scope.evidence)assert.equal(sha(fs.readFileSync(path.join(directory,evidence.path))),evidence.sha256);
+  const allowed=new Set(scope.assets.filter(a=>a.role===modulePolicy.allowedAssetRole).map(a=>a.url+'#'+a.sha256));
+  for(const asset of scope.assets){const actual=record.capture.assets.find(a=>a.url===asset.url&&a.sha256===asset.sha256);assert(actual);assert.equal(actual.map?.sha256??null,asset.mapSHA256??null);}
+  assert.equal(scope.assets.length,record.capture.assets.length);
   const counts=Object.fromEntries([...selected].map(name=>[name,0]));
-  for(const pair of record.pairs){assert(selected.has(pair.library));counts[pair.library]++;}
+  for(const pair of record.pairs){assert(allowed.has(pair.bundled.slice(0,pair.bundled.lastIndexOf('@'))),'Pair lacks module-ingress evidence');assert(selected.has(pair.library));counts[pair.library]++;}
   assert.deepEqual(counts,entry.libraryPairs);assert.equal(record.pairs.length,entry.oneToOnePairs);pairs+=record.pairs.length;zeroPairLibraries+=Object.values(counts).filter(value=>value===0).length;
   for(const asset of record.capture.assets)for(const [object,folder,extension] of [[asset,'runtime-js','js'],[asset.map||{},'source-maps','map']])if(object.sha256)assert.equal(sha(fs.readFileSync(path.join(path.dirname(recordFile),object.localPath||folder+'/'+object.sha256+'.'+extension))),object.sha256);
   const ownership=read(path.join(directory,'source-ownership.json')),refs=read(path.join(directory,'reference-manifest.json')).files;
   for(const [source,proof] of Object.entries(ownership)){assert(selected.has(proof.library));assert.equal(proof.library,proof.proof.name);assert(refs.some(file=>file.library.name===proof.library&&file.sha256===proof.sha256));}
-  for(const file of read(path.join(directory,'reference-manifest.json')).files){assert(selected.has(file.library.name));assert.equal(sha(fs.readFileSync(path.join(directory,file.path))),file.sha256);}
+  const moduleSourceHashes=new Set();
+  for(const asset of record.capture.assets)if(allowed.has(asset.url+'#'+asset.sha256)&&asset.map?.sha256){
+    const map=read(path.join(path.dirname(recordFile),asset.map.localPath||'source-maps/'+asset.map.sha256+'.map'));
+    const visit=map=>{for(const text of map.sourcesContent||[])if(text!=null)moduleSourceHashes.add(sha(text));for(const section of map.sections||[])visit(section.map);};visit(map);
+  }
+  for(const file of read(path.join(directory,'reference-manifest.json')).files){assert(moduleSourceHashes.has(file.sha256),'Reference source lacks module ingress');assert(selected.has(file.library.name));assert.equal(sha(fs.readFileSync(path.join(directory,file.path))),file.sha256);}
 }
 assert.equal(index.repositoryCount,index.subjects.length);assert.equal(index.libraryInstanceCount,libraries);assert.equal(index.sourceFunctionWitnessCount,witnesses);assert.equal(index.oneToOnePairs,pairs);assert.equal(index.zeroPairLibraryInstances,zeroPairLibraries);
-const result={status:'passed',repositoryCount:index.subjects.length,libraryInstanceCount:libraries,sourceFunctionWitnessCount:witnesses,oneToOnePairs:pairs,zeroPairLibraryInstances:zeroPairLibraries,initialAnchorChecksPerformed:0};
+const result={status:'passed',repositoryCount:index.subjects.length,libraryInstanceCount:libraries,sourceFunctionWitnessCount:witnesses,oneToOnePairs:pairs,zeroPairLibraryInstances:zeroPairLibraries,initialAnchorChecksPerformed:0,moduleDependencyScopeVerified:true};
 fs.writeFileSync(path.join(base,'audit-result.json'),JSON.stringify(result,null,2)+'\n');console.log(result);

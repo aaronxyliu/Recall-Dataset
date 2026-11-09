@@ -14347,11 +14347,24 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
+  "correspondencePolicy": {
+    "schema": "recall.module-dependency-policy/v1",
+    "requireReviewedModuleIngress": true,
+    "allowedAssetRole": "module-build-output",
+    "outputFormatIndependent": true,
+    "excludeGlobalScriptLists": true,
+    "excludeCopiedStandaloneVendors": true,
+    "excludeUnreviewedAndExternalAssets": true,
+    "filterBeforeCorrespondenceGraph": true,
+    "requireInitialAnchors": false
+  },
   "provenance": {
     "upstreamCommit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
     "archiveRecord": "bundling-dataset/turbopack/CapSoftware--Cap/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "78e7b0e134d6a544207e3004fc44a2ed082c6ea43adf470e98257e9147d9aeaa",
-    "collectorSHA256": "34be0f5318d7463394d7c8b10455366562037d86db517f522d40e23afd3adf68",
-    "spanVerifierSHA256": "da36a02d7ebfcba7c4d4bd4cdb1391df52f9921ba0d97a22eba36483788816ae"
+    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
+    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
+    "sourceOwnershipSHA256": "cbef18eb2b9300db5890ba5f46415b78f4bdf89e3903684d3e442f06aef5ef1e",
+    "moduleScopeSHA256": "57d3b31d8d2910d93e0787fe7cdaad597ae07e40bf7d7e58fcd97aa8bf1a412b"
   }
 }
