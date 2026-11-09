@@ -15,3 +15,5 @@ When a map strips package directories, `ownership.py` establishes ownership by e
 Explicit repository exclusions are recorded in `excluded-subjects.json` and enforced by the build gate, organizer and standalone audit. `esbuild/okikio--bundlejs` is excluded at the user's request; its historical build/capture archive is retained.
 
 Correspondence scope is additionally restricted to module dependencies under [the module policy](../module-dependencies/POLICY.md). This controls accepted pairs and map-reference snapshots separately from the unchanged source-function threshold. Global-only production libraries do not qualify as replacement module candidates.
+
+Final bundler scope (2026-11-09): only **Webpack, Vite, esbuild, Rollup, Turbopack, Parcel, and Bun** are retained, in that order. `cohort-policy.json` enforces this restriction during organization and auditing. tsup, Rolldown, and Rspack remain historical archives. Duplicate libraries are permitted; standalone vendor/global-script copies are excluded from function-pair collection.

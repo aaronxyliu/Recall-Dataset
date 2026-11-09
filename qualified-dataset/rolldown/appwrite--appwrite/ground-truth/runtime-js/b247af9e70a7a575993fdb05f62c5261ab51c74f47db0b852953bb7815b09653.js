@@ -1,2 +1,0 @@
-import{qot as e}from"./index-ARRzLOvi.js";function t(t){return e({from:t.from,strict:t.strict,shouldThrow:t.shouldThrow,structuralSharing:t.structuralSharing,select:e=>t.select?t.select(e.search):e.search})}export{t};
-//# sourceMappingURL=useSearch-kN91Sk8Y.js.map

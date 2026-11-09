@@ -1,2 +1,0 @@
-import{Sl as e,est as t,qet as n,xst as r}from"./index-ARRzLOvi.js";var i=r(t());function a({className:t}){return(0,i.jsx)(`span`,{className:n(`me-1.5 inline-flex shrink-0 rounded px-1.5 py-0.5 align-[1px] text-[10px] font-medium leading-none`,e(`custom`),t),children:`Enterprise`})}export{a as t};
-//# sourceMappingURL=EnterpriseBadge-CUXxP3_R.js.map

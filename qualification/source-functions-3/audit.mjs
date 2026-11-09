@@ -9,6 +9,8 @@ const read=file=>JSON.parse(fs.readFileSync(file,'utf8')),index=read(path.join(d
 const exclusions=read(path.join(base,'excluded-subjects.json'));assert(index.subjects.every(entry=>!Object.hasOwn(exclusions,entry.subject)));
 assert.deepEqual(index.policy,policy);assert.equal(policy.requireInitialAnchors,false);
 const modulePolicy=read(path.join(base,'../module-dependencies/policy.json'));assert.deepEqual(index.correspondencePolicy,modulePolicy);
+const cohortPolicy=read(path.join(base,'cohort-policy.json'));assert.deepEqual(index.cohortPolicy,cohortPolicy);assert(index.subjects.every(e=>cohortPolicy.includedBundlers.includes(e.subject.split('/')[0])));
+for(const name of ['one-to-one-evaluation.json','one-to-one-evaluation-v2.json']){const manifest=read(path.join(dataset,'../bundling-dataset',name));assert.deepEqual(manifest.subjects.map(e=>e.subject),index.subjects.map(e=>e.subject));assert.equal(manifest.oneToOnePairs,index.oneToOnePairs);assert.deepEqual(manifest.cohortPolicy,cohortPolicy);}
 const featureCache=new Map();let libraries=0,witnesses=0,pairs=0,zeroPairLibraries=0;
 for(const entry of index.subjects) {
   const directory=path.join(dataset,entry.subject),qualification=read(path.join(directory,'qualification.json')),selected=new Set(entry.selectedLibraries),manifest=read(path.join(directory,'frontend-package.json'));
@@ -62,5 +64,5 @@ for(const entry of index.subjects) {
   for(const file of read(path.join(directory,'reference-manifest.json')).files){assert(moduleSourceHashes.has(file.sha256),'Reference source lacks module ingress');assert(selected.has(file.library.name));assert.equal(sha(fs.readFileSync(path.join(directory,file.path))),file.sha256);}
 }
 assert.equal(index.repositoryCount,index.subjects.length);assert.equal(index.libraryInstanceCount,libraries);assert.equal(index.sourceFunctionWitnessCount,witnesses);assert.equal(index.oneToOnePairs,pairs);assert.equal(index.zeroPairLibraryInstances,zeroPairLibraries);
-const result={status:'passed',repositoryCount:index.subjects.length,libraryInstanceCount:libraries,sourceFunctionWitnessCount:witnesses,oneToOnePairs:pairs,zeroPairLibraryInstances:zeroPairLibraries,initialAnchorChecksPerformed:0,moduleDependencyScopeVerified:true};
+const result={status:'passed',repositoryCount:index.subjects.length,libraryInstanceCount:libraries,sourceFunctionWitnessCount:witnesses,oneToOnePairs:pairs,zeroPairLibraryInstances:zeroPairLibraries,initialAnchorChecksPerformed:0,moduleDependencyScopeVerified:true,finalBundlerScopeVerified:true};
 fs.writeFileSync(path.join(base,'audit-result.json'),JSON.stringify(result,null,2)+'\n');console.log(result);

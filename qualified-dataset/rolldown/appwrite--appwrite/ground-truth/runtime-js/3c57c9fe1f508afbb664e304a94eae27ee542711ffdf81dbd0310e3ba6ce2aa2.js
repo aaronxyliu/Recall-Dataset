@@ -1,3 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/agent.mcp.callback-EzOG6UB4.js","assets/index-ARRzLOvi.js","assets/index-CzzUskj_.css","assets/circle-x-D1APTO1Z.js"])))=>i.map(i=>d[i]);
-import{n as e,t}from"./lazyRouteComponent-DuwTJ5fo.js";import{Uet as n,r}from"./index-ARRzLOvi.js";const i=e(`/_auth/agent/mcp/callback`)({validateSearch:e=>e,component:t(()=>n(()=>import(`./agent.mcp.callback-EzOG6UB4.js`),__vite__mapDeps([0,1,2,3])),`component`),head:()=>({meta:[{title:r(`Connecting MCP`)}]})});export{i as t};
-//# sourceMappingURL=agent.mcp.callback-D4LJyfIP.js.map

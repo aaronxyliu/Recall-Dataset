@@ -1,2 +1,0 @@
-var e=`last-login-method`;const t=[`google`,`github`,`gitlab`,`bitbucket`];var n=new Set([...t,`email`,`passkey`]);function r(e){return e!==null&&t.includes(e)}function i(){if(typeof window>`u`)return null;try{let t=localStorage.getItem(e);if(t&&n.has(t))return t}catch{}return null}function a(t){if(!(typeof window>`u`))try{localStorage.setItem(e,t)}catch{}}export{r as n,a as r,i as t};
-//# sourceMappingURL=auth-storage-DfrhAfkj.js.map

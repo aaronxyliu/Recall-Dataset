@@ -1,2 +1,0 @@
-import{qet as e}from"./index-ARRzLOvi.js";const t=`link-neutral`,n=e(`text-inherit hover:text-inherit`,`underline decoration-dotted decoration-muted-foreground/38 underline-offset-[3px] [text-decoration-thickness:1px] hover:decoration-muted-foreground/58 transition-[text-decoration-color,color] duration-150`),r=`inline-flex items-center gap-1 font-medium text-muted-foreground transition-colors group-hover:text-foreground`;export{n,t as r,r as t};
-//# sourceMappingURL=link-styles-BP7-GDhn.js.map

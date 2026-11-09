@@ -1,2 +1,0 @@
-import{Cot as e}from"./index-ARRzLOvi.js";var t=[[`rect`,{width:`18`,height:`18`,x:`3`,y:`3`,rx:`2`,key:`afitv7`}],[`path`,{d:`M3 9h18`,key:`1pudct`}]],n=e(`panel-top`,t);export{t as n,n as t};
-//# sourceMappingURL=panel-top-SrdOjZo_.js.map

@@ -1,3 +1,0 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/organizations._orgId.agent._agentId-C2hGI7TR.js","assets/index-ARRzLOvi.js","assets/index-CzzUskj_.css","assets/AgentsView-Cd5C5ybp.js"])))=>i.map(i=>d[i]);
-import{n as e,t}from"./lazyRouteComponent-DuwTJ5fo.js";import{Uet as n}from"./index-ARRzLOvi.js";const r=e(`/_public/organizations/$orgId/agent/$agentId`)({component:t(()=>n(()=>import(`./organizations._orgId.agent._agentId-C2hGI7TR.js`),__vite__mapDeps([0,1,2,3])),`component`)});export{r as t};
-//# sourceMappingURL=organizations._orgId.agent._agentId-2iFLWjiG.js.map

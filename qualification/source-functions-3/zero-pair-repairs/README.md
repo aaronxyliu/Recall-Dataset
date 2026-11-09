@@ -1,3 +1,5 @@
+> Historical review of the 41-repository cohort. The final active scope keeps Webpack through Bun: **38 repositories, 305 library instances, 58,268 pairs**. See the [canonical index](../../../qualified-dataset/index.json). Counts below describe the review snapshot.
+
 # Source selection and zero-pair repairs — 2026-11-09
 
 DrawDB excludes `@dbml/core` and selects `@dnd-kit/sortable` instead (62 verified pairs). Its total changes from 44,570 to 6,206 pairs. The excluded library remains in the complete captured bundle, but contributes no selected evaluation pairs or selected-library reference snapshots.

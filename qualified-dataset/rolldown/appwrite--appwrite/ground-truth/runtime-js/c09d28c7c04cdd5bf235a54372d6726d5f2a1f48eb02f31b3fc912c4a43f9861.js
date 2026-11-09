@@ -1,2 +1,0 @@
-import{ZN as e}from"./index-ARRzLOvi.js";var t={seconds:1,minutes:60,hours:3600,days:1440*60,weeks:10080*60,months:720*60*60,years:365*24*60*60},n=[`years`,`months`,`weeks`,`days`,`hours`,`minutes`,`seconds`];function r(e,n){return e*t[n]}function i(e,n){return e/t[n]}function a(r,i){return e(r,(i?.units??n).map(e=>({unit:e,factor:t[e]})))}export{i as n,r,a as t};
-//# sourceMappingURL=time-unit-converter-DtoZHqjo.js.map

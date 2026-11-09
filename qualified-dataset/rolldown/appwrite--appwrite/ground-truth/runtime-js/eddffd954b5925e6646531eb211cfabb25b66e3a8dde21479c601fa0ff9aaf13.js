@@ -1,2 +1,0 @@
-import{v3 as e}from"./index-ARRzLOvi.js";function t(e){return e===`products/agent`||e.startsWith(`products/agent/`)}function n(e){let t=e.replace(/\/+$/,``)||`/`;return t===`/docs/products/agent`||t.startsWith(`/docs/products/agent/`)}function r(e){let t=e.split(/[?#]/,2)[0]??e;return t===`/docs/products/agent`||t.startsWith(`/docs/products/agent/`)}function i(){return e().agent}export{t as i,r as n,n as r,i as t};
-//# sourceMappingURL=agent-docs-feature-DZqo2FV3.js.map

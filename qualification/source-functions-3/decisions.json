@@ -304,8 +304,9 @@
     ],
     "candidateCount": 100,
     "qualification": "qualification/source-functions-3/results/rolldown/appwrite--appwrite/qualification.json",
-    "status": "included",
-    "reason": null
+    "status": "excluded",
+    "reason": "Outside final bundler scope: only Webpack through Bun are retained.",
+    "exclusionType": "bundler-scope"
   },
   {
     "subject": "rolldown/discourse--discourse",
@@ -324,8 +325,9 @@
     ],
     "candidateCount": 84,
     "qualification": "qualification/source-functions-3/results/rolldown/discourse--discourse/qualification.json",
-    "status": "included",
-    "reason": null
+    "status": "excluded",
+    "reason": "Outside final bundler scope: only Webpack through Bun are retained.",
+    "exclusionType": "bundler-scope"
   },
   {
     "subject": "rollup/abrahamjuliot--creepjs",
@@ -410,8 +412,9 @@
     ],
     "candidateCount": 176,
     "qualification": "qualification/source-functions-3/results/rspack/ToolJet--ToolJet/qualification.json",
-    "status": "unassessed",
-    "reason": "source rule passed; intended production page/capture not independently verified"
+    "status": "excluded",
+    "reason": "Outside final bundler scope: only Webpack through Bun are retained.",
+    "exclusionType": "bundler-scope"
   },
   {
     "subject": "rspack/metabase--metabase",
@@ -430,14 +433,15 @@
     ],
     "candidateCount": 152,
     "qualification": "qualification/source-functions-3/results/rspack/metabase--metabase/qualification.json",
-    "status": "included",
-    "reason": null
+    "status": "excluded",
+    "reason": "Outside final bundler scope: only Webpack through Bun are retained.",
+    "exclusionType": "bundler-scope"
   },
   {
     "subject": "tsup/peggyjs--peggy",
     "status": "excluded",
-    "reason": "Module-only scope: docs production candidates are copied standalone vendors or docs/test tooling, not imported dependencies of the built docs frontend; fewer than three eligible module libraries.",
-    "exclusionType": "module-scope"
+    "reason": "Outside final bundler scope: only Webpack through Bun are retained.",
+    "exclusionType": "bundler-scope"
   },
   {
     "subject": "tsup/zpao--qrcode.react",
@@ -446,7 +450,8 @@
     "candidateCount": 0,
     "qualification": "qualification/source-functions-3/results/tsup/zpao--qrcode.react/qualification.json",
     "status": "excluded",
-    "reason": "fewer-than-three-declared-production-dependencies"
+    "reason": "Outside final bundler scope: only Webpack through Bun are retained.",
+    "exclusionType": "bundler-scope"
   },
   {
     "subject": "turbopack/CalCom--cal.com",

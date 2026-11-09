@@ -115,22 +115,48 @@
     {
       "subject": "rolldown/appwrite--appwrite",
       "beforePairs": 4531,
-      "afterPairs": 4531,
-      "retainedPairs": 4531,
-      "removedPairs": 0,
+      "afterPairs": 0,
+      "retainedPairs": 0,
+      "removedPairs": 4531,
       "addedPairs": 0,
-      "removedByLibrary": {},
-      "removedByRole": {}
+      "removedByLibrary": {
+        "@dnd-kit/core": 272,
+        "@appwrite.io/console": 2596,
+        "@react-three/fiber": 689,
+        "@radix-ui/react-select": 123,
+        "@markdoc/markdoc": 568,
+        "@radix-ui/react-scroll-area": 87,
+        "@radix-ui/react-tooltip": 54,
+        "@tanstack/react-query": 63,
+        "@radix-ui/react-slot": 42,
+        "@dnd-kit/sortable": 37
+      },
+      "removedByRole": {
+        "module-build-output": 4531
+      }
     },
     {
       "subject": "rolldown/discourse--discourse",
       "beforePairs": 5272,
-      "afterPairs": 5272,
-      "retainedPairs": 5272,
-      "removedPairs": 0,
+      "afterPairs": 0,
+      "retainedPairs": 0,
+      "removedPairs": 5272,
       "addedPairs": 0,
-      "removedByLibrary": {},
-      "removedByRole": {}
+      "removedByLibrary": {
+        "ember-source": 3118,
+        "@warp-drive/json-api": 87,
+        "@warp-drive/core": 712,
+        "@atlaskit/pragmatic-drag-and-drop": 184,
+        "moment": 371,
+        "immer": 106,
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll": 69,
+        "@warp-drive/legacy": 542,
+        "ember-resolver": 53,
+        "@warp-drive/utilities": 30
+      },
+      "removedByRole": {
+        "module-build-output": 5272
+      }
     },
     {
       "subject": "rollup/daybrush--scenejs",
@@ -165,12 +191,25 @@
     {
       "subject": "rspack/metabase--metabase",
       "beforePairs": 1509,
-      "afterPairs": 1509,
-      "retainedPairs": 1509,
-      "removedPairs": 0,
+      "afterPairs": 0,
+      "retainedPairs": 0,
+      "removedPairs": 1509,
       "addedPairs": 0,
-      "removedByLibrary": {},
-      "removedByRole": {}
+      "removedByLibrary": {
+        "@floating-ui/react": 163,
+        "@mantine/core": 971,
+        "@dnd-kit/core": 230,
+        "@dnd-kit/sortable": 19,
+        "@floating-ui/dom": 34,
+        "@emotion/react": 11,
+        "@juggle/resize-observer": 60,
+        "@emotion/styled": 11,
+        "@dnd-kit/modifiers": 3,
+        "@emotion/cache": 7
+      },
+      "removedByRole": {
+        "module-build-output": 1509
+      }
     },
     {
       "subject": "tsup/peggyjs--peggy",
@@ -435,12 +474,12 @@
       "removedByRole": {}
     }
   ],
-  "removedPairs": 6703,
+  "removedPairs": 18015,
   "addedPairs": 0,
-  "afterPairs": 69580,
+  "afterPairs": 58268,
   "checks": [
     "every baseline pair accounted for",
-    "all removed pairs are non-module ingress",
+    "removed pairs are non-module ingress or outside final bundler scope",
     "all retained and added pairs have module ingress"
   ]
 }

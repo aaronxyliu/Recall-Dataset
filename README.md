@@ -1,14 +1,31 @@
 # ReCall Dataset
 
-The active [organized dataset](qualified-dataset/README.md) contains **41 repositories, 335 library instances, and 69,580 one-to-one function pairs**.
-
-The exact module-only cohort from `cc5df6cf` has been restored at the user’s request. Duplicate libraries are permitted; standalone vendor/global-script copies remain outside function-pair collection. See the [restoration receipt](qualification/module-dependencies/restoration-2026-11-09.json).
+The active [organized dataset](qualified-dataset/README.md) contains **38 repositories, 305 library instances, and 58,268 one-to-one function pairs**.
 
 Each repository has **3–10 production libraries**, each with **at least three source functions containing ≥10 POG features**, using the existing own-body property-operation counter. **Initial anchors are not required.** The [source-only policy](qualification/source-functions-3/POLICY.md) is enforced before new Docker builds and applied retrospectively to existing archives.
 
 Use [qualified-dataset/index.json](qualified-dataset/index.json) for membership and artifact paths, [catalog decisions](qualification/source-functions-3/catalog-decisions.json) for exclusions and unassessed cases, and the [build/browser report](verification/hufang-builds-2026-11-08/README.md) for independent Hufang verification. Selected libraries with zero accepted function pairs remain explicit; pair counts are not a source-eligibility gate.
 
 Earlier cohorts are preserved in Git history and [historical-cohorts/](historical-cohorts/). Both active evaluation manifests point to the source-qualified v2 records, with the [module-dependency-only correspondence rule](qualification/module-dependencies/POLICY.md). The following historical catalog does not define current membership.
+
+## Final dataset by bundler
+
+The final scope is **Webpack, Vite, esbuild, Rollup, Turbopack, Parcel, and Bun**, in the established popularity order. Duplicate libraries are permitted. Standalone vendor/global-script copies remain excluded from function-pair collection. tsup, Rolldown, and Rspack are outside the final dataset; their historical build/capture evidence remains archived. See the [cohort policy](qualification/source-functions-3/cohort-policy.json).
+
+| Bundler | Repositories | Library instances | Function pairs |
+|---|---:|---:|---:|
+| webpack | 8 | 75 | 19,055 |
+| vite | 8 | 79 | 19,630 |
+| esbuild | 6 | 41 | 5,208 |
+| rollup | 3 | 9 | 1,062 |
+| turbopack | 8 | 80 | 8,729 |
+| parcel | 3 | 12 | 2,896 |
+| bun | 2 | 9 | 1,688 |
+| **Total** | **38** | **305** | **58,268** |
+
+See the [per-group repository tables](qualified-dataset/README.md#final-repository-tables) for each repository’s library and function-pair counts.
+
+The former 41-repository cohort is preserved in [historical-cohorts/module-only-41b48d7/](historical-cohorts/module-only-41b48d7/).
 
 ## Historical build and capture catalog
 

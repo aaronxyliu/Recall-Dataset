@@ -12,10 +12,12 @@ from ownership import build as build_ownership
 base=pathlib.Path(__file__).resolve().parent;root=base.parents[1];dataset=root/'qualified-dataset';collector=root/'verification/hufang-builds-2026-11-08/collector'
 read=lambda p:json.loads(p.read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 module_policy=read(base.parent/'module-dependencies/policy.json')
+cohort_policy=read(base/'cohort-policy.json')
 policy=read(base/'policy.json');entries=[];decisions=[];excluded=read(base/'excluded-subjects.json')
 previous={row['subject']:row for row in read(dataset/'index.json')['subjects']} if (dataset/'index.json').exists() else {}
 for subject in read(base/'plan.json'):
  key=subject['subject'];receipt=base/'results'/key/'qualification.json'
+ if key.split('/')[0] not in cohort_policy['includedBundlers']:decisions.append({'subject':key,'status':'excluded','reason':'Outside final bundler scope: only Webpack through Bun are retained.','exclusionType':'bundler-scope'});continue
  if key in excluded:decisions.append({'subject':key,'status':'excluded','reason':excluded[key]['reason'],'exclusionType':excluded[key].get('exclusionType','user-request')});continue
  if not receipt.exists():decisions.append({'subject':key,'status':'unassessed','reason':'source preflight incomplete'});continue
  q=read(receipt);decision={'subject':key,'sourceEligibility':q['status'],'selectedLibraries':q['selectedLibraries'],'candidateCount':len(q['candidates']),'qualification':str(receipt.relative_to(root))}
@@ -87,4 +89,4 @@ for subject in read(base/'plan.json'):
 included={entry['subject'] for entry in entries}
 for file in dataset.glob('*/*/qualification.json'):
  if str(file.parent.relative_to(dataset)) not in included:shutil.rmtree(file.parent)
-index={'schema':'recall.qualified-dataset/v2','policy':policy,'correspondencePolicy':module_policy,'repositoryCount':len(entries),'libraryInstanceCount':sum(row['libraryCount'] for row in entries),'sourceFunctionWitnessCount':sum(sum(row['sourceFunctionWitnesses'].values()) for row in entries),'oneToOnePairs':sum(row['oneToOnePairs'] for row in entries),'zeroPairLibraryInstances':sum(sum(n==0 for n in row['libraryPairs'].values()) for row in entries),'subjects':entries};(dataset/'index.json').write_text(json.dumps(index,indent=2)+'\n');(base/'decisions.json').write_text(json.dumps(decisions,indent=2)+'\n');print('TOTAL',index['repositoryCount'],index['libraryInstanceCount'],index['oneToOnePairs'])
+index={'schema':'recall.qualified-dataset/v2','policy':policy,'cohortPolicy':cohort_policy,'correspondencePolicy':module_policy,'repositoryCount':len(entries),'libraryInstanceCount':sum(row['libraryCount'] for row in entries),'sourceFunctionWitnessCount':sum(sum(row['sourceFunctionWitnesses'].values()) for row in entries),'oneToOnePairs':sum(row['oneToOnePairs'] for row in entries),'zeroPairLibraryInstances':sum(sum(n==0 for n in row['libraryPairs'].values()) for row in entries),'subjects':entries};(dataset/'index.json').write_text(json.dumps(index,indent=2)+'\n');(base/'decisions.json').write_text(json.dumps(decisions,indent=2)+'\n');print('TOTAL',index['repositoryCount'],index['libraryInstanceCount'],index['oneToOnePairs'])

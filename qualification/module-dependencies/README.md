@@ -1,3 +1,5 @@
+> Historical review of the 41-repository cohort. The final active scope keeps Webpack through Bun: **38 repositories, 305 library instances, 58,268 pairs**. See the [canonical index](../../qualified-dataset/index.json). Counts below describe the review snapshot.
+
 # Module-dependency scope review — 2026-11-09
 
 Reviewed **42 repositories**. Active result: **41 repositories, 335 library instances, 69,580 pairs**. Removed 6,703 former pairs from standalone/global ingress. Other reviewed repositories retain their pair counts.
