@@ -1,1 +1,0 @@
-for(let[e,a]of[...languageMarquee.children].entries())e>0&&(a.style.animationDelay=2650+2650*e+"ms");

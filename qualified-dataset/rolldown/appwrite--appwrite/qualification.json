@@ -125,7 +125,7 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "candidates": [
     "@appwrite.io/console",
@@ -197,7 +197,7 @@
         "library": "@appwrite.io/console",
         "version": "captured-source-snapshot",
         "commit": "18c60abee1e2cb9d63612478f8e0e7319dfc300b",
-        "referenceManifestSHA256": "b217853dad8c49245e0f94613b42afcb476181f42f4aaf130326ef30e0f19476",
+        "referenceManifestSHA256": "5c781731139ac05875f708c9c030bfa70860ed979c5cc888a0a2c1f521e1b15d",
         "archiveRecord": "bundling-dataset/rolldown/appwrite--appwrite/ground-truth/func-mapping.json",
         "packageResolutionError": "Error: Exact source-package version unresolved in the pinned lockfiles: @appwrite.io/console https://pkg.pr.new/appwrite/appwrite/@appwrite.io/console@bb606dddb8ca7edc1d9f0e1fdfd6b03fb26dc1db"
       },
@@ -1275,22 +1275,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
+    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
+      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
     },
     "frontendManifestSHA256": "caa4f9d59a33fab6f15623e2773b690a66c0829f2465d99d1ba6b9c90c099011",
     "manifestRelative": "apps/console/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:00:58.640Z",
+  "started": "2026-11-09T10:55:42.835Z",
   "reason": null,
-  "finished": "2026-11-09T10:00:59.026Z",
+  "finished": "2026-11-09T10:55:43.276Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/rolldown/appwrite--appwrite/qualification.json",
-  "sourceEligibilityRecordSHA256": "951a1f3c0e4b28f03448cf72ac98c753ba601740768174168cda4c2cadcb97ea",
-  "organizationSignature": "1d258d96a80923be98c922eeb505bd32a00d6a5435ce73a61319aa02a7cf1f0b"
+  "sourceEligibilityRecordSHA256": "9e692695055b89afc14801f43bedb4d27f2494f92bc37dd1f3e965d408907e20",
+  "organizationSignature": "3019b728eee7efeddde89a89268c1ded8ae044a11e8e8784c496932c628ef3a1"
 }

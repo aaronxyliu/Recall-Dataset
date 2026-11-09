@@ -17,16 +17,34 @@
   "scope": "all-captured-runtime-assets-including-excluded-global-copies",
   "candidates": [
     {
-      "library": "@it-tools/bip39",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
+      "library": "@tabler/icons-vue",
+      "status": "unique-observed",
+      "moduleMappedBodyPoints": 51,
+      "sources": [
+        {
+          "source": "../../node_modules/.pnpm/@tabler+icons-vue@3.20.0_vue@3.3.4/node_modules/@tabler/icons-vue/dist/esm/createVueComponent.mjs",
+          "sha256": "49aaef31b6f313dc5b36458dbb6e1b04f6837ff48bacc9c587132628b8026a9d",
+          "relative": "dist/esm/createVueComponent.mjs",
+          "logical": "@tabler/icons-vue",
+          "install": "../../node_modules/.pnpm/@tabler+icons-vue@3.20.0_vue@3.3.4/node_modules/@tabler/icons-vue",
+          "bytes": 1083,
+          "assets": [
+            {
+              "asset": "<local>/assets/index-33ba6200.js#1fccef596b5a16c4cd8b329075f7e6548ab33fc9e2a9bb796b976a1c6c3f69df",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 2
+        }
+      ],
       "reasons": [],
       "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
+      "maps": [
+        "46c799e5ee7f2cc9e266dd2f2f5dcf0d491901be48da287fac9196160960820e"
+      ],
+      "moduleFunctionCount": 2,
+      "observedFunctionCount": 2,
+      "sourceFileCount": 1
     },
     {
       "library": "@vueuse/core",
@@ -2889,16 +2907,15 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
-  "unscoredLibraries": [
-    "@it-tools/bip39"
-  ],
+  "unscoredLibraries": [],
   "sourceOwnershipAmbiguousHashes": [],
   "authoritativeAuditSHA256": "30b8c32fb2aec919a947d1ed76cfdac5f1092d2f3ce28176ef454c992ac25ac1"
 }

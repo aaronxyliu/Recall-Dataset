@@ -23,8 +23,7 @@
     "@tauri-apps/plugin-dialog": 1,
     "@tauri-apps/plugin-fs": 1,
     "@tauri-apps/plugin-shell": 1,
-    "dioc": 3,
-    "@hoppscotch/common": 0
+    "dioc": 3
   },
   "pairs": [
     {
@@ -14445,15 +14444,12 @@
     "axios",
     "rxjs",
     "zod",
-    "@hoppscotch/common",
     "@tauri-apps/plugin-dialog",
     "@tauri-apps/plugin-fs",
     "@tauri-apps/plugin-shell",
     "dioc"
   ],
-  "unscoredLibraries": [
-    "@hoppscotch/common"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -14483,12 +14479,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
@@ -14496,9 +14493,9 @@
     "archiveRecordSHA256": "6907db78989b7116f0380ecb750ef5b31b3f80b17d6508b5e0f117649e496f40",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "cb645e6fc4f0557b526c605bad1b82a98703629a3c975d9be1a05ed5bfc1487d",
+    "sourceOwnershipSHA256": "7fb96450667bb187babb4820c81c2bd235d9693b6592993c66512d40518c6a5c",
     "moduleScopeSHA256": "0b1dfa3c7b00e1b375f1ad2d3721c210eae63b839b3e902629c55c5ad085d63c",
-    "duplicateAuditSHA256": "90901d13b627be33926dc59872cd79d99aa13f395f08427ab9b37e798c9f5285"
+    "duplicateAuditSHA256": "1c56a79a536ab98e64b4e94b303124a1b75d2641b2769c22f37e85f3cc94e9e7"
   },
   "evaluationLibraries": [
     "workbox-window",

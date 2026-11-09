@@ -17,144 +17,40 @@
   "selectionOverride": {
     "excludeLibraries": [
       "@angular/common",
+      "@angular/compiler",
       "@angular/core",
       "@angular/forms",
       "@angular/platform-browser",
       "@angular/platform-browser-dynamic",
       "@angular/router",
+      "@tailwindcss/postcss",
+      "primeclt",
       "primeicons",
       "primeng",
       "quill",
       "tailwindcss-primeui"
     ],
     "preferredLibraries": [
-      "@angular/compiler",
       "@primeuix/themes",
-      "@tailwindcss/postcss",
       "chart.js",
-      "primeclt",
       "rxjs",
       "tslib"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/esbuild/primefaces--sakai-ng/audit.json",
       "sha256": "95e41b9297018365c6349d6533363eefb039deed95fb19620972de49050e8f92",
-      "retainedUnobservedZeroPairLibraries": [
-        "@angular/compiler",
-        "@tailwindcss/postcss",
-        "primeclt"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "candidates": [
-    "@angular/compiler",
     "@primeuix/themes",
-    "@tailwindcss/postcss",
     "chart.js",
-    "primeclt",
     "rxjs",
     "tslib"
   ],
   "libraries": [
-    {
-      "library": "@angular/compiler",
-      "declaredVersion": "^21",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@angular/compiler",
-        "version": "21.0.6",
-        "integrity": "sha512-rBMzG7WnQMouFfDST+daNSAOVYdtw560645PhlxyVeIeHMlCm0j1jjBgVPGTBNpVgKRdT/sqbi6W6JYkY9mERA==",
-        "shasum": "305e1934e0636d9f3819a0897fe0091973f68584",
-        "tarballSHA256": "9036da2780b57a56e14c741109bf49a49735ff0c2df6fd81921cec2c432414ad",
-        "bytes": 872707,
-        "lockfile": "package-lock.json"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 16,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "fesm2022/compiler.mjs",
-          "source": "source-js/71d8994d7a17c8997fb489ee4ddc6e67469ffdd2a7f38351c917dfa3ba5e6c10.js",
-          "sourceSHA256": "71d8994d7a17c8997fb489ee4ddc6e67469ffdd2a7f38351c917dfa3ba5e6c10",
-          "span": [
-            381,
-            1929
-          ],
-          "name": "parse",
-          "normalizedASTSHA256": "2ee10b96f5c21c25893c98ca75cc3f52be72c634f8589f7e9621809145ade03d",
-          "codeSHA256": "deb7a7fbc4981a0bc28469f971269a6ef64cd03cb5898bc48fbe08f6e753d907",
-          "features": {
-            "propertyOperations": 18,
-            "distinctOperationPropertyPairs": 16,
-            "pogHash": "ae928fd30621fdf6",
-            "graphNodes": 27,
-            "graphEdges": 35,
-            "graphOperationOccurrences": 24,
-            "distinctGraphOperationPropertyPairs": 10,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "fesm2022/compiler.mjs",
-          "source": "source-js/71d8994d7a17c8997fb489ee4ddc6e67469ffdd2a7f38351c917dfa3ba5e6c10.js",
-          "sourceSHA256": "71d8994d7a17c8997fb489ee4ddc6e67469ffdd2a7f38351c917dfa3ba5e6c10",
-          "span": [
-            3146,
-            3619
-          ],
-          "name": "toString",
-          "normalizedASTSHA256": "0de30e686054de26fe535f54f14c3df3c131bca68d1bba185dcbf86dbfd7ed5d",
-          "codeSHA256": "5f506744e22cee5f1bc27a8ad3cbfd5009aec24879baaae35ac95fa535b83ec6",
-          "features": {
-            "propertyOperations": 14,
-            "distinctOperationPropertyPairs": 8,
-            "pogHash": "3b698c44b5817260",
-            "graphNodes": 17,
-            "graphEdges": 20,
-            "graphOperationOccurrences": 18,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "fesm2022/compiler.mjs",
-          "source": "source-js/71d8994d7a17c8997fb489ee4ddc6e67469ffdd2a7f38351c917dfa3ba5e6c10.js",
-          "sourceSHA256": "71d8994d7a17c8997fb489ee4ddc6e67469ffdd2a7f38351c917dfa3ba5e6c10",
-          "span": [
-            4385,
-            6248
-          ],
-          "name": "_addSelectable",
-          "normalizedASTSHA256": "d9a7fd4736676f4927d6024f96502b16d859673d1be667a9cc39c9b702bf1a2b",
-          "codeSHA256": "475c79c6317bea29dff6bef0c6521585776f8a586ae110b08a398f706f0e70f6",
-          "features": {
-            "propertyOperations": 29,
-            "distinctOperationPropertyPairs": 15,
-            "pogHash": "74cea0d3f9741b5f",
-            "graphNodes": 35,
-            "graphEdges": 45,
-            "graphOperationOccurrences": 34,
-            "distinctGraphOperationPropertyPairs": 15,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/01a8ce8bf523a95d09a9",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "657b51011163a8ddfd24b7e20404b16202db7b9f56ad8d68f7ea3996e9cf2299"
-        }
-      ],
-      "lockfileSHA256": "913cf86d8c742230280706a4eab7e49e72d70b8c7d8edc8afba7baa27662a45c",
-      "lockfileSnapshot": "lockfiles/913cf86d8c742230280706a4eab7e49e72d70b8c7d8edc8afba7baa27662a45c-package-lock.json"
-    },
     {
       "library": "@primeuix/themes",
       "declaredVersion": "^2.0.0",
@@ -253,103 +149,6 @@
       "lockfileSnapshot": "lockfiles/913cf86d8c742230280706a4eab7e49e72d70b8c7d8edc8afba7baa27662a45c-package-lock.json"
     },
     {
-      "library": "@tailwindcss/postcss",
-      "declaredVersion": "^4.1.11",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@tailwindcss/postcss",
-        "version": "4.1.18",
-        "integrity": "sha512-Ce0GFnzAOuPyfV5SxjXGn0CubwGcuDB0zcdaPuCSzAa/2vII24JTkH+I6jcbXLb1ctjZMZZI6OjDaLPJQL1S0g==",
-        "shasum": "19152640d676beaa2a4a70b00bbc36ef54e998b5",
-        "tarballSHA256": "0778b85ceed7dc68bb4c5306bf4db78753c807f90b662ff1fbc8748d88477e3f",
-        "bytes": 31063,
-        "lockfile": "package-lock.json"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 21,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/index.js",
-          "source": "source-js/039f0d2c324b973606441650f0947240cefa7b365ed3fb353acc9320f0998e7b.js",
-          "sourceSHA256": "039f0d2c324b973606441650f0947240cefa7b365ed3fb353acc9320f0998e7b",
-          "span": [
-            1862,
-            2842
-          ],
-          "name": "C",
-          "normalizedASTSHA256": "6335fe006fac717b678011cc6c8cf8f87a81e4e09bcc9c39427ff54ebc14dc6e",
-          "codeSHA256": "de2fb5254a0e765d96a1b14892dca3e6318526338cb949123aa34c16bff48bea",
-          "features": {
-            "propertyOperations": 40,
-            "distinctOperationPropertyPairs": 9,
-            "pogHash": "a7860f08418e5985",
-            "graphNodes": 72,
-            "graphEdges": 108,
-            "graphOperationOccurrences": 45,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/039f0d2c324b973606441650f0947240cefa7b365ed3fb353acc9320f0998e7b.js",
-          "sourceSHA256": "039f0d2c324b973606441650f0947240cefa7b365ed3fb353acc9320f0998e7b",
-          "span": [
-            3045,
-            3490
-          ],
-          "name": "w",
-          "normalizedASTSHA256": "5241f11f14a9b1e206fd915a07bc2ce37efad1a63480ea24d5a8427630b4fe38",
-          "codeSHA256": "d682e129bac1e55edb41307ac145d3bd9c555882bc0a47a11d53df1967bfe9b0",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 6,
-            "pogHash": "cb7ab965121eb22b",
-            "graphNodes": 31,
-            "graphEdges": 46,
-            "graphOperationOccurrences": 12,
-            "distinctGraphOperationPropertyPairs": 6,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/039f0d2c324b973606441650f0947240cefa7b365ed3fb353acc9320f0998e7b.js",
-          "sourceSHA256": "039f0d2c324b973606441650f0947240cefa7b365ed3fb353acc9320f0998e7b",
-          "span": [
-            3498,
-            3660
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "1917e2fa096158fadaaa869dee3d1ebb4a665f497b72d5ecf32dabf032f3aca8",
-          "codeSHA256": "e6c1ac56a09287626dc24eb4c702b34cc1ad444f8fc16e88ae7ae7b56b05329e",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "7f7593985ab399c",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 12,
-            "distinctGraphOperationPropertyPairs": 7,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/6b40da09bb01b605ebc4",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "60e0b68c0f35c078eef3a5d29419d0b03ff84ec1df9c3f9d6e39a519a5ae7985"
-        }
-      ],
-      "lockfileSHA256": "913cf86d8c742230280706a4eab7e49e72d70b8c7d8edc8afba7baa27662a45c",
-      "lockfileSnapshot": "lockfiles/913cf86d8c742230280706a4eab7e49e72d70b8c7d8edc8afba7baa27662a45c-package-lock.json"
-    },
-    {
       "library": "chart.js",
       "declaredVersion": "4.4.2",
       "origin": {
@@ -441,103 +240,6 @@
         {
           "path": "licenses/LICENSE.md",
           "sha256": "5a0877ad6d818529be4f33009d0942cdf7e2ed7656156f4aba7308459a546030"
-        }
-      ],
-      "lockfileSHA256": "913cf86d8c742230280706a4eab7e49e72d70b8c7d8edc8afba7baa27662a45c",
-      "lockfileSnapshot": "lockfiles/913cf86d8c742230280706a4eab7e49e72d70b8c7d8edc8afba7baa27662a45c-package-lock.json"
-    },
-    {
-      "library": "primeclt",
-      "declaredVersion": "^0.1.5",
-      "origin": {
-        "kind": "npm-package",
-        "name": "primeclt",
-        "version": "0.1.5",
-        "integrity": "sha512-9gSu9yFNWq4GfSisqrHRapi06WsnqqPwu8wCEaHtPZEZcydFpWRKtoi4kFRZuFqrVE+dvNgH1AQ6usAB7a1upg==",
-        "shasum": "826a2729a880712aabb4a4364174e616d99e4b5e",
-        "tarballSHA256": "dcfb7460c2f7f70da0303755e30f4798dcfa1b66c4c776ef9ade7abc7e080409",
-        "bytes": 81788,
-        "lockfile": "package-lock.json"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 31,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/index.js",
-          "source": "source-js/67398af9a69ccf22d049e3452806d66373ec0a23f5284d236af75d65a0873d91.js",
-          "sourceSHA256": "67398af9a69ccf22d049e3452806d66373ec0a23f5284d236af75d65a0873d91",
-          "span": [
-            9001,
-            13058
-          ],
-          "name": "modifyTailwindConfig",
-          "normalizedASTSHA256": "96f9aabf6c6ffa34ae3461e85f85a97cc0c308ddbc2224ff1d4743b79aa00c83",
-          "codeSHA256": "f2787c4b5e128c29479cd32f8ed4d69f023ccafcde042abd1ec0bd5749d70286",
-          "features": {
-            "propertyOperations": 55,
-            "distinctOperationPropertyPairs": 24,
-            "pogHash": "778d835e7251801c",
-            "graphNodes": 60,
-            "graphEdges": 77,
-            "graphOperationOccurrences": 94,
-            "distinctGraphOperationPropertyPairs": 22,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/67398af9a69ccf22d049e3452806d66373ec0a23f5284d236af75d65a0873d91.js",
-          "sourceSHA256": "67398af9a69ccf22d049e3452806d66373ec0a23f5284d236af75d65a0873d91",
-          "span": [
-            13059,
-            14675
-          ],
-          "name": "updateViteMainCSS",
-          "normalizedASTSHA256": "2abb5fbe08b88389ff615274dc1ef39a085a2877e96b26b261a0e608b684c839",
-          "codeSHA256": "7687471ef872dfcdb6fc10a1d33693bad43639603cfaa563318619fd98a8b9ae",
-          "features": {
-            "propertyOperations": 28,
-            "distinctOperationPropertyPairs": 13,
-            "pogHash": "86943be80e2763b4",
-            "graphNodes": 13,
-            "graphEdges": 14,
-            "graphOperationOccurrences": 28,
-            "distinctGraphOperationPropertyPairs": 12,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/67398af9a69ccf22d049e3452806d66373ec0a23f5284d236af75d65a0873d91.js",
-          "sourceSHA256": "67398af9a69ccf22d049e3452806d66373ec0a23f5284d236af75d65a0873d91",
-          "span": [
-            14676,
-            16559
-          ],
-          "name": "nuxtConfiguration",
-          "normalizedASTSHA256": "d787a361cdcc1a1ff1e6912a318046f84cd8a77b2ad9f489353fc6e07627fc2c",
-          "codeSHA256": "ac9bf9990a642f3da6d78c5b64a02187a54df6c6de967546108086c607ed7722",
-          "features": {
-            "propertyOperations": 31,
-            "distinctOperationPropertyPairs": 15,
-            "pogHash": "d918964a79310bff",
-            "graphNodes": 37,
-            "graphEdges": 46,
-            "graphOperationOccurrences": 45,
-            "distinctGraphOperationPropertyPairs": 15,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/636289eb9453fe064e79",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "100435c969d0160c5f46996d27eb3cca46d428e7e87b1872b44ddaa59f35a8bc"
         }
       ],
       "lockfileSHA256": "913cf86d8c742230280706a4eab7e49e72d70b8c7d8edc8afba7baa27662a45c",
@@ -1632,32 +1334,29 @@
     }
   ],
   "selectedLibraries": [
-    "@angular/compiler",
     "@primeuix/themes",
-    "@tailwindcss/postcss",
     "chart.js",
-    "primeclt",
     "rxjs",
     "tslib"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
+    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
+      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
     },
     "frontendManifestSHA256": "ef5706fa52a58b6bc6c82325d03cfa8155634f14269db0682c1494185cc1de57",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:00:57.551Z",
+  "started": "2026-11-09T10:55:42.149Z",
   "reason": null,
-  "finished": "2026-11-09T10:00:57.928Z",
+  "finished": "2026-11-09T10:55:42.424Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/esbuild/primefaces--sakai-ng/qualification.json",
-  "sourceEligibilityRecordSHA256": "d1ab4a03d8ec417d5ee1b89129a206b142db28456405718722067a5f5baac97e",
-  "organizationSignature": "13e7bb6a6f06116b75afe16e663768745b22a0ca260d7d13ec8e6d90499cce6a"
+  "sourceEligibilityRecordSHA256": "9231527eb27ea4b9500c567b63d9bc803f13472bb5eacb278c2faa6621bc52c3",
+  "organizationSignature": "a9320c26039889559b1f56e904655a2acd786ca8dced5e5d8bdbff65037931c8"
 }

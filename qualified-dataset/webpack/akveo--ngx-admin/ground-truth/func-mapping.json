@@ -22,8 +22,7 @@
     "@asymmetrik/ngx-leaflet": 12,
     "classlist.js": 1,
     "ngx-echarts": 3,
-    "tslib": 1,
-    "@angular/cdk": 0
+    "tslib": 1
   },
   "pairs": [
     {
@@ -14250,15 +14249,12 @@
     "core-js",
     "leaflet",
     "zone.js",
-    "@angular/cdk",
     "@asymmetrik/ngx-leaflet",
     "classlist.js",
     "ngx-echarts",
     "tslib"
   ],
-  "unscoredLibraries": [
-    "@angular/cdk"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -14288,12 +14284,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
@@ -14301,9 +14298,9 @@
     "archiveRecordSHA256": "f40e01069bf754d507c73a3854e4823ce11ac04d4074ec473b9e08c569b8dbf3",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "9d4989434ece9ace1d1672402b97853262451ad0a67bf78038a10ea73146d12a",
+    "sourceOwnershipSHA256": "5bdaaf1a5c052859d428c3268106ba7a566f188ef26cbbd82fe367c7101dd82d",
     "moduleScopeSHA256": "48071dcf8458a640aa726a62773b537b75f13b30b42bdcf4f4225c2be7323004",
-    "duplicateAuditSHA256": "45e64fee0f5a5d312cb562233b48e4b3cfc734d9ccdd3322c5c4def226ee34eb"
+    "duplicateAuditSHA256": "5c534310fac0c25133cca0985c89fe98be7fca16dc5a49e5130ae1f51a796d1f"
   },
   "evaluationLibraries": [
     "web-animations-js",

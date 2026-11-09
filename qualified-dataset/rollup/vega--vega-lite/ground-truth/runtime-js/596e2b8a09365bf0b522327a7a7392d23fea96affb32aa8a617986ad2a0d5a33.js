@@ -1,4 +1,0 @@
-(function anonymous(item,_
-) {
-var o=item,datum=o.datum,m=0,$;$="#4c78a8";if(o["fill"]!==$)o["fill"]=$,m=1;$="bar";if(o["ariaRoleDescription"]!==$)o["ariaRoleDescription"]=$,m=1;$=((("a: " + (this.isValid(datum["a"])?(this.isArray(datum["a"])?this.join(datum["a"],' '):datum["a"]):("" + datum["a"]))) + "; b: ") + this.format(datum["b"],""));if(o["description"]!==$)o["description"]=$,m=1;$=_["%x"](datum["a"]);if(o["x"]!==$)o["x"]=$,m=1;$=Math.max(0.25,this.bandwidth('x'));if(o["width"]!==$)o["width"]=$,m=1;$=_["%y"](datum["b_end"]);if(o["y"]!==$)o["y"]=$,m=1;$=_["%y"](datum["b_start"]);if(o["y2"]!==$)o["y2"]=$,m=1;if(o.y>o.y2)$=o.y,o.y=o.y2,o.y2=$;o.height=o.y2-o.y;return m;
-})

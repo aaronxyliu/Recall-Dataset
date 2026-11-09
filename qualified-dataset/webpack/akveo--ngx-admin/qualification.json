@@ -17,6 +17,7 @@
   "selectionOverride": {
     "excludeLibraries": [
       "@angular/animations",
+      "@angular/cdk",
       "@angular/common",
       "@angular/compiler",
       "@angular/core",
@@ -58,24 +59,20 @@
       "core-js",
       "leaflet",
       "zone.js",
-      "@angular/cdk",
       "@asymmetrik/ngx-leaflet",
       "classlist.js",
       "ngx-echarts",
       "tslib"
     ],
-    "reason": "Module-only rule: tinymce and pace-js enter through Angular scripts[] globals; replace with source-eligible imported Angular production dependencies. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "reason": "Module-only rule: tinymce and pace-js enter through Angular scripts[] globals; replace with source-eligible imported Angular production dependencies. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/webpack/akveo--ngx-admin/audit.json",
       "sha256": "6c4a951edb23e523890226491aabac21d7da2f70c01490cb105027cd5452f7a6",
-      "retainedUnobservedZeroPairLibraries": [
-        "@angular/cdk"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     }
   },
   "candidates": [
-    "@angular/cdk",
     "@asymmetrik/ngx-leaflet",
     "classlist.js",
     "core-js",
@@ -468,103 +465,6 @@
         {
           "path": "licenses/LICENSE.wrapped",
           "sha256": "a99e52642d7541ab1c0cb2c07d3111e87173a3cf5a474e0e5c2aaec9f97f3543"
-        }
-      ],
-      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
-      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
-    },
-    {
-      "library": "@angular/cdk",
-      "declaredVersion": "^15.2.9",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@angular/cdk",
-        "version": "15.2.9",
-        "integrity": "sha512-koaM07N1AIQ5oHU27l0/FoQSSoYAwlAYwVZ4Di3bYrJsTBNCN2Xsby7wI8gZxdepMnV4Fe9si382BDBov+oO4Q==",
-        "shasum": "e22df07b296fec6dccf66d569c3acc3c504c2058",
-        "tarballSHA256": "44ab0314900b625161ca9fc53b19076257812af2b6f165f3b0346ef9e2d2e179",
-        "bytes": 2573669,
-        "lockfile": "package-lock.json"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 2,
-      "parsedFunctions": 6,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "esm2020/a11y/aria-describer/aria-describer.mjs",
-          "source": "source-js/1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1.js",
-          "sourceSHA256": "1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1",
-          "span": [
-            2155,
-            2826
-          ],
-          "name": "describe",
-          "normalizedASTSHA256": "c59341560ee44706284a0d462e4c01de98d1e8071093d9a62b0401381e85c721",
-          "codeSHA256": "a9ea297c2195cea69490f296f9db595409285494737e491d2aab3ed902018e92",
-          "features": {
-            "propertyOperations": 11,
-            "distinctOperationPropertyPairs": 10,
-            "pogHash": "a57e75c6b2e1d86a",
-            "graphNodes": 13,
-            "graphEdges": 15,
-            "graphOperationOccurrences": 13,
-            "distinctGraphOperationPropertyPairs": 10,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "esm2020/a11y/aria-describer/aria-describer.mjs",
-          "source": "source-js/1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1.js",
-          "sourceSHA256": "1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1",
-          "span": [
-            2848,
-            3757
-          ],
-          "name": "removeDescription",
-          "normalizedASTSHA256": "205003ab2b024c76eaa5f776ba006af0759f88b2dc885cd003ad703632698944",
-          "codeSHA256": "97cfdbf210d58186ea5ac9996f791ad6306941ff7075c2bad43013c0e7eb8d17",
-          "features": {
-            "propertyOperations": 13,
-            "distinctOperationPropertyPairs": 12,
-            "pogHash": "3506883a12c99062",
-            "graphNodes": 20,
-            "graphEdges": 25,
-            "graphOperationOccurrences": 22,
-            "distinctGraphOperationPropertyPairs": 12,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "esm2020/a11y/aria-describer/aria-describer.mjs",
-          "source": "source-js/1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1.js",
-          "sourceSHA256": "1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1",
-          "span": [
-            3860,
-            4339
-          ],
-          "name": "ngOnDestroy",
-          "normalizedASTSHA256": "95b899ece8ba54afc5a3a207e1d9760bdae4d7eea4dd5215baa37a30a0a47c54",
-          "codeSHA256": "d8a9ceb1428a937281cc65cdcac7324f73284b011013009a7185862a9bf00770",
-          "features": {
-            "propertyOperations": 13,
-            "distinctOperationPropertyPairs": 12,
-            "pogHash": "65e0a686a1dd95c7",
-            "graphNodes": 8,
-            "graphEdges": 7,
-            "graphOperationOccurrences": 13,
-            "distinctGraphOperationPropertyPairs": 12,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/b170efff09bd93e29836",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "c8a1be159e4213a9afbe18360b8f24499ca2de7a2f03e6849293d7df5aeeed64"
         }
       ],
       "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
@@ -988,7 +888,6 @@
     "core-js",
     "leaflet",
     "zone.js",
-    "@angular/cdk",
     "@asymmetrik/ngx-leaflet",
     "classlist.js",
     "ngx-echarts",
@@ -996,22 +895,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
+    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
+      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
     },
     "frontendManifestSHA256": "4060df1e57f71b861c4ffe1b0f861c9d8ff6622a052fb78d84c9fca7960d3abe",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:01:05.108Z",
+  "started": "2026-11-09T10:56:19.557Z",
   "reason": null,
-  "finished": "2026-11-09T10:01:05.215Z",
+  "finished": "2026-11-09T10:56:19.638Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/akveo--ngx-admin/qualification.json",
-  "sourceEligibilityRecordSHA256": "9310f913bacdb700193b0c4e8447ecfa24980ce0917c380fb58a498ae42d9b26",
-  "organizationSignature": "69ca822387eadc1bb2f82361d2a2a240b4a1ed839efa2e908d43fade1046eeef"
+  "sourceEligibilityRecordSHA256": "db8d89701d351cbf61c6ef4fdde35aa048007ba77f4b089273593262a7236e21",
+  "organizationSignature": "0301f8077182940a0b087f62cdf6ca725f94d753f7e8658423ffac59d8905011"
 }

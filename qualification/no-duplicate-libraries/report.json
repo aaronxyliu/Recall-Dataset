@@ -8,24 +8,25 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "reviewedRepositories": 41,
-  "repositoryCount": 39,
-  "libraryInstanceCount": 315,
-  "oneToOnePairs": 49604,
+  "repositoryCount": 31,
+  "libraryInstanceCount": 259,
+  "oneToOnePairs": 49946,
   "confirmedDuplicateLibraryInstancesRemoved": 34,
-  "unassessedLibraryInstancesRemoved": 15,
-  "replacementLibraryInstancesAdded": 33,
-  "existingUnobservedUnscoredLibraryInstances": 75,
-  "evaluationLibraryInstances": 240,
-  "sourceFunctionWitnessCount": 945,
-  "secondsAtThreeSecondsPerPair": 148812,
+  "unassessedLibraryInstancesRemoved": 70,
+  "replacementLibraryInstancesAdded": 64,
+  "existingUnobservedUnscoredLibraryInstances": 0,
+  "evaluationLibraryInstances": 259,
+  "sourceFunctionWitnessCount": 777,
+  "secondsAtThreeSecondsPerPair": 149838,
   "subjects": [
     {
       "subject": "bun/RockwellShah--filekey",
@@ -65,64 +66,77 @@
     },
     {
       "subject": "bun/micahkepe--jsongrep",
-      "status": "included",
-      "reason": null,
+      "status": "excluded",
+      "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering",
       "beforeLibraries": [
         "@bytecodealliance/jco",
         "react",
         "react-dom"
       ],
-      "afterLibraries": [
-        "@bytecodealliance/jco",
-        "react",
-        "react-dom"
+      "afterLibraries": [],
+      "removedLibraries": [
+        {
+          "library": "@bytecodealliance/jco",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "react",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "react-dom",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        }
       ],
-      "removedLibraries": [],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "@bytecodealliance/jco"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 1208,
-      "afterPairs": 1208,
-      "libraryPairs": {
-        "@bytecodealliance/jco": 0,
-        "react": 128,
-        "react-dom": 1080
-      },
+      "afterPairs": 0,
+      "libraryPairs": {},
       "audit": "qualification/no-duplicate-libraries/results/bun/micahkepe--jsongrep/audit.json",
       "auditSHA256": "8406e3855672f851c896e48ab226f13404dc31bbc2d3d341bf9a67b892facb04"
     },
     {
       "subject": "esbuild/mattlewis92--angular-calendar",
-      "status": "included",
-      "reason": null,
+      "status": "excluded",
+      "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering",
       "beforeLibraries": [
         "@scarf/scarf",
         "calendar-utils",
         "positioning",
         "tslib"
       ],
-      "afterLibraries": [
-        "@scarf/scarf",
-        "calendar-utils",
-        "positioning",
-        "tslib"
+      "afterLibraries": [],
+      "removedLibraries": [
+        {
+          "library": "@scarf/scarf",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "calendar-utils",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "positioning",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "tslib",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        }
       ],
-      "removedLibraries": [],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "@scarf/scarf",
-        "calendar-utils",
-        "positioning"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 37,
-      "afterPairs": 37,
-      "libraryPairs": {
-        "@scarf/scarf": 0,
-        "calendar-utils": 0,
-        "positioning": 0,
-        "tslib": 37
-      },
+      "afterPairs": 0,
+      "libraryPairs": {},
       "audit": "qualification/no-duplicate-libraries/results/esbuild/mattlewis92--angular-calendar/audit.json",
       "auditSHA256": "c2ac8e6488afa05c37d20e9c46d455f9584f6d0b39a239b13a4ca915f020472f"
     },
@@ -188,11 +202,8 @@
         "primeclt"
       ],
       "afterLibraries": [
-        "@angular/compiler",
         "@primeuix/themes",
-        "@tailwindcss/postcss",
         "chart.js",
-        "primeclt",
         "rxjs",
         "tslib"
       ],
@@ -200,6 +211,11 @@
         {
           "library": "@angular/common",
           "status": "unassessed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@angular/compiler",
+          "status": "not-observed",
           "reasonTypes": []
         },
         {
@@ -221,25 +237,28 @@
           "library": "@angular/router",
           "status": "unassessed",
           "reasonTypes": []
+        },
+        {
+          "library": "@tailwindcss/postcss",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "primeclt",
+          "status": "not-observed",
+          "reasonTypes": []
         }
       ],
       "addedLibraries": [
         "rxjs",
         "tslib"
       ],
-      "unscoredRetainedLibraries": [
-        "@angular/compiler",
-        "@tailwindcss/postcss",
-        "primeclt"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 1309,
       "afterPairs": 1651,
       "libraryPairs": {
-        "@angular/compiler": 0,
         "@primeuix/themes": 8,
-        "@tailwindcss/postcss": 0,
         "chart.js": 1301,
-        "primeclt": 0,
         "rxjs": 313,
         "tslib": 29
       },
@@ -248,34 +267,42 @@
     },
     {
       "subject": "esbuild/sissbruecker--linkding",
-      "status": "included",
-      "reason": null,
+      "status": "excluded",
+      "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering",
       "beforeLibraries": [
         "@floating-ui/dom",
         "@hotwired/turbo",
         "esbuild",
         "lit"
       ],
-      "afterLibraries": [
-        "@floating-ui/dom",
-        "@hotwired/turbo",
-        "esbuild",
-        "lit"
+      "afterLibraries": [],
+      "removedLibraries": [
+        {
+          "library": "@floating-ui/dom",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "@hotwired/turbo",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "esbuild",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "lit",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
       ],
-      "removedLibraries": [],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "esbuild",
-        "lit"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 911,
-      "afterPairs": 911,
-      "libraryPairs": {
-        "@floating-ui/dom": 42,
-        "@hotwired/turbo": 869,
-        "esbuild": 0,
-        "lit": 0
-      },
+      "afterPairs": 0,
+      "libraryPairs": {},
       "audit": "qualification/no-duplicate-libraries/results/esbuild/sissbruecker--linkding/audit.json",
       "auditSHA256": "dcd15f5f3f1603758e8f18b6abddbf775497e15ba1fe672088eca33f40d6b47a"
     },
@@ -344,23 +371,39 @@
         "tslib"
       ],
       "afterLibraries": [
-        "@angular/animations",
-        "@angular/cdk",
-        "@angular/compiler",
-        "@angular/forms",
         "@angular/platform-browser",
         "rxjs",
         "tslib"
       ],
       "removedLibraries": [
         {
+          "library": "@angular/animations",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@angular/cdk",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
           "library": "@angular/common",
           "status": "unassessed",
           "reasonTypes": []
         },
         {
+          "library": "@angular/compiler",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
           "library": "@angular/core",
           "status": "unassessed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@angular/forms",
+          "status": "not-observed",
           "reasonTypes": []
         },
         {
@@ -370,19 +413,10 @@
         }
       ],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "@angular/animations",
-        "@angular/cdk",
-        "@angular/compiler",
-        "@angular/forms"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 336,
       "afterPairs": 447,
       "libraryPairs": {
-        "@angular/animations": 0,
-        "@angular/cdk": 0,
-        "@angular/compiler": 0,
-        "@angular/forms": 0,
         "@angular/platform-browser": 111,
         "rxjs": 307,
         "tslib": 29
@@ -392,38 +426,43 @@
     },
     {
       "subject": "parcel/jonasschmedtmann--complete-javascript-course",
-      "status": "included",
-      "reason": null,
+      "status": "excluded",
+      "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering",
       "beforeLibraries": [
         "core-js",
         "fractional",
         "regenerator-runtime"
       ],
-      "afterLibraries": [
-        "core-js",
-        "fractional",
-        "regenerator-runtime"
+      "afterLibraries": [],
+      "removedLibraries": [
+        {
+          "library": "core-js",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "fractional",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "regenerator-runtime",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
       ],
-      "removedLibraries": [],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "fractional",
-        "regenerator-runtime"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 16,
-      "afterPairs": 16,
-      "libraryPairs": {
-        "core-js": 16,
-        "fractional": 0,
-        "regenerator-runtime": 0
-      },
+      "afterPairs": 0,
+      "libraryPairs": {},
       "audit": "qualification/no-duplicate-libraries/results/parcel/jonasschmedtmann--complete-javascript-course/audit.json",
       "auditSHA256": "e0593b75869cce7a922611ae18d5555c53a4d9c74ac23ad01eaa90919a517221"
     },
     {
       "subject": "parcel/parcel-bundler--website",
-      "status": "included",
-      "reason": null,
+      "status": "excluded",
+      "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering",
       "beforeLibraries": [
         "alpinejs",
         "focus-visible",
@@ -432,13 +471,7 @@
         "react-dom",
         "react-use"
       ],
-      "afterLibraries": [
-        "focus-visible",
-        "marked",
-        "react",
-        "react-dom",
-        "react-use"
-      ],
+      "afterLibraries": [],
       "removedLibraries": [
         {
           "library": "alpinejs",
@@ -446,24 +479,38 @@
           "reasonTypes": [
             "same-original-function-copied"
           ]
+        },
+        {
+          "library": "focus-visible",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "marked",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "react",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "react-dom",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "react-use",
+          "status": "not-observed",
+          "reasonTypes": []
         }
       ],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "marked",
-        "react",
-        "react-dom",
-        "react-use"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 452,
-      "afterPairs": 9,
-      "libraryPairs": {
-        "focus-visible": 9,
-        "marked": 0,
-        "react": 0,
-        "react-dom": 0,
-        "react-use": 0
-      },
+      "afterPairs": 0,
+      "libraryPairs": {},
       "audit": "qualification/no-duplicate-libraries/results/parcel/parcel-bundler--website/audit.json",
       "auditSHA256": "b1b12c84e75ae02e2874ea363af4711f6e68666b546673871a83cd1796f65042"
     },
@@ -670,60 +717,71 @@
     },
     {
       "subject": "rollup/omnibrain--svguitar",
-      "status": "included",
-      "reason": null,
+      "status": "excluded",
+      "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering",
       "beforeLibraries": [
         "@svgdotjs/svg.js",
         "roughjs",
         "svgdom"
       ],
-      "afterLibraries": [
-        "@svgdotjs/svg.js",
-        "roughjs",
-        "svgdom"
+      "afterLibraries": [],
+      "removedLibraries": [
+        {
+          "library": "@svgdotjs/svg.js",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "roughjs",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "svgdom",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
       ],
-      "removedLibraries": [],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "svgdom"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 851,
-      "afterPairs": 851,
-      "libraryPairs": {
-        "@svgdotjs/svg.js": 710,
-        "roughjs": 141,
-        "svgdom": 0
-      },
+      "afterPairs": 0,
+      "libraryPairs": {},
       "audit": "qualification/no-duplicate-libraries/results/rollup/omnibrain--svguitar/audit.json",
       "auditSHA256": "15c574ee373362f609598badcc8c44db600de514ee99df6565ea41b88ec87451"
     },
     {
       "subject": "rollup/vega--vega-lite",
-      "status": "included",
-      "reason": null,
+      "status": "excluded",
+      "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering",
       "beforeLibraries": [
         "tslib",
         "vega-expression",
         "yargs"
       ],
-      "afterLibraries": [
-        "tslib",
-        "vega-expression",
-        "yargs"
+      "afterLibraries": [],
+      "removedLibraries": [
+        {
+          "library": "tslib",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "vega-expression",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "yargs",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
       ],
-      "removedLibraries": [],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "tslib",
-        "yargs"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 87,
-      "afterPairs": 87,
-      "libraryPairs": {
-        "tslib": 0,
-        "vega-expression": 87,
-        "yargs": 0
-      },
+      "afterPairs": 0,
+      "libraryPairs": {},
       "audit": "qualification/no-duplicate-libraries/results/rollup/vega--vega-lite/audit.json",
       "auditSHA256": "0c181085f96e903fcd690700a7c94d25b54a7239a5483157aafc6966af90a71d"
     },
@@ -818,9 +876,9 @@
         "next-auth",
         "react-i18next",
         "zod",
-        "@boxyhq/saml-jackson",
-        "@daily-co/daily-js",
-        "@hookform/resolvers"
+        "@hookform/resolvers",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-radio-group"
       ],
       "removedLibraries": [
         {
@@ -836,17 +894,26 @@
             "same-original-function-copied",
             "same-original-function-copied"
           ]
+        },
+        {
+          "library": "@boxyhq/saml-jackson",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@daily-co/daily-js",
+          "status": "not-observed",
+          "reasonTypes": []
         }
       ],
       "addedLibraries": [
-        "@hookform/resolvers"
+        "@hookform/resolvers",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-radio-group"
       ],
-      "unscoredRetainedLibraries": [
-        "@boxyhq/saml-jackson",
-        "@daily-co/daily-js"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 1620,
-      "afterPairs": 912,
+      "afterPairs": 929,
       "libraryPairs": {
         "@formkit/auto-animate": 35,
         "@radix-ui/react-tooltip": 37,
@@ -855,9 +922,9 @@
         "next-auth": 119,
         "react-i18next": 51,
         "zod": 414,
-        "@boxyhq/saml-jackson": 0,
-        "@daily-co/daily-js": 0,
-        "@hookform/resolvers": 13
+        "@hookform/resolvers": 13,
+        "@radix-ui/react-dialog": 12,
+        "@radix-ui/react-radio-group": 5
       },
       "audit": "qualification/no-duplicate-libraries/results/turbopack/CalCom--cal.com/audit.json",
       "auditSHA256": "b3f81a7cdc7f0f84291d4f18af01f3c7797fb8aa6cd221119e88d0c8cb2d5a2b"
@@ -1036,40 +1103,73 @@
       ],
       "afterLibraries": [
         "@radix-ui/react-dialog",
-        "@radix-ui/react-dropdown-menu",
-        "@radix-ui/react-popover",
-        "@radix-ui/react-select",
         "@radix-ui/react-slot",
         "@vercel/analytics",
-        "better-auth",
-        "cmdk",
-        "country-data-list",
-        "date-fns"
+        "lucide-react",
+        "next",
+        "react",
+        "react-dom",
+        "sonner",
+        "tailwind-merge"
       ],
-      "removedLibraries": [],
-      "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "@radix-ui/react-dropdown-menu",
-        "@radix-ui/react-popover",
-        "@radix-ui/react-select",
-        "better-auth",
-        "cmdk",
-        "country-data-list",
-        "date-fns"
+      "removedLibraries": [
+        {
+          "library": "@radix-ui/react-dropdown-menu",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@radix-ui/react-popover",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@radix-ui/react-select",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "better-auth",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "cmdk",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "country-data-list",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "date-fns",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
       ],
+      "addedLibraries": [
+        "lucide-react",
+        "next",
+        "react",
+        "react-dom",
+        "sonner",
+        "tailwind-merge"
+      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 46,
-      "afterPairs": 46,
+      "afterPairs": 1651,
       "libraryPairs": {
         "@radix-ui/react-dialog": 27,
-        "@radix-ui/react-dropdown-menu": 0,
-        "@radix-ui/react-popover": 0,
-        "@radix-ui/react-select": 0,
         "@radix-ui/react-slot": 7,
         "@vercel/analytics": 12,
-        "better-auth": 0,
-        "cmdk": 0,
-        "country-data-list": 0,
-        "date-fns": 0
+        "lucide-react": 1,
+        "next": 1410,
+        "react": 0,
+        "react-dom": 0,
+        "sonner": 124,
+        "tailwind-merge": 70
       },
       "audit": "qualification/no-duplicate-libraries/results/turbopack/Open-Dev-Society--OpenStock/audit.json",
       "auditSHA256": "315db6e67a4089f18e947d67e3d6bfcafdf466f867c9ddadb4853561a7045d12"
@@ -1093,9 +1193,6 @@
       "afterLibraries": [
         "@inkeep/cxkit-react",
         "@vercel/analytics",
-        "@vercel/og",
-        "fumadocs-mdx",
-        "gray-matter",
         "react",
         "react-dom"
       ],
@@ -1115,6 +1212,11 @@
           ]
         },
         {
+          "library": "@vercel/og",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
           "library": "fumadocs-core",
           "status": "duplicated",
           "reasonTypes": [
@@ -1129,6 +1231,11 @@
           ]
         },
         {
+          "library": "fumadocs-mdx",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
           "library": "fumadocs-ui",
           "status": "duplicated",
           "reasonTypes": [
@@ -1141,6 +1248,11 @@
             "same-original-function-copied",
             "same-original-function-copied"
           ]
+        },
+        {
+          "library": "gray-matter",
+          "status": "not-observed",
+          "reasonTypes": []
         },
         {
           "library": "next",
@@ -1160,19 +1272,12 @@
       "addedLibraries": [
         "react-dom"
       ],
-      "unscoredRetainedLibraries": [
-        "@vercel/og",
-        "fumadocs-mdx",
-        "gray-matter"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 1970,
       "afterPairs": 96,
       "libraryPairs": {
         "@inkeep/cxkit-react": 83,
         "@vercel/analytics": 13,
-        "@vercel/og": 0,
-        "fumadocs-mdx": 0,
-        "gray-matter": 0,
         "react": 0,
         "react-dom": 0
       },
@@ -1196,50 +1301,89 @@
         "@neondatabase/serverless"
       ],
       "afterLibraries": [
-        "@ai-sdk/google",
         "@base-ui-components/react",
-        "@dnd-kit/core",
-        "@dnd-kit/modifiers",
-        "@dnd-kit/sortable",
-        "@google/generative-ai",
-        "@hookform/resolvers",
-        "@lexical/react",
-        "@neondatabase/serverless",
-        "culori"
+        "culori",
+        "date-fns",
+        "next",
+        "react",
+        "react-day-picker",
+        "react-dom",
+        "react-syntax-highlighter",
+        "swr",
+        "vaul"
       ],
       "removedLibraries": [
+        {
+          "library": "@ai-sdk/google",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
         {
           "library": "@ai-sdk/react",
           "status": "unassessed",
           "reasonTypes": []
+        },
+        {
+          "library": "@dnd-kit/core",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@dnd-kit/modifiers",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@dnd-kit/sortable",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@google/generative-ai",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@hookform/resolvers",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@lexical/react",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@neondatabase/serverless",
+          "status": "not-observed",
+          "reasonTypes": []
         }
       ],
       "addedLibraries": [
-        "culori"
+        "culori",
+        "date-fns",
+        "next",
+        "react",
+        "react-day-picker",
+        "react-dom",
+        "react-syntax-highlighter",
+        "swr",
+        "vaul"
       ],
-      "unscoredRetainedLibraries": [
-        "@ai-sdk/google",
-        "@dnd-kit/core",
-        "@dnd-kit/modifiers",
-        "@dnd-kit/sortable",
-        "@google/generative-ai",
-        "@hookform/resolvers",
-        "@lexical/react",
-        "@neondatabase/serverless"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 78,
-      "afterPairs": 222,
+      "afterPairs": 2207,
       "libraryPairs": {
-        "@ai-sdk/google": 0,
         "@base-ui-components/react": 78,
-        "@dnd-kit/core": 0,
-        "@dnd-kit/modifiers": 0,
-        "@dnd-kit/sortable": 0,
-        "@google/generative-ai": 0,
-        "@hookform/resolvers": 0,
-        "@lexical/react": 0,
-        "@neondatabase/serverless": 0,
-        "culori": 144
+        "culori": 144,
+        "date-fns": 101,
+        "next": 1484,
+        "react": 0,
+        "react-day-picker": 197,
+        "react-dom": 0,
+        "react-syntax-highlighter": 30,
+        "swr": 62,
+        "vaul": 111
       },
       "audit": "qualification/no-duplicate-libraries/results/turbopack/jnsahaj--tweakcn/audit.json",
       "auditSHA256": "e9f089b11fb9ccb8fe59a5bbf152e5afab491531d9549a78d9d0c9a819a6c51f"
@@ -1261,18 +1405,28 @@
         "@hookform/resolvers"
       ],
       "afterLibraries": [
-        "@ai-sdk/anthropic",
-        "@ai-sdk/openai",
         "@ai-sdk/react",
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
         "@dnd-kit/sortable",
-        "@faker-js/faker",
         "@formisch/react",
         "@internationalized/date",
-        "@tanstack/ai"
+        "@tanstack/ai",
+        "@tanstack/ai-client",
+        "@tanstack/ai-react",
+        "@tanstack/react-form"
       ],
       "removedLibraries": [
+        {
+          "library": "@ai-sdk/anthropic",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@ai-sdk/openai",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
         {
           "library": "@base-ui/react",
           "status": "duplicated",
@@ -1286,6 +1440,11 @@
             "same-original-function-copied",
             "same-original-function-copied"
           ]
+        },
+        {
+          "library": "@faker-js/faker",
+          "status": "not-observed",
+          "reasonTypes": []
         },
         {
           "library": "@hookform/resolvers",
@@ -1304,26 +1463,25 @@
       ],
       "addedLibraries": [
         "@internationalized/date",
-        "@tanstack/ai"
+        "@tanstack/ai",
+        "@tanstack/ai-client",
+        "@tanstack/ai-react",
+        "@tanstack/react-form"
       ],
-      "unscoredRetainedLibraries": [
-        "@ai-sdk/anthropic",
-        "@ai-sdk/openai",
-        "@faker-js/faker"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 1651,
-      "afterPairs": 309,
+      "afterPairs": 514,
       "libraryPairs": {
-        "@ai-sdk/anthropic": 0,
-        "@ai-sdk/openai": 0,
         "@ai-sdk/react": 0,
         "@dnd-kit/core": 132,
         "@dnd-kit/modifiers": 1,
         "@dnd-kit/sortable": 9,
-        "@faker-js/faker": 0,
         "@formisch/react": 85,
         "@internationalized/date": 0,
-        "@tanstack/ai": 82
+        "@tanstack/ai": 92,
+        "@tanstack/ai-client": 162,
+        "@tanstack/ai-react": 21,
+        "@tanstack/react-form": 12
       },
       "audit": "qualification/no-duplicate-libraries/results/turbopack/shadcn-ui--ui/audit.json",
       "auditSHA256": "2b81610475654f91074ab091df96ee0cce758b139a4042e7f7400d88969ddef1"
@@ -1345,41 +1503,77 @@
         "chart.js"
       ],
       "afterLibraries": [
-        "@clickhouse/client",
-        "@dicebear/core",
-        "@prisma/adapter-pg",
-        "@prisma/client",
-        "@svgr/cli",
         "@tanstack/react-query",
         "@umami/react-zen",
-        "bcryptjs",
-        "chalk",
-        "chart.js"
+        "chart.js",
+        "chartjs-adapter-date-fns",
+        "colord",
+        "date-fns-tz",
+        "lucide-react",
+        "next-intl",
+        "prop-types",
+        "react"
       ],
-      "removedLibraries": [],
-      "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "@clickhouse/client",
-        "@dicebear/core",
-        "@prisma/adapter-pg",
-        "@prisma/client",
-        "@svgr/cli",
-        "bcryptjs",
-        "chalk"
+      "removedLibraries": [
+        {
+          "library": "@clickhouse/client",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@dicebear/core",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@prisma/adapter-pg",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@prisma/client",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@svgr/cli",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "bcryptjs",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "chalk",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
       ],
+      "addedLibraries": [
+        "chartjs-adapter-date-fns",
+        "colord",
+        "date-fns-tz",
+        "lucide-react",
+        "next-intl",
+        "prop-types",
+        "react"
+      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 796,
-      "afterPairs": 796,
+      "afterPairs": 881,
       "libraryPairs": {
-        "@clickhouse/client": 0,
-        "@dicebear/core": 0,
-        "@prisma/adapter-pg": 0,
-        "@prisma/client": 0,
-        "@svgr/cli": 0,
         "@tanstack/react-query": 15,
         "@umami/react-zen": 179,
-        "bcryptjs": 0,
-        "chalk": 0,
-        "chart.js": 602
+        "chart.js": 602,
+        "chartjs-adapter-date-fns": 3,
+        "colord": 47,
+        "date-fns-tz": 27,
+        "lucide-react": 0,
+        "next-intl": 3,
+        "prop-types": 5,
+        "react": 0
       },
       "audit": "qualification/no-duplicate-libraries/results/turbopack/umami-software--umami/audit.json",
       "auditSHA256": "ef2102d031be65a23ce7507d4559c604abf9256c05b442c1aa0d73a9295d2fe3"
@@ -1410,15 +1604,21 @@
         "marked",
         "vue-i18n",
         "vuedraggable",
-        "@it-tools/bip39"
+        "@tabler/icons-vue"
       ],
-      "removedLibraries": [],
-      "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "@it-tools/bip39"
+      "removedLibraries": [
+        {
+          "library": "@it-tools/bip39",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
       ],
+      "addedLibraries": [
+        "@tabler/icons-vue"
+      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 2681,
-      "afterPairs": 2681,
+      "afterPairs": 2684,
       "libraryPairs": {
         "naive-ui": 630,
         "fuse.js": 146,
@@ -1429,7 +1629,7 @@
         "marked": 128,
         "vue-i18n": 166,
         "vuedraggable": 481,
-        "@it-tools/bip39": 0
+        "@tabler/icons-vue": 3
       },
       "audit": "qualification/no-duplicate-libraries/results/vite/CorentinTh--it-tools/audit.json",
       "auditSHA256": "30b8c32fb2aec919a947d1ed76cfdac5f1092d2f3ce28176ef454c992ac25ac1"
@@ -1457,18 +1657,27 @@
         "react-dom",
         "react-haiku",
         "react-icons",
-        "react-router-dom",
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
+        "react-router-dom"
       ],
-      "removedLibraries": [],
+      "removedLibraries": [
+        {
+          "library": "@chakra-ui/react",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@emotion/react",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@gsap/react",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
+      ],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 881,
       "afterPairs": 881,
       "libraryPairs": {
@@ -1478,10 +1687,7 @@
         "react-dom": 623,
         "react-haiku": 3,
         "react-icons": 51,
-        "react-router-dom": 25,
-        "@chakra-ui/react": 0,
-        "@emotion/react": 0,
-        "@gsap/react": 0
+        "react-router-dom": 25
       },
       "audit": "qualification/no-duplicate-libraries/results/vite/DavidHDev--react-bits/audit.json",
       "auditSHA256": "9aa9773f0f26f96018ff05154614ec8c45d21c051a7fc3f06195a8d6f4c5f226"
@@ -1649,37 +1855,44 @@
         "react-dom",
         "@sentry/browser",
         "i18next-browser-languagedetector",
-        "react",
-        "firebase",
-        "socket.io-client",
-        "uqr",
-        "vite-plugin-html"
+        "react"
       ],
       "removedLibraries": [
         {
           "library": "jotai",
           "status": "unassessed",
           "reasonTypes": []
+        },
+        {
+          "library": "firebase",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "socket.io-client",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "uqr",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "vite-plugin-html",
+          "status": "not-observed",
+          "reasonTypes": []
         }
       ],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "firebase",
-        "socket.io-client",
-        "uqr",
-        "vite-plugin-html"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 809,
       "afterPairs": 809,
       "libraryPairs": {
         "react-dom": 614,
         "@sentry/browser": 102,
         "i18next-browser-languagedetector": 28,
-        "react": 65,
-        "firebase": 0,
-        "socket.io-client": 0,
-        "uqr": 0,
-        "vite-plugin-html": 0
+        "react": 65
       },
       "audit": "qualification/no-duplicate-libraries/results/vite/excalidraw--excalidraw/audit.json",
       "auditSHA256": "e8ed85f6e38575c0bfb45b4c2474ebea4ace2af5c1a1a215078dcec0cc985eb3"
@@ -1706,7 +1919,6 @@
         "axios",
         "rxjs",
         "zod",
-        "@hoppscotch/common",
         "@tauri-apps/plugin-dialog",
         "@tauri-apps/plugin-fs",
         "@tauri-apps/plugin-shell",
@@ -1762,6 +1974,11 @@
           "reasonTypes": [
             "multiple-installed-package-versions"
           ]
+        },
+        {
+          "library": "@hoppscotch/common",
+          "status": "not-observed",
+          "reasonTypes": []
         }
       ],
       "addedLibraries": [
@@ -1770,9 +1987,7 @@
         "@tauri-apps/plugin-shell",
         "dioc"
       ],
-      "unscoredRetainedLibraries": [
-        "@hoppscotch/common"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 3244,
       "afterPairs": 1388,
       "libraryPairs": {
@@ -1781,7 +1996,6 @@
         "axios": 351,
         "rxjs": 208,
         "zod": 423,
-        "@hoppscotch/common": 0,
         "@tauri-apps/plugin-dialog": 1,
         "@tauri-apps/plugin-fs": 3,
         "@tauri-apps/plugin-shell": 1,
@@ -1885,9 +2099,7 @@
         "path-to-regexp",
         "element-ui",
         "vue",
-        "vuex",
-        "clipboard",
-        "codemirror"
+        "vuex"
       ],
       "removedLibraries": [
         {
@@ -1898,13 +2110,20 @@
             "same-original-function-copied",
             "same-original-function-copied"
           ]
+        },
+        {
+          "library": "clipboard",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "codemirror",
+          "status": "not-observed",
+          "reasonTypes": []
         }
       ],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "clipboard",
-        "codemirror"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 5578,
       "afterPairs": 5082,
       "libraryPairs": {
@@ -1914,9 +2133,7 @@
         "path-to-regexp": 12,
         "element-ui": 4126,
         "vue": 465,
-        "vuex": 115,
-        "clipboard": 0,
-        "codemirror": 0
+        "vuex": 115
       },
       "audit": "qualification/no-duplicate-libraries/results/webpack/PanJiaChen--vue-element-admin/audit.json",
       "auditSHA256": "4cbadd25726f340d19ce784b966ffd1b1cbbc3830c23407c5f88ba7e3c53a2c1"
@@ -1942,7 +2159,6 @@
         "core-js",
         "leaflet",
         "zone.js",
-        "@angular/cdk",
         "@asymmetrik/ngx-leaflet",
         "classlist.js",
         "ngx-echarts",
@@ -1971,6 +2187,11 @@
           "reasonTypes": []
         },
         {
+          "library": "@angular/cdk",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
           "library": "@angular/common",
           "status": "unassessed",
           "reasonTypes": []
@@ -1987,9 +2208,7 @@
         "ngx-echarts",
         "tslib"
       ],
-      "unscoredRetainedLibraries": [
-        "@angular/cdk"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 5838,
       "afterPairs": 1436,
       "libraryPairs": {
@@ -1997,7 +2216,6 @@
         "core-js": 164,
         "leaflet": 858,
         "zone.js": 224,
-        "@angular/cdk": 0,
         "@asymmetrik/ngx-leaflet": 71,
         "classlist.js": 18,
         "ngx-echarts": 31,
@@ -2008,8 +2226,8 @@
     },
     {
       "subject": "webpack/bailicangdu--vue2-elm",
-      "status": "included",
-      "reason": null,
+      "status": "excluded",
+      "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering",
       "beforeLibraries": [
         "better-scroll",
         "fastclick",
@@ -2019,15 +2237,38 @@
         "vue-router",
         "vuex"
       ],
-      "afterLibraries": [
-        "better-scroll",
-        "fastclick",
-        "iscroll",
-        "showdown",
-        "vue",
-        "vue-router"
-      ],
+      "afterLibraries": [],
       "removedLibraries": [
+        {
+          "library": "better-scroll",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "fastclick",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "iscroll",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "showdown",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "vue",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
+        {
+          "library": "vue-router",
+          "status": "repository-excluded",
+          "reasonTypes": []
+        },
         {
           "library": "vuex",
           "status": "not-observed",
@@ -2035,22 +2276,10 @@
         }
       ],
       "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "better-scroll",
-        "fastclick",
-        "iscroll",
-        "showdown"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 492,
-      "afterPairs": 485,
-      "libraryPairs": {
-        "better-scroll": 0,
-        "fastclick": 0,
-        "iscroll": 0,
-        "showdown": 0,
-        "vue": 420,
-        "vue-router": 65
-      },
+      "afterPairs": 0,
+      "libraryPairs": {},
       "audit": "qualification/no-duplicate-libraries/results/webpack/bailicangdu--vue2-elm/audit.json",
       "auditSHA256": "3a4233d6745c9eefac9bf741600094885f381235d47bc340f66d8e6b118971e6"
     },
@@ -2069,28 +2298,34 @@
         "react-dom"
       ],
       "afterLibraries": [
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "katex",
         "next",
         "nextra",
         "nextra-theme-docs",
         "react",
         "react-dom"
       ],
-      "removedLibraries": [],
-      "addedLibraries": [],
-      "unscoredRetainedLibraries": [
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "katex"
+      "removedLibraries": [
+        {
+          "library": "@fortawesome/fontawesome-svg-core",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@fortawesome/react-fontawesome",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "katex",
+          "status": "not-observed",
+          "reasonTypes": []
+        }
       ],
+      "addedLibraries": [],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 1427,
       "afterPairs": 1427,
       "libraryPairs": {
-        "@fortawesome/fontawesome-svg-core": 0,
-        "@fortawesome/react-fontawesome": 0,
-        "katex": 0,
         "next": 847,
         "nextra": 51,
         "nextra-theme-docs": 94,
@@ -2227,12 +2462,12 @@
         "mdast-util-from-markdown",
         "@sentry/nextjs",
         "typed.js",
-        "@bsmnt/scrollytelling",
-        "@code-hike/mdx",
-        "@codesandbox/sandpack-react",
-        "@hcaptcha/react-hcaptcha",
         "@heroicons/react",
-        "@supabase/supabase-js"
+        "@supabase/supabase-js",
+        "nuqs",
+        "react",
+        "react-dom",
+        "react-use"
       ],
       "removedLibraries": [
         {
@@ -2262,31 +2497,50 @@
             "same-original-function-copied",
             "same-original-function-copied"
           ]
+        },
+        {
+          "library": "@bsmnt/scrollytelling",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@code-hike/mdx",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@codesandbox/sandpack-react",
+          "status": "not-observed",
+          "reasonTypes": []
+        },
+        {
+          "library": "@hcaptcha/react-hcaptcha",
+          "status": "not-observed",
+          "reasonTypes": []
         }
       ],
       "addedLibraries": [
         "@heroicons/react",
-        "@supabase/supabase-js"
+        "@supabase/supabase-js",
+        "nuqs",
+        "react",
+        "react-dom",
+        "react-use"
       ],
-      "unscoredRetainedLibraries": [
-        "@bsmnt/scrollytelling",
-        "@code-hike/mdx",
-        "@codesandbox/sandpack-react",
-        "@hcaptcha/react-hcaptcha"
-      ],
+      "unscoredRetainedLibraries": [],
       "beforePairs": 1358,
-      "afterPairs": 254,
+      "afterPairs": 300,
       "libraryPairs": {
         "recharts": 207,
         "mdast-util-from-markdown": 6,
         "@sentry/nextjs": 0,
         "typed.js": 21,
-        "@bsmnt/scrollytelling": 0,
-        "@code-hike/mdx": 0,
-        "@codesandbox/sandpack-react": 0,
-        "@hcaptcha/react-hcaptcha": 0,
         "@heroicons/react": 0,
-        "@supabase/supabase-js": 20
+        "@supabase/supabase-js": 20,
+        "nuqs": 38,
+        "react": 0,
+        "react-dom": 0,
+        "react-use": 8
       },
       "audit": "qualification/no-duplicate-libraries/results/webpack/supabase--supabase/audit.json",
       "auditSHA256": "1017ba7d59d8d1c31f1a613136cfd12d130c2ff04b173e435ed03dadb1c47797"

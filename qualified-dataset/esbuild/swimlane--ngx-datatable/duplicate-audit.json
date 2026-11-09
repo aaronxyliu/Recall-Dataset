@@ -17,54 +17,6 @@
   "scope": "all-captured-runtime-assets-including-excluded-global-copies",
   "candidates": [
     {
-      "library": "@angular/animations",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "@angular/cdk",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "@angular/compiler",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "@angular/forms",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
       "library": "@angular/platform-browser",
       "status": "unique-observed",
       "moduleMappedBodyPoints": 1966,
@@ -1575,19 +1527,15 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
-  "unscoredLibraries": [
-    "@angular/animations",
-    "@angular/cdk",
-    "@angular/compiler",
-    "@angular/forms"
-  ],
+  "unscoredLibraries": [],
   "sourceOwnershipAmbiguousHashes": [],
   "authoritativeAuditSHA256": "26cdcfebc141f918ee68dc05e50a0290a3867ad155b9a8a1025c0649020a5fe9"
 }

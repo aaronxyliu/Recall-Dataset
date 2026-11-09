@@ -17,10 +17,7 @@
     "@inkeep/cxkit-react": 9,
     "@vercel/analytics": 6,
     "react": 0,
-    "react-dom": 0,
-    "@vercel/og": 0,
-    "fumadocs-mdx": 0,
-    "gray-matter": 0
+    "react-dom": 0
   },
   "pairs": [
     {
@@ -2057,17 +2054,10 @@
   "selectedLibraries": [
     "@inkeep/cxkit-react",
     "@vercel/analytics",
-    "@vercel/og",
-    "fumadocs-mdx",
-    "gray-matter",
     "react",
     "react-dom"
   ],
-  "unscoredLibraries": [
-    "@vercel/og",
-    "fumadocs-mdx",
-    "gray-matter"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -2097,12 +2087,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "b500a2ee95134f81d74da7911d7378dd2853d042",
@@ -2110,9 +2101,9 @@
     "archiveRecordSHA256": "c5a55cb7edaef28bf96f3508fbafbf9c561a3c7199b64355296113890a2f8a00",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "9664cd021bdc8c5501a219ec67aab2edccc741baa37360d5be4b5cef7f2112d8",
+    "sourceOwnershipSHA256": "4724c46cccc8eb7316f865285297fe18c46f6d22ebfea09dfa6f69f16e445887",
     "moduleScopeSHA256": "a26c231d0d6e72205215999d29eccfd92563981b93e89f79c15218cc7c5bdef2",
-    "duplicateAuditSHA256": "564db8ffbeaf9c7735263244f0111491ec5bcff0275e243818d4e6c1ccd3ff09"
+    "duplicateAuditSHA256": "4fbf8337f39fb7abcbb68b94032bf379b2dde572e7b8b3be30f18e0e186ffe20"
   },
   "evaluationLibraries": [
     "@inkeep/cxkit-react",

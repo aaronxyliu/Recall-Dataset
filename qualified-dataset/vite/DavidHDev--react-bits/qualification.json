@@ -23,14 +23,14 @@
       "react-haiku",
       "react-icons",
       "react-router-dom",
-      "@chakra-ui/react",
-      "@emotion/react",
-      "@gsap/react",
       "@hugeicons/react",
       "next-themes"
     ],
-    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
     "excludeLibraries": [
+      "@chakra-ui/react",
+      "@emotion/react",
+      "@gsap/react",
       "@hugeicons/core-free-icons",
       "@mediabunny/mp3-encoder",
       "@react-three/drei",
@@ -67,18 +67,11 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/vite/DavidHDev--react-bits/audit.json",
       "sha256": "9aa9773f0f26f96018ff05154614ec8c45d21c051a7fc3f06195a8d6f4c5f226",
-      "retainedUnobservedZeroPairLibraries": [
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     }
   },
   "candidates": [
-    "@chakra-ui/react",
-    "@emotion/react",
-    "@gsap/react",
     "@hugeicons/react",
     "lucide-react",
     "next-themes",
@@ -768,341 +761,6 @@
       ],
       "lockfileSHA256": "60418e2a684ec42cd0f66c2cfeb951e1c85afb25fcc565e2ae1208afb6631c60",
       "lockfileSnapshot": "lockfiles/60418e2a684ec42cd0f66c2cfeb951e1c85afb25fcc565e2ae1208afb6631c60-package-lock.json"
-    },
-    {
-      "library": "@chakra-ui/react",
-      "declaredVersion": "^3.20.0",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@chakra-ui/react",
-        "version": "3.27.0",
-        "integrity": "sha512-M1WTAErI2cYM/PB4h5Kf5CCAg70g3HCzVvTEhcf5ty8QrG6QybPf3RdWSpBlIy7qpjuEnQYpHLxM0jnFLArBgA==",
-        "shasum": "d416204209e797a018779d7f4ddd8b266a6327f8",
-        "tarballSHA256": "b3a378b81b51b0aa00bf7e396a9d7afb61ba313ecdb25c3c448edf0a03fe7bd1",
-        "bytes": 426170,
-        "lockfile": "package-lock.json"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 7,
-      "parsedFunctions": 27,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/cjs/components/alert/alert.cjs",
-          "source": "source-js/f4f66935bc334debe0a4a7a2c38f79983522158a3780ce567146f8897d69d92d.js",
-          "sourceSHA256": "f4f66935bc334debe0a4a7a2c38f79983522158a3780ce567146f8897d69d92d",
-          "span": [
-            1433,
-            1853
-          ],
-          "name": "AlertIndicator2",
-          "normalizedASTSHA256": "7ed001969b09d4bbec695d0c77c167025230e85c0dcad1293f2e776004de7709",
-          "codeSHA256": "af83ae109c74f5ffd80e4c7f048622cffd703696f8a355951033ebd427cd21d7",
-          "features": {
-            "propertyOperations": 13,
-            "distinctOperationPropertyPairs": 11,
-            "pogHash": "c8bb752540a7995",
-            "graphNodes": 7,
-            "graphEdges": 6,
-            "graphOperationOccurrences": 20,
-            "distinctGraphOperationPropertyPairs": 11,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/cjs/components/aspect-ratio/aspect-ratio.cjs",
-          "source": "source-js/8d46e47ed0ac8e09bde93dc7f2986b11047ca9434427dc6a48e9b5470622ce8d.js",
-          "sourceSHA256": "8d46e47ed0ac8e09bde93dc7f2986b11047ca9434427dc6a48e9b5470622ce8d",
-          "span": [
-            724,
-            1335
-          ],
-          "name": "AspectRatio2",
-          "normalizedASTSHA256": "d7e3791cd36a7082a7530ff76664daf588b090d79df1b223b2752e2740d2ed7b",
-          "codeSHA256": "fb1e312daca1a22164075b9d1bacfef3dc527b938dcdfd5264b9d2510f36db97",
-          "features": {
-            "propertyOperations": 18,
-            "distinctOperationPropertyPairs": 18,
-            "pogHash": "ce8b6ae12feffa60",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 18,
-            "distinctGraphOperationPropertyPairs": 18,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/cjs/components/avatar/avatar.cjs",
-          "source": "source-js/2af39f388a13080eb088f50779a75183382ecaeee6c8e78b873b5bcf3511ac2b.js",
-          "sourceSHA256": "2af39f388a13080eb088f50779a75183382ecaeee6c8e78b873b5bcf3511ac2b",
-          "span": [
-            1190,
-            1484
-          ],
-          "name": "getInitials",
-          "normalizedASTSHA256": "b69bc5887d123f38653f8bb77ec7a5b6baf61165085645f7e232bbaa4e89d4ac",
-          "codeSHA256": "d38162fb5bdf5bf22077e887c45ff9a3c2d0d92db76132e1b81cdcbda2255925",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 6,
-            "pogHash": "4970e4831fa4f873",
-            "graphNodes": 14,
-            "graphEdges": 16,
-            "graphOperationOccurrences": 12,
-            "distinctGraphOperationPropertyPairs": 5,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/2f40ce12b03a98d34338",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "9763e8439364e3663d1c41ac4c2a2bb44af407e3f28d9a079919d7a574d868f8"
-        }
-      ],
-      "lockfileSHA256": "60418e2a684ec42cd0f66c2cfeb951e1c85afb25fcc565e2ae1208afb6631c60",
-      "lockfileSnapshot": "lockfiles/60418e2a684ec42cd0f66c2cfeb951e1c85afb25fcc565e2ae1208afb6631c60-package-lock.json"
-    },
-    {
-      "library": "@emotion/react",
-      "declaredVersion": "^11.14.0",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@emotion/react",
-        "version": "11.14.0",
-        "integrity": "sha512-O000MLDBDdk/EohJPFUqvnp4qnHeYkVP5B0xEG0D/L7cOKP9kefu2DXn8dj74cQfsEzUqh+sr1RzFqiL1o+PpA==",
-        "shasum": "cfaae35ebc67dd9ef4ea2e9acc6cd29e157dd05d",
-        "tarballSHA256": "56ab452022e865baa9fc02d12ad5a57b2c0d8884c5cc1b0bff5308a26d92b1f4",
-        "bytes": 166114,
-        "lockfile": "package-lock.json"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 13,
-      "parsedFunctions": 42,
-      "diagnostics": [
-        {
-          "file": "src/_isolated-hnrs.ts",
-          "error": "SyntaxError: [9:15-9:16]: Unexpected token: '<'"
-        },
-        {
-          "file": "src/class-names.tsx",
-          "error": "SyntaxError: [16:7-16:16]: Unexpected token: 'interface'"
-        },
-        {
-          "file": "src/context.tsx",
-          "error": "SyntaxError: [30:48-30:49]: Expected '('"
-        },
-        {
-          "file": "src/css.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/emotion-element.tsx",
-          "error": "SyntaxError: [22:0-22:9]: Unexpected token: 'interface'"
-        },
-        {
-          "file": "src/get-label-from-stack-trace.ts",
-          "error": "SyntaxError: [1:33-1:34]: Expected ')'"
-        },
-        {
-          "file": "src/global.tsx",
-          "error": "SyntaxError: [12:7-12:16]: Unexpected token: 'interface'"
-        },
-        {
-          "file": "src/jsx-dev-runtime.ts",
-          "error": "SyntaxError: [6:7-6:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/jsx-runtime.ts",
-          "error": "SyntaxError: [6:7-6:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/jsx.ts",
-          "error": "SyntaxError: [6:16-6:17]: Missing initializer in const declaration"
-        },
-        {
-          "file": "src/keyframes.ts",
-          "error": "SyntaxError: [4:5-4:14]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/theming.tsx",
-          "error": "SyntaxError: [8:7-8:16]: Unexpected token: 'interface'"
-        }
-      ],
-      "witnesses": [
-        {
-          "file": "dist/emotion-element-010f37fa.development.edge-light.cjs.js",
-          "source": "source-js/2901bc8f513a36b1f0451bdddd65918e763c8f89f20a1d12fc04aec6be5b790f.js",
-          "sourceSHA256": "2901bc8f513a36b1f0451bdddd65918e763c8f89f20a1d12fc04aec6be5b790f",
-          "span": [
-            6920,
-            8096
-          ],
-          "name": "createEmotionProps",
-          "normalizedASTSHA256": "a0168bbf30286d1aa76228f53b64a07bed0f970f4e8a1f7b22287fb275870bec",
-          "codeSHA256": "15617705ca9afddd174bd92605d8e29181d92431bccb93418da57d1130348a14",
-          "features": {
-            "propertyOperations": 19,
-            "distinctOperationPropertyPairs": 8,
-            "pogHash": "1caac03de9c0b098",
-            "graphNodes": 33,
-            "graphEdges": 43,
-            "graphOperationOccurrences": 22,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/emotion-element-010f37fa.development.edge-light.cjs.js",
-          "source": "source-js/2901bc8f513a36b1f0451bdddd65918e763c8f89f20a1d12fc04aec6be5b790f.js",
-          "sourceSHA256": "2901bc8f513a36b1f0451bdddd65918e763c8f89f20a1d12fc04aec6be5b790f",
-          "span": [
-            8115,
-            8956
-          ],
-          "name": "Insertion",
-          "normalizedASTSHA256": "81984895d4ca832999dfc6ac89645bf092fa9ca63465ffdf3e2345f23c642436",
-          "codeSHA256": "ca09064a6d9c18c06b6a6837d0f6e1804e37aec009a3d6e486f2a30f64e9f670",
-          "features": {
-            "propertyOperations": 17,
-            "distinctOperationPropertyPairs": 15,
-            "pogHash": "8add25484ad96624",
-            "graphNodes": 10,
-            "graphEdges": 10,
-            "graphOperationOccurrences": 17,
-            "distinctGraphOperationPropertyPairs": 15,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/emotion-element-010f37fa.development.edge-light.cjs.js",
-          "source": "source-js/2901bc8f513a36b1f0451bdddd65918e763c8f89f20a1d12fc04aec6be5b790f.js",
-          "sourceSHA256": "2901bc8f513a36b1f0451bdddd65918e763c8f89f20a1d12fc04aec6be5b790f",
-          "span": [
-            9013,
-            10740
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "18142106d6dadc2857c7dd69ce3032e493d43ecd03fde97cc193895ea10bee95",
-          "codeSHA256": "c23850995dd4200572acfc7d3b3f7eca3d33ccbbbe658a61b0ea5bcca7239f69",
-          "features": {
-            "propertyOperations": 32,
-            "distinctOperationPropertyPairs": 19,
-            "pogHash": "94488ed5a783d101",
-            "graphNodes": 34,
-            "graphEdges": 44,
-            "graphOperationOccurrences": 55,
-            "distinctGraphOperationPropertyPairs": 19,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/70db3f46b8cf8c6a5e3d",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "6e8d23763cf7cb707ad8f6677aa502ebeca1dda447e6d6e57f6549c1625b9c4a"
-        }
-      ],
-      "lockfileSHA256": "60418e2a684ec42cd0f66c2cfeb951e1c85afb25fcc565e2ae1208afb6631c60",
-      "lockfileSnapshot": "lockfiles/60418e2a684ec42cd0f66c2cfeb951e1c85afb25fcc565e2ae1208afb6631c60-package-lock.json"
-    },
-    {
-      "library": "@gsap/react",
-      "declaredVersion": "^2.1.2",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@gsap/react",
-        "version": "2.1.2",
-        "integrity": "sha512-JqliybO1837UcgH2hVOM4VO+38APk3ECNrsuSM4MuXp+rbf+/2IG2K1YJiqfTcXQHH7XlA0m3ykniFYstfq0Iw==",
-        "shasum": "bfc055a41b402e8d1dc56839e9d077407027b0a0",
-        "tarballSHA256": "180539218d55a844173d2f87a01cd92779238157b08e0e89be7108a998e8fa80",
-        "bytes": 6282,
-        "lockfile": "package-lock.json"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 3,
-      "parsedFunctions": 29,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/index.js",
-          "source": "source-js/62d7c79ded7ec7e32b21156cb999b20ec925410cffcdabbacac965d32f997018.js",
-          "sourceSHA256": "62d7c79ded7ec7e32b21156cb999b20ec925410cffcdabbacac965d32f997018",
-          "span": [
-            1063,
-            2355
-          ],
-          "name": "useGSAP",
-          "normalizedASTSHA256": "addbdc399439fb9e2bc12a861f7e7217a5dd7c151c4391adc9c025d5f598b8d1",
-          "codeSHA256": "443769fcd6fb91959452479e1a432c6192a317ae089180b0e7b282cc1a126e96",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 8,
-            "pogHash": "94d058124ad5e015",
-            "graphNodes": 22,
-            "graphEdges": 29,
-            "graphOperationOccurrences": 32,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/62d7c79ded7ec7e32b21156cb999b20ec925410cffcdabbacac965d32f997018.js",
-          "sourceSHA256": "62d7c79ded7ec7e32b21156cb999b20ec925410cffcdabbacac965d32f997018",
-          "span": [
-            641,
-            2626
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "9f86cae31960fcfb3ff0ed6684a5c9310c3bd32854aec1639c8397f6a59b6c20",
-          "codeSHA256": "cbc6e639f1e80830cdd60c8d828d43074d7d423758948209c21d1646c85c4941",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 11,
-            "pogHash": "d32ae5ee41f3db63",
-            "graphNodes": 15,
-            "graphEdges": 18,
-            "graphOperationOccurrences": 14,
-            "distinctGraphOperationPropertyPairs": 9,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.min.js",
-          "source": "source-js/a1b05e29007c8cecc69954a91074e3dc55b899260f1a1aca6ea2eb36db2ffc64.js",
-          "sourceSHA256": "a1b05e29007c8cecc69954a91074e3dc55b899260f1a1aca6ea2eb36db2ffc64",
-          "span": [
-            752,
-            1283
-          ],
-          "name": "t",
-          "normalizedASTSHA256": "eb513683165b395ad85eb09b73affec64554e28c19d3f4970d2e24ff5d44e75f",
-          "codeSHA256": "9b0b7d76c5a4352ef5daf7663c1987f0d3fb2186c1bd6db982888e3739922561",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 8,
-            "pogHash": "94d058124ad5e015",
-            "graphNodes": 22,
-            "graphEdges": 29,
-            "graphOperationOccurrences": 32,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/e76b08abe7417f739e1c",
-      "licenses": [],
-      "lockfileSHA256": "60418e2a684ec42cd0f66c2cfeb951e1c85afb25fcc565e2ae1208afb6631c60",
-      "lockfileSnapshot": "lockfiles/60418e2a684ec42cd0f66c2cfeb951e1c85afb25fcc565e2ae1208afb6631c60-package-lock.json"
     }
   ],
   "selectedLibraries": [
@@ -1112,29 +770,26 @@
     "react-dom",
     "react-haiku",
     "react-icons",
-    "react-router-dom",
-    "@chakra-ui/react",
-    "@emotion/react",
-    "@gsap/react"
+    "react-router-dom"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
+    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
+      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
     },
     "frontendManifestSHA256": "d293ca49baab6db6069b68431a3417ed5115a8c8fc65fade33f88a2b0eef723b",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:01:03.216Z",
+  "started": "2026-11-09T10:56:16.445Z",
   "reason": null,
-  "finished": "2026-11-09T10:01:03.833Z",
+  "finished": "2026-11-09T10:56:17.048Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/DavidHDev--react-bits/qualification.json",
-  "sourceEligibilityRecordSHA256": "179ac0a0fa3559385f60b5aa3fc68240e80440e13ee66f7181acbfd47b3c7b2e",
-  "organizationSignature": "3128a28d3bb3d12cbc6d49d24f94b99da3051a6f1f884b3b6d5c367c6aa4d5cd"
+  "sourceEligibilityRecordSHA256": "a42bbfc0032017ee1c3961d53b3c05291dca745356c2464be75229c75bd4f848",
+  "organizationSignature": "614391f9582a7a5cc5f95b824444f71157f2030e9126ae3eb8e07a3eeb4c9859"
 }

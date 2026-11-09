@@ -17,30 +17,6 @@
   "scope": "all-captured-runtime-assets-including-excluded-global-copies",
   "candidates": [
     {
-      "library": "@ai-sdk/anthropic",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "@ai-sdk/openai",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
       "library": "@ai-sdk/react",
       "status": "unique-observed",
       "moduleMappedBodyPoints": 619,
@@ -1511,18 +1487,6 @@
       "sourceFileCount": 15
     },
     {
-      "library": "@faker-js/faker",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
       "library": "@formisch/react",
       "status": "unique-observed",
       "moduleMappedBodyPoints": 2165,
@@ -1941,6 +1905,291 @@
       "moduleFunctionCount": 143,
       "observedFunctionCount": 143,
       "sourceFileCount": 7
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "status": "unique-observed",
+      "moduleMappedBodyPoints": 4892,
+      "sources": [
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/mcp-app-bridge.ts",
+          "sha256": "a53fa6ae218c1a400faf68b90cf035b9aa1e88f413bd09506d88d657565ef8bf",
+          "relative": "src/mcp-app-bridge.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 3162,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 1
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/sse-utils.ts",
+          "sha256": "59372ff93437565e87bfd0d634e971e731eac21cb335a78997f4455c4c34c162",
+          "relative": "src/sse-utils.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 197,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 1
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts",
+          "sha256": "ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30",
+          "relative": "src/client-persistor.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 10973,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 21
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools-noop.ts",
+          "sha256": "4d77aeb25b51ef0a8de457ad56b328f8fba1a8a8e5ae0c8fe0eaa49074020956",
+          "relative": "src/devtools-noop.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 7303,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 2
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/realtime-client.ts",
+          "sha256": "1ac078742dbf7f6db4a7df1b43797cbd5d46c0c398fb50e19420b45451c7383b",
+          "relative": "src/realtime-client.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 15984,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 4
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts",
+          "sha256": "c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab",
+          "relative": "src/events.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 9113,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 17
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/response-stream.ts",
+          "sha256": "07e79e2a6511db1ee58c5a49b708a5f49585fed6312b719eb8ed0a60becc45a9",
+          "relative": "src/response-stream.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 1427,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 4
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts",
+          "sha256": "891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67",
+          "relative": "src/devtools.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 51127,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 79
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts",
+          "sha256": "a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e",
+          "relative": "src/chat-client.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 51082,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 86
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts",
+          "sha256": "bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d",
+          "relative": "src/connection-adapters.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 31483,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 17
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/generation-client.ts",
+          "sha256": "59adedbb1126ae0ecf9072605d40c19771be549a148fe0916a548a4149bc1ef0",
+          "relative": "src/generation-client.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 15069,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 3
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/video-generation-client.ts",
+          "sha256": "305d30e03910822a0d6498a1e14338c854991de9327dd3c8531c7ee8ee933849",
+          "relative": "src/video-generation-client.ts",
+          "logical": "@tanstack/ai-client",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client",
+          "bytes": 17385,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 2
+        }
+      ],
+      "reasons": [],
+      "parseFailures": [],
+      "maps": [
+        "05c29bc70a190b1e1ab1d0f61e2ac26cab47ecc86041ade999005f01e91a8598"
+      ],
+      "moduleFunctionCount": 237,
+      "observedFunctionCount": 237,
+      "sourceFileCount": 12
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "status": "unique-observed",
+      "moduleMappedBodyPoints": 319,
+      "sources": [
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-realtime-chat.ts",
+          "sha256": "279389be92aadc1974035791cf643f0c91b7dae1bb0ee685be2c33697bcdccdc",
+          "relative": "src/use-realtime-chat.ts",
+          "logical": "@tanstack/ai-react",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react",
+          "bytes": 8042,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 4
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts",
+          "sha256": "6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32",
+          "relative": "src/use-chat.ts",
+          "logical": "@tanstack/ai-react",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react",
+          "bytes": 11745,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 30
+        }
+      ],
+      "reasons": [],
+      "parseFailures": [],
+      "maps": [
+        "05c29bc70a190b1e1ab1d0f61e2ac26cab47ecc86041ade999005f01e91a8598"
+      ],
+      "moduleFunctionCount": 34,
+      "observedFunctionCount": 34,
+      "sourceFileCount": 2
+    },
+    {
+      "library": "@tanstack/react-form",
+      "status": "unique-observed",
+      "moduleMappedBodyPoints": 123,
+      "sources": [
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useField.tsx",
+          "sha256": "9168d429ba7a69d392abe222a78f186f809f2f87c48461ad2437a24032016e78",
+          "relative": "src/useField.tsx",
+          "logical": "@tanstack/react-form",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form",
+          "bytes": 20917,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 6
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useForm.tsx",
+          "sha256": "2c654875845021e972d035a10d3c496f772559611fbf87d1014a373c8828d3e0",
+          "relative": "src/useForm.tsx",
+          "logical": "@tanstack/react-form",
+          "install": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form",
+          "bytes": 6763,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 6
+        }
+      ],
+      "reasons": [],
+      "parseFailures": [],
+      "maps": [
+        "86677bb19649a41108b8fa14cb3cc375a0163c5e4ceea7c2e188651c19a1cb9a"
+      ],
+      "moduleFunctionCount": 12,
+      "observedFunctionCount": 12,
+      "sourceFileCount": 2
     }
   ],
   "mappedOwnBodyPoints": 443097,
@@ -1953,18 +2202,15 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
-  "unscoredLibraries": [
-    "@ai-sdk/anthropic",
-    "@ai-sdk/openai",
-    "@faker-js/faker"
-  ],
+  "unscoredLibraries": [],
   "sourceOwnershipAmbiguousHashes": [],
   "authoritativeAuditSHA256": "2b81610475654f91074ab091df96ee0cce758b139a4042e7f7400d88969ddef1"
 }

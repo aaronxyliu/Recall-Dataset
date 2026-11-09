@@ -17,42 +17,6 @@
   "scope": "all-captured-runtime-assets-including-excluded-global-copies",
   "candidates": [
     {
-      "library": "@fortawesome/fontawesome-svg-core",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "@fortawesome/react-fontawesome",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "katex",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
       "library": "next",
       "status": "unique-observed",
       "moduleMappedBodyPoints": 18290,
@@ -2285,18 +2249,15 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
-  "unscoredLibraries": [
-    "@fortawesome/fontawesome-svg-core",
-    "@fortawesome/react-fontawesome",
-    "katex"
-  ],
+  "unscoredLibraries": [],
   "sourceOwnershipAmbiguousHashes": [],
   "authoritativeAuditSHA256": "aa75e4f843830a516796ab5b56c794f6692ec2f380439972cdc4d5a0e97aaff8"
 }

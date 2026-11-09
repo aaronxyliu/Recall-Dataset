@@ -17,18 +17,6 @@
   "scope": "all-captured-runtime-assets-including-excluded-global-copies",
   "candidates": [
     {
-      "library": "@hoppscotch/common",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
       "library": "@tauri-apps/plugin-dialog",
       "status": "unique-observed",
       "moduleMappedBodyPoints": 12,
@@ -1794,16 +1782,15 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
-  "unscoredLibraries": [
-    "@hoppscotch/common"
-  ],
+  "unscoredLibraries": [],
   "sourceOwnershipAmbiguousHashes": [],
   "authoritativeAuditSHA256": "d4897d9756d5676f359e09c0f5b03338d1c02d75b105b11d8f81137d091bb502"
 }

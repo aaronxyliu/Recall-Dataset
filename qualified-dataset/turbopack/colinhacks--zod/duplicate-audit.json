@@ -257,42 +257,6 @@
       "sourceFileCount": 5
     },
     {
-      "library": "@vercel/og",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "fumadocs-mdx",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "gray-matter",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
       "library": "react",
       "status": "unique-observed",
       "moduleMappedBodyPoints": 1077,
@@ -456,18 +420,15 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
-  "unscoredLibraries": [
-    "@vercel/og",
-    "fumadocs-mdx",
-    "gray-matter"
-  ],
+  "unscoredLibraries": [],
   "sourceOwnershipAmbiguousHashes": [],
   "authoritativeAuditSHA256": "045a49ca61afffc5ba5879153854b7512084f54bf61b20bc2b35836eef3c6086"
 }

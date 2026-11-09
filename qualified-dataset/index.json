@@ -29,25 +29,26 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
-  "repositoryCount": 39,
-  "libraryInstanceCount": 315,
-  "sourceFunctionWitnessCount": 945,
-  "oneToOnePairs": 49604,
-  "zeroPairLibraryInstances": 96,
+  "repositoryCount": 31,
+  "libraryInstanceCount": 259,
+  "sourceFunctionWitnessCount": 777,
+  "oneToOnePairs": 49946,
+  "zeroPairLibraryInstances": 29,
   "subjects": [
     {
       "subject": "bun/RockwellShah--filekey",
       "repo": "RockwellShah/filekey",
       "commit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
       "records": "bun/RockwellShah--filekey/ground-truth/func-mapping.json",
-      "recordsSHA256": "6c3f2d9bc619c73f691e34d8506a02bc11ea1ed70d0a47baa56517f1dcc9a6d1",
+      "recordsSHA256": "84a4e5f802b5a2d894c6fb15aa0fd40b751033738e0884f80c00763c4da18469",
       "selectedLibraries": [
         "@hpke/core",
         "@noble/curves",
@@ -89,110 +90,27 @@
       ]
     },
     {
-      "subject": "bun/micahkepe--jsongrep",
-      "repo": "micahkepe/jsongrep",
-      "commit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
-      "records": "bun/micahkepe--jsongrep/ground-truth/func-mapping.json",
-      "recordsSHA256": "2bdb46a1502cb451b0c40c9ceee6339e8e2f313e8029f95193101f7f81938e5a",
-      "selectedLibraries": [
-        "@bytecodealliance/jco",
-        "react",
-        "react-dom"
-      ],
-      "libraryCount": 3,
-      "sourceFunctionWitnesses": {
-        "@bytecodealliance/jco": 3,
-        "react": 3,
-        "react-dom": 3
-      },
-      "libraryPairs": {
-        "@bytecodealliance/jco": 0,
-        "react": 128,
-        "react-dom": 1080
-      },
-      "oneToOnePairs": 1208,
-      "imageID": null,
-      "qualification": "bun/micahkepe--jsongrep/qualification.json",
-      "moduleScope": "bun/micahkepe--jsongrep/module-scope.json",
-      "duplicateAudit": "bun/micahkepe--jsongrep/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@bytecodealliance/jco"
-      ],
-      "evaluationLibraries": [
-        "react",
-        "react-dom"
-      ]
-    },
-    {
-      "subject": "esbuild/mattlewis92--angular-calendar",
-      "repo": "mattlewis92/angular-calendar",
-      "commit": "9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68",
-      "records": "esbuild/mattlewis92--angular-calendar/ground-truth/func-mapping.json",
-      "recordsSHA256": "d288847f786e8ae8898097a5256a1a951688e3393c22af922ab8bfd3a42df264",
-      "selectedLibraries": [
-        "@scarf/scarf",
-        "calendar-utils",
-        "positioning",
-        "tslib"
-      ],
-      "libraryCount": 4,
-      "sourceFunctionWitnesses": {
-        "@scarf/scarf": 3,
-        "calendar-utils": 3,
-        "positioning": 3,
-        "tslib": 3
-      },
-      "libraryPairs": {
-        "@scarf/scarf": 0,
-        "calendar-utils": 0,
-        "positioning": 0,
-        "tslib": 37
-      },
-      "oneToOnePairs": 37,
-      "imageID": "sha256:36e094597a8731e17370336f498020134259af1f2352948e3e1aeff99742c497",
-      "qualification": "esbuild/mattlewis92--angular-calendar/qualification.json",
-      "moduleScope": "esbuild/mattlewis92--angular-calendar/module-scope.json",
-      "duplicateAudit": "esbuild/mattlewis92--angular-calendar/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@scarf/scarf",
-        "calendar-utils",
-        "positioning"
-      ],
-      "evaluationLibraries": [
-        "tslib"
-      ]
-    },
-    {
       "subject": "esbuild/primefaces--sakai-ng",
       "repo": "primefaces/sakai-ng",
       "commit": "96d71496d685b5c110efd2875abaa2bf89a56ad2",
       "records": "esbuild/primefaces--sakai-ng/ground-truth/func-mapping.json",
-      "recordsSHA256": "d0509897f755768cc9d8e9f9d9dc5d8e7ec5896dc12c651ce27bee89188a8c6d",
+      "recordsSHA256": "849311e1a9b617f3cc13310cc7acdc8546f2c6088ae1c20bdf8930e9429680b3",
       "selectedLibraries": [
-        "@angular/compiler",
         "@primeuix/themes",
-        "@tailwindcss/postcss",
         "chart.js",
-        "primeclt",
         "rxjs",
         "tslib"
       ],
-      "libraryCount": 7,
+      "libraryCount": 4,
       "sourceFunctionWitnesses": {
-        "@angular/compiler": 3,
         "@primeuix/themes": 3,
-        "@tailwindcss/postcss": 3,
         "chart.js": 3,
-        "primeclt": 3,
         "rxjs": 3,
         "tslib": 3
       },
       "libraryPairs": {
-        "@angular/compiler": 0,
         "@primeuix/themes": 8,
-        "@tailwindcss/postcss": 0,
         "chart.js": 1301,
-        "primeclt": 0,
         "rxjs": 313,
         "tslib": 29
       },
@@ -201,11 +119,7 @@
       "qualification": "esbuild/primefaces--sakai-ng/qualification.json",
       "moduleScope": "esbuild/primefaces--sakai-ng/module-scope.json",
       "duplicateAudit": "esbuild/primefaces--sakai-ng/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@angular/compiler",
-        "@tailwindcss/postcss",
-        "primeclt"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "@primeuix/themes",
         "chart.js",
@@ -214,50 +128,11 @@
       ]
     },
     {
-      "subject": "esbuild/sissbruecker--linkding",
-      "repo": "sissbruecker/linkding",
-      "commit": "27b7303baf41bb28babc610ac8eaa486e1ddfab5",
-      "records": "esbuild/sissbruecker--linkding/ground-truth/func-mapping.json",
-      "recordsSHA256": "06349ca5abd1483a36e6173026ad039c2ff734c9d4a26b940d7905bcb9b8aa61",
-      "selectedLibraries": [
-        "@floating-ui/dom",
-        "@hotwired/turbo",
-        "esbuild",
-        "lit"
-      ],
-      "libraryCount": 4,
-      "sourceFunctionWitnesses": {
-        "@floating-ui/dom": 3,
-        "@hotwired/turbo": 3,
-        "esbuild": 3,
-        "lit": 3
-      },
-      "libraryPairs": {
-        "@floating-ui/dom": 42,
-        "@hotwired/turbo": 869,
-        "esbuild": 0,
-        "lit": 0
-      },
-      "oneToOnePairs": 911,
-      "imageID": "sha256:52efd7be978560adce36a4a95367d460da7671f9f30bf06e2d20263a6dbcf1e7",
-      "qualification": "esbuild/sissbruecker--linkding/qualification.json",
-      "moduleScope": "esbuild/sissbruecker--linkding/module-scope.json",
-      "duplicateAudit": "esbuild/sissbruecker--linkding/duplicate-audit.json",
-      "unscoredLibraries": [
-        "esbuild",
-        "lit"
-      ],
-      "evaluationLibraries": [
-        "@floating-ui/dom",
-        "@hotwired/turbo"
-      ]
-    },
-    {
       "subject": "esbuild/swimlane--ngx-charts",
       "repo": "swimlane/ngx-charts",
       "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
       "records": "esbuild/swimlane--ngx-charts/ground-truth/func-mapping.json",
-      "recordsSHA256": "a51fb6742b46dc0c98fa0330209f2f51abdc722158145aacd827f247ddf0b804",
+      "recordsSHA256": "0e1be1948455dd864a1d5fd250b50e589471cb9082ea7e973f2ab638bead0b3b",
       "selectedLibraries": [
         "d3-format",
         "d3-interpolate",
@@ -319,31 +194,19 @@
       "repo": "swimlane/ngx-datatable",
       "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
       "records": "esbuild/swimlane--ngx-datatable/ground-truth/func-mapping.json",
-      "recordsSHA256": "d0e23962430391eed7455a928c5f32da2b9a750707a1cfa307329c60ffc6bed8",
+      "recordsSHA256": "44d08f963d048fc3e6ad22207c99ef8b935552811b9270d26df206ea78737f05",
       "selectedLibraries": [
-        "@angular/animations",
-        "@angular/cdk",
-        "@angular/compiler",
-        "@angular/forms",
         "@angular/platform-browser",
         "rxjs",
         "tslib"
       ],
-      "libraryCount": 7,
+      "libraryCount": 3,
       "sourceFunctionWitnesses": {
-        "@angular/animations": 3,
-        "@angular/cdk": 3,
-        "@angular/compiler": 3,
-        "@angular/forms": 3,
         "@angular/platform-browser": 3,
         "rxjs": 3,
         "tslib": 3
       },
       "libraryPairs": {
-        "@angular/animations": 0,
-        "@angular/cdk": 0,
-        "@angular/compiler": 0,
-        "@angular/forms": 0,
         "@angular/platform-browser": 111,
         "rxjs": 307,
         "tslib": 29
@@ -353,12 +216,7 @@
       "qualification": "esbuild/swimlane--ngx-datatable/qualification.json",
       "moduleScope": "esbuild/swimlane--ngx-datatable/module-scope.json",
       "duplicateAudit": "esbuild/swimlane--ngx-datatable/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@angular/animations",
-        "@angular/cdk",
-        "@angular/compiler",
-        "@angular/forms"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "@angular/platform-browser",
         "rxjs",
@@ -366,89 +224,11 @@
       ]
     },
     {
-      "subject": "parcel/jonasschmedtmann--complete-javascript-course",
-      "repo": "jonasschmedtmann/complete-javascript-course",
-      "commit": "76b8b79b2994dd00298b2be105aa6bc721e40a22",
-      "records": "parcel/jonasschmedtmann--complete-javascript-course/ground-truth/func-mapping.json",
-      "recordsSHA256": "3f1cda858f09a0334629d61bc8447f34e817ce6e9bda0724367014438c4db095",
-      "selectedLibraries": [
-        "core-js",
-        "fractional",
-        "regenerator-runtime"
-      ],
-      "libraryCount": 3,
-      "sourceFunctionWitnesses": {
-        "core-js": 3,
-        "fractional": 3,
-        "regenerator-runtime": 3
-      },
-      "libraryPairs": {
-        "core-js": 16,
-        "fractional": 0,
-        "regenerator-runtime": 0
-      },
-      "oneToOnePairs": 16,
-      "imageID": "sha256:de49a6724e0642d647c1c816296173e861689e551797be0f62b55a82893cddb3",
-      "qualification": "parcel/jonasschmedtmann--complete-javascript-course/qualification.json",
-      "moduleScope": "parcel/jonasschmedtmann--complete-javascript-course/module-scope.json",
-      "duplicateAudit": "parcel/jonasschmedtmann--complete-javascript-course/duplicate-audit.json",
-      "unscoredLibraries": [
-        "fractional",
-        "regenerator-runtime"
-      ],
-      "evaluationLibraries": [
-        "core-js"
-      ]
-    },
-    {
-      "subject": "parcel/parcel-bundler--website",
-      "repo": "parcel-bundler/website",
-      "commit": "01c63ed0cb880285db774ec7c96f88da24aeaec7",
-      "records": "parcel/parcel-bundler--website/ground-truth/func-mapping.json",
-      "recordsSHA256": "858e90cf7d44c76fd9cff20b2006f1ea1b8235628c807521621f5eee83398022",
-      "selectedLibraries": [
-        "focus-visible",
-        "marked",
-        "react",
-        "react-dom",
-        "react-use"
-      ],
-      "libraryCount": 5,
-      "sourceFunctionWitnesses": {
-        "focus-visible": 3,
-        "marked": 3,
-        "react": 3,
-        "react-dom": 3,
-        "react-use": 3
-      },
-      "libraryPairs": {
-        "focus-visible": 9,
-        "marked": 0,
-        "react": 0,
-        "react-dom": 0,
-        "react-use": 0
-      },
-      "oneToOnePairs": 9,
-      "imageID": null,
-      "qualification": "parcel/parcel-bundler--website/qualification.json",
-      "moduleScope": "parcel/parcel-bundler--website/module-scope.json",
-      "duplicateAudit": "parcel/parcel-bundler--website/duplicate-audit.json",
-      "unscoredLibraries": [
-        "marked",
-        "react",
-        "react-dom",
-        "react-use"
-      ],
-      "evaluationLibraries": [
-        "focus-visible"
-      ]
-    },
-    {
       "subject": "parcel/tensorflow--tfjs",
       "repo": "tensorflow/tfjs",
       "commit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
       "records": "parcel/tensorflow--tfjs/ground-truth/func-mapping.json",
-      "recordsSHA256": "bd9686451039bd25e61840809484bd21b8503c817fe30617c09d7154488804b3",
+      "recordsSHA256": "842908a24b04b443864b581f23a5fabc1322acf156326dd5ee41b4adc12a0b68",
       "selectedLibraries": [
         "@tensorflow/tfjs-backend-webgl",
         "@tensorflow/tfjs-converter",
@@ -482,7 +262,7 @@
       "repo": "appwrite/appwrite",
       "commit": "18c60abee1e2cb9d63612478f8e0e7319dfc300b",
       "records": "rolldown/appwrite--appwrite/ground-truth/func-mapping.json",
-      "recordsSHA256": "f4ebd210fffc15339ee1504e5f4fdf6155bbc73755977fbdd6b1a695edb69973",
+      "recordsSHA256": "83be9ba361898b78d939322294a5ad83bedb79c3afb4234dca02060049f6b21f",
       "selectedLibraries": [
         "@appwrite.io/console",
         "@dnd-kit/core",
@@ -544,7 +324,7 @@
       "repo": "discourse/discourse",
       "commit": "3a1b1ae930e568a8c1c2f12d6e09f8e907da608b",
       "records": "rolldown/discourse--discourse/ground-truth/func-mapping.json",
-      "recordsSHA256": "cf22ddf1508eb03f31bb0de4f9277ea524dc581c52ea35f6b069be068faaf75e",
+      "recordsSHA256": "7ff463bce295e183293cedc642634fe6f5c8611ff49d56a2d7ca4aaab3d90bd7",
       "selectedLibraries": [
         "@atlaskit/pragmatic-drag-and-drop",
         "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
@@ -602,81 +382,11 @@
       ]
     },
     {
-      "subject": "rollup/omnibrain--svguitar",
-      "repo": "omnibrain/svguitar",
-      "commit": "3b465fdc8af57a9ed948e168ada1c87c9aafd574",
-      "records": "rollup/omnibrain--svguitar/ground-truth/func-mapping.json",
-      "recordsSHA256": "0dbb4d237659961afef31d16f2bf37d4463c4a31f1f6940741c708330408dbd4",
-      "selectedLibraries": [
-        "@svgdotjs/svg.js",
-        "roughjs",
-        "svgdom"
-      ],
-      "libraryCount": 3,
-      "sourceFunctionWitnesses": {
-        "@svgdotjs/svg.js": 3,
-        "roughjs": 3,
-        "svgdom": 3
-      },
-      "libraryPairs": {
-        "@svgdotjs/svg.js": 710,
-        "roughjs": 141,
-        "svgdom": 0
-      },
-      "oneToOnePairs": 851,
-      "imageID": "sha256:39c1ab0e890e959bcaf7aa908076e5c8708bbb43063700fa190ecb593b84db9d",
-      "qualification": "rollup/omnibrain--svguitar/qualification.json",
-      "moduleScope": "rollup/omnibrain--svguitar/module-scope.json",
-      "duplicateAudit": "rollup/omnibrain--svguitar/duplicate-audit.json",
-      "unscoredLibraries": [
-        "svgdom"
-      ],
-      "evaluationLibraries": [
-        "@svgdotjs/svg.js",
-        "roughjs"
-      ]
-    },
-    {
-      "subject": "rollup/vega--vega-lite",
-      "repo": "vega/vega-lite",
-      "commit": "e415f441845e198629f2049b46849ddcfdbf6596",
-      "records": "rollup/vega--vega-lite/ground-truth/func-mapping.json",
-      "recordsSHA256": "26c0c82cbadd6a128659b97cabe210ea3cab12cab51736d80c8ec20f30ca6aba",
-      "selectedLibraries": [
-        "tslib",
-        "vega-expression",
-        "yargs"
-      ],
-      "libraryCount": 3,
-      "sourceFunctionWitnesses": {
-        "tslib": 3,
-        "vega-expression": 3,
-        "yargs": 3
-      },
-      "libraryPairs": {
-        "tslib": 0,
-        "vega-expression": 87,
-        "yargs": 0
-      },
-      "oneToOnePairs": 87,
-      "imageID": "sha256:77ebbd8358604ab1d6fbe3b3bb45cce0707bde05a32d9062f707a8e005c68fef",
-      "qualification": "rollup/vega--vega-lite/qualification.json",
-      "moduleScope": "rollup/vega--vega-lite/module-scope.json",
-      "duplicateAudit": "rollup/vega--vega-lite/duplicate-audit.json",
-      "unscoredLibraries": [
-        "tslib",
-        "yargs"
-      ],
-      "evaluationLibraries": [
-        "vega-expression"
-      ]
-    },
-    {
       "subject": "rspack/metabase--metabase",
       "repo": "metabase/metabase",
       "commit": "0c644f3bc99d5dece16391d53135a0a7618f95bc",
       "records": "rspack/metabase--metabase/ground-truth/func-mapping.json",
-      "recordsSHA256": "2ecf8feeb8d909e340b49326025a7ed87823eb07d3b419da76060510767431ec",
+      "recordsSHA256": "de91b172650dc940e53913ec541c7d60839a37bedbe01cac06a2f53e12c3109f",
       "selectedLibraries": [
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
@@ -738,7 +448,7 @@
       "repo": "CalCom/cal.com",
       "commit": "1c193cca8682b33b9866c792186033f7ef886682",
       "records": "turbopack/CalCom--cal.com/ground-truth/func-mapping.json",
-      "recordsSHA256": "b5ed4433816d769b771ec9e0d955dc5a4aaea848830ffcd8008b7e9f6a8b8e37",
+      "recordsSHA256": "206f4eed1b4040ddcb3db155fc7b3341b491f499f7e9dd5cc8159b1eb9027d33",
       "selectedLibraries": [
         "@formkit/auto-animate",
         "@radix-ui/react-tooltip",
@@ -747,9 +457,9 @@
         "next-auth",
         "react-i18next",
         "zod",
-        "@boxyhq/saml-jackson",
-        "@daily-co/daily-js",
-        "@hookform/resolvers"
+        "@hookform/resolvers",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-radio-group"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -760,9 +470,9 @@
         "next-auth": 3,
         "react-i18next": 3,
         "zod": 3,
-        "@boxyhq/saml-jackson": 3,
-        "@daily-co/daily-js": 3,
-        "@hookform/resolvers": 3
+        "@hookform/resolvers": 3,
+        "@radix-ui/react-dialog": 3,
+        "@radix-ui/react-radio-group": 3
       },
       "libraryPairs": {
         "@formkit/auto-animate": 35,
@@ -772,19 +482,16 @@
         "next-auth": 119,
         "react-i18next": 51,
         "zod": 414,
-        "@boxyhq/saml-jackson": 0,
-        "@daily-co/daily-js": 0,
-        "@hookform/resolvers": 13
+        "@hookform/resolvers": 13,
+        "@radix-ui/react-dialog": 12,
+        "@radix-ui/react-radio-group": 5
       },
-      "oneToOnePairs": 912,
+      "oneToOnePairs": 929,
       "imageID": "sha256:b4386030f0c79ce045232229afe218e5e67a3c961be492508686eb38a8f47556",
       "qualification": "turbopack/CalCom--cal.com/qualification.json",
       "moduleScope": "turbopack/CalCom--cal.com/module-scope.json",
       "duplicateAudit": "turbopack/CalCom--cal.com/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@boxyhq/saml-jackson",
-        "@daily-co/daily-js"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "@formkit/auto-animate",
         "@radix-ui/react-tooltip",
@@ -793,7 +500,9 @@
         "next-auth",
         "react-i18next",
         "zod",
-        "@hookform/resolvers"
+        "@hookform/resolvers",
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-radio-group"
       ]
     },
     {
@@ -801,7 +510,7 @@
       "repo": "CapSoftware/Cap",
       "commit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
       "records": "turbopack/CapSoftware--Cap/ground-truth/func-mapping.json",
-      "recordsSHA256": "ac21a00739de6565c70b1d6bfbdfb843cf3240a3390178287b0e73e441e8be75",
+      "recordsSHA256": "bef440a88b62418fcce2978dd36615cc38a6b8d260d44ca729630392f7526fef",
       "selectedLibraries": [
         "@fortawesome/react-fontawesome",
         "@radix-ui/react-tooltip",
@@ -863,7 +572,7 @@
       "repo": "DayuanJiang/next-ai-draw-io",
       "commit": "e3d4d11d5916daf8d68a9f087b36c8ca9a79200e",
       "records": "turbopack/DayuanJiang--next-ai-draw-io/ground-truth/func-mapping.json",
-      "recordsSHA256": "1e7dff4b131ecdb2858e1cdee2525cb633c33e3601985b8b20491c241cb825ca",
+      "recordsSHA256": "1b66e8e65681fa7dc2dce155a6fbc2569bcef8ded15811985f7cd1a5555dfece",
       "selectedLibraries": [
         "@next/third-parties",
         "@radix-ui/react-scroll-area",
@@ -925,62 +634,57 @@
       "repo": "Open-Dev-Society/OpenStock",
       "commit": "b72306d39fa27dc55252ceecf858165ecf5a3fa3",
       "records": "turbopack/Open-Dev-Society--OpenStock/ground-truth/func-mapping.json",
-      "recordsSHA256": "79c9aa38722efa22e29e707a5d6bd7ad8b1b483a010f833791c272b68ad4269c",
+      "recordsSHA256": "ac0ad7ff5b613662c7cb01c60a2aa8e8876c2c4761ce18d7ac17e897ac01f465",
       "selectedLibraries": [
         "@radix-ui/react-dialog",
-        "@radix-ui/react-dropdown-menu",
-        "@radix-ui/react-popover",
-        "@radix-ui/react-select",
         "@radix-ui/react-slot",
         "@vercel/analytics",
-        "better-auth",
-        "cmdk",
-        "country-data-list",
-        "date-fns"
+        "lucide-react",
+        "next",
+        "react",
+        "react-dom",
+        "sonner",
+        "tailwind-merge"
       ],
-      "libraryCount": 10,
+      "libraryCount": 9,
       "sourceFunctionWitnesses": {
         "@radix-ui/react-dialog": 3,
-        "@radix-ui/react-dropdown-menu": 3,
-        "@radix-ui/react-popover": 3,
-        "@radix-ui/react-select": 3,
         "@radix-ui/react-slot": 3,
         "@vercel/analytics": 3,
-        "better-auth": 3,
-        "cmdk": 3,
-        "country-data-list": 3,
-        "date-fns": 3
+        "lucide-react": 3,
+        "next": 3,
+        "react": 3,
+        "react-dom": 3,
+        "sonner": 3,
+        "tailwind-merge": 3
       },
       "libraryPairs": {
         "@radix-ui/react-dialog": 27,
-        "@radix-ui/react-dropdown-menu": 0,
-        "@radix-ui/react-popover": 0,
-        "@radix-ui/react-select": 0,
         "@radix-ui/react-slot": 7,
         "@vercel/analytics": 12,
-        "better-auth": 0,
-        "cmdk": 0,
-        "country-data-list": 0,
-        "date-fns": 0
+        "lucide-react": 1,
+        "next": 1410,
+        "react": 0,
+        "react-dom": 0,
+        "sonner": 124,
+        "tailwind-merge": 70
       },
-      "oneToOnePairs": 46,
+      "oneToOnePairs": 1651,
       "imageID": "sha256:07613042e0661b6bbd5274d1fe87ada90b03b0324cb47e928fd2a82f34a8b103",
       "qualification": "turbopack/Open-Dev-Society--OpenStock/qualification.json",
       "moduleScope": "turbopack/Open-Dev-Society--OpenStock/module-scope.json",
       "duplicateAudit": "turbopack/Open-Dev-Society--OpenStock/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@radix-ui/react-dropdown-menu",
-        "@radix-ui/react-popover",
-        "@radix-ui/react-select",
-        "better-auth",
-        "cmdk",
-        "country-data-list",
-        "date-fns"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "@radix-ui/react-dialog",
         "@radix-ui/react-slot",
-        "@vercel/analytics"
+        "@vercel/analytics",
+        "lucide-react",
+        "next",
+        "react",
+        "react-dom",
+        "sonner",
+        "tailwind-merge"
       ]
     },
     {
@@ -988,32 +692,23 @@
       "repo": "colinhacks/zod",
       "commit": "b500a2ee95134f81d74da7911d7378dd2853d042",
       "records": "turbopack/colinhacks--zod/ground-truth/func-mapping.json",
-      "recordsSHA256": "969de2006a20e12cbd975c115a9a77ce5bc80b7c2e197d82094c9d2caf4848ce",
+      "recordsSHA256": "e4090b3cd705de57363a30bf4c813e715f27074362098c7c5e32e5992a5cf1df",
       "selectedLibraries": [
         "@inkeep/cxkit-react",
         "@vercel/analytics",
-        "@vercel/og",
-        "fumadocs-mdx",
-        "gray-matter",
         "react",
         "react-dom"
       ],
-      "libraryCount": 7,
+      "libraryCount": 4,
       "sourceFunctionWitnesses": {
         "@inkeep/cxkit-react": 3,
         "@vercel/analytics": 3,
-        "@vercel/og": 3,
-        "fumadocs-mdx": 3,
-        "gray-matter": 3,
         "react": 3,
         "react-dom": 3
       },
       "libraryPairs": {
         "@inkeep/cxkit-react": 83,
         "@vercel/analytics": 13,
-        "@vercel/og": 0,
-        "fumadocs-mdx": 0,
-        "gray-matter": 0,
         "react": 0,
         "react-dom": 0
       },
@@ -1022,11 +717,7 @@
       "qualification": "turbopack/colinhacks--zod/qualification.json",
       "moduleScope": "turbopack/colinhacks--zod/module-scope.json",
       "duplicateAudit": "turbopack/colinhacks--zod/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@vercel/og",
-        "fumadocs-mdx",
-        "gray-matter"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "@inkeep/cxkit-react",
         "@vercel/analytics",
@@ -1039,62 +730,61 @@
       "repo": "jnsahaj/tweakcn",
       "commit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
       "records": "turbopack/jnsahaj--tweakcn/ground-truth/func-mapping.json",
-      "recordsSHA256": "b28c6e3c8385135f6396416c628dc83d1199eb4b0fbabf1cf0fa7b6d1c3bc96e",
+      "recordsSHA256": "de469808cf5cbbac88f193837d93a210ac33ca52e3538258b6f499011246a5a2",
       "selectedLibraries": [
-        "@ai-sdk/google",
         "@base-ui-components/react",
-        "@dnd-kit/core",
-        "@dnd-kit/modifiers",
-        "@dnd-kit/sortable",
-        "@google/generative-ai",
-        "@hookform/resolvers",
-        "@lexical/react",
-        "@neondatabase/serverless",
-        "culori"
+        "culori",
+        "date-fns",
+        "next",
+        "react",
+        "react-day-picker",
+        "react-dom",
+        "react-syntax-highlighter",
+        "swr",
+        "vaul"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
-        "@ai-sdk/google": 3,
         "@base-ui-components/react": 3,
-        "@dnd-kit/core": 3,
-        "@dnd-kit/modifiers": 3,
-        "@dnd-kit/sortable": 3,
-        "@google/generative-ai": 3,
-        "@hookform/resolvers": 3,
-        "@lexical/react": 3,
-        "@neondatabase/serverless": 3,
-        "culori": 3
+        "culori": 3,
+        "date-fns": 3,
+        "next": 3,
+        "react": 3,
+        "react-day-picker": 3,
+        "react-dom": 3,
+        "react-syntax-highlighter": 3,
+        "swr": 3,
+        "vaul": 3
       },
       "libraryPairs": {
-        "@ai-sdk/google": 0,
         "@base-ui-components/react": 78,
-        "@dnd-kit/core": 0,
-        "@dnd-kit/modifiers": 0,
-        "@dnd-kit/sortable": 0,
-        "@google/generative-ai": 0,
-        "@hookform/resolvers": 0,
-        "@lexical/react": 0,
-        "@neondatabase/serverless": 0,
-        "culori": 144
+        "culori": 144,
+        "date-fns": 101,
+        "next": 1484,
+        "react": 0,
+        "react-day-picker": 197,
+        "react-dom": 0,
+        "react-syntax-highlighter": 30,
+        "swr": 62,
+        "vaul": 111
       },
-      "oneToOnePairs": 222,
+      "oneToOnePairs": 2207,
       "imageID": "sha256:0db88feca9d74650b2a56bcbe34c5804c9edbec18e9f8686fa5c4c142aacd789",
       "qualification": "turbopack/jnsahaj--tweakcn/qualification.json",
       "moduleScope": "turbopack/jnsahaj--tweakcn/module-scope.json",
       "duplicateAudit": "turbopack/jnsahaj--tweakcn/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@ai-sdk/google",
-        "@dnd-kit/core",
-        "@dnd-kit/modifiers",
-        "@dnd-kit/sortable",
-        "@google/generative-ai",
-        "@hookform/resolvers",
-        "@lexical/react",
-        "@neondatabase/serverless"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "@base-ui-components/react",
-        "culori"
+        "culori",
+        "date-fns",
+        "next",
+        "react",
+        "react-day-picker",
+        "react-dom",
+        "react-syntax-highlighter",
+        "swr",
+        "vaul"
       ]
     },
     {
@@ -1102,54 +792,50 @@
       "repo": "shadcn-ui/ui",
       "commit": "d549251bab2e57dbf72f7c909d6458c02c43f529",
       "records": "turbopack/shadcn-ui--ui/ground-truth/func-mapping.json",
-      "recordsSHA256": "e2a588e97a560ec219bf811210cef31791c094c357169adb78ed76919c4ca2b2",
+      "recordsSHA256": "3a01a85c0677de16b73958d1135bd292268b467fc9b84928f25bffc54a9fad89",
       "selectedLibraries": [
-        "@ai-sdk/anthropic",
-        "@ai-sdk/openai",
         "@ai-sdk/react",
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
         "@dnd-kit/sortable",
-        "@faker-js/faker",
         "@formisch/react",
         "@internationalized/date",
-        "@tanstack/ai"
+        "@tanstack/ai",
+        "@tanstack/ai-client",
+        "@tanstack/ai-react",
+        "@tanstack/react-form"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
-        "@ai-sdk/anthropic": 3,
-        "@ai-sdk/openai": 3,
         "@ai-sdk/react": 3,
         "@dnd-kit/core": 3,
         "@dnd-kit/modifiers": 3,
         "@dnd-kit/sortable": 3,
-        "@faker-js/faker": 3,
         "@formisch/react": 3,
         "@internationalized/date": 3,
-        "@tanstack/ai": 3
+        "@tanstack/ai": 3,
+        "@tanstack/ai-client": 3,
+        "@tanstack/ai-react": 3,
+        "@tanstack/react-form": 3
       },
       "libraryPairs": {
-        "@ai-sdk/anthropic": 0,
-        "@ai-sdk/openai": 0,
         "@ai-sdk/react": 0,
         "@dnd-kit/core": 132,
         "@dnd-kit/modifiers": 1,
         "@dnd-kit/sortable": 9,
-        "@faker-js/faker": 0,
         "@formisch/react": 85,
         "@internationalized/date": 0,
-        "@tanstack/ai": 82
+        "@tanstack/ai": 92,
+        "@tanstack/ai-client": 162,
+        "@tanstack/ai-react": 21,
+        "@tanstack/react-form": 12
       },
-      "oneToOnePairs": 309,
+      "oneToOnePairs": 514,
       "imageID": "sha256:2598c37904b81c0c1ae178582c87c23a73b9e08410c457aad4c6d724e581ae59",
       "qualification": "turbopack/shadcn-ui--ui/qualification.json",
       "moduleScope": "turbopack/shadcn-ui--ui/module-scope.json",
       "duplicateAudit": "turbopack/shadcn-ui--ui/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@ai-sdk/anthropic",
-        "@ai-sdk/openai",
-        "@faker-js/faker"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "@ai-sdk/react",
         "@dnd-kit/core",
@@ -1157,7 +843,10 @@
         "@dnd-kit/sortable",
         "@formisch/react",
         "@internationalized/date",
-        "@tanstack/ai"
+        "@tanstack/ai",
+        "@tanstack/ai-client",
+        "@tanstack/ai-react",
+        "@tanstack/react-form"
       ]
     },
     {
@@ -1165,62 +854,61 @@
       "repo": "umami-software/umami",
       "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
       "records": "turbopack/umami-software--umami/ground-truth/func-mapping.json",
-      "recordsSHA256": "8e11e9135cfeb08368c879d00885255d8b23f565afb6777d4e89f4134bf47293",
+      "recordsSHA256": "38cbeb12b5d1d251bdd875fade35c01e6c0b4c0ff754f24e82857e26c166cb7f",
       "selectedLibraries": [
-        "@clickhouse/client",
-        "@dicebear/core",
-        "@prisma/adapter-pg",
-        "@prisma/client",
-        "@svgr/cli",
         "@tanstack/react-query",
         "@umami/react-zen",
-        "bcryptjs",
-        "chalk",
-        "chart.js"
+        "chart.js",
+        "chartjs-adapter-date-fns",
+        "colord",
+        "date-fns-tz",
+        "lucide-react",
+        "next-intl",
+        "prop-types",
+        "react"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
-        "@clickhouse/client": 3,
-        "@dicebear/core": 3,
-        "@prisma/adapter-pg": 3,
-        "@prisma/client": 3,
-        "@svgr/cli": 3,
         "@tanstack/react-query": 3,
         "@umami/react-zen": 3,
-        "bcryptjs": 3,
-        "chalk": 3,
-        "chart.js": 3
+        "chart.js": 3,
+        "chartjs-adapter-date-fns": 3,
+        "colord": 3,
+        "date-fns-tz": 3,
+        "lucide-react": 3,
+        "next-intl": 3,
+        "prop-types": 3,
+        "react": 3
       },
       "libraryPairs": {
-        "@clickhouse/client": 0,
-        "@dicebear/core": 0,
-        "@prisma/adapter-pg": 0,
-        "@prisma/client": 0,
-        "@svgr/cli": 0,
         "@tanstack/react-query": 15,
         "@umami/react-zen": 179,
-        "bcryptjs": 0,
-        "chalk": 0,
-        "chart.js": 602
+        "chart.js": 602,
+        "chartjs-adapter-date-fns": 3,
+        "colord": 47,
+        "date-fns-tz": 27,
+        "lucide-react": 0,
+        "next-intl": 3,
+        "prop-types": 5,
+        "react": 0
       },
-      "oneToOnePairs": 796,
+      "oneToOnePairs": 881,
       "imageID": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
       "qualification": "turbopack/umami-software--umami/qualification.json",
       "moduleScope": "turbopack/umami-software--umami/module-scope.json",
       "duplicateAudit": "turbopack/umami-software--umami/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@clickhouse/client",
-        "@dicebear/core",
-        "@prisma/adapter-pg",
-        "@prisma/client",
-        "@svgr/cli",
-        "bcryptjs",
-        "chalk"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "@tanstack/react-query",
         "@umami/react-zen",
-        "chart.js"
+        "chart.js",
+        "chartjs-adapter-date-fns",
+        "colord",
+        "date-fns-tz",
+        "lucide-react",
+        "next-intl",
+        "prop-types",
+        "react"
       ]
     },
     {
@@ -1228,7 +916,7 @@
       "repo": "CorentinTh/it-tools",
       "commit": "d505845f918e946ec300af7b36efc107e2f66e9e",
       "records": "vite/CorentinTh--it-tools/ground-truth/func-mapping.json",
-      "recordsSHA256": "a4b69d5ccdd20a5cafa31086cfd5d1cbcb17dc4734218064198c913a4d8630f9",
+      "recordsSHA256": "f64666f6e63fbe52be6ca9fa206cb2449b89d91a5e0158e5baf52b53761b006f",
       "selectedLibraries": [
         "naive-ui",
         "fuse.js",
@@ -1239,7 +927,7 @@
         "marked",
         "vue-i18n",
         "vuedraggable",
-        "@it-tools/bip39"
+        "@tabler/icons-vue"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -1252,7 +940,7 @@
         "marked": 3,
         "vue-i18n": 3,
         "vuedraggable": 3,
-        "@it-tools/bip39": 3
+        "@tabler/icons-vue": 3
       },
       "libraryPairs": {
         "naive-ui": 630,
@@ -1264,16 +952,14 @@
         "marked": 128,
         "vue-i18n": 166,
         "vuedraggable": 481,
-        "@it-tools/bip39": 0
+        "@tabler/icons-vue": 3
       },
-      "oneToOnePairs": 2681,
+      "oneToOnePairs": 2684,
       "imageID": "sha256:397c047c5dbc8deb82ee1861d4fcf265274c7d8cd810e41a631556f772c6d47a",
       "qualification": "vite/CorentinTh--it-tools/qualification.json",
       "moduleScope": "vite/CorentinTh--it-tools/module-scope.json",
       "duplicateAudit": "vite/CorentinTh--it-tools/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@it-tools/bip39"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "naive-ui",
         "fuse.js",
@@ -1283,7 +969,8 @@
         "@vueuse/core",
         "marked",
         "vue-i18n",
-        "vuedraggable"
+        "vuedraggable",
+        "@tabler/icons-vue"
       ]
     },
     {
@@ -1291,7 +978,7 @@
       "repo": "DavidHDev/react-bits",
       "commit": "4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4",
       "records": "vite/DavidHDev--react-bits/ground-truth/func-mapping.json",
-      "recordsSHA256": "5f4dfdb0ff4355869c8606662f3371c96b80dbade07996bbac847c28f01241d1",
+      "recordsSHA256": "bb0853fb78e01e751886c7fc07829f912b8e13e2a14bb9b395b2661d21537aba",
       "selectedLibraries": [
         "lucide-react",
         "nuqs",
@@ -1299,12 +986,9 @@
         "react-dom",
         "react-haiku",
         "react-icons",
-        "react-router-dom",
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
+        "react-router-dom"
       ],
-      "libraryCount": 10,
+      "libraryCount": 7,
       "sourceFunctionWitnesses": {
         "lucide-react": 3,
         "nuqs": 3,
@@ -1312,10 +996,7 @@
         "react-dom": 3,
         "react-haiku": 3,
         "react-icons": 3,
-        "react-router-dom": 3,
-        "@chakra-ui/react": 3,
-        "@emotion/react": 3,
-        "@gsap/react": 3
+        "react-router-dom": 3
       },
       "libraryPairs": {
         "lucide-react": 11,
@@ -1324,21 +1005,14 @@
         "react-dom": 623,
         "react-haiku": 3,
         "react-icons": 51,
-        "react-router-dom": 25,
-        "@chakra-ui/react": 0,
-        "@emotion/react": 0,
-        "@gsap/react": 0
+        "react-router-dom": 25
       },
       "oneToOnePairs": 881,
       "imageID": "sha256:134870a088eaa8a299c9767f15c4d4c0343a8b9ed523a8f13734745b02a39b51",
       "qualification": "vite/DavidHDev--react-bits/qualification.json",
       "moduleScope": "vite/DavidHDev--react-bits/module-scope.json",
       "duplicateAudit": "vite/DavidHDev--react-bits/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "lucide-react",
         "nuqs",
@@ -1354,7 +1028,7 @@
       "repo": "LibreChat-AI/LibreChat",
       "commit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
       "records": "vite/LibreChat-AI--LibreChat/ground-truth/func-mapping.json",
-      "recordsSHA256": "46b52360b91fe8b0d00d1cd4fce272e0a9b5b392ef45e98f3eaa0cf7024cb1db",
+      "recordsSHA256": "dc02c5e6032308ac092f8bf62a1fd250044b42312f196f9cabaa481933158121",
       "selectedLibraries": [
         "@mcp-ui/client",
         "react",
@@ -1416,7 +1090,7 @@
       "repo": "Lissy93/dashy",
       "commit": "002c6dd559c8d7ba662aeae9228164f6cf398c75",
       "records": "vite/Lissy93--dashy/ground-truth/func-mapping.json",
-      "recordsSHA256": "8e2cfd549c23eb3f81e663614eb8acbb97afb0caa98f94f47d40fc79405a0ea5",
+      "recordsSHA256": "5c7b6a91ec275b1821aa49b03070c96f9761d3519f489548fbeff46f7a7889c4",
       "selectedLibraries": [
         "vuex",
         "crypto-js",
@@ -1478,7 +1152,7 @@
       "repo": "drawdb-io/drawdb",
       "commit": "a249c7fb730c2de9b5c2ce6e863f2ea7344ac372",
       "records": "vite/drawdb-io--drawdb/ground-truth/func-mapping.json",
-      "recordsSHA256": "eb7a81354d187fa9f0dc425ffc7a97c5ced7bf525d6de9794eb0a17c35719efe",
+      "recordsSHA256": "0211db425e5ae27d2424ab3b527a279a059ee0a0a4e89d719ad18134e03febcf",
       "selectedLibraries": [
         "jsonschema",
         "oracle-sql-parser",
@@ -1540,49 +1214,32 @@
       "repo": "excalidraw/excalidraw",
       "commit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
       "records": "vite/excalidraw--excalidraw/ground-truth/func-mapping.json",
-      "recordsSHA256": "3acb24a9209fcf97e6ed0093b5a809f688863aca296c4a1bb9916d8553432530",
+      "recordsSHA256": "67f8f4c01e4b4e542d217e8f0576fee7ffb7d0ed9fc9abb19dc0c703f8d28b75",
       "selectedLibraries": [
         "react-dom",
         "@sentry/browser",
         "i18next-browser-languagedetector",
-        "react",
-        "firebase",
-        "socket.io-client",
-        "uqr",
-        "vite-plugin-html"
+        "react"
       ],
-      "libraryCount": 8,
+      "libraryCount": 4,
       "sourceFunctionWitnesses": {
         "react-dom": 3,
         "@sentry/browser": 3,
         "i18next-browser-languagedetector": 3,
-        "react": 3,
-        "firebase": 3,
-        "socket.io-client": 3,
-        "uqr": 3,
-        "vite-plugin-html": 3
+        "react": 3
       },
       "libraryPairs": {
         "react-dom": 614,
         "@sentry/browser": 102,
         "i18next-browser-languagedetector": 28,
-        "react": 65,
-        "firebase": 0,
-        "socket.io-client": 0,
-        "uqr": 0,
-        "vite-plugin-html": 0
+        "react": 65
       },
       "oneToOnePairs": 809,
       "imageID": "sha256:e7e4d7681ac7e1dcff8f6389714d638fbf5c038ae2fd102c0320d2ba1ee26d2d",
       "qualification": "vite/excalidraw--excalidraw/qualification.json",
       "moduleScope": "vite/excalidraw--excalidraw/module-scope.json",
       "duplicateAudit": "vite/excalidraw--excalidraw/duplicate-audit.json",
-      "unscoredLibraries": [
-        "firebase",
-        "socket.io-client",
-        "uqr",
-        "vite-plugin-html"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "react-dom",
         "@sentry/browser",
@@ -1595,27 +1252,25 @@
       "repo": "hoppscotch/hoppscotch",
       "commit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
       "records": "vite/hoppscotch--hoppscotch/ground-truth/func-mapping.json",
-      "recordsSHA256": "bce8d828c8a45d400507d8e1ea7de4181bdb0c8d360db14907bf9c0948d7b7d4",
+      "recordsSHA256": "fd9415ddf87a97a5180a433ccd27cc3218acbb42190aaf5f772a0d8327428961",
       "selectedLibraries": [
         "workbox-window",
         "@vueuse/core",
         "axios",
         "rxjs",
         "zod",
-        "@hoppscotch/common",
         "@tauri-apps/plugin-dialog",
         "@tauri-apps/plugin-fs",
         "@tauri-apps/plugin-shell",
         "dioc"
       ],
-      "libraryCount": 10,
+      "libraryCount": 9,
       "sourceFunctionWitnesses": {
         "workbox-window": 3,
         "@vueuse/core": 3,
         "axios": 3,
         "rxjs": 3,
         "zod": 3,
-        "@hoppscotch/common": 3,
         "@tauri-apps/plugin-dialog": 3,
         "@tauri-apps/plugin-fs": 3,
         "@tauri-apps/plugin-shell": 3,
@@ -1627,7 +1282,6 @@
         "axios": 351,
         "rxjs": 208,
         "zod": 423,
-        "@hoppscotch/common": 0,
         "@tauri-apps/plugin-dialog": 1,
         "@tauri-apps/plugin-fs": 3,
         "@tauri-apps/plugin-shell": 1,
@@ -1638,9 +1292,7 @@
       "qualification": "vite/hoppscotch--hoppscotch/qualification.json",
       "moduleScope": "vite/hoppscotch--hoppscotch/module-scope.json",
       "duplicateAudit": "vite/hoppscotch--hoppscotch/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@hoppscotch/common"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "workbox-window",
         "@vueuse/core",
@@ -1658,7 +1310,7 @@
       "repo": "immich-app/immich",
       "commit": "037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9",
       "records": "vite/immich-app--immich/ground-truth/func-mapping.json",
-      "recordsSHA256": "b3764a7a4a7146c63b43283268b3334a067afd69859af0d5ceb0f2e30cbae793",
+      "recordsSHA256": "726f53e2ec4d449f3edbaba4f3fb49f0cdbcc88afa46ebec67b83cfa2ae0f626",
       "selectedLibraries": [
         "tailwind-merge",
         "tabbable",
@@ -1720,7 +1372,7 @@
       "repo": "PanJiaChen/vue-element-admin",
       "commit": "6858a9ad67483025f6a9432a926beb9327037be3",
       "records": "webpack/PanJiaChen--vue-element-admin/ground-truth/func-mapping.json",
-      "recordsSHA256": "177e4af966ab42c658417ee6994c23bdbc77af3a3d3af8a36e40b30f679570c2",
+      "recordsSHA256": "b04684915bd2585ac680562d037a6d80d43ee86e0beaf3ac36f393aada1e7a3a",
       "selectedLibraries": [
         "vue-router",
         "fuse.js",
@@ -1728,11 +1380,9 @@
         "path-to-regexp",
         "element-ui",
         "vue",
-        "vuex",
-        "clipboard",
-        "codemirror"
+        "vuex"
       ],
-      "libraryCount": 9,
+      "libraryCount": 7,
       "sourceFunctionWitnesses": {
         "vue-router": 3,
         "fuse.js": 3,
@@ -1740,9 +1390,7 @@
         "path-to-regexp": 3,
         "element-ui": 3,
         "vue": 3,
-        "vuex": 3,
-        "clipboard": 3,
-        "codemirror": 3
+        "vuex": 3
       },
       "libraryPairs": {
         "vue-router": 216,
@@ -1751,19 +1399,14 @@
         "path-to-regexp": 12,
         "element-ui": 4126,
         "vue": 465,
-        "vuex": 115,
-        "clipboard": 0,
-        "codemirror": 0
+        "vuex": 115
       },
       "oneToOnePairs": 5082,
       "imageID": "sha256:e6ecf7ce1479c72a71dc29b9f0f09e63fb1edca993e7e1065409a63750ec4020",
       "qualification": "webpack/PanJiaChen--vue-element-admin/qualification.json",
       "moduleScope": "webpack/PanJiaChen--vue-element-admin/module-scope.json",
       "duplicateAudit": "webpack/PanJiaChen--vue-element-admin/duplicate-audit.json",
-      "unscoredLibraries": [
-        "clipboard",
-        "codemirror"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "vue-router",
         "fuse.js",
@@ -1779,25 +1422,23 @@
       "repo": "akveo/ngx-admin",
       "commit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
       "records": "webpack/akveo--ngx-admin/ground-truth/func-mapping.json",
-      "recordsSHA256": "5b27b676f8e93c584b52c509cc0545e7effabfb6266a20fdc17aa89b758b0eb7",
+      "recordsSHA256": "952e92312776af224a6f85e2803653a64a8c4a0be8f859be9b9c4e6222522dd7",
       "selectedLibraries": [
         "web-animations-js",
         "core-js",
         "leaflet",
         "zone.js",
-        "@angular/cdk",
         "@asymmetrik/ngx-leaflet",
         "classlist.js",
         "ngx-echarts",
         "tslib"
       ],
-      "libraryCount": 9,
+      "libraryCount": 8,
       "sourceFunctionWitnesses": {
         "web-animations-js": 3,
         "core-js": 3,
         "leaflet": 3,
         "zone.js": 3,
-        "@angular/cdk": 3,
         "@asymmetrik/ngx-leaflet": 3,
         "classlist.js": 3,
         "ngx-echarts": 3,
@@ -1808,7 +1449,6 @@
         "core-js": 164,
         "leaflet": 858,
         "zone.js": 224,
-        "@angular/cdk": 0,
         "@asymmetrik/ngx-leaflet": 71,
         "classlist.js": 18,
         "ngx-echarts": 31,
@@ -1819,9 +1459,7 @@
       "qualification": "webpack/akveo--ngx-admin/qualification.json",
       "moduleScope": "webpack/akveo--ngx-admin/module-scope.json",
       "duplicateAudit": "webpack/akveo--ngx-admin/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@angular/cdk"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "web-animations-js",
         "core-js",
@@ -1834,73 +1472,20 @@
       ]
     },
     {
-      "subject": "webpack/bailicangdu--vue2-elm",
-      "repo": "bailicangdu/vue2-elm",
-      "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
-      "records": "webpack/bailicangdu--vue2-elm/ground-truth/func-mapping.json",
-      "recordsSHA256": "7dd63d27c7c641e216ad746d280eb282f88a5941d60065bea51121cc8d431b8c",
-      "selectedLibraries": [
-        "better-scroll",
-        "fastclick",
-        "iscroll",
-        "showdown",
-        "vue",
-        "vue-router"
-      ],
-      "libraryCount": 6,
-      "sourceFunctionWitnesses": {
-        "better-scroll": 3,
-        "fastclick": 3,
-        "iscroll": 3,
-        "showdown": 3,
-        "vue": 3,
-        "vue-router": 3
-      },
-      "libraryPairs": {
-        "better-scroll": 0,
-        "fastclick": 0,
-        "iscroll": 0,
-        "showdown": 0,
-        "vue": 420,
-        "vue-router": 65
-      },
-      "oneToOnePairs": 485,
-      "imageID": "sha256:961df673d8f780ccdccba3e0ac792038bb9417fa8663420e1ab5c839d2b803b2",
-      "qualification": "webpack/bailicangdu--vue2-elm/qualification.json",
-      "moduleScope": "webpack/bailicangdu--vue2-elm/module-scope.json",
-      "duplicateAudit": "webpack/bailicangdu--vue2-elm/duplicate-audit.json",
-      "unscoredLibraries": [
-        "better-scroll",
-        "fastclick",
-        "iscroll",
-        "showdown"
-      ],
-      "evaluationLibraries": [
-        "vue",
-        "vue-router"
-      ]
-    },
-    {
       "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
       "repo": "dair-ai/Prompt-Engineering-Guide",
       "commit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
       "records": "webpack/dair-ai--Prompt-Engineering-Guide/ground-truth/func-mapping.json",
-      "recordsSHA256": "c85f430c8d4c25daab8f9cd874571548d37c42fff6012830185fbfb68477ab73",
+      "recordsSHA256": "12b13cc2536871ac1beedb7829f96a2f1a04b3b6615f33463aef42244d7a9269",
       "selectedLibraries": [
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "katex",
         "next",
         "nextra",
         "nextra-theme-docs",
         "react",
         "react-dom"
       ],
-      "libraryCount": 8,
+      "libraryCount": 5,
       "sourceFunctionWitnesses": {
-        "@fortawesome/fontawesome-svg-core": 3,
-        "@fortawesome/react-fontawesome": 3,
-        "katex": 3,
         "next": 3,
         "nextra": 3,
         "nextra-theme-docs": 3,
@@ -1908,9 +1493,6 @@
         "react-dom": 3
       },
       "libraryPairs": {
-        "@fortawesome/fontawesome-svg-core": 0,
-        "@fortawesome/react-fontawesome": 0,
-        "katex": 0,
         "next": 847,
         "nextra": 51,
         "nextra-theme-docs": 94,
@@ -1922,11 +1504,7 @@
       "qualification": "webpack/dair-ai--Prompt-Engineering-Guide/qualification.json",
       "moduleScope": "webpack/dair-ai--Prompt-Engineering-Guide/module-scope.json",
       "duplicateAudit": "webpack/dair-ai--Prompt-Engineering-Guide/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "katex"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "next",
         "nextra",
@@ -1940,7 +1518,7 @@
       "repo": "dokploy/dokploy",
       "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
       "records": "webpack/dokploy--dokploy/ground-truth/func-mapping.json",
-      "recordsSHA256": "0971d303ffee47e71821d7db06d7dc99b7689f277614ecce65875bacff0faeaf",
+      "recordsSHA256": "080042c7919bd660b0c9f838977542f73e1e664fa7b7fda9010c404137548f05",
       "selectedLibraries": [
         "better-auth",
         "react-dom",
@@ -2002,7 +1580,7 @@
       "repo": "freeCodeCamp/freeCodeCamp",
       "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
       "records": "webpack/freeCodeCamp--freeCodeCamp/ground-truth/func-mapping.json",
-      "recordsSHA256": "b31009b34b336e1886f30796fddbbc2edd322980f6935f3b67e0abd1fc48e238",
+      "recordsSHA256": "c072922e9a94af40b240584a7ebad611756dedfcd5fde01dff824ec1477a25d4",
       "selectedLibraries": [
         "react-responsive",
         "date-fns-tz",
@@ -2064,18 +1642,18 @@
       "repo": "supabase/supabase",
       "commit": "aa9d04e4f77447e2b6aaf317b686007aff05aa96",
       "records": "webpack/supabase--supabase/ground-truth/func-mapping.json",
-      "recordsSHA256": "2dc09ad5103c755f2ba2bcd7956bdb0da996e2941eddbdc76c7827c8f4af3638",
+      "recordsSHA256": "6c5640a8b938c3e2372838c1234103e0ac8bb6de30783c6d4c30e1c4d2ab3ac5",
       "selectedLibraries": [
         "recharts",
         "mdast-util-from-markdown",
         "@sentry/nextjs",
         "typed.js",
-        "@bsmnt/scrollytelling",
-        "@code-hike/mdx",
-        "@codesandbox/sandpack-react",
-        "@hcaptcha/react-hcaptcha",
         "@heroicons/react",
-        "@supabase/supabase-js"
+        "@supabase/supabase-js",
+        "nuqs",
+        "react",
+        "react-dom",
+        "react-use"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -2083,43 +1661,42 @@
         "mdast-util-from-markdown": 3,
         "@sentry/nextjs": 3,
         "typed.js": 3,
-        "@bsmnt/scrollytelling": 3,
-        "@code-hike/mdx": 3,
-        "@codesandbox/sandpack-react": 3,
-        "@hcaptcha/react-hcaptcha": 3,
         "@heroicons/react": 3,
-        "@supabase/supabase-js": 3
+        "@supabase/supabase-js": 3,
+        "nuqs": 3,
+        "react": 3,
+        "react-dom": 3,
+        "react-use": 3
       },
       "libraryPairs": {
         "recharts": 207,
         "mdast-util-from-markdown": 6,
         "@sentry/nextjs": 0,
         "typed.js": 21,
-        "@bsmnt/scrollytelling": 0,
-        "@code-hike/mdx": 0,
-        "@codesandbox/sandpack-react": 0,
-        "@hcaptcha/react-hcaptcha": 0,
         "@heroicons/react": 0,
-        "@supabase/supabase-js": 20
+        "@supabase/supabase-js": 20,
+        "nuqs": 38,
+        "react": 0,
+        "react-dom": 0,
+        "react-use": 8
       },
-      "oneToOnePairs": 254,
+      "oneToOnePairs": 300,
       "imageID": "sha256:53dce561ab2faedb349ac6a1935e293cf5ee64305dd51a0161c0e6c79f577454",
       "qualification": "webpack/supabase--supabase/qualification.json",
       "moduleScope": "webpack/supabase--supabase/module-scope.json",
       "duplicateAudit": "webpack/supabase--supabase/duplicate-audit.json",
-      "unscoredLibraries": [
-        "@bsmnt/scrollytelling",
-        "@code-hike/mdx",
-        "@codesandbox/sandpack-react",
-        "@hcaptcha/react-hcaptcha"
-      ],
+      "unscoredLibraries": [],
       "evaluationLibraries": [
         "recharts",
         "mdast-util-from-markdown",
         "@sentry/nextjs",
         "typed.js",
         "@heroicons/react",
-        "@supabase/supabase-js"
+        "@supabase/supabase-js",
+        "nuqs",
+        "react",
+        "react-dom",
+        "react-use"
       ]
     },
     {
@@ -2127,7 +1704,7 @@
       "repo": "swagger-api/swagger-ui",
       "commit": "d3296954a6b813898d298815ac3e68daa1cf7408",
       "records": "webpack/swagger-api--swagger-ui/ground-truth/func-mapping.json",
-      "recordsSHA256": "be3bb61c412a1bf42fe0207625e047c18667d24f7259fc56a340a279d20877b2",
+      "recordsSHA256": "2548d5f6298477b8dd76289ecdc202340ac3d7936a18070959bd21148ce6de2b",
       "selectedLibraries": [
         "remarkable",
         "dompurify",

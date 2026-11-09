@@ -17,3 +17,5 @@ Explicit repository exclusions are recorded in `excluded-subjects.json` and enfo
 Correspondence scope is additionally restricted to module dependencies under [the module policy](../module-dependencies/POLICY.md). This controls accepted pairs and map-reference snapshots separately from the unchanged source-function threshold. Global-only production libraries do not qualify as replacement module candidates.
 
 Library multiplicity additionally follows the [full-runtime duplicate-library policy](../no-duplicate-libraries/POLICY.md). Duplicate copies in global/vendor inputs also disqualify the library even though those inputs are not scored. Replacement sources must pass the same original source-function threshold; source eligibility does not reinstate an initial-anchor requirement.
+
+User clarification (2026-11-09): positive audited module evidence is required for **every selected library**, including formerly unscored libraries. Unobserved dependencies no longer qualify for a library slot. Refill with audited production candidates, and exclude repositories that cannot retain at least three libraries meeting the source, module and duplication requirements.

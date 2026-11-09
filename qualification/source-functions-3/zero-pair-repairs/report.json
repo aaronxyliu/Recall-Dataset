@@ -14,18 +14,10 @@
       "subject": "parcel/jonasschmedtmann--complete-javascript-course",
       "repo": "jonasschmedtmann/complete-javascript-course",
       "beforePairs": 0,
-      "afterPairs": 16,
-      "selectedLibraries": [
-        "core-js",
-        "fractional",
-        "regenerator-runtime"
-      ],
-      "libraryPairs": {
-        "core-js": 16,
-        "fractional": 0,
-        "regenerator-runtime": 0
-      },
-      "causeAndRepair": "Parcel 2.0.0-beta.1 scope-hoisting produced out-of-bounds generated map coordinates. Rebuilt with --no-scope-hoist, retaining production minification, and recaptured the page; no page or map-processing errors."
+      "afterPairs": 0,
+      "selectedLibraries": [],
+      "libraryPairs": {},
+      "causeAndRepair": "Excluded under subsequent scope/duplication rules: fewer than three source-eligible libraries remain after duplicate-safe candidate filtering"
     },
     {
       "subject": "parcel/tensorflow--tfjs",
@@ -127,10 +119,7 @@
         "react-dom",
         "react-haiku",
         "react-icons",
-        "react-router-dom",
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
+        "react-router-dom"
       ],
       "libraryPairs": {
         "lucide-react": 11,
@@ -139,10 +128,7 @@
         "react-dom": 623,
         "react-haiku": 3,
         "react-icons": 51,
-        "react-router-dom": 25,
-        "@chakra-ui/react": 0,
-        "@emotion/react": 0,
-        "@gsap/react": 0
+        "react-router-dom": 25
       },
       "causeAndRepair": "The old sample selected libraries for unloaded component demos and build tooling. Prefer eligible declared production dependencies present on the captured page."
     }
@@ -155,10 +141,10 @@
     "replacementPairs": 62
   },
   "dataset": {
-    "repositoryCount": 39,
-    "libraryInstanceCount": 315,
-    "oneToOnePairs": 49604,
-    "zeroPairLibraryInstances": 96
+    "repositoryCount": 31,
+    "libraryInstanceCount": 259,
+    "oneToOnePairs": 49946,
+    "zeroPairLibraryInstances": 29
   },
   "zeroPairRepositories": [],
   "remainingMapDiagnostics": {

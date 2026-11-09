@@ -17,30 +17,6 @@
   "scope": "all-captured-runtime-assets-including-excluded-global-copies",
   "candidates": [
     {
-      "library": "@boxyhq/saml-jackson",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
-      "library": "@daily-co/daily-js",
-      "status": "not-observed",
-      "moduleMappedBodyPoints": 0,
-      "sources": [],
-      "reasons": [],
-      "parseFailures": [],
-      "maps": [],
-      "moduleFunctionCount": 0,
-      "observedFunctionCount": 0,
-      "sourceFileCount": 0
-    },
-    {
       "library": "@formkit/auto-animate",
       "status": "unique-observed",
       "moduleMappedBodyPoints": 1074,
@@ -128,6 +104,81 @@
       ],
       "moduleFunctionCount": 13,
       "observedFunctionCount": 13,
+      "sourceFileCount": 2
+    },
+    {
+      "library": "@radix-ui/react-dialog",
+      "status": "unique-observed",
+      "moduleMappedBodyPoints": 822,
+      "sources": [
+        {
+          "source": "turbopack:///[project]/node_modules/@radix-ui/react-dialog/dist/index.mjs",
+          "sha256": "ddde5d5ba40636079cba89d797110e11c944890fd598d20b5eb8183f2119f17e",
+          "relative": "dist/index.mjs",
+          "logical": "@radix-ui/react-dialog",
+          "install": "turbopack:///[project]/node_modules/@radix-ui/react-dialog",
+          "bytes": 22763,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/40596572175429ce.js#9f00349711c5a6f475e0e686ed0e0cd07ce4de3e68f90e3a06f183483ad13fcf",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 24
+        }
+      ],
+      "reasons": [],
+      "parseFailures": [],
+      "maps": [
+        "7c62feb678f617db2ad36063dbe5d5ef2551d239a647b48358cad63e833d7aed"
+      ],
+      "moduleFunctionCount": 24,
+      "observedFunctionCount": 24,
+      "sourceFileCount": 1
+    },
+    {
+      "library": "@radix-ui/react-radio-group",
+      "status": "unique-observed",
+      "moduleMappedBodyPoints": 950,
+      "sources": [
+        {
+          "source": "turbopack:///[project]/node_modules/@radix-ui/react-radio-group/dist/packages/react/radio-group/src/RadioGroup.tsx",
+          "sha256": "b3b83360d80946ed48ec93694b023757b5f6eb3b73ab63da3d55ae90976b5cf7",
+          "relative": "dist/packages/react/radio-group/src/RadioGroup.tsx",
+          "logical": "@radix-ui/react-radio-group",
+          "install": "turbopack:///[project]/node_modules/@radix-ui/react-radio-group",
+          "bytes": 8116,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/a5838cc9f595c146.js#a40271c547f1ac8ee448c0df8a5cf45238f2df8239d4555dda427b28fdfd3c0c",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 10
+        },
+        {
+          "source": "turbopack:///[project]/node_modules/@radix-ui/react-radio-group/dist/packages/react/radio-group/src/Radio.tsx",
+          "sha256": "e9d1d1262ad495451740374d5bea9066b8b59bcf972500a3dbffeead6aaa6d91",
+          "relative": "dist/packages/react/radio-group/src/Radio.tsx",
+          "logical": "@radix-ui/react-radio-group",
+          "install": "turbopack:///[project]/node_modules/@radix-ui/react-radio-group",
+          "bytes": 6655,
+          "assets": [
+            {
+              "asset": "<local>/_next/static/chunks/a5838cc9f595c146.js#a40271c547f1ac8ee448c0df8a5cf45238f2df8239d4555dda427b28fdfd3c0c",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 7
+        }
+      ],
+      "reasons": [],
+      "parseFailures": [],
+      "maps": [
+        "075e02935a7fd8b880dd22947e1163b174110bda1f61d994d2d243eddac98dce"
+      ],
+      "moduleFunctionCount": 17,
+      "observedFunctionCount": 17,
       "sourceFileCount": 2
     },
     {
@@ -576,17 +627,15 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
-  "unscoredLibraries": [
-    "@boxyhq/saml-jackson",
-    "@daily-co/daily-js"
-  ],
+  "unscoredLibraries": [],
   "sourceOwnershipAmbiguousHashes": [],
   "authoritativeAuditSHA256": "b3f81a7cdc7f0f84291d4f18af01f3c7797fb8aa6cd221119e88d0c8cb2d5a2b"
 }

@@ -17,11 +17,7 @@
   "coverage": {
     "@angular/platform-browser": 10,
     "rxjs": 93,
-    "tslib": 1,
-    "@angular/animations": 0,
-    "@angular/cdk": 0,
-    "@angular/compiler": 0,
-    "@angular/forms": 0
+    "tslib": 1
   },
   "pairs": [
     {
@@ -4622,20 +4618,11 @@
     "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d"
   },
   "selectedLibraries": [
-    "@angular/animations",
-    "@angular/cdk",
-    "@angular/compiler",
-    "@angular/forms",
     "@angular/platform-browser",
     "rxjs",
     "tslib"
   ],
-  "unscoredLibraries": [
-    "@angular/animations",
-    "@angular/cdk",
-    "@angular/compiler",
-    "@angular/forms"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -4665,12 +4652,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
@@ -4678,9 +4666,9 @@
     "archiveRecordSHA256": "8e610b537670de07a60b5a648dc34dd8988b837397412c11745fc300dec7686d",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "3f8e53733e686903b4a279945c76531e6d24cac3602b21cf84820306ec562c57",
+    "sourceOwnershipSHA256": "f769287027f4af02d30694cce16a0234036b15c62ad63c045a60e2d867e33bee",
     "moduleScopeSHA256": "c9cdd602b8c8a976bce1a7f697e09d6f8bc9dd081ed862c578732097dc0f1925",
-    "duplicateAuditSHA256": "c83d57244df8b63f4f250befc7b3b6d1c23c6ad366afc1ce93254f73f782ac3f"
+    "duplicateAuditSHA256": "c159a0dd6234665f165eada7fcd8388cede93d9407fc84cee0d6e504104cd807"
   },
   "evaluationLibraries": [
     "@angular/platform-browser",

@@ -4,7 +4,7 @@
       "@dbml/core",
       "react-router-dom"
     ],
-    "reason": "User excluded @dbml/core; replace with next source-eligible declared production library. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "reason": "User excluded @dbml/core; replace with next source-eligible declared production library. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
     "preferredLibraries": [
       "jsonschema",
       "oracle-sql-parser",
@@ -48,19 +48,17 @@
   },
   "parcel/jonasschmedtmann--complete-javascript-course": {
     "preferredLibraries": [
-      "core-js",
+      "core-js"
+    ],
+    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
+    "excludeLibraries": [
       "fractional",
       "regenerator-runtime"
     ],
-    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
-    "excludeLibraries": [],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/parcel/jonasschmedtmann--complete-javascript-course/audit.json",
       "sha256": "e0593b75869cce7a922611ae18d5555c53a4d9c74ac23ad01eaa90919a517221",
-      "retainedUnobservedZeroPairLibraries": [
-        "fractional",
-        "regenerator-runtime"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     }
   },
@@ -126,7 +124,7 @@
       "underscore",
       "url"
     ],
-    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
     "excludeLibraries": [
       "@codemirror/autocomplete",
       "@codemirror/commands",
@@ -243,7 +241,7 @@
       "sonner",
       "tailwind-merge"
     ],
-    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
     "excludeLibraries": [
       "@ai-sdk/anthropic",
       "@ai-sdk/groq",
@@ -389,14 +387,14 @@
       "react-haiku",
       "react-icons",
       "react-router-dom",
-      "@chakra-ui/react",
-      "@emotion/react",
-      "@gsap/react",
       "@hugeicons/react",
       "next-themes"
     ],
-    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
     "excludeLibraries": [
+      "@chakra-ui/react",
+      "@emotion/react",
+      "@gsap/react",
       "@hugeicons/core-free-icons",
       "@mediabunny/mp3-encoder",
       "@react-three/drei",
@@ -433,11 +431,7 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/vite/DavidHDev--react-bits/audit.json",
       "sha256": "9aa9773f0f26f96018ff05154614ec8c45d21c051a7fc3f06195a8d6f4c5f226",
-      "retainedUnobservedZeroPairLibraries": [
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     }
   },
@@ -447,7 +441,7 @@
       "@primeuix/styled",
       "@primeuix/motion"
     ],
-    "reason": "Evaluate the built PrimeNG library production manifest; showcase manifest only declares CSS build tools. Angular peer and root dev dependencies remain excluded. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "reason": "Evaluate the built PrimeNG library production manifest; showcase manifest only declares CSS build tools. Angular peer and root dev dependencies remain excluded. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
     "excludeLibraries": [
       "@primeuix/styles",
       "@primeuix/utils"
@@ -462,6 +456,7 @@
   "webpack/akveo--ngx-admin": {
     "excludeLibraries": [
       "@angular/animations",
+      "@angular/cdk",
       "@angular/common",
       "@angular/compiler",
       "@angular/core",
@@ -503,19 +498,16 @@
       "core-js",
       "leaflet",
       "zone.js",
-      "@angular/cdk",
       "@asymmetrik/ngx-leaflet",
       "classlist.js",
       "ngx-echarts",
       "tslib"
     ],
-    "reason": "Module-only rule: tinymce and pace-js enter through Angular scripts[] globals; replace with source-eligible imported Angular production dependencies. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "reason": "Module-only rule: tinymce and pace-js enter through Angular scripts[] globals; replace with source-eligible imported Angular production dependencies. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot.",
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/webpack/akveo--ngx-admin/audit.json",
       "sha256": "6c4a951edb23e523890226491aabac21d7da2f70c01490cb105027cd5452f7a6",
-      "retainedUnobservedZeroPairLibraries": [
-        "@angular/cdk"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     }
   },
@@ -536,97 +528,87 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "bun/micahkepe--jsongrep": {
-    "excludeLibraries": [],
+    "excludeLibraries": [
+      "@bytecodealliance/jco"
+    ],
     "preferredLibraries": [
-      "@bytecodealliance/jco",
       "react",
       "react-dom"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/bun/micahkepe--jsongrep/audit.json",
       "sha256": "8406e3855672f851c896e48ab226f13404dc31bbc2d3d341bf9a67b892facb04",
-      "retainedUnobservedZeroPairLibraries": [
-        "@bytecodealliance/jco"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "esbuild/mattlewis92--angular-calendar": {
-    "excludeLibraries": [],
-    "preferredLibraries": [
+    "excludeLibraries": [
       "@scarf/scarf",
       "calendar-utils",
-      "positioning",
+      "positioning"
+    ],
+    "preferredLibraries": [
       "tslib"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/esbuild/mattlewis92--angular-calendar/audit.json",
       "sha256": "c2ac8e6488afa05c37d20e9c46d455f9584f6d0b39a239b13a4ca915f020472f",
-      "retainedUnobservedZeroPairLibraries": [
-        "@scarf/scarf",
-        "calendar-utils",
-        "positioning"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "esbuild/primefaces--sakai-ng": {
     "excludeLibraries": [
       "@angular/common",
+      "@angular/compiler",
       "@angular/core",
       "@angular/forms",
       "@angular/platform-browser",
       "@angular/platform-browser-dynamic",
       "@angular/router",
+      "@tailwindcss/postcss",
+      "primeclt",
       "primeicons",
       "primeng",
       "quill",
       "tailwindcss-primeui"
     ],
     "preferredLibraries": [
-      "@angular/compiler",
       "@primeuix/themes",
-      "@tailwindcss/postcss",
       "chart.js",
-      "primeclt",
       "rxjs",
       "tslib"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/esbuild/primefaces--sakai-ng/audit.json",
       "sha256": "95e41b9297018365c6349d6533363eefb039deed95fb19620972de49050e8f92",
-      "retainedUnobservedZeroPairLibraries": [
-        "@angular/compiler",
-        "@tailwindcss/postcss",
-        "primeclt"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "esbuild/sissbruecker--linkding": {
-    "excludeLibraries": [],
-    "preferredLibraries": [
-      "@floating-ui/dom",
-      "@hotwired/turbo",
+    "excludeLibraries": [
       "esbuild",
       "lit"
+    ],
+    "preferredLibraries": [
+      "@floating-ui/dom",
+      "@hotwired/turbo"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/esbuild/sissbruecker--linkding/audit.json",
       "sha256": "dcd15f5f3f1603758e8f18b6abddbf775497e15ba1fe672088eca33f40d6b47a",
-      "retainedUnobservedZeroPairLibraries": [
-        "esbuild",
-        "lit"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "esbuild/swimlane--ngx-charts": {
     "excludeLibraries": [
@@ -673,21 +655,21 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "esbuild/swimlane--ngx-datatable": {
     "excludeLibraries": [
+      "@angular/animations",
+      "@angular/cdk",
       "@angular/common",
+      "@angular/compiler",
       "@angular/core",
+      "@angular/forms",
       "@angular/platform-browser-dynamic",
       "@angular/router",
       "zone.js"
     ],
     "preferredLibraries": [
-      "@angular/animations",
-      "@angular/cdk",
-      "@angular/compiler",
-      "@angular/forms",
       "@angular/platform-browser",
       "rxjs",
       "tslib"
@@ -695,40 +677,30 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/esbuild/swimlane--ngx-datatable/audit.json",
       "sha256": "26cdcfebc141f918ee68dc05e50a0290a3867ad155b9a8a1025c0649020a5fe9",
-      "retainedUnobservedZeroPairLibraries": [
-        "@angular/animations",
-        "@angular/cdk",
-        "@angular/compiler",
-        "@angular/forms"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "parcel/parcel-bundler--website": {
     "excludeLibraries": [
-      "alpinejs"
-    ],
-    "preferredLibraries": [
-      "focus-visible",
+      "alpinejs",
       "marked",
       "react",
       "react-dom",
-      "react-use",
+      "react-use"
+    ],
+    "preferredLibraries": [
+      "focus-visible",
       "@alpinejs/intersect"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/parcel/parcel-bundler--website/audit.json",
       "sha256": "b1b12c84e75ae02e2874ea363af4711f6e68666b546673871a83cd1796f65042",
-      "retainedUnobservedZeroPairLibraries": [
-        "marked",
-        "react",
-        "react-dom",
-        "react-use"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "parcel/tensorflow--tfjs": {
     "excludeLibraries": [
@@ -745,7 +717,7 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "rolldown/appwrite--appwrite": {
     "excludeLibraries": [
@@ -858,7 +830,7 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "rolldown/discourse--discourse": {
     "excludeLibraries": [
@@ -955,7 +927,7 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "rollup/daybrush--scenejs": {
     "excludeLibraries": [
@@ -972,31 +944,31 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "rollup/omnibrain--svguitar": {
-    "excludeLibraries": [],
+    "excludeLibraries": [
+      "svgdom"
+    ],
     "preferredLibraries": [
       "@svgdotjs/svg.js",
-      "roughjs",
-      "svgdom"
+      "roughjs"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/rollup/omnibrain--svguitar/audit.json",
       "sha256": "15c574ee373362f609598badcc8c44db600de514ee99df6565ea41b88ec87451",
-      "retainedUnobservedZeroPairLibraries": [
-        "svgdom"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "rollup/vega--vega-lite": {
-    "excludeLibraries": [],
-    "preferredLibraries": [
+    "excludeLibraries": [
       "tslib",
+      "yargs"
+    ],
+    "preferredLibraries": [
       "vega-expression",
-      "yargs",
       "json-stringify-pretty-compact",
       "vega-event-selector",
       "vega-util"
@@ -1004,16 +976,14 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/rollup/vega--vega-lite/audit.json",
       "sha256": "0c181085f96e903fcd690700a7c94d25b54a7239a5483157aafc6966af90a71d",
-      "retainedUnobservedZeroPairLibraries": [
-        "tslib",
-        "yargs"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "turbopack/CalCom--cal.com": {
     "excludeLibraries": [
+      "@boxyhq/saml-jackson",
       "@calcom/app-store",
       "@calcom/app-store-cli",
       "@calcom/dayjs",
@@ -1029,6 +999,7 @@
       "@calcom/tsconfig",
       "@calcom/ui",
       "@coss/ui",
+      "@daily-co/daily-js",
       "@daily-co/daily-react",
       "@dub/analytics",
       "@dub/embed-core",
@@ -1118,8 +1089,6 @@
       "next-auth",
       "react-i18next",
       "zod",
-      "@boxyhq/saml-jackson",
-      "@daily-co/daily-js",
       "@hookform/resolvers",
       "@radix-ui/react-avatar",
       "@radix-ui/react-dialog",
@@ -1137,13 +1106,10 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/turbopack/CalCom--cal.com/audit.json",
       "sha256": "b3f81a7cdc7f0f84291d4f18af01f3c7797fb8aa6cd221119e88d0c8cb2d5a2b",
-      "retainedUnobservedZeroPairLibraries": [
-        "@boxyhq/saml-jackson",
-        "@daily-co/daily-js"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "turbopack/DayuanJiang--next-ai-draw-io": {
     "excludeLibraries": [
@@ -1214,13 +1180,20 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "turbopack/Open-Dev-Society--OpenStock": {
     "excludeLibraries": [
       "@radix-ui/react-avatar",
+      "@radix-ui/react-dropdown-menu",
       "@radix-ui/react-label",
+      "@radix-ui/react-popover",
+      "@radix-ui/react-select",
+      "better-auth",
       "class-variance-authority",
+      "cmdk",
+      "country-data-list",
+      "date-fns",
       "dotenv",
       "inngest",
       "mongodb",
@@ -1233,15 +1206,8 @@
     ],
     "preferredLibraries": [
       "@radix-ui/react-dialog",
-      "@radix-ui/react-dropdown-menu",
-      "@radix-ui/react-popover",
-      "@radix-ui/react-select",
       "@radix-ui/react-slot",
       "@vercel/analytics",
-      "better-auth",
-      "cmdk",
-      "country-data-list",
-      "date-fns",
       "clsx",
       "lucide-react",
       "next",
@@ -1254,24 +1220,19 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/turbopack/Open-Dev-Society--OpenStock/audit.json",
       "sha256": "315db6e67a4089f18e947d67e3d6bfcafdf466f867c9ddadb4853561a7045d12",
-      "retainedUnobservedZeroPairLibraries": [
-        "@radix-ui/react-dropdown-menu",
-        "@radix-ui/react-popover",
-        "@radix-ui/react-select",
-        "better-auth",
-        "cmdk",
-        "country-data-list",
-        "date-fns"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "turbopack/colinhacks--zod": {
     "excludeLibraries": [
       "@radix-ui/react-accordion",
+      "@vercel/og",
       "fumadocs-core",
+      "fumadocs-mdx",
       "fumadocs-ui",
+      "gray-matter",
       "lucide-react",
       "next",
       "react-tweet",
@@ -1283,9 +1244,6 @@
     "preferredLibraries": [
       "@inkeep/cxkit-react",
       "@vercel/analytics",
-      "@vercel/og",
-      "fumadocs-mdx",
-      "gray-matter",
       "react",
       "react-dom",
       "remark-gfm"
@@ -1293,19 +1251,23 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/turbopack/colinhacks--zod/audit.json",
       "sha256": "045a49ca61afffc5ba5879153854b7512084f54bf61b20bc2b35836eef3c6086",
-      "retainedUnobservedZeroPairLibraries": [
-        "@vercel/og",
-        "fumadocs-mdx",
-        "gray-matter"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "turbopack/jnsahaj--tweakcn": {
     "excludeLibraries": [
+      "@ai-sdk/google",
       "@ai-sdk/react",
+      "@dnd-kit/core",
+      "@dnd-kit/modifiers",
+      "@dnd-kit/sortable",
       "@dnd-kit/utilities",
+      "@google/generative-ai",
+      "@hookform/resolvers",
+      "@lexical/react",
+      "@neondatabase/serverless",
       "@polar-sh/checkout",
       "@polar-sh/nextjs",
       "@polar-sh/sdk",
@@ -1355,15 +1317,7 @@
       "zod"
     ],
     "preferredLibraries": [
-      "@ai-sdk/google",
       "@base-ui-components/react",
-      "@dnd-kit/core",
-      "@dnd-kit/modifiers",
-      "@dnd-kit/sortable",
-      "@google/generative-ai",
-      "@hookform/resolvers",
-      "@lexical/react",
-      "@neondatabase/serverless",
       "class-variance-authority",
       "clsx",
       "culori",
@@ -1381,23 +1335,17 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/turbopack/jnsahaj--tweakcn/audit.json",
       "sha256": "e9f089b11fb9ccb8fe59a5bbf152e5afab491531d9549a78d9d0c9a819a6c51f",
-      "retainedUnobservedZeroPairLibraries": [
-        "@ai-sdk/google",
-        "@dnd-kit/core",
-        "@dnd-kit/modifiers",
-        "@dnd-kit/sortable",
-        "@google/generative-ai",
-        "@hookform/resolvers",
-        "@lexical/react",
-        "@neondatabase/serverless"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "turbopack/shadcn-ui--ui": {
     "excludeLibraries": [
+      "@ai-sdk/anthropic",
+      "@ai-sdk/openai",
       "@base-ui/react",
+      "@faker-js/faker",
       "@hookform/resolvers",
       "@hugeicons/core-free-icons",
       "@hugeicons/react",
@@ -1442,13 +1390,10 @@
       "zod"
     ],
     "preferredLibraries": [
-      "@ai-sdk/anthropic",
-      "@ai-sdk/openai",
       "@ai-sdk/react",
       "@dnd-kit/core",
       "@dnd-kit/modifiers",
       "@dnd-kit/sortable",
-      "@faker-js/faker",
       "@formisch/react",
       "@dnd-kit/utilities",
       "@internationalized/date",
@@ -1479,22 +1424,25 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/turbopack/shadcn-ui--ui/audit.json",
       "sha256": "2b81610475654f91074ab091df96ee0cce758b139a4042e7f7400d88969ddef1",
-      "retainedUnobservedZeroPairLibraries": [
-        "@ai-sdk/anthropic",
-        "@ai-sdk/openai",
-        "@faker-js/faker"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "turbopack/umami-software--umami": {
     "excludeLibraries": [
+      "@clickhouse/client",
       "@dicebear/collection",
+      "@dicebear/core",
       "@playwright/test",
+      "@prisma/adapter-pg",
+      "@prisma/client",
       "@prisma/extension-read-replicas",
+      "@svgr/cli",
       "@umami/api-client",
       "@umami/mcp",
+      "bcryptjs",
+      "chalk",
       "date-fns",
       "debug",
       "detect-browser",
@@ -1528,15 +1476,8 @@
       "zod"
     ],
     "preferredLibraries": [
-      "@clickhouse/client",
-      "@dicebear/core",
-      "@prisma/adapter-pg",
-      "@prisma/client",
-      "@svgr/cli",
       "@tanstack/react-query",
       "@umami/react-zen",
-      "bcryptjs",
-      "chalk",
       "chart.js",
       "chartjs-adapter-date-fns",
       "colord",
@@ -1557,21 +1498,14 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/turbopack/umami-software--umami/audit.json",
       "sha256": "ef2102d031be65a23ce7507d4559c604abf9256c05b442c1aa0d73a9295d2fe3",
-      "retainedUnobservedZeroPairLibraries": [
-        "@clickhouse/client",
-        "@dicebear/core",
-        "@prisma/adapter-pg",
-        "@prisma/client",
-        "@svgr/cli",
-        "bcryptjs",
-        "chalk"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "vite/CorentinTh--it-tools": {
     "excludeLibraries": [
+      "@it-tools/bip39",
       "@it-tools/oggen",
       "@regexper/render",
       "@sindresorhus/slugify",
@@ -1631,7 +1565,6 @@
       "marked",
       "vue-i18n",
       "vuedraggable",
-      "@it-tools/bip39",
       "@tabler/icons-vue",
       "@vicons/material",
       "@vicons/tabler",
@@ -1645,12 +1578,10 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/vite/CorentinTh--it-tools/audit.json",
       "sha256": "30b8c32fb2aec919a947d1ed76cfdac5f1092d2f3ce28176ef454c992ac25ac1",
-      "retainedUnobservedZeroPairLibraries": [
-        "@it-tools/bip39"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "vite/LibreChat-AI--LibreChat": {
     "excludeLibraries": [
@@ -1772,7 +1703,7 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "vite/Lissy93--dashy": {
     "excludeLibraries": [
@@ -1819,43 +1750,39 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "vite/excalidraw--excalidraw": {
     "excludeLibraries": [
       "@excalidraw/random-username",
-      "jotai"
+      "firebase",
+      "jotai",
+      "socket.io-client",
+      "uqr",
+      "vite-plugin-html"
     ],
     "preferredLibraries": [
       "react-dom",
       "@sentry/browser",
       "i18next-browser-languagedetector",
       "react",
-      "firebase",
-      "socket.io-client",
-      "uqr",
-      "vite-plugin-html",
       "callsites",
       "idb-keyval"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/vite/excalidraw--excalidraw/audit.json",
       "sha256": "e8ed85f6e38575c0bfb45b4c2474ebea4ace2af5c1a1a215078dcec0cc985eb3",
-      "retainedUnobservedZeroPairLibraries": [
-        "firebase",
-        "socket.io-client",
-        "uqr",
-        "vite-plugin-html"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "vite/hoppscotch--hoppscotch": {
     "excludeLibraries": [
       "@fontsource-variable/inter",
       "@fontsource-variable/material-symbols-rounded",
       "@fontsource-variable/roboto-mono",
+      "@hoppscotch/common",
       "@hoppscotch/data",
       "@hoppscotch/kernel",
       "@hoppscotch/plugin-appload",
@@ -1874,7 +1801,6 @@
       "axios",
       "rxjs",
       "zod",
-      "@hoppscotch/common",
       "@tauri-apps/plugin-dialog",
       "@tauri-apps/plugin-fs",
       "@tauri-apps/plugin-shell",
@@ -1885,12 +1811,10 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/vite/hoppscotch--hoppscotch/audit.json",
       "sha256": "d4897d9756d5676f359e09c0f5b03338d1c02d75b105b11d8f81137d091bb502",
-      "retainedUnobservedZeroPairLibraries": [
-        "@hoppscotch/common"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "vite/immich-app--immich": {
     "excludeLibraries": [
@@ -1951,10 +1875,12 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "webpack/PanJiaChen--vue-element-admin": {
     "excludeLibraries": [
+      "clipboard",
+      "codemirror",
       "core-js",
       "driver.js",
       "dropzone",
@@ -1979,8 +1905,6 @@
       "element-ui",
       "vue",
       "vuex",
-      "clipboard",
-      "codemirror",
       "js-cookie",
       "nprogress",
       "screenfull"
@@ -1988,49 +1912,41 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/webpack/PanJiaChen--vue-element-admin/audit.json",
       "sha256": "4cbadd25726f340d19ce784b966ffd1b1cbbc3830c23407c5f88ba7e3c53a2c1",
-      "retainedUnobservedZeroPairLibraries": [
-        "clipboard",
-        "codemirror"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "webpack/bailicangdu--vue2-elm": {
     "excludeLibraries": [
-      "vuex"
-    ],
-    "preferredLibraries": [
       "better-scroll",
       "fastclick",
       "iscroll",
       "showdown",
+      "vuex"
+    ],
+    "preferredLibraries": [
       "vue",
       "vue-router"
     ],
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/webpack/bailicangdu--vue2-elm/audit.json",
       "sha256": "3a4233d6745c9eefac9bf741600094885f381235d47bc340f66d8e6b118971e6",
-      "retainedUnobservedZeroPairLibraries": [
-        "better-scroll",
-        "fastclick",
-        "iscroll",
-        "showdown"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "webpack/dair-ai--Prompt-Engineering-Guide": {
     "excludeLibraries": [
+      "@fortawesome/fontawesome-svg-core",
       "@fortawesome/free-solid-svg-icons",
+      "@fortawesome/react-fontawesome",
       "@napi-rs/simple-git",
-      "@svgr/webpack"
+      "@svgr/webpack",
+      "katex"
     ],
     "preferredLibraries": [
-      "@fortawesome/fontawesome-svg-core",
-      "@fortawesome/react-fontawesome",
-      "katex",
       "next",
       "nextra",
       "nextra-theme-docs",
@@ -2042,14 +1958,10 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/webpack/dair-ai--Prompt-Engineering-Guide/audit.json",
       "sha256": "aa75e4f843830a516796ab5b56c794f6692ec2f380439972cdc4d5a0e97aaff8",
-      "retainedUnobservedZeroPairLibraries": [
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "katex"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "webpack/dokploy--dokploy": {
     "excludeLibraries": [
@@ -2176,7 +2088,7 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "webpack/freeCodeCamp--freeCodeCamp": {
     "excludeLibraries": [
@@ -2284,10 +2196,14 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "webpack/supabase--supabase": {
     "excludeLibraries": [
+      "@bsmnt/scrollytelling",
+      "@code-hike/mdx",
+      "@codesandbox/sandpack-react",
+      "@hcaptcha/react-hcaptcha",
       "@mdx-js/mdx",
       "@mdx-js/react",
       "@next/bundle-analyzer",
@@ -2356,10 +2272,6 @@
       "mdast-util-from-markdown",
       "@sentry/nextjs",
       "typed.js",
-      "@bsmnt/scrollytelling",
-      "@code-hike/mdx",
-      "@codesandbox/sandpack-react",
-      "@hcaptcha/react-hcaptcha",
       "@heroicons/react",
       "@supabase/supabase-js",
       "class-variance-authority",
@@ -2373,15 +2285,10 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/webpack/supabase--supabase/audit.json",
       "sha256": "1017ba7d59d8d1c31f1a613136cfd12d130c2ff04b173e435ed03dadb1c47797",
-      "retainedUnobservedZeroPairLibraries": [
-        "@bsmnt/scrollytelling",
-        "@code-hike/mdx",
-        "@codesandbox/sandpack-react",
-        "@hcaptcha/react-hcaptcha"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "webpack/swagger-api--swagger-ui": {
     "excludeLibraries": [
@@ -2430,6 +2337,6 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   }
 }

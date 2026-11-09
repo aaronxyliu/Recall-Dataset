@@ -1,14 +1,14 @@
 {
   "pairDefinition": "reciprocal-body-mapped-v2",
   "evidence": {
-    "bodyToBodyPoints": 17212,
-    "ignoredBoundaryPoints": 7388,
-    "ignoredStructuralPoints": 18794,
-    "unresolvedBodyPoints": 22084,
+    "bodyToBodyPoints": 21070,
+    "ignoredBoundaryPoints": 8360,
+    "ignoredStructuralPoints": 21480,
+    "unresolvedBodyPoints": 23063,
     "acceptanceRules": {
-      "reciprocal-body": 194,
-      "reciprocal-body-and-full-span": 113,
-      "reciprocal-full-span": 2
+      "reciprocal-body": 309,
+      "reciprocal-body-and-full-span": 199,
+      "reciprocal-full-span": 6
     }
   },
   "repo": "shadcn-ui/ui",
@@ -22,11 +22,131 @@
     "@formisch/react": 1,
     "@internationalized/date": 0,
     "@tanstack/ai": 10,
-    "@ai-sdk/anthropic": 0,
-    "@ai-sdk/openai": 0,
-    "@faker-js/faker": 0
+    "@tanstack/ai-client": 14,
+    "@tanstack/ai-react": 5,
+    "@tanstack/react-form": 3
   },
   "pairs": [
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useField.tsx#9168d429ba7a69d392abe222a78f186f809f2f87c48461ad2437a24032016e78@17958-20651",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32117-32479",
+      "distinctOriginalPositions": 13,
+      "distinctGeneratedPositions": 23,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 15,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useField.tsx#9168d429ba7a69d392abe222a78f186f809f2f87c48461ad2437a24032016e78@4360-7587",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32145-32373",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 14,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useField.tsx#9168d429ba7a69d392abe222a78f186f809f2f87c48461ad2437a24032016e78@6479-7028",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32179-32247",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useField.tsx#9168d429ba7a69d392abe222a78f186f809f2f87c48461ad2437a24032016e78@7296-7333",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32273-32290",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useField.tsx#9168d429ba7a69d392abe222a78f186f809f2f87c48461ad2437a24032016e78@7402-7543",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32319-32362",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useField.tsx#9168d429ba7a69d392abe222a78f186f809f2f87c48461ad2437a24032016e78@20110-20159",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32393-32403",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useForm.tsx#2c654875845021e972d035a10d3c496f772559611fbf87d1014a373c8828d3e0@4066-4312",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32480-32548",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 17,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useForm.tsx#2c654875845021e972d035a10d3c496f772559611fbf87d1014a373c8828d3e0@4579-6762",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32559-32815",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 14,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 10,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useForm.tsx#2c654875845021e972d035a10d3c496f772559611fbf87d1014a373c8828d3e0@5538-6447",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32593-32769",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useForm.tsx#2c654875845021e972d035a10d3c496f772559611fbf87d1014a373c8828d3e0@6123-6200",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32628-32673",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useForm.tsx#2c654875845021e972d035a10d3c496f772559611fbf87d1014a373c8828d3e0@6230-6419",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32686-32766",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 14,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 10,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-form@1.20.0_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@tanstack/react-form/src/useForm.tsx#2c654875845021e972d035a10d3c496f772559611fbf87d1014a373c8828d3e0@6705-6741",
+      "bundled": "<local>/_next/static/chunks/01g6gzgp6sv-s.js#5fc5ec3b4db1a91bd45146a31020e609bd2660410a97fb3492aabc9305e49fe0@32794-32811",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 2,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body"
+    },
     {
       "library": "@dnd-kit/core",
       "source": "turbopack:///[project]/node_modules/.pnpm/@dnd-kit+core@6.3.1_react-dom@19.2.3_react@19.2.3__react@19.2.3/node_modules/@dnd-kit/core/src/components/Accessibility/defaults.ts#296b46d0f5970a8f630522b43b236343aee8b7688e288d402aae4b31e3b22579@930-1037",
@@ -2299,6 +2419,16 @@
     },
     {
       "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/messages.ts#1bf0694500f85bbcca0ebdbfa57eea61f3eb11baadff416261974ee02d83ac53@1178-1493",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@904-1008",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai",
       "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/messages.ts#1bf0694500f85bbcca0ebdbfa57eea61f3eb11baadff416261974ee02d83ac53@1419-1435",
       "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@977-989",
       "distinctOriginalPositions": 2,
@@ -2399,6 +2529,16 @@
     },
     {
       "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/message-updaters.ts#5d0fe9853c58acd42ed322b98aa39d6cbbf28876bf1946668dffd6bc7f7a54fe@5494-5947",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@3534-3712",
+      "distinctOriginalPositions": 11,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 13,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai",
       "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/message-updaters.ts#5d0fe9853c58acd42ed322b98aa39d6cbbf28876bf1946668dffd6bc7f7a54fe@5581-5652",
       "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@3566-3599",
       "distinctOriginalPositions": 4,
@@ -2465,6 +2605,16 @@
       "distinctGeneratedPositions": 9,
       "bodyOriginalPositions": 2,
       "bodyGeneratedPositions": 7,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/processor.ts#36c957c3ceba8402c0353fc0e0c4ff666d7f04b2631d8b2480724ab1d34b4f18@5443-5862",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@4668-4881",
+      "distinctOriginalPositions": 12,
+      "distinctGeneratedPositions": 19,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 15,
       "evidenceRule": "reciprocal-body"
     },
     {
@@ -2549,6 +2699,16 @@
     },
     {
       "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/processor.ts#36c957c3ceba8402c0353fc0e0c4ff666d7f04b2631d8b2480724ab1d34b4f18@11597-11649",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@8272-8297",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai",
       "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/processor.ts#36c957c3ceba8402c0353fc0e0c4ff666d7f04b2631d8b2480724ab1d34b4f18@11664-11683",
       "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@8303-8318",
       "distinctOriginalPositions": 4,
@@ -2609,6 +2769,16 @@
     },
     {
       "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/processor.ts#36c957c3ceba8402c0353fc0e0c4ff666d7f04b2631d8b2480724ab1d34b4f18@20571-20941",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@11389-11557",
+      "distinctOriginalPositions": 18,
+      "distinctGeneratedPositions": 19,
+      "bodyOriginalPositions": 16,
+      "bodyGeneratedPositions": 17,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai",
       "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/processor.ts#36c957c3ceba8402c0353fc0e0c4ff666d7f04b2631d8b2480724ab1d34b4f18@22186-22213",
       "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@11793-11804",
       "distinctOriginalPositions": 5,
@@ -2616,6 +2786,16 @@
       "bodyOriginalPositions": 3,
       "bodyGeneratedPositions": 4,
       "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/processor.ts#36c957c3ceba8402c0353fc0e0c4ff666d7f04b2631d8b2480724ab1d34b4f18@23736-26613",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@12366-13430",
+      "distinctOriginalPositions": 104,
+      "distinctGeneratedPositions": 120,
+      "bodyOriginalPositions": 100,
+      "bodyGeneratedPositions": 115,
+      "evidenceRule": "reciprocal-body"
     },
     {
       "library": "@tanstack/ai",
@@ -2766,6 +2946,26 @@
       "bodyOriginalPositions": 29,
       "bodyGeneratedPositions": 34,
       "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/processor.ts#36c957c3ceba8402c0353fc0e0c4ff666d7f04b2631d8b2480724ab1d34b4f18@52088-54568",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@20411-21377",
+      "distinctOriginalPositions": 119,
+      "distinctGeneratedPositions": 138,
+      "bodyOriginalPositions": 115,
+      "bodyGeneratedPositions": 133,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/processor.ts#36c957c3ceba8402c0353fc0e0c4ff666d7f04b2631d8b2480724ab1d34b4f18@54782-55792",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@21377-21937",
+      "distinctOriginalPositions": 62,
+      "distinctGeneratedPositions": 73,
+      "bodyOriginalPositions": 58,
+      "bodyGeneratedPositions": 68,
+      "evidenceRule": "reciprocal-body"
     },
     {
       "library": "@tanstack/ai",
@@ -3079,6 +3279,16 @@
     },
     {
       "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/tools/schema-converter.ts#0492a1f704e4bbe42f30167c94b21847be51674be4dce6c014534980b8c56dee@1780-2353",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@29247-29518",
+      "distinctOriginalPositions": 24,
+      "distinctGeneratedPositions": 27,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 27,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai",
       "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/tools/schema-converter.ts#0492a1f704e4bbe42f30167c94b21847be51674be4dce6c014534980b8c56dee@2546-2957",
       "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@29518-29746",
       "distinctOriginalPositions": 24,
@@ -3099,6 +3309,1806 @@
     },
     {
       "library": "@tanstack/ai",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/tools/schema-converter.ts#0492a1f704e4bbe42f30167c94b21847be51674be4dce6c014534980b8c56dee@15311-15350",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@31694-31727",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@1834-1940",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@36842-36915",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@2533-2910",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@37078-37225",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 14,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@3011-3300",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@37225-37338",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@4116-4560",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@37577-37777",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 7,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@4282-4312",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@37621-37639",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@4325-4347",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@37645-37657",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@4824-5678",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@37777-38086",
+      "distinctOriginalPositions": 17,
+      "distinctGeneratedPositions": 22,
+      "bodyOriginalPositions": 16,
+      "bodyGeneratedPositions": 19,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@5086-5116",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@37830-37848",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@5135-5196",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@37854-37866",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@5875-5933",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@38153-38196",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@5982-6057",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@38196-38256",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 2,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@6107-6392",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@38256-38368",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 16,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/events.ts#c9fed6d11236b08cfa37719b7627cfb9bca37996cfa3900c99510e6023cf98ab@6448-6724",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@38368-38486",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@1015-1189",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@41702-41777",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@2068-2353",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@41936-42090",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/response-stream.ts#07e79e2a6511db1ee58c5a49b708a5f49585fed6312b719eb8ed0a60becc45a9@1210-1426",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@42122-42239",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@4504-5888",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@42471-43302",
+      "distinctOriginalPositions": 27,
+      "distinctGeneratedPositions": 49,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 44,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/sse-utils.ts#59372ff93437565e87bfd0d634e971e731eac21cb335a78997f4455c4c34c162@7-196",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@42865-42967",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@8518-8767",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@43712-43775",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@9218-9887",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@43833-44059",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 12,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@9603-9721",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@43958-44001",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@29806-30524",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@44729-45002",
+      "distinctOriginalPositions": 28,
+      "distinctGeneratedPositions": 32,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 26,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@30075-30232",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@44817-44889",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@30146-30193",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@44848-44877",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@464-645",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@45002-45091",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@647-824",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@45091-45177",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@3225-3442",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@45497-45566",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@3592-4218",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@45566-45742",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@3912-4104",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@45653-45726",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@4452-4876",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@45742-45967",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@4955-5166",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@45967-46088",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@5035-5161",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@46018-46086",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@5170-6118",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@46088-46401",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 27,
+      "bodyOriginalPositions": 13,
+      "bodyGeneratedPositions": 25,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@5900-6006",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@46346-46390",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@8665-8932",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@47325-47515",
+      "distinctOriginalPositions": 13,
+      "distinctGeneratedPositions": 19,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 16,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@9017-9121",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@47515-47598",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@9978-10278",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@47856-47970",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@10282-10966",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@47970-48382",
+      "distinctOriginalPositions": 34,
+      "distinctGeneratedPositions": 40,
+      "bodyOriginalPositions": 32,
+      "bodyGeneratedPositions": 37,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@1894-2364",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@48383-48995",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@28711-29574",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@48538-48920",
+      "distinctOriginalPositions": 37,
+      "distinctGeneratedPositions": 40,
+      "bodyOriginalPositions": 30,
+      "bodyGeneratedPositions": 29,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@8914-9078",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@51053-51144",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@10020-10089",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@51515-51545",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@10113-10334",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@51559-51639",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@10362-10673",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@51657-51748",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@11907-12775",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@52364-52588",
+      "distinctOriginalPositions": 18,
+      "distinctGeneratedPositions": 20,
+      "bodyOriginalPositions": 14,
+      "bodyGeneratedPositions": 16,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@12279-12377",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@52445-52478",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@12797-15160",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@52600-53291",
+      "distinctOriginalPositions": 22,
+      "distinctGeneratedPositions": 23,
+      "bodyOriginalPositions": 20,
+      "bodyGeneratedPositions": 21,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@15791-15991",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@53526-53583",
+      "distinctOriginalPositions": 11,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@16069-16256",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@53619-53755",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@17729-17863",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@54451-54541",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@17867-18049",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@54541-54649",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 7,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@18053-18224",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@54649-54755",
+      "distinctOriginalPositions": 12,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@18228-18427",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@54755-54879",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@18637-18907",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55015-55184",
+      "distinctOriginalPositions": 12,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 10,
+      "bodyGeneratedPositions": 13,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@19061-19242",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55296-55407",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 17,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@19246-20209",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55407-55944",
+      "distinctOriginalPositions": 32,
+      "distinctGeneratedPositions": 36,
+      "bodyOriginalPositions": 28,
+      "bodyGeneratedPositions": 31,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@19748-19780",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55670-55700",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@19798-19840",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55710-55750",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@19861-19895",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55763-55795",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@19916-20002",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55808-55842",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@20025-20137",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55857-55903",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@20157-20198",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55915-55942",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@20213-20643",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@55944-56254",
+      "distinctOriginalPositions": 20,
+      "distinctGeneratedPositions": 25,
+      "bodyOriginalPositions": 19,
+      "bodyGeneratedPositions": 24,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@20647-21039",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@56254-56387",
+      "distinctOriginalPositions": 11,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@20858-20964",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@56340-56373",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@21180-21284",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@56491-56566",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@21684-22277",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@56787-57073",
+      "distinctOriginalPositions": 29,
+      "distinctGeneratedPositions": 33,
+      "bodyOriginalPositions": 26,
+      "bodyGeneratedPositions": 29,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@22338-23360",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@57073-57650",
+      "distinctOriginalPositions": 13,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 13,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@22917-23355",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@57425-57648",
+      "distinctOriginalPositions": 19,
+      "distinctGeneratedPositions": 23,
+      "bodyOriginalPositions": 17,
+      "bodyGeneratedPositions": 21,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@24841-24876",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@58161-58179",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@24968-25240",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@58182-58353",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 17,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 14,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@25376-25616",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@58353-58448",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@25552-25611",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@58417-58446",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@26970-27731",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@58448-58730",
+      "distinctOriginalPositions": 34,
+      "distinctGeneratedPositions": 41,
+      "bodyOriginalPositions": 30,
+      "bodyGeneratedPositions": 35,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@27857-28125",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@58730-58827",
+      "distinctOriginalPositions": 16,
+      "distinctGeneratedPositions": 17,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@29080-29137",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@59189-59227",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@33426-33633",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@60289-60391",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 13,
+      "bodyGeneratedPositions": 14,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@38763-39109",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@62131-62333",
+      "distinctOriginalPositions": 22,
+      "distinctGeneratedPositions": 26,
+      "bodyOriginalPositions": 18,
+      "bodyGeneratedPositions": 21,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@39242-39476",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@62333-62511",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@39531-40196",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@62511-62805",
+      "distinctOriginalPositions": 27,
+      "distinctGeneratedPositions": 32,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 28,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@39749-39773",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@62606-62624",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@40241-40466",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@62805-62948",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@41310-41506",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@63392-63504",
+      "distinctOriginalPositions": 13,
+      "distinctGeneratedPositions": 17,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@41510-42903",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@63504-64028",
+      "distinctOriginalPositions": 53,
+      "distinctGeneratedPositions": 63,
+      "bodyOriginalPositions": 46,
+      "bodyGeneratedPositions": 53,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@42807-42840",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@63961-63992",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@43234-44344",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@64357-64784",
+      "distinctOriginalPositions": 38,
+      "distinctGeneratedPositions": 38,
+      "bodyOriginalPositions": 34,
+      "bodyGeneratedPositions": 33,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@43596-43701",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@64458-64504",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@44248-44281",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@64717-64748",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@44426-44536",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@64784-64840",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@44606-44935",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@64840-65004",
+      "distinctOriginalPositions": 17,
+      "distinctGeneratedPositions": 20,
+      "bodyOriginalPositions": 13,
+      "bodyGeneratedPositions": 16,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@45013-46068",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65004-65368",
+      "distinctOriginalPositions": 22,
+      "distinctGeneratedPositions": 30,
+      "bodyOriginalPositions": 21,
+      "bodyGeneratedPositions": 27,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@46422-46462",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65429-65452",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@46743-46856",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65543-65593",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@46895-46950",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65593-65630",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@46990-47047",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65630-65661",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@47112-47173",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65661-65704",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@47234-47312",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65704-65755",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@47604-47675",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65755-65808",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@47714-47771",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65808-65837",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@47814-47961",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65837-65925",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@48280-50948",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@65925-67328",
+      "distinctOriginalPositions": 126,
+      "distinctGeneratedPositions": 172,
+      "bodyOriginalPositions": 122,
+      "bodyGeneratedPositions": 167,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/chat-client.ts#a9bde0fd97be9eaaf38cb228848c3b716d998489c701a66ae1254a8c5da77e2e@50952-51063",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@67328-67411",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@9828-10230",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@67475-67559",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@10685-10966",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@67805-67988",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@10970-11209",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@67988-68135",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@11213-11822",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@68135-68311",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 7,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@11826-12598",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@68311-68752",
+      "distinctOriginalPositions": 13,
+      "distinctGeneratedPositions": 16,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 15,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@11997-12426",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@68434-68640",
+      "distinctOriginalPositions": 19,
+      "distinctGeneratedPositions": 25,
+      "bodyOriginalPositions": 16,
+      "bodyGeneratedPositions": 23,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@12602-13014",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@68752-68909",
+      "distinctOriginalPositions": 12,
+      "distinctGeneratedPositions": 16,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@13321-13463",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@69045-69128",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@13865-14009",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@69326-69404",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@14013-14236",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@69404-69524",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@15038-15110",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@69917-69952",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@15134-15513",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@69956-70147",
+      "distinctOriginalPositions": 11,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@15517-15782",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@70147-70266",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@15786-16181",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@70266-70439",
+      "distinctOriginalPositions": 18,
+      "distinctGeneratedPositions": 30,
+      "bodyOriginalPositions": 16,
+      "bodyGeneratedPositions": 26,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@16185-16880",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@70439-70730",
+      "distinctOriginalPositions": 26,
+      "distinctGeneratedPositions": 40,
+      "bodyOriginalPositions": 21,
+      "bodyGeneratedPositions": 29,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@16884-17360",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@70730-71070",
+      "distinctOriginalPositions": 31,
+      "distinctGeneratedPositions": 37,
+      "bodyOriginalPositions": 28,
+      "bodyGeneratedPositions": 34,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@18918-18957",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71264-71287",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@18736-19234",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71220-71345",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@19317-19469",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71345-71415",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@19681-19772",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71415-71458",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@19776-19963",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71458-71574",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@20058-20131",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71642-71691",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@20135-20202",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71691-71734",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@20206-20357",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71734-71838",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 12,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 10,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@20552-20725",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@71838-71944",
+      "distinctOriginalPositions": 11,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@21359-21603",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@72260-72405",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 17,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 14,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@21607-21757",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@72405-72505",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@22504-23689",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@72716-73410",
+      "distinctOriginalPositions": 79,
+      "distinctGeneratedPositions": 97,
+      "bodyOriginalPositions": 74,
+      "bodyGeneratedPositions": 91,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@23693-25822",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@73410-74572",
+      "distinctOriginalPositions": 95,
+      "distinctGeneratedPositions": 114,
+      "bodyOriginalPositions": 89,
+      "bodyGeneratedPositions": 104,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@25826-26963",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@74572-75197",
+      "distinctOriginalPositions": 75,
+      "distinctGeneratedPositions": 91,
+      "bodyOriginalPositions": 71,
+      "bodyGeneratedPositions": 86,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@28624-28676",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@75866-76127",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@28692-28736",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@76136-76142",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@32498-33462",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@76189-76754",
+      "distinctOriginalPositions": 33,
+      "distinctGeneratedPositions": 39,
+      "bodyOriginalPositions": 29,
+      "bodyGeneratedPositions": 34,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@32750-32916",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@76267-76330",
+      "distinctOriginalPositions": 12,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 10,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@33197-33378",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@76659-76728",
+      "distinctOriginalPositions": 12,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 10,
+      "bodyGeneratedPositions": 14,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@32392-32427",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@76884-76907",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@29881-30159",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@77231-77336",
+      "distinctOriginalPositions": 13,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@30031-30068",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@77278-77289",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@33576-33793",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@77401-77491",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@30774-30898",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@77645-77695",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@46166-46300",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@78089-78162",
+      "distinctOriginalPositions": 12,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@46383-46691",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@78162-78269",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 20,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 10,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@46695-47044",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@78269-78388",
+      "distinctOriginalPositions": 14,
+      "distinctGeneratedPositions": 24,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@47048-47383",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@78388-78499",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 19,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 10,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@47387-47819",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@78499-78636",
+      "distinctOriginalPositions": 20,
+      "distinctGeneratedPositions": 32,
+      "bodyOriginalPositions": 10,
+      "bodyGeneratedPositions": 15,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@47823-48353",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@78636-78777",
+      "distinctOriginalPositions": 19,
+      "distinctGeneratedPositions": 25,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@48357-48802",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@78777-78914",
+      "distinctOriginalPositions": 25,
+      "distinctGeneratedPositions": 32,
+      "bodyOriginalPositions": 15,
+      "bodyGeneratedPositions": 15,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@48806-49144",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@78914-79032",
+      "distinctOriginalPositions": 20,
+      "distinctGeneratedPositions": 24,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@49148-49477",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@79032-79158",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 21,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 10,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@49560-49689",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@79158-79215",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@49692-49804",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@79215-79274",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@49807-49913",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@79274-79329",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@49916-50029",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@79329-79376",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@50106-50193",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@79419-79478",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@50196-50393",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@79478-79535",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@50591-50730",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@79603-79635",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@3814-3949",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@88840-88885",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@3966-4100",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@88894-88936",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@4118-4263",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@88946-88989",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@4280-4408",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@88998-89040",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 2,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@4528-4693",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@89092-89150",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 7,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@5799-5935",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@89502-89526",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@6033-6182",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@89573-89620",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@6474-6534",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@89643-89679",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@6573-6709",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@89709-89792",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@6758-6867",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@89832-89888",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@6907-6973",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@89919-89961",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@7015-7121",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@89994-90036",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@7160-8010",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@90066-90288",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@7445-7607",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@90179-90231",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@7387-8006",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@90153-90287",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@8211-8298",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@90379-90407",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 2,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@8591-8687",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@90571-90600",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 2,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@8749-8961",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@90627-90662",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 3,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@9033-9148",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@90689-90734",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 3,
+      "bodyGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@10545-10712",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@91261-91291",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-react@0.16.4_@opentelemetry+api@1.9.0_@tanstack+ai@0.40.0_@opentelemetry+a_6beaf57df1d2d625aa438d0dabfc320d/node_modules/@tanstack/ai-react/src/use-chat.ts#6e338bb4e376e4be06f73e43dcdc6e14c6e957616afe6c4214482a3798abea32@10777-10937",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@91318-91358",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "@tanstack/ai",
       "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai@0.40.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai/src/activities/chat/stream/message-updaters.ts#5d0fe9853c58acd42ed322b98aa39d6cbbf28876bf1946668dffd6bc7f7a54fe@1378-2915",
       "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@2852-3243",
       "distinctOriginalPositions": 3,
@@ -3112,17 +5122,49 @@
       "distinctOriginalPositions": 3,
       "distinctGeneratedPositions": 6,
       "evidenceRule": "reciprocal-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools-noop.ts#4d77aeb25b51ef0a8de457ad56b328f8fba1a8a8e5ae0c8fe0eaa49074020956@2706-2759",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@39717-39740",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/connection-adapters.ts#bd37bb0714135b26069e249d4fcf87ec6b18874d783b2d8f8fdad1c97744699d@8784-9896",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@43782-44062",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/client-persistor.ts#ff896571165aaf71127b44d42983463b4f309b769ff2e888526cb7749ed13d30@8500-8576",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@47282-47325",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-full-span"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+ai-client@0.20.0_@opentelemetry+api@1.9.0/node_modules/@tanstack/ai-client/src/devtools.ts#891186c02f6806c4b7c8bce472ea9939504ea3b6ec6f11dc30c1711eed731b67@14841-14900",
+      "bundled": "<local>/_next/static/chunks/0vf_jui56u-j6.js#6b7b122e89db426e5d4d7186205895b9a3606eaf22395a6ae65d48c6f43ff243@69793-69824",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-full-span"
     }
   ],
   "observedSplit": {
-    "count": 88,
-    "denominator": 518,
-    "percent": 16.98841698841699
+    "count": 111,
+    "denominator": 797,
+    "percent": 13.927227101631116
   },
   "observedCombine": {
-    "count": 84,
-    "denominator": 503,
-    "percent": 16.69980119284294
+    "count": 129,
+    "denominator": 752,
+    "percent": 17.154255319148938
   },
   "removePercent": null,
   "createPercent": null,
@@ -3138,13 +5180,13 @@
     }
   ],
   "sourceFunctionAccounting": {
-    "total": 1011,
-    "oneToOne": 309,
-    "multipleTargets": 88,
-    "multipleContributors": 83,
-    "unresolvedBody": 39,
-    "insufficientEvidence": 1,
-    "noBodyEdge": 491
+    "total": 1611,
+    "oneToOne": 514,
+    "multipleTargets": 111,
+    "multipleContributors": 139,
+    "unresolvedBody": 30,
+    "insufficientEvidence": 8,
+    "noBodyEdge": 809
   },
   "relationshipCaution": "Mapping multiplicity is positional provenance, not proof of semantic splitting or combining.",
   "capture": {
@@ -6252,22 +8294,18 @@
     "commit": "d549251bab2e57dbf72f7c909d6458c02c43f529"
   },
   "selectedLibraries": [
-    "@ai-sdk/anthropic",
-    "@ai-sdk/openai",
     "@ai-sdk/react",
     "@dnd-kit/core",
     "@dnd-kit/modifiers",
     "@dnd-kit/sortable",
-    "@faker-js/faker",
     "@formisch/react",
     "@internationalized/date",
-    "@tanstack/ai"
+    "@tanstack/ai",
+    "@tanstack/ai-client",
+    "@tanstack/ai-react",
+    "@tanstack/react-form"
   ],
-  "unscoredLibraries": [
-    "@ai-sdk/anthropic",
-    "@ai-sdk/openai",
-    "@faker-js/faker"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -6297,12 +8335,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "d549251bab2e57dbf72f7c909d6458c02c43f529",
@@ -6310,9 +8349,9 @@
     "archiveRecordSHA256": "0c0b1700e5d6c7726dfe3732f4e87609c8d5b58bbd8df691c6f4538840e4c19e",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "887230c4b98d85266afc17b0f323cb54ba9fbbd8cf924c4bee9bbcaf3c974493",
+    "sourceOwnershipSHA256": "bd17b84a708b890c83a690043ee2d04705fa40798dd1cef7678017305962b4bf",
     "moduleScopeSHA256": "e20afb2e9c666d4a0a20bff01b4c70ebea06874ba25f271a50bedc79f620eb6a",
-    "duplicateAuditSHA256": "70190dfd533c42be6844273f7893892865fe635687b1ae12872fee232e62d048"
+    "duplicateAuditSHA256": "01289f54d3a2ef7949207ac893b33b7e80c5a6de6e0e4d6adbe0343f322a5a7f"
   },
   "evaluationLibraries": [
     "@ai-sdk/react",
@@ -6321,6 +8360,9 @@
     "@dnd-kit/sortable",
     "@formisch/react",
     "@internationalized/date",
-    "@tanstack/ai"
+    "@tanstack/ai",
+    "@tanstack/ai-client",
+    "@tanstack/ai-react",
+    "@tanstack/react-form"
   ]
 }

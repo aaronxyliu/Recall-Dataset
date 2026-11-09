@@ -18,11 +18,7 @@
     "react-dom": 4,
     "@sentry/browser": 15,
     "i18next-browser-languagedetector": 1,
-    "react": 4,
-    "firebase": 0,
-    "socket.io-client": 0,
-    "uqr": 0,
-    "vite-plugin-html": 0
+    "react": 4
   },
   "pairs": [
     {
@@ -8333,18 +8329,9 @@
     "react-dom",
     "@sentry/browser",
     "i18next-browser-languagedetector",
-    "react",
-    "firebase",
-    "socket.io-client",
-    "uqr",
-    "vite-plugin-html"
+    "react"
   ],
-  "unscoredLibraries": [
-    "firebase",
-    "socket.io-client",
-    "uqr",
-    "vite-plugin-html"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -8374,12 +8361,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
@@ -8387,9 +8375,9 @@
     "archiveRecordSHA256": "0f6a291637f75436cda88a6ed0f6575632f96fd0239084ed79ba85cf0ef39424",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "f4df13d8def96e13c674b87165ee7e2561a14d501a6d1bfbf0b2914cf8ea15cb",
+    "sourceOwnershipSHA256": "31527d6a486c23dc39eec82aab9186b7edf0ecc380cb51dab26f779a5547859b",
     "moduleScopeSHA256": "09c8bb599dcea3ae2c8b5ec7c4e0cc021f27bd69a98c621a21dde556b846824e",
-    "duplicateAuditSHA256": "1fd1cfd03c0e23be7f293798d31b43084d0a78b3464e448bf3deb0ce3d8eb596"
+    "duplicateAuditSHA256": "d723efc1f035c0eb48ba7f8fbe983d9be88fd25a16e9c09f7b8a753d27f14693"
   },
   "evaluationLibraries": [
     "react-dom",

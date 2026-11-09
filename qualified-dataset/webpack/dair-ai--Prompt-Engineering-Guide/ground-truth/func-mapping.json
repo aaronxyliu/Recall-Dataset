@@ -19,10 +19,7 @@
     "nextra": 36,
     "nextra-theme-docs": 1,
     "react": 4,
-    "react-dom": 3,
-    "@fortawesome/fontawesome-svg-core": 0,
-    "@fortawesome/react-fontawesome": 0,
-    "katex": 0
+    "react-dom": 3
   },
   "pairs": [
     {
@@ -14707,20 +14704,13 @@
     "imageID": "sha256:762d82fcf838c12afddeca97b5271468ad1ee5e37c74d73f448e9848ad6a1a18"
   },
   "selectedLibraries": [
-    "@fortawesome/fontawesome-svg-core",
-    "@fortawesome/react-fontawesome",
-    "katex",
     "next",
     "nextra",
     "nextra-theme-docs",
     "react",
     "react-dom"
   ],
-  "unscoredLibraries": [
-    "@fortawesome/fontawesome-svg-core",
-    "@fortawesome/react-fontawesome",
-    "katex"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -14750,12 +14740,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
@@ -14763,9 +14754,9 @@
     "archiveRecordSHA256": "370d630b8c212133771eb2cc7b1092340028025106c8bdf28d726f6d47ee6147",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "bbad5b4dca2fda2ecf99ef3cd4459d6f8d772bce891847150b7d61138f9e6d20",
+    "sourceOwnershipSHA256": "1f6c047258c567622eb701f12dbd699bc13926e9d556301bf36b46374b60021a",
     "moduleScopeSHA256": "4fbc85cae71d40a84d59577794e67d22033715554be595ef54df04592a9188a4",
-    "duplicateAuditSHA256": "7d3f52bf9787a6ec8cce0cb192e59749d0f2984ca4945b6738d031b5420c3388"
+    "duplicateAuditSHA256": "cc8c2c004513a9f18aeeb6236fd331e06b56144fafdd0c32ed821e6874f54092"
   },
   "evaluationLibraries": [
     "next",

@@ -17,8 +17,11 @@
   "selectionOverride": {
     "excludeLibraries": [
       "@radix-ui/react-accordion",
+      "@vercel/og",
       "fumadocs-core",
+      "fumadocs-mdx",
       "fumadocs-ui",
+      "gray-matter",
       "lucide-react",
       "next",
       "react-tweet",
@@ -30,9 +33,6 @@
     "preferredLibraries": [
       "@inkeep/cxkit-react",
       "@vercel/analytics",
-      "@vercel/og",
-      "fumadocs-mdx",
-      "gray-matter",
       "react",
       "react-dom",
       "remark-gfm"
@@ -40,21 +40,14 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/turbopack/colinhacks--zod/audit.json",
       "sha256": "045a49ca61afffc5ba5879153854b7512084f54bf61b20bc2b35836eef3c6086",
-      "retainedUnobservedZeroPairLibraries": [
-        "@vercel/og",
-        "fumadocs-mdx",
-        "gray-matter"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "candidates": [
     "@inkeep/cxkit-react",
     "@vercel/analytics",
-    "@vercel/og",
-    "fumadocs-mdx",
-    "gray-matter",
     "react",
     "react-dom",
     "remark-gfm"
@@ -249,297 +242,6 @@
         {
           "path": "licenses/LICENSE",
           "sha256": "4b89d4518bd135ab4ee154a7bce722246b57a98c3d7efc1a09409898160c2bd1"
-        }
-      ],
-      "lockfileSHA256": "bec0555747ce12585fee24b9e8fe1b27562fd164d9dd4d6403ce684e8f2d2dbd",
-      "lockfileSnapshot": "lockfiles/bec0555747ce12585fee24b9e8fe1b27562fd164d9dd4d6403ce684e8f2d2dbd-pnpm-lock.yaml"
-    },
-    {
-      "library": "@vercel/og",
-      "declaredVersion": "^0.6.8",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@vercel/og",
-        "version": "0.6.8",
-        "integrity": "sha512-e4kQK9mP8ntpo3dACWirGod/hHv4qO5JMj9a/0a2AZto7b4persj5YP7t1Er372gTtYFTYxNhMx34jRvHooglw==",
-        "shasum": "9286e71ad33f4745916420efdac7ba407fb89a6f",
-        "tarballSHA256": "c9e8d35afd63416e57cb123551792be688397ed9a7af51bbe9f0b43fd06a8552",
-        "bytes": 1606560,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 13,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/index.edge.js",
-          "source": "source-js/ebe4d5c39b21c2de0b1c1b017baf306f581594a794b6aa4284781a6ebf11d42d.js",
-          "sourceSHA256": "ebe4d5c39b21c2de0b1c1b017baf306f581594a794b6aa4284781a6ebf11d42d",
-          "span": [
-            2641,
-            3239
-          ],
-          "name": "tinf_build_fixed_trees",
-          "normalizedASTSHA256": "86eeb898df353b8f4d2eb0905c690e04ad8125b773d58a0ca3aba97d4de3870e",
-          "codeSHA256": "44ddfb98c081dcd3591e704f80fafe1cabad2cd020c0560de6b8fd6d0584bbea",
-          "features": {
-            "propertyOperations": 22,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "d686d64f712fa97c",
-            "graphNodes": 26,
-            "graphEdges": 31,
-            "graphOperationOccurrences": 22,
-            "distinctGraphOperationPropertyPairs": 3,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.edge.js",
-          "source": "source-js/ebe4d5c39b21c2de0b1c1b017baf306f581594a794b6aa4284781a6ebf11d42d.js",
-          "sourceSHA256": "ebe4d5c39b21c2de0b1c1b017baf306f581594a794b6aa4284781a6ebf11d42d",
-          "span": [
-            3280,
-            3723
-          ],
-          "name": "tinf_build_tree",
-          "normalizedASTSHA256": "7366f5cbd23d6aeb3779220e7fb382cbea20e859edc45b3859496772e4dcb71b",
-          "codeSHA256": "3f3509c8512ba4cdd4231aa08deac3a40814df5bebb8a4d456f955d910fd2367",
-          "features": {
-            "propertyOperations": 15,
-            "distinctOperationPropertyPairs": 6,
-            "pogHash": "ff322b601d7d76eb",
-            "graphNodes": 18,
-            "graphEdges": 21,
-            "graphOperationOccurrences": 20,
-            "distinctGraphOperationPropertyPairs": 4,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.edge.js",
-          "source": "source-js/ebe4d5c39b21c2de0b1c1b017baf306f581594a794b6aa4284781a6ebf11d42d.js",
-          "sourceSHA256": "ebe4d5c39b21c2de0b1c1b017baf306f581594a794b6aa4284781a6ebf11d42d",
-          "span": [
-            3939,
-            4270
-          ],
-          "name": "tinf_read_bits",
-          "normalizedASTSHA256": "4690207fa6e98e88c034791b3629762761070fa2f5269d6a82beec7672fc59ec",
-          "codeSHA256": "a7a63c4f8f5c382192f591a9438f0453075022b3bc239fbc02f14170f0b461a6",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "d1b5eea09915416d",
-            "graphNodes": 8,
-            "graphEdges": 8,
-            "graphOperationOccurrences": 11,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/5d250d2a48cac1ad1324",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "1f256ecad192880510e84ad60474eab7589218784b9a50bc7ceee34c2b91f1d5"
-        }
-      ],
-      "lockfileSHA256": "bec0555747ce12585fee24b9e8fe1b27562fd164d9dd4d6403ce684e8f2d2dbd",
-      "lockfileSnapshot": "lockfiles/bec0555747ce12585fee24b9e8fe1b27562fd164d9dd4d6403ce684e8f2d2dbd-pnpm-lock.yaml"
-    },
-    {
-      "library": "fumadocs-mdx",
-      "declaredVersion": "11.5.6",
-      "origin": {
-        "kind": "npm-package",
-        "name": "fumadocs-mdx",
-        "version": "11.5.6",
-        "integrity": "sha512-XhzfR7WsI4qO9EdmRZQc/mRxMkSY2HQ7Fg2fv7ia4R3LN0Km7X8KSEry9lU2c0XmSHcospniW5o1FFgsAq4+mQ==",
-        "shasum": "0942d8bde4acea36d6a407a0eca8de24a4be574f",
-        "tarballSHA256": "b167c0a3aed0ab4f72f6c1004e05ab0847eee7dde70e83844e6008bedb9af422",
-        "bytes": 25700,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 4,
-      "parsedFunctions": 21,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/chunk-IOENRFUX.js",
-          "source": "source-js/5c0d5e63c6587ed5b66d3747903582a50fc1e40af578dbc92fd5f504b4395f55.js",
-          "sourceSHA256": "5c0d5e63c6587ed5b66d3747903582a50fc1e40af578dbc92fd5f504b4395f55",
-          "span": [
-            404,
-            1136
-          ],
-          "name": "getMdastExport",
-          "normalizedASTSHA256": "40f44fc4255f5f74807816fd0d0eba9aeeaa0c54b1686911a89b43dce3f112a1",
-          "codeSHA256": "8cadf82e751c647be7bd61fc03b6096c9b359e55a6fc333dcfb0efaf6cdcaff6",
-          "features": {
-            "propertyOperations": 19,
-            "distinctOperationPropertyPairs": 14,
-            "pogHash": "9a09483b701f0679",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 19,
-            "distinctGraphOperationPropertyPairs": 14,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/chunk-IZURUUPO.js",
-          "source": "source-js/165fc732b47847502afd577b794a9fd3018dcb3e3ed9de9a89698dd48c38b988.js",
-          "sourceSHA256": "165fc732b47847502afd577b794a9fd3018dcb3e3ed9de9a89698dd48c38b988",
-          "span": [
-            856,
-            1272
-          ],
-          "name": "resolveFiles",
-          "normalizedASTSHA256": "72fc7b0d8685863aab29cdf5902902d472dbfd67ee61a22c48b77e1751c249b0",
-          "codeSHA256": "4c80c5150dc8974426a4e2bd8a9797229d86e7692aa2c27e5cb94a5db326b658",
-          "features": {
-            "propertyOperations": 15,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "238f68aaf9798663",
-            "graphNodes": 11,
-            "graphEdges": 12,
-            "graphOperationOccurrences": 15,
-            "distinctGraphOperationPropertyPairs": 7,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/chunk-PY2KKTR2.js",
-          "source": "source-js/e5cf17806bcb5b9b100935f577f2e01600cb0663e57d9ef0110448cb9e816758.js",
-          "sourceSHA256": "e5cf17806bcb5b9b100935f577f2e01600cb0663e57d9ef0110448cb9e816758",
-          "span": [
-            377,
-            1752
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "b3b2a8061202ca5e597cfeaf2c905945e9288e48ec0e177d043e556edafcfdf9",
-          "codeSHA256": "83de464626a1fb5cbecebd9d336a2ef7992c1b88b92be034cebaa164839b724c",
-          "features": {
-            "propertyOperations": 33,
-            "distinctOperationPropertyPairs": 13,
-            "pogHash": "50c354dce543c186",
-            "graphNodes": 53,
-            "graphEdges": 69,
-            "graphOperationOccurrences": 46,
-            "distinctGraphOperationPropertyPairs": 13,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/d8e3ccae118b712a4baf",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "6d36549f2f0312586bb6d75c41b8007ea7557482aecfce6378f7713ced76766e"
-        }
-      ],
-      "lockfileSHA256": "bec0555747ce12585fee24b9e8fe1b27562fd164d9dd4d6403ce684e8f2d2dbd",
-      "lockfileSnapshot": "lockfiles/bec0555747ce12585fee24b9e8fe1b27562fd164d9dd4d6403ce684e8f2d2dbd-pnpm-lock.yaml"
-    },
-    {
-      "library": "gray-matter",
-      "declaredVersion": "^4.0.3",
-      "origin": {
-        "kind": "npm-package",
-        "name": "gray-matter",
-        "version": "4.0.3",
-        "integrity": "sha512-5v6yZd4JK3eMI3FqqCouswVqwugaA9r4dNZB1wwcmrD02QkV5H0y7XBQW8QwQqEaZY1pM9aqORSORhJRdNK44Q==",
-        "shasum": "e893c064825de73ea1f5f7d88c7a9f7274288798",
-        "tarballSHA256": "2328a45656a86412b7418f59cb64b95eeedb4f287350ad7680bb8a30a981fbbf",
-        "bytes": 11775,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 6,
-      "parsedFunctions": 9,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "lib/defaults.js",
-          "source": "source-js/c5191d3221777039f1decfdf19c7cb0e8b8de9a9107436e0c1c4db23b9d1397d.js",
-          "sourceSHA256": "c5191d3221777039f1decfdf19c7cb0e8b8de9a9107436e0c1c4db23b9d1397d",
-          "span": [
-            105,
-            537
-          ],
-          "name": "exports",
-          "normalizedASTSHA256": "2131e10fe0c7e21448828be8d7df05bf6e470c39cc38a2cd472a63556fb69728",
-          "codeSHA256": "2f570f0109a0d8ce85a5e80740d13be262f5a90a0dec8645fb53cd9debb1caff",
-          "features": {
-            "propertyOperations": 19,
-            "distinctOperationPropertyPairs": 15,
-            "pogHash": "ccd92d93c59b23ba",
-            "graphNodes": 19,
-            "graphEdges": 22,
-            "graphOperationOccurrences": 34,
-            "distinctGraphOperationPropertyPairs": 14,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "lib/excerpt.js",
-          "source": "source-js/3a5cfcbead745be21bc60edf9c6a05c0edd588621adab0b130c7014f9a883d44.js",
-          "sourceSHA256": "3a5cfcbead745be21bc60edf9c6a05c0edd588621adab0b130c7014f9a883d44",
-          "span": [
-            73,
-            739
-          ],
-          "name": "exports",
-          "normalizedASTSHA256": "56aa1877298a7a85a356f0e0c646629c493b42bd32f447f2de90a5657fd89da6",
-          "codeSHA256": "c573d06eef0c94ed2be0fee195e264864d48c532cced87a2d35a96698743e498",
-          "features": {
-            "propertyOperations": 18,
-            "distinctOperationPropertyPairs": 10,
-            "pogHash": "afc14c838809c12",
-            "graphNodes": 26,
-            "graphEdges": 33,
-            "graphOperationOccurrences": 24,
-            "distinctGraphOperationPropertyPairs": 10,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "lib/stringify.js",
-          "source": "source-js/f344e7c5aac2a84c2aaaf460ef357c7d777d758f24bd0d384ad420f63d855eec.js",
-          "sourceSHA256": "f344e7c5aac2a84c2aaaf460ef357c7d777d758f24bd0d384ad420f63d855eec",
-          "span": [
-            147,
-            1346
-          ],
-          "name": "exports",
-          "normalizedASTSHA256": "3aed050afb32bb3fe8877e0f43fe145a7ebba671977bba9ed6acb2bc01c5d26f",
-          "codeSHA256": "9a7e355ee651024cfed9b988229052525c34683eaf37e669e24520b1a3841d2d",
-          "features": {
-            "propertyOperations": 21,
-            "distinctOperationPropertyPairs": 11,
-            "pogHash": "ad3d1b2bb2713003",
-            "graphNodes": 31,
-            "graphEdges": 42,
-            "graphOperationOccurrences": 26,
-            "distinctGraphOperationPropertyPairs": 9,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/fb3647d72d7157659fc8",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "e70ff771504ba41f2be55de812a017ff46433d7a250c862e38fc419159e44500"
         }
       ],
       "lockfileSHA256": "bec0555747ce12585fee24b9e8fe1b27562fd164d9dd4d6403ce684e8f2d2dbd",
@@ -743,30 +445,27 @@
   "selectedLibraries": [
     "@inkeep/cxkit-react",
     "@vercel/analytics",
-    "@vercel/og",
-    "fumadocs-mdx",
-    "gray-matter",
     "react",
     "react-dom"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
+    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
+      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
     },
     "frontendManifestSHA256": "bf7216f4ce4d6291c8bb8568f0de11eced201c407eae90d5f84fb15eb9a37bc6",
     "manifestRelative": "packages/docs/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:01:00.698Z",
+  "started": "2026-11-09T10:55:55.787Z",
   "reason": null,
-  "finished": "2026-11-09T10:01:01.012Z",
+  "finished": "2026-11-09T10:55:55.981Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/turbopack/colinhacks--zod/qualification.json",
-  "sourceEligibilityRecordSHA256": "c86189a1dcfadf59f1e5c86619df9bec0fc9f6ef408cbcfaa5a9a1dad932d3da",
-  "organizationSignature": "4b3aab4b4e1022b8c8b76c886ebe242f2e61c14fb95e381caf15d9d63188f567"
+  "sourceEligibilityRecordSHA256": "6635ec85e72e639c1c09c1b79db6ba794ff5fada11684fb8cdb3fc741bfd86b9",
+  "organizationSignature": "185e43ef8e07edd1747ee6c28f46b57ca69e976ab8dcf1041bb78584aca96b02"
 }

@@ -21,9 +21,7 @@
     "path-to-regexp": 1,
     "element-ui": 44,
     "vue": 1,
-    "vuex": 1,
-    "clipboard": 0,
-    "codemirror": 0
+    "vuex": 1
   },
   "pairs": [
     {
@@ -51028,14 +51026,9 @@
     "path-to-regexp",
     "element-ui",
     "vue",
-    "vuex",
-    "clipboard",
-    "codemirror"
+    "vuex"
   ],
-  "unscoredLibraries": [
-    "clipboard",
-    "codemirror"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -51065,12 +51058,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "6858a9ad67483025f6a9432a926beb9327037be3",
@@ -51078,9 +51072,9 @@
     "archiveRecordSHA256": "527532084f14d1876bef261209562f8840163c1fd149e99bcf89e990290ce440",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "af7ef4b2f30a214eb3bb18cbc85bc2e48979170c4a4b2172dda21a90eb1ef7ce",
+    "sourceOwnershipSHA256": "d3e6351306c482ff388b6dc395897a5bb2634d01aa6000c1e165c81de99717f0",
     "moduleScopeSHA256": "0edc0ffba22ab42b52aa299c9e5bbf4cc6953f2516d7275144e7e91ad438eb56",
-    "duplicateAuditSHA256": "423000340bc846c72cd1b754957843d88d5e28bdc490262ab39f85f8037616e7"
+    "duplicateAuditSHA256": "ace79d8c50c5d981dfb2373cee853299638cfe8caec508b58f584ad0a0660ba0"
   },
   "evaluationLibraries": [
     "vue-router",

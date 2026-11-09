@@ -16,7 +16,10 @@
   },
   "selectionOverride": {
     "excludeLibraries": [
+      "@ai-sdk/anthropic",
+      "@ai-sdk/openai",
       "@base-ui/react",
+      "@faker-js/faker",
       "@hookform/resolvers",
       "@hugeicons/core-free-icons",
       "@hugeicons/react",
@@ -61,13 +64,10 @@
       "zod"
     ],
     "preferredLibraries": [
-      "@ai-sdk/anthropic",
-      "@ai-sdk/openai",
       "@ai-sdk/react",
       "@dnd-kit/core",
       "@dnd-kit/modifiers",
       "@dnd-kit/sortable",
-      "@faker-js/faker",
       "@formisch/react",
       "@dnd-kit/utilities",
       "@internationalized/date",
@@ -98,24 +98,17 @@
     "duplicateAudit": {
       "record": "qualification/no-duplicate-libraries/results/turbopack/shadcn-ui--ui/audit.json",
       "sha256": "2b81610475654f91074ab091df96ee0cce758b139a4042e7f7400d88969ddef1",
-      "retainedUnobservedZeroPairLibraries": [
-        "@ai-sdk/anthropic",
-        "@ai-sdk/openai",
-        "@faker-js/faker"
-      ],
+      "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "candidates": [
-    "@ai-sdk/anthropic",
-    "@ai-sdk/openai",
     "@ai-sdk/react",
     "@dnd-kit/core",
     "@dnd-kit/modifiers",
     "@dnd-kit/sortable",
     "@dnd-kit/utilities",
-    "@faker-js/faker",
     "@formisch/react",
     "@internationalized/date",
     "@tabler/icons-react",
@@ -143,418 +136,6 @@
     "vaul"
   ],
   "libraries": [
-    {
-      "library": "@ai-sdk/anthropic",
-      "declaredVersion": "4.0.0-canary.66",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@ai-sdk/anthropic",
-        "version": "4.0.0-canary.66",
-        "integrity": "sha512-7sVN9mapkqAPfF9ZnZ1cKtAPxdgiq9b8Zffh0drQ1DKqJusdNSkNFQiC9mLB+3k6Py/k+auQs81DHwhCzgeTUQ==",
-        "shasum": "e6492bd7a7da67532f1e4afc01b832890b5be042",
-        "tarballSHA256": "7ce8ee68830fdd8ca8245824a680b53c44d70148f65984d6fc466e3e45d3535d",
-        "bytes": 310902,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 7,
-      "diagnostics": [
-        {
-          "file": "src/anthropic-api.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/anthropic-error.ts",
-          "error": "SyntaxError: [5:7-5:18]: Expected ','"
-        },
-        {
-          "file": "src/anthropic-files.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/anthropic-language-model-options.ts",
-          "error": "SyntaxError: [4:7-4:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/anthropic-language-model.ts",
-          "error": "SyntaxError: [3:7-3:17]: Expected ','"
-        },
-        {
-          "file": "src/anthropic-prepare-tools.ts",
-          "error": "SyntaxError: [3:7-3:33]: Expected ','"
-        },
-        {
-          "file": "src/anthropic-provider.ts",
-          "error": "SyntaxError: [4:7-4:14]: Expected ','"
-        },
-        {
-          "file": "src/convert-anthropic-usage.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/convert-to-anthropic-prompt.ts",
-          "error": "SyntaxError: [3:7-3:22]: Expected ','"
-        },
-        {
-          "file": "src/forward-anthropic-container-id-from-last-step.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/get-cache-control.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/map-anthropic-stop-reason.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/sanitize-json-schema.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/skills/anthropic-skills-api.ts",
-          "error": "SyntaxError: [19:7-19:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/tool/advisor_20260301.ts",
-          "error": "SyntaxError: [50:2-50:3]: Unexpected token: '|'"
-        },
-        {
-          "file": "src/tool/bash_20241022.ts",
-          "error": "SyntaxError: [4:7-4:34]: Expected ','"
-        },
-        {
-          "file": "src/tool/bash_20250124.ts",
-          "error": "SyntaxError: [4:7-4:34]: Expected ','"
-        },
-        {
-          "file": "src/tool/code-execution_20250522.ts",
-          "error": "SyntaxError: [41:16-41:17]: Expected '}'"
-        },
-        {
-          "file": "src/tool/code-execution_20250825.ts",
-          "error": "SyntaxError: [107:2-107:3]: Unexpected token: '|'"
-        },
-        {
-          "file": "src/tool/code-execution_20260120.ts",
-          "error": "SyntaxError: [121:2-121:3]: Unexpected token: '|'"
-        },
-        {
-          "file": "src/tool/computer_20241022.ts",
-          "error": "SyntaxError: [47:6-47:7]: Unexpected token: '|'"
-        },
-        {
-          "file": "src/tool/computer_20250124.ts",
-          "error": "SyntaxError: [64:6-64:7]: Unexpected token: '|'"
-        },
-        {
-          "file": "src/tool/computer_20251124.ts",
-          "error": "SyntaxError: [74:6-74:7]: Unexpected token: '|'"
-        },
-        {
-          "file": "src/tool/memory_20250818.ts",
-          "error": "SyntaxError: [47:2-47:3]: Unexpected token: '|'"
-        },
-        {
-          "file": "src/tool/text-editor_20241022.ts",
-          "error": "SyntaxError: [28:71-28:72]: Expected '}'"
-        },
-        {
-          "file": "src/tool/text-editor_20250124.ts",
-          "error": "SyntaxError: [28:71-28:72]: Expected '}'"
-        },
-        {
-          "file": "src/tool/text-editor_20250429.ts",
-          "error": "SyntaxError: [29:57-29:58]: Expected '}'"
-        },
-        {
-          "file": "src/tool/text-editor_20250728.ts",
-          "error": "SyntaxError: [37:57-37:58]: Expected '}'"
-        },
-        {
-          "file": "src/tool/tool-search-bm25_20251119.ts",
-          "error": "SyntaxError: [49:17-49:18]: Expected '}'"
-        },
-        {
-          "file": "src/tool/tool-search-regex_20251119.ts",
-          "error": "SyntaxError: [61:19-61:20]: Expected '}'"
-        },
-        {
-          "file": "src/tool/web-fetch-20250910.ts",
-          "error": "SyntaxError: [60:15-60:16]: Expected '}'"
-        },
-        {
-          "file": "src/tool/web-fetch-20260209.ts",
-          "error": "SyntaxError: [60:15-60:16]: Expected '}'"
-        },
-        {
-          "file": "src/tool/web-search_20250305.ts",
-          "error": "SyntaxError: [54:17-54:18]: Expected '}'"
-        },
-        {
-          "file": "src/tool/web-search_20260209.ts",
-          "error": "SyntaxError: [54:17-54:18]: Expected '}'"
-        }
-      ],
-      "witnesses": [
-        {
-          "file": "dist/index.js",
-          "source": "source-js/376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58.js",
-          "sourceSHA256": "376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58",
-          "span": [
-            1136,
-            1399
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "e7b264e611fdd981e8664e2345046e8ad02d01a7176757ee2c17c657ec755a90",
-          "codeSHA256": "3fe4fa002fc316b24c9991aa75e8ce5cb337a2eab5f770d26671176cd61f7e72",
-          "features": {
-            "propertyOperations": 16,
-            "distinctOperationPropertyPairs": 13,
-            "pogHash": "d4f5fc855e17638c",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 16,
-            "distinctGraphOperationPropertyPairs": 13,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58.js",
-          "sourceSHA256": "376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58",
-          "span": [
-            1598,
-            2945
-          ],
-          "name": "uploadFile",
-          "normalizedASTSHA256": "e9071e844638f64a6370be33aa6c4f7bb6f509943863fc509e44d1e5b94f79b8",
-          "codeSHA256": "8e24cf793a7f0212ef316ce7fc3f8d73c1973bf6f410152d369608fe1097958c",
-          "features": {
-            "propertyOperations": 37,
-            "distinctOperationPropertyPairs": 29,
-            "pogHash": "7762ca8cd37838d1",
-            "graphNodes": 13,
-            "graphEdges": 14,
-            "graphOperationOccurrences": 65,
-            "distinctGraphOperationPropertyPairs": 27,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58.js",
-          "sourceSHA256": "376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58",
-          "span": [
-            3925,
-            16527
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "f339748b8f9211993bf6d6f8d1f99e3f3e600bdc81a9855f111b809276d6d483",
-          "codeSHA256": "b2036903ddbcc7c2e78f425ef2fe0b2264530e91c596020674ec34d9b64d47cf",
-          "features": {
-            "propertyOperations": 484,
-            "distinctOperationPropertyPairs": 84,
-            "pogHash": "bfa1fff6f973baaf",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 484,
-            "distinctGraphOperationPropertyPairs": 84,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/03d412e48e6dedaff8db",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
-        }
-      ],
-      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
-      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
-    },
-    {
-      "library": "@ai-sdk/openai",
-      "declaredVersion": "4.0.0-canary.73",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@ai-sdk/openai",
-        "version": "4.0.0-canary.73",
-        "integrity": "sha512-lGiceTzEDc2gLZvNeUkE8hiucW6nXzhhvsMD8DWshunabIXpO+SxC785mmPUwpxeyi3CeJUy/em1PgkVyneJ5g==",
-        "shasum": "43c9bd420dfa2146993aa13e902fe2d6d157d006",
-        "tarballSHA256": "fee26c55d8e1680a339c40d7e9b88d231648431cb486748eac32c7f210f057ec",
-        "bytes": 438555,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 3,
-      "parsedFunctions": 3,
-      "diagnostics": [
-        {
-          "file": "src/chat/convert-openai-chat-usage.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/chat/convert-to-openai-chat-messages.ts",
-          "error": "SyntaxError: [3:7-3:22]: Expected ','"
-        },
-        {
-          "file": "src/chat/get-response-metadata.ts",
-          "error": "SyntaxError: [5:1-5:2]: Expected ')'"
-        },
-        {
-          "file": "src/chat/map-openai-finish-reason.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/chat/openai-chat-api.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/chat/openai-chat-language-model-options.ts",
-          "error": "SyntaxError: [4:7-4:18]: Expected ','"
-        },
-        {
-          "file": "src/chat/openai-chat-language-model.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/chat/openai-chat-prepare-tools.ts",
-          "error": "SyntaxError: [3:7-3:33]: Expected ','"
-        },
-        {
-          "file": "src/chat/openai-chat-prompt.ts",
-          "error": "SyntaxError: [1:7-1:11]: Unexpected token: 'identifier'"
-        },
-        {
-          "file": "src/completion/convert-openai-completion-usage.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/completion/convert-to-openai-completion-prompt.ts",
-          "error": "SyntaxError: [4:7-4:28]: Expected ','"
-        },
-        {
-          "file": "src/completion/get-response-metadata.ts",
-          "error": "SyntaxError: [5:1-5:2]: Expected ')'"
-        },
-        {
-          "file": "src/completion/map-openai-finish-reason.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/completion/openai-completion-api.ts",
-          "error": "SyntaxError: [6:7-6:18]: Expected ','"
-        },
-        {
-          "file": "src/completion/openai-completion-language-model-options.ts",
-          "error": "SyntaxError: [4:7-4:18]: Expected ','"
-        },
-        {
-          "file": "src/completion/openai-completion-language-model.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        },
-        {
-          "file": "src/embedding/openai-embedding-model-options.ts",
-          "error": "SyntaxError: [4:7-4:18]: Expected ','"
-        },
-        {
-          "file": "src/embedding/openai-embedding-model.ts",
-          "error": "SyntaxError: [3:7-3:23]: Expected ','"
-        },
-        {
-          "file": "src/files/openai-files-options.ts",
-          "error": "SyntaxError: [4:7-4:18]: Expected ','"
-        },
-        {
-          "file": "src/files/openai-files.ts",
-          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
-        }
-      ],
-      "witnesses": [
-        {
-          "file": "src/embedding/openai-embedding-api.ts",
-          "source": "source-js/79647b841e1d7a72137f583cc3c5eb896a1087019c2c27591b1a1ff3c5f10c39.js",
-          "sourceSHA256": "79647b841e1d7a72137f583cc3c5eb896a1087019c2c27591b1a1ff3c5f10c39",
-          "span": [
-            317,
-            493
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "67be346a9f9578fbd973c53aab133d95ba8714ccbf4e30b3ed8584908bedc21d",
-          "codeSHA256": "8497109f27546cb774a9c2fe301fe26f702bab7c82e60875545db6177ed6ba3c",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 8,
-            "pogHash": "e28dada1b59bd382",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 12,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "src/files/openai-files-api.ts",
-          "source": "source-js/b5bdf2ca34a353d6f4f7758df4e69f8bc1273b92837ff5af8ce18834ae1214e5.js",
-          "sourceSHA256": "b5bdf2ca34a353d6f4f7758df4e69f8bc1273b92837ff5af8ce18834ae1214e5",
-          "span": [
-            145,
-            474
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "fdf14d699cc2a7bbf00d9c9dc75b14c02fdbb33037da46585418234b00c28f61",
-          "codeSHA256": "fc5af2a3f0215076523e1021fbcb734d3be3c0bc422db6bf253f9fbbebb1e5f7",
-          "features": {
-            "propertyOperations": 24,
-            "distinctOperationPropertyPairs": 12,
-            "pogHash": "1437bb387be56339",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 24,
-            "distinctGraphOperationPropertyPairs": 12,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "src/image/openai-image-api.ts",
-          "source": "source-js/e5b5dfeee843d1d12253dfd632d95355f0a905422958b75a108a2b5afcd38c0f.js",
-          "sourceSHA256": "e5b5dfeee843d1d12253dfd632d95355f0a905422958b75a108a2b5afcd38c0f",
-          "span": [
-            308,
-            1082
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "ce7440d7056d0e1fd742b8ddd2919312ab7a384e095ff5a72be423159f33a7c2",
-          "codeSHA256": "bd6132918af9843b994416792c57c67e1acc423141c0da985e35568b8c4d0e85",
-          "features": {
-            "propertyOperations": 45,
-            "distinctOperationPropertyPairs": 20,
-            "pogHash": "5c53eb8988b8f58d",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 45,
-            "distinctGraphOperationPropertyPairs": 20,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/0ed99d094042b9dc9003",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
-        }
-      ],
-      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
-      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
-    },
     {
       "library": "@ai-sdk/react",
       "declaredVersion": "4.0.0-canary.162",
@@ -991,103 +572,6 @@
         {
           "path": "licenses/LICENSE",
           "sha256": "537607e3f1533ad2c5b12978967f5ab27f34ffb7e626e321017a7ccca6cc24ff"
-        }
-      ],
-      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
-      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
-    },
-    {
-      "library": "@faker-js/faker",
-      "declaredVersion": "^10.1.0",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@faker-js/faker",
-        "version": "10.1.0",
-        "integrity": "sha512-C3mrr3b5dRVlKPJdfrAXS8+dq+rq8Qm5SNRazca0JKgw1HQERFmrVb0towvMmw5uu8hHKNiQasMaR/tydf3Zsg==",
-        "shasum": "eb72869d01ccbff41a77aa7ac851ce1ac9371129",
-        "tarballSHA256": "2bd262f23b4a5c6a019a7d900cb12adde8ac18cdacd3a54ce3fc9b5b1f3f50c2",
-        "bytes": 1075881,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 2,
-      "parsedFunctions": 25,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/chunk-HC7G5RVA.js",
-          "source": "source-js/6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a.js",
-          "sourceSHA256": "6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a",
-          "span": [
-            1161,
-            1312
-          ],
-          "name": "seat",
-          "normalizedASTSHA256": "2a53f9e53b3703a3b47de85417743b57772cc421b261a2484f7cedab630da0f5",
-          "codeSHA256": "7ed0f3fabac9766fa9fb41e3c7301c5cb96421eb20041f991bc6fdb80e0b7ebc",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 8,
-            "pogHash": "c21bf8f0b0410d1d",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 10,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/chunk-HC7G5RVA.js",
-          "source": "source-js/6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a.js",
-          "sourceSHA256": "6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a",
-          "span": [
-            2212,
-            2783
-          ],
-          "name": "Sr",
-          "normalizedASTSHA256": "dc0d864ef8e513b17a4c7e7068eeb5ed46eade0e99ad354e5fe607025a5fd1a2",
-          "codeSHA256": "5f9c9739a2946afbdc49599b5e418c9654c712f09772b1806da080d931c0e229",
-          "features": {
-            "propertyOperations": 30,
-            "distinctOperationPropertyPairs": 4,
-            "pogHash": "2dd04849204eebd6",
-            "graphNodes": 21,
-            "graphEdges": 28,
-            "graphOperationOccurrences": 30,
-            "distinctGraphOperationPropertyPairs": 1,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/chunk-HC7G5RVA.js",
-          "source": "source-js/6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a.js",
-          "sourceSHA256": "6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a",
-          "span": [
-            3217,
-            3542
-          ],
-          "name": "rgb",
-          "normalizedASTSHA256": "9ef3abeb050fe8fa49883d01b713b8cfd039c44153e880d7353583ea5bbd1483",
-          "codeSHA256": "1b5ef6409a16452b3874c121dc85782366f9e4854deee56084397f4a404834ef",
-          "features": {
-            "propertyOperations": 14,
-            "distinctOperationPropertyPairs": 11,
-            "pogHash": "23fff96c069dca07",
-            "graphNodes": 11,
-            "graphEdges": 12,
-            "graphOperationOccurrences": 17,
-            "distinctGraphOperationPropertyPairs": 10,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/55d20e3252d0a4ac62c2",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "8c0814c525426e67c04ca562f28364be477003697903d257160c081d14b271bf"
         }
       ],
       "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
@@ -1716,38 +1200,496 @@
       ],
       "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
       "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@tanstack/ai-client",
+      "declaredVersion": "0.20.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tanstack/ai-client",
+        "version": "0.20.0",
+        "integrity": "sha512-pxx940CaZ/eQGYiYpOWvVuQCBLqnJgS/PUn6+vKtyV6W4G8vZ+SqJf3UI/pDyqre7wv048G5cu6/EEj8dBn5JA==",
+        "shasum": "03ee970a0d3638bc8a6299550fb1397e9574a2f2",
+        "tarballSHA256": "a68d93293fa6eea24578d2a4206c36428fae64877f326f4f77904b5efe834d3d",
+        "bytes": 197810,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 18,
+      "diagnostics": [
+        {
+          "file": "src/audio-recorder.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/chat-client.ts",
+          "error": "SyntaxError: [16:12-16:13]: Expected 'from'"
+        },
+        {
+          "file": "src/client-persistor.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/connection-adapters.ts",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/devtools-noop.ts",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/devtools.ts",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/events.ts",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/generation-client.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/generation-types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/mcp-app-bridge.ts",
+          "error": "SyntaxError: [1:7-1:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/realtime-client.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/realtime-types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/response-stream.ts",
+          "error": "SyntaxError: [1:7-1:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/sse-parser.ts",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/sse-utils.ts",
+          "error": "SyntaxError: [1:37-1:38]: Expected ')'"
+        },
+        {
+          "file": "src/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/video-generation-client.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/esm/audio-recorder.js",
+          "source": "source-js/9713698c9f58ed429dc62bf9ec976c9e1a05978a4ea43248a19295152a55e20c.js",
+          "sourceSHA256": "9713698c9f58ed429dc62bf9ec976c9e1a05978a4ea43248a19295152a55e20c",
+          "span": [
+            1157,
+            2720
+          ],
+          "name": "start",
+          "normalizedASTSHA256": "76c76b87d50f677e3da2a54f86c4003a7c4e92ca849342fb3672a5e39be342a5",
+          "codeSHA256": "a916b24d10d07b067b28246b10a00a9be0da201fa71deb630cff046d78fe49a4",
+          "features": {
+            "propertyOperations": 32,
+            "distinctOperationPropertyPairs": 27,
+            "pogHash": "eefbd8bd12d62f6",
+            "graphNodes": 25,
+            "graphEdges": 32,
+            "graphOperationOccurrences": 43,
+            "distinctGraphOperationPropertyPairs": 25,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/esm/audio-recorder.js",
+          "source": "source-js/9713698c9f58ed429dc62bf9ec976c9e1a05978a4ea43248a19295152a55e20c.js",
+          "sourceSHA256": "9713698c9f58ed429dc62bf9ec976c9e1a05978a4ea43248a19295152a55e20c",
+          "span": [
+            3624,
+            4375
+          ],
+          "name": "cancel",
+          "normalizedASTSHA256": "7a9ed116238c85c8637870af0c7aa0968b51bcd7d055fee6bc7dea9366f1e0cf",
+          "codeSHA256": "6288debbf343da7814cf07f206edb168f04813685ee970be7eb8ce4eb2455914",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "32c84b3a4be0b0ca",
+            "graphNodes": 21,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 37,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/esm/audio-recorder.js",
+          "source": "source-js/9713698c9f58ed429dc62bf9ec976c9e1a05978a4ea43248a19295152a55e20c.js",
+          "sourceSHA256": "9713698c9f58ed429dc62bf9ec976c9e1a05978a4ea43248a19295152a55e20c",
+          "span": [
+            4392,
+            5244
+          ],
+          "name": "finalize",
+          "normalizedASTSHA256": "df66f5018b1b50e143091cc3b4fc7bca77c3264fde6036019b473a468013cdfc",
+          "codeSHA256": "b2d05cd81ca04d2c245f91da279f24fd59f1c2ea8ee2eecf52c8b2d10f7aa37f",
+          "features": {
+            "propertyOperations": 25,
+            "distinctOperationPropertyPairs": 22,
+            "pogHash": "fd3582e2578221d2",
+            "graphNodes": 8,
+            "graphEdges": 8,
+            "graphOperationOccurrences": 46,
+            "distinctGraphOperationPropertyPairs": 21,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/103ac468f58d6708c827",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "9fe9970f409e5b1d2067c0107ac0201761d5fddc53e9b20b66619fb0d2b4122f"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@tanstack/ai-react",
+      "declaredVersion": "0.16.4",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tanstack/ai-react",
+        "version": "0.16.4",
+        "integrity": "sha512-GTVX0Th8oz5VPKymUJei/9V9p3II2lJfE3sVhGHKY+tG4aRFnGsys0dwTCHCjEsSjZWWLtmm/ryrpdaT7P8tcg==",
+        "shasum": "dd05ea71227ef617f746fab78a37de260bc3743f",
+        "tarballSHA256": "22098642408aa933d669d86558d7e89f06896858ad31103907e3e704f4acb06b",
+        "bytes": 48846,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 31,
+      "diagnostics": [
+        {
+          "file": "src/mcp-app-resource.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/realtime-types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-audio-recorder.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-chat.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-generate-audio.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-generate-image.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-generate-speech.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-generate-video.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-generation.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-mcp-app-bridge.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-realtime-chat.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-summarize.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-transcription.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/esm/mcp-app-resource.js",
+          "source": "source-js/62511f0465b4a73206ea64c4a51588f4404a4cc02d045fd712d8f38676cdaf5f.js",
+          "sourceSHA256": "62511f0465b4a73206ea64c4a51588f4404a4cc02d045fd712d8f38676cdaf5f",
+          "span": [
+            680,
+            1124
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "899b187ac567e6ba7bb2dd1bd395d79bc0b579c0b2352b040ff3725f7f456bf0",
+          "codeSHA256": "844a15526845086dddce62f158c17d579e80a560163e4ff1acc721678d73448c",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "f2873d48869b3fa4",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/esm/mcp-app-resource.js",
+          "source": "source-js/62511f0465b4a73206ea64c4a51588f4404a4cc02d045fd712d8f38676cdaf5f.js",
+          "sourceSHA256": "62511f0465b4a73206ea64c4a51588f4404a4cc02d045fd712d8f38676cdaf5f",
+          "span": [
+            352,
+            1482
+          ],
+          "name": "MCPAppResource",
+          "normalizedASTSHA256": "fb54c76b2fb605bac373f61b20a9cfc43db2a6e848e691ee769d53030fdc8d3a",
+          "codeSHA256": "2bb539b5c00ccadd8a089f1d96150490c4db508a2d037fe2cd4c20092267338f",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "d74600944888d5bd",
+            "graphNodes": 13,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/esm/use-chat.js",
+          "source": "source-js/744cd170225f514d112581ed3448fbc7148dd78b697350132f1bbd5811c70546.js",
+          "sourceSHA256": "744cd170225f514d112581ed3448fbc7148dd78b697350132f1bbd5811c70546",
+          "span": [
+            1068,
+            4291
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "fe4fb42360d855e322bf353e4cd307c8995ba43061d2089fb9263a5931635db0",
+          "codeSHA256": "88e5ea3911a3a79f2792cfd7cdd417f20f3309ade71bac074760312d10bbf25b",
+          "features": {
+            "propertyOperations": 51,
+            "distinctOperationPropertyPairs": 42,
+            "pogHash": "5f0d1099485ee635",
+            "graphNodes": 13,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 53,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/fd026a45c310e63524cb",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "9fe9970f409e5b1d2067c0107ac0201761d5fddc53e9b20b66619fb0d2b4122f"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@tanstack/react-form",
+      "declaredVersion": "^1.20.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tanstack/react-form",
+        "version": "1.20.0",
+        "integrity": "sha512-1UfWqEYRnHr4cooGbHiTQqoqus8soNUH+RLD6UyhIQEvomOSQMX0JgX+zGSl08tIugrnWcAnh50n5T9IIs/Evw==",
+        "shasum": "5748f78f6df86f2e497c7820f09281505e551c7d",
+        "tarballSHA256": "a7aa300fd4fa51bd3ca6cd0c99f68ca99ca8433a25c8385b2bb337430c56bdd1",
+        "bytes": 40872,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 7,
+      "parsedFunctions": 31,
+      "diagnostics": [
+        {
+          "file": "src/createFormHook.tsx",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/nextjs/createServerValidate.ts",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/remix/createServerValidate.ts",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/start/createServerValidate.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/start/getFormData.tsx",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/start/utils.ts",
+          "error": "SyntaxError: [10:46-10:47]: Expected ')'"
+        },
+        {
+          "file": "src/useField.tsx",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useFieldGroup.tsx",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useForm.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useTransform.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/cjs/nextjs/createServerValidate.cjs",
+          "source": "source-js/67eed2005ef5c2bc38ae788b9f247ebcc930a1bd3477133a08b5291c7a03dddd.js",
+          "sourceSHA256": "67eed2005ef5c2bc38ae788b9f247ebcc930a1bd3477133a08b5291c7a03dddd",
+          "span": [
+            271,
+            1243
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "2a0accc92b8dfa155de6aaa0893d7ae49369fefdb5927e1904cc10a7e4f6d280",
+          "codeSHA256": "553232f3414ec40ea338693b4ef35bac2d76547f208c91561d7e04ef7c9c07b3",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "704c412cbb9d29ae",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/nextjs/createServerValidate.cjs",
+          "source": "source-js/67eed2005ef5c2bc38ae788b9f247ebcc930a1bd3477133a08b5291c7a03dddd.js",
+          "sourceSHA256": "67eed2005ef5c2bc38ae788b9f247ebcc930a1bd3477133a08b5291c7a03dddd",
+          "span": [
+            254,
+            1243
+          ],
+          "name": "createServerValidate",
+          "normalizedASTSHA256": "d71d312a0d8fb2100a44836112e80d6eb89f80f590596ec60c5307c1fcecf312",
+          "codeSHA256": "25c3435821d48a8300594e2fe27f7d0e88b28284ec037e88be758bedae8c3a09",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "704c412cbb9d29ae",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/start/createServerValidate.cjs",
+          "source": "source-js/832f8de148576c40c55d69bc7735aebdeaf665620810c1c1fd3d1d69808c0bd0.js",
+          "sourceSHA256": "832f8de148576c40c55d69bc7735aebdeaf665620810c1c1fd3d1d69808c0bd0",
+          "span": [
+            365,
+            1543
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "147eb44ddd84dd3292e596523e46df888df3bd238a3d68f5c5f31e04228e2aa4",
+          "codeSHA256": "ed76ef640fc197850773ab0ffe707e0b363fe26749fc2d9c5ec78ca7815a438b",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 17,
+            "pogHash": "1e73a5f80d510126",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/c25fef72a2b6688f92fc",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
-    "@ai-sdk/anthropic",
-    "@ai-sdk/openai",
     "@ai-sdk/react",
     "@dnd-kit/core",
     "@dnd-kit/modifiers",
     "@dnd-kit/sortable",
-    "@faker-js/faker",
     "@formisch/react",
     "@internationalized/date",
-    "@tanstack/ai"
+    "@tanstack/ai",
+    "@tanstack/ai-client",
+    "@tanstack/ai-react",
+    "@tanstack/react-form"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
+    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
+      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
     },
     "frontendManifestSHA256": "f3692cbcc60e47d84859acecd97fbf0cf37358514b317fe05cd8be67ec98b1e9",
     "manifestRelative": "apps/v4/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:01:01.860Z",
+  "started": "2026-11-09T10:56:05.433Z",
   "reason": null,
-  "finished": "2026-11-09T10:01:02.683Z",
+  "finished": "2026-11-09T10:56:08.926Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/turbopack/shadcn-ui--ui/qualification.json",
-  "sourceEligibilityRecordSHA256": "562927a8fd2e1ad7b85b56de3d5c5d5937e7031ff38e8e27db51d3746714b731",
-  "organizationSignature": "2696308fb470bcf2120bf6b78d24acb645b0a79e2e4d56a8d3b2733cc936611a"
+  "sourceEligibilityRecordSHA256": "2be68accb58396720eb7905a95f872dd6540f6368c189e00225cb63a1e3a0961",
+  "organizationSignature": "bb320ed4c688e00127812644ddd4906b6e3daa3506a34b09cc19693fa2d30370"
 }

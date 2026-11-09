@@ -139,7 +139,7 @@
       "retainedUnobservedZeroPairLibraries": [],
       "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
     },
-    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Every selected library requires positive audited module evidence; unseen dependencies cannot qualify or fill a library slot."
   },
   "candidates": [
     "@better-auth/api-key",
@@ -1453,22 +1453,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
+    "codeDigest": "c4ce962ee214a2904a7503619bd1154c9c67ffcfbf16df0a303d0c55d8d476b9",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
+      "selection-overrides.json": "07c9486a113a74a882d56afb9ac0b0cb892e9afde2357c0d17cc772e23cb24ce"
     },
     "frontendManifestSHA256": "53a4bb794faa71fe88f01fb807e15d80ab17e0ea254ee3a0fc612aad569a1ed4",
     "manifestRelative": "apps/dokploy/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T10:01:05.389Z",
+  "started": "2026-11-09T10:56:19.787Z",
   "reason": null,
-  "finished": "2026-11-09T10:01:05.745Z",
+  "finished": "2026-11-09T10:56:20.143Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/dokploy--dokploy/qualification.json",
-  "sourceEligibilityRecordSHA256": "2cb458e38a9c0159f12907aaa7640e5c637523ba928e14b5e8bc622e4a1a2166",
-  "organizationSignature": "c8e724120eecc5eabe49a54c9bfb3be18d94d3e54adb3a9707eace8553ec0241"
+  "sourceEligibilityRecordSHA256": "62e9ebd20bb5787bc3877874b7a0bd6f935d9b55f8b849529d45f3accd102ff1",
+  "organizationSignature": "89ba703d173c152e1bb7946f3479a80cadb4d3d98c126716c01e98df01a7f204"
 }

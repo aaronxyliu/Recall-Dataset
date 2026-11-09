@@ -18,10 +18,7 @@
     "@primeuix/themes": 272,
     "chart.js": 74,
     "rxjs": 91,
-    "tslib": 1,
-    "@angular/compiler": 0,
-    "@tailwindcss/postcss": 0,
-    "primeclt": 0
+    "tslib": 1
   },
   "pairs": [
     {
@@ -16679,19 +16676,12 @@
     "imageID": "sha256:9cb7c4736a8b7a7e9b0d2d61528a0131a2767cd557b3000057bd31326f930194"
   },
   "selectedLibraries": [
-    "@angular/compiler",
     "@primeuix/themes",
-    "@tailwindcss/postcss",
     "chart.js",
-    "primeclt",
     "rxjs",
     "tslib"
   ],
-  "unscoredLibraries": [
-    "@angular/compiler",
-    "@tailwindcss/postcss",
-    "primeclt"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -16721,12 +16711,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "96d71496d685b5c110efd2875abaa2bf89a56ad2",
@@ -16734,9 +16725,9 @@
     "archiveRecordSHA256": "eef120f436d3a665a8f54571984cb6c042baab2f2fe08e1d7db9f25e4c515d75",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "5cecf602adc8765a855e643823e7b685a9dd5d96c8b6623687b2124cc391a6bb",
+    "sourceOwnershipSHA256": "e6ab0d67cd126bf59a00611e349e948d600cc65ed399dba514f3020d10e9ed0b",
     "moduleScopeSHA256": "795e303d880f7b20d5edb06919d42297961f5d9dfd45c33a5b23ea704df2f945",
-    "duplicateAuditSHA256": "f5a67d4b65d0856921e2c667cab168a5e2a1f02fe527a9e7e3c19ca104666d33"
+    "duplicateAuditSHA256": "515d4ee914fbab5cc6e8be0765b4ea5124a27e4aef51923000ad4b4288e7086e"
   },
   "evaluationLibraries": [
     "@primeuix/themes",

@@ -1,13 +1,14 @@
 {
   "pairDefinition": "reciprocal-body-mapped-v2",
   "evidence": {
-    "bodyToBodyPoints": 60625,
-    "ignoredBoundaryPoints": 50557,
-    "ignoredStructuralPoints": 122084,
-    "unresolvedBodyPoints": 256213,
+    "bodyToBodyPoints": 63784,
+    "ignoredBoundaryPoints": 51934,
+    "ignoredStructuralPoints": 124155,
+    "unresolvedBodyPoints": 258187,
     "acceptanceRules": {
-      "reciprocal-body": 726,
-      "reciprocal-body-and-full-span": 70
+      "reciprocal-body-and-full-span": 136,
+      "reciprocal-body": 743,
+      "reciprocal-full-span": 2
     }
   },
   "repo": "umami-software/umami",
@@ -17,15 +18,55 @@
     "@tanstack/react-query": 8,
     "@umami/react-zen": 89,
     "chart.js": 75,
-    "@clickhouse/client": 0,
-    "@dicebear/core": 0,
-    "@prisma/adapter-pg": 0,
-    "@prisma/client": 0,
-    "@svgr/cli": 0,
-    "bcryptjs": 0,
-    "chalk": 0
+    "chartjs-adapter-date-fns": 1,
+    "colord": 1,
+    "date-fns-tz": 12,
+    "lucide-react": 62,
+    "next-intl": 2,
+    "prop-types": 3,
+    "react": 0
   },
   "pairs": [
+    {
+      "library": "next-intl",
+      "source": "turbopack:///[project]/node_modules/.pnpm/next-intl@4.13.4_@swc+helpers@0.5.23_next@16.4.2_@babel+core@7.29.6_supports-color@10.2_2eb77f6d1c47d9325f521bbd950b2714/node_modules/next-intl/dist/esm/production/shared/NextIntlClientProvider.js#7fe720c84c72b1491013d0fde3519fb3af61d64c5f5f5bba2df1aeb49e67be7a@100-186",
+      "bundled": "<local>/_next/static/chunks/2od5tsngwsrug.js#8dc2a5cf7adfe41c983360a8c4234dd33ddd8e623692fee4091c37129e80e584@7152-7243",
+      "distinctOriginalPositions": 25,
+      "distinctGeneratedPositions": 27,
+      "bodyOriginalPositions": 15,
+      "bodyGeneratedPositions": 17,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "chartjs-adapter-date-fns",
+      "source": "turbopack:///[project]/node_modules/.pnpm/chartjs-adapter-date-fns@3.0.0_chart.js@4.5.1_date-fns@4.4.0/node_modules/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js#47428eb26957e30afe682442129d2192d00ae455ee6cd19999749aa3237e22d9@1076-1112",
+      "bundled": "<local>/_next/static/chunks/2od5tsngwsrug.js#8dc2a5cf7adfe41c983360a8c4234dd33ddd8e623692fee4091c37129e80e584@25661-25682",
+      "distinctOriginalPositions": 4,
+      "distinctGeneratedPositions": 4,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "chartjs-adapter-date-fns",
+      "source": "turbopack:///[project]/node_modules/.pnpm/chartjs-adapter-date-fns@3.0.0_chart.js@4.5.1_date-fns@4.4.0/node_modules/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js#47428eb26957e30afe682442129d2192d00ae455ee6cd19999749aa3237e22d9@1124-1609",
+      "bundled": "<local>/_next/static/chunks/2od5tsngwsrug.js#8dc2a5cf7adfe41c983360a8c4234dd33ddd8e623692fee4091c37129e80e584@25689-27679",
+      "distinctOriginalPositions": 47,
+      "distinctGeneratedPositions": 48,
+      "bodyOriginalPositions": 41,
+      "bodyGeneratedPositions": 42,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "chartjs-adapter-date-fns",
+      "source": "turbopack:///[project]/node_modules/.pnpm/chartjs-adapter-date-fns@3.0.0_chart.js@4.5.1_date-fns@4.4.0/node_modules/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.esm.js#47428eb26957e30afe682442129d2192d00ae455ee6cd19999749aa3237e22d9@1622-1691",
+      "bundled": "<local>/_next/static/chunks/2od5tsngwsrug.js#8dc2a5cf7adfe41c983360a8c4234dd33ddd8e623692fee4091c37129e80e584@27687-27734",
+      "distinctOriginalPositions": 12,
+      "distinctGeneratedPositions": 14,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
     {
       "library": "@tanstack/react-query",
       "source": "turbopack:///[project]/node_modules/.pnpm/@tanstack+react-query@5.102.8_react@19.3.1/node_modules/@tanstack/react-query/src/QueryClientProvider.tsx#c0646bf20cfefad0752e410c1b4377f5a978286a11b108486dbd10b3f4dec542@614-918",
@@ -175,6 +216,506 @@
       "bodyOriginalPositions": 5,
       "bodyGeneratedPositions": 7,
       "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "prop-types",
+      "source": "turbopack:///[project]/node_modules/.pnpm/prop-types@15.8.1/node_modules/prop-types/factoryWithThrowingShims.js#29540b7e3c2bf11ac0331d69b90d67bca66d234056e61e6b538d7e3a2b4c5819@422-909",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@131804-132067",
+      "distinctOriginalPositions": 29,
+      "distinctGeneratedPositions": 26,
+      "bodyOriginalPositions": 14,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "prop-types",
+      "source": "turbopack:///[project]/node_modules/.pnpm/prop-types@15.8.1/node_modules/prop-types/factoryWithThrowingShims.js#29540b7e3c2bf11ac0331d69b90d67bca66d234056e61e6b538d7e3a2b4c5819@939-980",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@132067-132089",
+      "distinctOriginalPositions": 5,
+      "distinctGeneratedPositions": 5,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "prop-types",
+      "source": "turbopack:///[project]/node_modules/.pnpm/prop-types@15.8.1/node_modules/prop-types/factoryWithThrowingShims.js#29540b7e3c2bf11ac0331d69b90d67bca66d234056e61e6b538d7e3a2b4c5819@407-1637",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@131793-132346",
+      "distinctOriginalPositions": 54,
+      "distinctGeneratedPositions": 54,
+      "bodyOriginalPositions": 52,
+      "bodyGeneratedPositions": 52,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@51-118",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@331960-332027",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@121-213",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332030-332122",
+      "distinctOriginalPositions": 25,
+      "distinctGeneratedPositions": 25,
+      "bodyOriginalPositions": 17,
+      "bodyGeneratedPositions": 17,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@216-289",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332125-332198",
+      "distinctOriginalPositions": 24,
+      "distinctGeneratedPositions": 24,
+      "bodyOriginalPositions": 16,
+      "bodyGeneratedPositions": 16,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@292-344",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332201-332253",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@347-397",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332256-332306",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@400-474",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332309-332383",
+      "distinctOriginalPositions": 27,
+      "distinctGeneratedPositions": 27,
+      "bodyOriginalPositions": 23,
+      "bodyGeneratedPositions": 23,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@477-535",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332386-332444",
+      "distinctOriginalPositions": 22,
+      "distinctGeneratedPositions": 22,
+      "bodyOriginalPositions": 18,
+      "bodyGeneratedPositions": 18,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@562-620",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332471-332529",
+      "distinctOriginalPositions": 14,
+      "distinctGeneratedPositions": 14,
+      "bodyOriginalPositions": 8,
+      "bodyGeneratedPositions": 8,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@623-663",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332532-332572",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 9,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@726-759",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332635-332668",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@762-941",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332671-332850",
+      "distinctOriginalPositions": 64,
+      "distinctGeneratedPositions": 64,
+      "bodyOriginalPositions": 60,
+      "bodyGeneratedPositions": 60,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@944-1159",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@332853-333068",
+      "distinctOriginalPositions": 74,
+      "distinctGeneratedPositions": 74,
+      "bodyOriginalPositions": 70,
+      "bodyGeneratedPositions": 70,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@1162-1230",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@333071-333139",
+      "distinctOriginalPositions": 25,
+      "distinctGeneratedPositions": 25,
+      "bodyOriginalPositions": 21,
+      "bodyGeneratedPositions": 21,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@1233-1291",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@333142-333200",
+      "distinctOriginalPositions": 22,
+      "distinctGeneratedPositions": 22,
+      "bodyOriginalPositions": 18,
+      "bodyGeneratedPositions": 18,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@1294-1408",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@333203-333311",
+      "distinctOriginalPositions": 34,
+      "distinctGeneratedPositions": 34,
+      "bodyOriginalPositions": 30,
+      "bodyGeneratedPositions": 30,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@1411-1540",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@333314-333443",
+      "distinctOriginalPositions": 39,
+      "distinctGeneratedPositions": 39,
+      "bodyOriginalPositions": 35,
+      "bodyGeneratedPositions": 35,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@2187-2392",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@334082-334287",
+      "distinctOriginalPositions": 71,
+      "distinctGeneratedPositions": 71,
+      "bodyOriginalPositions": 67,
+      "bodyGeneratedPositions": 67,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@2401-2629",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@334296-334524",
+      "distinctOriginalPositions": 70,
+      "distinctGeneratedPositions": 70,
+      "bodyOriginalPositions": 66,
+      "bodyGeneratedPositions": 66,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@2638-2856",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@334533-334732",
+      "distinctOriginalPositions": 61,
+      "distinctGeneratedPositions": 58,
+      "bodyOriginalPositions": 57,
+      "bodyGeneratedPositions": 54,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@2874-3013",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@334745-334880",
+      "distinctOriginalPositions": 44,
+      "distinctGeneratedPositions": 42,
+      "bodyOriginalPositions": 40,
+      "bodyGeneratedPositions": 38,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@3022-3185",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@334889-335027",
+      "distinctOriginalPositions": 49,
+      "distinctGeneratedPositions": 43,
+      "bodyOriginalPositions": 45,
+      "bodyGeneratedPositions": 39,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@3436-3538",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335236-335338",
+      "distinctOriginalPositions": 31,
+      "distinctGeneratedPositions": 31,
+      "bodyOriginalPositions": 25,
+      "bodyGeneratedPositions": 25,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@3689-3761",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335341-335413",
+      "distinctOriginalPositions": 29,
+      "distinctGeneratedPositions": 29,
+      "bodyOriginalPositions": 23,
+      "bodyGeneratedPositions": 23,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@3764-3816",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335416-335468",
+      "distinctOriginalPositions": 17,
+      "distinctGeneratedPositions": 17,
+      "bodyOriginalPositions": 13,
+      "bodyGeneratedPositions": 13,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@3819-3891",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335471-335543",
+      "distinctOriginalPositions": 29,
+      "distinctGeneratedPositions": 29,
+      "bodyOriginalPositions": 23,
+      "bodyGeneratedPositions": 23,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@3894-5731",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335546-337462",
+      "distinctOriginalPositions": 84,
+      "distinctGeneratedPositions": 84,
+      "bodyOriginalPositions": 82,
+      "bodyGeneratedPositions": 82,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4007-4044",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335739-335776",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4068-4104",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335800-335836",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4124-4158",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335856-335890",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4179-4214",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335911-335946",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4233-4348",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@335965-336080",
+      "distinctOriginalPositions": 38,
+      "distinctGeneratedPositions": 37,
+      "bodyOriginalPositions": 36,
+      "bodyGeneratedPositions": 35,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4367-4398",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336099-336130",
+      "distinctOriginalPositions": 6,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 4,
+      "bodyGeneratedPositions": 4,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4423-4560",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336155-336292",
+      "distinctOriginalPositions": 40,
+      "distinctGeneratedPositions": 40,
+      "bodyOriginalPositions": 38,
+      "bodyGeneratedPositions": 38,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4579-4613",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336311-336345",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 7,
+      "bodyOriginalPositions": 5,
+      "bodyGeneratedPositions": 5,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4638-4782",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336370-336514",
+      "distinctOriginalPositions": 39,
+      "distinctGeneratedPositions": 39,
+      "bodyOriginalPositions": 37,
+      "bodyGeneratedPositions": 37,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4801-4880",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336533-336611",
+      "distinctOriginalPositions": 24,
+      "distinctGeneratedPositions": 24,
+      "bodyOriginalPositions": 22,
+      "bodyGeneratedPositions": 22,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4900-4977",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336631-336708",
+      "distinctOriginalPositions": 22,
+      "distinctGeneratedPositions": 22,
+      "bodyOriginalPositions": 20,
+      "bodyGeneratedPositions": 20,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@4999-5055",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336730-336786",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5079-5136",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336810-336867",
+      "distinctOriginalPositions": 16,
+      "distinctGeneratedPositions": 16,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5159-5196",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336890-336927",
+      "distinctOriginalPositions": 9,
+      "distinctGeneratedPositions": 9,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 7,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5217-5273",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@336948-337004",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 11,
+      "bodyGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5293-5350",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@337024-337081",
+      "distinctOriginalPositions": 16,
+      "distinctGeneratedPositions": 16,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5370-5435",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@337101-337166",
+      "distinctOriginalPositions": 18,
+      "distinctGeneratedPositions": 18,
+      "bodyOriginalPositions": 14,
+      "bodyGeneratedPositions": 14,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5454-5553",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@337185-337284",
+      "distinctOriginalPositions": 28,
+      "distinctGeneratedPositions": 28,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 24,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5570-5660",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@337301-337391",
+      "distinctOriginalPositions": 28,
+      "distinctGeneratedPositions": 28,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 24,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5681-5728",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@337412-337459",
+      "distinctOriginalPositions": 10,
+      "distinctGeneratedPositions": 10,
+      "bodyOriginalPositions": 6,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "colord",
+      "source": "turbopack:///[project]/node_modules/.pnpm/colord@2.10.0/node_modules/colord/index.mjs#5786d51824b67160afdeea1243eaf701dceb60b482c4edb11b4eb682aca23070@5736-5781",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@337467-337512",
+      "distinctOriginalPositions": 11,
+      "distinctGeneratedPositions": 11,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 7,
+      "evidenceRule": "reciprocal-body-and-full-span"
     },
     {
       "library": "chart.js",
@@ -6197,6 +6738,296 @@
       "evidenceRule": "reciprocal-body"
     },
     {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/_lib/tzIntlTimeZoneName/index.js#431620452d736f822b79a4ea33bcee69f9a4d313191c17bec6696498b7e53332@520-787",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@607526-607643",
+      "distinctOriginalPositions": 31,
+      "distinctGeneratedPositions": 30,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 24,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/_lib/newDateUTC/index.js#e978236fc55848d376f8442c4f8b48e2c7e345fe199d1bc0783633844b367432@348-591",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@608106-608206",
+      "distinctOriginalPositions": 35,
+      "distinctGeneratedPositions": 35,
+      "bodyOriginalPositions": 18,
+      "bodyGeneratedPositions": 18,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/_lib/tzParseTimezone/index.js#5fdd4833692ca1d6e5192c349ae8a757d941385fd848e2af07eb78ecee2b99c1@3361-3698",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@608528-608645",
+      "distinctOriginalPositions": 26,
+      "distinctGeneratedPositions": 25,
+      "bodyOriginalPositions": 21,
+      "bodyGeneratedPositions": 21,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/_lib/tzParseTimezone/index.js#5fdd4833692ca1d6e5192c349ae8a757d941385fd848e2af07eb78ecee2b99c1@2371-3183",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@608821-608953",
+      "distinctOriginalPositions": 44,
+      "distinctGeneratedPositions": 40,
+      "bodyOriginalPositions": 35,
+      "bodyGeneratedPositions": 32,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/_lib/tzParseTimezone/index.js#5fdd4833692ca1d6e5192c349ae8a757d941385fd848e2af07eb78ecee2b99c1@3184-3325",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@609860-609922",
+      "distinctOriginalPositions": 19,
+      "distinctGeneratedPositions": 19,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/formatters/index.js#dd742266edbfb285baa9082a34764943ca4cf077340ae56f99ed3c5ad41812f6@292-1417",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@609938-610086",
+      "distinctOriginalPositions": 37,
+      "distinctGeneratedPositions": 37,
+      "bodyOriginalPositions": 29,
+      "bodyGeneratedPositions": 29,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/formatters/index.js#dd742266edbfb285baa9082a34764943ca4cf077340ae56f99ed3c5ad41812f6@1505-2560",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@610089-610218",
+      "distinctOriginalPositions": 32,
+      "distinctGeneratedPositions": 32,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 24,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/formatters/index.js#dd742266edbfb285baa9082a34764943ca4cf077340ae56f99ed3c5ad41812f6@2591-3036",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@610221-610470",
+      "distinctOriginalPositions": 32,
+      "distinctGeneratedPositions": 32,
+      "bodyOriginalPositions": 24,
+      "bodyGeneratedPositions": 24,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/formatters/index.js#dd742266edbfb285baa9082a34764943ca4cf077340ae56f99ed3c5ad41812f6@4636-4998",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@610309-610431",
+      "distinctOriginalPositions": 39,
+      "distinctGeneratedPositions": 36,
+      "bodyOriginalPositions": 31,
+      "bodyGeneratedPositions": 29,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/formatters/index.js#dd742266edbfb285baa9082a34764943ca4cf077340ae56f99ed3c5ad41812f6@3085-3448",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@610473-610578",
+      "distinctOriginalPositions": 27,
+      "distinctGeneratedPositions": 27,
+      "bodyOriginalPositions": 19,
+      "bodyGeneratedPositions": 19,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/formatters/index.js#dd742266edbfb285baa9082a34764943ca4cf077340ae56f99ed3c5ad41812f6@3822-4064",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@610726-610818",
+      "distinctOriginalPositions": 26,
+      "distinctGeneratedPositions": 26,
+      "bodyOriginalPositions": 19,
+      "bodyGeneratedPositions": 19,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/formatters/index.js#dd742266edbfb285baa9082a34764943ca4cf077340ae56f99ed3c5ad41812f6@4065-4378",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@610818-610924",
+      "distinctOriginalPositions": 33,
+      "distinctGeneratedPositions": 31,
+      "bodyOriginalPositions": 25,
+      "bodyGeneratedPositions": 23,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/formatters/index.js#dd742266edbfb285baa9082a34764943ca4cf077340ae56f99ed3c5ad41812f6@4379-4635",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@610924-610999",
+      "distinctOriginalPositions": 23,
+      "distinctGeneratedPositions": 22,
+      "bodyOriginalPositions": 16,
+      "bodyGeneratedPositions": 15,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/_lib/getTimezoneOffsetInMilliseconds/index.js#78e12b370b744e5fe8b64b038c2d84a978ee266610c5fe6798af6feeb896a452@562-861",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@610999-611189",
+      "distinctOriginalPositions": 33,
+      "distinctGeneratedPositions": 32,
+      "bodyOriginalPositions": 28,
+      "bodyGeneratedPositions": 27,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toDate/index.js#9597dd8095ae58ebe8d662fbed064261ea66672d3b8e1cdf68b4402e9834b343@6177-7128",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@612488-612753",
+      "distinctOriginalPositions": 68,
+      "distinctGeneratedPositions": 67,
+      "bodyOriginalPositions": 61,
+      "bodyGeneratedPositions": 61,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toDate/index.js#9597dd8095ae58ebe8d662fbed064261ea66672d3b8e1cdf68b4402e9834b343@7129-9121",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@612766-613498",
+      "distinctOriginalPositions": 176,
+      "distinctGeneratedPositions": 169,
+      "bodyOriginalPositions": 169,
+      "bodyGeneratedPositions": 163,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toDate/index.js#9597dd8095ae58ebe8d662fbed064261ea66672d3b8e1cdf68b4402e9834b343@11372-11678",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@613047-613127",
+      "distinctOriginalPositions": 23,
+      "distinctGeneratedPositions": 22,
+      "bodyOriginalPositions": 16,
+      "bodyGeneratedPositions": 16,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toDate/index.js#9597dd8095ae58ebe8d662fbed064261ea66672d3b8e1cdf68b4402e9834b343@10282-10627",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@614176-614324",
+      "distinctOriginalPositions": 40,
+      "distinctGeneratedPositions": 40,
+      "bodyOriginalPositions": 31,
+      "bodyGeneratedPositions": 31,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toDate/index.js#9597dd8095ae58ebe8d662fbed064261ea66672d3b8e1cdf68b4402e9834b343@10806-10909",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@614410-614459",
+      "distinctOriginalPositions": 15,
+      "distinctGeneratedPositions": 15,
+      "bodyOriginalPositions": 10,
+      "bodyGeneratedPositions": 10,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toDate/index.js#9597dd8095ae58ebe8d662fbed064261ea66672d3b8e1cdf68b4402e9834b343@10910-11371",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@614459-614585",
+      "distinctOriginalPositions": 42,
+      "distinctGeneratedPositions": 42,
+      "bodyOriginalPositions": 33,
+      "bodyGeneratedPositions": 33,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toDate/index.js#9597dd8095ae58ebe8d662fbed064261ea66672d3b8e1cdf68b4402e9834b343@11679-11872",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@614585-614651",
+      "distinctOriginalPositions": 14,
+      "distinctGeneratedPositions": 14,
+      "bodyOriginalPositions": 7,
+      "bodyGeneratedPositions": 7,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toDate/index.js#9597dd8095ae58ebe8d662fbed064261ea66672d3b8e1cdf68b4402e9834b343@11873-12182",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@614651-614751",
+      "distinctOriginalPositions": 21,
+      "distinctGeneratedPositions": 21,
+      "bodyOriginalPositions": 12,
+      "bodyGeneratedPositions": 12,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/toZonedTime/index.js#60c7763b361085da973fbef942f947ca85859357c2694bb701cbf29ec10ea6a9@1236-1694",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@614791-615036",
+      "distinctOriginalPositions": 48,
+      "distinctGeneratedPositions": 48,
+      "bodyOriginalPositions": 39,
+      "bodyGeneratedPositions": 39,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/formatInTimeZone/index.js#0c62124cbd360bcf65eb5cb7a34a8fcc9cf22a680a6721470678130306a701b4@1525-1779",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@615070-615444",
+      "distinctOriginalPositions": 26,
+      "distinctGeneratedPositions": 25,
+      "bodyOriginalPositions": 15,
+      "bodyGeneratedPositions": 15,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/index.js#2d4de700b131fb272c0358432f089ef345d3ac96ed9edb4278eab41ad51ce6ae@21529-22791",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@615130-615408",
+      "distinctOriginalPositions": 36,
+      "distinctGeneratedPositions": 37,
+      "bodyOriginalPositions": 25,
+      "bodyGeneratedPositions": 27,
+      "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/format/index.js#2d4de700b131fb272c0358432f089ef345d3ac96ed9edb4278eab41ad51ce6ae@21984-22718",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@615226-615383",
+      "distinctOriginalPositions": 46,
+      "distinctGeneratedPositions": 44,
+      "bodyOriginalPositions": 40,
+      "bodyGeneratedPositions": 38,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "date-fns-tz",
+      "source": "turbopack:///[project]/node_modules/.pnpm/date-fns-tz@3.2.0_date-fns@4.4.0/node_modules/date-fns-tz/dist/esm/fromZonedTime/index.js#ae008e129dadbff41ed45c8cd0def3491f26b9a51b790adb45af8a8d31c3db48@1421-1919",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@615464-615721",
+      "distinctOriginalPositions": 55,
+      "distinctGeneratedPositions": 53,
+      "bodyOriginalPositions": 46,
+      "bodyGeneratedPositions": 45,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "next-intl",
+      "source": "turbopack:///[project]/node_modules/.pnpm/next-intl@4.13.4_@swc+helpers@0.5.23_next@16.4.2_@babel+core@7.29.6_supports-color@10.2_2eb77f6d1c47d9325f521bbd950b2714/node_modules/next-intl/dist/esm/production/react-client/index.js#431738dec252328df4b7a3418e2e3a5b4350ad79fffb9b9e1c1e9dc1e1940a70@61-143",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@930760-930838",
+      "distinctOriginalPositions": 8,
+      "distinctGeneratedPositions": 8,
+      "bodyOriginalPositions": 1,
+      "bodyGeneratedPositions": 1,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
+      "library": "next-intl",
+      "source": "turbopack:///[project]/node_modules/.pnpm/next-intl@4.13.4_@swc+helpers@0.5.23_next@16.4.2_@babel+core@7.29.6_supports-color@10.2_2eb77f6d1c47d9325f521bbd950b2714/node_modules/next-intl/dist/esm/production/react-client/index.js#431738dec252328df4b7a3418e2e3a5b4350ad79fffb9b9e1c1e9dc1e1940a70@83-142",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@930782-930837",
+      "distinctOriginalPositions": 14,
+      "distinctGeneratedPositions": 13,
+      "bodyOriginalPositions": 10,
+      "bodyGeneratedPositions": 9,
+      "evidenceRule": "reciprocal-body-and-full-span"
+    },
+    {
       "library": "@umami/react-zen",
       "source": "turbopack:///[project]/node_modules/.pnpm/@umami+react-zen@0.254.0_@date-fns+tz@1.5.0_@types+react-dom@19.3.0_@types+react@19.3.0_0b8da773ac5161e0ed01f71c1136582e/node_modules/@umami/react-zen/src/components/lib/tailwind.ts#ce5b6f3b864dcba243cf4e66824410d3fc876a3d4cb56b858cbc0fb3bff23453@16370-16698",
       "bundled": "<local>/_next/static/chunks/3eitthdntfy_c.js#323ac22af7a8f7dec45fd9b6f854c6afc20b9e91fc4c7f2fb0d8e924e1d7eade@1293857-1293962",
@@ -7985,30 +8816,46 @@
       "bodyOriginalPositions": 2,
       "bodyGeneratedPositions": 2,
       "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "prop-types",
+      "source": "turbopack:///[project]/node_modules/.pnpm/prop-types@15.8.1/node_modules/prop-types/factoryWithThrowingShims.js#29540b7e3c2bf11ac0331d69b90d67bca66d234056e61e6b538d7e3a2b4c5819@266-293",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@131733-131747",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-full-span"
+    },
+    {
+      "library": "prop-types",
+      "source": "turbopack:///[project]/node_modules/.pnpm/prop-types@15.8.1/node_modules/prop-types/factoryWithThrowingShims.js#29540b7e3c2bf11ac0331d69b90d67bca66d234056e61e6b538d7e3a2b4c5819@294-330",
+      "bundled": "<local>/_next/static/chunks/1p41m9ke9fek5.js#becaaf6d76f412cc330fb6f9d5c6f4dc53d47cba57bfe3d81171c38b478017a7@131747-131761",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 3,
+      "evidenceRule": "reciprocal-full-span"
     }
   ],
   "observedSplit": {
-    "count": 622,
-    "denominator": 1786,
-    "percent": 34.82642777155655
+    "count": 624,
+    "denominator": 1893,
+    "percent": 32.9635499207607
   },
   "observedCombine": {
-    "count": 542,
-    "denominator": 1701,
-    "percent": 31.86360964138742
+    "count": 548,
+    "denominator": 1802,
+    "percent": 30.410654827968923
   },
   "removePercent": null,
   "createPercent": null,
   "missingSourceContents": [],
   "failures": [],
   "sourceFunctionAccounting": {
-    "total": 1865,
-    "oneToOne": 796,
-    "multipleTargets": 622,
-    "multipleContributors": 322,
-    "unresolvedBody": 41,
+    "total": 1980,
+    "oneToOne": 881,
+    "multipleTargets": 624,
+    "multipleContributors": 335,
+    "unresolvedBody": 50,
     "insufficientEvidence": 5,
-    "noBodyEdge": 79
+    "noBodyEdge": 85
   },
   "relationshipCaution": "Mapping multiplicity is positional provenance, not proof of semantic splitting or combining.",
   "capture": {
@@ -8285,26 +9132,18 @@
     "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c"
   },
   "selectedLibraries": [
-    "@clickhouse/client",
-    "@dicebear/core",
-    "@prisma/adapter-pg",
-    "@prisma/client",
-    "@svgr/cli",
     "@tanstack/react-query",
     "@umami/react-zen",
-    "bcryptjs",
-    "chalk",
-    "chart.js"
+    "chart.js",
+    "chartjs-adapter-date-fns",
+    "colord",
+    "date-fns-tz",
+    "lucide-react",
+    "next-intl",
+    "prop-types",
+    "react"
   ],
-  "unscoredLibraries": [
-    "@clickhouse/client",
-    "@dicebear/core",
-    "@prisma/adapter-pg",
-    "@prisma/client",
-    "@svgr/cli",
-    "bcryptjs",
-    "chalk"
-  ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -8334,12 +9173,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "provenance": {
     "upstreamCommit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
@@ -8347,13 +9187,20 @@
     "archiveRecordSHA256": "30e6503bd9668253f03168c876e17e68c62f1c17852caae6d3c9fa9deb0f8b98",
     "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
     "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
-    "sourceOwnershipSHA256": "7260e1d675849cb398d4cdd803ed2f64d3eb09c424c4a26fdead678c0aa3087c",
+    "sourceOwnershipSHA256": "a2a30346a5c15fb329d2f5e1f1657f28397b010cafbf3f1719d3e01c15bcfef5",
     "moduleScopeSHA256": "0b21244f208bd1ed2bba57909c0c4aba1a1b0789eef352cfe9fbf8cb063ce832",
-    "duplicateAuditSHA256": "715a143c9e80b0154c19a9ce595bdc56ade3c5bb19b345944843adc855207d16"
+    "duplicateAuditSHA256": "416e3a9e17377699f748d0c5a2946554056a54d66e4fec5c1686d49e2c650a22"
   },
   "evaluationLibraries": [
     "@tanstack/react-query",
     "@umami/react-zen",
-    "chart.js"
+    "chart.js",
+    "chartjs-adapter-date-fns",
+    "colord",
+    "date-fns-tz",
+    "lucide-react",
+    "next-intl",
+    "prop-types",
+    "react"
   ]
 }

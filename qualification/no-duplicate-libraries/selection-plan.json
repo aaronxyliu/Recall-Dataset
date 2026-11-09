@@ -7,12 +7,13 @@
     "excludeConfirmedDuplicateLibraries": true,
     "excludeUnassessedLibrariesFromScoring": true,
     "newReplacementsRequireUniqueObservedModuleCode": true,
-    "retainExistingUnobservedZeroPairLibraries": true,
+    "retainExistingUnobservedZeroPairLibraries": false,
     "unobservedLibrariesContributeNoEvaluationPairs": true,
     "sourceFunctionThresholdUnchanged": true,
     "requireInitialAnchors": false,
     "minimumLibrariesPerRepository": 3,
-    "maximumLibrariesPerRepository": 10
+    "maximumLibrariesPerRepository": 10,
+    "requirePositiveModuleEvidenceForEverySelectedLibrary": true
   },
   "subjects": [
     {
@@ -62,14 +63,17 @@
         "react-dom": 1080
       },
       "retainedInitially": [
-        "@bytecodealliance/jco",
         "react",
         "react-dom"
       ],
-      "unscoredRetainedLibraries": [
-        "@bytecodealliance/jco"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "@bytecodealliance/jco",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [],
       "audit": "qualification/no-duplicate-libraries/results/bun/micahkepe--jsongrep/audit.json",
       "auditSHA256": "8406e3855672f851c896e48ab226f13404dc31bbc2d3d341bf9a67b892facb04"
@@ -89,17 +93,26 @@
         "tslib": 37
       },
       "retainedInitially": [
-        "@scarf/scarf",
-        "calendar-utils",
-        "positioning",
         "tslib"
       ],
-      "unscoredRetainedLibraries": [
-        "@scarf/scarf",
-        "calendar-utils",
-        "positioning"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "@scarf/scarf",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "calendar-utils",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "positioning",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [],
       "audit": "qualification/no-duplicate-libraries/results/esbuild/mattlewis92--angular-calendar/audit.json",
       "auditSHA256": "c2ac8e6488afa05c37d20e9c46d455f9584f6d0b39a239b13a4ca915f020472f"
@@ -370,21 +383,19 @@
         "primeclt": 0
       },
       "retainedInitially": [
-        "@angular/compiler",
         "@primeuix/themes",
-        "@tailwindcss/postcss",
-        "chart.js",
-        "primeclt"
+        "chart.js"
       ],
-      "unscoredRetainedLibraries": [
-        "@angular/compiler",
-        "@tailwindcss/postcss",
-        "primeclt"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "@angular/common",
           "status": "unassessed",
+          "reasons": []
+        },
+        {
+          "library": "@angular/compiler",
+          "status": "not-observed",
           "reasons": []
         },
         {
@@ -405,6 +416,16 @@
         {
           "library": "@angular/router",
           "status": "unassessed",
+          "reasons": []
+        },
+        {
+          "library": "@tailwindcss/postcss",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "primeclt",
+          "status": "not-observed",
           "reasons": []
         }
       ],
@@ -431,15 +452,21 @@
       },
       "retainedInitially": [
         "@floating-ui/dom",
-        "@hotwired/turbo",
-        "esbuild",
-        "lit"
+        "@hotwired/turbo"
       ],
-      "unscoredRetainedLibraries": [
-        "esbuild",
-        "lit"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "esbuild",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "lit",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [],
       "audit": "qualification/no-duplicate-libraries/results/esbuild/sissbruecker--linkding/audit.json",
       "auditSHA256": "dcd15f5f3f1603758e8f18b6abddbf775497e15ba1fe672088eca33f40d6b47a"
@@ -525,29 +552,40 @@
         "tslib": 29
       },
       "retainedInitially": [
-        "@angular/animations",
-        "@angular/cdk",
-        "@angular/compiler",
-        "@angular/forms",
         "@angular/platform-browser",
         "rxjs",
         "tslib"
       ],
-      "unscoredRetainedLibraries": [
-        "@angular/animations",
-        "@angular/cdk",
-        "@angular/compiler",
-        "@angular/forms"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
+        {
+          "library": "@angular/animations",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@angular/cdk",
+          "status": "not-observed",
+          "reasons": []
+        },
         {
           "library": "@angular/common",
           "status": "unassessed",
           "reasons": []
         },
         {
+          "library": "@angular/compiler",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
           "library": "@angular/core",
           "status": "unassessed",
+          "reasons": []
+        },
+        {
+          "library": "@angular/forms",
+          "status": "not-observed",
           "reasons": []
         },
         {
@@ -573,15 +611,21 @@
         "regenerator-runtime": 0
       },
       "retainedInitially": [
-        "core-js",
-        "fractional",
-        "regenerator-runtime"
+        "core-js"
       ],
-      "unscoredRetainedLibraries": [
-        "fractional",
-        "regenerator-runtime"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "fractional",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "regenerator-runtime",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [],
       "audit": "qualification/no-duplicate-libraries/results/parcel/jonasschmedtmann--complete-javascript-course/audit.json",
       "auditSHA256": "e0593b75869cce7a922611ae18d5555c53a4d9c74ac23ad01eaa90919a517221"
@@ -605,18 +649,9 @@
         "react-use": 0
       },
       "retainedInitially": [
-        "focus-visible",
-        "marked",
-        "react",
-        "react-dom",
-        "react-use"
+        "focus-visible"
       ],
-      "unscoredRetainedLibraries": [
-        "marked",
-        "react",
-        "react-dom",
-        "react-use"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "alpinejs",
@@ -642,6 +677,26 @@
               ]
             }
           ]
+        },
+        {
+          "library": "marked",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "react",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "react-dom",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "react-use",
+          "status": "not-observed",
+          "reasons": []
         }
       ],
       "replacementCandidates": [
@@ -1503,13 +1558,16 @@
       },
       "retainedInitially": [
         "@svgdotjs/svg.js",
-        "roughjs",
-        "svgdom"
+        "roughjs"
       ],
-      "unscoredRetainedLibraries": [
-        "svgdom"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "svgdom",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [],
       "audit": "qualification/no-duplicate-libraries/results/rollup/omnibrain--svguitar/audit.json",
       "auditSHA256": "15c574ee373362f609598badcc8c44db600de514ee99df6565ea41b88ec87451"
@@ -1527,15 +1585,21 @@
         "yargs": 0
       },
       "retainedInitially": [
-        "tslib",
-        "vega-expression",
-        "yargs"
+        "vega-expression"
       ],
-      "unscoredRetainedLibraries": [
-        "tslib",
-        "yargs"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "tslib",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "yargs",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [
         "json-stringify-pretty-compact",
         "vega-event-selector",
@@ -1739,14 +1803,9 @@
         "i18next",
         "next-auth",
         "react-i18next",
-        "zod",
-        "@boxyhq/saml-jackson",
-        "@daily-co/daily-js"
+        "zod"
       ],
-      "unscoredRetainedLibraries": [
-        "@boxyhq/saml-jackson",
-        "@daily-co/daily-js"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "next",
@@ -1949,6 +2008,16 @@
               ]
             }
           ]
+        },
+        {
+          "library": "@boxyhq/saml-jackson",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@daily-co/daily-js",
+          "status": "not-observed",
+          "reasons": []
         }
       ],
       "replacementCandidates": [
@@ -2881,26 +2950,47 @@
       },
       "retainedInitially": [
         "@radix-ui/react-dialog",
-        "@radix-ui/react-dropdown-menu",
-        "@radix-ui/react-popover",
-        "@radix-ui/react-select",
         "@radix-ui/react-slot",
-        "@vercel/analytics",
-        "better-auth",
-        "cmdk",
-        "country-data-list",
-        "date-fns"
+        "@vercel/analytics"
       ],
-      "unscoredRetainedLibraries": [
-        "@radix-ui/react-dropdown-menu",
-        "@radix-ui/react-popover",
-        "@radix-ui/react-select",
-        "better-auth",
-        "cmdk",
-        "country-data-list",
-        "date-fns"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "@radix-ui/react-dropdown-menu",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@radix-ui/react-popover",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@radix-ui/react-select",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "better-auth",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "cmdk",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "country-data-list",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "date-fns",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [
         "clsx",
         "lucide-react",
@@ -2943,16 +3033,9 @@
       "retainedInitially": [
         "@inkeep/cxkit-react",
         "@vercel/analytics",
-        "@vercel/og",
-        "fumadocs-mdx",
-        "gray-matter",
         "react"
       ],
-      "unscoredRetainedLibraries": [
-        "@vercel/og",
-        "fumadocs-mdx",
-        "gray-matter"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "@radix-ui/react-accordion",
@@ -3125,6 +3208,11 @@
               ]
             }
           ]
+        },
+        {
+          "library": "@vercel/og",
+          "status": "not-observed",
+          "reasons": []
         },
         {
           "library": "fumadocs-core",
@@ -3317,6 +3405,11 @@
               ]
             }
           ]
+        },
+        {
+          "library": "fumadocs-mdx",
+          "status": "not-observed",
+          "reasons": []
         },
         {
           "library": "fumadocs-ui",
@@ -3537,6 +3630,11 @@
               ]
             }
           ]
+        },
+        {
+          "library": "gray-matter",
+          "status": "not-observed",
+          "reasons": []
         },
         {
           "library": "next",
@@ -3784,30 +3882,53 @@
         "@neondatabase/serverless": 0
       },
       "retainedInitially": [
-        "@ai-sdk/google",
-        "@base-ui-components/react",
-        "@dnd-kit/core",
-        "@dnd-kit/modifiers",
-        "@dnd-kit/sortable",
-        "@google/generative-ai",
-        "@hookform/resolvers",
-        "@lexical/react",
-        "@neondatabase/serverless"
+        "@base-ui-components/react"
       ],
-      "unscoredRetainedLibraries": [
-        "@ai-sdk/google",
-        "@dnd-kit/core",
-        "@dnd-kit/modifiers",
-        "@dnd-kit/sortable",
-        "@google/generative-ai",
-        "@hookform/resolvers",
-        "@lexical/react",
-        "@neondatabase/serverless"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
+        {
+          "library": "@ai-sdk/google",
+          "status": "not-observed",
+          "reasons": []
+        },
         {
           "library": "@ai-sdk/react",
           "status": "unassessed",
+          "reasons": []
+        },
+        {
+          "library": "@dnd-kit/core",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@dnd-kit/modifiers",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@dnd-kit/sortable",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@google/generative-ai",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@hookform/resolvers",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@lexical/react",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@neondatabase/serverless",
+          "status": "not-observed",
           "reasons": []
         }
       ],
@@ -3856,21 +3977,24 @@
         "@hookform/resolvers": 0
       },
       "retainedInitially": [
-        "@ai-sdk/anthropic",
-        "@ai-sdk/openai",
         "@ai-sdk/react",
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
         "@dnd-kit/sortable",
-        "@faker-js/faker",
         "@formisch/react"
       ],
-      "unscoredRetainedLibraries": [
-        "@ai-sdk/anthropic",
-        "@ai-sdk/openai",
-        "@faker-js/faker"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
+        {
+          "library": "@ai-sdk/anthropic",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@ai-sdk/openai",
+          "status": "not-observed",
+          "reasons": []
+        },
         {
           "library": "@base-ui/react",
           "status": "duplicated",
@@ -4040,6 +4164,11 @@
               ]
             }
           ]
+        },
+        {
+          "library": "@faker-js/faker",
+          "status": "not-observed",
+          "reasons": []
         },
         {
           "library": "@hookform/resolvers",
@@ -4297,27 +4426,48 @@
         "chart.js": 602
       },
       "retainedInitially": [
-        "@clickhouse/client",
-        "@dicebear/core",
-        "@prisma/adapter-pg",
-        "@prisma/client",
-        "@svgr/cli",
         "@tanstack/react-query",
         "@umami/react-zen",
-        "bcryptjs",
-        "chalk",
         "chart.js"
       ],
-      "unscoredRetainedLibraries": [
-        "@clickhouse/client",
-        "@dicebear/core",
-        "@prisma/adapter-pg",
-        "@prisma/client",
-        "@svgr/cli",
-        "bcryptjs",
-        "chalk"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "@clickhouse/client",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@dicebear/core",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@prisma/adapter-pg",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@prisma/client",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@svgr/cli",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "bcryptjs",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "chalk",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [
         "chartjs-adapter-date-fns",
         "colord",
@@ -4373,13 +4523,16 @@
         "@vueuse/core",
         "marked",
         "vue-i18n",
-        "vuedraggable",
-        "@it-tools/bip39"
+        "vuedraggable"
       ],
-      "unscoredRetainedLibraries": [
-        "@it-tools/bip39"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "@it-tools/bip39",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [
         "@tabler/icons-vue",
         "@vicons/material",
@@ -4427,17 +4580,26 @@
         "react-dom",
         "react-haiku",
         "react-icons",
-        "react-router-dom",
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
+        "react-router-dom"
       ],
-      "unscoredRetainedLibraries": [
-        "@chakra-ui/react",
-        "@emotion/react",
-        "@gsap/react"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "@chakra-ui/react",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@emotion/react",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@gsap/react",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [
         "@hugeicons/react",
         "next-themes"
@@ -4703,22 +4865,33 @@
         "react-dom",
         "@sentry/browser",
         "i18next-browser-languagedetector",
-        "react",
-        "firebase",
-        "socket.io-client",
-        "uqr",
-        "vite-plugin-html"
+        "react"
       ],
-      "unscoredRetainedLibraries": [
-        "firebase",
-        "socket.io-client",
-        "uqr",
-        "vite-plugin-html"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "jotai",
           "status": "unassessed",
+          "reasons": []
+        },
+        {
+          "library": "firebase",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "socket.io-client",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "uqr",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "vite-plugin-html",
+          "status": "not-observed",
           "reasons": []
         }
       ],
@@ -4760,12 +4933,9 @@
         "@vueuse/core",
         "axios",
         "rxjs",
-        "zod",
-        "@hoppscotch/common"
+        "zod"
       ],
-      "unscoredRetainedLibraries": [
-        "@hoppscotch/common"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "buffer",
@@ -5395,6 +5565,11 @@
               ]
             }
           ]
+        },
+        {
+          "library": "@hoppscotch/common",
+          "status": "not-observed",
+          "reasons": []
         }
       ],
       "replacementCandidates": [
@@ -5522,14 +5697,9 @@
         "path-to-regexp",
         "element-ui",
         "vue",
-        "vuex",
-        "clipboard",
-        "codemirror"
+        "vuex"
       ],
-      "unscoredRetainedLibraries": [
-        "clipboard",
-        "codemirror"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "core-js",
@@ -5610,6 +5780,16 @@
               ]
             }
           ]
+        },
+        {
+          "library": "clipboard",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "codemirror",
+          "status": "not-observed",
+          "reasons": []
         }
       ],
       "replacementCandidates": [
@@ -5650,12 +5830,9 @@
         "web-animations-js",
         "core-js",
         "leaflet",
-        "zone.js",
-        "@angular/cdk"
+        "zone.js"
       ],
-      "unscoredRetainedLibraries": [
-        "@angular/cdk"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "chart.js",
@@ -5806,6 +5983,11 @@
           "reasons": []
         },
         {
+          "library": "@angular/cdk",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
           "library": "@angular/common",
           "status": "unassessed",
           "reasons": []
@@ -5846,20 +6028,31 @@
         "vuex": 7
       },
       "retainedInitially": [
-        "better-scroll",
-        "fastclick",
-        "iscroll",
-        "showdown",
         "vue",
         "vue-router"
       ],
-      "unscoredRetainedLibraries": [
-        "better-scroll",
-        "fastclick",
-        "iscroll",
-        "showdown"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
+        {
+          "library": "better-scroll",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "fastclick",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "iscroll",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "showdown",
+          "status": "not-observed",
+          "reasons": []
+        },
         {
           "library": "vuex",
           "status": "not-observed",
@@ -5893,21 +6086,30 @@
         "react-dom": 416
       },
       "retainedInitially": [
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "katex",
         "next",
         "nextra",
         "nextra-theme-docs",
         "react",
         "react-dom"
       ],
-      "unscoredRetainedLibraries": [
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "katex"
+      "unscoredRetainedLibraries": [],
+      "removedInitially": [
+        {
+          "library": "@fortawesome/fontawesome-svg-core",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@fortawesome/react-fontawesome",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "katex",
+          "status": "not-observed",
+          "reasons": []
+        }
       ],
-      "removedInitially": [],
       "replacementCandidates": [
         "@vercel/analytics",
         "clsx"
@@ -6097,18 +6299,9 @@
         "recharts",
         "mdast-util-from-markdown",
         "@sentry/nextjs",
-        "typed.js",
-        "@bsmnt/scrollytelling",
-        "@code-hike/mdx",
-        "@codesandbox/sandpack-react",
-        "@hcaptcha/react-hcaptcha"
+        "typed.js"
       ],
-      "unscoredRetainedLibraries": [
-        "@bsmnt/scrollytelling",
-        "@code-hike/mdx",
-        "@codesandbox/sandpack-react",
-        "@hcaptcha/react-hcaptcha"
-      ],
+      "unscoredRetainedLibraries": [],
       "removedInitially": [
         {
           "library": "next",
@@ -6507,6 +6700,26 @@
               ]
             }
           ]
+        },
+        {
+          "library": "@bsmnt/scrollytelling",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@code-hike/mdx",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@codesandbox/sandpack-react",
+          "status": "not-observed",
+          "reasons": []
+        },
+        {
+          "library": "@hcaptcha/react-hcaptcha",
+          "status": "not-observed",
+          "reasons": []
         }
       ],
       "replacementCandidates": [
