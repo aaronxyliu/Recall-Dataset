@@ -1,0 +1,166 @@
+{
+  "name": "@okikio/sharedworker",
+  "version": "1.1.0",
+  "type": "module",
+  "sideEffects": false,
+  "description": "A small mostly spec. compliant polyfill/ponyfill for SharedWorkers, it acts as a drop in replacement for normal Workers, and supports an API surface that matches normal Workers.",
+  "umd": "sharedworker",
+  "access": "public",
+  "legacy": "lib/index.cjs",
+  "main": "lib/index.cjs",
+  "browser": "lib/index.umd.js",
+  "module": "lib/index.js",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./lib/index.d.cts",
+        "default": "./lib/index.cjs"
+      },
+      "import": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
+      }
+    },
+    "./polyfill": {
+      "require": {
+        "types": "./lib/polyfill.d.cts",
+        "default": "./lib/polyfill.cjs"
+      },
+      "import": {
+        "types": "./lib/polyfill.d.ts",
+        "default": "./lib/polyfill.js"
+      }
+    },
+    "./ponyfill": {
+      "require": {
+        "types": "./lib/ponyfill.d.cts",
+        "default": "./lib/ponyfill.cjs"
+      },
+      "import": {
+        "types": "./lib/ponyfill.d.ts",
+        "default": "./lib/ponyfill.js"
+      }
+    },
+    "./constants": {
+      "require": {
+        "types": "./lib/constants.d.cts",
+        "default": "./lib/constants.cjs"
+      },
+      "import": {
+        "types": "./lib/constants.d.ts",
+        "default": "./lib/constants.js"
+      }
+    },
+    "./lib/*": "./lib/*",
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "directories": {
+    "lib": "./lib",
+    "src": "./src"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "publishConfig": {
+    "provenance": true
+  },
+  "scripts": {
+    "typedoc": "esbuild ./.typedoc/typedoc.tsx --format=esm --outfile=./.typedoc/typedoc.mjs && typedoc --options ./.typedoc/typedoc.json",
+    "vite": "vite --config vite.config.ts",
+    "dev": "vite dev --config vite.config.ts",
+    "start": "vite dev --config vite.config.ts",
+    "build": "tsup",
+    "commitlint": "commitlint --edit",
+    "pre-release": "pnpm build && pnpm typedoc",
+    "prepare": "[ \"$NODE_ENV\" = \"production\" ] || [ -n \"$CI\" ] && echo \"Skipping Husky Install...\" || husky",
+    "semantic-release": "semantic-release"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "lib/**",
+            "src/**"
+          ]
+        }
+      ]
+    ]
+  },
+  "changelog": {
+    "repo": "sharedworker",
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "internal": ":house: Internal"
+    },
+    "cacheDir": ".changelog"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/okikio/sharedworker.git"
+  },
+  "keywords": [
+    "sharedworker",
+    "typescript",
+    "worker",
+    "web",
+    "polyfill",
+    "ponyfill",
+    "es2023"
+  ],
+  "author": {
+    "name": "Okiki Ojo",
+    "email": "hey@okikio.dev",
+    "url": "https://okikio.dev"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/okikio/sharedworker/issues"
+  },
+  "homepage": "https://sharedworker.okikio.dev",
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.1",
+    "@semantic-release/npm": "^12.0.1",
+    "@semantic-release/release-notes-generator": "^14.0.1",
+    "@swc/core": "^1.9.2",
+    "@types/node": "^22.9.1",
+    "@types/web": "^0.0.180",
+    "esbuild": "^0.24.0",
+    "esbuild-plugin-umd-wrapper": "^3.0.0",
+    "husky": "^9.1.7",
+    "pnpm": "^9.14.1",
+    "semantic-release": "^24.2.0",
+    "tsup": "^8.3.5",
+    "typedoc": "^0.26.11",
+    "typedoc-plugin-extras": "^3.1.0",
+    "typedoc-plugin-inline-sources": "^1.1.0",
+    "typedoc-plugin-mdn-links": "^3.3.8",
+    "typedoc-plugin-missing-exports": "^3.0.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

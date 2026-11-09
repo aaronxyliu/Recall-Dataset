@@ -9,12 +9,12 @@ def run(s,i):
  if dest.exists():
   if not os.environ.get('RECALL_RECAPTURE'):return
   prior=e/'previous-captures'/str(int(time.time()));prior.parent.mkdir(exist_ok=True);dest.rename(prior)
- resource=(base/'docker-resource.lock').open('w');fcntl.flock(resource,fcntl.LOCK_EX)
- port=19200+i;name='recall-hufang-'+str(i);runtime=e/'.runtime';runtime.mkdir(exist_ok=True);envpath=runtime/'runtime.env';compose=None
+ resource_guard=(base/'docker-resource.lock').open('w');fcntl.flock(resource_guard,fcntl.LOCK_EX)
+ port=19200+i;name='recall-hufang-'+str(i);runtime=e/'.runtime';runtime.mkdir(exist_ok=True);envpath=runtime/'runtime.env';compose=None;readiness_timeout=min(launch.get('readinessTimeoutSeconds',120),600);compose_wait=min(launch.get('composeWaitSeconds',readiness_timeout),1200)
  values=dict(launch.get('environment',{}));values.update({k:secrets.token_hex(24) for k in launch.get('generateEnvironment',[])})
  for k,n in launch.get('generateHexEnvironment',{}).items():values[k]=secrets.token_hex(n)
  for k,n in launch.get('generateEnvironmentBytes',{}).items():values[k]=secrets.token_urlsafe(n)
- values.update(RECALL_IMAGE=record['image'],RECALL_CONTAINER=name,RECALL_ENV_FILE=str(envpath),RECALL_PORT=str(port),port=str(port))
+ values.update(RECALL_IMAGE=record['image'],RECALL_CONTAINER=name,RECALL_ENV_FILE=str(envpath),RECALL_PORT=str(port),RECALL_RECIPE_DIR=str(root/'bundling-dataset'/key),RECALL_SOURCE_DIR=str(repo),port=str(port))
  if key.startswith('rolldown/discourse'):values.update(POSTGRES_PASSWORD=secrets.token_hex(24),DISCOURSE_DB_HOST='db',DISCOURSE_DB_NAME='discourse',DISCOURSE_DB_USERNAME='discourse',DISCOURSE_REDIS_HOST='redis',DISCOURSE_HOSTNAME='127.0.0.1',DISCOURSE_FORCE_HTTPS='false',DISCOURSE_SECRET_KEY_BASE=secrets.token_hex(64))
  for k,v in launch.get('generateHexEnvironment',{}).items():values.setdefault(k,secrets.token_hex(v))
  for k,v in launch.get('environmentTemplates',{}).items():values[k]=v.format(**values)
@@ -24,22 +24,25 @@ def run(s,i):
  try:
   with (e/'runtime.log').open('w') as log:
    if launch.get('composeFile'):
-    original=recipe/launch['composeFile'];cmd=[os.environ.get('RECALL_COMPOSE_BIN','/tmp/recall-hufang-docker-compose'),'--env-file',str(envpath),'-f',str(original),'config','--format','json'];cfg=json.loads(subprocess.check_output(cmd,stderr=log,text=True,timeout=30));service=next(k for k,v in cfg['services'].items() if v.get('container_name')==name or k=='app' or (v.get('image')==record['image'] and v.get('ports')));cfg.pop('name',None)
+    original=root/'bundling-dataset'/key/launch['composeFile'];cmd=[os.environ.get('RECALL_COMPOSE_BIN','/tmp/recall-hufang-docker-compose'),'--env-file',str(envpath),'-f',str(original),'config','--format','json'];cfg=json.loads(subprocess.check_output(cmd,stderr=log,text=True,timeout=30));service=next(k for k,v in cfg['services'].items() if v.get('container_name')==name or k=='app' or (v.get('image')==record['image'] and v.get('ports')));cfg.pop('name',None)
     for section in ['networks','volumes']:
      for resource,spec in cfg.get(section,{}).items():
       if not spec.get('external'):spec['name']=name+'-'+resource
     for k,v in cfg['services'].items():v['container_name']=name+'-'+k;v['ports']=[]
+    for k,v in cfg['services'].items():
+     if k!=service and v.get('build'):v['build'].setdefault('args',{}).update(HTTP_PROXY='http://host.docker.internal:7897',HTTPS_PROXY='http://host.docker.internal:7897',NO_PROXY='localhost,127.0.0.1,::1')
     cfg['services'][service].update(image=record['image'],ports=[{'target':launch.get('containerPort',3000),'published':str(port),'host_ip':'127.0.0.1','protocol':'tcp'}]);cfg['services'][service].pop('build',None)
-    cf=runtime/'compose.json';cf.write_text(json.dumps(cfg,indent=2));compose=[os.environ.get('RECALL_COMPOSE_BIN','/tmp/recall-hufang-docker-compose'),'-p',name,'-f',str(cf)];subprocess.run(compose+['up','-d','--wait','--wait-timeout','180'],stdout=log,stderr=subprocess.STDOUT,check=True,timeout=300)
+    cf=runtime/'compose.json';cf.write_text(json.dumps(cfg,indent=2));compose=[os.environ.get('RECALL_COMPOSE_BIN','/tmp/recall-hufang-docker-compose'),'-p',name,'-f',str(cf)];subprocess.run(compose+['up','-d','--wait','--wait-timeout',str(compose_wait)],stdout=log,stderr=subprocess.STDOUT,check=True,timeout=compose_wait+900)
+    record['serviceImageIDs']={k:subprocess.check_output(['docker','inspect',name+'-'+k,'--format','{{.Image}}'],text=True).strip() for k in cfg['services']}
    else:subprocess.run(['docker','run','-d','--name',name,'--env-file',str(envpath),'-p',f"127.0.0.1:{port}:{launch.get('containerPort',a.get('containerPort',3000))}",record['image']],stdout=log,stderr=subprocess.STDOUT,check=True,timeout=60)
-  deadline=time.time()+min(launch.get('readinessTimeoutSeconds',120),240)
+  deadline=time.time()+readiness_timeout
   while time.time()<deadline:
    try:
     with urllib.request.urlopen(url,timeout=4) as response:
      if response.status<400:break
    except Exception:time.sleep(2)
-  manifest=repo/a['packageManifest'];deps=json.loads(manifest.read_text()).get('dependencies',{});libs=sorted(deps)[:10];(e/'libraries.json').write_text(json.dumps(libs,indent=2)+'\n')
-  config={'url':url,'manifest':str(manifest),'preparePage':str(base/'page-hook.mjs')};(e/'HOST.md').write_text('Production image from the recorded pinned commit. Source checkouts are ignored; reproduce with build.py. Capture covers the selected route only. At most ten declared production dependencies, selected alphabetically.\n\n```recall-capture\n'+json.dumps(config,indent=2)+'\n```\n')
+  manifest=repo/a['packageManifest'];deps=json.loads(manifest.read_text()).get('dependencies',{});libs=record.get('sourcePreflight',{}).get('selectedLibraries') or sorted(deps)[:10];assert set(libs)<=set(deps);(e/'libraries.json').write_text(json.dumps(libs,indent=2)+'\n')
+  config={'url':url,'manifest':str(manifest),'preparePage':str(base/'page-hook.mjs')};(e/'HOST.md').write_text('Production image from the recorded pinned commit. Source checkouts are ignored; reproduce with build.py. Capture covers the selected route only. The production-library sample is listed in libraries.json; new builds use the source-function preflight selection. Earlier archive captures may have an alphabetic sample. Current dataset membership and selection are defined separately by the source-only policy.\n\n```recall-capture\n'+json.dumps(config,indent=2)+'\n```\n')
   env={**os.environ,**({'RECALL_BROWSER_PROXY':launch['browserProxy']} if launch.get('browserProxy') else {}),'RECALL_EXPECTATIONS':json.dumps(launch),'RECALL_SCREENSHOT':str(e/'page.png'),'RECALL_PAGE_EVIDENCE':str(e/'page.json')}
   with (e/'capture.log').open('w') as log:
    if libs:cmd=['node',str(base/'collector/collect.mjs'),str(repo),str(e/'libraries.json'),str(e/'HOST.md'),str(dest)]

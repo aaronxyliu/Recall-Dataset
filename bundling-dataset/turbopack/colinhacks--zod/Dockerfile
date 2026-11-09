@@ -1,9 +1,11 @@
 FROM node:24-bookworm AS build
 WORKDIR /app
-ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_TELEMETRY_DISABLED=1 CI=true NUB_CONCURRENCY=8
 RUN --mount=type=cache,target=/root/.npm npm install -g @nubjs/nub@0.8.3
 COPY . .
-RUN nub install --frozen-lockfile
+RUN --mount=type=cache,id=recall-zod-nub-cache,target=/root/.cache/nub/pm \
+    --mount=type=cache,id=recall-zod-nub-store,target=/root/.local/share/nub/store \
+    for attempt in 1 2 3; do nub install --frozen-lockfile && exit 0; done; exit 1
 RUN nub run build
 COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
 RUN node /tmp/recall-enable-maps.cjs

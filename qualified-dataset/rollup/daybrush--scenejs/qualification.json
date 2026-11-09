@@ -1,0 +1,359 @@
+{
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "rollup/daybrush--scenejs",
+  "repo": "daybrush/scenejs",
+  "commit": "8db057b6be85de03c5e997b53a82cb1407d6f659",
+  "policy": {
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
+  },
+  "selectionOverride": {},
+  "candidates": [
+    "@daybrush/page",
+    "@daybrush/utils",
+    "scenejs",
+    "shape-svg"
+  ],
+  "libraries": [
+    {
+      "library": "@daybrush/page",
+      "declaredVersion": "^0.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@daybrush/page",
+        "version": "0.2.0",
+        "integrity": "sha512-NjBhFF4JJA+OBdYDFHcq/8x29i2NxWMgYMnu0JOyOh3RBqkPSbsoRu5OCEQEk33BAvoc9zsdz8zCsXHEiopVtg==",
+        "shasum": "e122993dd97f0ab32a6492c350cacf937d0851b3",
+        "tarballSHA256": "bb5cd47b92c32ed13a983c17f8dc73380f79402016999eb734eaf4fc40a30f84",
+        "bytes": 50022,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 22,
+      "diagnostics": [
+        {
+          "file": "src/Page.ts",
+          "error": "SyntaxError: [18:7-18:16]: Unexpected token: 'interface'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/page.esm.js",
+          "source": "source-js/6c5b599b6cad66c987065b110780d96bf3e84d403c1a4f21ba2fd04abd9d15e5.js",
+          "sourceSHA256": "6c5b599b6cad66c987065b110780d96bf3e84d403c1a4f21ba2fd04abd9d15e5",
+          "span": [
+            2231,
+            3762
+          ],
+          "name": "Page",
+          "normalizedASTSHA256": "46f2b3d84b8e15fa7430941dd4bcf5b41dce5f0bc57fd69f3bc410ceb9d686bc",
+          "codeSHA256": "d4487186fba69b9fc1acec6c53c3ae0360dfe35d7fcffbab9079a1cffb65172c",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "b6f4e33fc18c9d50",
+            "graphNodes": 28,
+            "graphEdges": 36,
+            "graphOperationOccurrences": 37,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/page.esm.js",
+          "source": "source-js/6c5b599b6cad66c987065b110780d96bf3e84d403c1a4f21ba2fd04abd9d15e5.js",
+          "sourceSHA256": "6c5b599b6cad66c987065b110780d96bf3e84d403c1a4f21ba2fd04abd9d15e5",
+          "span": [
+            3925,
+            4351
+          ],
+          "name": "range",
+          "normalizedASTSHA256": "4e6e5bef50835fda18374c7521e037d1d90a343ec4227032e02f12fc319cda6b",
+          "codeSHA256": "e9b3fff27ec58196fdac97fc1b5f0f63331aaf786e9a67b1ba99f4bccfa164fd",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "dc8ecb087c011c2b",
+            "graphNodes": 10,
+            "graphEdges": 11,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/page.esm.js",
+          "source": "source-js/6c5b599b6cad66c987065b110780d96bf3e84d403c1a4f21ba2fd04abd9d15e5.js",
+          "sourceSHA256": "6c5b599b6cad66c987065b110780d96bf3e84d403c1a4f21ba2fd04abd9d15e5",
+          "span": [
+            5909,
+            6745
+          ],
+          "name": "calcSize",
+          "normalizedASTSHA256": "a51ce602f948b98acf17859462c1028f2b4914d800f62ff9a5d7b64c8b44084d",
+          "codeSHA256": "6d2f9125c8dc8d70f7c1cb83c69cb205a56dc51d3cd1dbd1f5cd895e61c6ebd5",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "751d01d757a3b757",
+            "graphNodes": 23,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/2b4cf953e8e285a4243f",
+      "licenses": [],
+      "lockfileSHA256": "813d45167141af13b84b384e1eb9e46c1fc01d9c601ab8666e7bea7406d95f12",
+      "lockfileSnapshot": "lockfiles/813d45167141af13b84b384e1eb9e46c1fc01d9c601ab8666e7bea7406d95f12-yarn.lock"
+    },
+    {
+      "library": "@daybrush/utils",
+      "declaredVersion": "^1.10.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@daybrush/utils",
+        "version": "1.10.2",
+        "integrity": "sha512-fNMWeGUDokdIpebU8oIBUXkyGYITCwwodBfgx277p8d+kvI+k9wdFtKtdY4mvbWxhbAwuWprtVDq8My3KQ24Dg==",
+        "shasum": "fb10bab437d1bb3d052fa49ca01f23c86a2ad1f1",
+        "tarballSHA256": "82f0b359d57200477af5851733bac3c76441733f3e5d779ec6bcb52260bdf557",
+        "bytes": 106650,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 32,
+      "diagnostics": [
+        {
+          "file": "src/color.ts",
+          "error": "SyntaxError: [19:26-19:27]: Expected ')'"
+        },
+        {
+          "file": "src/consts.ts",
+          "error": "SyntaxError: [139:56-139:58]: Unexpected token: 'as'"
+        },
+        {
+          "file": "src/dom.ts",
+          "error": "SyntaxError: [8:17-8:18]: Expected '('"
+        },
+        {
+          "file": "src/utils.ts",
+          "error": "SyntaxError: [32:22-32:23]: Expected ')'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "config/merge.js",
+          "source": "source-js/6e18778225e202b1ae10aaef74b5d4ed1b43884843bf2bd7bc6ce42216541405.js",
+          "sourceSHA256": "6e18778225e202b1ae10aaef74b5d4ed1b43884843bf2bd7bc6ce42216541405",
+          "span": [
+            17,
+            598
+          ],
+          "name": "merge",
+          "normalizedASTSHA256": "f487a467a1ad47976f9470d10724be10494f19d5492f0f64793c1f5fc0389358",
+          "codeSHA256": "f95920a6e1c4176516ec65e4297a5b23f20a41635a64d954eeecb35318466f0d",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "b57eb3448058f6ab",
+            "graphNodes": 16,
+            "graphEdges": 19,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 3,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/utils.cjs.js",
+          "source": "source-js/842b4a5a1c98b63899b8278b79c34a992cfc4b211a771a008fe73f8bd3cac718.js",
+          "sourceSHA256": "842b4a5a1c98b63899b8278b79c34a992cfc4b211a771a008fe73f8bd3cac718",
+          "span": [
+            12900,
+            14642
+          ],
+          "name": "_loop_2",
+          "normalizedASTSHA256": "0be3c6425e39c20b317a42cebe7dd209f4f0d53c7f96d262d22f9390c0262a93",
+          "codeSHA256": "1a4ff2d8b99ef9c41551c655e908a8358b9b74bdbbb4d2bf329c36338631529d",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "69bf14075b75facc",
+            "graphNodes": 21,
+            "graphEdges": 31,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/utils.cjs.js",
+          "source": "source-js/842b4a5a1c98b63899b8278b79c34a992cfc4b211a771a008fe73f8bd3cac718.js",
+          "sourceSHA256": "842b4a5a1c98b63899b8278b79c34a992cfc4b211a771a008fe73f8bd3cac718",
+          "span": [
+            11767,
+            14929
+          ],
+          "name": "splitText",
+          "normalizedASTSHA256": "50292927a281fc66c4f125a7a1438b7c749f3c8510cd7fee7edbb14f89bf4981",
+          "codeSHA256": "99c288cd110bab9e888c269199ee3890c99cb93efc766f7b92693863babd1e62",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "2d486bc976427dd7",
+            "graphNodes": 24,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/3af9a12d92a80b1e18aa",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "07267d703fbfc8fbbd2586d0fef147303e0647bbc5e62d33f96ee8f23437fa59"
+        }
+      ],
+      "lockfileSHA256": "813d45167141af13b84b384e1eb9e46c1fc01d9c601ab8666e7bea7406d95f12",
+      "lockfileSnapshot": "lockfiles/813d45167141af13b84b384e1eb9e46c1fc01d9c601ab8666e7bea7406d95f12-yarn.lock"
+    },
+    {
+      "library": "shape-svg",
+      "declaredVersion": "^0.3.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "shape-svg",
+        "version": "0.3.3",
+        "integrity": "sha512-d2Tpr4kLs4dLKEVBmJVFFep0FD4ktQ76YI409OAibqjOD/nnb2vMcBzOMDyp0jKctxbzPXeHXf+acagnthcn/Q==",
+        "shasum": "b388c99c4debb0c494457ed1f553b6239b7054df",
+        "tarballSHA256": "cdb03695a1ff5e71c928c38f67b6c02ea6dd8d6eacc90466f011a38cbee8f037",
+        "bytes": 118885,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 10,
+      "diagnostics": [
+        {
+          "file": "src/index.ts",
+          "error": "SyntaxError: [4:7-4:16]: Unexpected token: 'interface'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "config/merge.js",
+          "source": "source-js/6e18778225e202b1ae10aaef74b5d4ed1b43884843bf2bd7bc6ce42216541405.js",
+          "sourceSHA256": "6e18778225e202b1ae10aaef74b5d4ed1b43884843bf2bd7bc6ce42216541405",
+          "span": [
+            17,
+            598
+          ],
+          "name": "merge",
+          "normalizedASTSHA256": "f487a467a1ad47976f9470d10724be10494f19d5492f0f64793c1f5fc0389358",
+          "codeSHA256": "f95920a6e1c4176516ec65e4297a5b23f20a41635a64d954eeecb35318466f0d",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "b57eb3448058f6ab",
+            "graphNodes": 16,
+            "graphEdges": 19,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 3,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/shape-svg.common.js",
+          "source": "source-js/5bc276b2d671450ff50552e82c0daa8a818e586fee3af7fe58a7be22e9b5cdff.js",
+          "sourceSHA256": "5bc276b2d671450ff50552e82c0daa8a818e586fee3af7fe58a7be22e9b5cdff",
+          "span": [
+            1411,
+            1751
+          ],
+          "name": "__rest",
+          "normalizedASTSHA256": "8457b389a5df8d5964994e1f0930932401b0c1d5c3816af58ebba90b43d7af6d",
+          "codeSHA256": "8fb63b2da8e969e48e529e0020b21404d80dabb030c835dd53c9f4edff89aa04",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "253b9e3e2a5bf51e",
+            "graphNodes": 17,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/shape-svg.common.js",
+          "source": "source-js/5bc276b2d671450ff50552e82c0daa8a818e586fee3af7fe58a7be22e9b5cdff.js",
+          "sourceSHA256": "5bc276b2d671450ff50552e82c0daa8a818e586fee3af7fe58a7be22e9b5cdff",
+          "span": [
+            2611,
+            3046
+          ],
+          "name": "setOrigin",
+          "normalizedASTSHA256": "d6571084920678bd8abd0592c7c0da0422f674ee6a8597dca04132a45f7315eb",
+          "codeSHA256": "04c3852f9f6eb6936255089674724acda410c8e4ab86019a17114e770253629f",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "e1b09d80daa8284d",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/cf37c3965b17ba7786dc",
+      "licenses": [],
+      "lockfileSHA256": "813d45167141af13b84b384e1eb9e46c1fc01d9c601ab8666e7bea7406d95f12",
+      "lockfileSnapshot": "lockfiles/813d45167141af13b84b384e1eb9e46c1fc01d9c601ab8666e7bea7406d95f12-yarn.lock"
+    }
+  ],
+  "selectedLibraries": [
+    "@daybrush/page",
+    "@daybrush/utils",
+    "shape-svg"
+  ],
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
+    },
+    "frontendManifestSHA256": "0c91604ccdf6dde874144599e52058a79b133b7b233965d8f1dd6ca5ecd2f5a9",
+    "manifestRelative": "packages/demo/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:43:23.045Z",
+  "reason": null,
+  "finished": "2026-11-09T03:43:23.081Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/rollup/daybrush--scenejs/qualification.json",
+  "sourceEligibilityRecordSHA256": "71a5692e88704c4972d3e9fec54416b7ba519349104263ae50d6d3e14edd8639",
+  "organizationSignature": "09f39054adb5782cda92d5d6f8d17e1cf65483034e4bb4fad9efa4fa90aaa869"
+}

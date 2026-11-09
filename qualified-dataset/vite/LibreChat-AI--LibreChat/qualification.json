@@ -1,26 +1,20 @@
 {
-  "schema": "recall.dataset-anchor-qualification/v1",
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "vite/LibreChat-AI--LibreChat",
+  "repo": "LibreChat-AI/LibreChat",
+  "commit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
   "policy": {
-    "candidateField": "dependencies",
-    "minInitialAnchors": 3,
-    "minLibraries": 5,
-    "maxLibraries": 10,
-    "counting": "distinct source functions before propagation; repeated target copies count once",
-    "options": {
-      "minFeatures": 10,
-      "featureMetric": "propertyOperations",
-      "minAnchors": 3,
-      "uniqueBundle": true
-    }
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "provenance": {
-    "groundTruthSHA256": "0c45d1e81cdc7b8b6530ffc273d9aab758effb1643a15632e41713241651cb33",
-    "manifestSHA256": "98ca1d1f4947409594604378952ee2396b1819fbf4403bab0ba174774f7a4ad3",
-    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
-    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
-    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
-    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
-  },
+  "selectionOverride": {},
   "candidates": [
     "@ariakit/react",
     "@ariakit/react-components",
@@ -132,1242 +126,1811 @@
     "web-vitals",
     "zod"
   ],
-  "excludedPreviouslySelected": [],
   "libraries": [
     {
-      "library": "@ariakit/react",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@ariakit/react-components",
-      "initialAnchors": 32,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "copy-to-clipboard",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "web-vitals",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 867,
-      "sourceFiles": 127,
-      "finalInitialAnchors": 32
-    },
-    {
-      "library": "@codesandbox/sandpack-react",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@dicebear/collection",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@dicebear/core",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@dicebear/core"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 33,
-      "sourceFiles": 8
-    },
-    {
-      "library": "@headlessui/react",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@hyperdx/otel-web",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@hyperdx/otel-web-session-recorder",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@librechat/chat",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@librechat/client",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@marsidev/react-turnstile",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 37,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 3
-    },
-    {
       "library": "@mcp-ui/client",
-      "initialAnchors": 7,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "copy-to-clipboard",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "web-vitals",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
-      ],
+      "declaredVersion": "^5.7.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@mcp-ui/client",
+        "version": "5.7.0",
+        "integrity": "sha512-+HbPw3VS46WUSWmyJ34ZVnygb81QByA3luR6y0JDbyDZxjYtHw1FcIN7v9WbbE8PrfI0WcuWCSiNOO6sOGbwpQ==",
+        "shasum": "8f46ccba4f3c17e2f733dbef9563ff4ed034f5cd",
+        "tarballSHA256": "03755e5a5a83e50378057f99855fec75dd2fb5db8a68ac8b2c26078a88ac0442",
+        "bytes": 257864,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 164,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 7
-    },
-    {
-      "library": "@modelcontextprotocol/ext-apps",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 22,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/06e7618fb68f22f6fa7096cdb778b065985d80767a1ac1376f856098025c5967.js",
+          "sourceSHA256": "06e7618fb68f22f6fa7096cdb778b065985d80767a1ac1376f856098025c5967",
+          "span": [
+            1064,
+            3029
+          ],
+          "name": "Ue",
+          "normalizedASTSHA256": "6d39a7c8109412fe5fa457c42b97f4d7e0730f5c7bfeece9f8d891846701ee6f",
+          "codeSHA256": "0894e01ef76e5da77ab043e70d41f797d4a8b63081c71aaf7182d385a88c12b8",
+          "features": {
+            "propertyOperations": 56,
+            "distinctOperationPropertyPairs": 24,
+            "pogHash": "ac589ae8aa417e84",
+            "graphNodes": 54,
+            "graphEdges": 69,
+            "graphOperationOccurrences": 66,
+            "distinctGraphOperationPropertyPairs": 23,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/06e7618fb68f22f6fa7096cdb778b065985d80767a1ac1376f856098025c5967.js",
+          "sourceSHA256": "06e7618fb68f22f6fa7096cdb778b065985d80767a1ac1376f856098025c5967",
+          "span": [
+            3029,
+            3448
+          ],
+          "name": "xe",
+          "normalizedASTSHA256": "33ca0373ee74f2e42a9c2413f9407fe998abb9680b2dcae272fb7dfcfc2aee10",
+          "codeSHA256": "88d781184e0004ac74712eade2756cb78f2c5d9865ffdd7738f33d12155d74ab",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "90aa0008f3073907",
+            "graphNodes": 13,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/06e7618fb68f22f6fa7096cdb778b065985d80767a1ac1376f856098025c5967.js",
+          "sourceSHA256": "06e7618fb68f22f6fa7096cdb778b065985d80767a1ac1376f856098025c5967",
+          "span": [
+            4421,
+            5186
+          ],
+          "name": "v",
+          "normalizedASTSHA256": "165b5d5e52ff7fafcbe02a6f0617a6e3569abf6c3912293a8c5ae8fa56955081",
+          "codeSHA256": "58a0b388d520044cd95e594f5ed1d926d5f05a4e2bfc74f3b73746df8d479645",
+          "features": {
+            "propertyOperations": 26,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "532db799a6280f4e",
+            "graphNodes": 34,
+            "graphEdges": 49,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 19,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 175,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 3
-    },
-    {
-      "library": "@monaco-editor/react",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@opentelemetry/exporter-trace-otlp-http",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@opentelemetry/resources",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@opentelemetry/sdk-trace-base",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@radix-ui/react-accordion",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@radix-ui/react-alert-dialog",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-alert-dialog"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 13,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-checkbox",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-checkbox"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 19,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-collapsible",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-collapsible"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 13,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-dialog",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-dialog"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 34,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-direction",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 5,
-      "sourceFiles": 2
-    },
-    {
-      "library": "@radix-ui/react-dropdown-menu",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@radix-ui/react-hover-card",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-hover-card"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 29,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-icons",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-icons"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 319,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-label",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-label"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 2,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-popover",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-popover"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 26,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-progress",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-progress"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 9,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-radio-group",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@radix-ui/react-select",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@radix-ui/react-separator",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-separator"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 2,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-slider",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-slider"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 59,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-switch",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-switch"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 8,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-tabs",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-tabs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 14,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@radix-ui/react-toast",
-      "initialAnchors": 7,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-toast"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 78,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 7
-    },
-    {
-      "library": "@react-spring/web",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 64,
-      "sourceFiles": 2
-    },
-    {
-      "library": "@simplewebauthn/browser",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 23,
-      "sourceFiles": 15
-    },
-    {
-      "library": "@tanstack/react-query",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 62,
-      "sourceFiles": 14
-    },
-    {
-      "library": "@tanstack/react-table",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 11,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@tanstack/react-virtual",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 10,
-      "sourceFiles": 1
-    },
-    {
-      "library": "class-variance-authority",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 7,
-      "sourceFiles": 1
-    },
-    {
-      "library": "clsx",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 4,
-      "sourceFiles": 2
-    },
-    {
-      "library": "copy-to-clipboard",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "copy-to-clipboard"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 3,
-      "sourceFiles": 1
-    },
-    {
-      "library": "cross-env",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "date-fns",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 130,
-      "sourceFiles": 54
-    },
-    {
-      "library": "dompurify",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 118,
-      "sourceFiles": 1
-    },
-    {
-      "library": "downloadjs",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 12,
-      "sourceFiles": 1
-    },
-    {
-      "library": "export-from-json",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 59,
-      "sourceFiles": 6
-    },
-    {
-      "library": "filenamify",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 2,
-      "sourceFiles": 2
-    },
-    {
-      "library": "framer-motion",
-      "initialAnchors": 26,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "copy-to-clipboard",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "web-vitals",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 238,
-      "sourceFiles": 62,
-      "finalInitialAnchors": 26
-    },
-    {
-      "library": "heic-to",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "html-to-image",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 121,
-      "sourceFiles": 10
-    },
-    {
-      "library": "i18next",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 228,
-      "sourceFiles": 1
-    },
-    {
-      "library": "i18next-browser-languagedetector",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "input-otp",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 42,
-      "sourceFiles": 1
-    },
-    {
-      "library": "jotai",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "copy-to-clipboard",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "web-vitals",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 218,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 4
-    },
-    {
-      "library": "js-cookie",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 9,
-      "sourceFiles": 1
-    },
-    {
-      "library": "librechat-data-provider",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "lodash",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 164,
-      "sourceFiles": 150
-    },
-    {
-      "library": "lucide",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 27
-    },
-    {
-      "library": "lucide-react",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 11,
-      "sourceFiles": 237
-    },
-    {
-      "library": "match-sorter",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 20,
-      "sourceFiles": 1
-    },
-    {
-      "library": "mdast-util-directive",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 23,
-      "sourceFiles": 1
-    },
-    {
-      "library": "mdast-util-from-markdown",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 67,
-      "sourceFiles": 1
-    },
-    {
-      "library": "mdast-util-gfm",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 2,
-      "sourceFiles": 1
-    },
-    {
-      "library": "mdast-util-math",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 13,
-      "sourceFiles": 1
-    },
-    {
-      "library": "mermaid",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "micromark-extension-directive",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 67,
-      "sourceFiles": 7
-    },
-    {
-      "library": "micromark-extension-gfm",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 2,
-      "sourceFiles": 1
-    },
-    {
-      "library": "micromark-extension-llm-math",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 56,
-      "sourceFiles": 5
-    },
-    {
-      "library": "micromark-extension-math",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "micromark-util-character",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 6,
-      "sourceFiles": 1
-    },
-    {
-      "library": "micromark-util-symbol",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 2
-    },
-    {
-      "library": "monaco-editor",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "morphicons",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 119,
-      "sourceFiles": 3
-    },
-    {
-      "library": "qrcode.react",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 76,
-      "sourceFiles": 1
+      "proofDirectory": "eligibility/libraries/7fa4e0b7d4a60abbe86c",
+      "licenses": [],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
     },
     {
       "library": "react",
-      "initialAnchors": 6,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "copy-to-clipboard",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "web-vitals",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
-      ],
+      "declaredVersion": "^18.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react",
+        "version": "18.3.1",
+        "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==",
+        "shasum": "49ab892009c53933625bd16b2533fc754cab2891",
+        "tarballSHA256": "8d9bed01a672e7eaf387942d781ad47c6a43089a30a0306060f9fd5ac7870347",
+        "bytes": 81751,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 55,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 6
-    },
-    {
-      "library": "react-avatar-editor",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 74,
-      "sourceFiles": 1
-    },
-    {
-      "library": "react-dnd",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 157,
-      "sourceFiles": 32
-    },
-    {
-      "library": "react-dnd-html5-backend",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 113,
-      "sourceFiles": 13
-    },
-    {
-      "library": "react-dom",
-      "initialAnchors": 59,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "copy-to-clipboard",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "web-vitals",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            5344,
+            7193
+          ],
+          "name": "getComponentNameFromType",
+          "normalizedASTSHA256": "a1e72755ec916bfe92c3abea09c3d4eb80544ce4b414f107e78042d4fc195f65",
+          "codeSHA256": "47167ee9ca2bf32d87a5f1f1074f9d220be358a8d4591777c775beda0bfface0",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "db98a1512acb2dfb",
+            "graphNodes": 33,
+            "graphEdges": 52,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            7687,
+            8600
+          ],
+          "name": "disableLogs",
+          "normalizedASTSHA256": "ac0566cb926bf100c6b3d136902c1b167fc2f341f6507f491e1776d1954b4996",
+          "codeSHA256": "d7ef3859231e043d82d16c9df2e9d198afc9dfa4d1f99ad3374046501b19303b",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "29a358caaedc6d00",
+            "graphNodes": 5,
+            "graphEdges": 4,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            8601,
+            9695
+          ],
+          "name": "reenableLogs",
+          "normalizedASTSHA256": "c860344e4606909b8f79ffb4338589b6f8f5f29b9f3673bd05c06fa4129b9c2c",
+          "codeSHA256": "9e45a7165427a340732f72f562a5447c4e7f1483521bab20b140a496573d6193",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "2e4631ecad4ad9ed",
+            "graphNodes": 6,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
       ],
+      "proofDirectory": "eligibility/libraries/275976081ce1abf67779",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
+    },
+    {
+      "library": "@ariakit/react-components",
+      "declaredVersion": "^0.1.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@ariakit/react-components",
+        "version": "0.1.2",
+        "integrity": "sha512-SM+SPMAVlOZmGAfWNBza+0k9y4mkA5/dJhDoOyhE96cbNARy665uLdwowSJl1JGuFfcZzuzAwGon7f/rYeyfkQ==",
+        "shasum": "698f8799b9b9dc0003140f2235ec8c4c18cc4f3a",
+        "tarballSHA256": "81db8439adb8a4ec577949b4e35d9d0aec39c1affa93e477aa995824169da97f",
+        "bytes": 672846,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 490,
-      "sourceFiles": 3,
-      "finalInitialAnchors": 59
-    },
-    {
-      "library": "react-flip-toolkit",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 15,
-      "sourceFiles": 1
-    },
-    {
-      "library": "react-gtm-module",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 12,
-      "sourceFiles": 4
-    },
-    {
-      "library": "react-hook-form",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 231,
-      "sourceFiles": 1
-    },
-    {
-      "library": "react-i18next",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 76,
-      "sourceFiles": 9
-    },
-    {
-      "library": "react-markdown",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 3,
-      "sourceFiles": 1
-    },
-    {
-      "library": "react-resizable-panels",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 208,
-      "sourceFiles": 1
-    },
-    {
-      "library": "react-router-dom",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react-speech-recognition",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 131,
-      "sourceFiles": 9
-    },
-    {
-      "library": "react-textarea-autosize",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 18,
-      "sourceFiles": 1
-    },
-    {
-      "library": "react-transition-group",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 46,
-      "sourceFiles": 5
-    },
-    {
-      "library": "react-virtualized",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 564,
-      "sourceFiles": 45
-    },
-    {
-      "library": "react-vtree",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 38,
-      "sourceFiles": 4
-    },
-    {
-      "library": "recoil",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 719,
-      "sourceFiles": 1
-    },
-    {
-      "library": "regenerator-runtime",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 50,
-      "sourceFiles": 1
-    },
-    {
-      "library": "rehype-highlight",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 4,
-      "sourceFiles": 1
-    },
-    {
-      "library": "rehype-katex",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 3,
-      "sourceFiles": 1
-    },
-    {
-      "library": "remark-directive",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 1,
-      "sourceFiles": 1
-    },
-    {
-      "library": "remark-gfm",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 1,
-      "sourceFiles": 1
-    },
-    {
-      "library": "remark-math",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 1,
-      "sourceFiles": 1
-    },
-    {
-      "library": "remark-supersub",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 6,
-      "sourceFiles": 1
-    },
-    {
-      "library": "sse.js",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 19,
-      "sourceFiles": 1
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 9,
+      "parsedFunctions": 21,
+      "diagnostics": [
+        {
+          "file": "src/button/button.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/checkbox/checkbox-check.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/checkbox/checkbox-context.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/checkbox/checkbox-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/checkbox/checkbox-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/checkbox/checkbox.tsx",
+          "error": "SyntaxError: [12:12-12:13]: Expected 'from'"
+        },
+        {
+          "file": "src/collection/collection-context.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/collection/collection-item-offscreen.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/collection/collection-item.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/collection/collection-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/collection/collection-renderer.tsx",
+          "error": "SyntaxError: [12:12-12:13]: Expected 'from'"
+        },
+        {
+          "file": "src/collection/collection-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/collection/collection.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-cancel.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-context.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-disclosure.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-group-label.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-group.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-item-check.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-item-offscreen.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-item-value.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-item.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-label.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-list.tsx",
+          "error": "SyntaxError: [12:12-12:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-popover.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-row.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-separator.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox-value.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/combobox/combobox.tsx",
+          "error": "SyntaxError: [15:12-15:13]: Expected 'from'"
+        },
+        {
+          "file": "src/command/command.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-container.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-context.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-group-label.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-group.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-hover.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-input.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-item-offscreen.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-item.tsx",
+          "error": "SyntaxError: [13:12-13:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-overflow-disclosure.ts",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-overflow-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-overflow.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-renderer.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-row.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-separator.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite-typeahead.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/composite.tsx",
+          "error": "SyntaxError: [13:12-13:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composite/utils.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog-backdrop.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog-context.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog-description.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog-disclosure.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog-dismiss.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog-heading.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/dialog.tsx",
+          "error": "SyntaxError: [14:12-14:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/utils/disable-accessibility-tree-outside.ts",
+          "error": "SyntaxError: [3:56-3:57]: Expected ')'"
+        },
+        {
+          "file": "src/dialog/utils/disable-tree.ts",
+          "error": "SyntaxError: [14:5-14:13]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/dialog/utils/is-backdrop.ts",
+          "error": "SyntaxError: [2:9-2:10]: Expected ')'"
+        },
+        {
+          "file": "src/dialog/utils/is-focus-trap.ts",
+          "error": "SyntaxError: [2:9-2:10]: Expected ')'"
+        },
+        {
+          "file": "src/dialog/utils/mark-tree-outside.ts",
+          "error": "SyntaxError: [6:5-6:13]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/dialog/utils/orchestrate.ts",
+          "error": "SyntaxError: [1:41-1:42]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/dialog/utils/prepend-hidden-dismiss.ts",
+          "error": "SyntaxError: [4:11-4:12]: Expected ')'"
+        },
+        {
+          "file": "src/dialog/utils/use-hide-on-interact-outside.ts",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/utils/use-nested-dialogs.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/dialog/utils/use-prevent-body-scroll.ts",
+          "error": "SyntaxError: [7:43-7:44]: Expected ')'"
+        },
+        {
+          "file": "src/dialog/utils/use-previous-mouse-down-ref.ts",
+          "error": "SyntaxError: [4:47-4:48]: Expected ')'"
+        },
+        {
+          "file": "src/dialog/utils/use-root-dialog.ts",
+          "error": "SyntaxError: [6:0-6:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/dialog/utils/walk-tree-outside.ts",
+          "error": "SyntaxError: [4:5-4:13]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/disclosure/disclosure-content.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/disclosure/disclosure-context.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/disclosure/disclosure-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/disclosure/disclosure-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/disclosure/disclosure.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/focus-trap/focus-trap-region.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/focus-trap/focus-trap.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/focusable/focusable-container.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/focusable/focusable.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-checkbox.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-context.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-control.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-description.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-error.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-field.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-group-label.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-group.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-input.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-label.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-push.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-radio-group.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-radio.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-remove.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-reset.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-store.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form-submit.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/form/form.tsx",
+          "error": "SyntaxError: [13:12-13:13]: Expected 'from'"
+        },
+        {
+          "file": "src/group/group-label.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/group/group.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/heading/heading-level.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/heading/heading.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-anchor.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-arrow.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-context.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-description.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-disclosure.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-dismiss.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-heading.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/hovercard.tsx",
+          "error": "SyntaxError: [15:12-15:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/utils/debug-polygon.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/hovercard/utils/polygon.ts",
+          "error": "SyntaxError: [1:7-1:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/menu/menu-arrow.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-bar-provider.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-bar-store.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-bar.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-button-arrow.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-button.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-context.tsx",
+          "error": "SyntaxError: [18:12-18:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-description.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-dismiss.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-group-label.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-group.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-heading.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-item-check.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-item-checkbox.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-item-radio.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-item.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-list.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-separator.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menu/menu.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menubar/menubar-context.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menubar/menubar-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menubar/menubar-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/menubar/menubar.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-anchor.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-arrow.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-context.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-description.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-disclosure-arrow.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-disclosure.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-dismiss.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-heading.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/popover/popover.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/portal/portal.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/radio/radio-context.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/radio/radio-group.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/radio/radio-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/radio/radio-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/radio/radio.tsx",
+          "error": "SyntaxError: [13:12-13:13]: Expected 'from'"
+        },
+        {
+          "file": "src/role/role.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-arrow.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-context.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-dismiss.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-group-label.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-group.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-heading.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-item-check.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-item-offscreen.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-item.tsx",
+          "error": "SyntaxError: [12:12-12:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-label.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-list.tsx",
+          "error": "SyntaxError: [14:12-14:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-popover.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-renderer.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-row.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-separator.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select-value.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/select/select.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/separator/separator.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tab/tab-context.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tab/tab-list.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tab/tab-panel.tsx",
+          "error": "SyntaxError: [12:12-12:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tab/tab-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tab/tab-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tab/tab.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-context.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-input.tsx",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-list-label.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-list.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-remove.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-value.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag-values.tsx",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tag/tag.tsx",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/toolbar/toolbar-container.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/toolbar/toolbar-context.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/toolbar/toolbar-input.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/toolbar/toolbar-item.tsx",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/toolbar/toolbar-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/toolbar/toolbar-separator.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/toolbar/toolbar-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/toolbar/toolbar.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tooltip/tooltip-anchor.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tooltip/tooltip-arrow.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tooltip/tooltip-context.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tooltip/tooltip-provider.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tooltip/tooltip-store.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tooltip/tooltip.tsx",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/visually-hidden/visually-hidden.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/checkbox/checkbox-check.js",
+          "source": "source-js/9e7facccbca2839837ffe5c25fe2987a118a8147b5020604158b58880f3cca88.js",
+          "sourceSHA256": "9e7facccbca2839837ffe5c25fe2987a118a8147b5020604158b58880f3cca88",
+          "span": [
+            1140,
+            1552
+          ],
+          "name": "useCheckboxCheck",
+          "normalizedASTSHA256": "dc200191e88939bd2aba90204a845c369638203e45720e0de8819f1c357bbcfb",
+          "codeSHA256": "050d2c871aeaf2303359161f4f39d7af97267aa66702b48ad0e0d487263cf048",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "86ee84ab6b0e7ad",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/checkbox/checkbox.js",
+          "source": "source-js/3ae92510533a0bd02e0ea80a2c8c522a59f075e4747a8b8923ee4c59b25476c6.js",
+          "sourceSHA256": "3ae92510533a0bd02e0ea80a2c8c522a59f075e4747a8b8923ee4c59b25476c6",
+          "span": [
+            1632,
+            2085
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "7d444399628c4441b420a2207d112ec6fd509e0975b22a764e3270ba397ec822",
+          "codeSHA256": "a64f6f3cfa6b87347cd6bf277b6e69111b59664fa424475995a4e045c0d59510",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 3,
+            "pogHash": "32a436d78042ddb6",
+            "graphNodes": 16,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 8,
+            "distinctGraphOperationPropertyPairs": 2,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/checkbox/checkbox.js",
+          "source": "source-js/3ae92510533a0bd02e0ea80a2c8c522a59f075e4747a8b8923ee4c59b25476c6.js",
+          "sourceSHA256": "3ae92510533a0bd02e0ea80a2c8c522a59f075e4747a8b8923ee4c59b25476c6",
+          "span": [
+            2846,
+            3691
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "afdf60416c8e15f475a35ec38bcfb3e772964887fbe64206d9515cf81f933697",
+          "codeSHA256": "d4eadb0ceb87f29198845bb586d3616885de7299152f38ca0957568afc0f2ab9",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "e9566aa273a959c2",
+            "graphNodes": 11,
+            "graphEdges": 12,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/d52c4c46704727baa0c2",
+      "licenses": [
+        {
+          "path": "licenses/license",
+          "sha256": "593be4976c018fcd06599fc4c679b8f35c7cf055bc53726e991fd724d132732a"
+        }
+      ],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
     },
     {
       "library": "swr",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "copy-to-clipboard",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "web-vitals",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
-      ],
+      "declaredVersion": "^2.3.8",
+      "origin": {
+        "kind": "npm-package",
+        "name": "swr",
+        "version": "2.3.8",
+        "integrity": "sha512-gaCPRVoMq8WGDcWj9p4YWzCMPHzE0WNl6W8ADIx9c3JBEIdMkJGMzW+uzXvxHMltwcYACr9jP+32H8/hgwMR7w==",
+        "shasum": "aa15596321a34e575226a60576bade0b57adf7bf",
+        "tarballSHA256": "cc3955aaa54ef9870314c2f3b209a4daa828b350becfc1566473ce768a566508",
+        "bytes": 67863,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 104,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 3
-    },
-    {
-      "library": "tailwind-merge",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 123,
-      "sourceFiles": 1
-    },
-    {
-      "library": "tailwindcss-animate",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ts-md5",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 12,
-      "sourceFiles": 1
-    },
-    {
-      "library": "web-vitals",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "web-vitals"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 34,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/_internal/config-context-12s-DER5jwVW.js",
+          "source": "source-js/d937394bb5b9d08b70a09148c99cc5e08e396afe7d1cfbc9e1cbdf167d15706c.js",
+          "sourceSHA256": "d937394bb5b9d08b70a09148c99cc5e08e396afe7d1cfbc9e1cbdf167d15706c",
+          "span": [
+            6539,
+            8184
+          ],
+          "name": "stableHash",
+          "normalizedASTSHA256": "a2c272e0ad6826bcb527cdf1ac82e16b743cae6a2c7101d1c99f0dd619d04a7d",
+          "codeSHA256": "d3dd66a150213fe7a0a60fc8dd50dac1e05900c41a9d61c24c8170cf6b3ebb90",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "956c1df06b3466e1",
+            "graphNodes": 27,
+            "graphEdges": 37,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/_internal/config-context-12s-DER5jwVW.js",
+          "source": "source-js/d937394bb5b9d08b70a09148c99cc5e08e396afe7d1cfbc9e1cbdf167d15706c.js",
+          "sourceSHA256": "d937394bb5b9d08b70a09148c99cc5e08e396afe7d1cfbc9e1cbdf167d15706c",
+          "span": [
+            10416,
+            11084
+          ],
+          "name": "startRevalidate",
+          "normalizedASTSHA256": "98767b138df7cf4d50f25e059a159addbfd9ce9de6a6e73387d0102ead98dd2e",
+          "codeSHA256": "e634755baba9363eb8fd8f82345be22f7f48b40d15ae4f714c5d983f8dfdda6e",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "8afcdd55759db24a",
+            "graphNodes": 16,
+            "graphEdges": 18,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/_internal/config-context-12s-DER5jwVW.js",
+          "source": "source-js/d937394bb5b9d08b70a09148c99cc5e08e396afe7d1cfbc9e1cbdf167d15706c.js",
+          "sourceSHA256": "d937394bb5b9d08b70a09148c99cc5e08e396afe7d1cfbc9e1cbdf167d15706c",
+          "span": [
+            10115,
+            15406
+          ],
+          "name": "mutateByKey",
+          "normalizedASTSHA256": "37f8d623ec417c933165316a834be74019926250dc93917661f2966a849aa4e6",
+          "codeSHA256": "8a1a3bf24ae4f1ee8ff85da9ad06ce393e20774ea5ec16b2006b79b08b7892bc",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "668992b3c8aa48e7",
+            "graphNodes": 31,
+            "graphEdges": 47,
+            "graphOperationOccurrences": 32,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 114,
-      "sourceFiles": 1
+      "proofDirectory": "eligibility/libraries/74c83db3a468bf3726fd",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "2eb01c9bb506815f353fc3053a396b0a4ec1b15255cdcf292a437ecc9f5e6ae2"
+        }
+      ],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
     },
     {
-      "library": "zod",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 1282,
-      "sourceFiles": 20
+      "library": "react-dom",
+      "declaredVersion": "^18.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react-dom",
+        "version": "18.3.1",
+        "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
+        "shasum": "c2265d79511b57d479b3dd3fdfa51536494c5cb4",
+        "tarballSHA256": "031d4427a99f2f3f6cac18bbbf308594a67e4f47d10f4896fdec446505b040e0",
+        "bytes": 1089001,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 50,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            21397,
+            22185
+          ],
+          "name": "checkControlledValueProps",
+          "normalizedASTSHA256": "e8d26e65d614734309d58bf91ac502384f15173fc98c09f0a6d6b3137e6ff97f",
+          "codeSHA256": "6b3f7ac985198e54ae877e4162943fcface8d31dd6163640ff1336e294971bc2",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "e423c47e5203f48",
+            "graphNodes": 29,
+            "graphEdges": 37,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            24345,
+            26003
+          ],
+          "name": "validateProperty",
+          "normalizedASTSHA256": "63fd97263c44f203a0d9efeed29681943646a6ff4acf9c78d1439be8457f9e18",
+          "codeSHA256": "1d6ddd3cd61e336b9820056573463c99b4b27e65e7ba6cbdb88c853b074f7c72",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "c36a1f55bf39eb11",
+            "graphNodes": 25,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            41383,
+            47290
+          ],
+          "name": "validateProperty$1",
+          "normalizedASTSHA256": "3b5b7719405a0a3f3c95634a10fdf8ece52db70007eee490f94013d7f6396f58",
+          "codeSHA256": "bbcef362e09863b7357f6b4a8f4878764a392e3a4e54a59676edf7592fc0e84f",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "fb6dad9559a35ede",
+            "graphNodes": 73,
+            "graphEdges": 107,
+            "graphOperationOccurrences": 37,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/de7f2df91c095f0cd45d",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
+    },
+    {
+      "library": "framer-motion",
+      "declaredVersion": "^12.40.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "framer-motion",
+        "version": "12.40.0",
+        "integrity": "sha512-uaBd3qC1v3KQqBEjwTUd183K6PbS+j0yR9w9VmEOLWA/tnUcSn8Xa3uck7t4dgpDoUss8xQTcj8W2L07lrnLFg==",
+        "shasum": "68e53aecd51c8a8a62b565f059b418bef2add0e2",
+        "tarballSHA256": "1784c660421ddc25bf268e161dc3bb0fc4d9f61bfbcc190bcb1a7a03b4a22b59",
+        "bytes": 1228169,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 15,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/cjs/dom-mini.js",
+          "source": "source-js/b650923563a7a26607c6ce3dd4dac67478df3af15322dd80e53ef1d9dfad8ac0.js",
+          "sourceSHA256": "b650923563a7a26607c6ce3dd4dac67478df3af15322dd80e53ef1d9dfad8ac0",
+          "span": [
+            5137,
+            12661
+          ],
+          "name": "resolveValueSequence",
+          "normalizedASTSHA256": "a24f6e8a317d08552f44556757982d20e00055888992eda3355efc6bcfaff97e",
+          "codeSHA256": "e4fd5b167ca3a2e6a59cbb2fc91aa40eebd0d12ac184b1faa29871028e88ae69",
+          "features": {
+            "propertyOperations": 40,
+            "distinctOperationPropertyPairs": 23,
+            "pogHash": "494f3d677656b90d",
+            "graphNodes": 57,
+            "graphEdges": 83,
+            "graphOperationOccurrences": 47,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/dom-mini.js",
+          "source": "source-js/b650923563a7a26607c6ce3dd4dac67478df3af15322dd80e53ef1d9dfad8ac0.js",
+          "sourceSHA256": "b650923563a7a26607c6ce3dd4dac67478df3af15322dd80e53ef1d9dfad8ac0",
+          "span": [
+            14014,
+            16733
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "aba6e30da211e754a9bac1860d8984fcef77f29e3bcefccd74ae2980f0087ffe",
+          "codeSHA256": "2357a19f137379fb438bf64c6cb308b6af4320afdb640258bdcc807855dc4771",
+          "features": {
+            "propertyOperations": 29,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "45f93f5ad6262d9e",
+            "graphNodes": 20,
+            "graphEdges": 24,
+            "graphOperationOccurrences": 40,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/dom-mini.js",
+          "source": "source-js/b650923563a7a26607c6ce3dd4dac67478df3af15322dd80e53ef1d9dfad8ac0.js",
+          "sourceSHA256": "b650923563a7a26607c6ce3dd4dac67478df3af15322dd80e53ef1d9dfad8ac0",
+          "span": [
+            3390,
+            16770
+          ],
+          "name": "createAnimationsFromSequence",
+          "normalizedASTSHA256": "c0934f5957e943cc23194200515806062c6e76964ca44ab0b6f2eaeb84653020",
+          "codeSHA256": "a7cdd8c5c49bb3b60dd218fa25b50b0d64c66c8fd9a26f1edc433b54566028b1",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "911d18be739e9fd5",
+            "graphNodes": 25,
+            "graphEdges": 31,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/5809dff7bdcf27a2f73d",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "5ff46083b88563822b0560dd6221ab89d2f74bc97a52d4c97a75020fd62c6f32"
+        }
+      ],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
+    },
+    {
+      "library": "jotai",
+      "declaredVersion": "^2.12.5",
+      "origin": {
+        "kind": "npm-package",
+        "name": "jotai",
+        "version": "2.12.5",
+        "integrity": "sha512-G8m32HW3lSmcz/4mbqx0hgJIQ0ekndKWiYP7kWVKi0p6saLXdSoye+FZiOFyonnd7Q482LCzm8sMDl7Ar1NWDw==",
+        "shasum": "2decdf41dfcad5e4afc7278da81c45646d4ae8ad",
+        "tarballSHA256": "73b3a53b4a70e321611ec88a5be25c5ea2f54c4184ba7a54f62f557b7fe31980",
+        "bytes": 87312,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 8,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "esm/babel/plugin-debug-label.mjs",
+          "source": "source-js/761bf1d0022a652b774d6908b6a611f4c66332303572e8b4b3307df0873d4134.js",
+          "sourceSHA256": "761bf1d0022a652b774d6908b6a611f4c66332303572e8b4b3307df0873d4134",
+          "span": [
+            1378,
+            2211
+          ],
+          "name": "ExportDefaultDeclaration",
+          "normalizedASTSHA256": "9541069e8a20fceaa54aee762a16b497e6b61f665ddfb9abac710380837caa17",
+          "codeSHA256": "b16802b5998c174e1d0a0a8d5a09e16410556bd75792d1ec6a4eb93d93789f3c",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "624e2b8d6cb5ef29",
+            "graphNodes": 19,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 31,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "esm/babel/plugin-debug-label.mjs",
+          "source": "source-js/761bf1d0022a652b774d6908b6a611f4c66332303572e8b4b3307df0873d4134.js",
+          "sourceSHA256": "761bf1d0022a652b774d6908b6a611f4c66332303572e8b4b3307df0873d4134",
+          "span": [
+            2237,
+            2811
+          ],
+          "name": "VariableDeclarator",
+          "normalizedASTSHA256": "9f2d5149f4a85089c02c5e6d76c4fc4f54efe8fcd87df96df3956196e19add72",
+          "codeSHA256": "4536dcf74c143395d89833d9f90ac4711777296a3d88f87a4f7f2ff7d15445e9",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "f9393b154300dc5b",
+            "graphNodes": 12,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "esm/babel/plugin-react-refresh.mjs",
+          "source": "source-js/8ca7743912126163d74d600736ef06db4fbdee8fc10482be51e46612b4b50fb1.js",
+          "sourceSHA256": "8ca7743912126163d74d600736ef06db4fbdee8fc10482be51e46612b4b50fb1",
+          "span": [
+            1994,
+            2630
+          ],
+          "name": "ExportDefaultDeclaration",
+          "normalizedASTSHA256": "1e72ad9ec408e071bf9f1bf90245d3d68267a2d1e1496f1b15231624958783c7",
+          "codeSHA256": "b0df604a0fdadefd1e0bd7ff6400fac21a340fcd55770aa1663cc24d7d1c1935",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "8db8ed04cea793e0",
+            "graphNodes": 13,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/a2bd07aac8f9d58ee852",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0530d5d58026f4bb73367d195946f6a516a648ea62dd8b84763318f64d3cb3e2"
+        }
+      ],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
+    },
+    {
+      "library": "@marsidev/react-turnstile",
+      "declaredVersion": "^1.1.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@marsidev/react-turnstile",
+        "version": "1.1.0",
+        "integrity": "sha512-X7bP9ZYutDd+E+klPYF+/BJHqEyyVkN4KKmZcNRr84zs3DcMoftlMAuoKqNSnqg0HE7NQ1844+TLFSJoztCdSA==",
+        "shasum": "2209c431baf2a18a104600999389f6fce2dc2553",
+        "tarballSHA256": "2870c06cc7b0979e7a94ff064649db526a8edaa8264397bfb8ec89984cb6e1b2",
+        "bytes": 7404,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 30,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/00cbf6c7043937c5b4b7df1751a44e33c0c0a9bd6ebc081e75324f749549d55f.js",
+          "sourceSHA256": "00cbf6c7043937c5b4b7df1751a44e33c0c0a9bd6ebc081e75324f749549d55f",
+          "span": [
+            500,
+            992
+          ],
+          "name": "q",
+          "normalizedASTSHA256": "fbeabeeb2cd2b7160d6cdc224b54413401f33b8a8ad5070f38c1e0b8e77c8492",
+          "codeSHA256": "caf88943ab8f8e6d5cd1ff177e4a17df15063da877839f76a546ea26c94958f0",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "5307d6284a67cfda",
+            "graphNodes": 17,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/00cbf6c7043937c5b4b7df1751a44e33c0c0a9bd6ebc081e75324f749549d55f.js",
+          "sourceSHA256": "00cbf6c7043937c5b4b7df1751a44e33c0c0a9bd6ebc081e75324f749549d55f",
+          "span": [
+            2230,
+            2868
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "d490e349190ed50f3d14f2f4b39657cefbb5485a7c31bf798e34105a60352211",
+          "codeSHA256": "1a71917cce6016997962ade5bf2b935c5ea64ff6f2c909c6fa414267075710d9",
+          "features": {
+            "propertyOperations": 37,
+            "distinctOperationPropertyPairs": 37,
+            "pogHash": "d9ed23c4341ce398",
+            "graphNodes": 31,
+            "graphEdges": 38,
+            "graphOperationOccurrences": 62,
+            "distinctGraphOperationPropertyPairs": 37,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/00cbf6c7043937c5b4b7df1751a44e33c0c0a9bd6ebc081e75324f749549d55f.js",
+          "sourceSHA256": "00cbf6c7043937c5b4b7df1751a44e33c0c0a9bd6ebc081e75324f749549d55f",
+          "span": [
+            4596,
+            4832
+          ],
+          "name": "render",
+          "normalizedASTSHA256": "4110b588c0c0f4dcac8e8d1ee3d5b8c80a62bc35466644f62f180695093f3a03",
+          "codeSHA256": "bf0c223741b1afab4a2abd491c8d9ce72fa8d8736ca0109d04f0b5061ba10baf",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "39d96504200aa3b4",
+            "graphNodes": 21,
+            "graphEdges": 26,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/74b37f0046521a33aca6",
+      "licenses": [],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
+    },
+    {
+      "library": "@modelcontextprotocol/ext-apps",
+      "declaredVersion": "^1.7.4",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@modelcontextprotocol/ext-apps",
+        "version": "1.7.5",
+        "integrity": "sha512-TjPH2S2y5UEGKhmI6+XGFuqfqOV4ppe1x6DA3txnUaEWkgtA4G5vo14jGKFZmegdkZ1H4QMLyujLvoU1BEdnAg==",
+        "shasum": "53004fadf7bef79c533e28b10893199c7bf46693",
+        "tarballSHA256": "1cc4155d36eb0251f4205d241e090fc9090b4bd1083f24cb79b3cb5deb6813b6",
+        "bytes": 276372,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 26,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/src/app-bridge.js",
+          "source": "source-js/652511797e0ebb1a99b53b42233d03654a69f520103ff5137fd26c2ace7ce90d.js",
+          "sourceSHA256": "652511797e0ebb1a99b53b42233d03654a69f520103ff5137fd26c2ace7ce90d",
+          "span": [
+            1052,
+            1418
+          ],
+          "name": "_ensureEventSlot",
+          "normalizedASTSHA256": "4503ed9d2d1d36f0b62a8694b3327056586fcd415d826b484c3902d71d594f38",
+          "codeSHA256": "c9b101f7a85ed61b36e88dec3c6ba974142e178db25822cbd56682a19da6dc34",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "3ff93732667fa0fa",
+            "graphNodes": 8,
+            "graphEdges": 8,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/src/app-bridge.js",
+          "source": "source-js/652511797e0ebb1a99b53b42233d03654a69f520103ff5137fd26c2ace7ce90d.js",
+          "sourceSHA256": "652511797e0ebb1a99b53b42233d03654a69f520103ff5137fd26c2ace7ce90d",
+          "span": [
+            20864,
+            21310
+          ],
+          "name": "messageListener",
+          "normalizedASTSHA256": "a50229bb87b3e703f9a5c6f907465dcf8499908f70b70bf15f1cf723edb179c4",
+          "codeSHA256": "8504adb244fe015afd93178fb4034e2b067d061fef3c102e9c40a9472fce5be9",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "9f6a3ccd0132e229",
+            "graphNodes": 15,
+            "graphEdges": 17,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/src/app-bridge.js",
+          "source": "source-js/652511797e0ebb1a99b53b42233d03654a69f520103ff5137fd26c2ace7ce90d.js",
+          "sourceSHA256": "652511797e0ebb1a99b53b42233d03654a69f520103ff5137fd26c2ace7ce90d",
+          "span": [
+            23065,
+            23459
+          ],
+          "name": "_assertHandlerTiming",
+          "normalizedASTSHA256": "f01db71203e5a789d8d8a5ffb00169a35631c4c4a9f7e777fa759a6a407402aa",
+          "codeSHA256": "b3cb720fc709fa231f3e728f5127db39a49fde657362d52fe1704a45ae919b05",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "b089b911e9d0711b",
+            "graphNodes": 12,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/de2d5024d63af4d8abf5",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0382b0057770ca05e9c350a50aa3b1c1fea84da0bc81d723bf00b9aa841be58a"
+        }
+      ],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
+    },
+    {
+      "library": "@radix-ui/react-toast",
+      "declaredVersion": "^1.2.23",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@radix-ui/react-toast",
+        "version": "1.2.23",
+        "integrity": "sha512-ofhyAsYaocRGOs/n0XWdUOSVzEAG6BfrMVM8z0c0kLEWY38w/0WuMFPTJP/HVaZPYkMvHZoKIIhNcjbTCBILPg==",
+        "shasum": "b64e2e2b735b4f2188fd79f446e0e2cbc624d088",
+        "tarballSHA256": "96a14e9a028352709cb1b2ce08ae4e46d56b26af8430adb809c9759e9f559a76",
+        "bytes": 42939,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 45,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/1808d8f39b8308e1996ab641be663f91c05562e9574945fb6862d5625658109a.js",
+          "sourceSHA256": "1808d8f39b8308e1996ab641be663f91c05562e9574945fb6862d5625658109a",
+          "span": [
+            3512,
+            4639
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "d3d2c22823794d72f12f42dbb288f566338cccb091fa1fe6fe2fb1553516d72d",
+          "codeSHA256": "d9263d39a0aaaa840e797d17d81fdd0eae63d7dd4ca66788f8ea38ddeeb0ee40",
+          "features": {
+            "propertyOperations": 25,
+            "distinctOperationPropertyPairs": 20,
+            "pogHash": "aa977d7d8b384b3c",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 45,
+            "distinctGraphOperationPropertyPairs": 20,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/1808d8f39b8308e1996ab641be663f91c05562e9574945fb6862d5625658109a.js",
+          "sourceSHA256": "1808d8f39b8308e1996ab641be663f91c05562e9574945fb6862d5625658109a",
+          "span": [
+            8958,
+            9995
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "e68d536b5afd34a7a2901b6b33649dbe6d5f852bd39fc742c18b46ff90d1ce10",
+          "codeSHA256": "b27e66da5d91be2426cdd9cfb8b89c0216681c404a00c5f684960fb4157c3012",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "d44c8fd78a8b2d6b",
+            "graphNodes": 24,
+            "graphEdges": 31,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/1808d8f39b8308e1996ab641be663f91c05562e9574945fb6862d5625658109a.js",
+          "sourceSHA256": "1808d8f39b8308e1996ab641be663f91c05562e9574945fb6862d5625658109a",
+          "span": [
+            4903,
+            11644
+          ],
+          "name": "ToastViewport2",
+          "normalizedASTSHA256": "aa0a988f0626bad2bfa7cdd471beea19ce9d323104aa51574300f48e9ce1d35a",
+          "codeSHA256": "5bdb9bfaa4dc1de7df5b14a77e8e0e0723fbec4de7b84cfe9b2e936808635204",
+          "features": {
+            "propertyOperations": 40,
+            "distinctOperationPropertyPairs": 24,
+            "pogHash": "b03326c72e1092",
+            "graphNodes": 13,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 52,
+            "distinctGraphOperationPropertyPairs": 24,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/85a6e87e5c788d6cdb81",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0e80a2d229d2fd4fc7e8636142ec5d0ff0bc031f14c15b682e2ac01dfd5b5138"
+        }
+      ],
+      "lockfileSHA256": "5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc",
+      "lockfileSnapshot": "lockfiles/5f5cf7fa0232d57867d33ffb894b649f3f8cceae61a2040c02425d2fdd7af7bc-package-lock.json"
     }
   ],
   "selectedLibraries": [
@@ -1382,518 +1945,24 @@
     "@modelcontextprotocol/ext-apps",
     "@radix-ui/react-toast"
   ],
-  "status": "included",
-  "referenceFailures": [],
-  "referenceFiles": 943,
-  "bundleUnits": 62,
-  "candidateOrder": [
-    "@mcp-ui/client",
-    "react",
-    "@ariakit/react-components",
-    "swr",
-    "react-dom",
-    "framer-motion",
-    "jotai",
-    "copy-to-clipboard",
-    "web-vitals",
-    "@radix-ui/react-direction",
-    "@ariakit/react",
-    "@codesandbox/sandpack-react",
-    "@dicebear/collection",
-    "@dicebear/core",
-    "@headlessui/react",
-    "@hyperdx/otel-web",
-    "@hyperdx/otel-web-session-recorder",
-    "@librechat/chat",
-    "@librechat/client",
-    "@marsidev/react-turnstile",
-    "@modelcontextprotocol/ext-apps",
-    "@monaco-editor/react",
-    "@opentelemetry/exporter-trace-otlp-http",
-    "@opentelemetry/resources",
-    "@opentelemetry/sdk-trace-base",
-    "@radix-ui/react-accordion",
-    "@radix-ui/react-alert-dialog",
-    "@radix-ui/react-checkbox",
-    "@radix-ui/react-collapsible",
-    "@radix-ui/react-dialog",
-    "@radix-ui/react-dropdown-menu",
-    "@radix-ui/react-hover-card",
-    "@radix-ui/react-icons",
-    "@radix-ui/react-label",
-    "@radix-ui/react-popover",
-    "@radix-ui/react-progress",
-    "@radix-ui/react-radio-group",
-    "@radix-ui/react-select",
-    "@radix-ui/react-separator",
-    "@radix-ui/react-slider",
-    "@radix-ui/react-switch",
-    "@radix-ui/react-tabs",
-    "@radix-ui/react-toast",
-    "@react-spring/web",
-    "@simplewebauthn/browser",
-    "@tanstack/react-query",
-    "@tanstack/react-table",
-    "@tanstack/react-virtual",
-    "class-variance-authority",
-    "clsx",
-    "cross-env",
-    "date-fns",
-    "dompurify",
-    "downloadjs",
-    "export-from-json",
-    "filenamify",
-    "heic-to",
-    "html-to-image",
-    "i18next",
-    "i18next-browser-languagedetector",
-    "input-otp",
-    "js-cookie",
-    "librechat-data-provider",
-    "lodash",
-    "lucide",
-    "lucide-react",
-    "match-sorter",
-    "mdast-util-directive",
-    "mdast-util-from-markdown",
-    "mdast-util-gfm",
-    "mdast-util-math",
-    "mermaid",
-    "micromark-extension-directive",
-    "micromark-extension-gfm",
-    "micromark-extension-llm-math",
-    "micromark-extension-math",
-    "micromark-util-character",
-    "micromark-util-symbol",
-    "monaco-editor",
-    "morphicons",
-    "qrcode.react",
-    "react-avatar-editor",
-    "react-dnd",
-    "react-dnd-html5-backend",
-    "react-flip-toolkit",
-    "react-gtm-module",
-    "react-hook-form",
-    "react-i18next",
-    "react-markdown",
-    "react-resizable-panels",
-    "react-router-dom",
-    "react-speech-recognition",
-    "react-textarea-autosize",
-    "react-transition-group",
-    "react-virtualized",
-    "react-vtree",
-    "recoil",
-    "regenerator-runtime",
-    "rehype-highlight",
-    "rehype-katex",
-    "remark-directive",
-    "remark-gfm",
-    "remark-math",
-    "remark-supersub",
-    "sse.js",
-    "tailwind-merge",
-    "tailwindcss-animate",
-    "ts-md5",
-    "zod"
-  ],
-  "selectionAttempts": [
-    {
-      "library": "copy-to-clipboard",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "copy-to-clipboard"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
     },
-    {
-      "library": "web-vitals",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "web-vitals"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-direction",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@radix-ui/react-direction"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@dicebear/core",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@dicebear/core"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@marsidev/react-turnstile",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@modelcontextprotocol/ext-apps",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-alert-dialog",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-alert-dialog"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-checkbox",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-checkbox"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-collapsible",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-collapsible"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-dialog",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-dialog"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-hover-card",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-hover-card"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-icons",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-icons"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-label",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-label"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-popover",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-popover"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-progress",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-progress"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-separator",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-separator"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-slider",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-slider"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-switch",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-switch"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-tabs",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-tabs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@radix-ui/react-toast",
-      "initialAnchors": 7,
-      "trialLibraries": [
-        "@mcp-ui/client",
-        "react",
-        "@ariakit/react-components",
-        "swr",
-        "react-dom",
-        "framer-motion",
-        "jotai",
-        "@marsidev/react-turnstile",
-        "@modelcontextprotocol/ext-apps",
-        "@radix-ui/react-toast"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    }
-  ],
-  "sourceDiagnostics": [],
-  "bundleDiagnostics": [],
-  "sourceDigest": "386ef382467608983bb4014358631726408d0991a28ca29f5aae69f35ced194c",
-  "bundleDigest": "b965841168e727a32d5cc9b1a4283f1ea1667fd09712853b47d83bed352b02cf",
-  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
-  "finalSourceDigest": "39acdf4f61c2f6d9b56997bade40043d20f8ced5ab4cee51bc85e5979bcaef3c",
+    "frontendManifestSHA256": "98ca1d1f4947409594604378952ee2396b1819fbf4403bab0ba174774f7a4ad3",
+    "manifestRelative": "client/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:13.681Z",
   "reason": null,
-  "organizationSignature": "8d10165c02b0bd29e994e5159e957efbff5916a491e12456169f1575bd85e5ea"
+  "finished": "2026-11-09T03:44:13.815Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/LibreChat-AI--LibreChat/qualification.json",
+  "sourceEligibilityRecordSHA256": "1f83cf5233bfac5c2c73fe638b7b4be024ffb0d240ae52bd5928fae7acca09bd",
+  "organizationSignature": "66c91a147efcb2888033ae0ecdc38a250d9face401c51fae072f099ded133b16"
 }

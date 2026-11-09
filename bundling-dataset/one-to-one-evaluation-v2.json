@@ -1,70 +1,142 @@
 {
-  "schema": "recall.qualified-dataset/v1",
+  "schema": "recall.qualified-dataset/v2",
   "policy": {
+    "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
-    "minInitialAnchors": 3,
-    "minLibrariesPerRepository": 5,
+    "minLibrariesPerRepository": 3,
     "maxLibrariesPerRepository": 10,
-    "counting": "distinct initial source-function anchors; duplicates across target chunks count once"
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "repositoryCount": 18,
-  "libraryInstanceCount": 156,
-  "oneToOnePairs": 135988,
+  "repositoryCount": 43,
+  "libraryInstanceCount": 350,
+  "sourceFunctionWitnessCount": 1050,
+  "oneToOnePairs": 119327,
+  "zeroPairLibraryInstances": 110,
   "subjects": [
     {
       "subject": "bun/RockwellShah--filekey",
       "repo": "RockwellShah/filekey",
       "commit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
       "records": "../qualified-dataset/bun/RockwellShah--filekey/ground-truth/func-mapping.json",
-      "recordsSHA256": "87d2dcddfb5b997dc6dbce18ae280e7606d9a5e7449f5d4d5b796bc06e6c3451",
+      "recordsSHA256": "584bcf5943ad002b8809c840d6b665072ad0c91dbfa656a6dab513ba2312a183",
       "selectedLibraries": [
         "@hpke/core",
         "@noble/curves",
         "@noble/hashes",
         "fflate",
-        "qrcode-generator"
+        "qrcode-generator",
+        "@scure/base"
       ],
-      "libraryCount": 5,
-      "initialAnchors": {
-        "@hpke/core": 11,
-        "@noble/curves": 16,
-        "@noble/hashes": 7,
-        "fflate": 6,
-        "qrcode-generator": 16
+      "libraryCount": 6,
+      "sourceFunctionWitnesses": {
+        "@hpke/core": 3,
+        "@noble/curves": 3,
+        "@noble/hashes": 3,
+        "fflate": 3,
+        "qrcode-generator": 3,
+        "@scure/base": 3
       },
       "libraryPairs": {
         "@hpke/core": 44,
         "@noble/curves": 182,
         "@noble/hashes": 48,
         "fflate": 30,
-        "qrcode-generator": 108
+        "qrcode-generator": 108,
+        "@scure/base": 68
       },
-      "oneToOnePairs": 412,
+      "oneToOnePairs": 480,
       "imageID": null,
       "qualification": "../qualified-dataset/bun/RockwellShah--filekey/qualification.json"
+    },
+    {
+      "subject": "bun/micahkepe--jsongrep",
+      "repo": "micahkepe/jsongrep",
+      "commit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
+      "records": "../qualified-dataset/bun/micahkepe--jsongrep/ground-truth/func-mapping.json",
+      "recordsSHA256": "388953e1876daa68e9e8ff945052c6e9a80afba763ee4bbc748b94b734acb2da",
+      "selectedLibraries": [
+        "@bytecodealliance/jco",
+        "react",
+        "react-dom"
+      ],
+      "libraryCount": 3,
+      "sourceFunctionWitnesses": {
+        "@bytecodealliance/jco": 3,
+        "react": 3,
+        "react-dom": 3
+      },
+      "libraryPairs": {
+        "@bytecodealliance/jco": 0,
+        "react": 128,
+        "react-dom": 1080
+      },
+      "oneToOnePairs": 1208,
+      "imageID": null,
+      "qualification": "../qualified-dataset/bun/micahkepe--jsongrep/qualification.json"
+    },
+    {
+      "subject": "esbuild/mattlewis92--angular-calendar",
+      "repo": "mattlewis92/angular-calendar",
+      "commit": "9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68",
+      "records": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/ground-truth/func-mapping.json",
+      "recordsSHA256": "8d0662205994feb6a45b0c5e8bc783dda59b2159be73c52cd286258bf35055ad",
+      "selectedLibraries": [
+        "@scarf/scarf",
+        "calendar-utils",
+        "positioning",
+        "tslib"
+      ],
+      "libraryCount": 4,
+      "sourceFunctionWitnesses": {
+        "@scarf/scarf": 3,
+        "calendar-utils": 3,
+        "positioning": 3,
+        "tslib": 3
+      },
+      "libraryPairs": {
+        "@scarf/scarf": 0,
+        "calendar-utils": 0,
+        "positioning": 0,
+        "tslib": 37
+      },
+      "oneToOnePairs": 37,
+      "imageID": "sha256:36e094597a8731e17370336f498020134259af1f2352948e3e1aeff99742c497",
+      "qualification": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/qualification.json"
     },
     {
       "subject": "esbuild/okikio--bundlejs",
       "repo": "okikio/bundlejs",
       "commit": "96033c66d7361f79e25bb9b511f4286805fcb9fb",
       "records": "../qualified-dataset/esbuild/okikio--bundlejs/ground-truth/func-mapping.json",
-      "recordsSHA256": "0fe8356b86c9dcf6bf8bcb6c87b2f494713aa421032a887506131b1a740251c4",
+      "recordsSHA256": "b811393917e02c3b2dd87f146d4388af2f8d4fbbd34f9635bb8bd2071bbe9787",
       "selectedLibraries": [
         "@okikio/native",
         "@okikio/animate",
         "@dprint/formatter",
         "esbuild-wasm",
         "monaco-editor",
-        "solid-js"
+        "solid-js",
+        "@amoutonbrady/lz-string",
+        "@okikio/sharedworker",
+        "@typescript/ata",
+        "d3"
       ],
-      "libraryCount": 6,
-      "initialAnchors": {
-        "@okikio/native": 19,
-        "@okikio/animate": 14,
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@okikio/native": 3,
+        "@okikio/animate": 3,
         "@dprint/formatter": 3,
-        "esbuild-wasm": 31,
-        "monaco-editor": 5432,
-        "solid-js": 19
+        "esbuild-wasm": 3,
+        "monaco-editor": 3,
+        "solid-js": 3,
+        "@amoutonbrady/lz-string": 3,
+        "@okikio/sharedworker": 3,
+        "@typescript/ata": 3,
+        "d3": 3
       },
       "libraryPairs": {
         "@okikio/native": 160,
@@ -72,18 +144,124 @@
         "@dprint/formatter": 70,
         "esbuild-wasm": 321,
         "monaco-editor": 42101,
-        "solid-js": 107
+        "solid-js": 107,
+        "@amoutonbrady/lz-string": 7,
+        "@okikio/sharedworker": 15,
+        "@typescript/ata": 0,
+        "d3": 0
       },
-      "oneToOnePairs": 43022,
+      "oneToOnePairs": 43044,
       "imageID": "sha256:7d8a84a4694f3baa55946927d01a9ed8309a646a14b10384276d53bf9beccdd0",
       "qualification": "../qualified-dataset/esbuild/okikio--bundlejs/qualification.json"
+    },
+    {
+      "subject": "esbuild/primefaces--primeng",
+      "repo": "primefaces/primeng",
+      "commit": "fe82b291d6fedde177dc12c0af7ef1008dc1b1ff",
+      "records": "../qualified-dataset/esbuild/primefaces--primeng/ground-truth/func-mapping.json",
+      "recordsSHA256": "9b887ce47486641e19c675b725ccbd5b4d3991683ad87c8fcf378659e95b01c7",
+      "selectedLibraries": [
+        "@primeuix/styled",
+        "@primeuix/utils",
+        "@primeuix/motion"
+      ],
+      "libraryCount": 3,
+      "sourceFunctionWitnesses": {
+        "@primeuix/styled": 3,
+        "@primeuix/utils": 3,
+        "@primeuix/motion": 3
+      },
+      "libraryPairs": {
+        "@primeuix/styled": 98,
+        "@primeuix/utils": 127,
+        "@primeuix/motion": 26
+      },
+      "oneToOnePairs": 251,
+      "imageID": "sha256:52f072fecbe4588bceb44ffaea4481d8956374fd61ccd094ac7e148a421bd1d8",
+      "qualification": "../qualified-dataset/esbuild/primefaces--primeng/qualification.json"
+    },
+    {
+      "subject": "esbuild/primefaces--sakai-ng",
+      "repo": "primefaces/sakai-ng",
+      "commit": "96d71496d685b5c110efd2875abaa2bf89a56ad2",
+      "records": "../qualified-dataset/esbuild/primefaces--sakai-ng/ground-truth/func-mapping.json",
+      "recordsSHA256": "3a112f31f973856443b68558eb750a14dc12ab8b4ca713fe035905dd4e74273f",
+      "selectedLibraries": [
+        "@angular/common",
+        "@angular/compiler",
+        "@angular/core",
+        "@angular/forms",
+        "@angular/platform-browser",
+        "@angular/router",
+        "@primeuix/themes",
+        "@tailwindcss/postcss",
+        "chart.js",
+        "primeclt"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@angular/common": 3,
+        "@angular/compiler": 3,
+        "@angular/core": 3,
+        "@angular/forms": 3,
+        "@angular/platform-browser": 3,
+        "@angular/router": 3,
+        "@primeuix/themes": 3,
+        "@tailwindcss/postcss": 3,
+        "chart.js": 3,
+        "primeclt": 3
+      },
+      "libraryPairs": {
+        "@angular/common": 0,
+        "@angular/compiler": 0,
+        "@angular/core": 0,
+        "@angular/forms": 0,
+        "@angular/platform-browser": 0,
+        "@angular/router": 0,
+        "@primeuix/themes": 8,
+        "@tailwindcss/postcss": 0,
+        "chart.js": 1301,
+        "primeclt": 0
+      },
+      "oneToOnePairs": 1309,
+      "imageID": "sha256:9cb7c4736a8b7a7e9b0d2d61528a0131a2767cd557b3000057bd31326f930194",
+      "qualification": "../qualified-dataset/esbuild/primefaces--sakai-ng/qualification.json"
+    },
+    {
+      "subject": "esbuild/sissbruecker--linkding",
+      "repo": "sissbruecker/linkding",
+      "commit": "27b7303baf41bb28babc610ac8eaa486e1ddfab5",
+      "records": "../qualified-dataset/esbuild/sissbruecker--linkding/ground-truth/func-mapping.json",
+      "recordsSHA256": "7537e25e7f136ea21230575ba69253f4698d4cc0dc43b5d333a5568aa94636bf",
+      "selectedLibraries": [
+        "@floating-ui/dom",
+        "@hotwired/turbo",
+        "esbuild",
+        "lit"
+      ],
+      "libraryCount": 4,
+      "sourceFunctionWitnesses": {
+        "@floating-ui/dom": 3,
+        "@hotwired/turbo": 3,
+        "esbuild": 3,
+        "lit": 3
+      },
+      "libraryPairs": {
+        "@floating-ui/dom": 42,
+        "@hotwired/turbo": 869,
+        "esbuild": 0,
+        "lit": 0
+      },
+      "oneToOnePairs": 911,
+      "imageID": "sha256:52efd7be978560adce36a4a95367d460da7671f9f30bf06e2d20263a6dbcf1e7",
+      "qualification": "../qualified-dataset/esbuild/sissbruecker--linkding/qualification.json"
     },
     {
       "subject": "esbuild/swimlane--ngx-charts",
       "repo": "swimlane/ngx-charts",
       "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
       "records": "../qualified-dataset/esbuild/swimlane--ngx-charts/ground-truth/func-mapping.json",
-      "recordsSHA256": "29790c39f8ad0bd4d7f5aa377fe4f9b6fbf7b650f9fa66c28be087cd59d9f507",
+      "recordsSHA256": "ea9b0054374eab5daccfe173323051fb682380fbc499f83dfd076db646c05f45",
       "selectedLibraries": [
         "d3-format",
         "d3-interpolate",
@@ -97,17 +275,17 @@
         "d3-sankey"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "d3-format": 7,
-        "d3-interpolate": 4,
-        "d3-transition": 11,
-        "d3-scale": 4,
-        "d3-hierarchy": 8,
-        "zone.js": 34,
-        "d3-selection": 13,
-        "codemirror": 407,
-        "d3-brush": 12,
-        "d3-sankey": 4
+      "sourceFunctionWitnesses": {
+        "d3-format": 3,
+        "d3-interpolate": 3,
+        "d3-transition": 3,
+        "d3-scale": 3,
+        "d3-hierarchy": 3,
+        "zone.js": 3,
+        "d3-selection": 3,
+        "codemirror": 3,
+        "d3-brush": 3,
+        "d3-sankey": 3
       },
       "libraryPairs": {
         "d3-format": 35,
@@ -126,11 +304,145 @@
       "qualification": "../qualified-dataset/esbuild/swimlane--ngx-charts/qualification.json"
     },
     {
+      "subject": "esbuild/swimlane--ngx-datatable",
+      "repo": "swimlane/ngx-datatable",
+      "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
+      "records": "../qualified-dataset/esbuild/swimlane--ngx-datatable/ground-truth/func-mapping.json",
+      "recordsSHA256": "2d8f045a56027d02aa74d148cc277e127b0d5adc8c6d335899d1cff181650228",
+      "selectedLibraries": [
+        "@angular/animations",
+        "@angular/cdk",
+        "@angular/common",
+        "@angular/compiler",
+        "@angular/core",
+        "@angular/forms",
+        "@angular/platform-browser",
+        "@angular/router",
+        "rxjs",
+        "tslib"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@angular/animations": 3,
+        "@angular/cdk": 3,
+        "@angular/common": 3,
+        "@angular/compiler": 3,
+        "@angular/core": 3,
+        "@angular/forms": 3,
+        "@angular/platform-browser": 3,
+        "@angular/router": 3,
+        "rxjs": 3,
+        "tslib": 3
+      },
+      "libraryPairs": {
+        "@angular/animations": 0,
+        "@angular/cdk": 0,
+        "@angular/common": 0,
+        "@angular/compiler": 0,
+        "@angular/core": 0,
+        "@angular/forms": 0,
+        "@angular/platform-browser": 0,
+        "@angular/router": 0,
+        "rxjs": 307,
+        "tslib": 29
+      },
+      "oneToOnePairs": 336,
+      "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d",
+      "qualification": "../qualified-dataset/esbuild/swimlane--ngx-datatable/qualification.json"
+    },
+    {
+      "subject": "parcel/jonasschmedtmann--complete-javascript-course",
+      "repo": "jonasschmedtmann/complete-javascript-course",
+      "commit": "76b8b79b2994dd00298b2be105aa6bc721e40a22",
+      "records": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/ground-truth/func-mapping.json",
+      "recordsSHA256": "62a747a359bead55e502dacc63e8baac296e16eb97567e446141f9a0d55c9912",
+      "selectedLibraries": [
+        "core-js",
+        "fractional",
+        "regenerator-runtime"
+      ],
+      "libraryCount": 3,
+      "sourceFunctionWitnesses": {
+        "core-js": 3,
+        "fractional": 3,
+        "regenerator-runtime": 3
+      },
+      "libraryPairs": {
+        "core-js": 16,
+        "fractional": 0,
+        "regenerator-runtime": 0
+      },
+      "oneToOnePairs": 16,
+      "imageID": "sha256:de49a6724e0642d647c1c816296173e861689e551797be0f62b55a82893cddb3",
+      "qualification": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/qualification.json"
+    },
+    {
+      "subject": "parcel/parcel-bundler--website",
+      "repo": "parcel-bundler/website",
+      "commit": "01c63ed0cb880285db774ec7c96f88da24aeaec7",
+      "records": "../qualified-dataset/parcel/parcel-bundler--website/ground-truth/func-mapping.json",
+      "recordsSHA256": "c38f6380f7f334d18423474fd65bfeaadd393ab463cd85f5658d8b7f4628dc27",
+      "selectedLibraries": [
+        "alpinejs",
+        "focus-visible",
+        "marked",
+        "react",
+        "react-dom",
+        "react-use"
+      ],
+      "libraryCount": 6,
+      "sourceFunctionWitnesses": {
+        "alpinejs": 3,
+        "focus-visible": 3,
+        "marked": 3,
+        "react": 3,
+        "react-dom": 3,
+        "react-use": 3
+      },
+      "libraryPairs": {
+        "alpinejs": 443,
+        "focus-visible": 9,
+        "marked": 0,
+        "react": 0,
+        "react-dom": 0,
+        "react-use": 0
+      },
+      "oneToOnePairs": 452,
+      "imageID": null,
+      "qualification": "../qualified-dataset/parcel/parcel-bundler--website/qualification.json"
+    },
+    {
+      "subject": "parcel/tensorflow--tfjs",
+      "repo": "tensorflow/tfjs",
+      "commit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
+      "records": "../qualified-dataset/parcel/tensorflow--tfjs/ground-truth/func-mapping.json",
+      "recordsSHA256": "4f43def4242848b6e1132c76bf6685d3335fde53a1b3d2ec0d4da0b54ce391a8",
+      "selectedLibraries": [
+        "@tensorflow/tfjs-backend-webgl",
+        "@tensorflow/tfjs-converter",
+        "@tensorflow/tfjs-core"
+      ],
+      "libraryCount": 3,
+      "sourceFunctionWitnesses": {
+        "@tensorflow/tfjs-backend-webgl": 3,
+        "@tensorflow/tfjs-converter": 3,
+        "@tensorflow/tfjs-core": 3
+      },
+      "libraryPairs": {
+        "@tensorflow/tfjs-backend-webgl": 718,
+        "@tensorflow/tfjs-converter": 324,
+        "@tensorflow/tfjs-core": 1386
+      },
+      "oneToOnePairs": 2428,
+      "imageID": "sha256:e0353279e647932c4a074fb1283cab6f26aa0d9a9355fa3ddd396a40fcf42908",
+      "qualification": "../qualified-dataset/parcel/tensorflow--tfjs/qualification.json"
+    },
+    {
       "subject": "rolldown/appwrite--appwrite",
       "repo": "appwrite/appwrite",
       "commit": "18c60abee1e2cb9d63612478f8e0e7319dfc300b",
       "records": "../qualified-dataset/rolldown/appwrite--appwrite/ground-truth/func-mapping.json",
-      "recordsSHA256": "d47df2eb4948cd696a675977942cfd664e31ee1bde195b77200be31a84b523b0",
+      "recordsSHA256": "efb3d0d484861b7c2c40b7c2b1344b8797c0fbbf65a68e46caa798634c7e751f",
       "selectedLibraries": [
         "@appwrite.io/console",
         "@dnd-kit/core",
@@ -144,16 +456,16 @@
         "@tanstack/react-query"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "@appwrite.io/console": 718,
-        "@dnd-kit/core": 27,
-        "@dnd-kit/sortable": 6,
-        "@markdoc/markdoc": 111,
-        "@radix-ui/react-scroll-area": 5,
-        "@radix-ui/react-select": 7,
+      "sourceFunctionWitnesses": {
+        "@appwrite.io/console": 3,
+        "@dnd-kit/core": 3,
+        "@dnd-kit/sortable": 3,
+        "@markdoc/markdoc": 3,
+        "@radix-ui/react-scroll-area": 3,
+        "@radix-ui/react-select": 3,
         "@radix-ui/react-slot": 3,
         "@radix-ui/react-tooltip": 3,
-        "@react-three/fiber": 64,
+        "@react-three/fiber": 3,
         "@tanstack/react-query": 3
       },
       "libraryPairs": {
@@ -177,7 +489,7 @@
       "repo": "discourse/discourse",
       "commit": "3a1b1ae930e568a8c1c2f12d6e09f8e907da608b",
       "records": "../qualified-dataset/rolldown/discourse--discourse/ground-truth/func-mapping.json",
-      "recordsSHA256": "7e05f0fc8e4b43079cc6856e9749a037139be2744cfae39acca3f0400f38773e",
+      "recordsSHA256": "6c8f8c5886671ac6dffa9709dd213aef1bf72a30fab5c5845d05b575c9156872",
       "selectedLibraries": [
         "@atlaskit/pragmatic-drag-and-drop",
         "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
@@ -191,17 +503,17 @@
         "moment"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "@atlaskit/pragmatic-drag-and-drop": 8,
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll": 8,
-        "@warp-drive/core": 73,
-        "@warp-drive/json-api": 9,
-        "@warp-drive/legacy": 33,
+      "sourceFunctionWitnesses": {
+        "@atlaskit/pragmatic-drag-and-drop": 3,
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll": 3,
+        "@warp-drive/core": 3,
+        "@warp-drive/json-api": 3,
+        "@warp-drive/legacy": 3,
         "@warp-drive/utilities": 3,
-        "ember-resolver": 4,
-        "ember-source": 197,
-        "immer": 12,
-        "moment": 59
+        "ember-resolver": 3,
+        "ember-source": 3,
+        "immer": 3,
+        "moment": 3
       },
       "libraryPairs": {
         "@atlaskit/pragmatic-drag-and-drop": 184,
@@ -220,11 +532,544 @@
       "qualification": "../qualified-dataset/rolldown/discourse--discourse/qualification.json"
     },
     {
+      "subject": "rollup/daybrush--scenejs",
+      "repo": "daybrush/scenejs",
+      "commit": "8db057b6be85de03c5e997b53a82cb1407d6f659",
+      "records": "../qualified-dataset/rollup/daybrush--scenejs/ground-truth/func-mapping.json",
+      "recordsSHA256": "4fdb3147d7654378d5a5cef22504eaf5516a1d5fd43a3fc23caac052e57c2109",
+      "selectedLibraries": [
+        "@daybrush/page",
+        "@daybrush/utils",
+        "shape-svg"
+      ],
+      "libraryCount": 3,
+      "sourceFunctionWitnesses": {
+        "@daybrush/page": 3,
+        "@daybrush/utils": 3,
+        "shape-svg": 3
+      },
+      "libraryPairs": {
+        "@daybrush/page": 28,
+        "@daybrush/utils": 76,
+        "shape-svg": 20
+      },
+      "oneToOnePairs": 124,
+      "imageID": "sha256:a4da8d94a8476a58ee0c1ea73658daa9af8680e7e9ef3c43f73b120478cfc221",
+      "qualification": "../qualified-dataset/rollup/daybrush--scenejs/qualification.json"
+    },
+    {
+      "subject": "rollup/omnibrain--svguitar",
+      "repo": "omnibrain/svguitar",
+      "commit": "3b465fdc8af57a9ed948e168ada1c87c9aafd574",
+      "records": "../qualified-dataset/rollup/omnibrain--svguitar/ground-truth/func-mapping.json",
+      "recordsSHA256": "9d047069f96d9ce13a56b04e72a472db522d8ce3d0201311d010b864179dd10e",
+      "selectedLibraries": [
+        "@svgdotjs/svg.js",
+        "roughjs",
+        "svgdom"
+      ],
+      "libraryCount": 3,
+      "sourceFunctionWitnesses": {
+        "@svgdotjs/svg.js": 3,
+        "roughjs": 3,
+        "svgdom": 3
+      },
+      "libraryPairs": {
+        "@svgdotjs/svg.js": 710,
+        "roughjs": 141,
+        "svgdom": 0
+      },
+      "oneToOnePairs": 851,
+      "imageID": "sha256:39c1ab0e890e959bcaf7aa908076e5c8708bbb43063700fa190ecb593b84db9d",
+      "qualification": "../qualified-dataset/rollup/omnibrain--svguitar/qualification.json"
+    },
+    {
+      "subject": "rollup/vega--vega-lite",
+      "repo": "vega/vega-lite",
+      "commit": "e415f441845e198629f2049b46849ddcfdbf6596",
+      "records": "../qualified-dataset/rollup/vega--vega-lite/ground-truth/func-mapping.json",
+      "recordsSHA256": "c1049d6f09774f1c8a573a2ef584935aafec8bc393eed3afd7389fdecbd33db3",
+      "selectedLibraries": [
+        "tslib",
+        "vega-expression",
+        "yargs"
+      ],
+      "libraryCount": 3,
+      "sourceFunctionWitnesses": {
+        "tslib": 3,
+        "vega-expression": 3,
+        "yargs": 3
+      },
+      "libraryPairs": {
+        "tslib": 0,
+        "vega-expression": 87,
+        "yargs": 0
+      },
+      "oneToOnePairs": 87,
+      "imageID": "sha256:77ebbd8358604ab1d6fbe3b3bb45cce0707bde05a32d9062f707a8e005c68fef",
+      "qualification": "../qualified-dataset/rollup/vega--vega-lite/qualification.json"
+    },
+    {
+      "subject": "rspack/metabase--metabase",
+      "repo": "metabase/metabase",
+      "commit": "0c644f3bc99d5dece16391d53135a0a7618f95bc",
+      "records": "../qualified-dataset/rspack/metabase--metabase/ground-truth/func-mapping.json",
+      "recordsSHA256": "ea8f49c797b30bc65c7ded3bbe1d6bec6d3d0b0bc0f84f93354788d532c30f99",
+      "selectedLibraries": [
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@emotion/cache",
+        "@emotion/react",
+        "@emotion/styled",
+        "@floating-ui/dom",
+        "@floating-ui/react",
+        "@juggle/resize-observer",
+        "@mantine/core"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@dnd-kit/core": 3,
+        "@dnd-kit/modifiers": 3,
+        "@dnd-kit/sortable": 3,
+        "@emotion/cache": 3,
+        "@emotion/react": 3,
+        "@emotion/styled": 3,
+        "@floating-ui/dom": 3,
+        "@floating-ui/react": 3,
+        "@juggle/resize-observer": 3,
+        "@mantine/core": 3
+      },
+      "libraryPairs": {
+        "@dnd-kit/core": 230,
+        "@dnd-kit/modifiers": 3,
+        "@dnd-kit/sortable": 19,
+        "@emotion/cache": 7,
+        "@emotion/react": 11,
+        "@emotion/styled": 11,
+        "@floating-ui/dom": 34,
+        "@floating-ui/react": 163,
+        "@juggle/resize-observer": 60,
+        "@mantine/core": 971
+      },
+      "oneToOnePairs": 1509,
+      "imageID": "sha256:d731ac7144aac3dea4e1871c706c5fab3e014494fe55aa8dd09fd5688b29ae3f",
+      "qualification": "../qualified-dataset/rspack/metabase--metabase/qualification.json"
+    },
+    {
+      "subject": "tsup/peggyjs--peggy",
+      "repo": "peggyjs/peggy",
+      "commit": "b4014fd62ce8ba46866bb19a648b09fceb91f8cd",
+      "records": "../qualified-dataset/tsup/peggyjs--peggy/ground-truth/func-mapping.json",
+      "recordsSHA256": "b064edef32ca08e7983df59e203dd113a4a1a8c5051abf7a83ab5b4d9a7f6a59",
+      "selectedLibraries": [
+        "file-saver",
+        "jquery",
+        "jquery.scrollto",
+        "mocha",
+        "node-inspect-extracted"
+      ],
+      "libraryCount": 5,
+      "sourceFunctionWitnesses": {
+        "file-saver": 3,
+        "jquery": 3,
+        "jquery.scrollto": 3,
+        "mocha": 3,
+        "node-inspect-extracted": 3
+      },
+      "libraryPairs": {
+        "file-saver": 14,
+        "jquery": 551,
+        "jquery.scrollto": 0,
+        "mocha": 0,
+        "node-inspect-extracted": 0
+      },
+      "oneToOnePairs": 565,
+      "imageID": "sha256:21863a4c5a8d77ecf522bec521f44f8707b0067cfee2c273da927ff60b54fe95",
+      "qualification": "../qualified-dataset/tsup/peggyjs--peggy/qualification.json"
+    },
+    {
+      "subject": "turbopack/CalCom--cal.com",
+      "repo": "CalCom/cal.com",
+      "commit": "1c193cca8682b33b9866c792186033f7ef886682",
+      "records": "../qualified-dataset/turbopack/CalCom--cal.com/ground-truth/func-mapping.json",
+      "recordsSHA256": "64d6497677d8c381734af8dba63e6bccbc59b0aa7756f3d28766cbd07264055b",
+      "selectedLibraries": [
+        "@formkit/auto-animate",
+        "@radix-ui/react-tooltip",
+        "botid",
+        "i18next",
+        "next",
+        "next-auth",
+        "react-i18next",
+        "zod",
+        "@boxyhq/saml-jackson",
+        "@daily-co/daily-js"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@formkit/auto-animate": 3,
+        "@radix-ui/react-tooltip": 3,
+        "botid": 3,
+        "i18next": 3,
+        "next": 3,
+        "next-auth": 3,
+        "react-i18next": 3,
+        "zod": 3,
+        "@boxyhq/saml-jackson": 3,
+        "@daily-co/daily-js": 3
+      },
+      "libraryPairs": {
+        "@formkit/auto-animate": 35,
+        "@radix-ui/react-tooltip": 37,
+        "botid": 0,
+        "i18next": 243,
+        "next": 721,
+        "next-auth": 119,
+        "react-i18next": 51,
+        "zod": 414,
+        "@boxyhq/saml-jackson": 0,
+        "@daily-co/daily-js": 0
+      },
+      "oneToOnePairs": 1620,
+      "imageID": "sha256:b4386030f0c79ce045232229afe218e5e67a3c961be492508686eb38a8f47556",
+      "qualification": "../qualified-dataset/turbopack/CalCom--cal.com/qualification.json"
+    },
+    {
+      "subject": "turbopack/CapSoftware--Cap",
+      "repo": "CapSoftware/Cap",
+      "commit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
+      "records": "../qualified-dataset/turbopack/CapSoftware--Cap/ground-truth/func-mapping.json",
+      "recordsSHA256": "ddbbbe323d44f4bb8160e0c1076997a094e65ade50f04d9e5636c94a179d08db",
+      "selectedLibraries": [
+        "@fortawesome/react-fontawesome",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "@sentry/nextjs",
+        "@tanstack/react-query",
+        "framer-motion",
+        "js-cookie",
+        "lucide-react",
+        "next",
+        "next-auth"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@fortawesome/react-fontawesome": 3,
+        "@radix-ui/react-slot": 3,
+        "@radix-ui/react-tooltip": 3,
+        "@sentry/nextjs": 3,
+        "@tanstack/react-query": 3,
+        "framer-motion": 3,
+        "js-cookie": 3,
+        "lucide-react": 3,
+        "next": 3,
+        "next-auth": 3
+      },
+      "libraryPairs": {
+        "@fortawesome/react-fontawesome": 30,
+        "@radix-ui/react-slot": 8,
+        "@radix-ui/react-tooltip": 48,
+        "@sentry/nextjs": 9,
+        "@tanstack/react-query": 3,
+        "framer-motion": 89,
+        "js-cookie": 9,
+        "lucide-react": 0,
+        "next": 1060,
+        "next-auth": 119
+      },
+      "oneToOnePairs": 1375,
+      "imageID": "sha256:5e2b15a032e2433f0177fd15edbf62bce866dfab865a46e2e1d85612c0b30326",
+      "qualification": "../qualified-dataset/turbopack/CapSoftware--Cap/qualification.json"
+    },
+    {
+      "subject": "turbopack/DayuanJiang--next-ai-draw-io",
+      "repo": "DayuanJiang/next-ai-draw-io",
+      "commit": "e3d4d11d5916daf8d68a9f087b36c8ca9a79200e",
+      "records": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/ground-truth/func-mapping.json",
+      "recordsSHA256": "6d2735d40b1575b058b32685a5ef01d9d7235721a147dc25ff86332f09876ffb",
+      "selectedLibraries": [
+        "@next/third-parties",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "ai",
+        "cmdk",
+        "next",
+        "pako",
+        "prism-react-renderer"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@next/third-parties": 3,
+        "@radix-ui/react-scroll-area": 3,
+        "@radix-ui/react-select": 3,
+        "@radix-ui/react-slot": 3,
+        "@radix-ui/react-tooltip": 3,
+        "ai": 3,
+        "cmdk": 3,
+        "next": 3,
+        "pako": 3,
+        "prism-react-renderer": 3
+      },
+      "libraryPairs": {
+        "@next/third-parties": 10,
+        "@radix-ui/react-scroll-area": 0,
+        "@radix-ui/react-select": 106,
+        "@radix-ui/react-slot": 12,
+        "@radix-ui/react-tooltip": 0,
+        "ai": 0,
+        "cmdk": 0,
+        "next": 1008,
+        "pako": 57,
+        "prism-react-renderer": 0
+      },
+      "oneToOnePairs": 1193,
+      "imageID": "sha256:079245223f1ad23b1a565e0cbb50050d93249448e0fb1fce3d5c2621580d28ca",
+      "qualification": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/qualification.json"
+    },
+    {
+      "subject": "turbopack/Open-Dev-Society--OpenStock",
+      "repo": "Open-Dev-Society/OpenStock",
+      "commit": "b72306d39fa27dc55252ceecf858165ecf5a3fa3",
+      "records": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/ground-truth/func-mapping.json",
+      "recordsSHA256": "8d8787693feb62b4c07d3b7623af6aa1f2a358a443a9c811a6f6d4e2cb118d87",
+      "selectedLibraries": [
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-popover",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@vercel/analytics",
+        "better-auth",
+        "cmdk",
+        "country-data-list",
+        "date-fns"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@radix-ui/react-dialog": 3,
+        "@radix-ui/react-dropdown-menu": 3,
+        "@radix-ui/react-popover": 3,
+        "@radix-ui/react-select": 3,
+        "@radix-ui/react-slot": 3,
+        "@vercel/analytics": 3,
+        "better-auth": 3,
+        "cmdk": 3,
+        "country-data-list": 3,
+        "date-fns": 3
+      },
+      "libraryPairs": {
+        "@radix-ui/react-dialog": 27,
+        "@radix-ui/react-dropdown-menu": 0,
+        "@radix-ui/react-popover": 0,
+        "@radix-ui/react-select": 0,
+        "@radix-ui/react-slot": 7,
+        "@vercel/analytics": 12,
+        "better-auth": 0,
+        "cmdk": 0,
+        "country-data-list": 0,
+        "date-fns": 0
+      },
+      "oneToOnePairs": 46,
+      "imageID": "sha256:07613042e0661b6bbd5274d1fe87ada90b03b0324cb47e928fd2a82f34a8b103",
+      "qualification": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/qualification.json"
+    },
+    {
+      "subject": "turbopack/colinhacks--zod",
+      "repo": "colinhacks/zod",
+      "commit": "b500a2ee95134f81d74da7911d7378dd2853d042",
+      "records": "../qualified-dataset/turbopack/colinhacks--zod/ground-truth/func-mapping.json",
+      "recordsSHA256": "a127adf94bba5a8951b344b42b9c9f66c9e79d67f7c5fc797f229f4b278df8f0",
+      "selectedLibraries": [
+        "@inkeep/cxkit-react",
+        "@radix-ui/react-accordion",
+        "@vercel/analytics",
+        "@vercel/og",
+        "fumadocs-core",
+        "fumadocs-mdx",
+        "fumadocs-ui",
+        "gray-matter",
+        "next",
+        "react"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@inkeep/cxkit-react": 3,
+        "@radix-ui/react-accordion": 3,
+        "@vercel/analytics": 3,
+        "@vercel/og": 3,
+        "fumadocs-core": 3,
+        "fumadocs-mdx": 3,
+        "fumadocs-ui": 3,
+        "gray-matter": 3,
+        "next": 3,
+        "react": 3
+      },
+      "libraryPairs": {
+        "@inkeep/cxkit-react": 83,
+        "@radix-ui/react-accordion": 0,
+        "@vercel/analytics": 13,
+        "@vercel/og": 0,
+        "fumadocs-core": 15,
+        "fumadocs-mdx": 0,
+        "fumadocs-ui": 42,
+        "gray-matter": 0,
+        "next": 1817,
+        "react": 0
+      },
+      "oneToOnePairs": 1970,
+      "imageID": "sha256:bd8168d6ca27db6ba2045b773e2f38773072c02c8fcfccdf63e200a75d53cd5d",
+      "qualification": "../qualified-dataset/turbopack/colinhacks--zod/qualification.json"
+    },
+    {
+      "subject": "turbopack/jnsahaj--tweakcn",
+      "repo": "jnsahaj/tweakcn",
+      "commit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
+      "records": "../qualified-dataset/turbopack/jnsahaj--tweakcn/ground-truth/func-mapping.json",
+      "recordsSHA256": "d9d6879349f379df8073d179b19dcc80a7b7cdfcc10288c25f15642a78fc762e",
+      "selectedLibraries": [
+        "@ai-sdk/google",
+        "@ai-sdk/react",
+        "@base-ui-components/react",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@google/generative-ai",
+        "@hookform/resolvers",
+        "@lexical/react",
+        "@neondatabase/serverless"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@ai-sdk/google": 3,
+        "@ai-sdk/react": 3,
+        "@base-ui-components/react": 3,
+        "@dnd-kit/core": 3,
+        "@dnd-kit/modifiers": 3,
+        "@dnd-kit/sortable": 3,
+        "@google/generative-ai": 3,
+        "@hookform/resolvers": 3,
+        "@lexical/react": 3,
+        "@neondatabase/serverless": 3
+      },
+      "libraryPairs": {
+        "@ai-sdk/google": 0,
+        "@ai-sdk/react": 0,
+        "@base-ui-components/react": 78,
+        "@dnd-kit/core": 0,
+        "@dnd-kit/modifiers": 0,
+        "@dnd-kit/sortable": 0,
+        "@google/generative-ai": 0,
+        "@hookform/resolvers": 0,
+        "@lexical/react": 0,
+        "@neondatabase/serverless": 0
+      },
+      "oneToOnePairs": 78,
+      "imageID": "sha256:0db88feca9d74650b2a56bcbe34c5804c9edbec18e9f8686fa5c4c142aacd789",
+      "qualification": "../qualified-dataset/turbopack/jnsahaj--tweakcn/qualification.json"
+    },
+    {
+      "subject": "turbopack/shadcn-ui--ui",
+      "repo": "shadcn-ui/ui",
+      "commit": "d549251bab2e57dbf72f7c909d6458c02c43f529",
+      "records": "../qualified-dataset/turbopack/shadcn-ui--ui/ground-truth/func-mapping.json",
+      "recordsSHA256": "17cb39ace2b501045f526223f1349463c5a2f94461704587dce961800a85376e",
+      "selectedLibraries": [
+        "@ai-sdk/anthropic",
+        "@ai-sdk/openai",
+        "@ai-sdk/react",
+        "@base-ui/react",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@faker-js/faker",
+        "@formisch/react",
+        "@hookform/resolvers"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@ai-sdk/anthropic": 3,
+        "@ai-sdk/openai": 3,
+        "@ai-sdk/react": 3,
+        "@base-ui/react": 3,
+        "@dnd-kit/core": 3,
+        "@dnd-kit/modifiers": 3,
+        "@dnd-kit/sortable": 3,
+        "@faker-js/faker": 3,
+        "@formisch/react": 3,
+        "@hookform/resolvers": 3
+      },
+      "libraryPairs": {
+        "@ai-sdk/anthropic": 0,
+        "@ai-sdk/openai": 0,
+        "@ai-sdk/react": 0,
+        "@base-ui/react": 1424,
+        "@dnd-kit/core": 132,
+        "@dnd-kit/modifiers": 1,
+        "@dnd-kit/sortable": 9,
+        "@faker-js/faker": 0,
+        "@formisch/react": 85,
+        "@hookform/resolvers": 0
+      },
+      "oneToOnePairs": 1651,
+      "imageID": "sha256:2598c37904b81c0c1ae178582c87c23a73b9e08410c457aad4c6d724e581ae59",
+      "qualification": "../qualified-dataset/turbopack/shadcn-ui--ui/qualification.json"
+    },
+    {
+      "subject": "turbopack/umami-software--umami",
+      "repo": "umami-software/umami",
+      "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
+      "records": "../qualified-dataset/turbopack/umami-software--umami/ground-truth/func-mapping.json",
+      "recordsSHA256": "81755e61dff180b9b14edd33b9fa2162be0a5a75173da5eb71309ee2cc21be7f",
+      "selectedLibraries": [
+        "@clickhouse/client",
+        "@dicebear/core",
+        "@prisma/adapter-pg",
+        "@prisma/client",
+        "@svgr/cli",
+        "@tanstack/react-query",
+        "@umami/react-zen",
+        "bcryptjs",
+        "chalk",
+        "chart.js"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@clickhouse/client": 3,
+        "@dicebear/core": 3,
+        "@prisma/adapter-pg": 3,
+        "@prisma/client": 3,
+        "@svgr/cli": 3,
+        "@tanstack/react-query": 3,
+        "@umami/react-zen": 3,
+        "bcryptjs": 3,
+        "chalk": 3,
+        "chart.js": 3
+      },
+      "libraryPairs": {
+        "@clickhouse/client": 0,
+        "@dicebear/core": 0,
+        "@prisma/adapter-pg": 0,
+        "@prisma/client": 0,
+        "@svgr/cli": 0,
+        "@tanstack/react-query": 15,
+        "@umami/react-zen": 179,
+        "bcryptjs": 0,
+        "chalk": 0,
+        "chart.js": 602
+      },
+      "oneToOnePairs": 796,
+      "imageID": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
+      "qualification": "../qualified-dataset/turbopack/umami-software--umami/qualification.json"
+    },
+    {
       "subject": "vite/CorentinTh--it-tools",
       "repo": "CorentinTh/it-tools",
       "commit": "d505845f918e946ec300af7b36efc107e2f66e9e",
       "records": "../qualified-dataset/vite/CorentinTh--it-tools/ground-truth/func-mapping.json",
-      "recordsSHA256": "0706f146f4d09b4534279e53bcea626ebfe810e6bd5a5c401657f86dbacbb837",
+      "recordsSHA256": "8652eec0a30cb8f09677809b424dd023b672f5de4ab75125a61bef3e1a36751b",
       "selectedLibraries": [
         "naive-ui",
         "fuse.js",
@@ -234,19 +1079,21 @@
         "@vueuse/core",
         "marked",
         "vue-i18n",
-        "vuedraggable"
+        "vuedraggable",
+        "@it-tools/bip39"
       ],
-      "libraryCount": 9,
-      "initialAnchors": {
-        "naive-ui": 105,
-        "fuse.js": 14,
-        "lodash": 18,
-        "dompurify": 8,
-        "vue-router": 21,
-        "@vueuse/core": 9,
-        "marked": 33,
-        "vue-i18n": 4,
-        "vuedraggable": 29
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "naive-ui": 3,
+        "fuse.js": 3,
+        "lodash": 3,
+        "dompurify": 3,
+        "vue-router": 3,
+        "@vueuse/core": 3,
+        "marked": 3,
+        "vue-i18n": 3,
+        "vuedraggable": 3,
+        "@it-tools/bip39": 3
       },
       "libraryPairs": {
         "naive-ui": 630,
@@ -257,18 +1104,66 @@
         "@vueuse/core": 202,
         "marked": 128,
         "vue-i18n": 166,
-        "vuedraggable": 481
+        "vuedraggable": 481,
+        "@it-tools/bip39": 0
       },
       "oneToOnePairs": 2681,
       "imageID": "sha256:397c047c5dbc8deb82ee1861d4fcf265274c7d8cd810e41a631556f772c6d47a",
       "qualification": "../qualified-dataset/vite/CorentinTh--it-tools/qualification.json"
     },
     {
+      "subject": "vite/DavidHDev--react-bits",
+      "repo": "DavidHDev/react-bits",
+      "commit": "4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4",
+      "records": "../qualified-dataset/vite/DavidHDev--react-bits/ground-truth/func-mapping.json",
+      "recordsSHA256": "032a73daf0dde821ec101801b1520fc850530ccba252aaf9358546036768b878",
+      "selectedLibraries": [
+        "lucide-react",
+        "nuqs",
+        "react",
+        "react-dom",
+        "react-haiku",
+        "react-icons",
+        "react-router-dom",
+        "@chakra-ui/react",
+        "@emotion/react",
+        "@gsap/react"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "lucide-react": 3,
+        "nuqs": 3,
+        "react": 3,
+        "react-dom": 3,
+        "react-haiku": 3,
+        "react-icons": 3,
+        "react-router-dom": 3,
+        "@chakra-ui/react": 3,
+        "@emotion/react": 3,
+        "@gsap/react": 3
+      },
+      "libraryPairs": {
+        "lucide-react": 11,
+        "nuqs": 101,
+        "react": 67,
+        "react-dom": 623,
+        "react-haiku": 3,
+        "react-icons": 51,
+        "react-router-dom": 25,
+        "@chakra-ui/react": 0,
+        "@emotion/react": 0,
+        "@gsap/react": 0
+      },
+      "oneToOnePairs": 881,
+      "imageID": "sha256:134870a088eaa8a299c9767f15c4d4c0343a8b9ed523a8f13734745b02a39b51",
+      "qualification": "../qualified-dataset/vite/DavidHDev--react-bits/qualification.json"
+    },
+    {
       "subject": "vite/LibreChat-AI--LibreChat",
       "repo": "LibreChat-AI/LibreChat",
       "commit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
       "records": "../qualified-dataset/vite/LibreChat-AI--LibreChat/ground-truth/func-mapping.json",
-      "recordsSHA256": "bd0d58d0ae533e98799902ab8f96481c1d9a4301005ea1c97bcee03e0d41f4dd",
+      "recordsSHA256": "12e7def0478508e0eab42175098c47de49eeb130f709e9980dacb6af49e7c053",
       "selectedLibraries": [
         "@mcp-ui/client",
         "react",
@@ -282,17 +1177,17 @@
         "@radix-ui/react-toast"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "@mcp-ui/client": 7,
-        "react": 6,
-        "@ariakit/react-components": 32,
+      "sourceFunctionWitnesses": {
+        "@mcp-ui/client": 3,
+        "react": 3,
+        "@ariakit/react-components": 3,
         "swr": 3,
-        "react-dom": 59,
-        "framer-motion": 26,
-        "jotai": 4,
+        "react-dom": 3,
+        "framer-motion": 3,
+        "jotai": 3,
         "@marsidev/react-turnstile": 3,
         "@modelcontextprotocol/ext-apps": 3,
-        "@radix-ui/react-toast": 7
+        "@radix-ui/react-toast": 3
       },
       "libraryPairs": {
         "@mcp-ui/client": 162,
@@ -315,7 +1210,7 @@
       "repo": "Lissy93/dashy",
       "commit": "002c6dd559c8d7ba662aeae9228164f6cf398c75",
       "records": "../qualified-dataset/vite/Lissy93--dashy/ground-truth/func-mapping.json",
-      "recordsSHA256": "5767673c9675b0ff8b10a1ef7a588825dacaa9da7316210aa264a8484b2293c3",
+      "recordsSHA256": "84b29b974eaf197ef373d3d00ac6aca9b921c9ca716f2f7c0d494bfedecf8070",
       "selectedLibraries": [
         "vuex",
         "crypto-js",
@@ -329,17 +1224,17 @@
         "vue-router"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "vuex": 13,
-        "crypto-js": 24,
-        "sortablejs": 40,
-        "dompurify": 11,
+      "sourceFunctionWitnesses": {
+        "vuex": 3,
+        "crypto-js": 3,
+        "sortablejs": 3,
+        "dompurify": 3,
         "rsup-progress": 3,
-        "js-yaml": 58,
-        "vue-i18n": 9,
-        "vue-select": 11,
-        "ajv": 69,
-        "vue-router": 19
+        "js-yaml": 3,
+        "vue-i18n": 3,
+        "vue-select": 3,
+        "ajv": 3,
+        "vue-router": 3
       },
       "libraryPairs": {
         "vuex": 127,
@@ -362,7 +1257,7 @@
       "repo": "drawdb-io/drawdb",
       "commit": "a249c7fb730c2de9b5c2ce6e863f2ea7344ac372",
       "records": "../qualified-dataset/vite/drawdb-io--drawdb/ground-truth/func-mapping.json",
-      "recordsSHA256": "3ca656d095d1f32f8b3d23d990b201dd597ccce187aaecb4a6f607e1b4230f7b",
+      "recordsSHA256": "e3a682748cdd702b2bd2d798b54ffc0be869e38bb585e79e08a0c7d7c44b5218",
       "selectedLibraries": [
         "jsonschema",
         "oracle-sql-parser",
@@ -372,21 +1267,21 @@
         "react-dom",
         "@douyinfe/semi-ui",
         "@dagrejs/dagre",
-        "@dbml/core",
-        "@dnd-kit/core"
+        "@dnd-kit/core",
+        "@dnd-kit/sortable"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "jsonschema": 38,
-        "oracle-sql-parser": 11,
-        "lexical": 79,
-        "react-tweet": 4,
-        "framer-motion": 79,
-        "react-dom": 59,
-        "@douyinfe/semi-ui": 142,
-        "@dagrejs/dagre": 56,
-        "@dbml/core": 2384,
-        "@dnd-kit/core": 27
+      "sourceFunctionWitnesses": {
+        "jsonschema": 3,
+        "oracle-sql-parser": 3,
+        "lexical": 3,
+        "react-tweet": 3,
+        "framer-motion": 3,
+        "react-dom": 3,
+        "@douyinfe/semi-ui": 3,
+        "@dagrejs/dagre": 3,
+        "@dnd-kit/core": 3,
+        "@dnd-kit/sortable": 3
       },
       "libraryPairs": {
         "jsonschema": 106,
@@ -397,10 +1292,10 @@
         "react-dom": 487,
         "@douyinfe/semi-ui": 1825,
         "@dagrejs/dagre": 508,
-        "@dbml/core": 38426,
-        "@dnd-kit/core": 272
+        "@dnd-kit/core": 272,
+        "@dnd-kit/sortable": 62
       },
-      "oneToOnePairs": 44570,
+      "oneToOnePairs": 6206,
       "imageID": "sha256:616bebf23e313f32307d866fbcff99d7e6666e2f672567e98be4be1cdb588e12",
       "qualification": "../qualified-dataset/vite/drawdb-io--drawdb/qualification.json"
     },
@@ -409,28 +1304,40 @@
       "repo": "excalidraw/excalidraw",
       "commit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
       "records": "../qualified-dataset/vite/excalidraw--excalidraw/ground-truth/func-mapping.json",
-      "recordsSHA256": "9bb737148d96b6113e7c991cb1127c141267233083af38c3f5646ec078cff030",
+      "recordsSHA256": "b6c7b5b40c000b2e0651689cdeb571f189d632f344bb81f1801d8fb30494d3e7",
       "selectedLibraries": [
         "react-dom",
         "@sentry/browser",
         "i18next-browser-languagedetector",
         "react",
-        "jotai"
+        "jotai",
+        "firebase",
+        "socket.io-client",
+        "uqr",
+        "vite-plugin-html"
       ],
-      "libraryCount": 5,
-      "initialAnchors": {
-        "react-dom": 106,
-        "@sentry/browser": 13,
-        "i18next-browser-languagedetector": 4,
-        "react": 6,
-        "jotai": 7
+      "libraryCount": 9,
+      "sourceFunctionWitnesses": {
+        "react-dom": 3,
+        "@sentry/browser": 3,
+        "i18next-browser-languagedetector": 3,
+        "react": 3,
+        "jotai": 3,
+        "firebase": 3,
+        "socket.io-client": 3,
+        "uqr": 3,
+        "vite-plugin-html": 3
       },
       "libraryPairs": {
         "react-dom": 614,
         "@sentry/browser": 102,
         "i18next-browser-languagedetector": 28,
         "react": 65,
-        "jotai": 0
+        "jotai": 0,
+        "firebase": 0,
+        "socket.io-client": 0,
+        "uqr": 0,
+        "vite-plugin-html": 0
       },
       "oneToOnePairs": 809,
       "imageID": "sha256:e7e4d7681ac7e1dcff8f6389714d638fbf5c038ae2fd102c0320d2ba1ee26d2d",
@@ -441,7 +1348,7 @@
       "repo": "hoppscotch/hoppscotch",
       "commit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
       "records": "../qualified-dataset/vite/hoppscotch--hoppscotch/ground-truth/func-mapping.json",
-      "recordsSHA256": "0baf29d92212055417344688266146bf821afdf48e49ac6abc85197d8c36d4da",
+      "recordsSHA256": "ed4a524ca8a654a605e38b9953f237291a80df3460a0b8d9aeb3e0815a02a97e",
       "selectedLibraries": [
         "buffer",
         "workbox-window",
@@ -451,19 +1358,21 @@
         "@hoppscotch/ui",
         "@tauri-apps/api",
         "rxjs",
-        "zod"
+        "zod",
+        "@hoppscotch/common"
       ],
-      "libraryCount": 9,
-      "initialAnchors": {
-        "buffer": 10,
-        "workbox-window": 6,
-        "@vueuse/core": 7,
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "buffer": 3,
+        "workbox-window": 3,
+        "@vueuse/core": 3,
         "util": 3,
-        "axios": 34,
-        "@hoppscotch/ui": 103,
-        "@tauri-apps/api": 6,
-        "rxjs": 5,
-        "zod": 5
+        "axios": 3,
+        "@hoppscotch/ui": 3,
+        "@tauri-apps/api": 3,
+        "rxjs": 3,
+        "zod": 3,
+        "@hoppscotch/common": 3
       },
       "libraryPairs": {
         "buffer": 266,
@@ -474,7 +1383,8 @@
         "@hoppscotch/ui": 1195,
         "@tauri-apps/api": 240,
         "rxjs": 208,
-        "zod": 423
+        "zod": 423,
+        "@hoppscotch/common": 0
       },
       "oneToOnePairs": 3244,
       "imageID": "sha256:e59ec6b0d5cd5fd5913cb55219d74cea11fc1668e76265995c814dd7a58b3e43",
@@ -485,7 +1395,7 @@
       "repo": "immich-app/immich",
       "commit": "037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9",
       "records": "../qualified-dataset/vite/immich-app--immich/ground-truth/func-mapping.json",
-      "recordsSHA256": "f940ddab953c148d829233a23c8a369ef21cf6f14b736372566c37d5eaf5e376",
+      "recordsSHA256": "6079ca6e7aca34c06b4ea273cd1fb03078cea89a1cf58292aa1e267834c728d1",
       "selectedLibraries": [
         "@immich/ui",
         "@formatjs/icu-messageformat-parser",
@@ -499,17 +1409,17 @@
         "socket.io-client"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "@immich/ui": 12,
-        "@formatjs/icu-messageformat-parser": 20,
-        "tailwind-merge": 4,
-        "tabbable": 4,
-        "tailwind-variants": 13,
-        "justified-layout": 6,
-        "intl-messageformat": 7,
-        "lodash-es": 4,
-        "luxon": 58,
-        "socket.io-client": 14
+      "sourceFunctionWitnesses": {
+        "@immich/ui": 3,
+        "@formatjs/icu-messageformat-parser": 3,
+        "tailwind-merge": 3,
+        "tabbable": 3,
+        "tailwind-variants": 3,
+        "justified-layout": 3,
+        "intl-messageformat": 3,
+        "lodash-es": 3,
+        "luxon": 3,
+        "socket.io-client": 3
       },
       "libraryPairs": {
         "@immich/ui": 151,
@@ -532,7 +1442,7 @@
       "repo": "PanJiaChen/vue-element-admin",
       "commit": "6858a9ad67483025f6a9432a926beb9327037be3",
       "records": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/ground-truth/func-mapping.json",
-      "recordsSHA256": "3c9cdc8bd672af6c123f1287c39e85f73e38145cd89b934acf7a44200de5720e",
+      "recordsSHA256": "20d73652317daf5c985ac47582285ddb21aea661a05a709f48ed26c57eb6a3b4",
       "selectedLibraries": [
         "vue-router",
         "fuse.js",
@@ -541,18 +1451,22 @@
         "element-ui",
         "vue",
         "core-js",
-        "vuex"
+        "vuex",
+        "clipboard",
+        "codemirror"
       ],
-      "libraryCount": 8,
-      "initialAnchors": {
-        "vue-router": 22,
-        "fuse.js": 14,
-        "axios": 8,
-        "path-to-regexp": 4,
-        "element-ui": 506,
-        "vue": 65,
-        "core-js": 22,
-        "vuex": 9
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "vue-router": 3,
+        "fuse.js": 3,
+        "axios": 3,
+        "path-to-regexp": 3,
+        "element-ui": 3,
+        "vue": 3,
+        "core-js": 3,
+        "vuex": 3,
+        "clipboard": 3,
+        "codemirror": 3
       },
       "libraryPairs": {
         "vue-router": 216,
@@ -562,7 +1476,9 @@
         "element-ui": 4126,
         "vue": 465,
         "core-js": 496,
-        "vuex": 115
+        "vuex": 115,
+        "clipboard": 0,
+        "codemirror": 0
       },
       "oneToOnePairs": 5578,
       "imageID": "sha256:e6ecf7ce1479c72a71dc29b9f0f09e63fb1edca993e7e1065409a63750ec4020",
@@ -573,7 +1489,7 @@
       "repo": "akveo/ngx-admin",
       "commit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
       "records": "../qualified-dataset/webpack/akveo--ngx-admin/ground-truth/func-mapping.json",
-      "recordsSHA256": "95bccf0949f04e8badb913f69d7852fb960ecfd8326ac0bc1a8f7ef829f9fa9f",
+      "recordsSHA256": "6862560ea4f25cb876e68f401a64d36e26b2f5316ae9b94fdc089bc02d89d3c7",
       "selectedLibraries": [
         "web-animations-js",
         "core-js",
@@ -582,18 +1498,22 @@
         "chart.js",
         "echarts",
         "pace-js",
-        "zone.js"
+        "zone.js",
+        "@angular/animations",
+        "@angular/cdk"
       ],
-      "libraryCount": 8,
-      "initialAnchors": {
-        "web-animations-js": 11,
-        "core-js": 11,
-        "tinymce": 549,
-        "leaflet": 90,
-        "chart.js": 40,
-        "echarts": 870,
-        "pace-js": 10,
-        "zone.js": 26
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "web-animations-js": 3,
+        "core-js": 3,
+        "tinymce": 3,
+        "leaflet": 3,
+        "chart.js": 3,
+        "echarts": 3,
+        "pace-js": 3,
+        "zone.js": 3,
+        "@angular/animations": 3,
+        "@angular/cdk": 3
       },
       "libraryPairs": {
         "web-animations-js": 67,
@@ -603,18 +1523,99 @@
         "chart.js": 1284,
         "echarts": 6907,
         "pace-js": 60,
-        "zone.js": 224
+        "zone.js": 224,
+        "@angular/animations": 0,
+        "@angular/cdk": 0
       },
       "oneToOnePairs": 11976,
       "imageID": "sha256:92c1e8d331293ea060730eaa634c528cec25a185807d34eb8b161c099cfe8e0f",
       "qualification": "../qualified-dataset/webpack/akveo--ngx-admin/qualification.json"
     },
     {
+      "subject": "webpack/bailicangdu--vue2-elm",
+      "repo": "bailicangdu/vue2-elm",
+      "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
+      "records": "../qualified-dataset/webpack/bailicangdu--vue2-elm/ground-truth/func-mapping.json",
+      "recordsSHA256": "9484b1b9185f54b53a26af64bde109ff8dd83d48e794b21fe5c73e8d69556106",
+      "selectedLibraries": [
+        "better-scroll",
+        "fastclick",
+        "iscroll",
+        "showdown",
+        "vue",
+        "vue-router",
+        "vuex"
+      ],
+      "libraryCount": 7,
+      "sourceFunctionWitnesses": {
+        "better-scroll": 3,
+        "fastclick": 3,
+        "iscroll": 3,
+        "showdown": 3,
+        "vue": 3,
+        "vue-router": 3,
+        "vuex": 3
+      },
+      "libraryPairs": {
+        "better-scroll": 0,
+        "fastclick": 0,
+        "iscroll": 0,
+        "showdown": 0,
+        "vue": 420,
+        "vue-router": 65,
+        "vuex": 7
+      },
+      "oneToOnePairs": 492,
+      "imageID": "sha256:961df673d8f780ccdccba3e0ac792038bb9417fa8663420e1ab5c839d2b803b2",
+      "qualification": "../qualified-dataset/webpack/bailicangdu--vue2-elm/qualification.json"
+    },
+    {
+      "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+      "repo": "dair-ai/Prompt-Engineering-Guide",
+      "commit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
+      "records": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/ground-truth/func-mapping.json",
+      "recordsSHA256": "adc767ba5b1156ab4febaf4a37641aaa855698351c97076e86e435d93c253b27",
+      "selectedLibraries": [
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "katex",
+        "next",
+        "nextra",
+        "nextra-theme-docs",
+        "react",
+        "react-dom"
+      ],
+      "libraryCount": 8,
+      "sourceFunctionWitnesses": {
+        "@fortawesome/fontawesome-svg-core": 3,
+        "@fortawesome/react-fontawesome": 3,
+        "katex": 3,
+        "next": 3,
+        "nextra": 3,
+        "nextra-theme-docs": 3,
+        "react": 3,
+        "react-dom": 3
+      },
+      "libraryPairs": {
+        "@fortawesome/fontawesome-svg-core": 0,
+        "@fortawesome/react-fontawesome": 0,
+        "katex": 0,
+        "next": 847,
+        "nextra": 51,
+        "nextra-theme-docs": 94,
+        "react": 19,
+        "react-dom": 416
+      },
+      "oneToOnePairs": 1427,
+      "imageID": "sha256:762d82fcf838c12afddeca97b5271468ad1ee5e37c74d73f448e9848ad6a1a18",
+      "qualification": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/qualification.json"
+    },
+    {
       "subject": "webpack/dokploy--dokploy",
       "repo": "dokploy/dokploy",
       "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
       "records": "../qualified-dataset/webpack/dokploy--dokploy/ground-truth/func-mapping.json",
-      "recordsSHA256": "a019bd6f9e8391cf4ba2dacd1a156eeecfb618c7c2dbf551735d48cac278ccd8",
+      "recordsSHA256": "2d5e944fe5a842276e9a498dfefaed87d68cc524958272ba40b7c39c202b006d",
       "selectedLibraries": [
         "better-auth",
         "react-dom",
@@ -628,17 +1629,17 @@
         "react-hook-form"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "better-auth": 10,
-        "react-dom": 104,
-        "next": 5,
-        "react": 4,
-        "@tanstack/react-query": 4,
-        "@trpc/client": 18,
+      "sourceFunctionWitnesses": {
+        "better-auth": 3,
+        "react-dom": 3,
+        "next": 3,
+        "react": 3,
+        "@tanstack/react-query": 3,
+        "@trpc/client": 3,
         "@trpc/react-query": 3,
-        "cmdk": 8,
-        "posthog-js": 149,
-        "react-hook-form": 21
+        "cmdk": 3,
+        "posthog-js": 3,
+        "react-hook-form": 3
       },
       "libraryPairs": {
         "better-auth": 58,
@@ -661,7 +1662,7 @@
       "repo": "freeCodeCamp/freeCodeCamp",
       "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
       "records": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/ground-truth/func-mapping.json",
-      "recordsSHA256": "efcc9cdaccf1a49b8fdd02a9f6aba5fe3b59e2e7b70713a91c2c2b19faf6c5fe",
+      "recordsSHA256": "cc5ef764ae1aee6bd4959f68a26177e7270aff8133d709cf820568e57f492a67",
       "selectedLibraries": [
         "react-responsive",
         "date-fns-tz",
@@ -675,17 +1676,17 @@
         "@paypal/react-paypal-js"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "react-responsive": 8,
-        "date-fns-tz": 9,
+      "sourceFunctionWitnesses": {
+        "react-responsive": 3,
+        "date-fns-tz": 3,
         "validator": 3,
-        "react-dom": 66,
-        "react": 6,
-        "store": 4,
-        "@fortawesome/fontawesome-svg-core": 38,
-        "@fortawesome/react-fontawesome": 4,
-        "@gatsbyjs/reach-router": 22,
-        "@paypal/react-paypal-js": 8
+        "react-dom": 3,
+        "react": 3,
+        "store": 3,
+        "@fortawesome/fontawesome-svg-core": 3,
+        "@fortawesome/react-fontawesome": 3,
+        "@gatsbyjs/reach-router": 3,
+        "@paypal/react-paypal-js": 3
       },
       "libraryPairs": {
         "react-responsive": 62,
@@ -708,23 +1709,31 @@
       "repo": "supabase/supabase",
       "commit": "aa9d04e4f77447e2b6aaf317b686007aff05aa96",
       "records": "../qualified-dataset/webpack/supabase--supabase/ground-truth/func-mapping.json",
-      "recordsSHA256": "24593b1d200d6b2c4a40a8bd1e182fe5487631a03fff06641cf7f913820c5591",
+      "recordsSHA256": "1a4e412098caf4575931bb9ef22bade63ab541dd103b5814042399b02b7067d8",
       "selectedLibraries": [
         "recharts",
         "mdast-util-from-markdown",
         "next",
         "motion",
         "@sentry/nextjs",
-        "typed.js"
+        "typed.js",
+        "@bsmnt/scrollytelling",
+        "@code-hike/mdx",
+        "@codesandbox/sandpack-react",
+        "@hcaptcha/react-hcaptcha"
       ],
-      "libraryCount": 6,
-      "initialAnchors": {
-        "recharts": 5,
-        "mdast-util-from-markdown": 11,
-        "next": 164,
-        "motion": 33,
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "recharts": 3,
+        "mdast-util-from-markdown": 3,
+        "next": 3,
+        "motion": 3,
         "@sentry/nextjs": 3,
-        "typed.js": 14
+        "typed.js": 3,
+        "@bsmnt/scrollytelling": 3,
+        "@code-hike/mdx": 3,
+        "@codesandbox/sandpack-react": 3,
+        "@hcaptcha/react-hcaptcha": 3
       },
       "libraryPairs": {
         "recharts": 207,
@@ -732,7 +1741,11 @@
         "next": 660,
         "motion": 464,
         "@sentry/nextjs": 0,
-        "typed.js": 21
+        "typed.js": 21,
+        "@bsmnt/scrollytelling": 0,
+        "@code-hike/mdx": 0,
+        "@codesandbox/sandpack-react": 0,
+        "@hcaptcha/react-hcaptcha": 0
       },
       "oneToOnePairs": 1358,
       "imageID": "sha256:53dce561ab2faedb349ac6a1935e293cf5ee64305dd51a0161c0e6c79f577454",
@@ -743,7 +1756,7 @@
       "repo": "swagger-api/swagger-ui",
       "commit": "d3296954a6b813898d298815ac3e68daa1cf7408",
       "records": "../qualified-dataset/webpack/swagger-api--swagger-ui/ground-truth/func-mapping.json",
-      "recordsSHA256": "3ac40cfd6b4f7f97ecd45b9479b2bda3f3f0205da93a6639ce8811bc385d5c80",
+      "recordsSHA256": "20af923339de51a0142dac3450399ae2c66bb7fbc51d3d05939a6c0fa50e7dc8",
       "selectedLibraries": [
         "remarkable",
         "lodash",
@@ -757,17 +1770,17 @@
         "randexp"
       ],
       "libraryCount": 10,
-      "initialAnchors": {
-        "remarkable": 53,
-        "lodash": 9,
-        "dompurify": 7,
+      "sourceFunctionWitnesses": {
+        "remarkable": 3,
+        "lodash": 3,
+        "dompurify": 3,
         "xml": 3,
-        "zenscroll": 4,
-        "@tanstack/react-virtual": 4,
-        "buffer": 11,
-        "immutable": 41,
-        "js-yaml": 44,
-        "randexp": 4
+        "zenscroll": 3,
+        "@tanstack/react-virtual": 3,
+        "buffer": 3,
+        "immutable": 3,
+        "js-yaml": 3,
+        "randexp": 3
       },
       "libraryPairs": {
         "remarkable": 199,

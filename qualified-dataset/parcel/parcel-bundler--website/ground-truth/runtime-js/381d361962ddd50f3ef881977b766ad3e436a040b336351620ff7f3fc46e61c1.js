@@ -1,0 +1,1 @@
+!async function(){await t(500);let e="$ ";for(let a of"parcel index.html")await t(Math.floor(80*Math.random())+40),e+=a,heroPrompt.textContent=e;await t(500),heroCursor.style.display="none",await t(20),heroServer.hidden=!1,await t(28),heroStatus.hidden=!1}();function t(t){return new Promise(e=>setTimeout(e,t))}

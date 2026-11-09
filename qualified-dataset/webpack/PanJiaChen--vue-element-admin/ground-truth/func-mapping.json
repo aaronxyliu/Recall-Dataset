@@ -22,7 +22,9 @@
     "element-ui": 44,
     "vue": 1,
     "core-js": 242,
-    "vuex": 1
+    "vuex": 1,
+    "clipboard": 0,
+    "codemirror": 0
   },
   "pairs": [
     {
@@ -55986,20 +55988,26 @@
     "element-ui",
     "vue",
     "core-js",
-    "vuex"
+    "vuex",
+    "clipboard",
+    "codemirror"
   ],
-  "qualification": {
-    "policy": "initial-anchors-3",
-    "minInitialAnchors": 3,
+  "qualificationPolicy": {
+    "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
-    "minLibraries": 5,
-    "maxLibraries": 10
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
   "provenance": {
     "upstreamCommit": "6858a9ad67483025f6a9432a926beb9327037be3",
     "archiveRecord": "bundling-dataset/webpack/PanJiaChen--vue-element-admin/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "527532084f14d1876bef261209562f8840163c1fd149e99bcf89e990290ce440",
-    "collectorSHA256": "9c34dec50f9f075e5df611a84badbe210cc24db6bdb4d4305a651102d3aaf657",
-    "spanVerifierSHA256": "88632f35176f93ecdf7bfe8c61f07d14f3f0b16209b7e65d805529c5ebc2c249"
+    "collectorSHA256": "34be0f5318d7463394d7c8b10455366562037d86db517f522d40e23afd3adf68",
+    "spanVerifierSHA256": "da36a02d7ebfcba7c4d4bd4cdb1391df52f9921ba0d97a22eba36483788816ae"
   }
 }

@@ -3,7 +3,25 @@
   "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
   "upstreamCommit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
   "image": "recall-hufang/umami-software--umami:559e3c607c23",
-  "started": 1794148118.684984,
+  "started": 1794192707.4299479,
+  "sourcePreflight": {
+    "passed": true,
+    "status": "passed",
+    "receipt": "verification/hufang-builds-2026-11-08/turbopack/umami-software--umami/source-preflight.json",
+    "receiptSHA256": "1cb1c0ef767bff957aa36f2296c49b17efc0065743c74e22b5df4b353df7ec22",
+    "selectedLibraries": [
+      "@clickhouse/client",
+      "@dicebear/core",
+      "@prisma/adapter-pg",
+      "@prisma/client",
+      "@svgr/cli",
+      "@tanstack/react-query",
+      "@umami/react-zen",
+      "bcryptjs",
+      "chalk",
+      "chart.js"
+    ]
+  },
   "buildCommand": [
     "docker",
     "build",
@@ -30,10 +48,17 @@
     "recall-hufang/umami-software--umami:559e3c607c23",
     "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/umami-software--umami"
   ],
-  "recipeSHA256": "d4fd7cbc95989ed189dcec7d3dde8fb6c4f9ecc3efa76e7f41bd1ffdf654a283",
-  "buildExitCode": 1,
-  "buildStatus": "blocked",
-  "finished": 1794148118.83697,
-  "failureClassification": "environment-unavailable",
-  "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+  "recipeSHA256": "68b7f7eb9b5143a8ec2059dde514c1be885e05cba4f73ff9815e8ed4b78c1914",
+  "buildExitCode": 0,
+  "buildStatus": "built",
+  "imageID": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
+  "finished": 1794192847.017387,
+  "serviceImageIDs": {
+    "app": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
+    "db": "sha256:aae6554de426ae1990f1a939ff183a0299146cf7142a6f4c379c3357af9cc2d8"
+  },
+  "captureExitCode": 0,
+  "pairCount": 796,
+  "pageStatus": "rendered",
+  "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/umami-software--umami/page.json"
 }

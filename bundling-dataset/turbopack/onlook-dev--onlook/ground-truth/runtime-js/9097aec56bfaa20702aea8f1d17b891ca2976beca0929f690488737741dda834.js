@@ -1,0 +1,1 @@
+(function(w,d){{(function(w,d){})(window, document)}})(window,document)

@@ -1,1 +1,311 @@
-ERROR: Cannot connect to the Docker daemon at unix:///tmp/recall-hufang-docker.sock. Is the docker daemon running?
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.70kB done
+#1 DONE 0.0s
+
+#2 [context maptools] load .dockerignore
+#2 transferring maptools: 2B done
+#2 DONE 0.0s
+
+#3 [context recipe] load .dockerignore
+#3 transferring recipe: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:24-alpine
+#4 DONE 0.8s
+
+#5 [context maptools] load from client
+#5 transferring maptools: 38B done
+#5 DONE 0.0s
+
+#6 [deps 1/5] FROM docker.io/library/node:24-alpine@sha256:a34ab6d7f6f4813f4d0c5469d74685604b962fbdbf5793a7bc7b4998ecb867c8
+#6 resolve docker.io/library/node:24-alpine@sha256:a34ab6d7f6f4813f4d0c5469d74685604b962fbdbf5793a7bc7b4998ecb867c8 0.0s done
+#6 DONE 0.0s
+
+#7 [context recipe] load from client
+#7 transferring recipe: 47B done
+#7 DONE 0.0s
+
+#8 [runner 3/8] RUN addgroup --system --gid 1001 nodejs
+#8 CACHED
+
+#9 [builder 2/7] WORKDIR /app
+#9 CACHED
+
+#10 [runner 4/8] RUN adduser --system --uid 1001 nextjs
+#10 CACHED
+
+#11 [context recipe] load from client
+#11 transferring recipe: 37B done
+#11 DONE 0.0s
+
+#12 [internal] load build context
+#12 transferring context: 30.45kB 0.0s done
+#12 DONE 0.0s
+
+#13 [builder 5/7] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#13 CACHED
+
+#14 [deps 5/5] RUN --mount=type=cache,target=/root/.npm npm ci --no-audit --no-fund
+#14 CACHED
+
+#15 [deps 4/5] COPY package.json package-lock.json* ./
+#15 CACHED
+
+#16 [deps 2/5] RUN apk add --no-cache libc6-compat
+#16 CACHED
+
+#17 [builder 4/7] COPY . .
+#17 CACHED
+
+#18 [deps 3/5] WORKDIR /app
+#18 CACHED
+
+#19 [builder 3/7] COPY --from=deps /app/node_modules ./node_modules
+#19 CACHED
+
+#20 [builder 6/7] RUN node /tmp/recall-enable-maps.cjs
+#20 CACHED
+
+#21 [builder 7/7] RUN npm run build
+#21 0.562 
+#21 0.562 > next-ai-draw-io@0.5.1 prebuild
+#21 0.562 > node scripts/fetch-drawio.mjs
+#21 0.562 
+#21 0.605 [fetch-drawio] Downloading draw.io v32.0.2 ...
+#21 11.43 [fetch-drawio] Installed 3105 files into public/drawio
+#21 11.44 
+#21 11.44 > next-ai-draw-io@0.5.1 build
+#21 11.44 > next build
+#21 11.44 
+#21 11.69 ▲ Next.js 16.3.8 (Turbopack)
+#21 11.75 ✓ Running next.config.ts took 61ms
+#21 11.76 
+#21 11.78   Creating an optimized production build ...
+#21 19.47 ✓ Compiled successfully in 7.6s
+#21 19.47   Running TypeScript ...
+#21 24.27   Finished TypeScript in 4.8s ...
+#21 24.27   Collecting page data using 7 workers ...
+#21 24.68   Generating static pages using 7 workers (0/91) ...
+#21 25.76   Generating static pages using 7 workers (22/91) 
+#21 25.80   Generating static pages using 7 workers (45/91) 
+#21 26.01   Generating static pages using 7 workers (68/91) 
+#21 26.12 ✓ Generating static pages using 7 workers (91/91) in 1440ms
+#21 26.13   Finalizing page optimization ...
+#21 26.13 Turbopack build encountered 4 warnings:
+#21 26.13 ./lib/admin/settings.ts:129:13
+#21 26.13 Warning: Dynamic filesystem access causes tracing of the whole project
+#21 26.13   [90m127 |[0m     [36mtry[0m {
+#21 26.13   [90m128 |[0m         [36mconst[0m filePath = getSettingsPath()
+#21 26.13 [33m[1m>[0m [90m129 |[0m         [36mif[0m (fs.existsSync(filePath) && !fs.statSync(filePath).isFile()) {
+#21 26.13   [90m    |[0m             [33m[1m^^^^^^^^^^^^^^^^^^^^^^^[0m
+#21 26.13   [90m130 |[0m             writableCache = [36mfalse[0m
+#21 26.13   [90m131 |[0m             [36mreturn[0m writableCache
+#21 26.13   [90m132 |[0m         }
+#21 26.13 
+#21 26.13 Static analysis determined that this filesystem access causes the whole project to be traced and included in the output.
+#21 26.13 This is usually unintentional and leads to all source files (including the public folder) to be deployed as part of the server code.
+#21 26.13 This can slow down deployments or lead to failures when size limits are exceeded.
+#21 26.13 To resolve this, you can
+#21 26.13 - make sure the path is statically scoped to some subfolder, for example path.join(process.cwd(), 'data', bar), or
+#21 26.13 - only use them in development, or
+#21 26.13 - opt out by adding an ignore comment to the highlighted call: fs.existsSync(/*turbopackIgnore: true*/ ...), or
+#21 26.13 - remove them.
+#21 26.13 
+#21 26.13 Import traces:
+#21 26.13   App Route:
+#21 26.13     ./lib/admin/settings.ts
+#21 26.13     ./app/api/admin/settings/route.ts
+#21 26.13 
+#21 26.13   Instrumentation:
+#21 26.13     ./lib/admin/settings.ts
+#21 26.13     ./instrumentation.ts
+#21 26.13 
+#21 26.13 
+#21 26.13 ./lib/admin/settings.ts:44:21
+#21 26.13 Warning: Dynamic filesystem access causes tracing of the whole project
+#21 26.13   [90m42 |[0m     [36mif[0m (state.cachedSettings) [36mreturn[0m state.cachedSettings
+#21 26.13   [90m43 |[0m     [36mtry[0m {
+#21 26.13 [33m[1m>[0m [90m44 |[0m         [36mconst[0m raw = fs.readFileSync(getSettingsPath(), [32m"utf8"[0m)
+#21 26.13   [90m   |[0m                     [33m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+#21 26.13   [90m45 |[0m         [36mconst[0m parsed = [33mJSON[0m.parse(raw) [36mas[0m [33mSettingsFile[0m
+#21 26.13   [90m46 |[0m         [90m// Keep only string values — a hand-edited or corrupted file could[0m
+#21 26.13   [90m47 |[0m         [90m// hold null/arrays/numbers that would otherwise be overlaid onto[0m
+#21 26.13 
+#21 26.13 Static analysis determined that this filesystem access causes the whole project to be traced and included in the output.
+#21 26.13 This is usually unintentional and leads to all source files (including the public folder) to be deployed as part of the server code.
+#21 26.13 This can slow down deployments or lead to failures when size limits are exceeded.
+#21 26.13 To resolve this, you can
+#21 26.13 - make sure the path is statically scoped to some subfolder, for example path.join(process.cwd(), 'data', bar), or
+#21 26.13 - only use them in development, or
+#21 26.13 - opt out by adding an ignore comment to the highlighted call: fs.readFileSync(/*turbopackIgnore: true*/ ...), or
+#21 26.13 - remove them.
+#21 26.13 
+#21 26.13 Import traces:
+#21 26.13   App Route:
+#21 26.13     ./lib/admin/settings.ts
+#21 26.13     ./app/api/admin/settings/route.ts
+#21 26.13 
+#21 26.13   Instrumentation:
+#21 26.13     ./lib/admin/settings.ts
+#21 26.13     ./instrumentation.ts
+#21 26.13 
+#21 26.13 
+#21 26.13 ./lib/admin/settings.ts:129:41
+#21 26.13 Warning: Dynamic filesystem access causes tracing of the whole project
+#21 26.13   [90m127 |[0m     [36mtry[0m {
+#21 26.13   [90m128 |[0m         [36mconst[0m filePath = getSettingsPath()
+#21 26.13 [33m[1m>[0m [90m129 |[0m         [36mif[0m (fs.existsSync(filePath) && !fs.statSync(filePath).isFile()) {
+#21 26.13   [90m    |[0m                                         [33m[1m^^^^^^^^^^^^^^^^^^^^^[0m
+#21 26.13   [90m130 |[0m             writableCache = [36mfalse[0m
+#21 26.13   [90m131 |[0m             [36mreturn[0m writableCache
+#21 26.13   [90m132 |[0m         }
+#21 26.13 
+#21 26.13 Static analysis determined that this filesystem access causes the whole project to be traced and included in the output.
+#21 26.13 This is usually unintentional and leads to all source files (including the public folder) to be deployed as part of the server code.
+#21 26.13 This can slow down deployments or lead to failures when size limits are exceeded.
+#21 26.13 To resolve this, you can
+#21 26.13 - make sure the path is statically scoped to some subfolder, for example path.join(process.cwd(), 'data', bar), or
+#21 26.13 - only use them in development, or
+#21 26.13 - opt out by adding an ignore comment to the highlighted call: fs.statSync(/*turbopackIgnore: true*/ ...), or
+#21 26.13 - remove them.
+#21 26.13 
+#21 26.13 Import traces:
+#21 26.13   App Route:
+#21 26.13     ./lib/admin/settings.ts
+#21 26.13     ./app/api/admin/settings/route.ts
+#21 26.13 
+#21 26.13   Instrumentation:
+#21 26.13     ./lib/admin/settings.ts
+#21 26.13     ./instrumentation.ts
+#21 26.13 
+#21 26.13 
+#21 26.13 ./lib/server-model-config.ts:132:31
+#21 26.13 Warning: Dynamic filesystem access causes tracing of the whole project
+#21 26.13   [90m130 |[0m     [36mconst[0m configPath = getConfigPath()
+#21 26.13   [90m131 |[0m     [36mtry[0m {
+#21 26.13 [33m[1m>[0m [90m132 |[0m         [36mconst[0m jsonStr = [36mawait[0m fs.readFile(configPath, [32m"utf8"[0m)
+#21 26.13   [90m    |[0m                               [33m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+#21 26.13   [90m133 |[0m         [36mconst[0m json = [33mJSON[0m.parse(jsonStr)
+#21 26.13   [90m134 |[0m         [36mreturn[0m [33mServerModelsConfigSchema[0m.parse(json)
+#21 26.13   [90m135 |[0m     } [36mcatch[0m (err: any) {
+#21 26.13 
+#21 26.13 Static analysis determined that this filesystem access causes the whole project to be traced and included in the output.
+#21 26.13 This is usually unintentional and leads to all source files (including the public folder) to be deployed as part of the server code.
+#21 26.13 This can slow down deployments or lead to failures when size limits are exceeded.
+#21 26.13 To resolve this, you can
+#21 26.13 - make sure the path is statically scoped to some subfolder, for example path.join(process.cwd(), 'data', bar), or
+#21 26.13 - only use them in development, or
+#21 26.13 - opt out by adding an ignore comment to the highlighted call: fs.readFile(/*turbopackIgnore: true*/ ...), or
+#21 26.13 - remove them.
+#21 26.13 
+#21 26.13 Import traces:
+#21 26.13   #1 [App Route]:
+#21 26.13     ./lib/server-model-config.ts
+#21 26.13     ./app/api/chat/route.ts
+#21 26.13 
+#21 26.13   #2 [App Route]:
+#21 26.13     ./lib/server-model-config.ts
+#21 26.13     ./lib/admin/settings.ts
+#21 26.13     ./app/api/admin/settings/route.ts
+#21 26.13 
+#21 26.13 
+#21 26.44 
+#21 26.44 Route (app)
+#21 26.44 ┌ ○ /_not-found
+#21 26.44 ├   /[lang]
+#21 26.44 │ ├ ● /en
+#21 26.44 │ ├ ● /zh
+#21 26.44 │ ├ ● /ja
+#21 26.44 │ └ ● /zh-Hant
+#21 26.44 ├ ƒ /[lang]/[...rest]
+#21 26.44 ├   /[lang]/about
+#21 26.44 │ ├ ● /en/about
+#21 26.44 │ ├ ● /zh/about
+#21 26.44 │ ├ ● /ja/about
+#21 26.44 │ └ ● /zh-Hant/about
+#21 26.44 ├   /[lang]/admin
+#21 26.44 │ ├ ● /en/admin
+#21 26.44 │ ├ ● /zh/admin
+#21 26.44 │ ├ ● /ja/admin
+#21 26.44 │ └ ● /zh-Hant/admin
+#21 26.44 ├   /[lang]/docs/[[...slug]]
+#21 26.44 │ ├ ● /en/docs
+#21 26.44 │ ├ ● /en/docs/claude-code
+#21 26.44 │ ├ ● /en/docs/mcp-clients
+#21 26.44 │ └ ● [+53 more paths]
+#21 26.44 ├   /[lang]/gallery
+#21 26.44 │ ├ ● /en/gallery
+#21 26.44 │ ├ ● /zh/gallery
+#21 26.44 │ ├ ● /ja/gallery
+#21 26.44 │ └ ● /zh-Hant/gallery
+#21 26.44 ├   /[lang]/mcp
+#21 26.44 │ ├ ● /en/mcp
+#21 26.44 │ ├ ● /zh/mcp
+#21 26.44 │ ├ ● /ja/mcp
+#21 26.44 │ └ ● /zh-Hant/mcp
+#21 26.44 ├ ƒ /api/admin/providers
+#21 26.44 ├ ƒ /api/admin/settings
+#21 26.44 ├ ƒ /api/admin/test-model
+#21 26.44 ├ ƒ /api/chat
+#21 26.44 ├ ƒ /api/config
+#21 26.44 ├ ƒ /api/log-feedback
+#21 26.44 ├ ƒ /api/log-save
+#21 26.44 ├ ƒ /api/parse-url
+#21 26.44 ├ ƒ /api/provider-models
+#21 26.44 ├ ƒ /api/server-models
+#21 26.44 ├ ƒ /api/validate-diagram
+#21 26.44 ├ ƒ /api/validate-model
+#21 26.44 ├ ƒ /api/verify-access-code
+#21 26.44 ├ ○ /manifest.webmanifest
+#21 26.44 ├ ○ /robots.txt
+#21 26.44 └ ○ /sitemap.xml
+#21 26.44 
+#21 26.44 
+#21 26.44 ƒ Proxy (Middleware)
+#21 26.44 
+#21 26.44 ○  (Static)   prerendered as static content
+#21 26.44 ●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+#21 26.44 ƒ  (Dynamic)  server-rendered on demand
+#21 26.44 
+#21 26.47 npm notice
+#21 26.47 npm notice New major version of npm available! 11.19.1 -> 12.2.2
+#21 26.47 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#21 26.47 npm notice To update run: npm install -g npm@12.2.2
+#21 26.47 npm notice
+#21 DONE 26.7s
+
+#22 [runner 5/8] COPY --from=builder /app/public ./public
+#22 DONE 0.2s
+
+#23 [runner 6/8] COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+#23 DONE 0.5s
+
+#24 [runner 7/8] COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+#24 DONE 0.0s
+
+#25 [runner 8/8] RUN mkdir -p /app/data && chown nextjs:nodejs /app/data
+#25 DONE 0.1s
+
+#26 [browser-maps 1/2] COPY --from=recipe drawio-original-js.sha256 /tmp/drawio-original-js.sha256
+#26 DONE 0.0s
+
+#27 [browser-maps 2/2] RUN --mount=from=maptools,source=/identity-map.cjs,target=/tmp/recall-map.cjs     sha256sum -c /tmp/drawio-original-js.sha256     && for file in bootstrap.js main.js PreConfig.js PostConfig.js; do          node /tmp/recall-map.cjs "public/drawio/js/$file" "public/drawio/js/$file"            "https://raw.githubusercontent.com/jgraph/drawio/v32.0.2/src/main/webapp/js/$file" || exit;        done
+#27 0.091 public/drawio/js/bootstrap.js: OK
+#27 0.091 public/drawio/js/main.js: OK
+#27 0.091 public/drawio/js/PreConfig.js: OK
+#27 0.091 public/drawio/js/PostConfig.js: OK
+#27 DONE 0.2s
+
+#28 exporting to image
+#28 exporting layers
+#28 exporting layers 2.7s done
+#28 exporting manifest sha256:f42a0a90ea932adc530c5e901a4d95ce8b7424e4846a44a4fadcdc2cae0eb193 done
+#28 exporting config sha256:c818f4a4dc29899fac68496a3a59152238564b2881a774216f5325cacfc8a3f7 done
+#28 exporting attestation manifest sha256:ca5cb04e928b1e04257e29e3f48bb3bc715e49d9c4c68610ee4fad0f042b182c done
+#28 exporting manifest list sha256:079245223f1ad23b1a565e0cbb50050d93249448e0fb1fce3d5c2621580d28ca done
+#28 naming to docker.io/recall-hufang/dayuanjiang--next-ai-draw-io:e3d4d11d5916 done
+#28 unpacking to docker.io/recall-hufang/dayuanjiang--next-ai-draw-io:e3d4d11d5916
+#28 unpacking to docker.io/recall-hufang/dayuanjiang--next-ai-draw-io:e3d4d11d5916 0.9s done
+#28 DONE 3.7s

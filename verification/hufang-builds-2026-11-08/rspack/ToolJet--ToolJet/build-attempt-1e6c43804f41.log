@@ -1,0 +1,92 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 5.56kB done
+#1 DONE 0.0s
+
+#2 [context recipe] load .dockerignore
+#2 transferring recipe: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:22.23.4-bookworm
+#3 DONE 0.1s
+
+#4 [context recipe] load from client
+#4 transferring recipe: 44B done
+#4 DONE 0.0s
+
+#5 [builder  1/23] FROM docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f
+#5 resolve docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f done
+#5 DONE 0.0s
+
+#6 [context recipe] load from client
+#6 transferring recipe: 37B done
+#6 DONE 0.0s
+
+#7 [context recipe] load from client
+#7 transferring recipe: 185B done
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 transferring context: 223.71kB 0.1s
+#8 transferring context: 653.41kB 0.4s done
+#8 DONE 0.4s
+
+#9 [builder  6/23] COPY ./plugins/package.json ./plugins/package-lock.json ./plugins/
+#9 CACHED
+
+#10 [builder  4/23] WORKDIR /app
+#10 CACHED
+
+#11 [builder  7/23] RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm --prefix plugins ci
+#11 CACHED
+
+#12 [builder  2/23] RUN npm i -g npm@10.9.9
+#12 CACHED
+
+#13 [builder  3/23] RUN mkdir -p /app
+#13 CACHED
+
+#14 [builder  5/23] COPY ./package.json ./package.json
+#14 CACHED
+
+#15 [builder  8/23] COPY ./plugins/ ./plugins/
+#15 CACHED
+
+#16 [runtime  2/28] RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list.d/debian.sources     && apt-get update -o Acquire::Retries=3     && apt-get install -y --no-install-recommends postgresql-client freetds-dev libaio1 libxml2 redis-server tini procps     && rm -rf /var/lib/apt/lists/*
+#16 CACHED
+
+#17 [runtime  3/28] COPY ./docker/icu-tz /usr/local/share/icu-tz
+#17 CACHED
+
+#18 [runtime  4/28] RUN node -e "if (process.versions.tz < '2026e') throw new Error('stale tz data: ' + process.versions.tz)"
+#18 CACHED
+
+#19 [runtime  5/28] RUN mkdir -p /app
+#19 CACHED
+
+#20 [builder  9/23] RUN NODE_ENV=production npm --prefix plugins run build
+#20 2.063 
+#20 2.063 > @tooljet/plugins@0.0.1 build
+#20 2.063 > npm run create:client && npm run create:server && npm run build:packages && npm run build:server && npm run create:operations
+#20 2.063 
+#20 2.968 
+#20 2.968 > @tooljet/plugins@0.0.1 create:client
+#20 2.968 > node create-client-entry
+#20 2.968 
+#20 4.137 
+#20 4.137 > @tooljet/plugins@0.0.1 create:server
+#20 4.137 > node create-server-entry
+#20 4.137 
+#20 5.271 
+#20 5.271 > @tooljet/plugins@0.0.1 prebuild:packages
+#20 5.271 > npm run clean:packages
+#20 5.271 
+#20 6.208 
+#20 6.208 > @tooljet/plugins@0.0.1 clean:packages
+#20 6.208 > node clean-packages.js
+#20 6.208 
+
+ [33m1 warning found (use docker --debug to expand):
+[0m - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 98)
+ERROR: failed to build: failed to receive status: rpc error: code = Unavailable desc = error reading from server: EOF

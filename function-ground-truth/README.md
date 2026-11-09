@@ -1,6 +1,6 @@
 # Function ground truth
 
-Current membership is defined by the [production-only, initial-anchor-qualified dataset](../qualified-dataset/README.md). Both active evaluation manifests now point to those records. The following describes the historical collection protocol; its cohort counts and frontend-visible dependency exceptions do not apply to the current dataset. Previous cohort manifests are preserved under `historical-cohorts/before-initial-anchors-3/`.
+Current membership is defined by the [production-only, source-function-qualified dataset](../qualified-dataset/README.md). Both active evaluation manifests now point to those records. The following describes the historical collection protocol; its cohort counts and frontend-visible dependency exceptions do not apply to the current dataset. Previous cohort manifests are preserved under `historical-cohorts/before-initial-anchors-3/`.
 
 The canonical dataset is [bundling-dataset/one-to-one-evaluation.json](../bundling-dataset/one-to-one-evaluation.json): **26 repositories and 78,884 one-to-one pairs**. The [exclusion record](exclusions.json) preserves the four excluded subjects and reasons.
 

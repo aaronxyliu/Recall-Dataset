@@ -13,7 +13,7 @@ RUN apk update && apk upgrade --no-cache \
     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0" \
       libgcc libstdc++
 COPY --from=runtime-node /usr/local/bin/node /usr/local/libexec/node
-COPY --from=runtime-node /usr/local/LICENSE /usr/local/share/doc/node/LICENSE
+COPY --from=recipe runtime-node-LICENSE /usr/local/share/doc/node/LICENSE
 
 # Always select the patched Alpine CA store, including with a deployment's own NODE_OPTIONS.
 COPY --chmod=755 <<'EOF' /usr/local/bin/node
@@ -81,6 +81,7 @@ ENV BASE_PATH=${BASE_PATH}
 COPY . .
 COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
 RUN node /tmp/recall-enable-maps.cjs
+RUN node -e "const fs=require('fs'),p='turbo.json',j=JSON.parse(fs.readFileSync(p));j.globalPassThroughEnv=[...new Set([...(j.globalPassThroughEnv||[]),'HTTP_PROXY','HTTPS_PROXY','NO_PROXY','http_proxy','https_proxy','no_proxy'])];fs.writeFileSync(p,JSON.stringify(j,null,2));"
 
 # Before each `pnpm run`, pnpm 11 re-checks every install input whose mtime is newer than the install's
 # last validation: a newer patch fails as "Patches were modified", a newer manifest gets a deep check

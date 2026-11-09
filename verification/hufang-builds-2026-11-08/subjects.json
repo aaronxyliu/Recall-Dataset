@@ -918,7 +918,7 @@
       "repo": "ToolJet/ToolJet",
       "latestRelease": "v3.20.253-lts (uses Webpack)",
       "applicationDirectory": ".",
-      "packageManifest": "package.json",
+      "packageManifest": "frontend/package.json",
       "upstreamProductionScripts": {
         "plugins": "npm --prefix plugins run build",
         "frontend": "NODE_ENV=production npm --prefix frontend run build",
@@ -945,7 +945,9 @@
       "containerPort": 3000,
       "pageRoute": "/",
       "runtime": "CE entrypoint and NestJS API/static server",
-      "verificationUrl": "http://127.0.0.1:43221/"
+      "verificationUrl": "http://127.0.0.1:43221/",
+      "submittedPackageManifest": "package.json",
+      "manifestCorrection": "Use the actual selected frontend manifest, rather than its repository root, for production-library eligibility."
     },
     "recipe": {
       "namedRecipeContext": true,
@@ -996,7 +998,7 @@
       "commit": "b4014fd62ce8ba46866bb19a648b09fceb91f8cd",
       "sourceDirectory": "builds/peggyjs--peggy",
       "applicationDirectory": ".",
-      "packageManifest": "package.json",
+      "packageManifest": "docs/package.json",
       "declaredPackageManager": "pnpm@12.13.0",
       "runtimeDeclarations": {},
       "engines": {
@@ -1069,7 +1071,9 @@
       "launchRecipe": "launch.json",
       "externalServicesUnverified": [],
       "scopeNotes": [],
-      "resolvedDependencySnapshots": {}
+      "resolvedDependencySnapshots": {},
+      "submittedPackageManifest": "package.json",
+      "manifestCorrection": "Use the actual selected frontend manifest, rather than its repository root, for production-library eligibility."
     },
     "recipe": {
       "context": ".",
@@ -1372,9 +1376,9 @@
     },
     "launch": {
       "containerPort": 3000,
-      "route": "/auth/login",
-      "expectedSelector": "form",
-      "expectedText": "Sign in|Log in|Email",
+      "route": "/auth/setup?step=1",
+      "expectedSelector": "form input[type=\"email\"]",
+      "expectedText": "\u7ba1\u7406\u5458|\u7535\u5b50\u90ae\u4ef6|\u90ae\u7bb1|Administrator|Email|Set up",
       "composeFile": "compose.yaml",
       "readinessTimeoutSeconds": 360,
       "generateEnvironment": [
@@ -1391,7 +1395,8 @@
         "DATABASE_HOST": "db:5432",
         "NEXT_PUBLIC_WEBAPP_URL": "http://127.0.0.1:{port}",
         "NEXTAUTH_URL": "http://127.0.0.1:{port}"
-      }
+      },
+      "scopeNote": "Fresh local database: verify first-run administrator setup, not an existing-user login or authenticated scheduling workflow."
     }
   },
   {
@@ -1857,7 +1862,8 @@
       "generateEnvironment": [
         "POLAR_WEBHOOK_SECRET",
         "BETTER_AUTH_SECRET"
-      ]
+      ],
+      "browserProxy": "http://127.0.0.1:7897"
     }
   },
   {

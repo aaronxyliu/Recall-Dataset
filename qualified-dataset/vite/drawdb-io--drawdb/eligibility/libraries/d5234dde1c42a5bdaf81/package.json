@@ -1,0 +1,43 @@
+{
+  "name": "oracle-sql-parser",
+  "version": "0.1.0",
+  "description": "spec compliant parser for oracle sql",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build && jest",
+    "minify": "npx uglifyjs ./build/parser.js -o ./build/parser.js -c -m",
+    "generate": "npx peggy -o ./build/parser.js ./src/pegjs/oracle.pegjs",
+    "build": "npm run generate && npm run minify",
+    "start": "npm run generate && node ./src/index.js",
+    "publish": "npm run build && npm publish"
+  },
+  "keywords": [
+    "sql",
+    "sql-parser",
+    "parser",
+    "node",
+    "nodejs",
+    "node-parser",
+    "oracle",
+    "oracle-parser",
+    "oracle-sql-parser",
+    "ast",
+    "sql-ast"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1ilit/oracle-sql-parser"
+  },
+  "bugs": {
+    "url": "https://github.com/1ilit/oracle-sql-parser/issues"
+  },
+  "homepage": "https://github.com/1ilit/oracle-sql-parser#readme",
+  "author": "1ilit <1ilit@proton.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "peggy": "^4.0.3",
+    "uglify-js": "^3.19.3"
+  }
+}
+

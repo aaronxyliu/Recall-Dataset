@@ -1,0 +1,3 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,329306,e=>{"use strict";var t=e.i(106560),i=e.i(286162);e.i(685521);var n=e.i(223351);e.s(["default",0,function(){let{t:e,labels:r}=(0,n.f)();return(0,t.jsx)(i.b3,{alignItems:"center",justifyContent:"center",flexGrow:"1",minHeight:"600px",children:(0,t.jsx)("h1",{children:e(r.pageNotFound)})})}])}]);
+
+//# sourceMappingURL=417ekg-pyqlkd.js.map

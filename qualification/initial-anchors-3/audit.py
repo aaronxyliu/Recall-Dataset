@@ -14,6 +14,10 @@ totals = collections.Counter()
 for entry in index['subjects']:
     directory = dataset / entry['subject']
     selected = set(entry['selectedLibraries'])
+    qualification = read(directory / 'qualification.json')
+    for field, file in [('qualificationRunnerSHA256', 'anchors.mjs'), ('selectionSHA256', 'selection.mjs'), ('matcherSHA256', 'runtime/components/pog/index.mjs')]:
+        assert qualification['provenance'][field] == sha(base / file)
+    assert qualification['provenance']['manifestSHA256'] == sha(directory / 'frontend-package.json')
     assert 5 <= len(selected) <= 10
     assert selected <= set(read(directory / 'frontend-package.json').get('dependencies', {}))
     refs = read(directory / 'reference-manifest.json')['files']

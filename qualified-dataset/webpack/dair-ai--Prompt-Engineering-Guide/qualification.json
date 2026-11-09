@@ -1,0 +1,906 @@
+{
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
+  "repo": "dair-ai/Prompt-Engineering-Guide",
+  "commit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
+  "policy": {
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
+  },
+  "selectionOverride": {},
+  "candidates": [
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/free-solid-svg-icons",
+    "@fortawesome/react-fontawesome",
+    "@napi-rs/simple-git",
+    "@svgr/webpack",
+    "@vercel/analytics",
+    "clsx",
+    "katex",
+    "next",
+    "nextra",
+    "nextra-theme-docs",
+    "react",
+    "react-dom"
+  ],
+  "libraries": [
+    {
+      "library": "@fortawesome/fontawesome-svg-core",
+      "declaredVersion": "^6.5.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@fortawesome/fontawesome-svg-core",
+        "version": "6.7.2",
+        "integrity": "sha512-yxtOBWDrdi5DD5o1pmVdq3WMCvnobT0LU6R8RyyVXPvFRd2o79/0NCuQoCjNTeZz9EzA9xS3JxNWfv54RIHFEA==",
+        "shasum": "0ac6013724d5cc327c1eb81335b91300a4fce2f2",
+        "tarballSHA256": "46315d35783552c7303faa6360e0c6284955f0aeb7fa0a34921a507b08c76c84",
+        "bytes": 84488,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 12,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "import.macro.js",
+          "source": "source-js/e285c85ecdf0f536d43b6b470c778dbf3c79aad18b52d418dc0d843a4a7a1313.js",
+          "sourceSHA256": "e285c85ecdf0f536d43b6b470c778dbf3c79aad18b52d418dc0d843a4a7a1313",
+          "span": [
+            1107,
+            1458
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "792dbf6122be8e79fbaba68a9f2791d4bf09436962780b6219e2735e98b78442",
+          "codeSHA256": "ac9e304c98396bf50bc59ffc451bfb45b4429c64882d6f3b065b0fde641cec80",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "6937d6618662ece7",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "import.macro.js",
+          "source": "source-js/e285c85ecdf0f536d43b6b470c778dbf3c79aad18b52d418dc0d843a4a7a1313.js",
+          "sourceSHA256": "e285c85ecdf0f536d43b6b470c778dbf3c79aad18b52d418dc0d843a4a7a1313",
+          "span": [
+            2162,
+            3852
+          ],
+          "name": "resolveReplacementLegacyStyle",
+          "normalizedASTSHA256": "46f181eb99ec02f906437cbaf1f3c3a8d120417bf949ec7ae90507aad910befa",
+          "codeSHA256": "90ba41d6239681bf7ded81fb7617d787b47e01ec58a79d914f89b8b594857a30",
+          "features": {
+            "propertyOperations": 56,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "fd095f1b4410a389",
+            "graphNodes": 37,
+            "graphEdges": 46,
+            "graphOperationOccurrences": 78,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "import.macro.js",
+          "source": "source-js/e285c85ecdf0f536d43b6b470c778dbf3c79aad18b52d418dc0d843a4a7a1313.js",
+          "sourceSHA256": "e285c85ecdf0f536d43b6b470c778dbf3c79aad18b52d418dc0d843a4a7a1313",
+          "span": [
+            3875,
+            6841
+          ],
+          "name": "resolveReplacementIcon",
+          "normalizedASTSHA256": "6585d26d289b4d3dc220770ee9106fffb5383232d2a3a67877478fde78fccc0c",
+          "codeSHA256": "6f77e098cbce8bec2a8c6a75f92294fef2b1feb6496074b2e29dd85af8ced3e8",
+          "features": {
+            "propertyOperations": 46,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "a93648af2aedd64c",
+            "graphNodes": 52,
+            "graphEdges": 75,
+            "graphOperationOccurrences": 51,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/9c2535d9b781fea290c0",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "9b914eae88817d63b576eab5aafde7068c7a1abae125d7cdfb034f1da43a9afc"
+        }
+      ],
+      "lockfileSHA256": "93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134",
+      "lockfileSnapshot": "lockfiles/93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134-pnpm-lock.yaml"
+    },
+    {
+      "library": "@fortawesome/react-fontawesome",
+      "declaredVersion": "^0.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@fortawesome/react-fontawesome",
+        "version": "0.2.6",
+        "integrity": "sha512-mtBFIi1UsYQo7rYonYFkjgYKGoL8T+fEH6NGUpvuqtY3ytMsAoDaPo5rk25KuMtKDipY4bGYM/CkmCHA1N3FUg==",
+        "shasum": "b75d0c7710c646c9bb6b9bb61cb5b8548a9ef2f5",
+        "tarballSHA256": "e1bbf531fb21b71efacb3b6b443243263bd50e4d00cfc4cd2f0f41bc32198f0e",
+        "bytes": 11128,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 27,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "index.es.js",
+          "source": "source-js/ce625e89d967cd598fdbbd87ffc5efbee379c16ded69b05381968539f5a96726.js",
+          "sourceSHA256": "ce625e89d967cd598fdbbd87ffc5efbee379c16ded69b05381968539f5a96726",
+          "span": [
+            787,
+            1453
+          ],
+          "name": "_iterableToArrayLimit",
+          "normalizedASTSHA256": "0a991c49968c67b676ff3e28867ec200a5a63ba4fc043ef4ecb41c77986c4892",
+          "codeSHA256": "53777f49c0d67c170f6a8e2417ba70d80e84c63e76cc1ffcce82df988e10b24f",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "d28063d75b2cd098",
+            "graphNodes": 24,
+            "graphEdges": 34,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.es.js",
+          "source": "source-js/ce625e89d967cd598fdbbd87ffc5efbee379c16ded69b05381968539f5a96726.js",
+          "sourceSHA256": "ce625e89d967cd598fdbbd87ffc5efbee379c16ded69b05381968539f5a96726",
+          "span": [
+            5156,
+            7233
+          ],
+          "name": "classList",
+          "normalizedASTSHA256": "8441312f17ccfec250196bb8d256af3131bbec4c0994df7e32eca253744055ac",
+          "codeSHA256": "2e78325eb96d79c7e5d97df759ac79ed7e7e6b15b6eb65edf2ff1f6a8d29a276",
+          "features": {
+            "propertyOperations": 44,
+            "distinctOperationPropertyPairs": 42,
+            "pogHash": "5ebd99b9512aa03f",
+            "graphNodes": 23,
+            "graphEdges": 29,
+            "graphOperationOccurrences": 51,
+            "distinctGraphOperationPropertyPairs": 41,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.es.js",
+          "source": "source-js/ce625e89d967cd598fdbbd87ffc5efbee379c16ded69b05381968539f5a96726.js",
+          "sourceSHA256": "ce625e89d967cd598fdbbd87ffc5efbee379c16ded69b05381968539f5a96726",
+          "span": [
+            7292,
+            8894
+          ],
+          "name": "versionCheckGte",
+          "normalizedASTSHA256": "4d1cb608fde21be48da409a1c68bd92dbe041231d677640ea749e92153daabda",
+          "codeSHA256": "9c6ef10a926c902a868e88951656a9f71e5077c9aa4d71ccd6d9d1409eef336d",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "a3da6c658d573c0",
+            "graphNodes": 27,
+            "graphEdges": 38,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 3,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/e5bd58ffe10e583a9f5e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "aaeca2af41f9d13e49205099914902115ca197cdae49f7d2b31bc5d6aa2bbd83"
+        }
+      ],
+      "lockfileSHA256": "93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134",
+      "lockfileSnapshot": "lockfiles/93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134-pnpm-lock.yaml"
+    },
+    {
+      "library": "katex",
+      "declaredVersion": "^0.16.27",
+      "origin": {
+        "kind": "npm-package",
+        "name": "katex",
+        "version": "0.16.27",
+        "integrity": "sha512-aeQoDkuRWSqQN6nSvVCEFvfXdqo1OQiCmmW1kc9xSdjutPv7BGO7pqY9sQRJpMOGrEdfDgF2TfRXe5eUAD2Waw==",
+        "shasum": "4ecf6f620e0ca1c1a5de722e85fcdcec49086a48",
+        "tarballSHA256": "058e0026c75c773435122cb5788b1d0958c5f75f32f6df3d9c823f60c6b72992",
+        "bytes": 1488661,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 6,
+      "diagnostics": [
+        {
+          "file": "src/buildCommon.js",
+          "error": "SyntaxError: [15:12-15:19]: Expected 'from'"
+        },
+        {
+          "file": "src/buildHTML.js",
+          "error": "SyntaxError: [18:12-18:19]: Expected 'from'"
+        },
+        {
+          "file": "src/buildMathML.js",
+          "error": "SyntaxError: [16:12-16:19]: Expected 'from'"
+        },
+        {
+          "file": "src/buildTree.js",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/defineEnvironment.js",
+          "error": "SyntaxError: [4:12-4:18]: Expected 'from'"
+        },
+        {
+          "file": "src/defineFunction.js",
+          "error": "SyntaxError: [2:12-2:18]: Expected 'from'"
+        },
+        {
+          "file": "src/defineMacro.js",
+          "error": "SyntaxError: [4:12-4:21]: Expected 'from'"
+        },
+        {
+          "file": "src/delimiter.js",
+          "error": "SyntaxError: [35:12-35:19]: Expected 'from'"
+        },
+        {
+          "file": "src/domTree.js",
+          "error": "SyntaxError: [17:12-17:19]: Expected 'from'"
+        },
+        {
+          "file": "src/environments/array.js",
+          "error": "SyntaxError: [19:12-19:18]: Expected 'from'"
+        },
+        {
+          "file": "src/environments/cd.js",
+          "error": "SyntaxError: [11:12-11:18]: Expected 'from'"
+        },
+        {
+          "file": "src/fontMetrics.js",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/functions/accent.js",
+          "error": "SyntaxError: [14:12-14:13]: Expected 'from'"
+        },
+        {
+          "file": "src/functions/accentunder.js",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/functions/arrow.js",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/functions/color.js",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "src/functions/char.js",
+          "source": "source-js/0c86a22ff61880626f6e04d67fca4bb8075b81560af68aee117fc642ee81772e.js",
+          "sourceSHA256": "0c86a22ff61880626f6e04d67fca4bb8075b81560af68aee117fc642ee81772e",
+          "span": [
+            469,
+            1602
+          ],
+          "name": "handler",
+          "normalizedASTSHA256": "9e0e9988a53a6edc831ddce54e2fd4f3b21eb022dced6dc9f5d51e6da18da2a2",
+          "codeSHA256": "a970d1c707ce435f009d6e45b8a353161cb4fcf40da592b8a5ef51117e35b4de",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "8b10ecd53dc08276",
+            "graphNodes": 13,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/functions/def.js",
+          "source": "source-js/9a3dd1e3804b462d9442d8031d934ec5794dcec4653ff41be93dd046d3266266.js",
+          "sourceSHA256": "9a3dd1e3804b462d9442d8031d934ec5794dcec4653ff41be93dd046d3266266",
+          "span": [
+            961,
+            1496
+          ],
+          "name": "letCommand",
+          "normalizedASTSHA256": "1eb55754a6f8825ceb3f51685ae7453ce504a178df90e858f8e7b7105f9dab19",
+          "codeSHA256": "fd2eff3d5c99c09378f3950f2b4da99d09bd9ec02ea5c7bd664f9dba17541a89",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "6d1fb7cb3381cbe2",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/functions/def.js",
+          "source": "source-js/9a3dd1e3804b462d9442d8031d934ec5794dcec4653ff41be93dd046d3266266.js",
+          "sourceSHA256": "9a3dd1e3804b462d9442d8031d934ec5794dcec4653ff41be93dd046d3266266",
+          "span": [
+            2896,
+            5384
+          ],
+          "name": "handler",
+          "normalizedASTSHA256": "7aa285f1e265ad1091f6ae8eb76fc765714fa75f06f30fecd43846645ceae20c",
+          "codeSHA256": "5c24147564d24a32ac3a612701b305acdf81471e7c7f1e5437d406f8ee73bb67",
+          "features": {
+            "propertyOperations": 45,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "f6899427d13ff2f8",
+            "graphNodes": 30,
+            "graphEdges": 38,
+            "graphOperationOccurrences": 70,
+            "distinctGraphOperationPropertyPairs": 19,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/ce52ae67649162f4bd6b",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3"
+        }
+      ],
+      "lockfileSHA256": "93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134",
+      "lockfileSnapshot": "lockfiles/93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134-pnpm-lock.yaml"
+    },
+    {
+      "library": "next",
+      "declaredVersion": "^13.5.6",
+      "origin": {
+        "kind": "npm-package",
+        "name": "next",
+        "version": "13.5.11",
+        "integrity": "sha512-WUPJ6WbAX9tdC86kGTu92qkrRdgRqVrY++nwM+shmWQwmyxt4zhZfR59moXSI4N8GDYCBY3lIAqhzjDd4rTC8Q==",
+        "shasum": "a021e849c5748fb6e2a4447585614e0c0e6c778d",
+        "tarballSHA256": "4193accbd8bdca5eb2c9e4aad3e26d960dd7cafb63fe32598bde4fc425f1dfa7",
+        "bytes": 17572480,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 29,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/build/analysis/extract-const-value.js",
+          "source": "source-js/c77700606f872009f1952020506555cd7c68587030acb45616ccbeb18bc2bcfe.js",
+          "sourceSHA256": "c77700606f872009f1952020506555cd7c68587030acb45616ccbeb18bc2bcfe",
+          "span": [
+            2388,
+            5917
+          ],
+          "name": "extractValue",
+          "normalizedASTSHA256": "0ba28ae2403306755aae97c3c4a56a12accf07825b2da3d430d8c2d153a80d9f",
+          "codeSHA256": "954ffe1af9b165a8bbecd5e35928004fb8ca5e531d2a33a1f760b23d29ee7a3f",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "c288c6fa1bd28c6d",
+            "graphNodes": 49,
+            "graphEdges": 69,
+            "graphOperationOccurrences": 32,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/build/analysis/get-page-static-info.js",
+          "source": "source-js/d866a9a2f99a1a4c498fb4b2e3f7b761a57592848df2dfe72c638a0493856ab8.js",
+          "sourceSHA256": "d866a9a2f99a1a4c498fb4b2e3f7b761a57592848df2dfe72c638a0493856ab8",
+          "span": [
+            1940,
+            2952
+          ],
+          "name": "_interop_require_wildcard",
+          "normalizedASTSHA256": "0037113583b6e8caffeaab8bf0ae1ad1279dfdc9e71b27b9c1274729187db197",
+          "codeSHA256": "b352ae627f4be2eb4eea56903fc95d1eb3b6eb3340c3007e85dd1e3126c44fa5",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "f7df65b04d2f8c3f",
+            "graphNodes": 34,
+            "graphEdges": 49,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/build/analysis/get-page-static-info.js",
+          "source": "source-js/d866a9a2f99a1a4c498fb4b2e3f7b761a57592848df2dfe72c638a0493856ab8.js",
+          "sourceSHA256": "d866a9a2f99a1a4c498fb4b2e3f7b761a57592848df2dfe72c638a0493856ab8",
+          "span": [
+            3395,
+            4347
+          ],
+          "name": "getRSCModuleInformation",
+          "normalizedASTSHA256": "09f4047afdad47998a34ba799156f8501b89224601e5cfe3a896c6165a60b9cc",
+          "codeSHA256": "71a97f6d10829f2ae0509d8736287403f57e4591d1a5423ca60ce9c1bc1e878e",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "a59f5dc394725cf9",
+            "graphNodes": 18,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/c6c1c9a9c8543f1e4cd9",
+      "licenses": [
+        {
+          "path": "licenses/license.md",
+          "sha256": "916804568723d480ead4c16becc2fd790680ad40f883605687bdf2bd87e71ef7"
+        }
+      ],
+      "lockfileSHA256": "93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134",
+      "lockfileSnapshot": "lockfiles/93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134-pnpm-lock.yaml"
+    },
+    {
+      "library": "nextra",
+      "declaredVersion": "^2.13.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "nextra",
+        "version": "2.13.4",
+        "integrity": "sha512-7of2rSBxuUa3+lbMmZwG9cqgftcoNOVQLTT6Rxf3EhBR9t1EI7b43dted8YoqSNaigdE3j1CoyNkX8N/ZzlEpw==",
+        "shasum": "49e9f558735d86292cd8578b5a69f6d926bc2a14",
+        "tarballSHA256": "324be2d0ee006f7c27e83f797e77db5849e11c970490934ee23b904fbe21cff1",
+        "bytes": 50253,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 23,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/catch-all.js",
+          "source": "source-js/2456a539fefe525456e079656c96c98b5f8ac7d3e19a26c47ba8ddd6f3ebf90a.js",
+          "sourceSHA256": "2456a539fefe525456e079656c96c98b5f8ac7d3e19a26c47ba8ddd6f3ebf90a",
+          "span": [
+            2564,
+            3219
+          ],
+          "name": "addToMap",
+          "normalizedASTSHA256": "b84ab7ae154a313c31973ac7d3d27a1ce467fc42d8e4cc54ff043e591bf8a232",
+          "codeSHA256": "d62f41de664f58eeedba9ec0bcc0ea0251184f9e9ca4024320847f3239516d1d",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "f088c581a00daf21",
+            "graphNodes": 26,
+            "graphEdges": 32,
+            "graphOperationOccurrences": 23,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/compile.mjs",
+          "source": "source-js/a3e30bb4ac6f32e353d821e30ff0457f4883eedc19bbf43c4149b3d0823928bc.js",
+          "sourceSHA256": "a3e30bb4ac6f32e353d821e30ff0457f4883eedc19bbf43c4149b3d0823928bc",
+          "span": [
+            8889,
+            11231
+          ],
+          "name": "createCompiler",
+          "normalizedASTSHA256": "d16c8a1810c94740a5e34b72b76dacc4396da68783c828d9df690b95d0567743",
+          "codeSHA256": "866c8e9e744825961daa9f5b17faede345dd734c648bab7c499cf2df8eab48b6",
+          "features": {
+            "propertyOperations": 20,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "aa3c3612c8d45246",
+            "graphNodes": 29,
+            "graphEdges": 40,
+            "graphOperationOccurrences": 33,
+            "distinctGraphOperationPropertyPairs": 19,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/compile.mjs",
+          "source": "source-js/a3e30bb4ac6f32e353d821e30ff0457f4883eedc19bbf43c4149b3d0823928bc.js",
+          "sourceSHA256": "a3e30bb4ac6f32e353d821e30ff0457f4883eedc19bbf43c4149b3d0823928bc",
+          "span": [
+            6701,
+            11233
+          ],
+          "name": "compileMdx",
+          "normalizedASTSHA256": "47e7f519eefe8d11481f386d740e82795a1deef20cd38c9c3a7384acf9dbdee4",
+          "codeSHA256": "b07d1d8efd13998c4ce9315ccccbdb255e8fb5102eb0148143c9f912c6312e88",
+          "features": {
+            "propertyOperations": 25,
+            "distinctOperationPropertyPairs": 23,
+            "pogHash": "73d079be25818033",
+            "graphNodes": 31,
+            "graphEdges": 45,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/d3e1fcf07504eedc20cb",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c75f396ea53044324cfb385912ec1983c246ec3c5070ab1cd1732175597d70a3"
+        }
+      ],
+      "lockfileSHA256": "93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134",
+      "lockfileSnapshot": "lockfiles/93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134-pnpm-lock.yaml"
+    },
+    {
+      "library": "nextra-theme-docs",
+      "declaredVersion": "^2.13.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "nextra-theme-docs",
+        "version": "2.13.4",
+        "integrity": "sha512-2XOoMfwBCTYBt8ds4ZHftt9Wyf2XsykiNo02eir/XEYB+sGeUoE77kzqfidjEOKCSzOHYbK9BDMcg2+B/2vYRw==",
+        "shasum": "821795e149537413f459ae4b520eba1a195e5e07",
+        "tarballSHA256": "95094157b88faa661cc657d0c4f479cefa1d74d3b985063b54260fb48e1f0c74",
+        "bytes": 43235,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 25,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/34939b106b8ec661cc5eddf78d20cf069bee174962f429a1bbea11223adb8bc1.js",
+          "sourceSHA256": "34939b106b8ec661cc5eddf78d20cf069bee174962f429a1bbea11223adb8bc1",
+          "span": [
+            3412,
+            4771
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "6fa5970d1b6226fb25db8b53a040f2f96aa08e2fd82382b7dcdfde6b3f542d23",
+          "codeSHA256": "14dd39c0f54391f77e479ec8545901bfdcce7b6a93a63fa71d2152829ed36da9",
+          "features": {
+            "propertyOperations": 35,
+            "distinctOperationPropertyPairs": 17,
+            "pogHash": "71b7c11517ebb186",
+            "graphNodes": 27,
+            "graphEdges": 36,
+            "graphOperationOccurrences": 35,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/34939b106b8ec661cc5eddf78d20cf069bee174962f429a1bbea11223adb8bc1.js",
+          "sourceSHA256": "34939b106b8ec661cc5eddf78d20cf069bee174962f429a1bbea11223adb8bc1",
+          "span": [
+            3157,
+            5233
+          ],
+          "name": "ActiveAnchorProvider",
+          "normalizedASTSHA256": "7e44cb57ca1b754e1c47cd46ff6846e9028320370abbbb82681efa6e986025a1",
+          "codeSHA256": "1c94ba31c7334847abe8b404e9e408f5d7641da51f8dfe24a25f2f8e179777a0",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "576367f2f0b50696",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 43,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/34939b106b8ec661cc5eddf78d20cf069bee174962f429a1bbea11223adb8bc1.js",
+          "sourceSHA256": "34939b106b8ec661cc5eddf78d20cf069bee174962f429a1bbea11223adb8bc1",
+          "span": [
+            6982,
+            8627
+          ],
+          "name": "ConfigProvider",
+          "normalizedASTSHA256": "f33d5d8dab62eeea5d8e5d3142a09bee77cb714cabe8e35b12040da22a4604b8",
+          "codeSHA256": "4c5636442a974071cd1ea6d87d6aa3155d7a01acc769653ee3de46ead767890f",
+          "features": {
+            "propertyOperations": 33,
+            "distinctOperationPropertyPairs": 29,
+            "pogHash": "21f588f38d36746e",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 59,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/af06a7dbe0fba6f1cb23",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c75f396ea53044324cfb385912ec1983c246ec3c5070ab1cd1732175597d70a3"
+        }
+      ],
+      "lockfileSHA256": "93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134",
+      "lockfileSnapshot": "lockfiles/93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134-pnpm-lock.yaml"
+    },
+    {
+      "library": "react",
+      "declaredVersion": "^18.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react",
+        "version": "18.3.1",
+        "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==",
+        "shasum": "49ab892009c53933625bd16b2533fc754cab2891",
+        "tarballSHA256": "8d9bed01a672e7eaf387942d781ad47c6a43089a30a0306060f9fd5ac7870347",
+        "bytes": 81751,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            5344,
+            7193
+          ],
+          "name": "getComponentNameFromType",
+          "normalizedASTSHA256": "a1e72755ec916bfe92c3abea09c3d4eb80544ce4b414f107e78042d4fc195f65",
+          "codeSHA256": "47167ee9ca2bf32d87a5f1f1074f9d220be358a8d4591777c775beda0bfface0",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "db98a1512acb2dfb",
+            "graphNodes": 33,
+            "graphEdges": 52,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            7687,
+            8600
+          ],
+          "name": "disableLogs",
+          "normalizedASTSHA256": "ac0566cb926bf100c6b3d136902c1b167fc2f341f6507f491e1776d1954b4996",
+          "codeSHA256": "d7ef3859231e043d82d16c9df2e9d198afc9dfa4d1f99ad3374046501b19303b",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "29a358caaedc6d00",
+            "graphNodes": 5,
+            "graphEdges": 4,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            8601,
+            9695
+          ],
+          "name": "reenableLogs",
+          "normalizedASTSHA256": "c860344e4606909b8f79ffb4338589b6f8f5f29b9f3673bd05c06fa4129b9c2c",
+          "codeSHA256": "9e45a7165427a340732f72f562a5447c4e7f1483521bab20b140a496573d6193",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "2e4631ecad4ad9ed",
+            "graphNodes": 6,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/275976081ce1abf67779",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "lockfileSHA256": "93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134",
+      "lockfileSnapshot": "lockfiles/93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134-pnpm-lock.yaml"
+    },
+    {
+      "library": "react-dom",
+      "declaredVersion": "^18.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react-dom",
+        "version": "18.3.1",
+        "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
+        "shasum": "c2265d79511b57d479b3dd3fdfa51536494c5cb4",
+        "tarballSHA256": "031d4427a99f2f3f6cac18bbbf308594a67e4f47d10f4896fdec446505b040e0",
+        "bytes": 1089001,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 50,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            21397,
+            22185
+          ],
+          "name": "checkControlledValueProps",
+          "normalizedASTSHA256": "e8d26e65d614734309d58bf91ac502384f15173fc98c09f0a6d6b3137e6ff97f",
+          "codeSHA256": "6b3f7ac985198e54ae877e4162943fcface8d31dd6163640ff1336e294971bc2",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "e423c47e5203f48",
+            "graphNodes": 29,
+            "graphEdges": 37,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            24345,
+            26003
+          ],
+          "name": "validateProperty",
+          "normalizedASTSHA256": "63fd97263c44f203a0d9efeed29681943646a6ff4acf9c78d1439be8457f9e18",
+          "codeSHA256": "1d6ddd3cd61e336b9820056573463c99b4b27e65e7ba6cbdb88c853b074f7c72",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "c36a1f55bf39eb11",
+            "graphNodes": 25,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            41383,
+            47290
+          ],
+          "name": "validateProperty$1",
+          "normalizedASTSHA256": "3b5b7719405a0a3f3c95634a10fdf8ece52db70007eee490f94013d7f6396f58",
+          "codeSHA256": "bbcef362e09863b7357f6b4a8f4878764a392e3a4e54a59676edf7592fc0e84f",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "fb6dad9559a35ede",
+            "graphNodes": 73,
+            "graphEdges": 107,
+            "graphOperationOccurrences": 37,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/de7f2df91c095f0cd45d",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "lockfileSHA256": "93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134",
+      "lockfileSnapshot": "lockfiles/93ddd2a7d9ea43adcb43ce5a966ab956c48d2fd00b2a5c765f17da320b5ac134-pnpm-lock.yaml"
+    }
+  ],
+  "selectedLibraries": [
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/react-fontawesome",
+    "katex",
+    "next",
+    "nextra",
+    "nextra-theme-docs",
+    "react",
+    "react-dom"
+  ],
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
+    },
+    "frontendManifestSHA256": "df251b56280d13359cc9abbf0601160217e30df6d1e5db9d016362200f025fff",
+    "manifestRelative": "package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:15.331Z",
+  "reason": null,
+  "finished": "2026-11-09T03:44:15.470Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/dair-ai--Prompt-Engineering-Guide/qualification.json",
+  "sourceEligibilityRecordSHA256": "c9b4db39a002d14be2a8b6b46db4fa123c83b894a9c6f39a4058c336c4441831",
+  "organizationSignature": "c451f18e920cb44a1c670163f70fe2e2950358299e6537cbe8f1339d4e9f5626"
+}

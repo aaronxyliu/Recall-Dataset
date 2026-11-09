@@ -1,0 +1,1 @@
+self.__next_f.push([1,"62:[\"$\",\"br\",null,{}]\n63:[\"$\",\"$L70\",null,{\"as\":\"h3\",\"id\":\"gold\",\"children\":\"Gold\"}]\n"])

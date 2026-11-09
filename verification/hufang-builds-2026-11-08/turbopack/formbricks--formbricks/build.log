@@ -1,1 +1,1586 @@
-ERROR: Cannot connect to the Docker daemon at unix:///tmp/recall-hufang-docker.sock. Is the docker daemon running?
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 21.76kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1.20
+#2 DONE 2.7s
+
+#3 docker-image://docker.io/docker/dockerfile:1.20@sha256:26147acbda4f14c5add9946e2fd2ed543fc402884fd75146bd342a7f6271dc1d
+#3 resolve docker.io/docker/dockerfile:1.20@sha256:26147acbda4f14c5add9946e2fd2ed543fc402884fd75146bd342a7f6271dc1d 0.0s done
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 0B / 12.66MB 0.2s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 1.05MB / 12.66MB 1.5s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 2.10MB / 12.66MB 2.3s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 3.15MB / 12.66MB 3.2s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 4.19MB / 12.66MB 3.6s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 5.24MB / 12.66MB 3.8s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 6.29MB / 12.66MB 3.9s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 7.34MB / 12.66MB 4.1s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 9.44MB / 12.66MB 4.2s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 10.49MB / 12.66MB 4.4s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 11.53MB / 12.66MB 4.5s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 12.66MB / 12.66MB 4.5s done
+#3 extracting sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 0.1s done
+#3 DONE 4.7s
+
+#4 [context recipe] load .dockerignore
+#4 transferring recipe: 2B done
+#4 DONE 0.0s
+
+#5 [internal] load metadata for docker.io/library/node:24-alpine3.23
+#5 DONE 2.3s
+
+#6 [internal] load metadata for docker.io/library/node:24.22.2-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#6 DONE 2.3s
+
+#7 [internal] load metadata for docker.io/library/alpine:3.23
+#7 DONE 3.5s
+
+#8 [runtime-node 1/1] FROM docker.io/library/node:24.22.2-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#8 resolve docker.io/library/node:24.22.2-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab done
+#8 DONE 0.0s
+
+#9 [runtime-base 1/7] FROM docker.io/library/alpine:3.23@sha256:469c9ea410b9215eaee7976ba6c0639039b444be8e5d638f7abbada189971eb2
+#9 resolve docker.io/library/alpine:3.23@sha256:469c9ea410b9215eaee7976ba6c0639039b444be8e5d638f7abbada189971eb2 done
+#9 DONE 0.0s
+
+#10 [base 1/1] FROM docker.io/library/node:24-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#10 resolve docker.io/library/node:24-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab done
+#10 ...
+
+#11 [internal] preparing inline document
+#11 DONE 0.1s
+
+#12 [context recipe] load from client
+#12 transferring recipe: 591B done
+#12 DONE 0.1s
+
+#13 [context recipe] load from client
+#13 transferring recipe: 157.68kB done
+#13 DONE 0.1s
+
+#10 [base 1/1] FROM docker.io/library/node:24-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#10 DONE 0.3s
+
+#14 [internal] load build context
+#14 transferring context: 17.50MB 0.3s
+#14 transferring context: 103.44MB 1.0s done
+#14 DONE 1.0s
+
+#15 [installer  1/19] RUN npm install --ignore-scripts -g corepack@0.35.0
+#15 2.100 
+#15 2.100 changed 1 package in 2s
+#15 2.101 npm notice
+#15 2.101 npm notice New major version of npm available! 11.19.1 -> 12.2.2
+#15 2.101 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#15 2.101 npm notice To update run: npm install -g npm@12.2.2
+#15 2.101 npm notice
+#15 DONE 2.2s
+
+#16 [runtime-base 2/7] RUN apk update && apk upgrade --no-cache     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0"       libgcc libstdc++
+#16 ...
+
+#17 [installer  2/19] RUN corepack enable
+#17 DONE 0.1s
+
+#18 [installer  3/19] RUN corepack prepare pnpm@11.7.0 --activate
+#18 0.107 Preparing pnpm@11.7.0 for immediate activation...
+#18 DONE 1.5s
+
+#16 [runtime-base 2/7] RUN apk update && apk upgrade --no-cache     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0"       libgcc libstdc++
+#16 ...
+
+#19 [installer  4/19] WORKDIR /app
+#19 DONE 0.0s
+
+#20 [installer  5/19] COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
+#20 DONE 0.0s
+
+#21 [installer  6/19] COPY patches ./patches
+#21 DONE 0.0s
+
+#22 [installer  7/19] COPY --parents apps/*/package.json packages/*/package.json docker/package.json ./
+#22 DONE 0.1s
+
+#23 [installer  8/19] COPY apps/web/vendor ./apps/web/vendor
+#23 DONE 0.0s
+
+#16 [runtime-base 2/7] RUN apk update && apk upgrade --no-cache     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0"       libgcc libstdc++
+#16 4.395 v3.23.8-19-gbebe9d4fefe [https://dl-cdn.alpinelinux.org/alpine/v3.23/main]
+#16 4.395 v3.23.8-12-g5ae87ecdc75 [https://dl-cdn.alpinelinux.org/alpine/v3.23/community]
+#16 4.395 OK: 27443 distinct packages available
+#16 ...
+
+#24 [installer  9/19] RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store     --mount=type=cache,id=pnpm-cache,target=/root/.cache/pnpm     pnpm install --ignore-scripts --frozen-lockfile --prefer-offline --store-dir=/pnpm/store       --network-concurrency=8 --fetch-timeout=180000 --fetch-retries=4
+#24 0.431 Scope: all 23 workspace projects
+#24 0.522 ? Verifying lockfile against supply-chain policies (2223 entries)...
+#24 0.557 Lockfile is up to date, resolution step is skipped
+#24 0.740 Packages: +2232
+#24 0.740 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#24 1.527 Progress: resolved 0, reused 0, downloaded 1, added 0
+#24 2.527 Progress: resolved 0, reused 0, downloaded 11, added 3
+#24 3.526 Progress: resolved 0, reused 0, downloaded 19, added 21
+#24 3.625 [WARN] Tarball download average speed 22 KiB/s (size 26 KiB) is below 50 KiB/s: https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.9.tgz (GET)
+#24 4.526 Progress: resolved 0, reused 0, downloaded 25, added 27
+#24 4.727 [WARN] Tarball download average speed 24 KiB/s (size 46 KiB) is below 50 KiB/s: https://registry.npmjs.org/@opentelemetry/sdk-logs/-/sdk-logs-0.53.0.tgz (GET)
+#24 5.527 Progress: resolved 0, reused 0, downloaded 36, added 40
+#24 6.527 Progress: resolved 0, reused 0, downloaded 39, added 43
+#24 7.527 Progress: resolved 0, reused 0, downloaded 42, added 48
+#24 8.528 Progress: resolved 0, reused 0, downloaded 46, added 53
+#24 9.528 Progress: resolved 0, reused 0, downloaded 49, added 55
+#24 10.53 Progress: resolved 0, reused 0, downloaded 56, added 66
+#24 11.53 Progress: resolved 0, reused 0, downloaded 64, added 73
+#24 12.53 Progress: resolved 0, reused 0, downloaded 69, added 78
+#24 13.53 Progress: resolved 0, reused 0, downloaded 75, added 87
+#24 14.53 Progress: resolved 0, reused 0, downloaded 81, added 95
+#24 15.53 Progress: resolved 0, reused 0, downloaded 85, added 99
+#24 ...
+
+#16 [runtime-base 2/7] RUN apk update && apk upgrade --no-cache     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0"       libgcc libstdc++
+#16 20.02 (1/1) Upgrading zlib (1.3.2-r1 -> 1.4-r0)
+#16 20.39 OK: 8432 KiB in 16 packages
+#16 25.49 (1/3) Installing ca-certificates (20261020-r0)
+#16 25.85 (2/3) Installing libgcc (15.2.0-r2)
+#16 26.12 (3/3) Installing libstdc++ (15.2.0-r2)
+#16 ...
+
+#24 [installer  9/19] RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store     --mount=type=cache,id=pnpm-cache,target=/root/.cache/pnpm     pnpm install --ignore-scripts --frozen-lockfile --prefer-offline --store-dir=/pnpm/store       --network-concurrency=8 --fetch-timeout=180000 --fetch-retries=4
+#24 16.53 Progress: resolved 0, reused 0, downloaded 97, added 110
+#24 16.98 [WARN] GET https://registry.npmjs.org/@aws-sdk%2Fcredential-provider-web-identity error (unknown). Will retry in 10 seconds. 4 retries left.
+#24 17.53 Progress: resolved 0, reused 0, downloaded 115, added 128
+#24 18.34 [WARN] GET https://registry.npmjs.org/@azure%2Fmsal-node error (unknown). Will retry in 10 seconds. 4 retries left.
+#24 18.53 Progress: resolved 0, reused 0, downloaded 137, added 146
+#24 19.33 [WARN] Request took 11565ms: https://registry.npmjs.org/@prisma%2Fdebug
+#24 19.53 Progress: resolved 0, reused 0, downloaded 150, added 157
+#24 20.53 Progress: resolved 0, reused 0, downloaded 163, added 170
+#24 21.53 Progress: resolved 0, reused 0, downloaded 174, added 176
+#24 21.67 [WARN] Request took 13800ms: https://registry.npmjs.org/@prisma%2Fengines
+#24 22.54 Progress: resolved 0, reused 0, downloaded 178, added 180
+#24 23.54 Progress: resolved 0, reused 0, downloaded 180, added 182
+#24 24.09 [WARN] Request took 16200ms: https://registry.npmjs.org/@prisma%2Fget-platform
+#24 ...
+
+#16 [runtime-base 2/7] RUN apk update && apk upgrade --no-cache     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0"       libgcc libstdc++
+#16 28.45 Executing busybox-1.37.0-r30.trigger
+#16 28.46 Executing ca-certificates-20261020-r0.trigger
+#16 28.49 OK: 11.4 MiB in 19 packages
+#16 DONE 29.2s
+
+#24 [installer  9/19] RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store     --mount=type=cache,id=pnpm-cache,target=/root/.cache/pnpm     pnpm install --ignore-scripts --frozen-lockfile --prefer-offline --store-dir=/pnpm/store       --network-concurrency=8 --fetch-timeout=180000 --fetch-retries=4
+#24 24.54 Progress: resolved 0, reused 0, downloaded 187, added 191
+#24 ...
+
+#25 [runtime-base 3/7] COPY --from=runtime-node /usr/local/bin/node /usr/local/libexec/node
+#25 DONE 0.2s
+
+#26 [runtime-base 4/7] COPY --from=recipe runtime-node-LICENSE /usr/local/share/doc/node/LICENSE
+#26 DONE 0.0s
+
+#27 [runtime-base 5/7] COPY --chmod=755 <<EOF /usr/local/bin/node
+#27 DONE 0.0s
+
+#28 [runtime-base 6/7] COPY apps/web/scripts/docker/verify-runtime.mjs /usr/local/share/formbricks/verify-runtime.mjs
+#28 DONE 0.0s
+
+#24 [installer  9/19] RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store     --mount=type=cache,id=pnpm-cache,target=/root/.cache/pnpm     pnpm install --ignore-scripts --frozen-lockfile --prefer-offline --store-dir=/pnpm/store       --network-concurrency=8 --fetch-timeout=180000 --fetch-retries=4
+#24 25.19 [WARN] Request took 17303ms: https://registry.npmjs.org/@prisma%2Fgenerator-helper
+#24 ...
+
+#29 [runtime-base 7/7] RUN sed -i '/--use-openssl-ca.*CA store/s/(default/(currently set/' /usr/local/share/formbricks/verify-runtime.mjs     && node /usr/local/share/formbricks/verify-runtime.mjs
+#29 0.221 Runtime crypto, compression, locales, CA trust and patched dependency versions verified
+#29 DONE 0.3s
+
+#24 [installer  9/19] RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store     --mount=type=cache,id=pnpm-cache,target=/root/.cache/pnpm     pnpm install --ignore-scripts --frozen-lockfile --prefer-offline --store-dir=/pnpm/store       --network-concurrency=8 --fetch-timeout=180000 --fetch-retries=4
+#24 25.54 Progress: resolved 0, reused 0, downloaded 194, added 199
+#24 ...
+
+#30 [runner   1/109] RUN addgroup -S nextjs     && adduser -S -u 1001 -G nextjs nextjs
+#30 DONE 0.1s
+
+#31 [runner   2/109] WORKDIR /home/nextjs
+#31 DONE 0.0s
+
+#24 [installer  9/19] RUN --mount=type=cache,id=pnpm-store,target=/pnpm/store     --mount=type=cache,id=pnpm-cache,target=/root/.cache/pnpm     pnpm install --ignore-scripts --frozen-lockfile --prefer-offline --store-dir=/pnpm/store       --network-concurrency=8 --fetch-timeout=180000 --fetch-retries=4
+#24 26.54 Progress: resolved 0, reused 0, downloaded 201, added 206
+#24 27.54 Progress: resolved 0, reused 0, downloaded 214, added 215
+#24 27.90 [WARN] Request took 20021ms: https://registry.npmjs.org/@prisma%2Ffetch-engine
+#24 28.54 Progress: resolved 0, reused 0, downloaded 222, added 222
+#24 29.54 Progress: resolved 0, reused 0, downloaded 241, added 245
+#24 30.14 [WARN] Request took 22378ms: https://registry.npmjs.org/@prisma%2Fclient
+#24 30.54 Progress: resolved 0, reused 0, downloaded 252, added 258
+#24 31.54 Progress: resolved 0, reused 0, downloaded 259, added 267
+#24 32.54 Progress: resolved 0, reused 0, downloaded 274, added 287
+#24 33.54 Progress: resolved 0, reused 0, downloaded 284, added 290
+#24 34.48 [WARN] Request took 12855ms: https://registry.npmjs.org/playwright
+#24 34.54 Progress: resolved 0, reused 0, downloaded 300, added 305
+#24 35.54 Progress: resolved 0, reused 0, downloaded 309, added 314
+#24 35.71 [WARN] Request took 13905ms: https://registry.npmjs.org/prisma
+#24 36.54 Progress: resolved 0, reused 0, downloaded 317, added 323
+#24 37.54 Progress: resolved 0, reused 0, downloaded 326, added 331
+#24 38.54 Progress: resolved 0, reused 0, downloaded 351, added 367
+#24 39.54 Progress: resolved 0, reused 0, downloaded 386, added 402
+#24 40.54 Progress: resolved 0, reused 0, downloaded 412, added 428
+#24 41.70 ✓ Lockfile passes supply-chain policies (2223 entries in 41.1s)
+#24 41.70 Progress: resolved 0, reused 0, downloaded 438, added 454
+#24 42.70 Progress: resolved 0, reused 0, downloaded 490, added 502
+#24 43.70 Progress: resolved 0, reused 0, downloaded 529, added 541
+#24 44.70 Progress: resolved 0, reused 0, downloaded 579, added 592
+#24 45.70 Progress: resolved 0, reused 0, downloaded 608, added 621
+#24 46.70 Progress: resolved 0, reused 0, downloaded 634, added 647
+#24 47.71 Progress: resolved 0, reused 0, downloaded 654, added 666
+#24 48.71 Progress: resolved 0, reused 0, downloaded 680, added 689
+#24 49.71 Progress: resolved 0, reused 0, downloaded 714, added 728
+#24 50.71 Progress: resolved 0, reused 0, downloaded 754, added 781
+#24 51.71 Progress: resolved 0, reused 0, downloaded 800, added 827
+#24 52.71 Progress: resolved 0, reused 0, downloaded 845, added 884
+#24 53.71 Progress: resolved 0, reused 0, downloaded 895, added 938
+#24 54.71 Progress: resolved 0, reused 0, downloaded 944, added 985
+#24 55.71 Progress: resolved 0, reused 0, downloaded 979, added 1025
+#24 56.71 Progress: resolved 0, reused 0, downloaded 1007, added 1056
+#24 57.71 Progress: resolved 0, reused 0, downloaded 1053, added 1105
+#24 58.71 Progress: resolved 0, reused 0, downloaded 1063, added 1115
+#24 59.71 Progress: resolved 0, reused 0, downloaded 1084, added 1145
+#24 60.71 Progress: resolved 0, reused 0, downloaded 1101, added 1162
+#24 61.71 Progress: resolved 0, reused 0, downloaded 1139, added 1205
+#24 62.72 Progress: resolved 0, reused 0, downloaded 1183, added 1251
+#24 63.72 Progress: resolved 0, reused 0, downloaded 1225, added 1301
+#24 64.72 Progress: resolved 0, reused 0, downloaded 1273, added 1352
+#24 65.72 Progress: resolved 0, reused 0, downloaded 1322, added 1406
+#24 66.72 Progress: resolved 0, reused 0, downloaded 1362, added 1448
+#24 67.72 Progress: resolved 0, reused 0, downloaded 1419, added 1508
+#24 68.72 Progress: resolved 0, reused 0, downloaded 1450, added 1538
+#24 69.72 Progress: resolved 0, reused 0, downloaded 1491, added 1578
+#24 70.72 Progress: resolved 0, reused 0, downloaded 1536, added 1622
+#24 71.72 Progress: resolved 0, reused 0, downloaded 1580, added 1666
+#24 72.72 Progress: resolved 0, reused 0, downloaded 1627, added 1716
+#24 73.72 Progress: resolved 0, reused 0, downloaded 1678, added 1768
+#24 74.72 Progress: resolved 0, reused 0, downloaded 1731, added 1822
+#24 75.72 Progress: resolved 0, reused 0, downloaded 1797, added 1893
+#24 76.72 Progress: resolved 0, reused 0, downloaded 1839, added 1952
+#24 77.72 Progress: resolved 0, reused 0, downloaded 1879, added 2008
+#24 78.72 Progress: resolved 0, reused 0, downloaded 1911, added 2061
+#24 79.72 Progress: resolved 0, reused 0, downloaded 1948, added 2101
+#24 80.72 Progress: resolved 0, reused 0, downloaded 1979, added 2140
+#24 81.72 Progress: resolved 0, reused 0, downloaded 2012, added 2176
+#24 82.72 Progress: resolved 0, reused 0, downloaded 2048, added 2218
+#24 83.72 Progress: resolved 0, reused 0, downloaded 2058, added 2230
+#24 84.75 Progress: resolved 0, reused 0, downloaded 2060, added 2231
+#24 85.23 Progress: resolved 0, reused 0, downloaded 2060, added 2232, done
+#24 86.62 
+#24 86.62 devDependencies:
+#24 86.62 + @formbricks/config-eslint 0.0.0 <- packages/config-eslint
+#24 86.62 
+#24 86.65 Done in 1m 26.5s using pnpm v11.7.0
+#24 DONE 87.8s
+
+#32 [installer 10/19] COPY apps/web/scripts/docker/read-secrets.sh /tmp/read-secrets.sh
+#32 DONE 0.6s
+
+#33 [installer 11/19] RUN chmod +x /tmp/read-secrets.sh
+#33 DONE 0.2s
+
+#34 [installer 12/19] COPY . .
+#34 DONE 0.6s
+
+#35 [installer 13/19] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#35 DONE 0.1s
+
+#36 [installer 14/19] RUN node /tmp/recall-enable-maps.cjs
+#36 0.106 Enabled production browser maps in apps/web/next.config.mjs
+#36 DONE 0.1s
+
+#37 [installer 15/19] RUN node -e "const fs=require('fs'),p='turbo.json',j=JSON.parse(fs.readFileSync(p));j.globalPassThroughEnv=[...new Set([...(j.globalPassThroughEnv||[]),'HTTP_PROXY','HTTPS_PROXY','NO_PROXY','http_proxy','https_proxy','no_proxy'])];fs.writeFileSync(p,JSON.stringify(j,null,2));"
+#37 DONE 0.1s
+
+#38 [installer 16/19] RUN touch -c -t 200001010000 pnpm-lock.yaml pnpm-workspace.yaml package.json docker/package.json       apps/*/package.json packages/*/package.json     && find patches apps/web/vendor -type f -exec touch -t 200001010000 {} +
+#38 DONE 0.1s
+
+#39 [installer 17/19] RUN touch apps/web/.env
+#39 DONE 0.1s
+
+#40 [installer 18/19] RUN --mount=type=secret,id=database_url     /tmp/read-secrets.sh pnpm build --filter=@formbricks/database
+#40 0.093 ⚠️  DATABASE_URL secret not found or empty. Using build-time fallback value.
+#40 0.093 ⚠️  ENCRYPTION_KEY secret not found or empty. Using build-time fallback value.
+#40 0.093 ⚠️  REDIS_URL secret not found or empty. Using build-time fallback value.
+#40 0.093 ⚠️  HUB_API_URL secret not found or empty. Using build-time fallback value.
+#40 0.093 ⚠️  HUB_API_KEY secret not found or empty. Using build-time fallback value.
+#40 0.093 ⚠️  CUBEJS_API_URL secret not found or empty. Using build-time fallback value.
+#40 0.093 ⚠️  CUBEJS_API_SECRET secret not found or empty. Using build-time fallback value.
+#40 0.093 ℹ️  POSTHOG_KEY secret not found. PostHog proxy rewrites will not be generated.
+#40 0.093 ⚠️  SENTRY_AUTH_TOKEN secret not found. Sourcemaps will not be uploaded and Debug IDs will NOT be injected.
+#40 0.093   DATABASE_URL: [SET]
+#40 0.093   ENCRYPTION_KEY: [SET]
+#40 0.093   REDIS_URL: [SET]
+#40 0.094   HUB_API_URL: [SET]
+#40 0.094   HUB_API_KEY: [SET]
+#40 0.094   CUBEJS_API_URL: [SET]
+#40 0.094   CUBEJS_API_SECRET: [SET]
+#40 0.094   SENTRY_AUTH_TOKEN: [NOT SET]
+#40 0.094   POSTHOG_KEY: [NOT SET]
+#40 0.094   TARGETARCH: arm64
+#40 0.339 $ turbo run build --filter=@formbricks/database
+#40 0.366 
+#40 0.366 Attention:
+#40 0.366 Turborepo now collects completely anonymous telemetry regarding usage.
+#40 0.366 This information is used to shape the Turborepo roadmap and prioritize features.
+#40 0.366 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#40 0.366 https://turborepo.dev/docs/telemetry
+#40 0.366 
+#40 0.366 • turbo 2.9.14
+#40 0.441 
+#40 0.441    • Packages in scope: @formbricks/database
+#40 0.441    • Running build in 1 packages
+#40 0.441    • Remote caching disabled
+#40 0.441 
+#40 0.471 @formbricks/workflows:build: cache miss, executing 45724382b16d117a
+#40 0.472 @formbricks/logger:build: cache miss, executing 561bb7bbbbd0cab4
+#40 0.472 @formbricks/database:generate: cache miss, executing 7b5b9b2571cc05c6
+#40 0.472 @formbricks/i18n-utils:build: cache miss, executing 7718062aeab5aa93
+#40 0.774 @formbricks/i18n-utils:build: $ rimraf dist && tsc --project tsconfig.build.json && vite build
+#40 0.778 @formbricks/workflows:build: $ vite build && publint
+#40 0.792 @formbricks/logger:build: $ rimraf dist && vite build && tsc --project tsconfig.build.json
+#40 0.802 @formbricks/database:generate: $ node ./src/scripts/clean-generated-prisma.mjs && prisma generate --config ./prisma.config.ts
+#40 0.973 @formbricks/logger:build: vite v7.3.7 building client environment for production...
+#40 1.015 @formbricks/logger:build: transforming...
+#40 1.051 @formbricks/logger:build: ✓ 3 modules transformed.
+#40 1.062 @formbricks/logger:build: rendering chunks...
+#40 1.064 @formbricks/logger:build: computing gzip size...
+#40 1.067 @formbricks/logger:build: dist/index.js  3.80 kB │ gzip: 1.70 kB
+#40 1.072 @formbricks/logger:build: dist/index.cjs  3.04 kB │ gzip: 1.51 kB
+#40 1.072 @formbricks/logger:build: ✓ built in 76ms
+#40 1.467 @formbricks/database:generate: Loaded Prisma config from prisma.config.ts.
+#40 1.467 @formbricks/database:generate: 
+#40 1.624 @formbricks/workflows:build: vite v7.3.7 building client environment for production...
+#40 2.401 @formbricks/i18n-utils:build: vite v7.3.7 building client environment for production...
+#40 2.430 @formbricks/i18n-utils:build: transforming...
+#40 2.501 @formbricks/i18n-utils:build: ✓ 5 modules transformed.
+#40 2.521 @formbricks/i18n-utils:build: rendering chunks...
+#40 2.529 @formbricks/i18n-utils:build: computing gzip size...
+#40 2.531 @formbricks/i18n-utils:build: dist/index.js                       1.11 kB │ gzip:  0.41 kB
+#40 2.531 @formbricks/i18n-utils:build: dist/survey-runtime-languages.js    1.40 kB │ gzip:  0.67 kB
+#40 2.531 @formbricks/i18n-utils:build: dist/survey-language-match.js       1.84 kB │ gzip:  0.74 kB
+#40 2.531 @formbricks/i18n-utils:build: dist/canonical.js                  10.24 kB │ gzip:  3.04 kB
+#40 2.531 @formbricks/i18n-utils:build: dist/utils.js                     118.66 kB │ gzip: 21.97 kB
+#40 2.558 @formbricks/i18n-utils:build: dist/index.cjs                      1.11 kB │ gzip:  0.40 kB
+#40 2.558 @formbricks/i18n-utils:build: dist/survey-runtime-languages.cjs   1.21 kB │ gzip:  0.66 kB
+#40 2.558 @formbricks/i18n-utils:build: dist/survey-language-match.cjs      1.58 kB │ gzip:  0.71 kB
+#40 2.558 @formbricks/i18n-utils:build: dist/canonical.cjs                  7.92 kB │ gzip:  2.86 kB
+#40 2.558 @formbricks/i18n-utils:build: dist/utils.cjs                     87.60 kB │ gzip: 21.11 kB
+#40 2.558 @formbricks/i18n-utils:build: ✓ built in 149ms
+#40 3.020 @formbricks/workflows:build: transforming...
+#40 3.171 @formbricks/workflows:build: ✓ 37 modules transformed.
+#40 3.194 @formbricks/workflows:build: rendering chunks...
+#40 3.197 @formbricks/workflows:build: 
+#40 3.197 @formbricks/workflows:build: [vite:dts] Start generate declaration files...
+#40 3.197 @formbricks/workflows:build: computing gzip size...
+#40 3.234 @formbricks/workflows:build: dist/index.js                 4.14 kB │ gzip: 1.48 kB
+#40 3.236 @formbricks/workflows:build: dist/operations-C24uOqC7.js  31.10 kB │ gzip: 8.00 kB
+#40 3.236 @formbricks/workflows:build: dist/server.js               41.71 kB │ gzip: 8.87 kB
+#40 3.275 @formbricks/workflows:build: [vite:dts] Declaration files built in 1518ms.
+#40 3.275 @formbricks/workflows:build: 
+#40 3.275 @formbricks/workflows:build: ✓ built in 1.65s
+#40 3.359 @formbricks/workflows:build: Running publint v0.3.21 for @formbricks/workflows...
+#40 3.363 @formbricks/workflows:build: Packing files with `pnpm pack`...
+#40 3.659 @formbricks/workflows:build: Linting...
+#40 3.671 @formbricks/workflows:build: All good!
+#40 6.359 @formbricks/database:generate: Prisma schema loaded from schema.
+#40 7.698 @formbricks/database:generate: 
+#40 7.698 @formbricks/database:generate: ✔ Generated Prisma Client (7.10.0) to ./generated/prisma in 257ms
+#40 7.698 @formbricks/database:generate: 
+#40 7.698 @formbricks/database:generate: ✔ Generated Prisma Json Types Generator (4.1.1) to ./schema in 457ms
+#40 7.698 @formbricks/database:generate: 
+#40 7.951 @formbricks/database:build: cache miss, executing b7d8cc0894841f40
+#40 8.213 @formbricks/database:build: $ pnpm generate && vite build && tsc -p tsconfig.generated-prisma.json
+#40 8.416 @formbricks/database:build: $ node ./src/scripts/clean-generated-prisma.mjs && prisma generate --config ./prisma.config.ts
+#40 8.740 @formbricks/database:build: Loaded Prisma config from prisma.config.ts.
+#40 8.740 @formbricks/database:build: 
+#40 8.815 @formbricks/database:build: Prisma schema loaded from schema.
+#40 9.704 @formbricks/database:build: ┌─────────────────────────────────────────────────────────┐
+#40 9.704 @formbricks/database:build: │  Update available 7.10.0 -> 8.0.0-rc.33                 │
+#40 9.704 @formbricks/database:build: │                                                         │
+#40 9.704 @formbricks/database:build: │  This is a major update - please follow the guide at    │
+#40 9.704 @formbricks/database:build: │  https://pris.ly/d/major-version-upgrade                │
+#40 9.704 @formbricks/database:build: │                                                         │
+#40 9.704 @formbricks/database:build: │  Run the following to update                            │
+#40 9.704 @formbricks/database:build: │    npm i --save-dev prisma@latest                       │
+#40 9.704 @formbricks/database:build: │    npm i @prisma/client@latest                          │
+#40 9.704 @formbricks/database:build: └─────────────────────────────────────────────────────────┘
+#40 9.704 @formbricks/database:build: 
+#40 9.704 @formbricks/database:build: ✔ Generated Prisma Client (7.10.0) to ./generated/prisma in 214ms
+#40 9.704 @formbricks/database:build: 
+#40 9.704 @formbricks/database:build: ✔ Generated Prisma Json Types Generator (4.1.1) to ./schema in 409ms
+#40 9.704 @formbricks/database:build: 
+#40 10.27 @formbricks/database:build: 
+#40 10.27 @formbricks/database:build: [vite:dts] You are building a library that may not need to generate declaration files.
+#40 10.27 @formbricks/database:build: 
+#40 10.27 @formbricks/database:build: vite v7.3.7 building ssr environment for production...
+#40 12.37 @formbricks/database:build: transforming...
+#40 12.70 @formbricks/database:build: ✓ 66 modules transformed.
+#40 12.73 @formbricks/database:build: rendering chunks...
+#40 12.76 @formbricks/database:build: 
+#40 12.76 @formbricks/database:build: [vite:dts] Start generate declaration files...
+#40 12.92 @formbricks/database:build: dist/migration/20250722075349_sunset_weekly_summary/migration.js                                       0.38 kB
+#40 12.92 @formbricks/database:build: dist/migration/20250402084801_set_default_organization_access_to_all_existing_api_keys/migration.js    0.61 kB
+#40 12.92 @formbricks/database:build: dist/scripts/apply-migrations.js                                                                       0.73 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260915120000_eng_2862_grant_responses_scopes/migration.js                             0.88 kB
+#40 12.92 @formbricks/database:build: dist/embedded-data-mapping.js                                                                          0.92 kB
+#40 12.92 @formbricks/database:build: dist/scripts/migration-phases.js                                                                       1.00 kB
+#40 12.92 @formbricks/database:build: dist/migration/20250211050118_removed_new_session_event/migration.js                                   1.03 kB
+#40 12.92 @formbricks/database:build: dist/pg-connection-config.js                                                                           1.05 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260821165535_repair_account_issuer/migration.js                                       1.06 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260706000000_delete_orphaned_feedback_sources/migration.js                            1.17 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260401000002_backfill_workspace_id/migration.js                                       1.33 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260204124556_add_language_default_attribute_key/migration.js                          1.35 kB
+#40 12.92 @formbricks/database:build: dist/migration/20261005130000_eng_3470_grant_responses_scopes_to_clients/migration.js                  1.41 kB
+#40 12.92 @formbricks/database:build: dist/migration/20241209111725_product_revamp/migration.js                                              1.43 kB
+#40 12.92 @formbricks/database:build: dist/migration/20261002120001_backfill_survey_owner/migration.js                                       1.46 kB
+#40 12.92 @formbricks/database:build: dist/migration/20241209110456_xm_segment_migration/migration.js                                        1.55 kB
+#40 12.92 @formbricks/database:build: dist/scripts/create-saml-database.js                                                                   1.61 kB
+#40 12.92 @formbricks/database:build: dist/index.js                                                                                          1.66 kB
+#40 12.92 @formbricks/database:build: dist/migration/20241209111525_update_org_limits/migration.js                                           2.13 kB
+#40 12.92 @formbricks/database:build: dist/migration/20250326111101_move_api_keys_to_api_keys_new/migration.js                               2.19 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260619120000_eng_1054_credential_account_backfill/migration.js                        2.24 kB
+#40 12.92 @formbricks/database:build: dist/migration/20241209111404_xm_attribute_removal/migration.js                                        2.41 kB
+#40 12.92 @formbricks/database:build: dist/migration/20250812114145_adds_id_to_matrix_question_labels/migration.js                           2.44 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260812110001_eng_2343_backfill_oauth_resource_links/migration.js                      3.11 kB
+#40 12.92 @formbricks/database:build: dist/migration/20251208033316_remove_empty_image_and_video_urls_from_elements/migration.js             3.54 kB
+#40 12.92 @formbricks/database:build: dist/scripts/upgrade-session.js                                                                        3.72 kB
+#40 12.92 @formbricks/database:build: dist/migration/20251014110903_move_html_to_subheader_for_cta_consent_and_welcome_card/migration.js     3.89 kB
+#40 12.92 @formbricks/database:build: dist/migration/20250103060634_add_placeholder_to_contact_and_address_question/migration.js             4.42 kB
+#40 12.92 @formbricks/database:build: dist/scripts/backfill-attribute-values.js                                                              4.87 kB
+#40 12.92 @formbricks/database:build: dist/enums.js                                                                                          5.31 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260812121944_backfill_embedded_data/migration.js                                      5.85 kB
+#40 12.92 @formbricks/database:build: dist/migration/20241209104738_xm_user_identification/migration.js                                      5.96 kB
+#40 12.92 @formbricks/database:build: dist/logger.js                                                                                         6.24 kB
+#40 12.92 @formbricks/database:build: dist/scripts/wait-for-database.js                                                                      6.40 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260416110000_backfill_legacy_sso_accounts/migration.js                                7.02 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260119123112_migrate_legacy_validation_to_rules/migration.js                          7.02 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260928120000_eng_2404_backfill_remaining_embedded_data/migration.js                   7.23 kB
+#40 12.92 @formbricks/database:build: dist/src/prisma-adapter.js                                                                             7.58 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260205033241_added_attributes_data_types/migration.js                                10.08 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260401000001_promote_dev_environments/migration.js                                   10.55 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260204174943_migrate_storage_urls_to_relative/migration.js                           11.29 kB
+#40 12.92 @formbricks/database:build: dist/scripts/migration-runner.js                                                                      17.13 kB
+#40 12.92 @formbricks/database:build: dist/migration/20251118032116_migrate_questions_to_blocks/migration.js                                17.50 kB
+#40 12.92 @formbricks/database:build: dist/src/prisma-browser.js                                                                            24.63 kB
+#40 12.92 @formbricks/database:build: dist/migration/20260625104904_canonicalize_language_codes/migration.js                                27.21 kB
+#40 12.92 @formbricks/database:build: dist/src/prisma.js                                                                                   544.74 kB
+#40 12.98 @formbricks/database:build: [vite:dts] Declaration files built in 2383ms.
+#40 12.98 @formbricks/database:build: 
+#40 13.03 @formbricks/database:build: dist/migration/20250722075349_sunset_weekly_summary/migration.cjs                                       0.49 kB
+#40 13.03 @formbricks/database:build: dist/migration/20250402084801_set_default_organization_access_to_all_existing_api_keys/migration.cjs    0.75 kB
+#40 13.03 @formbricks/database:build: dist/scripts/apply-migrations.cjs                                                                       0.85 kB
+#40 13.03 @formbricks/database:build: dist/embedded-data-mapping.cjs                                                                          0.95 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260915120000_eng_2862_grant_responses_scopes/migration.cjs                             0.99 kB
+#40 13.03 @formbricks/database:build: dist/pg-connection-config.cjs                                                                           1.09 kB
+#40 13.03 @formbricks/database:build: dist/scripts/migration-phases.cjs                                                                       1.15 kB
+#40 13.03 @formbricks/database:build: dist/migration/20250211050118_removed_new_session_event/migration.cjs                                   1.16 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260821165535_repair_account_issuer/migration.cjs                                       1.18 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260706000000_delete_orphaned_feedback_sources/migration.cjs                            1.30 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260401000002_backfill_workspace_id/migration.cjs                                       1.45 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260204124556_add_language_default_attribute_key/migration.cjs                          1.49 kB
+#40 13.03 @formbricks/database:build: dist/migration/20261005130000_eng_3470_grant_responses_scopes_to_clients/migration.cjs                  1.54 kB
+#40 13.03 @formbricks/database:build: dist/migration/20241209111725_product_revamp/migration.cjs                                              1.54 kB
+#40 13.03 @formbricks/database:build: dist/migration/20261002120001_backfill_survey_owner/migration.cjs                                       1.58 kB
+#40 13.03 @formbricks/database:build: dist/migration/20241209110456_xm_segment_migration/migration.cjs                                        1.68 kB
+#40 13.03 @formbricks/database:build: dist/scripts/create-saml-database.cjs                                                                   1.69 kB
+#40 13.03 @formbricks/database:build: dist/index.cjs                                                                                          1.79 kB
+#40 13.03 @formbricks/database:build: dist/migration/20241209111525_update_org_limits/migration.cjs                                           2.26 kB
+#40 13.03 @formbricks/database:build: dist/migration/20250326111101_move_api_keys_to_api_keys_new/migration.cjs                               2.30 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260619120000_eng_1054_credential_account_backfill/migration.cjs                        2.45 kB
+#40 13.03 @formbricks/database:build: dist/migration/20241209111404_xm_attribute_removal/migration.cjs                                        2.55 kB
+#40 13.03 @formbricks/database:build: dist/migration/20250812114145_adds_id_to_matrix_question_labels/migration.cjs                           2.58 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260812110001_eng_2343_backfill_oauth_resource_links/migration.cjs                      3.32 kB
+#40 13.03 @formbricks/database:build: dist/migration/20251208033316_remove_empty_image_and_video_urls_from_elements/migration.cjs             3.71 kB
+#40 13.03 @formbricks/database:build: dist/scripts/upgrade-session.cjs                                                                        3.94 kB
+#40 13.03 @formbricks/database:build: dist/migration/20251014110903_move_html_to_subheader_for_cta_consent_and_welcome_card/migration.cjs     4.09 kB
+#40 13.03 @formbricks/database:build: dist/migration/20250103060634_add_placeholder_to_contact_and_address_question/migration.cjs             4.56 kB
+#40 13.03 @formbricks/database:build: dist/scripts/backfill-attribute-values.cjs                                                              4.94 kB
+#40 13.03 @formbricks/database:build: dist/enums.cjs                                                                                          6.04 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260812121944_backfill_embedded_data/migration.cjs                                      6.06 kB
+#40 13.03 @formbricks/database:build: dist/logger.cjs                                                                                         6.25 kB
+#40 13.03 @formbricks/database:build: dist/migration/20241209104738_xm_user_identification/migration.cjs                                      6.25 kB
+#40 13.03 @formbricks/database:build: dist/scripts/wait-for-database.cjs                                                                      6.98 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260416110000_backfill_legacy_sso_accounts/migration.cjs                                7.21 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260119123112_migrate_legacy_validation_to_rules/migration.cjs                          7.25 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260928120000_eng_2404_backfill_remaining_embedded_data/migration.cjs                   7.45 kB
+#40 13.03 @formbricks/database:build: dist/src/prisma-adapter.cjs                                                                             7.79 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260205033241_added_attributes_data_types/migration.cjs                                10.42 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260401000001_promote_dev_environments/migration.cjs                                   10.73 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260204174943_migrate_storage_urls_to_relative/migration.cjs                           11.61 kB
+#40 13.03 @formbricks/database:build: dist/scripts/migration-runner.cjs                                                                      17.74 kB
+#40 13.03 @formbricks/database:build: dist/migration/20251118032116_migrate_questions_to_blocks/migration.cjs                                17.75 kB
+#40 13.03 @formbricks/database:build: dist/src/prisma-browser.cjs                                                                            26.13 kB
+#40 13.03 @formbricks/database:build: dist/migration/20260625104904_canonicalize_language_codes/migration.cjs                                27.44 kB
+#40 13.03 @formbricks/database:build: dist/src/prisma.cjs                                                                                   548.04 kB
+#40 13.04 @formbricks/database:build: ✓ built in 2.76s
+#40 14.75 
+#40 14.75  Tasks:    5 successful, 5 total
+#40 14.75 Cached:    0 cached, 5 total
+#40 14.75   Time:    14.381s 
+#40 14.75 
+#40 DONE 15.0s
+
+#41 [installer 19/19] RUN --mount=type=secret,id=database_url     --mount=type=secret,id=encryption_key     --mount=type=secret,id=redis_url     --mount=type=secret,id=hub_api_url     --mount=type=secret,id=hub_api_key     --mount=type=secret,id=cubejs_api_url     --mount=type=secret,id=cubejs_api_secret     --mount=type=secret,id=sentry_auth_token     --mount=type=secret,id=posthog_key     /tmp/read-secrets.sh node apps/web/scripts/docker/build-next-runtime.mjs
+#41 0.147 ⚠️  DATABASE_URL secret not found or empty. Using build-time fallback value.
+#41 0.147 ⚠️  ENCRYPTION_KEY secret not found or empty. Using build-time fallback value.
+#41 0.147 ⚠️  REDIS_URL secret not found or empty. Using build-time fallback value.
+#41 0.148 ⚠️  HUB_API_URL secret not found or empty. Using build-time fallback value.
+#41 0.148 ⚠️  HUB_API_KEY secret not found or empty. Using build-time fallback value.
+#41 0.148 ⚠️  CUBEJS_API_URL secret not found or empty. Using build-time fallback value.
+#41 0.148 ⚠️  CUBEJS_API_SECRET secret not found or empty. Using build-time fallback value.
+#41 0.148 ℹ️  POSTHOG_KEY secret not found. PostHog proxy rewrites will not be generated.
+#41 0.148 ⚠️  SENTRY_AUTH_TOKEN secret not found. Sourcemaps will not be uploaded and Debug IDs will NOT be injected.
+#41 0.148   DATABASE_URL: [SET]
+#41 0.148   ENCRYPTION_KEY: [SET]
+#41 0.148   REDIS_URL: [SET]
+#41 0.148   HUB_API_URL: [SET]
+#41 0.149   HUB_API_KEY: [SET]
+#41 0.149   CUBEJS_API_URL: [SET]
+#41 0.149   CUBEJS_API_SECRET: [SET]
+#41 0.149   SENTRY_AUTH_TOKEN: [NOT SET]
+#41 0.149   POSTHOG_KEY: [NOT SET]
+#41 0.149   TARGETARCH: arm64
+#41 0.424 $ turbo run build --filter=@formbricks/web...
+#41 0.452 • turbo 2.9.14
+#41 0.533 
+#41 0.533    • Packages in scope: @formbricks/ai, @formbricks/api-v3-schemas, @formbricks/cache, @formbricks/config-eslint, @formbricks/config-typescript, @formbricks/database, @formbricks/email, @formbricks/i18n-utils, @formbricks/jobs, @formbricks/js-core, @formbricks/logger, @formbricks/redis-config, @formbricks/storage, @formbricks/survey-ui, @formbricks/surveys, @formbricks/types, @formbricks/vite-plugins, @formbricks/web, @formbricks/workflows
+#41 0.533    • Running build in 19 packages
+#41 0.533    • Remote caching disabled
+#41 0.533 
+#41 0.914 @formbricks/workflows:build: cache miss, executing 08f4a73a5ccb69e2
+#41 0.914 @formbricks/i18n-utils:build: cache miss, executing 51024c75fa03e624
+#41 0.914 @formbricks/redis-config:build: cache miss, executing 56c56fa9765c42b8
+#41 0.914 @formbricks/logger:build: cache miss, executing 78aa2169aa8c4394
+#41 0.915 @formbricks/survey-ui:build: cache miss, executing b996a4e9012d2c99
+#41 0.915 @formbricks/js-core:build: cache miss, executing ede24e2f20ae25b2
+#41 0.915 @formbricks/database:generate: cache miss, executing 60dc4b614c0064ae
+#41 1.569 @formbricks/i18n-utils:build: $ rimraf dist && tsc --project tsconfig.build.json && vite build
+#41 1.598 @formbricks/logger:build: $ rimraf dist && vite build && tsc --project tsconfig.build.json
+#41 1.610 @formbricks/js-core:build: $ vite build
+#41 1.611 @formbricks/survey-ui:build: $ vite build && node scripts/assert-scoped-css.mjs
+#41 1.638 @formbricks/database:generate: $ node ./src/scripts/clean-generated-prisma.mjs && prisma generate --config ./prisma.config.ts
+#41 1.694 @formbricks/redis-config:build: $ vite build && tsc --project tsconfig.build.json
+#41 1.710 @formbricks/workflows:build: $ vite build && publint
+#41 1.884 @formbricks/redis-config:build: vite v7.3.7 building client environment for production...
+#41 1.919 @formbricks/logger:build: vite v7.3.7 building client environment for production...
+#41 1.936 @formbricks/redis-config:build: transforming...
+#41 1.948 @formbricks/logger:build: transforming...
+#41 1.949 @formbricks/redis-config:build: ✓ 1 modules transformed.
+#41 1.968 @formbricks/redis-config:build: rendering chunks...
+#41 1.970 @formbricks/redis-config:build: computing gzip size...
+#41 1.974 @formbricks/redis-config:build: dist/index.js  1.16 kB │ gzip: 0.56 kB
+#41 1.988 @formbricks/redis-config:build: dist/index.cjs  1.01 kB │ gzip: 0.56 kB
+#41 1.990 @formbricks/redis-config:build: ✓ built in 92ms
+#41 2.005 @formbricks/logger:build: ✓ 3 modules transformed.
+#41 2.039 @formbricks/logger:build: rendering chunks...
+#41 2.050 @formbricks/logger:build: computing gzip size...
+#41 2.053 @formbricks/logger:build: dist/index.js  3.80 kB │ gzip: 1.70 kB
+#41 2.067 @formbricks/logger:build: dist/index.cjs  3.04 kB │ gzip: 1.51 kB
+#41 2.067 @formbricks/logger:build: ✓ built in 138ms
+#41 2.662 @formbricks/survey-ui:build: vite v7.3.7 building client environment for production...
+#41 2.671 @formbricks/js-core:build: vite v7.3.7 building client environment for production...
+#41 2.672 @formbricks/workflows:build: vite v7.3.7 building client environment for production...
+#41 2.711 @formbricks/database:generate: Loaded Prisma config from prisma.config.ts.
+#41 2.711 @formbricks/database:generate: 
+#41 2.985 @formbricks/database:generate: Prisma schema loaded from schema.
+#41 4.952 @formbricks/jobs:build: cache miss, executing 22bf9bc3b9d6301f
+#41 4.954 @formbricks/storage:build: cache miss, executing 2b75676c7aacb6dd
+#41 4.954 @formbricks/ai:build: cache miss, executing fb93f2756a3f1147
+#41 4.954 @formbricks/cache:build: cache miss, executing e2a1d7c17cad2047
+#41 5.291 @formbricks/i18n-utils:build: vite v7.3.7 building client environment for production...
+#41 5.383 @formbricks/i18n-utils:build: transforming...
+#41 5.592 @formbricks/i18n-utils:build: ✓ 5 modules transformed.
+#41 5.640 @formbricks/jobs:build: $ tsc && vite build
+#41 5.667 @formbricks/i18n-utils:build: rendering chunks...
+#41 5.699 @formbricks/i18n-utils:build: computing gzip size...
+#41 5.710 @formbricks/i18n-utils:build: dist/index.js                       1.11 kB │ gzip:  0.41 kB
+#41 5.710 @formbricks/i18n-utils:build: dist/survey-runtime-languages.js    1.40 kB │ gzip:  0.67 kB
+#41 5.711 @formbricks/i18n-utils:build: dist/survey-language-match.js       1.84 kB │ gzip:  0.74 kB
+#41 5.711 @formbricks/i18n-utils:build: dist/canonical.js                  10.24 kB │ gzip:  3.04 kB
+#41 5.711 @formbricks/i18n-utils:build: dist/utils.js                     118.66 kB │ gzip: 21.97 kB
+#41 5.727 @formbricks/storage:build: $ vite build && tsc --project tsconfig.build.json
+#41 5.768 @formbricks/ai:build: $ rimraf dist && vite build && tsc --project tsconfig.build.json
+#41 5.775 @formbricks/i18n-utils:build: dist/index.cjs                      1.11 kB │ gzip:  0.40 kB
+#41 5.775 @formbricks/i18n-utils:build: dist/survey-runtime-languages.cjs   1.21 kB │ gzip:  0.66 kB
+#41 5.775 @formbricks/i18n-utils:build: dist/survey-language-match.cjs      1.58 kB │ gzip:  0.71 kB
+#41 5.775 @formbricks/i18n-utils:build: dist/canonical.cjs                  7.92 kB │ gzip:  2.86 kB
+#41 5.775 @formbricks/i18n-utils:build: dist/utils.cjs                     87.60 kB │ gzip: 21.11 kB
+#41 5.775 @formbricks/i18n-utils:build: ✓ built in 467ms
+#41 5.899 @formbricks/cache:build: $ vite build
+#41 6.068 @formbricks/storage:build: vite v7.3.7 building client environment for production...
+#41 6.076 @formbricks/ai:build: vite v7.3.7 building client environment for production...
+#41 6.107 @formbricks/storage:build: transforming...
+#41 6.138 @formbricks/ai:build: transforming...
+#41 6.192 @formbricks/js-core:build: transforming...
+#41 6.204 @formbricks/storage:build: ✓ 5 modules transformed.
+#41 6.232 @formbricks/storage:build: rendering chunks...
+#41 6.244 @formbricks/storage:build: computing gzip size...
+#41 6.248 @formbricks/storage:build: dist/index.js  6.19 kB │ gzip: 1.96 kB
+#41 6.258 @formbricks/storage:build: dist/index.cjs  4.55 kB │ gzip: 1.73 kB
+#41 6.259 @formbricks/storage:build: ✓ built in 185ms
+#41 6.317 @formbricks/ai:build: ✓ 14 modules transformed.
+#41 6.360 @formbricks/ai:build: rendering chunks...
+#41 6.363 @formbricks/ai:build: computing gzip size...
+#41 6.366 @formbricks/ai:build: dist/index.js  24.55 kB │ gzip: 7.02 kB
+#41 6.367 @formbricks/ai:build: ✓ built in 275ms
+#41 6.441 @formbricks/database:generate: 
+#41 6.441 @formbricks/database:generate: ✔ Generated Prisma Client (7.10.0) to ./generated/prisma in 754ms
+#41 6.441 @formbricks/database:generate: 
+#41 6.441 @formbricks/database:generate: ✔ Generated Prisma Json Types Generator (4.1.1) to ./schema in 1.43s
+#41 6.442 @formbricks/database:generate: 
+#41 6.542 @formbricks/js-core:build: ✓ 25 modules transformed.
+#41 6.632 @formbricks/js-core:build: rendering chunks...
+#41 6.635 @formbricks/js-core:build: 
+#41 6.635 @formbricks/js-core:build: [vite:dts] Start generate declaration files...
+#41 6.635 @formbricks/js-core:build: computing gzip size...
+#41 6.749 @formbricks/js-core:build: dist/index.umd.cjs  34.38 kB │ gzip: 11.38 kB
+#41 6.749 @formbricks/js-core:build: Ensured directory exists: /app/apps/web/public/js
+#41 6.755 @formbricks/js-core:build: Copied 2 files to /app/apps/web/public/js (formbricks)
+#41 6.779 @formbricks/js-core:build: [vite:dts] Declaration files built in 3694ms.
+#41 6.779 @formbricks/js-core:build: 
+#41 6.779 @formbricks/js-core:build: ✓ built in 4.10s
+#41 7.274 @formbricks/workflows:build: transforming...
+#41 7.340 @formbricks/cache:build: vite v7.3.7 building client environment for production...
+#41 7.601 @formbricks/workflows:build: ✓ 37 modules transformed.
+#41 7.649 @formbricks/workflows:build: rendering chunks...
+#41 7.676 @formbricks/workflows:build: 
+#41 7.676 @formbricks/workflows:build: [vite:dts] Start generate declaration files...
+#41 7.676 @formbricks/workflows:build: computing gzip size...
+#41 7.712 @formbricks/workflows:build: dist/index.js                 4.14 kB │ gzip: 1.48 kB
+#41 7.712 @formbricks/workflows:build: dist/operations-C24uOqC7.js  31.10 kB │ gzip: 8.00 kB
+#41 7.713 @formbricks/workflows:build: dist/server.js               41.71 kB │ gzip: 8.87 kB
+#41 7.772 @formbricks/workflows:build: [vite:dts] Declaration files built in 4747ms.
+#41 7.772 @formbricks/workflows:build: 
+#41 7.773 @formbricks/workflows:build: ✓ built in 5.09s
+#41 7.941 @formbricks/workflows:build: Running publint v0.3.21 for @formbricks/workflows...
+#41 7.952 @formbricks/workflows:build: Packing files with `pnpm pack`...
+#41 8.491 @formbricks/workflows:build: Linting...
+#41 8.515 @formbricks/workflows:build: All good!
+#41 8.541 @formbricks/database:build: cache miss, executing 810ec27f85dc2d72
+#41 8.592 @formbricks/survey-ui:build: transforming...
+#41 8.922 @formbricks/database:build: $ pnpm generate && vite build && tsc -p tsconfig.generated-prisma.json
+#41 9.115 @formbricks/survey-ui:build: ✓ 36 modules transformed.
+#41 9.150 @formbricks/survey-ui:build: rendering chunks...
+#41 9.198 @formbricks/survey-ui:build: 
+#41 9.198 @formbricks/survey-ui:build: [vite:dts] Start generate declaration files...
+#41 9.198 @formbricks/survey-ui:build: computing gzip size...
+#41 9.200 @formbricks/database:build: $ node ./src/scripts/clean-generated-prisma.mjs && prisma generate --config ./prisma.config.ts
+#41 9.235 @formbricks/survey-ui:build: dist/survey-ui.css                          56.56 kB │ gzip: 9.06 kB
+#41 9.235 @formbricks/survey-ui:build: dist/lib/portal-container.js                 0.11 kB │ gzip: 0.12 kB
+#41 9.235 @formbricks/survey-ui:build: dist/lib/url.js                              0.22 kB │ gzip: 0.16 kB
+#41 9.235 @formbricks/survey-ui:build: dist/lib/smiley-colors.js                    0.78 kB │ gzip: 0.26 kB
+#41 9.235 @formbricks/survey-ui:build: dist/lib/locale.js                           0.80 kB │ gzip: 0.42 kB
+#41 9.235 @formbricks/survey-ui:build: dist/components/general/textarea.js          1.02 kB │ gzip: 0.53 kB
+#41 9.235 @formbricks/survey-ui:build: dist/lib/youtube-id.js                       1.05 kB │ gzip: 0.51 kB
+#41 9.235 @formbricks/survey-ui:build: dist/components/general/checkbox.js          1.16 kB │ gzip: 0.55 kB
+#41 9.235 @formbricks/survey-ui:build: dist/components/general/element-error.js     1.22 kB │ gzip: 0.59 kB
+#41 9.235 @formbricks/survey-ui:build: dist/components/general/element-header.js    1.26 kB │ gzip: 0.57 kB
+#41 9.235 @formbricks/survey-ui:build: dist/lib/use-roving-radio-group.js           1.47 kB │ gzip: 0.67 kB
+#41 9.235 @formbricks/survey-ui:build: dist/lib/video.js                            1.66 kB │ gzip: 0.55 kB
+#41 9.235 @formbricks/survey-ui:build: dist/lib/parts.js                            1.71 kB │ gzip: 0.79 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/general/input.js             1.72 kB │ gzip: 0.77 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/general/label.js             1.80 kB │ gzip: 0.77 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/general/button.js            1.90 kB │ gzip: 0.82 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/cta.js              2.03 kB │ gzip: 0.87 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/form-field.js       2.17 kB │ gzip: 0.88 kB
+#41 9.239 @formbricks/survey-ui:build: dist/lib/utils.js                            2.22 kB │ gzip: 1.02 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/consent.js          2.52 kB │ gzip: 0.96 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/open-text.js        2.76 kB │ gzip: 0.98 kB
+#41 9.239 @formbricks/survey-ui:build: dist/index.js                                3.04 kB │ gzip: 0.88 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/general/element-media.js     3.12 kB │ gzip: 1.35 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/date.js             3.51 kB │ gzip: 1.26 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/general/dropdown-search.js   3.65 kB │ gzip: 1.48 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/nps.js              4.29 kB │ gzip: 1.63 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/matrix.js           5.34 kB │ gzip: 1.59 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/file-upload.js      6.36 kB │ gzip: 2.03 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/general/dropdown-menu.js     7.50 kB │ gzip: 1.63 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/picture-select.js   7.98 kB │ gzip: 1.91 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/ranking.js          8.25 kB │ gzip: 2.60 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/general/calendar.js          8.56 kB │ gzip: 2.79 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/rating.js           9.33 kB │ gzip: 2.61 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/general/smileys.js          14.16 kB │ gzip: 1.52 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/multi-select.js    16.97 kB │ gzip: 4.39 kB
+#41 9.239 @formbricks/survey-ui:build: dist/components/elements/single-select.js   18.18 kB │ gzip: 4.60 kB
+#41 9.247 @formbricks/survey-ui:build: [vite:dts] Declaration files built in 5851ms.
+#41 9.247 @formbricks/survey-ui:build: 
+#41 9.247 @formbricks/survey-ui:build: ✓ built in 6.57s
+#41 9.311 @formbricks/survey-ui:build: [assert-scoped-css] dist/survey-ui.css is fully #fbjs-scoped ✔
+#41 9.325 @formbricks/surveys:build: cache miss, executing 1227401df7dfd586
+#41 9.616 @formbricks/surveys:build: $ cross-env NODE_OPTIONS=--max-old-space-size=8192 vite build && cross-env NODE_OPTIONS=--max-old-space-size=8192 BUILD_UMD=true vite build && cross-env NODE_OPTIONS=--max-old-space-size=8192 tsc --project tsconfig.build.json
+#41 9.627 @formbricks/database:build: Loaded Prisma config from prisma.config.ts.
+#41 9.627 @formbricks/database:build: 
+#41 9.774 @formbricks/database:build: Prisma schema loaded from schema.
+#41 9.966 @formbricks/surveys:build: vite v7.3.7 building client environment for production...
+#41 10.00 @formbricks/surveys:build: transforming...
+#41 10.17 @formbricks/jobs:build: vite v7.3.7 building client environment for production...
+#41 10.21 @formbricks/cache:build: transforming...
+#41 10.29 @formbricks/cache:build: ✓ 9 modules transformed.
+#41 10.31 @formbricks/cache:build: rendering chunks...
+#41 10.31 @formbricks/cache:build: 
+#41 10.31 @formbricks/cache:build: [vite:dts] Start generate declaration files...
+#41 10.31 @formbricks/cache:build: computing gzip size...
+#41 10.36 @formbricks/cache:build: dist/index.js  14.65 kB │ gzip: 4.42 kB
+#41 10.36 @formbricks/cache:build: [vite:dts] Declaration files built in 2909ms.
+#41 10.36 @formbricks/cache:build: 
+#41 10.37 @formbricks/cache:build: dist/index.cjs  8.54 kB │ gzip: 2.76 kB
+#41 10.38 @formbricks/cache:build: ✓ built in 3.03s
+#41 10.99 @formbricks/database:build: 
+#41 10.99 @formbricks/database:build: ✔ Generated Prisma Client (7.10.0) to ./generated/prisma in 360ms
+#41 10.99 @formbricks/database:build: 
+#41 10.99 @formbricks/database:build: ✔ Generated Prisma Json Types Generator (4.1.1) to ./schema in 606ms
+#41 10.99 @formbricks/database:build: 
+#41 11.61 @formbricks/surveys:build: ../../node_modules/zod/v4/core/util.js (400:0): A comment
+#41 11.61 @formbricks/surveys:build: 
+#41 11.61 @formbricks/surveys:build: "// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+#41 11.61 @formbricks/surveys:build: 
+#41 11.61 @formbricks/surveys:build: in "../../node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+#41 11.61 @formbricks/surveys:build: ../../node_modules/zod/v4/core/regexes.js (74:0): A comment
+#41 11.61 @formbricks/surveys:build: 
+#41 11.61 @formbricks/surveys:build: "/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+#41 11.61 @formbricks/surveys:build:  * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+#41 11.61 @formbricks/surveys:build:  * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+#41 11.61 @formbricks/surveys:build: 
+#41 11.61 @formbricks/surveys:build: in "../../node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+#41 11.72 @formbricks/database:build: 
+#41 11.72 @formbricks/database:build: [vite:dts] You are building a library that may not need to generate declaration files.
+#41 11.72 @formbricks/database:build: 
+#41 11.72 @formbricks/database:build: vite v7.3.7 building ssr environment for production...
+#41 12.58 @formbricks/jobs:build: transforming...
+#41 12.65 @formbricks/surveys:build: ✓ 3044 modules transformed.
+#41 12.81 @formbricks/surveys:build: rendering chunks...
+#41 12.94 @formbricks/surveys:build: computing gzip size...
+#41 12.94 @formbricks/surveys:build: Ensured directory exists: /app/apps/web/public/js
+#41 12.94 @formbricks/surveys:build: Copied 2 files to /app/apps/web/public/js (surveys)
+#41 12.95 @formbricks/surveys:build: Copied 40 locale files to /app/apps/web/public/js/locales
+#41 12.96 @formbricks/surveys:build: dist/validation.js                      0.10 kB │ gzip:   0.11 kB
+#41 12.96 @formbricks/surveys:build: dist/assets/validation-mwZsa217.js    303.36 kB │ gzip:  74.06 kB
+#41 12.96 @formbricks/surveys:build: dist/index.js                       1,002.67 kB │ gzip: 237.57 kB
+#41 12.96 @formbricks/surveys:build: ✓ built in 2.99s
+#41 13.26 @formbricks/surveys:build: vite v7.3.7 building client environment for production...
+#41 13.30 @formbricks/surveys:build: transforming...
+#41 13.33 @formbricks/jobs:build: ✓ 146 modules transformed.
+#41 13.42 @formbricks/jobs:build: rendering chunks...
+#41 13.42 @formbricks/jobs:build: 
+#41 13.42 @formbricks/jobs:build: [vite:dts] Start generate declaration files...
+#41 13.42 @formbricks/jobs:build: computing gzip size...
+#41 13.47 @formbricks/jobs:build: [vite:dts] Declaration files built in 2482ms.
+#41 13.47 @formbricks/jobs:build: 
+#41 13.47 @formbricks/jobs:build: dist/index.js  468.64 kB │ gzip: 132.57 kB
+#41 13.54 @formbricks/jobs:build: dist/index.cjs  353.16 kB │ gzip: 114.81 kB
+#41 13.54 @formbricks/jobs:build: ✓ built in 3.36s
+#41 14.12 @formbricks/surveys:build: ../../node_modules/zod/v4/core/util.js (400:0): A comment
+#41 14.12 @formbricks/surveys:build: 
+#41 14.12 @formbricks/surveys:build: "// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+#41 14.12 @formbricks/surveys:build: 
+#41 14.12 @formbricks/surveys:build: in "../../node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+#41 14.12 @formbricks/surveys:build: ../../node_modules/zod/v4/core/regexes.js (74:0): A comment
+#41 14.12 @formbricks/surveys:build: 
+#41 14.12 @formbricks/surveys:build: "/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+#41 14.12 @formbricks/surveys:build:  * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+#41 14.12 @formbricks/surveys:build:  * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+#41 14.12 @formbricks/surveys:build: 
+#41 14.12 @formbricks/surveys:build: in "../../node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+#41 14.69 @formbricks/database:build: transforming...
+#41 14.92 @formbricks/database:build: ✓ 66 modules transformed.
+#41 15.08 @formbricks/database:build: rendering chunks...
+#41 15.11 @formbricks/database:build: 
+#41 15.11 @formbricks/database:build: [vite:dts] Start generate declaration files...
+#41 15.29 @formbricks/database:build: dist/migration/20250722075349_sunset_weekly_summary/migration.js                                       0.38 kB
+#41 15.29 @formbricks/database:build: dist/migration/20250402084801_set_default_organization_access_to_all_existing_api_keys/migration.js    0.61 kB
+#41 15.29 @formbricks/database:build: dist/scripts/apply-migrations.js                                                                       0.73 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260915120000_eng_2862_grant_responses_scopes/migration.js                             0.88 kB
+#41 15.29 @formbricks/database:build: dist/embedded-data-mapping.js                                                                          0.92 kB
+#41 15.29 @formbricks/database:build: dist/scripts/migration-phases.js                                                                       1.00 kB
+#41 15.29 @formbricks/database:build: dist/migration/20250211050118_removed_new_session_event/migration.js                                   1.03 kB
+#41 15.29 @formbricks/database:build: dist/pg-connection-config.js                                                                           1.05 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260821165535_repair_account_issuer/migration.js                                       1.06 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260706000000_delete_orphaned_feedback_sources/migration.js                            1.17 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260401000002_backfill_workspace_id/migration.js                                       1.33 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260204124556_add_language_default_attribute_key/migration.js                          1.35 kB
+#41 15.29 @formbricks/database:build: dist/migration/20261005130000_eng_3470_grant_responses_scopes_to_clients/migration.js                  1.41 kB
+#41 15.29 @formbricks/database:build: dist/migration/20241209111725_product_revamp/migration.js                                              1.43 kB
+#41 15.29 @formbricks/database:build: dist/migration/20261002120001_backfill_survey_owner/migration.js                                       1.46 kB
+#41 15.29 @formbricks/database:build: dist/migration/20241209110456_xm_segment_migration/migration.js                                        1.55 kB
+#41 15.29 @formbricks/database:build: dist/scripts/create-saml-database.js                                                                   1.61 kB
+#41 15.29 @formbricks/database:build: dist/index.js                                                                                          1.66 kB
+#41 15.29 @formbricks/database:build: dist/migration/20241209111525_update_org_limits/migration.js                                           2.13 kB
+#41 15.29 @formbricks/database:build: dist/migration/20250326111101_move_api_keys_to_api_keys_new/migration.js                               2.19 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260619120000_eng_1054_credential_account_backfill/migration.js                        2.24 kB
+#41 15.29 @formbricks/database:build: dist/migration/20241209111404_xm_attribute_removal/migration.js                                        2.41 kB
+#41 15.29 @formbricks/database:build: dist/migration/20250812114145_adds_id_to_matrix_question_labels/migration.js                           2.44 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260812110001_eng_2343_backfill_oauth_resource_links/migration.js                      3.11 kB
+#41 15.29 @formbricks/database:build: dist/migration/20251208033316_remove_empty_image_and_video_urls_from_elements/migration.js             3.54 kB
+#41 15.29 @formbricks/database:build: dist/scripts/upgrade-session.js                                                                        3.72 kB
+#41 15.29 @formbricks/database:build: dist/migration/20251014110903_move_html_to_subheader_for_cta_consent_and_welcome_card/migration.js     3.89 kB
+#41 15.29 @formbricks/database:build: dist/migration/20250103060634_add_placeholder_to_contact_and_address_question/migration.js             4.42 kB
+#41 15.29 @formbricks/database:build: dist/scripts/backfill-attribute-values.js                                                              4.87 kB
+#41 15.29 @formbricks/database:build: dist/enums.js                                                                                          5.31 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260812121944_backfill_embedded_data/migration.js                                      5.85 kB
+#41 15.29 @formbricks/database:build: dist/migration/20241209104738_xm_user_identification/migration.js                                      5.96 kB
+#41 15.29 @formbricks/database:build: dist/logger.js                                                                                         6.24 kB
+#41 15.29 @formbricks/database:build: dist/scripts/wait-for-database.js                                                                      6.40 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260416110000_backfill_legacy_sso_accounts/migration.js                                7.02 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260119123112_migrate_legacy_validation_to_rules/migration.js                          7.02 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260928120000_eng_2404_backfill_remaining_embedded_data/migration.js                   7.23 kB
+#41 15.29 @formbricks/database:build: dist/src/prisma-adapter.js                                                                             7.58 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260205033241_added_attributes_data_types/migration.js                                10.08 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260401000001_promote_dev_environments/migration.js                                   10.55 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260204174943_migrate_storage_urls_to_relative/migration.js                           11.29 kB
+#41 15.29 @formbricks/database:build: dist/scripts/migration-runner.js                                                                      17.13 kB
+#41 15.29 @formbricks/database:build: dist/migration/20251118032116_migrate_questions_to_blocks/migration.js                                17.50 kB
+#41 15.29 @formbricks/database:build: dist/src/prisma-browser.js                                                                            24.63 kB
+#41 15.29 @formbricks/database:build: dist/migration/20260625104904_canonicalize_language_codes/migration.js                                27.21 kB
+#41 15.29 @formbricks/database:build: dist/src/prisma.js                                                                                   544.74 kB
+#41 15.31 @formbricks/surveys:build: ✓ 3044 modules transformed.
+#41 15.33 @formbricks/database:build: [vite:dts] Declaration files built in 3229ms.
+#41 15.33 @formbricks/database:build: 
+#41 15.38 @formbricks/database:build: dist/migration/20250722075349_sunset_weekly_summary/migration.cjs                                       0.49 kB
+#41 15.38 @formbricks/database:build: dist/migration/20250402084801_set_default_organization_access_to_all_existing_api_keys/migration.cjs    0.75 kB
+#41 15.38 @formbricks/database:build: dist/scripts/apply-migrations.cjs                                                                       0.85 kB
+#41 15.38 @formbricks/database:build: dist/embedded-data-mapping.cjs                                                                          0.95 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260915120000_eng_2862_grant_responses_scopes/migration.cjs                             0.99 kB
+#41 15.38 @formbricks/database:build: dist/pg-connection-config.cjs                                                                           1.09 kB
+#41 15.38 @formbricks/database:build: dist/scripts/migration-phases.cjs                                                                       1.15 kB
+#41 15.38 @formbricks/database:build: dist/migration/20250211050118_removed_new_session_event/migration.cjs                                   1.16 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260821165535_repair_account_issuer/migration.cjs                                       1.18 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260706000000_delete_orphaned_feedback_sources/migration.cjs                            1.30 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260401000002_backfill_workspace_id/migration.cjs                                       1.45 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260204124556_add_language_default_attribute_key/migration.cjs                          1.49 kB
+#41 15.38 @formbricks/database:build: dist/migration/20261005130000_eng_3470_grant_responses_scopes_to_clients/migration.cjs                  1.54 kB
+#41 15.38 @formbricks/database:build: dist/migration/20241209111725_product_revamp/migration.cjs                                              1.54 kB
+#41 15.38 @formbricks/database:build: dist/migration/20261002120001_backfill_survey_owner/migration.cjs                                       1.58 kB
+#41 15.38 @formbricks/database:build: dist/migration/20241209110456_xm_segment_migration/migration.cjs                                        1.68 kB
+#41 15.38 @formbricks/database:build: dist/scripts/create-saml-database.cjs                                                                   1.69 kB
+#41 15.38 @formbricks/database:build: dist/index.cjs                                                                                          1.79 kB
+#41 15.38 @formbricks/database:build: dist/migration/20241209111525_update_org_limits/migration.cjs                                           2.26 kB
+#41 15.38 @formbricks/database:build: dist/migration/20250326111101_move_api_keys_to_api_keys_new/migration.cjs                               2.30 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260619120000_eng_1054_credential_account_backfill/migration.cjs                        2.45 kB
+#41 15.38 @formbricks/database:build: dist/migration/20241209111404_xm_attribute_removal/migration.cjs                                        2.55 kB
+#41 15.38 @formbricks/database:build: dist/migration/20250812114145_adds_id_to_matrix_question_labels/migration.cjs                           2.58 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260812110001_eng_2343_backfill_oauth_resource_links/migration.cjs                      3.32 kB
+#41 15.38 @formbricks/database:build: dist/migration/20251208033316_remove_empty_image_and_video_urls_from_elements/migration.cjs             3.71 kB
+#41 15.38 @formbricks/database:build: dist/scripts/upgrade-session.cjs                                                                        3.94 kB
+#41 15.38 @formbricks/database:build: dist/migration/20251014110903_move_html_to_subheader_for_cta_consent_and_welcome_card/migration.cjs     4.09 kB
+#41 15.38 @formbricks/database:build: dist/migration/20250103060634_add_placeholder_to_contact_and_address_question/migration.cjs             4.56 kB
+#41 15.38 @formbricks/database:build: dist/scripts/backfill-attribute-values.cjs                                                              4.94 kB
+#41 15.38 @formbricks/database:build: dist/enums.cjs                                                                                          6.04 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260812121944_backfill_embedded_data/migration.cjs                                      6.06 kB
+#41 15.38 @formbricks/database:build: dist/logger.cjs                                                                                         6.25 kB
+#41 15.38 @formbricks/database:build: dist/migration/20241209104738_xm_user_identification/migration.cjs                                      6.25 kB
+#41 15.38 @formbricks/database:build: dist/scripts/wait-for-database.cjs                                                                      6.98 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260416110000_backfill_legacy_sso_accounts/migration.cjs                                7.21 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260119123112_migrate_legacy_validation_to_rules/migration.cjs                          7.25 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260928120000_eng_2404_backfill_remaining_embedded_data/migration.cjs                   7.45 kB
+#41 15.38 @formbricks/database:build: dist/src/prisma-adapter.cjs                                                                             7.79 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260205033241_added_attributes_data_types/migration.cjs                                10.42 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260401000001_promote_dev_environments/migration.cjs                                   10.73 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260204174943_migrate_storage_urls_to_relative/migration.cjs                           11.61 kB
+#41 15.38 @formbricks/database:build: dist/scripts/migration-runner.cjs                                                                      17.74 kB
+#41 15.38 @formbricks/database:build: dist/migration/20251118032116_migrate_questions_to_blocks/migration.cjs                                17.75 kB
+#41 15.38 @formbricks/database:build: dist/src/prisma-browser.cjs                                                                            26.13 kB
+#41 15.38 @formbricks/database:build: dist/migration/20260625104904_canonicalize_language_codes/migration.cjs                                27.44 kB
+#41 15.38 @formbricks/database:build: dist/src/prisma.cjs                                                                                   548.04 kB
+#41 15.40 @formbricks/database:build: ✓ built in 3.67s
+#41 15.69 @formbricks/surveys:build: rendering chunks...
+#41 15.69 @formbricks/surveys:build: computing gzip size...
+#41 15.69 @formbricks/surveys:build: Ensured directory exists: /app/apps/web/public/js
+#41 15.69 @formbricks/surveys:build: Copied 3 files to /app/apps/web/public/js (surveys)
+#41 15.71 @formbricks/surveys:build: dist/index.umd.cjs  904.44 kB │ gzip: 258.99 kB
+#41 15.71 @formbricks/surveys:build: Copied 40 locale files to /app/apps/web/public/js/locales
+#41 15.71 @formbricks/surveys:build: ✓ built in 2.44s
+#41 18.31 @formbricks/web:build: cache miss, executing 219b565b42d07d5e
+#41 18.59 @formbricks/web:build: $ cross-env NODE_OPTIONS=--max-old-space-size=8192 next build && pnpm build:env-validator && pnpm build:authzed-cli
+#41 18.89 @formbricks/web:build: ▲ Next.js 16.4.1 (Turbopack)
+#41 18.89 @formbricks/web:build: - Environments: .env
+#41 19.32 @formbricks/web:build: ✓ Running next.config.mjs took 430ms
+#41 19.32 @formbricks/web:build: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+#41 19.32 @formbricks/web:build: This information is used to shape Next.js' roadmap and prioritize features.
+#41 19.32 @formbricks/web:build: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#41 19.32 @formbricks/web:build: https://nextjs.org/telemetry
+#41 19.32 @formbricks/web:build: 
+#41 19.34 @formbricks/web:build: - Experiments (use with caution):
+#41 19.34 @formbricks/web:build:   · proxyClientMaxBodySize: "16mb"
+#41 19.34 @formbricks/web:build: 
+#41 19.39 @formbricks/web:build:   Creating an optimized production build ...
+#41 78.89 @formbricks/web:build: ✓ Compiled successfully in 59s
+#41 78.90 @formbricks/web:build:   Running TypeScript ...
+#41 90.40 @formbricks/web:build: ✓ Finished writing to filesystem cache in 11.5s
+#41 132.4 @formbricks/web:build:   Finished TypeScript in 53s ...
+#41 132.4 @formbricks/web:build:   Collecting page data using 7 workers ...
+#41 133.9 @formbricks/web:build: {"level":"error","time":1794192074537,"pid":945,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"r","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 133.9 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 133.9 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 133.9 @formbricks/web:build: {"level":"error","time":1794192074538,"pid":917,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"r","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 133.9 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 133.9 @formbricks/web:build: {"level":"error","time":1794192074553,"pid":909,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"r","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 133.9 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 133.9 @formbricks/web:build: {"level":"error","time":1794192074569,"pid":930,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"r","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 133.9 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 133.9 @formbricks/web:build: {"level":"error","time":1794192074578,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"r","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 134.0 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 134.0 @formbricks/web:build: {"level":"error","time":1794192074656,"pid":903,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"c","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 134.0 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 134.0 @formbricks/web:build: {"level":"error","time":1794192074674,"pid":924,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"r","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 134.2 @formbricks/web:build: 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙
+#41 134.2 @formbricks/web:build: 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙
+#41 134.4 @formbricks/web:build: 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙
+#41 134.5 @formbricks/web:build: 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙
+#41 134.5 @formbricks/web:build: 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙
+#41 134.8 @formbricks/web:build: 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙
+#41 135.0 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 135.0 @formbricks/web:build: {"level":"error","time":1794192075641,"pid":903,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"r","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 135.4 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 135.4 @formbricks/web:build: {"level":"error","time":1794192076040,"pid":909,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"c","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 135.4 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 135.4 @formbricks/web:build: {"level":"error","time":1794192076041,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"c","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 135.4 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 135.4 @formbricks/web:build: {"level":"error","time":1794192076109,"pid":945,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"c","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 135.5 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 135.5 @formbricks/web:build: {"level":"error","time":1794192076126,"pid":917,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"c","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 135.5 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 135.5 @formbricks/web:build: {"level":"error","time":1794192076156,"pid":924,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"c","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 135.8 @formbricks/web:build: [Error [BetterAuthError]: You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.]
+#41 135.8 @formbricks/web:build: {"level":"error","time":1794192076457,"pid":930,"hostname":"buildkitsandbox","name":"formbricks","err":{"type":"c","message":"You are using the default secret. Please set `BETTER_AUTH_SECRET` in your environment variables or pass `secret` in your auth config.","stack":"","name":"BetterAuthError"},"msg":"Error during shutdown (unhandledRejection)"}
+#41 135.8 @formbricks/web:build:   Generating static pages using 7 workers (0/79) ...
+#41 135.9 @formbricks/web:build:   Generating static pages using 7 workers (19/79) 
+#41 136.0 @formbricks/web:build:   Generating static pages using 7 workers (39/79) 
+#41 136.0 @formbricks/web:build: {"level":"error","time":1794192076706,"pid":909,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":1,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.0 @formbricks/web:build: {"level":"error","time":1794192076706,"pid":909,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":0,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.0 @formbricks/web:build: {"level":"error","time":1794192076710,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":0,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.1 @formbricks/web:build:   Generating static pages using 7 workers (59/79) 
+#41 136.1 @formbricks/web:build: {"level":"error","time":1794192076802,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":7,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.1 @formbricks/web:build: {"level":"error","time":1794192076802,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":6,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.1 @formbricks/web:build: {"level":"error","time":1794192076815,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":5,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.1 @formbricks/web:build: {"level":"error","time":1794192076815,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":4,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.1 @formbricks/web:build: {"level":"error","time":1794192076815,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":3,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.1 @formbricks/web:build: {"level":"error","time":1794192076815,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":2,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.1 @formbricks/web:build: {"level":"error","time":1794192076815,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":1,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.1 @formbricks/web:build: {"level":"error","time":1794192076815,"pid":938,"hostname":"buildkitsandbox","name":"formbricks","event":"postgres_pool_connection_failed","phase":"connection_establishment","classification":"connection_refused","error_code":"ECONNREFUSED","connection_timeout_ms":5000,"pool_total_connections":0,"pool_idle_connections":0,"pool_waiting_requests":0,"msg":"PostgreSQL pool connection failed"}
+#41 136.2 @formbricks/web:build: ✓ Generating static pages using 7 workers (79/79) in 351ms
+#41 136.2 @formbricks/web:build:   Finalizing page optimization ...
+#41 141.7 @formbricks/web:build: 
+#41 141.7 @formbricks/web:build: Route (app)
+#41 141.7 @formbricks/web:build: ┌ ƒ /
+#41 141.7 @formbricks/web:build: ├ ƒ /_not-found
+#41 141.7 @formbricks/web:build: ├ ƒ /.well-known/oauth-authorization-server/[[...issuer]]
+#41 141.7 @formbricks/web:build: ├ ƒ /.well-known/oauth-protected-resource/[[...resource]]
+#41 141.7 @formbricks/web:build: ├ ƒ /.well-known/openid-configuration/[[...issuer]]
+#41 141.7 @formbricks/web:build: ├ ƒ /account/authorize
+#41 141.7 @formbricks/web:build: ├ ƒ /account/settings/authorized-apps
+#41 141.7 @formbricks/web:build: ├ ƒ /account/settings/notifications
+#41 141.7 @formbricks/web:build: ├ ƒ /account/settings/profile
+#41 141.7 @formbricks/web:build: ├ ƒ /api/auth/[...all]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/auth/saml/authorize
+#41 141.7 @formbricks/web:build: ├ ƒ /api/auth/saml/callback
+#41 141.7 @formbricks/web:build: ├ ƒ /api/auth/saml/token
+#41 141.7 @formbricks/web:build: ├ ƒ /api/auth/saml/userinfo
+#41 141.7 @formbricks/web:build: ├ ƒ /api/auth/sso/recovery/complete
+#41 141.7 @formbricks/web:build: ├ ƒ /api/billing/stripe-webhook
+#41 141.7 @formbricks/web:build: ├ ƒ /api/envoy-auth/[...path]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/google-sheet
+#41 141.7 @formbricks/web:build: ├ ƒ /api/google-sheet/callback
+#41 141.7 @formbricks/web:build: ├ ƒ /api/internal/feedback-datasets/[datasetId]/purge
+#41 141.7 @formbricks/web:build: ├ ƒ /api/internal/surveys/generate/stream
+#41 141.7 @formbricks/web:build: ├ ƒ /api/internal/surveys/import/stream
+#41 141.7 @formbricks/web:build: ├ ƒ /api/mcp
+#41 141.7 @formbricks/web:build: ├ ƒ /api/organizations/[organizationId]/usage
+#41 141.7 @formbricks/web:build: ├ ƒ /api/surveys/[surveyId]/attachments
+#41 141.7 @formbricks/web:build: ├ ƒ /api/traefik-auth/[...path]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/unify-feedback/sources/csv/import
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/client/[workspaceId]/displays
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/client/[workspaceId]/displays/[displayId]/response
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/client/[workspaceId]/environment
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/client/[workspaceId]/responses
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/client/[workspaceId]/responses/[responseId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/client/[workspaceId]/storage
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/client/[workspaceId]/user
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/client/og
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/integrations/airtable
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/integrations/airtable/callback
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/integrations/airtable/tables
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/integrations/notion
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/integrations/notion/callback
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/integrations/slack
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/integrations/slack/callback
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/action-classes
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/action-classes/[actionClassId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/contact-attribute-keys
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/contact-attribute-keys/[contactAttributeKeyId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/contact-attributes
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/contacts
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/contacts/[contactId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/me
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/responses
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/responses/[responseId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/storage
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/surveys
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/surveys/[surveyId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/management/surveys/[surveyId]/singleUseIds
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/webhooks
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v1/webhooks/[webhookId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/client/[workspaceId]/displays
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/client/[workspaceId]/environment
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/client/[workspaceId]/responses
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/client/[workspaceId]/responses/[responseId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/client/[workspaceId]/storage
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/client/[workspaceId]/user
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/health
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/contact-attribute-keys
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/contact-attribute-keys/[contactAttributeKeyId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/contacts
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/contacts/bulk
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/responses
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/responses/[responseId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/surveys/[surveyId]/contact-links/contacts/[contactId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/surveys/[surveyId]/contact-links/segments/[segmentId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/webhooks
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/management/webhooks/[webhookId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/me
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/organizations/[organizationId]/teams
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/organizations/[organizationId]/teams/[teamId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/organizations/[organizationId]/users
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/organizations/[organizationId]/workspace-teams
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v2/roles
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/action-classes
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/contact-attribute-keys
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/feedbackRecords/[[...path]]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/feedbackRecords/token
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/gateway/token
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/responses
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/responses/[responseId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/responses/batch-delete
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/responses/count
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/responses/validate
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/[surveyId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/[surveyId]/archive
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/[surveyId]/blocks
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/[surveyId]/blocks/order
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/[surveyId]/restore
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/[surveyId]/visibility
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/generate
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/templates
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/surveys/validate
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/tags
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/tags/[tagId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/tags/[tagId]/merge
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/unify-feedback/enrichment-status
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/unify-feedback/taxonomy/fields
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/unify-feedback/taxonomy/nodes/[nodeId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/unify-feedback/taxonomy/nodes/[nodeId]/records
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/unify-feedback/taxonomy/runs
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/unify-feedback/taxonomy/runs/[runId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/unify-feedback/taxonomy/runs/[runId]/record-counts
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/unify-feedback/taxonomy/state
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/[workflowId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/[workflowId]/archive
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/[workflowId]/disable
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/[workflowId]/duplicate
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/[workflowId]/enable
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/[workflowId]/test
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/[workflowId]/unarchive
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/runs
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workflows/runs/[runId]
+#41 141.7 @formbricks/web:build: ├ ƒ /api/v3/workspaces/[workspaceId]/custom-css
+#41 141.7 @formbricks/web:build: ├ ƒ /api/workspaces/[workspaceId]/matrix-questions
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/account-deleted
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/forgot-password
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/forgot-password/email-sent
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/forgot-password/reset
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/forgot-password/reset/success
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/login
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/signup
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/signup-without-verification-success
+#41 141.7 @formbricks/web:build: ├ ƒ /auth/verification-requested
+#41 141.7 @formbricks/web:build: ├ ƒ /billing-confirmation
+#41 141.7 @formbricks/web:build: ├ ƒ /c/[jwt]
+#41 141.7 @formbricks/web:build: ├ ƒ /email-change-without-verification-success
+#41 141.7 @formbricks/web:build: ├ ƒ /environments/[environmentId]
+#41 141.7 @formbricks/web:build: ├ ƒ /environments/[environmentId]/[...path]
+#41 141.7 @formbricks/web:build: ├ ƒ /health
+#41 141.7 @formbricks/web:build: ├ ƒ /health/ready
+#41 141.7 @formbricks/web:build: ├ ƒ /invite
+#41 141.7 @formbricks/web:build: ├ ƒ /legacy-organization-settings/[workspaceId]/[[...path]]
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/landing
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings/api-keys
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings/billing
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings/domain
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings/enterprise
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings/feedback-directories
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings/general
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings/teams
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/settings/usage
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/workspaces/new/ai
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/workspaces/new/plan
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/workspaces/new/survey
+#41 141.7 @formbricks/web:build: ├ ƒ /organizations/[organizationId]/workspaces/new/templates
+#41 141.7 @formbricks/web:build: ├ ƒ /p/[slug]
+#41 141.7 @formbricks/web:build: ├ ƒ /s/[surveyId]
+#41 141.7 @formbricks/web:build: ├ ƒ /setup
+#41 141.7 @formbricks/web:build: ├ ƒ /setup/intro
+#41 141.7 @formbricks/web:build: ├ ƒ /setup/organization/[organizationId]/invite
+#41 141.7 @formbricks/web:build: ├ ƒ /setup/organization/create
+#41 141.7 @formbricks/web:build: ├ ƒ /setup/signup
+#41 141.7 @formbricks/web:build: ├ ƒ /storage/[workspaceId]/[accessType]/[...filePath]
+#41 141.7 @formbricks/web:build: ├ ƒ /v1/feedback-records/[[...path]]
+#41 141.7 @formbricks/web:build: ├ ƒ /verify-email-change
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/attributes
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/charts
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/contacts
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/contacts/[contactId]
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/dashboards
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/dashboards/[dashboardId]
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/feedback-sources
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/segments
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/app-connection
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/embedded-data
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/general
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/integrations
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/integrations/airtable
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/integrations/google-sheets
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/integrations/notion
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/integrations/slack
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/integrations/webhooks
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/languages
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/look
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/tags
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/teams
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/settings/workspace/user-actions
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/surveys
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/surveys/[surveyId]
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/surveys/[surveyId]/edit
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/surveys/[surveyId]/responses
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/surveys/[surveyId]/summary
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/surveys/templates
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/unify
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/unify/feedback-records
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/unify/sources
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/unify/taxonomy
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/workflows
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/workflows/[workflowId]
+#41 141.7 @formbricks/web:build: ├ ƒ /workspaces/[workspaceId]/workflows/[workflowId]/runs
+#41 141.7 @formbricks/web:build: └ ƒ /workspaces/[workspaceId]/workflows/runs
+#41 141.7 @formbricks/web:build: 
+#41 141.7 @formbricks/web:build: 
+#41 141.7 @formbricks/web:build: ƒ Proxy (Middleware)
+#41 141.7 @formbricks/web:build: 
+#41 141.7 @formbricks/web:build: ƒ  (Dynamic)  server-rendered on demand
+#41 141.7 @formbricks/web:build: 
+#41 142.5 @formbricks/web:build: $ vite build --config vite.env-validation.config.mts
+#41 142.9 @formbricks/web:build: vite v7.3.7 building ssr environment for production...
+#41 143.1 @formbricks/web:build: transforming...
+#41 143.3 @formbricks/web:build: ../../node_modules/zod/v4/core/util.js (400:0): A comment
+#41 143.3 @formbricks/web:build: 
+#41 143.3 @formbricks/web:build: "// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+#41 143.3 @formbricks/web:build: 
+#41 143.3 @formbricks/web:build: in "../../node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+#41 143.3 @formbricks/web:build: ../../node_modules/zod/v4/core/regexes.js (74:0): A comment
+#41 143.3 @formbricks/web:build: 
+#41 143.3 @formbricks/web:build: "/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+#41 143.3 @formbricks/web:build:  * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+#41 143.3 @formbricks/web:build:  * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+#41 143.3 @formbricks/web:build: 
+#41 143.3 @formbricks/web:build: in "../../node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+#41 143.6 @formbricks/web:build: ✓ 154 modules transformed.
+#41 143.7 @formbricks/web:build: rendering chunks...
+#41 143.7 @formbricks/web:build: dist/docker/validate-env.mjs  364.73 kB
+#41 143.7 @formbricks/web:build: ✓ built in 788ms
+#41 144.0 @formbricks/web:build: $ vite build --config vite.authzed-cli.config.mts
+#41 144.1 @formbricks/web:build: vite v7.3.7 building ssr environment for production...
+#41 144.2 @formbricks/web:build: transforming...
+#41 144.9 @formbricks/web:build: ../../node_modules/zod/v4/core/util.js (400:0): A comment
+#41 144.9 @formbricks/web:build: 
+#41 144.9 @formbricks/web:build: "// Wrapped in a `@__PURE__` IIFE: esbuild never tree-shakes a top-level initializer that contains a member access on `Number`, so the bare object literal survived into every bundle."
+#41 144.9 @formbricks/web:build: 
+#41 144.9 @formbricks/web:build: in "../../node_modules/zod/v4/core/util.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+#41 144.9 @formbricks/web:build: ../../node_modules/zod/v4/core/regexes.js (74:0): A comment
+#41 144.9 @formbricks/web:build: 
+#41 144.9 @formbricks/web:build: "/** Anchors a pattern source. The interpolation lives here rather than at the call site because
+#41 144.9 @formbricks/web:build:  * esbuild will not drop a `@__PURE__` call whose own argument interpolates a variable, but it
+#41 144.9 @formbricks/web:build:  * will drop `anchor(dateSource)`. Keeping it inline pinned `date` into every bundle. */"
+#41 144.9 @formbricks/web:build: 
+#41 144.9 @formbricks/web:build: in "../../node_modules/zod/v4/core/regexes.js" contains an annotation that Rollup cannot interpret due to the position of the comment. The comment will be removed to avoid issues.
+#41 146.7 @formbricks/web:build: ✓ 937 modules transformed.
+#41 146.9 @formbricks/web:build: rendering chunks...
+#41 147.1 @formbricks/web:build: dist/authzed-cli/source-images.json                                                     0.77 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/schema-6.0.zed                                                        13.38 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/schema.zed                                                            16.38 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/source-migrations.json                                                66.70 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/target-migrations.json                                               221.46 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/schema-cli-command-Dd4h4L1A.mjs                                 0.50 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/upgrade-cli-command-CY9yW7v9.mjs                                0.56 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/outbox-cli-command-jLHXP14c.mjs                                 0.67 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/health-DOeOnqIU.mjs                                             0.87 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/scope-readiness-DXijj9N4.mjs                                    0.92 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/cli-DDMhH78w.mjs                                                1.43 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/constants-CqO6PJlz.mjs                                          1.48 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/schema-cli-B1NKxETT.mjs                                         1.98 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/outbox-cli-MmxueGiM.mjs                                         2.42 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/schema-2Je0Nanc.mjs                                             3.79 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/backfill-cli-command-Dlz69Igb.mjs                               4.45 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/backfill-cli-BxCVd53d.mjs                                       5.54 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/index.mjs                                                              5.86 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/upgrade-cli-CzOwc4Rz.mjs                                        6.48 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/query_compiler_fast_bg.postgresql-gBoRaSMa.mjs                  7.82 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/outbox-processor-221tUUjQ.mjs                                  19.85 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/team-workspace-r8xtJx55.mjs                                    40.05 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/backfill-apply-DH_ZD9Zt.mjs                                    62.84 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/schemas-DumFbRj8.mjs                                          338.07 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/index-B5vxARMa.mjs                                          1,092.41 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/client-Cek-BMcb.mjs                                         1,604.38 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/cli-HnCc-X1U.mjs                                            1,755.17 kB
+#41 147.1 @formbricks/web:build: dist/authzed-cli/chunks/query_compiler_fast_bg.postgresql.wasm-base64-BKNAv_aP.mjs  4,583.04 kB
+#41 147.1 @formbricks/web:build: ✓ built in 2.93s
+#41 147.3 
+#41 147.3  Tasks:    14 successful, 14 total
+#41 147.3 Cached:    0 cached, 14 total
+#41 147.3   Time:    2m26.867s 
+#41 147.3 
+#41 152.6 Next runtime assembled and verified
+#41 DONE 153.5s
+
+#42 [runner   3/109] COPY --from=installer /app/next-runtime ./
+#42 DONE 1.5s
+
+#43 [runner   4/109] RUN node verify-next-runtime.mjs "" "local"     && chown -R nextjs:nextjs ./ && chmod -R 755 ./
+#43 0.855 Next runtime verification passed
+#43 DONE 11.2s
+
+#44 [runner   5/109] COPY --from=installer /app/apps/web/next.config.mjs .
+#44 DONE 0.1s
+
+#45 [runner   6/109] RUN chmod 644 ./next.config.mjs
+#45 DONE 0.1s
+
+#46 [runner   7/109] COPY --from=installer /app/apps/web/package.json .
+#46 DONE 0.0s
+
+#47 [runner   8/109] RUN chmod 644 ./package.json
+#47 DONE 0.1s
+
+#48 [runner   9/109] COPY --from=installer /app/apps/web/dist/docker/validate-env.mjs ./validate-env.mjs
+#48 DONE 0.0s
+
+#49 [runner  10/109] RUN chown nextjs:nextjs ./validate-env.mjs && chmod 444 ./validate-env.mjs
+#49 DONE 0.1s
+
+#50 [runner  11/109] COPY --from=installer /app/apps/web/dist/authzed-cli ./authzed-cli
+#50 DONE 0.0s
+
+#51 [runner  12/109] RUN chown -R nextjs:nextjs ./authzed-cli     && find ./authzed-cli -type d -exec chmod 555 {} +     && find ./authzed-cli -type f -exec chmod 444 {} +
+#51 DONE 0.1s
+
+#52 [runner  13/109] COPY --from=installer /app/apps/web/scripts/docker/formbricks-authzed /usr/local/bin/formbricks-authzed
+#52 DONE 0.0s
+
+#53 [runner  14/109] RUN chown root:root /usr/local/bin/formbricks-authzed && chmod 555 /usr/local/bin/formbricks-authzed
+#53 DONE 0.1s
+
+#54 [runner  15/109] COPY --from=installer /app/apps/web/scripts/docker/formbricks-authzed-prepare /usr/local/bin/formbricks-authzed-prepare
+#54 DONE 0.0s
+
+#55 [runner  16/109] RUN chown root:root /usr/local/bin/formbricks-authzed-prepare && chmod 555 /usr/local/bin/formbricks-authzed-prepare
+#55 DONE 0.1s
+
+#56 [runner  17/109] COPY --from=installer /app/prisma.config.mjs ./prisma.config.mjs
+#56 DONE 0.0s
+
+#57 [runner  18/109] RUN chmod 644 ./prisma.config.mjs
+#57 DONE 0.1s
+
+#58 [runner  19/109] RUN mkdir -p ./packages/database/.prisma-migrations && chown -R nextjs:nextjs ./packages/database
+#58 DONE 0.1s
+
+#59 [runner  20/109] COPY --from=installer /app/packages/database/package.json ./packages/database/package.json
+#59 DONE 0.0s
+
+#60 [runner  21/109] RUN chown nextjs:nextjs ./packages/database/package.json && chmod 644 ./packages/database/package.json
+#60 DONE 0.1s
+
+#61 [runner  22/109] COPY --from=installer /app/packages/database/schema ./packages/database/schema
+#61 DONE 0.0s
+
+#62 [runner  23/109] RUN chown -R nextjs:nextjs ./packages/database/schema && chmod -R 755 ./packages/database/schema
+#62 DONE 0.1s
+
+#63 [runner  24/109] COPY --from=installer /app/packages/database/prisma.config.ts ./packages/database/prisma.config.ts
+#63 DONE 0.0s
+
+#64 [runner  25/109] RUN chown nextjs:nextjs ./packages/database/prisma.config.ts && chmod 644 ./packages/database/prisma.config.ts
+#64 DONE 0.1s
+
+#65 [runner  26/109] COPY --from=installer /app/packages/database/dist ./packages/database/dist
+#65 DONE 0.1s
+
+#66 [runner  27/109] RUN chown -R nextjs:nextjs ./packages/database/dist && chmod -R 755 ./packages/database/dist
+#66 DONE 0.4s
+
+#67 [runner  28/109] COPY --from=installer /app/packages/database/generated ./packages/database/generated
+#67 DONE 0.0s
+
+#68 [runner  29/109] RUN chown -R nextjs:nextjs ./packages/database/generated && chmod -R 755 ./packages/database/generated
+#68 DONE 0.2s
+
+#69 [runner  30/109] COPY --from=installer /app/node_modules/@prisma ./node_modules/@prisma
+#69 DONE 0.3s
+
+#70 [runner  31/109] RUN chown -R nextjs:nextjs ./node_modules/@prisma && chmod -R 755 ./node_modules/@prisma
+#70 DONE 0.8s
+
+#71 [runner  32/109] COPY --from=installer /app/node_modules/prisma ./node_modules/prisma
+#71 DONE 0.0s
+
+#72 [runner  33/109] RUN mkdir -p ./node_modules/.bin     && ln -sf ../prisma/build/index.js ./node_modules/.bin/prisma     && chown -R nextjs:nextjs ./node_modules/prisma ./node_modules/.bin     && chmod -R 755 ./node_modules/prisma
+#72 DONE 0.2s
+
+#73 [runner  34/109] COPY --from=installer /app/node_modules/dotenv ./node_modules/dotenv
+#73 DONE 0.0s
+
+#74 [runner  35/109] RUN chmod -R 755 ./node_modules/dotenv
+#74 DONE 0.1s
+
+#75 [runner  36/109] COPY --from=installer /app/node_modules/@standard-schema ./node_modules/@standard-schema
+#75 DONE 0.0s
+
+#76 [runner  37/109] COPY --from=installer /app/node_modules/c12 ./node_modules/c12
+#76 DONE 0.0s
+
+#77 [runner  38/109] COPY --from=installer /app/node_modules/confbox ./node_modules/confbox
+#77 DONE 0.0s
+
+#78 [runner  39/109] COPY --from=installer /app/node_modules/deepmerge-ts ./node_modules/deepmerge-ts
+#78 DONE 0.0s
+
+#79 [runner  40/109] COPY --from=installer /app/node_modules/defu ./node_modules/defu
+#79 DONE 0.0s
+
+#80 [runner  41/109] COPY --from=installer /app/node_modules/destr ./node_modules/destr
+#80 DONE 0.0s
+
+#81 [runner  42/109] COPY --from=installer /app/node_modules/effect ./node_modules/effect
+#81 DONE 0.2s
+
+#82 [runner  43/109] COPY --from=installer /app/node_modules/empathic ./node_modules/empathic
+#82 DONE 0.0s
+
+#83 [runner  44/109] COPY --from=installer /app/node_modules/exsolve ./node_modules/exsolve
+#83 DONE 0.0s
+
+#84 [runner  45/109] COPY --from=installer /app/node_modules/fast-check ./node_modules/fast-check
+#84 DONE 0.1s
+
+#85 [runner  46/109] COPY --from=installer /app/node_modules/giget ./node_modules/giget
+#85 DONE 0.0s
+
+#86 [runner  47/109] COPY --from=installer /app/node_modules/jiti ./node_modules/jiti
+#86 DONE 0.0s
+
+#87 [runner  48/109] COPY --from=installer /app/node_modules/ohash ./node_modules/ohash
+#87 DONE 0.0s
+
+#88 [runner  49/109] COPY --from=installer /app/node_modules/pathe ./node_modules/pathe
+#88 DONE 0.0s
+
+#89 [runner  50/109] COPY --from=installer /app/node_modules/perfect-debounce ./node_modules/perfect-debounce
+#89 DONE 0.0s
+
+#90 [runner  51/109] COPY --from=installer /app/node_modules/pkg-types ./node_modules/pkg-types
+#90 DONE 0.0s
+
+#91 [runner  52/109] COPY --from=installer /app/node_modules/pure-rand ./node_modules/pure-rand
+#91 DONE 0.0s
+
+#92 [runner  53/109] COPY --from=installer /app/node_modules/rc9 ./node_modules/rc9
+#92 DONE 0.0s
+
+#93 [runner  54/109] COPY --from=installer /app/node_modules/cross-spawn ./node_modules/cross-spawn
+#93 DONE 0.0s
+
+#94 [runner  55/109] COPY --from=installer /app/node_modules/foreground-child ./node_modules/foreground-child
+#94 DONE 0.0s
+
+#95 [runner  56/109] COPY --from=installer /app/node_modules/get-port-please ./node_modules/get-port-please
+#95 DONE 0.0s
+
+#96 [runner  57/109] COPY --from=installer /app/node_modules/graceful-fs ./node_modules/graceful-fs
+#96 DONE 0.0s
+
+#97 [runner  58/109] COPY --from=installer /app/node_modules/grammex ./node_modules/grammex
+#97 DONE 0.0s
+
+#98 [runner  59/109] COPY --from=installer /app/node_modules/graphmatch ./node_modules/graphmatch
+#98 DONE 0.0s
+
+#99 [runner  60/109] COPY --from=installer /app/node_modules/isexe ./node_modules/isexe
+#99 DONE 0.0s
+
+#100 [runner  61/109] COPY --from=installer /app/node_modules/path-key ./node_modules/path-key
+#100 DONE 0.0s
+
+#101 [runner  62/109] COPY --from=installer /app/node_modules/proper-lockfile ./node_modules/proper-lockfile
+#101 DONE 0.0s
+
+#102 [runner  63/109] COPY --from=installer /app/node_modules/remeda ./node_modules/remeda
+#102 DONE 0.1s
+
+#103 [runner  64/109] COPY --from=installer /app/node_modules/retry ./node_modules/retry
+#103 DONE 0.0s
+
+#104 [runner  65/109] COPY --from=installer /app/node_modules/shebang-command ./node_modules/shebang-command
+#104 DONE 0.0s
+
+#105 [runner  66/109] COPY --from=installer /app/node_modules/shebang-regex ./node_modules/shebang-regex
+#105 DONE 0.0s
+
+#106 [runner  67/109] COPY --from=installer /app/node_modules/signal-exit ./node_modules/signal-exit
+#106 DONE 0.0s
+
+#107 [runner  68/109] COPY --from=installer /app/node_modules/std-env ./node_modules/std-env
+#107 DONE 0.0s
+
+#108 [runner  69/109] COPY --from=installer /app/node_modules/valibot ./node_modules/valibot
+#108 DONE 0.0s
+
+#109 [runner  70/109] COPY --from=installer /app/node_modules/which ./node_modules/which
+#109 DONE 0.0s
+
+#110 [runner  71/109] COPY --from=installer /app/node_modules/zeptomatch ./node_modules/zeptomatch
+#110 DONE 0.0s
+
+#111 [runner  72/109] RUN chmod -R 755   ./node_modules/@standard-schema   ./node_modules/c12   ./node_modules/confbox   ./node_modules/deepmerge-ts   ./node_modules/defu   ./node_modules/destr   ./node_modules/effect   ./node_modules/empathic   ./node_modules/exsolve   ./node_modules/fast-check   ./node_modules/giget   ./node_modules/jiti   ./node_modules/ohash   ./node_modules/pathe   ./node_modules/perfect-debounce   ./node_modules/pkg-types   ./node_modules/pure-rand   ./node_modules/rc9   ./node_modules/cross-spawn   ./node_modules/foreground-child   ./node_modules/get-port-please   ./node_modules/graceful-fs   ./node_modules/grammex   ./node_modules/graphmatch   ./node_modules/isexe   ./node_modules/path-key   ./node_modules/proper-lockfile   ./node_modules/remeda   ./node_modules/retry   ./node_modules/shebang-command   ./node_modules/shebang-regex   ./node_modules/signal-exit   ./node_modules/std-env   ./node_modules/valibot   ./node_modules/which   ./node_modules/zeptomatch
+#111 DONE 2.9s
+
+#112 [runner  73/109] COPY --from=installer /app/node_modules/pg ./node_modules/pg
+#112 DONE 0.0s
+
+#113 [runner  74/109] COPY --from=installer /app/node_modules/pg-connection-string ./node_modules/pg-connection-string
+#113 DONE 0.0s
+
+#114 [runner  75/109] COPY --from=installer /app/node_modules/pg-cloudflare ./node_modules/pg-cloudflare
+#114 DONE 0.0s
+
+#115 [runner  76/109] COPY --from=installer /app/node_modules/pg-int8 ./node_modules/pg-int8
+#115 DONE 0.0s
+
+#116 [runner  77/109] COPY --from=installer /app/node_modules/pg-pool ./node_modules/pg-pool
+#116 DONE 0.0s
+
+#117 [runner  78/109] COPY --from=installer /app/node_modules/pg-protocol ./node_modules/pg-protocol
+#117 DONE 0.0s
+
+#118 [runner  79/109] COPY --from=installer /app/node_modules/pg-types ./node_modules/pg-types
+#118 DONE 0.0s
+
+#119 [runner  80/109] COPY --from=installer /app/node_modules/pgpass ./node_modules/pgpass
+#119 DONE 0.0s
+
+#120 [runner  81/109] COPY --from=installer /app/node_modules/postgres-array ./node_modules/postgres-array
+#120 DONE 0.0s
+
+#121 [runner  82/109] COPY --from=installer /app/node_modules/postgres-bytea ./node_modules/postgres-bytea
+#121 DONE 0.0s
+
+#122 [runner  83/109] COPY --from=installer /app/node_modules/postgres-date ./node_modules/postgres-date
+#122 DONE 0.0s
+
+#123 [runner  84/109] COPY --from=installer /app/node_modules/postgres-interval ./node_modules/postgres-interval
+#123 DONE 0.0s
+
+#124 [runner  85/109] COPY --from=installer /app/node_modules/split2 ./node_modules/split2
+#124 DONE 0.0s
+
+#125 [runner  86/109] RUN chmod -R 755   ./node_modules/pg   ./node_modules/pg-connection-string   ./node_modules/pg-cloudflare   ./node_modules/pg-int8   ./node_modules/pg-pool   ./node_modules/pg-protocol   ./node_modules/pg-types   ./node_modules/pgpass   ./node_modules/postgres-array   ./node_modules/postgres-bytea   ./node_modules/postgres-date   ./node_modules/postgres-interval   ./node_modules/split2
+#125 DONE 0.2s
+
+#126 [runner  87/109] COPY --from=installer /app/node_modules/@paralleldrive/cuid2 ./node_modules/@paralleldrive/cuid2
+#126 DONE 0.0s
+
+#127 [runner  88/109] RUN chmod -R 755 ./node_modules/@paralleldrive/cuid2
+#127 DONE 0.8s
+
+#128 [runner  89/109] COPY --from=installer /app/packages/database/node_modules/uuid ./node_modules/uuid
+#128 DONE 0.1s
+
+#129 [runner  90/109] RUN chmod -R 755 ./node_modules/uuid     && node --input-type=module -e "      import { v7 } from 'uuid';       if (typeof v7 !== 'function') {         throw new Error('uuid v7 missing in runtime image');       }"
+#129 DONE 0.2s
+
+#130 [runner  91/109] COPY --from=installer /app/node_modules/@noble/hashes ./node_modules/@noble/hashes
+#130 DONE 0.0s
+
+#131 [runner  92/109] RUN chmod -R 755 ./node_modules/@noble/hashes
+#131 DONE 0.1s
+
+#132 [runner  93/109] COPY --from=installer /app/node_modules/zod ./node_modules/zod
+#132 DONE 0.1s
+
+#133 [runner  94/109] RUN chmod -R 755 ./node_modules/zod
+#133 DONE 0.6s
+
+#134 [runner  95/109] RUN node /usr/local/share/formbricks/verify-runtime.mjs --dependencies     && rm /usr/local/share/formbricks/verify-runtime.mjs
+#134 0.210 Runtime crypto, compression, locales, CA trust and patched dependency versions verified
+#134 0.746 SAML PostgreSQL driver loads without SQL Server dependencies
+#134 DONE 0.8s
+
+#135 [runner  96/109] COPY --from=installer /app/node_modules/pino ./node_modules/pino
+#135 DONE 0.0s
+
+#136 [runner  97/109] RUN chmod -R 755 ./node_modules/pino
+#136 DONE 0.2s
+
+#137 [runner  98/109] COPY --from=installer /app/node_modules/pino-opentelemetry-transport ./node_modules/pino-opentelemetry-transport
+#137 DONE 0.0s
+
+#138 [runner  99/109] RUN chmod -R 755 ./node_modules/pino-opentelemetry-transport
+#138 DONE 0.1s
+
+#139 [runner 100/109] COPY --from=installer /app/node_modules/pino-abstract-transport ./node_modules/pino-abstract-transport
+#139 DONE 0.0s
+
+#140 [runner 101/109] RUN chmod -R 755 ./node_modules/pino-abstract-transport
+#140 DONE 0.1s
+
+#141 [runner 102/109] COPY --from=installer /app/node_modules/otlp-logger ./node_modules/otlp-logger
+#141 DONE 0.4s
+
+#142 [runner 103/109] RUN chmod -R 755 ./node_modules/otlp-logger
+#142 DONE 1.9s
+
+#143 [runner 104/109] COPY --from=installer /app/node_modules/@opentelemetry/sdk-logs ./node_modules/@opentelemetry/sdk-logs
+#143 DONE 0.1s
+
+#144 [runner 105/109] COPY --from=installer /app/node_modules/@opentelemetry/exporter-logs-otlp-proto ./node_modules/@opentelemetry/exporter-logs-otlp-proto
+#144 DONE 0.0s
+
+#145 [runner 106/109] RUN chmod -R 755       ./node_modules/@opentelemetry/sdk-logs       ./node_modules/@opentelemetry/exporter-logs-otlp-proto     && OTEL_EXPORTER_OTLP_ENDPOINT=http://127.0.0.1:4318 node -e "      const pino = require('pino');       process.chdir('/home/nextjs/apps/web');       const runtimeRoot = process.cwd().replace(/[\/\\]apps[\/\\]web$/, '');       const target = runtimeRoot + '/node_modules/pino-opentelemetry-transport/lib/pino-opentelemetry-transport.js';       process.on('uncaughtException', (error) => { console.error(error); process.exit(1); });       process.on('unhandledRejection', (error) => { console.error(error); process.exit(1); });       const logger = pino({         transport: {           target,           options: {             loggerName: 'formbricks-build-smoke',             serviceVersion: '0.0.0',             resourceAttributes: {               'service.name': 'formbricks-build-smoke',               'service.version': '0.0.0'             }           }         }       });       logger[pino.symbols.streamSym]?.on?.('error', (error) => { console.error(error); process.exit(1); });       logger.info('pino otel transport smoke check');       setTimeout(() => process.exit(0), 1000);     "
+#145 DONE 10.9s
+
+#146 [runner 107/109] COPY --from=installer /app/apps/web/scripts/docker/next-start.sh /home/nextjs/start.sh
+#146 DONE 0.0s
+
+#147 [runner 108/109] RUN chown nextjs:nextjs /home/nextjs/start.sh && chmod +x /home/nextjs/start.sh
+#147 DONE 0.1s
+
+#148 [runner 109/109] RUN mkdir -p /home/nextjs/apps/web/uploads/ &&     mkdir -p /home/nextjs/apps/web/saml-connection &&     node verify-next-runtime.mjs "" "local"
+#148 0.765 Next runtime verification passed
+#148 DONE 0.8s
+
+#149 exporting to image
+#149 exporting layers
+#149 exporting layers 10.4s done
+#149 exporting manifest sha256:15a63c3e52c78e7406a9656c7dcdeca58768a6a3418cd10fdba6baebe958b24e done
+#149 exporting config sha256:e3f8564dbc0b251744b29d5bd0d590ff0c88fc38bc54e2fd3cdb027a2c1954cc done
+#149 exporting attestation manifest sha256:9a967dbc1d7b24faa778c3278116316125174857596d4fd1fbc1e07883c3d6de done
+#149 exporting manifest list sha256:9291e432e8979caabaa9a160f3254f104f4d943b49534aefd6bcc73f4bd066fa done
+#149 naming to docker.io/recall-hufang/formbricks--formbricks:5dadbacb6a00 done
+#149 unpacking to docker.io/recall-hufang/formbricks--formbricks:5dadbacb6a00
+#149 unpacking to docker.io/recall-hufang/formbricks--formbricks:5dadbacb6a00 9.4s done
+#149 DONE 19.9s

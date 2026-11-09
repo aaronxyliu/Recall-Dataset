@@ -1,0 +1,11 @@
+const fs = require('node:fs');
+const file = 'hooks/themes/use-themes-data.ts';
+let source = fs.readFileSync(file, 'utf8');
+const entry = 'export function useThemesData(initialData?: ThemeWithPublished[]) {\n  return useQuery({';
+const query = '    queryFn: getThemes,\n    initialData,';
+if (source.split(entry).length !== 2 || source.split(query).length !== 2) throw Error('Upstream theme query changed');
+source = 'import { authClient } from "@/lib/auth-client";\n' + source;
+source = source.replace(entry, 'export function useThemesData(initialData?: ThemeWithPublished[]) {\n  const { data: session } = authClient.useSession();\n  return useQuery({');
+source = source.replace(query, '    queryFn: getThemes,\n    enabled: !!session?.user.id,\n    initialData,');
+fs.writeFileSync(file, source);
+console.log('Private theme queries wait for a signed-in user; server authorization is unchanged');

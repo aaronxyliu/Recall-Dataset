@@ -1,5 +1,5 @@
 # discourse/discourse
 
-Pinned commit `3a1b1ae930e568a8c1c2f12d6e09f8e907da608b`. 10 production libraries satisfy the minimum of three distinct initial POG source-function anchors. See `qualification.json`, `initial-anchors.json`, and `frontend-package.json` for eligibility evidence. `ground-truth/func-mapping.json` contains 5272 independently span-verified one-to-one pairs.
+Pinned commit `3a1b1ae930e568a8c1c2f12d6e09f8e907da608b`. 10 declared production libraries each have at least three verified source functions with at least ten own-body POG property-operation features. No initial-anchor or matching-count criterion is used. See `qualification.json`, `eligibility/`, and `frontend-package.json` for standalone source witnesses.
 
-The captured scripts and maps are retained byte-for-byte. Reference snapshots are explicit JavaScript inputs; map positions and pair labels do not enter anchor matching. The saved build/browser evidence remains in the build archive under `bundling-dataset/rolldown/discourse--discourse`.
+`ground-truth/func-mapping.json` contains 5272 independently span-verified one-to-one pairs for the selected libraries. Pair counts may be zero for a selected library; they are not an acceptance condition. All captured JS and maps are preserved byte-for-byte. `reference-manifest.json` lists available original source text from those maps separately from the source-only eligibility proof. The existing collector attributes pairs by package name and does not establish one installed version for every captured copy.

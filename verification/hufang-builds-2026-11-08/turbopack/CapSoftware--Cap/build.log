@@ -1,1 +1,1133 @@
-ERROR: Cannot connect to the Docker daemon at unix:///tmp/recall-hufang-docker.sock. Is the docker daemon running?
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.77kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 2.9s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e
+#3 resolve docker.io/docker/dockerfile:1@sha256:4edf897a3ffa55b89f906fc8cc78afdb3f1834cc9c7083565e611a8a7d5fe99e 0.0s done
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 0B / 13.13MB 0.2s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 1.05MB / 13.13MB 1.5s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 2.10MB / 13.13MB 2.4s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 3.15MB / 13.13MB 3.3s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 4.19MB / 13.13MB 3.5s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 5.24MB / 13.13MB 3.6s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 6.29MB / 13.13MB 3.8s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 7.34MB / 13.13MB 3.9s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 8.39MB / 13.13MB 4.1s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 9.44MB / 13.13MB 4.2s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 11.53MB / 13.13MB 4.4s
+#3 sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 13.13MB / 13.13MB 4.5s done
+#3 extracting sha256:c3fba84503b044ce5cd182dd0150892f3b0eff1350c4c5d7f5ca2066da594550 0.1s done
+#3 DONE 4.6s
+
+#4 [context maptools] load .dockerignore
+#4 transferring maptools: 2B done
+#4 DONE 0.0s
+
+#5 [context recipe] load .dockerignore
+#5 transferring recipe: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load metadata for docker.io/library/node:24.22.1-alpine
+#6 DONE 3.4s
+
+#7 [internal] load metadata for docker.io/oven/bun:1.4.4-alpine
+#7 DONE 3.7s
+
+#8 [context maptools] load from client
+#8 transferring maptools: 766B done
+#8 DONE 0.0s
+
+#9 [bun 1/1] FROM docker.io/oven/bun:1.4.4-alpine@sha256:4cf82f5686b196504fe119db3fcd9185b191f82ece82c40680e597228ec6070a
+#9 resolve docker.io/oven/bun:1.4.4-alpine@sha256:4cf82f5686b196504fe119db3fcd9185b191f82ece82c40680e597228ec6070a 0.0s done
+#9 ...
+
+#10 [context recipe] load from client
+#10 transferring recipe: 800B done
+#10 DONE 0.1s
+
+#11 [base 1/1] FROM docker.io/library/node:24.22.1-alpine@sha256:06d7adf3e0ef61a13f1d28682726366f97a15aa1888c934d3ecec86c33918b53
+#11 resolve docker.io/library/node:24.22.1-alpine@sha256:06d7adf3e0ef61a13f1d28682726366f97a15aa1888c934d3ecec86c33918b53 done
+#11 DONE 0.2s
+
+#12 [builder 1/7] WORKDIR /app
+#12 DONE 0.1s
+
+#9 [bun 1/1] FROM docker.io/oven/bun:1.4.4-alpine@sha256:4cf82f5686b196504fe119db3fcd9185b191f82ece82c40680e597228ec6070a
+#9 sha256:822bb4e75a01684f401a98b1cebdaadfa6a8a7ef459f010112c5151ae0c9d9af 0B / 146B 0.3s
+#9 sha256:18e597b6ea7684a135c6ae4f7f53f1fc70ad61759938b2340d19758cea068e3d 0B / 4.06MB 0.2s
+#9 sha256:4521b072a3f36cbc11a3bd089ee6f7cb6735c7fb4faec2b773ad0ce0720dae7b 0B / 187B 0.2s
+#9 sha256:7d504ae6246b16207e17df8bad721bd8f9a9978dbb67337f42ece7f8cf7623ff 0B / 296B 0.2s
+#9 ...
+
+#13 [runner 2/7] RUN addgroup -g 1001 -S nodejs
+#13 DONE 0.3s
+
+#9 [bun 1/1] FROM docker.io/oven/bun:1.4.4-alpine@sha256:4cf82f5686b196504fe119db3fcd9185b191f82ece82c40680e597228ec6070a
+#9 sha256:822bb4e75a01684f401a98b1cebdaadfa6a8a7ef459f010112c5151ae0c9d9af 146B / 146B 0.3s done
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 0B / 49.87MB 0.2s
+#9 ...
+
+#14 [runner 3/7] RUN adduser -S nextjs -u 1001
+#14 DONE 0.2s
+
+#9 [bun 1/1] FROM docker.io/oven/bun:1.4.4-alpine@sha256:4cf82f5686b196504fe119db3fcd9185b191f82ece82c40680e597228ec6070a
+#9 sha256:7d504ae6246b16207e17df8bad721bd8f9a9978dbb67337f42ece7f8cf7623ff 296B / 296B 1.0s done
+#9 sha256:4521b072a3f36cbc11a3bd089ee6f7cb6735c7fb4faec2b773ad0ce0720dae7b 187B / 187B 1.0s done
+#9 ...
+
+#15 [internal] load build context
+#15 transferring context: 293.33MB 1.5s done
+#15 DONE 1.5s
+
+#9 [bun 1/1] FROM docker.io/oven/bun:1.4.4-alpine@sha256:4cf82f5686b196504fe119db3fcd9185b191f82ece82c40680e597228ec6070a
+#9 sha256:18e597b6ea7684a135c6ae4f7f53f1fc70ad61759938b2340d19758cea068e3d 1.05MB / 4.06MB 2.0s
+#9 sha256:18e597b6ea7684a135c6ae4f7f53f1fc70ad61759938b2340d19758cea068e3d 2.10MB / 4.06MB 3.0s
+#9 sha256:18e597b6ea7684a135c6ae4f7f53f1fc70ad61759938b2340d19758cea068e3d 3.15MB / 4.06MB 3.6s
+#9 sha256:18e597b6ea7684a135c6ae4f7f53f1fc70ad61759938b2340d19758cea068e3d 4.06MB / 4.06MB 3.7s done
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 3.15MB / 49.87MB 3.3s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 6.29MB / 49.87MB 4.4s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 9.44MB / 49.87MB 5.1s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 12.58MB / 49.87MB 5.9s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 15.73MB / 49.87MB 6.2s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 18.87MB / 49.87MB 6.5s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 22.02MB / 49.87MB 6.8s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 25.17MB / 49.87MB 7.2s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 28.31MB / 49.87MB 7.5s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 31.46MB / 49.87MB 8.0s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 34.60MB / 49.87MB 8.3s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 37.75MB / 49.87MB 8.7s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 40.73MB / 49.87MB 9.0s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 44.04MB / 49.87MB 9.6s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 47.19MB / 49.87MB 10.1s
+#9 sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 49.87MB / 49.87MB 10.4s done
+#9 extracting sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832
+#9 extracting sha256:3d75fc14499ef69472cb34bee94a30cd036408bb47ce440dd7fc13fb09351832 0.3s done
+#9 DONE 11.4s
+
+#9 [bun 1/1] FROM docker.io/oven/bun:1.4.4-alpine@sha256:4cf82f5686b196504fe119db3fcd9185b191f82ece82c40680e597228ec6070a
+#9 extracting sha256:7d504ae6246b16207e17df8bad721bd8f9a9978dbb67337f42ece7f8cf7623ff done
+#9 extracting sha256:4521b072a3f36cbc11a3bd089ee6f7cb6735c7fb4faec2b773ad0ce0720dae7b done
+#9 extracting sha256:18e597b6ea7684a135c6ae4f7f53f1fc70ad61759938b2340d19758cea068e3d 0.0s done
+#9 extracting sha256:822bb4e75a01684f401a98b1cebdaadfa6a8a7ef459f010112c5151ae0c9d9af done
+#9 DONE 11.4s
+
+#16 [builder 2/7] COPY --from=bun /usr/local/bin/bun /usr/local/bin/bun
+#16 DONE 0.2s
+
+#17 [builder 3/7] COPY . .
+#17 DONE 0.6s
+
+#18 [builder 4/7] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#18 DONE 0.0s
+
+#19 [builder 5/7] RUN node /tmp/recall-enable-maps.cjs
+#19 0.174 Enabled production browser maps in apps/web/next.config.mjs
+#19 0.174 Enabled production browser maps in apps/web/next.config.mjs
+#19 DONE 0.2s
+
+#20 [builder 6/7] RUN --mount=type=cache,id=bun-1.4.4,target=/root/.bun/install/cache bun install --frozen-lockfile
+#20 0.119 bun install v1.4.4 (38afee6c8)
+#20 105.7 
+#20 105.7 + @biomejs/biome@2.2.0
+#20 105.7 + @clack/prompts@0.10.1
+#20 105.7 + @effect/language-service@0.44.1
+#20 105.7 + dotenv-cli@11.0.0
+#20 105.7 + mysql2@3.24.6
+#20 105.7 + react@19.2.0
+#20 105.7 + react-dom@19.2.0
+#20 105.7 + sharp@0.35.5
+#20 105.7 + tsc-rs@0.6.0
+#20 105.7 + tsdown@0.15.12
+#20 105.7 + turbo@2.11.10
+#20 105.7 + typescript@5.9.3
+#20 105.7 
+#20 105.7 2587 packages installed [105.61s]
+#20 DONE 106.0s
+
+#21 [builder 7/7] RUN bun run build:web
+#21 0.725 $ turbo run build:web
+#21 0.747 
+#21 0.747 Attention:
+#21 0.747 Turborepo now collects completely anonymous telemetry regarding usage.
+#21 0.747 This information is used to shape the Turborepo roadmap and prioritize features.
+#21 0.747 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#21 0.747 https://turborepo.dev/docs/telemetry
+#21 0.747 
+#21 0.821 
+#21 0.821    • turbo 2.11.10
+#21 0.821    • Packages in scope: @cap/chrome-extension, @cap/database, @cap/desktop, @cap/discord-bot, @cap/env, @cap/infra, @cap/local-docker, @cap/media-server, @cap/mobile, @cap/recorder-core, @cap/render-farm, @cap/sdk-embed, @cap/sdk-recorder, @cap/status, @cap/ui, @cap/utils, @cap/web, @cap/web-api-contract, @cap/web-api-contract-effect, @cap/web-backend, @cap/web-domain, config, tsconfig
+#21 0.821    • Running build:web in 23 packages
+#21 0.821    • Remote caching disabled
+#21 0.821 
+#21 0.910 @cap/web-domain:build: cache miss, executing 226d32743df7a220
+#21 0.910 @cap/env:build: cache miss, executing 6ad62c6c44625bf0
+#21 0.913 @cap/web-domain:build: $ tsdown
+#21 0.913 @cap/env:build: $ tsdown
+#21 0.956 @cap/env:build: ℹ tsdown v0.15.12 powered by rolldown v1.0.0-beta.45
+#21 0.957 @cap/web-domain:build: ℹ tsdown v0.15.12 powered by rolldown v1.0.0-beta.45
+#21 1.000 @cap/env:build: ℹ Using tsdown config: /app/packages/env/tsdown.config.ts
+#21 1.000 @cap/web-domain:build: ℹ Using tsdown config: /app/packages/web-domain/tsdown.config.ts
+#21 1.003 @cap/env:build: ℹ entry: index.ts
+#21 1.003 @cap/env:build: ℹ tsconfig: tsconfig.json
+#21 1.003 @cap/env:build: ℹ Build start
+#21 1.004 @cap/web-domain:build: ℹ entry: src/index.ts
+#21 1.004 @cap/web-domain:build: ℹ tsconfig: tsconfig.json
+#21 1.004 @cap/web-domain:build: ℹ Build start
+#21 1.019 @cap/env:build: ℹ dist/index.js  8.62 kB │ gzip: 2.83 kB
+#21 1.019 @cap/env:build: ℹ 1 files, total: 8.62 kB
+#21 1.019 @cap/env:build: ✔ Build complete in 15ms
+#21 1.025 @cap/utils:build: cache miss, executing 7a7a3ae832dcfa35
+#21 1.026 @cap/utils:build: $ tsdown
+#21 1.026 @cap/web-domain:build: ℹ dist/index.js  130.36 kB │ gzip: 21.13 kB
+#21 1.026 @cap/web-domain:build: ℹ 1 files, total: 130.36 kB
+#21 1.027 @cap/web-domain:build: ✔ Build complete in 23ms
+#21 1.067 @cap/utils:build: ℹ tsdown v0.15.12 powered by rolldown v1.0.0-beta.45
+#21 1.096 @cap/utils:build: ℹ Using tsdown config: /app/packages/utils/tsdown.config.ts
+#21 1.099 @cap/utils:build: ℹ entry: src/index.ts
+#21 1.100 @cap/utils:build: ℹ target: node20.0.0
+#21 1.101 @cap/utils:build: ℹ tsconfig: tsconfig.json
+#21 1.101 @cap/utils:build: ℹ Build start
+#21 1.116 @cap/utils:build: ℹ dist/index.js  5.80 kB │ gzip: 2.06 kB
+#21 1.116 @cap/utils:build: ℹ 1 files, total: 5.80 kB
+#21 1.116 @cap/utils:build: ✔ Build complete in 15ms
+#21 1.121 @cap/database:build: cache miss, executing 03cfde35dce88b28
+#21 1.122 @cap/database:build: $ tsdown
+#21 1.156 @cap/database:build: ℹ tsdown v0.15.12 powered by rolldown v1.0.0-beta.45
+#21 1.185 @cap/database:build: ℹ Using tsdown config: /app/packages/database/tsdown.config.ts
+#21 1.190 @cap/database:build: ℹ entry: crypto.ts, helpers.ts, index.ts, migrate.ts, pro-seat-subscription.ts, referrals.ts, schema.ts, video-sharing-default.ts, auth/auth-options.ts, auth/disposable-signup.ts, auth/domain-utils.ts, auth/request-site.ts, auth/session.ts, auth/sso-state.ts, auth/sso.ts, loops/activation.ts, loops/client.ts, loops/customer-copy.ts, loops/experiment.ts, loops/health.ts, loops/jobs.ts, loops/lifecycle.ts, loops/profile.ts, loops/queue.ts, loops/sources.ts, loops/sql.ts, loops/sync-policy.ts, loops/worker.ts, types/index.ts
+#21 1.193 @cap/database:build: ℹ target: node20.0.0
+#21 1.193 @cap/database:build: ℹ tsconfig: tsconfig.json
+#21 1.193 @cap/database:build: ℹ Build start
+#21 1.254 @cap/database:build: ℹ dist/loops/worker.js                        11.58 kB │ gzip:  3.74 kB
+#21 1.254 @cap/database:build: ℹ dist/migrate.js                              5.88 kB │ gzip:  1.68 kB
+#21 1.254 @cap/database:build: ℹ dist/crypto.js                               4.48 kB │ gzip:  1.36 kB
+#21 1.254 @cap/database:build: ℹ dist/schema.js                               3.77 kB │ gzip:  0.93 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/health.js                         1.74 kB │ gzip:  0.83 kB
+#21 1.254 @cap/database:build: ℹ dist/auth/session.js                         1.30 kB │ gzip:  0.62 kB
+#21 1.254 @cap/database:build: ℹ dist/auth/request-site.js                    1.06 kB │ gzip:  0.51 kB
+#21 1.254 @cap/database:build: ℹ dist/pro-seat-subscription.js                1.02 kB │ gzip:  0.46 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/customer-copy.js                  0.88 kB │ gzip:  0.45 kB
+#21 1.254 @cap/database:build: ℹ dist/video-sharing-default.js                0.78 kB │ gzip:  0.43 kB
+#21 1.254 @cap/database:build: ℹ dist/auth/auth-options.js                    0.59 kB │ gzip:  0.32 kB
+#21 1.254 @cap/database:build: ℹ dist/auth/sso.js                             0.49 kB │ gzip:  0.27 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/sources.js                        0.45 kB │ gzip:  0.23 kB
+#21 1.254 @cap/database:build: ℹ dist/referrals.js                            0.42 kB │ gzip:  0.23 kB
+#21 1.254 @cap/database:build: ℹ dist/auth/domain-utils.js                    0.32 kB │ gzip:  0.17 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/lifecycle.js                      0.32 kB │ gzip:  0.20 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/jobs.js                           0.29 kB │ gzip:  0.17 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/activation.js                     0.28 kB │ gzip:  0.14 kB
+#21 1.254 @cap/database:build: ℹ dist/auth/sso-state.js                       0.28 kB │ gzip:  0.17 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/experiment.js                     0.26 kB │ gzip:  0.15 kB
+#21 1.254 @cap/database:build: ℹ dist/auth/disposable-signup.js               0.22 kB │ gzip:  0.15 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/sync-policy.js                    0.22 kB │ gzip:  0.15 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/profile.js                        0.21 kB │ gzip:  0.15 kB
+#21 1.254 @cap/database:build: ℹ dist/helpers.js                              0.21 kB │ gzip:  0.13 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/queue.js                          0.16 kB │ gzip:  0.13 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/client.js                         0.14 kB │ gzip:  0.11 kB
+#21 1.254 @cap/database:build: ℹ dist/index.js                                0.10 kB │ gzip:  0.10 kB
+#21 1.254 @cap/database:build: ℹ dist/loops/sql.js                            0.08 kB │ gzip:  0.08 kB
+#21 1.254 @cap/database:build: ℹ dist/types/index.js                          0.01 kB │ gzip:  0.03 kB
+#21 1.254 @cap/database:build: ℹ dist/stripe-customer-DC5XHBZQ.js           239.64 kB │ gzip: 48.80 kB
+#21 1.254 @cap/database:build: ℹ dist/disposable-email-domains-BcsJdYaS.js  187.77 kB │ gzip: 59.24 kB
+#21 1.254 @cap/database:build: ℹ dist/schema-pXpEgbXd.js                     55.87 kB │ gzip:  9.22 kB
+#21 1.254 @cap/database:build: ℹ dist/react-DWMVVcJR.js                      53.66 kB │ gzip: 12.36 kB
+#21 1.254 @cap/database:build: ℹ dist/auth-options-DR1Zo9NL.js               26.89 kB │ gzip:  7.03 kB
+#21 1.254 @cap/database:build: ℹ dist/otp-email-D1JZdPrg.js                  16.11 kB │ gzip:  4.50 kB
+#21 1.254 @cap/database:build: ℹ dist/sso-6vuKvzvS.js                         7.39 kB │ gzip:  2.34 kB
+#21 1.254 @cap/database:build: ℹ dist/sources-BzWx5Ni7.js                     6.20 kB │ gzip:  1.96 kB
+#21 1.254 @cap/database:build: ℹ dist/profile-BuFmCvww.js                     4.80 kB │ gzip:  1.82 kB
+#21 1.254 @cap/database:build: ℹ dist/disposable-signup-dj3VhSbT.js           4.29 kB │ gzip:  1.75 kB
+#21 1.254 @cap/database:build: ℹ dist/referrals-C4P9Uqin.js                   4.17 kB │ gzip:  1.67 kB
+#21 1.254 @cap/database:build: ℹ dist/lifecycle-CMHQp9M8.js                   4.12 kB │ gzip:  1.42 kB
+#21 1.254 @cap/database:build: ℹ dist/sso-state-BsebRfp2.js                   3.15 kB │ gzip:  1.23 kB
+#21 1.254 @cap/database:build: ℹ dist/jobs-fdIDObkL.js                        3.06 kB │ gzip:  1.03 kB
+#21 1.254 @cap/database:build: ℹ dist/domain-utils-C9sPa5mg.js                3.04 kB │ gzip:  1.21 kB
+#21 1.254 @cap/database:build: ℹ dist/activation-DhvhSe0_.js                  2.14 kB │ gzip:  0.75 kB
+#21 1.254 @cap/database:build: ℹ dist/sync-policy-CQl4L8HD.js                 1.96 kB │ gzip:  0.75 kB
+#21 1.254 @cap/database:build: ℹ dist/subscriptions-Bnc_afte.js               1.63 kB │ gzip:  0.72 kB
+#21 1.254 @cap/database:build: ℹ dist/chunk-C3Lxiq5Q.js                       1.46 kB │ gzip:  0.69 kB
+#21 1.254 @cap/database:build: ℹ dist/client-Cga40lzk.js                      0.77 kB │ gzip:  0.48 kB
+#21 1.254 @cap/database:build: ℹ dist/queue-nsfFAEZA.js                       0.70 kB │ gzip:  0.39 kB
+#21 1.254 @cap/database:build: ℹ dist/database-4pgZUr9O.js                    0.68 kB │ gzip:  0.40 kB
+#21 1.254 @cap/database:build: ℹ dist/experiment-c2ShxBKe.js                  0.64 kB │ gzip:  0.39 kB
+#21 1.254 @cap/database:build: ℹ dist/helpers-BsFTV6LR.js                     0.51 kB │ gzip:  0.26 kB
+#21 1.254 @cap/database:build: ℹ dist/sql-A8kpYm5-.js                         0.16 kB │ gzip:  0.15 kB
+#21 1.254 @cap/database:build: ℹ 54 files, total: 668.36 kB
+#21 1.258 @cap/database:build: ✔ Build complete in 65ms
+#21 1.268 @cap/web-backend:build: cache miss, executing 112cb84dde29590a
+#21 1.269 @cap/web-backend:build: $ tsdown
+#21 1.307 @cap/web-backend:build: ℹ tsdown v0.15.12 powered by rolldown v1.0.0-beta.45
+#21 1.339 @cap/web-backend:build: ℹ Using tsdown config: /app/packages/web-backend/tsdown.config.ts
+#21 1.342 @cap/web-backend:build: ℹ entry: src/index.ts
+#21 1.343 @cap/web-backend:build: ℹ tsconfig: tsconfig.json
+#21 1.343 @cap/web-backend:build: ℹ Build start
+#21 1.371 @cap/web-backend:build: ℹ dist/index.js  237.93 kB │ gzip: 49.50 kB
+#21 1.371 @cap/web-backend:build: ℹ 1 files, total: 237.93 kB
+#21 1.372 @cap/web-backend:build: ✔ Build complete in 28ms
+#21 1.379 @cap/web:build:web: cache miss, executing 90bcbd3c1a551f8b
+#21 1.382 @cap/web:build:web: $ next build --turbopack
+#21 1.567 @cap/web:build:web: ▲ Next.js 16.4.5 (Turbopack)
+#21 3.821 @cap/web:build:web: ⚠ Serde warning for classes "GroqChatLanguageModel", "GroqTranscriptionModel", "OpenAICompatibleChatLanguageModel", "OpenAICompatibleCompletionLanguageModel", "OpenAICompatibleEmbeddingModel", "OpenAICompatibleImageModel", "AnthropicLanguageModel", "AnthropicMessagesBatchLanguageModel", "OpenAIChatLanguageModel", "OpenAICompletionLanguageModel", "OpenAIEmbeddingModel", "OpenAIImageModel", "OpenAIResponsesBatchLanguageModel", "OpenAIResponsesLanguageModel", "OpenAISpeechModel", "OpenAISpeechTranslationModel", "OpenAITranscriptionModel", "GatewayEmbeddingModel", "GatewayImageModel", "GatewayLanguageModel": No class registration IIFE was generated. Ensure WORKFLOW_SERIALIZE and WORKFLOW_DESERIALIZE are defined as static methods inside the class body using computed property syntax: static [WORKFLOW_SERIALIZE](...) { ... }
+#21 4.134 @cap/web:build:web: workflows build complete (101 steps, 13 workflows, time 1.5s)
+#21 4.167 @cap/web:build:web: ✓ Running next.config.mjs took 2.6s
+#21 4.170 @cap/web:build:web: Attention: Next.js now collects completely anonymous telemetry regarding usage.
+#21 4.170 @cap/web:build:web: This information is used to shape Next.js' roadmap and prioritize features.
+#21 4.170 @cap/web:build:web: You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#21 4.170 @cap/web:build:web: https://nextjs.org/telemetry
+#21 4.170 @cap/web:build:web: 
+#21 4.194 @cap/web:build:web: - Experiments (use with caution):
+#21 4.194 @cap/web:build:web:   · clientTraceMetadata
+#21 4.194 @cap/web:build:web:   · optimizePackageImports
+#21 4.194 @cap/web:build:web: 
+#21 4.214 @cap/web:build:web:   Creating an optimized production build ...
+#21 7.921 @cap/web:build:web:   [31mERROR[0m  [31mfailed to read input source map: failed to find input source map file "index.js.map" in "node_modules/@ai-sdk/anthropic/dist/index.js" file as either "node_modules/@ai-sdk/anthropic/dist/index.js.map" or with appended .map[0m
+#21 7.934 @cap/web:build:web:     [2;3mat[0m crates/swc/src/lib.rs:398
+#21 7.948 @cap/web:build:web: 
+#21 7.991 @cap/web:build:web:   [31mERROR[0m  [31mfailed to read input source map: failed to find input source map file "index.js.map" in "node_modules/@ai-sdk/provider-utils/dist/index.js" file as either "node_modules/@ai-sdk/provider-utils/dist/index.js.map" or with appended .map[0m
+#21 7.992 @cap/web:build:web:     [2;3mat[0m crates/swc/src/lib.rs:398
+#21 7.997 @cap/web:build:web: 
+#21 9.070 @cap/web:build:web: 
+#21 9.070 @cap/web:build:web: warn - The class `duration-[380ms]` is ambiguous and matches multiple utilities.
+#21 9.070 @cap/web:build:web: warn - If this is content and not a class, replace it with `duration-&lsqb;380ms&rsqb;` to silence this warning.
+#21 9.070 @cap/web:build:web: 
+#21 9.070 @cap/web:build:web: warn - The class `duration-[400ms]` is ambiguous and matches multiple utilities.
+#21 9.070 @cap/web:build:web: warn - If this is content and not a class, replace it with `duration-&lsqb;400ms&rsqb;` to silence this warning.
+#21 9.070 @cap/web:build:web: 
+#21 9.070 @cap/web:build:web: warn - The class `duration-[420ms]` is ambiguous and matches multiple utilities.
+#21 9.070 @cap/web:build:web: warn - If this is content and not a class, replace it with `duration-&lsqb;420ms&rsqb;` to silence this warning.
+#21 9.070 @cap/web:build:web: 
+#21 9.070 @cap/web:build:web: warn - The class `duration-[480ms]` is ambiguous and matches multiple utilities.
+#21 9.070 @cap/web:build:web: warn - If this is content and not a class, replace it with `duration-&lsqb;480ms&rsqb;` to silence this warning.
+#21 9.070 @cap/web:build:web: 
+#21 9.070 @cap/web:build:web: warn - The class `ease-[cubic-bezier(0.16,1,0.3,1)]` is ambiguous and matches multiple utilities.
+#21 9.070 @cap/web:build:web: warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.16,1,0.3,1)&rsqb;` to silence this warning.
+#21 9.070 @cap/web:build:web: 
+#21 9.070 @cap/web:build:web: warn - The class `ease-[cubic-bezier(0.22,1,0.36,1)]` is ambiguous and matches multiple utilities.
+#21 9.070 @cap/web:build:web: warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.22,1,0.36,1)&rsqb;` to silence this warning.
+#21 9.070 @cap/web:build:web: 
+#21 9.070 @cap/web:build:web: warn - The class `ease-[cubic-bezier(0.4,0,0.2,1)]` is ambiguous and matches multiple utilities.
+#21 9.070 @cap/web:build:web: warn - If this is content and not a class, replace it with `ease-&lsqb;cubic-bezier(0.4,0,0.2,1)&rsqb;` to silence this warning.
+#21 10.94 @cap/web:build:web:   [31mERROR[0m  [31mfailed to read input source map: failed to find input source map file "index.js.map" in "node_modules/@ai-sdk/anthropic/dist/index.js" file as either "node_modules/@ai-sdk/anthropic/dist/index.js.map" or with appended .map[0m
+#21 10.94 @cap/web:build:web:     [2;3mat[0m crates/swc/src/lib.rs:398
+#21 10.94 @cap/web:build:web: 
+#21 10.95 @cap/web:build:web:   [31mERROR[0m  [31mfailed to read input source map: failed to find input source map file "index.js.map" in "node_modules/@ai-sdk/provider-utils/dist/index.js" file as either "node_modules/@ai-sdk/provider-utils/dist/index.js.map" or with appended .map[0m
+#21 10.95 @cap/web:build:web:     [2;3mat[0m crates/swc/src/lib.rs:398
+#21 10.95 @cap/web:build:web: 
+#21 25.02 @cap/web:build:web: ✓ Compiled successfully in 20.8s
+#21 25.02 @cap/web:build:web:   Running next.config.js provided runAfterProductionCompile ...
+#21 25.47 @cap/web:build:web: ✓ Completed runAfterProductionCompile in 444ms
+#21 25.48 @cap/web:build:web:   Skipping validation of types
+#21 25.50 @cap/web:build:web:   Finished TypeScript config validation in 17ms ...
+#21 25.51 @cap/web:build:web:   Collecting page data using 7 workers ...
+#21 26.51 @cap/web:build:web: ⚠ The Edge Runtime is deprecated. You can use the "nodejs" runtime instead. Learn more: https://nextjs.org/docs/messages/edge-runtime-deprecated
+#21 28.38 @cap/web:build:web: ⚠ Using edge runtime on a page currently disables static generation for that page
+#21 30.20 @cap/web:build:web:   Generating static pages using 7 workers (0/116) ...
+#21 30.62 @cap/web:build:web:   Generating static pages using 7 workers (29/116) 
+#21 30.66 @cap/web:build:web: Getting MDX data from: /app/apps/web/content/blog
+#21 30.67 @cap/web:build:web: Scanning directory: /app/apps/web/content/blog
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-is-hipaa-compliant.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-is-hipaa-compliant.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-public-beta-launch.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-public-beta-launch.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-v03-launch.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v03-launch.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-v05.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v05.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-v06.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v06.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'handling-a-stripe-payment-attack.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/handling-a-stripe-payment-attack.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'rebuilding-cap-in-gpui.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/rebuilding-cap-in-gpui.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'september-23-outage-deep-dive.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/september-23-outage-deep-dive.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'soc2-type-ii-iso-27001.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/soc2-type-ii-iso-27001.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'timeline-view.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/timeline-view.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found files: [
+#21 30.67 @cap/web:build:web:   'cap-is-hipaa-compliant.mdx',
+#21 30.67 @cap/web:build:web:   'cap-public-beta-launch.mdx',
+#21 30.67 @cap/web:build:web:   'cap-v03-launch.mdx',
+#21 30.67 @cap/web:build:web:   'cap-v05.mdx',
+#21 30.67 @cap/web:build:web:   'cap-v06.mdx',
+#21 30.67 @cap/web:build:web:   'handling-a-stripe-payment-attack.mdx',
+#21 30.67 @cap/web:build:web:   'rebuilding-cap-in-gpui.mdx',
+#21 30.67 @cap/web:build:web:   'september-23-outage-deep-dive.mdx',
+#21 30.67 @cap/web:build:web:   'soc2-type-ii-iso-27001.mdx',
+#21 30.67 @cap/web:build:web:   'timeline-view.mdx'
+#21 30.67 @cap/web:build:web: ]
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-is-hipaa-compliant.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-is-hipaa-compliant.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-is-hipaa-compliant.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'cap-is-hipaa-compliant'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-public-beta-launch.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-public-beta-launch.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-public-beta-launch.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'cap-public-beta-launch'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-v03-launch.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v03-launch.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'cap-v03-launch.mdx', slug: 'cap-v03-launch' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-v05.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v05.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'cap-v05.mdx', slug: 'cap-v05' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'cap-v06.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v06.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'cap-v06.mdx', slug: 'cap-v06' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'handling-a-stripe-payment-attack.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/handling-a-stripe-payment-attack.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'handling-a-stripe-payment-attack.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'handling-a-stripe-payment-attack'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'rebuilding-cap-in-gpui.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/rebuilding-cap-in-gpui.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'rebuilding-cap-in-gpui.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'rebuilding-cap-in-gpui'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'september-23-outage-deep-dive.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/september-23-outage-deep-dive.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'september-23-outage-deep-dive.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'september-23-outage-deep-dive'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'soc2-type-ii-iso-27001.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/soc2-type-ii-iso-27001.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'soc2-type-ii-iso-27001.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'soc2-type-ii-iso-27001'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'timeline-view.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/timeline-view.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'timeline-view.mdx', slug: 'timeline-view' }
+#21 30.67 @cap/web:build:web: Getting MDX data from: /app/apps/web/content/docs
+#21 30.67 @cap/web:build:web: Scanning directory: /app/apps/web/content/docs
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents/connectors.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents/connectors.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents/safety.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents/safety.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents/setup.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents/setup.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents/workflows.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents/workflows.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'api/rest-api.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/api/rest-api.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'api/webhooks.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/api/webhooks.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'commercial-license.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/commercial-license.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'installation.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/installation.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'introduction.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/introduction.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'migrating-to-cap.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/migrating-to-cap.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'quickstart.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/quickstart.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/camera-and-mic.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/recording/camera-and-mic.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/instant-mode.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/recording/instant-mode.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/keyboard-shortcuts.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/recording/keyboard-shortcuts.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/studio-mode.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/recording/studio-mode.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 's3-config/aws-s3.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/s3-config/aws-s3.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 's3-config/cloudflare-r2.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/s3-config/cloudflare-r2.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 's3-config.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/s3-config.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'self-hosting.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/self-hosting.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/analytics.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/sharing/analytics.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/comments.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/sharing/comments.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/embeds.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/sharing/embeds.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/share-a-cap.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/sharing/share-a-cap.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'teams/google-drive.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/teams/google-drive.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found MDX file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'teams.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/teams.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Found files: [
+#21 30.67 @cap/web:build:web:   'agents/connectors.mdx',
+#21 30.67 @cap/web:build:web:   'agents/safety.mdx',
+#21 30.67 @cap/web:build:web:   'agents/setup.mdx',
+#21 30.67 @cap/web:build:web:   'agents/workflows.mdx',
+#21 30.67 @cap/web:build:web:   'agents.mdx',
+#21 30.67 @cap/web:build:web:   'api/rest-api.mdx',
+#21 30.67 @cap/web:build:web:   'api/webhooks.mdx',
+#21 30.67 @cap/web:build:web:   'commercial-license.mdx',
+#21 30.67 @cap/web:build:web:   'installation.mdx',
+#21 30.67 @cap/web:build:web:   'introduction.mdx',
+#21 30.67 @cap/web:build:web:   'migrating-to-cap.mdx',
+#21 30.67 @cap/web:build:web:   'quickstart.mdx',
+#21 30.67 @cap/web:build:web:   'recording/camera-and-mic.mdx',
+#21 30.67 @cap/web:build:web:   'recording/instant-mode.mdx',
+#21 30.67 @cap/web:build:web:   'recording/keyboard-shortcuts.mdx',
+#21 30.67 @cap/web:build:web:   'recording/studio-mode.mdx',
+#21 30.67 @cap/web:build:web:   's3-config/aws-s3.mdx',
+#21 30.67 @cap/web:build:web:   's3-config/cloudflare-r2.mdx',
+#21 30.67 @cap/web:build:web:   's3-config.mdx',
+#21 30.67 @cap/web:build:web:   'self-hosting.mdx',
+#21 30.67 @cap/web:build:web:   'sharing/analytics.mdx',
+#21 30.67 @cap/web:build:web:   'sharing/comments.mdx',
+#21 30.67 @cap/web:build:web:   'sharing/embeds.mdx',
+#21 30.67 @cap/web:build:web:   'sharing/share-a-cap.mdx',
+#21 30.67 @cap/web:build:web:   'teams/google-drive.mdx',
+#21 30.67 @cap/web:build:web:   'teams.mdx'
+#21 30.67 @cap/web:build:web: ]
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents/connectors.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents/connectors.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'agents/connectors.mdx', slug: 'agents/connectors' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents/safety.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents/safety.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'agents/safety.mdx', slug: 'agents/safety' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents/setup.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents/setup.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'agents/setup.mdx', slug: 'agents/setup' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents/workflows.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents/workflows.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'agents/workflows.mdx', slug: 'agents/workflows' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'agents.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/agents.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'agents.mdx', slug: 'agents' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'api/rest-api.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/api/rest-api.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'api/rest-api.mdx', slug: 'api/rest-api' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'api/webhooks.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/api/webhooks.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'api/webhooks.mdx', slug: 'api/webhooks' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'commercial-license.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/commercial-license.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'commercial-license.mdx', slug: 'commercial-license' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'installation.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/installation.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'installation.mdx', slug: 'installation' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'introduction.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/introduction.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'introduction.mdx', slug: 'introduction' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'migrating-to-cap.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/migrating-to-cap.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'migrating-to-cap.mdx', slug: 'migrating-to-cap' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'quickstart.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/quickstart.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'quickstart.mdx', slug: 'quickstart' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/camera-and-mic.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/recording/camera-and-mic.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/camera-and-mic.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'recording/camera-and-mic'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/instant-mode.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/recording/instant-mode.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/instant-mode.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'recording/instant-mode'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/keyboard-shortcuts.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/recording/keyboard-shortcuts.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/keyboard-shortcuts.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'recording/keyboard-shortcuts'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/studio-mode.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/recording/studio-mode.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'recording/studio-mode.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'recording/studio-mode'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 's3-config/aws-s3.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/s3-config/aws-s3.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 's3-config/aws-s3.mdx', slug: 's3-config/aws-s3' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 's3-config/cloudflare-r2.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/s3-config/cloudflare-r2.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 's3-config/cloudflare-r2.mdx',
+#21 30.67 @cap/web:build:web:   slug: 's3-config/cloudflare-r2'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 's3-config.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/s3-config.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 's3-config.mdx', slug: 's3-config' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'self-hosting.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/self-hosting.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'self-hosting.mdx', slug: 'self-hosting' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/analytics.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/sharing/analytics.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'sharing/analytics.mdx', slug: 'sharing/analytics' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/comments.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/sharing/comments.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'sharing/comments.mdx', slug: 'sharing/comments' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/embeds.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/sharing/embeds.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'sharing/embeds.mdx', slug: 'sharing/embeds' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/share-a-cap.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/sharing/share-a-cap.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: {
+#21 30.67 @cap/web:build:web:   relativePath: 'sharing/share-a-cap.mdx',
+#21 30.67 @cap/web:build:web:   slug: 'sharing/share-a-cap'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'teams/google-drive.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/teams/google-drive.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'teams/google-drive.mdx', slug: 'teams/google-drive' }
+#21 30.67 @cap/web:build:web: Processing file: {
+#21 30.67 @cap/web:build:web:   relativePath: 'teams.mdx',
+#21 30.67 @cap/web:build:web:   fullPath: '/app/apps/web/content/docs/teams.mdx'
+#21 30.67 @cap/web:build:web: }
+#21 30.67 @cap/web:build:web: Generated slug: { relativePath: 'teams.mdx', slug: 'teams' }
+#21 30.85 @cap/web:build:web: Getting MDX data from: /app/apps/web/content/blog
+#21 30.85 @cap/web:build:web: Scanning directory: /app/apps/web/content/blog
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'cap-is-hipaa-compliant.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-is-hipaa-compliant.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'cap-public-beta-launch.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-public-beta-launch.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'cap-v03-launch.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v03-launch.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'cap-v05.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v05.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'cap-v06.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v06.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'handling-a-stripe-payment-attack.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/handling-a-stripe-payment-attack.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'rebuilding-cap-in-gpui.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/rebuilding-cap-in-gpui.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'september-23-outage-deep-dive.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/september-23-outage-deep-dive.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'soc2-type-ii-iso-27001.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/soc2-type-ii-iso-27001.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found MDX file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'timeline-view.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/timeline-view.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.85 @cap/web:build:web: Found files: [
+#21 30.85 @cap/web:build:web:   'cap-is-hipaa-compliant.mdx',
+#21 30.85 @cap/web:build:web:   'cap-public-beta-launch.mdx',
+#21 30.85 @cap/web:build:web:   'cap-v03-launch.mdx',
+#21 30.85 @cap/web:build:web:   'cap-v05.mdx',
+#21 30.85 @cap/web:build:web:   'cap-v06.mdx',
+#21 30.85 @cap/web:build:web:   'handling-a-stripe-payment-attack.mdx',
+#21 30.85 @cap/web:build:web:   'rebuilding-cap-in-gpui.mdx',
+#21 30.85 @cap/web:build:web:   'september-23-outage-deep-dive.mdx',
+#21 30.85 @cap/web:build:web:   'soc2-type-ii-iso-27001.mdx',
+#21 30.85 @cap/web:build:web:   'timeline-view.mdx'
+#21 30.85 @cap/web:build:web: ]
+#21 30.85 @cap/web:build:web: Processing file: {
+#21 30.85 @cap/web:build:web:   relativePath: 'cap-is-hipaa-compliant.mdx',
+#21 30.85 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-is-hipaa-compliant.mdx'
+#21 30.85 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: {
+#21 30.86 @cap/web:build:web:   relativePath: 'cap-is-hipaa-compliant.mdx',
+#21 30.86 @cap/web:build:web:   slug: 'cap-is-hipaa-compliant'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'cap-public-beta-launch.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-public-beta-launch.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: {
+#21 30.86 @cap/web:build:web:   relativePath: 'cap-public-beta-launch.mdx',
+#21 30.86 @cap/web:build:web:   slug: 'cap-public-beta-launch'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'cap-v03-launch.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v03-launch.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: { relativePath: 'cap-v03-launch.mdx', slug: 'cap-v03-launch' }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'cap-v05.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v05.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: { relativePath: 'cap-v05.mdx', slug: 'cap-v05' }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'cap-v06.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/cap-v06.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: { relativePath: 'cap-v06.mdx', slug: 'cap-v06' }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'handling-a-stripe-payment-attack.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/handling-a-stripe-payment-attack.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: {
+#21 30.86 @cap/web:build:web:   relativePath: 'handling-a-stripe-payment-attack.mdx',
+#21 30.86 @cap/web:build:web:   slug: 'handling-a-stripe-payment-attack'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'rebuilding-cap-in-gpui.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/rebuilding-cap-in-gpui.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: {
+#21 30.86 @cap/web:build:web:   relativePath: 'rebuilding-cap-in-gpui.mdx',
+#21 30.86 @cap/web:build:web:   slug: 'rebuilding-cap-in-gpui'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'september-23-outage-deep-dive.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/september-23-outage-deep-dive.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: {
+#21 30.86 @cap/web:build:web:   relativePath: 'september-23-outage-deep-dive.mdx',
+#21 30.86 @cap/web:build:web:   slug: 'september-23-outage-deep-dive'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'soc2-type-ii-iso-27001.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/soc2-type-ii-iso-27001.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: {
+#21 30.86 @cap/web:build:web:   relativePath: 'soc2-type-ii-iso-27001.mdx',
+#21 30.86 @cap/web:build:web:   slug: 'soc2-type-ii-iso-27001'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Processing file: {
+#21 30.86 @cap/web:build:web:   relativePath: 'timeline-view.mdx',
+#21 30.86 @cap/web:build:web:   fullPath: '/app/apps/web/content/blog/timeline-view.mdx'
+#21 30.86 @cap/web:build:web: }
+#21 30.86 @cap/web:build:web: Generated slug: { relativePath: 'timeline-view.mdx', slug: 'timeline-view' }
+#21 31.31 @cap/web:build:web:   Generating static pages using 7 workers (58/116) 
+#21 31.53 @cap/web:build:web:   Generating static pages using 7 workers (87/116) 
+#21 33.88 @cap/web:build:web: ✓ Generating static pages using 7 workers (116/116) in 3.7s
+#21 33.89 @cap/web:build:web:   Finalizing page optimization ...
+#21 34.66 @cap/web:build:web: 
+#21 34.66 @cap/web:build:web: Route (app)                                        Revalidate  Expire
+#21 34.66 @cap/web:build:web: ┌ ○ /                                                      2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /_not-found
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/api-catalog
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/mcp
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/mcp/server-card.json
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/oauth-authorization-server
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/oauth-protected-resource
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/oauth-protected-resource/api/mcp
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/workflow/v1/flow
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/workflow/v1/step
+#21 34.66 @cap/web:build:web: ├ ƒ /.well-known/workflow/v1/webhook/[token]
+#21 34.66 @cap/web:build:web: ├ ƒ /[slug]
+#21 34.66 @cap/web:build:web: ├ ○ /about                                                 2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /admin
+#21 34.66 @cap/web:build:web: ├ ○ /admin/rebuild-manifests
+#21 34.66 @cap/web:build:web: ├ ○ /admin/replace-video
+#21 34.66 @cap/web:build:web: ├ ○ /admin/reprocess-video
+#21 34.66 @cap/web:build:web: ├ ○ /admin/retry-recordings
+#21 34.66 @cap/web:build:web: ├ ○ /agents                                                2d      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /api/[[...route]]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/analytics
+#21 34.66 @cap/web:build:web: ├ ƒ /api/analytics/track
+#21 34.66 @cap/web:build:web: ├ ƒ /api/auth/[...nextauth]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/changelog
+#21 34.66 @cap/web:build:web: ├ ƒ /api/changelog/status
+#21 34.66 @cap/web:build:web: ├ ƒ /api/cron/cleanup-agent-api
+#21 34.66 @cap/web:build:web: ├ ƒ /api/cron/developer-storage
+#21 34.66 @cap/web:build:web: ├ ƒ /api/cron/developer-upload-cleanup
+#21 34.66 @cap/web:build:web: ├ ƒ /api/cron/finalize-stale-desktop-segments
+#21 34.66 @cap/web:build:web: ├ ƒ /api/cron/recover-failed-video-processing
+#21 34.66 @cap/web:build:web: ├ ƒ /api/cron/sync-loops
+#21 34.66 @cap/web:build:web: ├ ƒ /api/cron/sync-loops/health
+#21 34.66 @cap/web:build:web: ├ ƒ /api/currency
+#21 34.66 @cap/web:build:web: ├ ƒ /api/dashboard/analytics
+#21 34.66 @cap/web:build:web: ├ ƒ /api/desktop/[...route]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/dev-reset-transcript
+#21 34.66 @cap/web:build:web: ├ ƒ /api/developer/credits/checkout
+#21 34.66 @cap/web:build:web: ├ ƒ /api/developer/sdk/v1/[...route]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/developer/v1/[...route]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/docs/ask
+#21 34.66 @cap/web:build:web: ├ ƒ /api/download
+#21 34.66 @cap/web:build:web: ├ ƒ /api/erpc
+#21 34.66 @cap/web:build:web: ├ ƒ /api/integrations/slack/callback
+#21 34.66 @cap/web:build:web: ├ ƒ /api/integrations/slack/events
+#21 34.66 @cap/web:build:web: ├ ƒ /api/integrations/slack/install
+#21 34.66 @cap/web:build:web: ├ ƒ /api/internal/loom-imports/backfill
+#21 34.66 @cap/web:build:web: ├ ƒ /api/internal/loom-imports/csv
+#21 34.66 @cap/web:build:web: ├ ƒ /api/internal/loom-imports/reassign
+#21 34.66 @cap/web:build:web: ├ ƒ /api/internal/loom-imports/redrive
+#21 34.66 @cap/web:build:web: ├ ƒ /api/invite/accept
+#21 34.66 @cap/web:build:web: ├ ƒ /api/invite/decline
+#21 34.66 @cap/web:build:web: ├ ƒ /api/mcp
+#21 34.66 @cap/web:build:web: ├ ƒ /api/mcp/oauth/register
+#21 34.66 @cap/web:build:web: ├ ƒ /api/mcp/oauth/revoke
+#21 34.66 @cap/web:build:web: ├ ƒ /api/mcp/oauth/token
+#21 34.66 @cap/web:build:web: ├ ƒ /api/mobile/[...route]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/notifications
+#21 34.66 @cap/web:build:web: ├ ƒ /api/notifications/preferences
+#21 34.66 @cap/web:build:web: ├ ƒ /api/oembed
+#21 34.66 @cap/web:build:web: ├ ƒ /api/og
+#21 34.66 @cap/web:build:web: ├ ƒ /api/op/[...op]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/playlist
+#21 34.66 @cap/web:build:web: ├ ƒ /api/recording/prepare
+#21 34.66 @cap/web:build:web: ├ ƒ /api/releases/tauri/[version]/[target]/[arch]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/settings/billing/baa/download
+#21 34.66 @cap/web:build:web: ├ ƒ /api/settings/billing/guest-checkout
+#21 34.66 @cap/web:build:web: ├ ƒ /api/settings/billing/manage
+#21 34.66 @cap/web:build:web: ├ ƒ /api/settings/billing/subscribe
+#21 34.66 @cap/web:build:web: ├ ƒ /api/settings/billing/usage
+#21 34.66 @cap/web:build:web: ├ ƒ /api/settings/user/name
+#21 34.66 @cap/web:build:web: ├ ƒ /api/status
+#21 34.66 @cap/web:build:web: ├ ƒ /api/storage/object
+#21 34.66 @cap/web:build:web: ├ ƒ /api/thumbnail
+#21 34.66 @cap/web:build:web: ├ ƒ /api/tools/loom-download
+#21 34.66 @cap/web:build:web: ├ ƒ /api/upload/[...route]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/v1/[...route]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/video/ai
+#21 34.66 @cap/web:build:web: ├ ƒ /api/video/comment/delete
+#21 34.66 @cap/web:build:web: ├ ƒ /api/video/delete
+#21 34.66 @cap/web:build:web: ├ ƒ /api/video/domain-info
+#21 34.66 @cap/web:build:web: ├ ƒ /api/video/metadata
+#21 34.66 @cap/web:build:web: ├ ƒ /api/video/og
+#21 34.66 @cap/web:build:web: ├ ƒ /api/video/preview
+#21 34.66 @cap/web:build:web: ├ ƒ /api/video/transcribe/status
+#21 34.66 @cap/web:build:web: ├ ƒ /api/videos/[videoId]/retry-ai
+#21 34.66 @cap/web:build:web: ├ ƒ /api/videos/[videoId]/retry-transcription
+#21 34.66 @cap/web:build:web: ├ ƒ /api/webhooks/media-server/live-transcribe
+#21 34.66 @cap/web:build:web: ├ ƒ /api/webhooks/media-server/multipart/[action]
+#21 34.66 @cap/web:build:web: ├ ƒ /api/webhooks/media-server/progress
+#21 34.66 @cap/web:build:web: ├ ƒ /api/webhooks/stripe
+#21 34.66 @cap/web:build:web: ├ ƒ /async-video-code-reviews
+#21 34.66 @cap/web:build:web: ├ ƒ /best-screen-recorder
+#21 34.66 @cap/web:build:web: ├ ○ /blog                                                  2d      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /blog/[slug]
+#21 34.66 @cap/web:build:web: ├ ƒ /c
+#21 34.66 @cap/web:build:web: ├ ƒ /c/[id]
+#21 34.66 @cap/web:build:web: ├ ○ /changelog                                             2d      1y
+#21 34.66 @cap/web:build:web: ├   /changelog/[platform]
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/desktop                                   2d      1y
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/web                                       2d      1y
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/mobile                                    2d      1y
+#21 34.66 @cap/web:build:web: │ └ ● /changelog/extension                                 2d      1y
+#21 34.66 @cap/web:build:web: ├   /changelog/[platform]/page/[page]
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/desktop/page/1                            2d      1y
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/desktop/page/2                            2d      1y
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/desktop/page/3                            2d      1y
+#21 34.66 @cap/web:build:web: │ └ ● [+8 more paths]
+#21 34.66 @cap/web:build:web: ├   /changelog/page/[page]
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/page/1                                    2d      1y
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/page/2                                    2d      1y
+#21 34.66 @cap/web:build:web: │ ├ ● /changelog/page/3                                    2d      1y
+#21 34.66 @cap/web:build:web: │ └ ● [+6 more paths]
+#21 34.66 @cap/web:build:web: ├ ƒ /checkout
+#21 34.66 @cap/web:build:web: ├ ƒ /checkout/complete
+#21 34.66 @cap/web:build:web: ├ ƒ /cli/authorize
+#21 34.66 @cap/web:build:web: ├ ƒ /cli/complete
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/admin/loom-migrations
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/analytics
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/caps
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/caps/record
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/developers
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/developers/apps
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/developers/apps/[appId]/api-keys
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/developers/apps/[appId]/domains
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/developers/apps/[appId]/settings
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/developers/apps/[appId]/videos
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/developers/credits
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/developers/usage
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/folder/[id]
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/import
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/import/file
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/import/loom
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/migrations/loom
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/refer
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/account
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/notifications
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/organization
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/organization/billing
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/organization/content
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/organization/integrations
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/organization/members
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/organization/preferences
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/organization/security
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/settings/workspace
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/spaces/[spaceId]
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/spaces/[spaceId]/folder/[folderId]
+#21 34.66 @cap/web:build:web: ├ ƒ /dashboard/spaces/browse
+#21 34.66 @cap/web:build:web: ├ ○ /deactivate-license                                    2d      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /dev/[videoId]
+#21 34.66 @cap/web:build:web: ├ ƒ /developer-documentation-videos
+#21 34.66 @cap/web:build:web: ├ ƒ /docs/[[...slug]]
+#21 34.66 @cap/web:build:web: ├ ○ /download                                              1m      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /download/[platform]
+#21 34.66 @cap/web:build:web: ├ ○ /download/versions                                     1m      1y
+#21 34.66 @cap/web:build:web: ├ ○ /dpa                                                   2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /embed
+#21 34.66 @cap/web:build:web: ├ ƒ /embed/[videoId]
+#21 34.66 @cap/web:build:web: ├ ○ /faq                                                   2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /features                                              2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /features/instant-mode                                 2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /features/studio-mode                                  2d      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /free-screen-recorder
+#21 34.66 @cap/web:build:web: ├ ƒ /google-chrome-screen-recorder
+#21 34.66 @cap/web:build:web: ├ ƒ /google-drive-screen-recorder
+#21 34.66 @cap/web:build:web: ├ ƒ /hipaa-compliant-screen-recording
+#21 34.66 @cap/web:build:web: ├ ○ /home                                                  2d      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /how-to-screen-record
+#21 34.66 @cap/web:build:web: ├ ƒ /install-cli.cmd
+#21 34.66 @cap/web:build:web: ├ ƒ /install-cli.ps1
+#21 34.66 @cap/web:build:web: ├ ƒ /install-cli.sh
+#21 34.66 @cap/web:build:web: ├ ƒ /invite/[inviteId]
+#21 34.66 @cap/web:build:web: ├ ƒ /login
+#21 34.66 @cap/web:build:web: ├ ƒ /loom-alternative
+#21 34.66 @cap/web:build:web: ├ ƒ /mac-screen-recording-with-audio
+#21 34.66 @cap/web:build:web: ├ ƒ /mcp/authorize
+#21 34.66 @cap/web:build:web: ├ ○ /messenger
+#21 34.66 @cap/web:build:web: ├ ƒ /messenger/[id]
+#21 34.66 @cap/web:build:web: ├ ƒ /migrate-from-loom
+#21 34.66 @cap/web:build:web: ├ ƒ /mobile/checkout/complete
+#21 34.66 @cap/web:build:web: ├ ƒ /obs-alternative
+#21 34.66 @cap/web:build:web: ├ ƒ /onboarding
+#21 34.66 @cap/web:build:web: ├ ƒ /onboarding/[...steps]
+#21 34.66 @cap/web:build:web: ├ ƒ /open-source-screen-recorder
+#21 34.66 @cap/web:build:web: ├ ƒ /openapi.json
+#21 34.66 @cap/web:build:web: ├ ○ /oss-friends                                           1h      1y
+#21 34.66 @cap/web:build:web: ├ ○ /pricing                                               2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /privacy                                               2d      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /record-screen
+#21 34.66 @cap/web:build:web: ├ ○ /robots.txt
+#21 34.66 @cap/web:build:web: ├ ƒ /s
+#21 34.66 @cap/web:build:web: ├ ƒ /s/[videoId]
+#21 34.66 @cap/web:build:web: ├ ƒ /s/[videoId]/edit
+#21 34.66 @cap/web:build:web: ├ ƒ /screen-recorder
+#21 34.66 @cap/web:build:web: ├ ƒ /screen-recorder-mac
+#21 34.66 @cap/web:build:web: ├ ƒ /screen-recorder-windows
+#21 34.66 @cap/web:build:web: ├ ƒ /screen-recording
+#21 34.66 @cap/web:build:web: ├ ƒ /screen-recording-software
+#21 34.66 @cap/web:build:web: ├ ƒ /self-hosted-screen-recording
+#21 34.66 @cap/web:build:web: ├ ○ /self-hosting                                          2d      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /signup
+#21 34.66 @cap/web:build:web: ├ ○ /sitemap.xml
+#21 34.66 @cap/web:build:web: ├ ƒ /solutions/agencies
+#21 34.66 @cap/web:build:web: ├ ƒ /solutions/daily-standup-software
+#21 34.66 @cap/web:build:web: ├ ƒ /solutions/employee-onboarding-platform
+#21 34.66 @cap/web:build:web: ├ ƒ /solutions/online-classroom-tools
+#21 34.66 @cap/web:build:web: ├ ƒ /solutions/remote-team-collaboration
+#21 34.66 @cap/web:build:web: ├ ○ /student-discount                                      2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /support                                               2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /terms                                                 2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /testimonials                                          2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools                                                 2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/convert                                         2d      1y
+#21 34.66 @cap/web:build:web: ├ ● /tools/convert/[conversionPath]
+#21 34.66 @cap/web:build:web: ├ ○ /tools/convert/avi-to-mp4                              2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/convert/mkv-to-mp4                              2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/convert/mov-to-mp4                              2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/convert/mp4-to-gif                              2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/convert/mp4-to-mp3                              2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/convert/mp4-to-webm                             2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/convert/webm-to-mp4                             2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/loom-downloader                                 2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/trim                                            2d      1y
+#21 34.66 @cap/web:build:web: ├ ○ /tools/video-speed-controller                          2d      1y
+#21 34.66 @cap/web:build:web: ├ ƒ /verify-otp
+#21 34.66 @cap/web:build:web: └ ƒ /video-recording-software
+#21 34.66 @cap/web:build:web: 
+#21 34.66 @cap/web:build:web: 
+#21 34.66 @cap/web:build:web: ƒ Proxy (Middleware)
+#21 34.66 @cap/web:build:web: 
+#21 34.66 @cap/web:build:web: ○  (Static)   prerendered as static content
+#21 34.66 @cap/web:build:web: ●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+#21 34.66 @cap/web:build:web: ƒ  (Dynamic)  server-rendered on demand
+#21 34.66 @cap/web:build:web: 
+#21 34.96 
+#21 34.96  Tasks:    6 successful, 6 total
+#21 34.96 Cached:    0 cached, 6 total
+#21 34.96   Time:    34.21s 
+#21 34.96 
+#21 DONE 35.6s
+
+#22 [runner 4/7] COPY --from=builder --chown=nextjs:nodejs /app/apps/web/.next/standalone ./
+#22 DONE 0.7s
+
+#23 [runner 5/7] COPY --from=builder --chown=nextjs:nodejs /app/apps/web/.next/static ./apps/web/.next/static
+#23 DONE 0.1s
+
+#24 [runner 6/7] COPY --from=builder --chown=nextjs:nodejs /app/apps/web/public ./apps/web/public
+#24 DONE 0.1s
+
+#25 [runner 7/7] COPY --from=builder --chown=nextjs:nodejs /app/packages/database/migrations ./apps/web/migrations
+#25 DONE 0.0s
+
+#26 [browser-maps 1/1] RUN --mount=from=maptools,source=/identity-map.cjs,target=/tmp/recall-map.cjs     echo 'b74f95e029868e2f1d61f1751ff2a9bcc47e7963f16f74974024683e8d21d5c3  apps/web/public/theme-script.js' | sha256sum -c -     && node /tmp/recall-map.cjs apps/web/public/theme-script.js apps/web/public/theme-script.js apps/web/public/theme-script.js
+#26 0.101 apps/web/public/theme-script.js: OK
+#26 DONE 0.1s
+
+#27 exporting to image
+#27 exporting layers
+#27 exporting layers 3.7s done
+#27 exporting manifest sha256:b78b67a56134b320505d7941adae4c35856f24104cd015b296a3462fcd1d1706 done
+#27 exporting config sha256:73be2e6f47574a1eb97d8e11b56f1d0a107efe6751fa4552c4bef098b28e26b5 done
+#27 exporting attestation manifest sha256:4df8116d3a674085181f793c2634826f300aa94260c475603e10c15a40db9f69 done
+#27 exporting manifest list sha256:5e2b15a032e2433f0177fd15edbf62bce866dfab865a46e2e1d85612c0b30326 done
+#27 naming to docker.io/recall-hufang/capsoftware--cap:bb16822e00a5 done
+#27 unpacking to docker.io/recall-hufang/capsoftware--cap:bb16822e00a5
+#27 unpacking to docker.io/recall-hufang/capsoftware--cap:bb16822e00a5 1.1s done
+#27 DONE 4.8s
+
+ [33m1 warning found (use docker --debug to expand):
+[0m - JSONArgsRecommended: JSON arguments recommended for CMD to prevent unintended behavior related to OS signals (line 43)

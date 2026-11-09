@@ -1,0 +1,373 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 5.67kB done
+#1 WARN: LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 99)
+#1 DONE 0.0s
+
+#2 [context recipe] load .dockerignore
+#2 transferring recipe: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:22.23.4-bookworm
+#3 DONE 0.0s
+
+#4 [context recipe] load from client
+#4 transferring recipe: 44B done
+#4 DONE 0.0s
+
+#5 [builder  1/23] FROM docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f
+#5 resolve docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f 0.0s done
+#5 DONE 0.0s
+
+#6 [context recipe] load from client
+#6 transferring recipe: 37B done
+#6 DONE 0.0s
+
+#7 [context recipe] load from client
+#7 transferring recipe: 185B done
+#7 DONE 0.0s
+
+#8 [internal] load build context
+#8 transferring context: 259.90kB 0.1s
+#8 transferring context: 653.41kB 0.3s done
+#8 DONE 0.3s
+
+#9 [builder  5/23] COPY ./package.json ./package.json
+#9 CACHED
+
+#10 [builder  2/23] RUN npm i -g npm@10.9.9
+#10 CACHED
+
+#11 [builder  7/23] RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm --prefix plugins ci
+#11 CACHED
+
+#12 [builder  3/23] RUN mkdir -p /app
+#12 CACHED
+
+#13 [builder  4/23] WORKDIR /app
+#13 CACHED
+
+#14 [builder  6/23] COPY ./plugins/package.json ./plugins/package-lock.json ./plugins/
+#14 CACHED
+
+#15 [runtime  2/28] RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list.d/debian.sources     && apt-get update -o Acquire::Retries=3     && apt-get install -y --no-install-recommends postgresql-client freetds-dev libaio1 libxml2 redis-server tini procps     && rm -rf /var/lib/apt/lists/*
+#15 CACHED
+
+#16 [runtime  4/28] RUN node -e "if (process.versions.tz < '2026e') throw new Error('stale tz data: ' + process.versions.tz)"
+#16 CACHED
+
+#17 [runtime  3/28] COPY ./docker/icu-tz /usr/local/share/icu-tz
+#17 CACHED
+
+#18 [builder  8/23] COPY ./plugins/ ./plugins/
+#18 CACHED
+
+#19 [runtime  5/28] RUN mkdir -p /app
+#19 CACHED
+
+#20 [builder  9/23] RUN NODE_ENV=production npm --prefix plugins run build
+#20 1.890 
+#20 1.890 > @tooljet/plugins@0.0.1 build
+#20 1.890 > npm run create:client && npm run create:server && npm run build:packages && npm run build:server && npm run create:operations
+#20 1.890 
+#20 2.996 
+#20 2.996 > @tooljet/plugins@0.0.1 create:client
+#20 2.996 > node create-client-entry
+#20 2.996 
+#20 4.463 
+#20 4.463 > @tooljet/plugins@0.0.1 create:server
+#20 4.463 > node create-server-entry
+#20 4.463 
+#20 5.939 
+#20 5.939 > @tooljet/plugins@0.0.1 prebuild:packages
+#20 5.939 > npm run clean:packages
+#20 5.939 
+#20 7.123 
+#20 7.123 > @tooljet/plugins@0.0.1 clean:packages
+#20 7.123 > node clean-packages.js
+#20 7.123 
+#20 60.29 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 60.29 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 60.29 lerna notice cli v9.0.7
+#20 60.29 lerna info versioning independent
+#20 60.81 
+#20 60.81 > @tooljet/plugins@0.0.1 build:packages
+#20 60.81 > node build-packages.js
+#20 60.81 
+#20 180.6 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 lerna notice cli v9.0.7
+#20 180.6 lerna info versioning independent
+#20 180.6 @tooljet-plugins/common: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/common: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/airtable: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/airtable: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/amazonses: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/amazonses: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/appwrite: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/appwrite: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/athena: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/athena: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/baserow: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/baserow: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/azureblobstorage: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/azureblobstorage: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/clickhouse: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/clickhouse: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/bigquery: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/bigquery: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/cosmosdb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/cosmosdb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/couchdb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/couchdb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/databricks: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/databricks: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/dynamodb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/dynamodb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/elasticsearch: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/elasticsearch: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/firestore: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/firestore: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/gcs: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/gcs: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/googlesheets: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/googlesheets: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/googlesheetsv2: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/googlesheetsv2: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/graphql: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/graphql: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/grpc: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/grpc: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/grpcv2: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/grpcv2: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/ibmdb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/ibmdb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/influxdb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/influxdb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/mailgun: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/mailgun: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/mariadb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/mariadb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/minio: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/minio: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/mongodb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/mongodb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/mssql: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/mssql: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/mysql: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/mysql: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 @tooljet-plugins/n8n: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.6 @tooljet-plugins/n8n: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.6 node:events:497
+#20 180.6       throw er; // Unhandled 'error' event
+#20 180.6       ^
+#20 180.6 
+#20 180.6 Error: write EPIPE
+#20 180.6     at target._send (node:internal/child_process:877:20)
+#20 180.6     at target.send (node:internal/child_process:751:19)
+#20 180.6     at ForkedProcessTaskRunner.forkProcessWithPrefixAndNotTTY (/app/plugins/node_modules/nx/dist/src/tasks-runner/forked-process-task-runner.js:186:15)
+#20 180.6     at ForkedProcessTaskRunner.forkProcessLegacy (/app/plugins/node_modules/nx/dist/src/tasks-runner/forked-process-task-runner.js:78:20)
+#20 180.6     at TaskOrchestrator.runTaskInForkedProcess (/app/plugins/node_modules/nx/dist/src/tasks-runner/task-orchestrator.js:815:54)
+#20 180.6     at TaskOrchestrator.runTask (/app/plugins/node_modules/nx/dist/src/tasks-runner/task-orchestrator.js:775:44)
+#20 180.6     at TaskOrchestrator.runTaskDirectly (/app/plugins/node_modules/nx/dist/src/tasks-runner/task-orchestrator.js:662:41)
+#20 180.6     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+#20 180.6 Emitted 'error' event on ChildProcess instance at:
+#20 180.6     at node:internal/child_process:881:39
+#20 180.6     at process.processTicksAndRejections (node:internal/process/task_queues:84:11) {
+#20 180.6   errno: -32,
+#20 180.6   code: 'EPIPE',
+#20 180.6   syscall: 'write'
+#20 180.6 }
+#20 180.6 
+#20 180.6 Node.js v22.23.4
+#20 180.7 node:child_process:991
+#20 180.7     throw err;
+#20 180.7     ^
+#20 180.7 
+#20 180.7 Error: Command failed: npx lerna run build --stream
+#20 180.7 <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 lerna notice cli v9.0.7
+#20 180.7 lerna info versioning independent
+#20 180.7 @tooljet-plugins/common: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/common: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/airtable: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/airtable: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/amazonses: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/amazonses: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/appwrite: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/appwrite: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/athena: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/athena: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/baserow: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/baserow: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/azureblobstorage: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/azureblobstorage: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/clickhouse: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/clickhouse: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/bigquery: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/bigquery: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/cosmosdb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/cosmosdb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/couchdb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/couchdb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/databricks: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/databricks: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/dynamodb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/dynamodb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/elasticsearch: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/elasticsearch: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/firestore: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/firestore: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/gcs: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/gcs: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/googlesheets: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/googlesheets: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/googlesheetsv2: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/googlesheetsv2: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/graphql: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/graphql: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/grpc: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/grpc: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/grpcv2: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/grpcv2: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/ibmdb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/ibmdb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/influxdb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/influxdb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/mailgun: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/mailgun: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/mariadb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/mariadb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/minio: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/minio: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/mongodb: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/mongodb: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/mssql: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/mssql: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/mysql: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/mysql: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 @tooljet-plugins/n8n: <jemalloc>: MADV_DONTNEED does not work (memset will be used instead)
+#20 180.7 @tooljet-plugins/n8n: <jemalloc>: (This is the expected behaviour if you are running under QEMU)
+#20 180.7 node:events:497
+#20 180.7       throw er; // Unhandled 'error' event
+#20 180.7       ^
+#20 180.7 
+#20 180.7 Error: write EPIPE
+#20 180.7     at target._send (node:internal/child_process:877:20)
+#20 180.7     at target.send (node:internal/child_process:751:19)
+#20 180.7     at ForkedProcessTaskRunner.forkProcessWithPrefixAndNotTTY (/app/plugins/node_modules/nx/dist/src/tasks-runner/forked-process-task-runner.js:186:15)
+#20 180.7     at ForkedProcessTaskRunner.forkProcessLegacy (/app/plugins/node_modules/nx/dist/src/tasks-runner/forked-process-task-runner.js:78:20)
+#20 180.7     at TaskOrchestrator.runTaskInForkedProcess (/app/plugins/node_modules/nx/dist/src/tasks-runner/task-orchestrator.js:815:54)
+#20 180.7     at TaskOrchestrator.runTask (/app/plugins/node_modules/nx/dist/src/tasks-runner/task-orchestrator.js:775:44)
+#20 180.7     at TaskOrchestrator.runTaskDirectly (/app/plugins/node_modules/nx/dist/src/tasks-runner/task-orchestrator.js:662:41)
+#20 180.7     at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+#20 180.7 Emitted 'error' event on ChildProcess instance at:
+#20 180.7     at node:internal/child_process:881:39
+#20 180.7     at process.processTicksAndRejections (node:internal/process/task_queues:84:11) {
+#20 180.7   errno: -32,
+#20 180.7   code: 'EPIPE',
+#20 180.7   syscall: 'write'
+#20 180.7 }
+#20 180.7 
+#20 180.7 Node.js v22.23.4
+#20 180.7 
+#20 180.7     at genericNodeError (node:internal/errors:983:15)
+#20 180.7     at wrappedFn (node:internal/errors:537:14)
+#20 180.7     at checkExecSyncError (node:child_process:916:11)
+#20 180.7     at execSync (node:child_process:988:15)
+#20 180.7     at Object.<anonymous> (/app/plugins/build-packages.js:4:3)
+#20 180.7     at Module._compile (node:internal/modules/cjs/loader:1781:14)
+#20 180.7     at Object..js (node:internal/modules/cjs/loader:1913:10)
+#20 180.7     at Module.load (node:internal/modules/cjs/loader:1505:32)
+#20 180.7     at Function._load (node:internal/modules/cjs/loader:1309:12)
+#20 180.7     at wrapModuleLoad (node:internal/modules/cjs/loader:254:19) {
+#20 180.7   status: 1,
+#20 180.7   signal: null,
+#20 180.7   output: [
+#20 180.7     null,
+#20 180.7     Buffer(5612) [Uint8Array] [
+#20 180.7        10,  32,  76, 101, 114, 110,  97,  32,  40, 112, 111, 119,
+#20 180.7       101, 114, 101, 100,  32,  98, 121,  32,  78, 120,  41,  32,
+#20 180.7        32,  32,  82, 117, 110, 110, 105, 110, 103,  32, 116,  97,
+#20 180.7       114, 103, 101, 116,  32,  98, 117, 105, 108, 100,  32, 102,
+#20 180.7       111, 114,  32,  52,  57,  32, 112, 114, 111, 106, 101,  99,
+#20 180.7       116, 115,  58,  10,  10,  45,  32,  64, 116, 111, 111, 108,
+#20 180.7       106, 101, 116,  45, 112, 108, 117, 103, 105, 110, 115,  47,
+#20 180.7        97, 105, 114, 116,  97,  98, 108, 101,  10,  45,  32,  64,
+#20 180.7       116, 111, 111, 108,
+#20 180.7       ... 5512 more items
+#20 180.7     ],
+#20 180.7     Buffer(7338) [Uint8Array] [
+#20 180.7        60, 106, 101, 109,  97, 108, 108, 111,  99,  62,  58,  32,
+#20 180.7        77,  65,  68,  86,  95,  68,  79,  78,  84,  78,  69,  69,
+#20 180.7        68,  32, 100, 111, 101, 115,  32, 110, 111, 116,  32, 119,
+#20 180.7       111, 114, 107,  32,  40, 109, 101, 109, 115, 101, 116,  32,
+#20 180.7       119, 105, 108, 108,  32,  98, 101,  32, 117, 115, 101, 100,
+#20 180.7        32, 105, 110, 115, 116, 101,  97, 100,  41,  10,  60, 106,
+#20 180.7       101, 109,  97, 108, 108, 111,  99,  62,  58,  32,  40,  84,
+#20 180.7       104, 105, 115,  32, 105, 115,  32, 116, 104, 101,  32, 101,
+#20 180.7       120, 112, 101,  99,
+#20 180.7       ... 7238 more items
+#20 180.7     ]
+#20 180.7   ],
+#20 180.7   pid: 3380,
+#20 180.7   stdout: Buffer(5612) [Uint8Array] [
+#20 180.7      10,  32,  76, 101, 114, 110,  97,  32,  40, 112, 111, 119,
+#20 180.7     101, 114, 101, 100,  32,  98, 121,  32,  78, 120,  41,  32,
+#20 180.7      32,  32,  82, 117, 110, 110, 105, 110, 103,  32, 116,  97,
+#20 180.7     114, 103, 101, 116,  32,  98, 117, 105, 108, 100,  32, 102,
+#20 180.7     111, 114,  32,  52,  57,  32, 112, 114, 111, 106, 101,  99,
+#20 180.7     116, 115,  58,  10,  10,  45,  32,  64, 116, 111, 111, 108,
+#20 180.7     106, 101, 116,  45, 112, 108, 117, 103, 105, 110, 115,  47,
+#20 180.7      97, 105, 114, 116,  97,  98, 108, 101,  10,  45,  32,  64,
+#20 180.7     116, 111, 111, 108,
+#20 180.7     ... 5512 more items
+#20 180.7   ],
+#20 180.7   stderr: Buffer(7338) [Uint8Array] [
+#20 180.7      60, 106, 101, 109,  97, 108, 108, 111,  99,  62,  58,  32,
+#20 180.7      77,  65,  68,  86,  95,  68,  79,  78,  84,  78,  69,  69,
+#20 180.7      68,  32, 100, 111, 101, 115,  32, 110, 111, 116,  32, 119,
+#20 180.7     111, 114, 107,  32,  40, 109, 101, 109, 115, 101, 116,  32,
+#20 180.7     119, 105, 108, 108,  32,  98, 101,  32, 117, 115, 101, 100,
+#20 180.7      32, 105, 110, 115, 116, 101,  97, 100,  41,  10,  60, 106,
+#20 180.7     101, 109,  97, 108, 108, 111,  99,  62,  58,  32,  40,  84,
+#20 180.7     104, 105, 115,  32, 105, 115,  32, 116, 104, 101,  32, 101,
+#20 180.7     120, 112, 101,  99,
+#20 180.7     ... 7238 more items
+#20 180.7   ]
+#20 180.7 }
+#20 180.7 
+#20 180.7 Node.js v22.23.4
+#20 181.3 npm notice
+#20 181.3 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#20 181.3 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#20 181.3 npm notice To update run: npm install -g npm@12.2.2
+#20 181.3 npm notice
+#20 ERROR: process "/bin/sh -c NODE_ENV=production npm --prefix plugins run build" did not complete successfully: exit code: 1
+------
+ > [builder  9/23] RUN NODE_ENV=production npm --prefix plugins run build:
+180.7     ... 7238 more items
+180.7   ]
+180.7 }
+180.7 
+180.7 Node.js v22.23.4
+181.3 npm notice
+181.3 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+181.3 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+181.3 npm notice To update run: npm install -g npm@12.2.2
+181.3 npm notice
+------
+
+ [33m1 warning found (use docker --debug to expand):
+[0m - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 99)
+Dockerfile:20
+--------------------
+  18 |     COPY ./plugins/ ./plugins/
+  19 |     ENV NX_DAEMON=false NX_ISOLATE_PLUGINS=false NX_NATIVE_COMMAND_RUNNER=false NX_TASKS_RUNNER_DYNAMIC_OUTPUT=false
+  20 | >>> RUN NODE_ENV=production npm --prefix plugins run build
+  21 |     RUN npm --prefix plugins prune --omit=dev
+  22 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c NODE_ENV=production npm --prefix plugins run build" did not complete successfully: exit code: 1

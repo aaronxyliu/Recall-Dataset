@@ -3,7 +3,25 @@
   "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
   "upstreamCommit": "5dadbacb6a002e22fad45341ae0da75c896f3ccf",
   "image": "recall-hufang/formbricks--formbricks:5dadbacb6a00",
-  "started": 1794148117.909568,
+  "started": 1794191759.8906062,
+  "sourcePreflight": {
+    "passed": true,
+    "status": "passed",
+    "receipt": "verification/hufang-builds-2026-11-08/turbopack/formbricks--formbricks/source-preflight.json",
+    "receiptSHA256": "55a846d7817a8fc6e8dbeeb8045d18076d92bfc05e5178803b80adf0642789fb",
+    "selectedLibraries": [
+      "@authzed/authzed-node",
+      "@better-auth/core",
+      "@better-auth/oauth-provider",
+      "@better-auth/utils",
+      "@boxyhq/saml-jackson",
+      "@cubejs-client/core",
+      "@dnd-kit/core",
+      "@dnd-kit/modifiers",
+      "@dnd-kit/sortable",
+      "@formbricks/hub"
+    ]
+  },
   "buildCommand": [
     "docker",
     "build",
@@ -30,10 +48,10 @@
     "recall-hufang/formbricks--formbricks:5dadbacb6a00",
     "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/formbricks--formbricks"
   ],
-  "recipeSHA256": "02bce4227752a6a12133680f3027da28e381e65e3dacf1781a4aac86f12280e4",
-  "buildExitCode": 1,
-  "buildStatus": "blocked",
-  "finished": 1794148118.062166,
-  "failureClassification": "environment-unavailable",
-  "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+  "recipeSHA256": "3c01101e927370412130cc86d9e673664078d44ec62fd98c03aaa9a868f17d8d",
+  "buildExitCode": 0,
+  "buildStatus": "built",
+  "imageID": "sha256:9291e432e8979caabaa9a160f3254f104f4d943b49534aefd6bcc73f4bd066fa",
+  "finished": 1794192159.3492649,
+  "captureError": "Command '['/tmp/recall-hufang-docker-compose', '-p', 'recall-hufang-17', '-f', '/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/verification/hufang-builds-2026-11-08/turbopack/formbricks--formbricks/.runtime/compose.json', 'up', '-d', '--wait', '--wait-timeout', '600']' returned non-zero exit status 1."
 }

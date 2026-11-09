@@ -1,0 +1,2 @@
+import{Va as m,e as l}from"./chunk-LGF24A6L.js";import{Dc as d,cb as r,fb as a,ja as i,na as o}from"./chunk-E5EQ6YZU.js";var y=(()=>{class e extends m{modelValue=i(void 0);$filled=d(()=>l(this.modelValue()));writeModelValue(t){this.modelValue.set(t)}static \u0275fac=(()=>{let t;return function(n){return(t||(t=o(e)))(n||e)}})();static \u0275dir=r({type:e,features:[a]})}return e})();export{y as a};
+//# sourceMappingURL=chunk-54ANHTEW.js.map

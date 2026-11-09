@@ -1,0 +1,351 @@
+{
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "esbuild/primefaces--primeng",
+  "repo": "primefaces/primeng",
+  "commit": "fe82b291d6fedde177dc12c0af7ef1008dc1b1ff",
+  "policy": {
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
+  },
+  "selectionOverride": {
+    "manifestRelative": "packages/primeng/package.json",
+    "preferredLibraries": [
+      "@primeuix/styled",
+      "@primeuix/utils",
+      "@primeuix/styles",
+      "@primeuix/motion"
+    ],
+    "reason": "Evaluate the built PrimeNG library production manifest; showcase manifest only declares CSS build tools. Angular peer and root dev dependencies remain excluded."
+  },
+  "candidates": [
+    "@primeuix/motion",
+    "@primeuix/styled",
+    "@primeuix/styles",
+    "@primeuix/utils"
+  ],
+  "libraries": [
+    {
+      "library": "@primeuix/styled",
+      "declaredVersion": "catalog:",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@primeuix/styled",
+        "version": "0.7.4",
+        "integrity": "sha512-QSO/NpOQg8e9BONWRBx9y8VGMCMYz0J/uKfNJEya/RGEu7ARx0oYW0ugI1N3/KB1AAvyGxzKBzGImbwg0KUiOQ==",
+        "shasum": "d2108a7fad297dea60d549b2c10ed744dc0cbc0e",
+        "tarballSHA256": "d2c73f64b0cdb7a9f4f3374fd2ae388f2f5a966757e3b891b4e7ccc57fbef43d",
+        "bytes": 28976,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 50,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.mjs",
+          "source": "source-js/355a2f7b3707b9dc7bf5f44b77197fce71b9f9a8345b05178fe89970df3a5238.js",
+          "sourceSHA256": "355a2f7b3707b9dc7bf5f44b77197fce71b9f9a8345b05178fe89970df3a5238",
+          "span": [
+            2314,
+            3124
+          ],
+          "name": "le",
+          "normalizedASTSHA256": "e7f5457e260cc11341a38d93216e13d7a004fc35212f158cc39c85c213ae9882",
+          "codeSHA256": "c9c6b034c5d6154a1b6463d361a2d3ae4108f18d0177d7f951967ec2b0430009",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "7b9afcd525c99cf7",
+            "graphNodes": 26,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.mjs",
+          "source": "source-js/355a2f7b3707b9dc7bf5f44b77197fce71b9f9a8345b05178fe89970df3a5238.js",
+          "sourceSHA256": "355a2f7b3707b9dc7bf5f44b77197fce71b9f9a8345b05178fe89970df3a5238",
+          "span": [
+            5113,
+            5462
+          ],
+          "name": "surfacePalette",
+          "normalizedASTSHA256": "deddc1b5c34479633d5716fed4f52c6f538c90ea322c500b545864eebacf8db3",
+          "codeSHA256": "1f7a5b4020265e8d948477ffbf387094bcaeb5d2529c2720978ec4caac8ab240",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "b05e5bf1fdb26b74",
+            "graphNodes": 24,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.mjs",
+          "source": "source-js/355a2f7b3707b9dc7bf5f44b77197fce71b9f9a8345b05178fe89970df3a5238.js",
+          "sourceSHA256": "355a2f7b3707b9dc7bf5f44b77197fce71b9f9a8345b05178fe89970df3a5238",
+          "span": [
+            5872,
+            6363
+          ],
+          "name": "de",
+          "normalizedASTSHA256": "fba59793450bfa8a6b9d915a3f295bb7c768fcff4a2175b810fb7cc46ef8eeae",
+          "codeSHA256": "332b51e164d2302a7d325de967e99dea040c3019ac06e8c98893ea87207f61c0",
+          "features": {
+            "propertyOperations": 23,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "fdbf76b984a1335d",
+            "graphNodes": 20,
+            "graphEdges": 24,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/88c8eaf8df19a0a3fb31",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c6e70ce414f6d95d44001ecb8b6d5b66bb4990db85829ea6be8b51549195ad31"
+        }
+      ],
+      "lockfileSHA256": "f0d5bb258e62203402ea3495e2161e9717ac38dd943d7766769c83a673bb2a3e",
+      "lockfileSnapshot": "lockfiles/f0d5bb258e62203402ea3495e2161e9717ac38dd943d7766769c83a673bb2a3e-pnpm-lock.yaml"
+    },
+    {
+      "library": "@primeuix/utils",
+      "declaredVersion": "catalog:",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@primeuix/utils",
+        "version": "0.7.2",
+        "integrity": "sha512-pmEbSfP0Phf9W9RweiM66zXnkn73ZeKyYINElbX3uZ2+stzzaba2svLAl3B1pHVcRw5t43O0VciaGe4ye2EXKw==",
+        "shasum": "0ded7f74bddf191f0e16aea34b593a7fcffa94b5",
+        "tarballSHA256": "ed1e149a417156fc2a670fdd206609c2a48f7df050fdb75e4d9684a4d5adda9b",
+        "bytes": 47969,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/classnames/index.mjs",
+          "source": "source-js/cefc4825fbb34ac345a680b066a4c8cccb5a92738036b4e50f3a57bf359acc2e.js",
+          "sourceSHA256": "cefc4825fbb34ac345a680b066a4c8cccb5a92738036b4e50f3a57bf359acc2e",
+          "span": [
+            0,
+            307
+          ],
+          "name": "f",
+          "normalizedASTSHA256": "e819df54371c0226afc79b5b72631127a620210a1ce0e7b34307fc2ba4d3e75f",
+          "codeSHA256": "fc7db58490ed9b52fc151fde4cf2866ca90799dd0b57ba1bbe9b6866614bf66d",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "65205ab01b6c88b8",
+            "graphNodes": 19,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/dom/index.mjs",
+          "source": "source-js/d111ac6cc1e0b2763ae988a2a79de55450fff5e297ed0db61e143cebdd0d291c.js",
+          "sourceSHA256": "d111ac6cc1e0b2763ae988a2a79de55450fff5e297ed0db61e143cebdd0d291c",
+          "span": [
+            577,
+            840
+          ],
+          "name": "B",
+          "normalizedASTSHA256": "1e8b1c2d62b8fb7235d1011cc129ff7a0e742dd878d7e6d8318a7f6ee4ffd1de",
+          "codeSHA256": "9c51dfb46de264924b3ba12d9024068ac2b1adbcfc9e85af9482d591dcb7beb6",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "1f29acd327d8739a",
+            "graphNodes": 7,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/dom/index.mjs",
+          "source": "source-js/d111ac6cc1e0b2763ae988a2a79de55450fff5e297ed0db61e143cebdd0d291c.js",
+          "sourceSHA256": "d111ac6cc1e0b2763ae988a2a79de55450fff5e297ed0db61e143cebdd0d291c",
+          "span": [
+            1790,
+            2074
+          ],
+          "name": "v",
+          "normalizedASTSHA256": "bca2e8d42f81658d0a25e5d2dc9d0e077eec94f441aada76e4f0e656cb514015",
+          "codeSHA256": "7ab8a77d3a55086e5258c5b8b4a3e67d5c182c9f3517e180c07667610358513e",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "d93adde5216ea660",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/99e3b77e6f45530e645e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "493c490ff54017a00699cee5ea16dce5e4716b452bb74cc14d8531f387b8b9f3"
+        }
+      ],
+      "lockfileSHA256": "f0d5bb258e62203402ea3495e2161e9717ac38dd943d7766769c83a673bb2a3e",
+      "lockfileSnapshot": "lockfiles/f0d5bb258e62203402ea3495e2161e9717ac38dd943d7766769c83a673bb2a3e-pnpm-lock.yaml"
+    },
+    {
+      "library": "@primeuix/motion",
+      "declaredVersion": "catalog:",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@primeuix/motion",
+        "version": "0.0.10",
+        "integrity": "sha512-PsZwOPq79Scp7/ionshRcQ5xKVf9+zuLcyY5mf6onK8chHT5C9JGphmcIZ4CzcqxuGEpsm8AIbTGy+zS3RtzLA==",
+        "shasum": "9af4238226042d80518dd343c6481d03582e374a",
+        "tarballSHA256": "24f98f141735c0d8835e2027ea87c42bfc2757d9940992c594583fbc549c62d3",
+        "bytes": 9996,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 16,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.mjs",
+          "source": "source-js/e8b3029aa30b14c9e349fd2a5c4f112d35b00ee4ccae483dee49a031e21729cc.js",
+          "sourceSHA256": "e8b3029aa30b14c9e349fd2a5c4f112d35b00ee4ccae483dee49a031e21729cc",
+          "span": [
+            935,
+            1305
+          ],
+          "name": "L",
+          "normalizedASTSHA256": "1a6f976432ea4bbc81722d766b42521e584055b0c322d3007634ca5ab3e91442",
+          "codeSHA256": "cdbd8fd2d281ab06213c879147dcc8f9e6be864c0b04147620682739d6ae8746",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "250c89f5c29c7ef7",
+            "graphNodes": 34,
+            "graphEdges": 45,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.mjs",
+          "source": "source-js/e8b3029aa30b14c9e349fd2a5c4f112d35b00ee4ccae483dee49a031e21729cc.js",
+          "sourceSHA256": "e8b3029aa30b14c9e349fd2a5c4f112d35b00ee4ccae483dee49a031e21729cc",
+          "span": [
+            1305,
+            1657
+          ],
+          "name": "W",
+          "normalizedASTSHA256": "b612c76a775ba1711f3afcf8163a2fef4081484cff4ed445101cc9e144903208",
+          "codeSHA256": "88554a57c065800aa0e2a2598f041b4fa0a08fabd14053276b20b901969652a7",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "f67d825697078979",
+            "graphNodes": 27,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.mjs",
+          "source": "source-js/e8b3029aa30b14c9e349fd2a5c4f112d35b00ee4ccae483dee49a031e21729cc.js",
+          "sourceSHA256": "e8b3029aa30b14c9e349fd2a5c4f112d35b00ee4ccae483dee49a031e21729cc",
+          "span": [
+            1657,
+            2075
+          ],
+          "name": "A",
+          "normalizedASTSHA256": "0d42e1ddf2d41187951cdd9b61a1bca0a02e197864107ad082af0f364afb4a74",
+          "codeSHA256": "682feb35ec6828e5d6f5ac52f1edb6a136eaa9b22fcfc419f282b5e756a85d67",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "b764aafd927935e5",
+            "graphNodes": 19,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/6eb934985b60feeea66e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c6e70ce414f6d95d44001ecb8b6d5b66bb4990db85829ea6be8b51549195ad31"
+        }
+      ],
+      "lockfileSHA256": "f0d5bb258e62203402ea3495e2161e9717ac38dd943d7766769c83a673bb2a3e",
+      "lockfileSnapshot": "lockfiles/f0d5bb258e62203402ea3495e2161e9717ac38dd943d7766769c83a673bb2a3e-pnpm-lock.yaml"
+    }
+  ],
+  "selectedLibraries": [
+    "@primeuix/styled",
+    "@primeuix/utils",
+    "@primeuix/motion"
+  ],
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
+    },
+    "frontendManifestSHA256": "f3f494b537ceae3b18895b23d52d5d7db1eb95d5aad59f1543c41c40bddad3a6",
+    "manifestRelative": "packages/primeng/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:43:16.461Z",
+  "reason": null,
+  "finished": "2026-11-09T03:43:20.868Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/esbuild/primefaces--primeng/qualification.json",
+  "sourceEligibilityRecordSHA256": "57714cbafbe1d607630a43041419e741e41a44e0f2b4ea5903570e6fd4fd970c",
+  "organizationSignature": "98a3dc73379793b27c6707ec127ef5279ffbc22d7a8ddd00fd37e70639ee9b75"
+}

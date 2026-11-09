@@ -3,7 +3,7 @@
   "commit": "b4014fd62ce8ba46866bb19a648b09fceb91f8cd",
   "sourceDirectory": "builds/peggyjs--peggy",
   "applicationDirectory": ".",
-  "packageManifest": "package.json",
+  "packageManifest": "docs/package.json",
   "declaredPackageManager": "pnpm@12.13.0",
   "runtimeDeclarations": {},
   "engines": {
@@ -27,7 +27,7 @@
     "node:24-bookworm@sha256:64af3819f9275802414d7cdc38c27e9d82bd564dec4d4da87d008255d36c63b4 AS build",
     "nginx:stable-alpine@sha256:583b7f2fce1cdb8da5ad5c39ebd3c33b98b87d493190e548bdee1fa8c619c311 AS runtime"
   ],
-  "expectedOutput": "browser/peggy.min.js，随后复制到 docs/vendor/peggy/peggy.min.js",
+  "expectedOutput": "browser/peggy.min.js\uff0c\u968f\u540e\u590d\u5236\u5230 docs/vendor/peggy/peggy.min.js",
   "serverCommand": [
     "/docker-entrypoint.sh",
     "nginx",
@@ -41,7 +41,7 @@
   "runtimeConfigurationNames": [],
   "referenceURL": "https://peggyjs.org/online.html",
   "bundler": "tsup",
-  "bundlerEvidence": "make 调用 ts，ts 直接调用 tsup。tsup 生成浏览器解析器，deploy 将其复制到 online.html 加载的路径。",
+  "bundlerEvidence": "make \u8c03\u7528 ts\uff0cts \u76f4\u63a5\u8c03\u7528 tsup\u3002tsup \u751f\u6210\u6d4f\u89c8\u5668\u89e3\u6790\u5668\uff0cdeploy \u5c06\u5176\u590d\u5236\u5230 online.html \u52a0\u8f7d\u7684\u8def\u5f84\u3002",
   "upstreamSourceEvidence": [
     {
       "path": "package.json",
@@ -76,5 +76,7 @@
   "launchRecipe": "launch.json",
   "externalServicesUnverified": [],
   "scopeNotes": [],
-  "resolvedDependencySnapshots": {}
+  "resolvedDependencySnapshots": {},
+  "submittedPackageManifest": "package.json",
+  "manifestCorrection": "Use the actual selected frontend manifest, rather than its repository root, for production-library eligibility."
 }

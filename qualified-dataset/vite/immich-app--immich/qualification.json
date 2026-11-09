@@ -1,26 +1,20 @@
 {
-  "schema": "recall.dataset-anchor-qualification/v1",
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "vite/immich-app--immich",
+  "repo": "immich-app/immich",
+  "commit": "037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9",
   "policy": {
-    "candidateField": "dependencies",
-    "minInitialAnchors": 3,
-    "minLibraries": 5,
-    "maxLibraries": 10,
-    "counting": "distinct source functions before propagation; repeated target copies count once",
-    "options": {
-      "minFeatures": 10,
-      "featureMetric": "propertyOperations",
-      "minAnchors": 3,
-      "uniqueBundle": true
-    }
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "provenance": {
-    "groundTruthSHA256": "14fd0570778685f122f10cf4bd1f6b4c9823a57808a50da5ad57f65702dd28bb",
-    "manifestSHA256": "065ed2f44406e397bb9dea8d742733740566b088dd8964bbd5746f9a73b78d39",
-    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
-    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
-    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
-    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
-  },
+  "selectionOverride": {},
   "candidates": [
     "@formatjs/icu-messageformat-parser",
     "@futo-org/backups-orchestrator-ui",
@@ -71,589 +65,1041 @@
     "transformation-matrix",
     "uplot"
   ],
-  "excludedPreviouslySelected": [],
   "libraries": [
     {
-      "library": "@formatjs/icu-messageformat-parser",
-      "initialAnchors": 20,
-      "trialLibraries": [
-        "svelte-persisted-store",
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "@futo-org/backups-orchestrator-ui",
-        "tailwind-merge",
-        "@tanstack/svelte-query",
-        "media-chrome",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 141,
-      "sourceFiles": 8,
-      "finalInitialAnchors": 20
-    },
-    {
-      "library": "@futo-org/backups-orchestrator-ui",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "@futo-org/backups-orchestrator-ui"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 57,
-      "sourceFiles": 4
-    },
-    {
-      "library": "@immich/justified-layout-wasm",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "@immich/justified-layout-wasm"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 12,
-      "sourceFiles": 3
-    },
-    {
-      "library": "@immich/sdk",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
       "library": "@immich/ui",
-      "initialAnchors": 12,
-      "trialLibraries": [
-        "svelte-persisted-store",
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "@futo-org/backups-orchestrator-ui",
-        "tailwind-merge",
-        "@tanstack/svelte-query",
-        "media-chrome",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout"
-      ],
+      "declaredVersion": "^0.91.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@immich/ui",
+        "version": "0.91.1",
+        "integrity": "sha512-RIicH0+vQxrfCd4Pm1uVwQhmBM1zHsCmSe9k1OmTPDEe18m8grJ8dTQe0so8cg5CjJfN6riYiT0b2Rqq6+6IOA==",
+        "shasum": "6000c9ebb9332351021426ee1671861ad1347a06",
+        "tarballSHA256": "9612beb9c1c1b1cfee9c27d62984ada0868ae1faf847fe81a6a9e338afe2ec1c",
+        "bytes": 258759,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 175,
-      "sourceFiles": 68,
-      "finalInitialAnchors": 12
-    },
-    {
-      "library": "@mdi/js",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "@mdi/js"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 5,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/actions/shortcut.js",
+          "source": "source-js/91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324.js",
+          "sourceSHA256": "91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324",
+          "span": [
+            1150,
+            1451
+          ],
+          "name": "matchesShortcut",
+          "normalizedASTSHA256": "a7b5b8f2f5e188931551d10952e4d35f4fe50dfee1e6bee6fd73dfdee33a09c1",
+          "codeSHA256": "4f2942f2b2a674b7db97022ce7489e0f7c09dcb4281a3d5febef19c291290e47",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "f21fa2214e96acde",
+            "graphNodes": 12,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/actions/shortcut.js",
+          "source": "source-js/91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324.js",
+          "sourceSHA256": "91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324",
+          "span": [
+            1575,
+            2344
+          ],
+          "name": "renderKeyboardEvent",
+          "normalizedASTSHA256": "7dc311c095ffba2744c36ff328bbd88dcf98cdd4b4a6ee727797c5bd287a1fb4",
+          "codeSHA256": "16928a16dc71015f7129e0669b3b42c0b787b9f42bd506be3a08b0fc9c035604",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 4,
+            "pogHash": "a8ddecaa7676f827",
+            "graphNodes": 25,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/actions/shortcut.js",
+          "source": "source-js/91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324.js",
+          "sourceSHA256": "91fa1db3bf2fbcae57ee99fed9ae27ccc5f7e3ff717c5a10e17ca24c90a93324",
+          "span": [
+            2376,
+            3099
+          ],
+          "name": "renderShortcut",
+          "normalizedASTSHA256": "08d2006b696a036e35e14492b2f334d6370a71744e3825ec6d32d85798dc83f7",
+          "codeSHA256": "d4f15da04237b62530c2868f2445e8a221250f0b5aeaf47428cdeaf72f881978",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "8f0a585c8cc62f89",
+            "graphNodes": 32,
+            "graphEdges": 41,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 0,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@noble/hashes",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@photo-sphere-viewer/core",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@photo-sphere-viewer/equirectangular-video-adapter",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@photo-sphere-viewer/markers-plugin",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@photo-sphere-viewer/resolution-plugin",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@photo-sphere-viewer/settings-plugin",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@photo-sphere-viewer/video-plugin",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@simplewebauthn/browser",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@tanstack/svelte-query",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "@tanstack/svelte-query"
+      "proofDirectory": "eligibility/libraries/ae8338e2e8fea5a0c422",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "39121dfe51a7919c78393a9a905f2ab64e02ba5c8e3be277631db4520fcb789f"
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 53,
-      "sourceFiles": 10
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     },
     {
-      "library": "@types/geojson",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@zoom-image/core",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@zoom-image/svelte",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "dom-to-image",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "fabric",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "geo-coordinates-parser",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "geojson",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "handlebars",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "hash-wasm",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "hls-video-element",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "hls.js",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "intl-messageformat",
-      "initialAnchors": 7,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "intl-messageformat"
-      ],
+      "library": "@formatjs/icu-messageformat-parser",
+      "declaredVersion": "^3.0.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@formatjs/icu-messageformat-parser",
+        "version": "3.5.22",
+        "integrity": "sha512-YuwN+dDKgssfuYwtOyGQD0CSn7K46g9cv1Fp0VgKpjZDDFvv8b8crzP990IcJhRPWHhKzCGsbUSJVIguyyFA5A==",
+        "shasum": "8715bd7958ef43919bb9d7d1779518e11084e9eb",
+        "tarballSHA256": "d659dc2935407ba253cfa15dd0497a3388172d69ba2f964a6c8d5e8dfe153403",
+        "bytes": 50697,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 71,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 7
-    },
-    {
-      "library": "justified-layout",
-      "initialAnchors": 6,
-      "trialLibraries": [
-        "svelte-persisted-store",
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "@futo-org/backups-orchestrator-ui",
-        "tailwind-merge",
-        "@tanstack/svelte-query",
-        "media-chrome",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "index.js",
+          "source": "source-js/643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268.js",
+          "sourceSHA256": "643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268",
+          "span": [
+            208,
+            4446
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "e0ddff82afd95d7d11491d7780c1f2dd6347d3c28d70981a93514bebbd3a3cf9",
+          "codeSHA256": "30996ce44c3a890593785e689ed9e0c675d0b3da9b528a4f59bc1c5812db4794",
+          "features": {
+            "propertyOperations": 52,
+            "distinctOperationPropertyPairs": 27,
+            "pogHash": "30fbf0ad5fb61018",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 52,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268.js",
+          "sourceSHA256": "643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268",
+          "span": [
+            4545,
+            5326
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "863b06742d4e74a3b94ad693b3a8456b9776c86538ec8c9d08763e524dc8bb39",
+          "codeSHA256": "0797f9a61a589bcc20f82101661a0d3e81349aa207ca2e133410b746e24ddd70",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "dc862ddfa1c045cf",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268.js",
+          "sourceSHA256": "643043d27d3117c2d22513d706259f6d65bd463a1901b1d32f06b4361d3a3268",
+          "span": [
+            17900,
+            18645
+          ],
+          "name": "getDefaultHourSymbolFromLocale",
+          "normalizedASTSHA256": "8a06b6997ecc75de6c5591c404e3dadb3bddab2e73e37ee0de5c59c42c751256",
+          "codeSHA256": "be418fce7ce3f820f28530abd36398ad319641838b5f43c367175570d1edd188",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "c6979f7b4bf6479a",
+            "graphNodes": 36,
+            "graphEdges": 49,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 19,
-      "sourceFiles": 2,
-      "finalInitialAnchors": 6
-    },
-    {
-      "library": "lodash-es",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "intl-messageformat",
-        "lodash-es"
+      "proofDirectory": "eligibility/libraries/307bd2b544634255984e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "b1cc980e28e9e48f377db191578a9361494ca7117185b69dd66cabaf5b460fb7"
+        }
       ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 176,
-      "sourceFiles": 161,
-      "finalInitialAnchors": 4
-    },
-    {
-      "library": "luxon",
-      "initialAnchors": 58,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "intl-messageformat",
-        "lodash-es",
-        "luxon"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 581,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 58
-    },
-    {
-      "library": "maplibre-gl",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "media-chrome",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "media-chrome"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 6,
-      "sourceFiles": 2
-    },
-    {
-      "library": "pmtiles",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "qrcode",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "simple-icons",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "socket.io-client",
-      "initialAnchors": 14,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "intl-messageformat",
-        "lodash-es",
-        "luxon",
-        "socket.io-client"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 96,
-      "sourceFiles": 6,
-      "finalInitialAnchors": 14
-    },
-    {
-      "library": "svelte-confetti",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "svelte-gestures",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "svelte-i18n",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 80,
-      "sourceFiles": 1
-    },
-    {
-      "library": "svelte-jsoneditor",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "svelte-maplibre",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "svelte-persisted-store",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "svelte-persisted-store"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 17,
-      "sourceFiles": 1
-    },
-    {
-      "library": "tabbable",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "svelte-persisted-store",
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "@futo-org/backups-orchestrator-ui",
-        "tailwind-merge",
-        "@tanstack/svelte-query",
-        "media-chrome",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 34,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 4
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     },
     {
       "library": "tailwind-merge",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "svelte-persisted-store",
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "@futo-org/backups-orchestrator-ui",
-        "tailwind-merge",
-        "@tanstack/svelte-query",
-        "media-chrome",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout"
-      ],
+      "declaredVersion": "^3.5.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "tailwind-merge",
+        "version": "3.7.0",
+        "integrity": "sha512-XPPUyAc+cvspz3lHTcR/QgPfW2A0lv/xQNIjX3HGhLR+Nq2lHaLq5MtTesHn8GUr3W3DguT2KT5x3NVgRtYwmA==",
+        "shasum": "61e9a67ab11b64138dea7d4fa5b74a33e17f2c87",
+        "tarballSHA256": "6b1add695cf419b29b82843cdcaaafe49157dc90d4d1772dcc0e7672da538c42",
+        "bytes": 167565,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 123,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 4
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 31,
+      "diagnostics": [
+        {
+          "file": "src/lib/class-group-lookup.ts",
+          "error": "SyntaxError: [9:45-9:46]: Expected ')'"
+        },
+        {
+          "file": "src/lib/class-group-utils.ts",
+          "error": "SyntaxError: [13:7-13:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/lib/config-utils.ts",
+          "error": "SyntaxError: [7:7-7:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/lib/create-tailwind-merge.ts",
+          "error": "SyntaxError: [6:5-6:22]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/lib/default-config.ts",
+          "error": "SyntaxError: [67:82-67:84]: Unexpected token: 'as'"
+        },
+        {
+          "file": "src/lib/extend-tailwind-merge.ts",
+          "error": "SyntaxError: [6:5-6:27]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/lib/from-theme.ts",
+          "error": "SyntaxError: [3:22-3:23]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/lib/lru-cache.ts",
+          "error": "SyntaxError: [3:7-3:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/lib/merge-classlist.ts",
+          "error": "SyntaxError: [6:40-6:41]: Expected ')'"
+        },
+        {
+          "file": "src/lib/merge-configs.ts",
+          "error": "SyntaxError: [7:28-7:29]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/lib/parse-class-name.ts",
+          "error": "SyntaxError: [6:21-6:22]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/lib/sort-modifiers.ts",
+          "error": "SyntaxError: [8:42-8:43]: Expected ')'"
+        },
+        {
+          "file": "src/lib/tw-join.ts",
+          "error": "SyntaxError: [11:7-11:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/lib/types.ts",
+          "error": "SyntaxError: [4:7-4:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/lib/utils.ts",
+          "error": "SyntaxError: [4:28-4:29]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/lib/validators.ts",
+          "error": "SyntaxError: [13:32-13:33]: Expected ')'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/bundle-cjs.js",
+          "source": "source-js/e56d3bcd2ea1d6f8e0e598179de0e4f61d7830a94b69423e2833335a20ca3a4f.js",
+          "sourceSHA256": "e56d3bcd2ea1d6f8e0e598179de0e4f61d7830a94b69423e2833335a20ca3a4f",
+          "span": [
+            2571,
+            3598
+          ],
+          "name": "getGroupRecursive",
+          "normalizedASTSHA256": "d50b34d2c4d6c438e441a9d4999325c8cb8824f866a54e0772b3520c433ace37",
+          "codeSHA256": "0dc0f0f18f95dc875718c8bcdbb04895abf6b7ce879d0b929f056754ed8a42fe",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "7136e3d30e7c0842",
+            "graphNodes": 20,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/bundle-cjs.js",
+          "source": "source-js/e56d3bcd2ea1d6f8e0e598179de0e4f61d7830a94b69423e2833335a20ca3a4f.js",
+          "sourceSHA256": "e56d3bcd2ea1d6f8e0e598179de0e4f61d7830a94b69423e2833335a20ca3a4f",
+          "span": [
+            8644,
+            10692
+          ],
+          "name": "parseClassName",
+          "normalizedASTSHA256": "39f0689a10d490b8d52b271ef9d13dfd3722d5c35c3fd7e356c0021e38ce45d4",
+          "codeSHA256": "418d2cdce885481bf3ed7168aac9d2e7c49956807c0ec0653d13bf6ef529b419",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "fd2e87568f57b51a",
+            "graphNodes": 27,
+            "graphEdges": 39,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/bundle-cjs.js",
+          "source": "source-js/e56d3bcd2ea1d6f8e0e598179de0e4f61d7830a94b69423e2833335a20ca3a4f.js",
+          "sourceSHA256": "e56d3bcd2ea1d6f8e0e598179de0e4f61d7830a94b69423e2833335a20ca3a4f",
+          "span": [
+            11867,
+            12863
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "e1eff73cd862185003fc049b62200bf9d2d7762b6b268a09a025ace670ede783",
+          "codeSHA256": "21264f7c46496182930414e2028bb3ffb79fecc162a1f7d5edf9ac59bf9a977b",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "534d60f2b4273a54",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/170c47be2c1df87bd16e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "d4c70c7ce38cea8778f0aed3fc0bef0a9dbd27f13bd8b6773cbd6d37941971e5"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
+    },
+    {
+      "library": "tabbable",
+      "declaredVersion": "^6.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "tabbable",
+        "version": "6.5.1",
+        "integrity": "sha512-dMCuwDUY6Noz3zVKLefBC4wq+aJV20yc7vWmM7uTNGwtQSFF5kX7OUIUsxuVajz/bdt5Xqdah3/0NLjth+cM5A==",
+        "shasum": "cfca6f3f397db9edbe08ad35915e0d7807050a18",
+        "tarballSHA256": "c4279656a12491a1a2ca009195e26744ece9409f60261831190136d4f8ea96b7",
+        "bytes": 117442,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 23,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/index.js",
+          "source": "source-js/7916bab03547fc5e511deeb436ee19ab2889e48c01802d4f7592f6ddabdf9397.js",
+          "sourceSHA256": "7916bab03547fc5e511deeb436ee19ab2889e48c01802d4f7592f6ddabdf9397",
+          "span": [
+            5298,
+            8322
+          ],
+          "name": "getCandidatesIteratively",
+          "normalizedASTSHA256": "9fa4c88713238c0da73d6e0c9511db076d0ad36e813a896a40b0d46595a0fd49",
+          "codeSHA256": "f304496fc31b612b4e0c78411efe2e7fbf47bf5c6f104798e2b99cec000c76a6",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 17,
+            "pogHash": "f4c42f6dde35c73e",
+            "graphNodes": 46,
+            "graphEdges": 61,
+            "graphOperationOccurrences": 38,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/index.js",
+          "source": "source-js/7916bab03547fc5e511deeb436ee19ab2889e48c01802d4f7592f6ddabdf9397.js",
+          "sourceSHA256": "7916bab03547fc5e511deeb436ee19ab2889e48c01802d4f7592f6ddabdf9397",
+          "span": [
+            11007,
+            11922
+          ],
+          "name": "isTabbableRadio",
+          "normalizedASTSHA256": "1b051eb883dfbaefb2c5d36cafdea7fe7e882eaa3eab9430c50169206a8a5119",
+          "codeSHA256": "2df80ba9633b29e220b1a74b4b773d08009839ecaeec3b37d5137941c5c9cf53",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "b8ea02ec98e3a105",
+            "graphNodes": 17,
+            "graphEdges": 21,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/index.js",
+          "source": "source-js/7916bab03547fc5e511deeb436ee19ab2889e48c01802d4f7592f6ddabdf9397.js",
+          "sourceSHA256": "7916bab03547fc5e511deeb436ee19ab2889e48c01802d4f7592f6ddabdf9397",
+          "span": [
+            15238,
+            21233
+          ],
+          "name": "isHidden",
+          "normalizedASTSHA256": "51d249331cff59cd737a85affeceffa1bcf4c2747832b3604198ba95a81caf06",
+          "codeSHA256": "a45b7b521600a49de61de3d686ac0d0c51c0f3d5142950250c7e20d049059ea9",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "80a3914a43e2b028",
+            "graphNodes": 38,
+            "graphEdges": 57,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/15c59fa8afdbd4ffd1f5",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "8e714750725e75c8b31172ef84c0805f94873f86e3b5cfca8a948553f0778fa1"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     },
     {
       "library": "tailwind-variants",
-      "initialAnchors": 13,
-      "trialLibraries": [
-        "svelte-persisted-store",
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "@futo-org/backups-orchestrator-ui",
-        "tailwind-merge",
-        "@tanstack/svelte-query",
-        "media-chrome",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout"
-      ],
+      "declaredVersion": "^3.2.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "tailwind-variants",
+        "version": "3.3.1",
+        "integrity": "sha512-4pAvwUtM4HKBiRZftncAbpn6V9Hhwoa5Fl7O2u5zbp7Z5Cvu+/o/6+176WY3WCEES209543quG8zFIcXCsc5Jw==",
+        "shasum": "7eca8fac48ad83fe9c9e1424a379e8411ed3f5ca",
+        "tarballSHA256": "814f18b382080371872b060b1c881789fe8ee50bbb02fd8792310a76c5d6be5e",
+        "bytes": 61683,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 210,
-      "sourceFiles": 3,
-      "finalInitialAnchors": 13
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 25,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/chunk-HIKWJRSK.cjs",
+          "source": "source-js/98643c7fb66985bd4a0deab8bccdcdd925b91dbd5febc7e0550f63674fd1df0e.js",
+          "sourceSHA256": "98643c7fb66985bd4a0deab8bccdcdd925b91dbd5febc7e0550f63674fd1df0e",
+          "span": [
+            1707,
+            2946
+          ],
+          "name": "buildPropsFingerprint",
+          "normalizedASTSHA256": "a6d16c53e3f08a3d574c359ae6c81e50617f7c5f2e0bca4d3953bc294e380dee",
+          "codeSHA256": "375324aa8a8a8cbc6492574310b4cb5a5ad6ef947c895e707a360a6286318b87",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "87591a27326ecb39",
+            "graphNodes": 40,
+            "graphEdges": 57,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/chunk-HIKWJRSK.cjs",
+          "source": "source-js/98643c7fb66985bd4a0deab8bccdcdd925b91dbd5febc7e0550f63674fd1df0e.js",
+          "sourceSHA256": "98643c7fb66985bd4a0deab8bccdcdd925b91dbd5febc7e0550f63674fd1df0e",
+          "span": [
+            2978,
+            4219
+          ],
+          "name": "buildCompoundsSignature",
+          "normalizedASTSHA256": "4be31baff33f0f7a2fd7783c416c709ed83f64d8b4bf1fc4945f06e6f868963e",
+          "codeSHA256": "c701aae2a945884f2ee47493360b1a2b5fbeccb5cbd293f34c781623b5502ab8",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "18656df3160dae9d",
+            "graphNodes": 20,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 19,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/chunk-HIKWJRSK.cjs",
+          "source": "source-js/98643c7fb66985bd4a0deab8bccdcdd925b91dbd5febc7e0550f63674fd1df0e.js",
+          "sourceSHA256": "98643c7fb66985bd4a0deab8bccdcdd925b91dbd5febc7e0550f63674fd1df0e",
+          "span": [
+            5207,
+            6077
+          ],
+          "name": "get",
+          "normalizedASTSHA256": "2288e8674d6636d0f9ecdd92b5b6092fd8c9fff8687558455956fb7ac2543636",
+          "codeSHA256": "d5bdd592ecb3b48a748eb17b89e68a06fe70b2b6c31eb1d389ec41abca59fabb",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 3,
+            "pogHash": "5a1928cb47523d53",
+            "graphNodes": 24,
+            "graphEdges": 31,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 3,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/eb664e664d1da74c4f3d",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "f3f8984c684106a9ffb50c44ff5dd6f2082526d78a820235a6592423d376d650"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     },
     {
-      "library": "thumbhash",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "library": "justified-layout",
+      "declaredVersion": "^4.1.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "justified-layout",
+        "version": "4.1.0",
+        "integrity": "sha512-M5FimNMXgiOYerVRGsXZ2YK9YNCaTtwtYp7Hb2308U1Q9TXXHx5G0p08mcVR5O53qf8bWY4NJcPBxE6zuayXSg==",
+        "shasum": "0584091b45e69f19ac97a54539f0a03eebe7bcfe",
+        "tarballSHA256": "0eb24349b1cf8e7cd5b21ce35c1d6b24a10ecc56a9bb7985bd887f659e11978a",
+        "bytes": 10198,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 4,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "lib/index.js",
+          "source": "source-js/cf298dffa4d9634b68b67bd2736928396c5eee7f1c3006e5b8b42c622e5cc6b2.js",
+          "sourceSHA256": "cf298dffa4d9634b68b67bd2736928396c5eee7f1c3006e5b8b42c622e5cc6b2",
+          "span": [
+            449,
+            1355
+          ],
+          "name": "createNewRow",
+          "normalizedASTSHA256": "1d7eaea6dcb4ab3823c97440c3321750e816406829346985916a9aead7e4d9e7",
+          "codeSHA256": "987323aad4e767e17819c4beabdb29a48e4cc54faeba775ad45f61aa5a14759d",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 24,
+            "pogHash": "175fa877612c8023",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 82,
+            "distinctGraphOperationPropertyPairs": 24,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/index.js",
+          "source": "source-js/cf298dffa4d9634b68b67bd2736928396c5eee7f1c3006e5b8b42c622e5cc6b2.js",
+          "sourceSHA256": "cf298dffa4d9634b68b67bd2736928396c5eee7f1c3006e5b8b42c622e5cc6b2",
+          "span": [
+            1678,
+            1968
+          ],
+          "name": "addRow",
+          "normalizedASTSHA256": "350e045a276de23f749aea74f423a007b4a2933844d13ea0a048ee01f0baf8d9",
+          "codeSHA256": "6044b8ab849e0e0c0044b51aa25fa5aaa48299a32b25b0d6e97a0d229f44f0ca",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "d20d1a1ce080eb10",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/index.js",
+          "source": "source-js/cf298dffa4d9634b68b67bd2736928396c5eee7f1c3006e5b8b42c622e5cc6b2.js",
+          "sourceSHA256": "cf298dffa4d9634b68b67bd2736928396c5eee7f1c3006e5b8b42c622e5cc6b2",
+          "span": [
+            2921,
+            4148
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "a97538c4493ff5c301a8e3223e460c6fa4ea327d0bfa9774c9827ff1690ea55a",
+          "codeSHA256": "91dd11d3fb5d0e9a20bda299519b01f6ec9f5e71bd34bfcc6f1bdfee490fb9c9",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "5e799a10447a0fa5",
+            "graphNodes": 16,
+            "graphEdges": 21,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/c01ca3972332721a8e85",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "2b81e58aa1ec34993fc9347a741ccda682744682ccc580498d6eab7f52909141"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     },
     {
-      "library": "transformation-matrix",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "library": "intl-messageformat",
+      "declaredVersion": "^12.0.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "intl-messageformat",
+        "version": "12.1.4",
+        "integrity": "sha512-JUkmv3cAEyijN3oiRiV3ctel7yVMuUCgfh7Pu8pj1/z6L1DSEPRyhuMaLjVw3pGmGJ5RDH54WVFxfMHZWTwyHw==",
+        "shasum": "6d3ad7a0256dca2aae8ee76a25e44c61f6bc2d09",
+        "tarballSHA256": "a99a5b7760d5566f074973abc52fc8959db5e21da767650a4125968c58baa000",
+        "bytes": 28420,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 31,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "index.js",
+          "source": "source-js/3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d.js",
+          "sourceSHA256": "3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d",
+          "span": [
+            2133,
+            6327
+          ],
+          "name": "formatToParts",
+          "normalizedASTSHA256": "c45feb09170cb4fda4243cbbb15b42261910b019c668e5e99ad7cddf37765a87",
+          "codeSHA256": "8346442d23fb080ad427c28f1c8795430c1c9d7554b72a06f497b2ee3b6ba691",
+          "features": {
+            "propertyOperations": 104,
+            "distinctOperationPropertyPairs": 31,
+            "pogHash": "b550f043dd1f749a",
+            "graphNodes": 108,
+            "graphEdges": 155,
+            "graphOperationOccurrences": 153,
+            "distinctGraphOperationPropertyPairs": 26,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d.js",
+          "sourceSHA256": "3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d",
+          "span": [
+            7003,
+            7602
+          ],
+          "name": "createDefaultFormatters",
+          "normalizedASTSHA256": "f39ba647b2c37a08e05a1248ebe151117c59343f336300d6c74f556477da89f2",
+          "codeSHA256": "9a6953eb2f4e065717a9a8e2d1815f03e0c4a15c6e6f6c4eb0d2b136e1ef1729",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "b381b6fa007f8232",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d.js",
+          "sourceSHA256": "3ceb9d7ec736c5d3e4efb05b76878f633b80d3315d1ce75cdf15984d1269e78d",
+          "span": [
+            7665,
+            9295
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "7410054f24accab43eac097ce09a906867d1b078e629406c23d058d6f5082399",
+          "codeSHA256": "536520fbeb20b2e37c78dca7aa777cfa69d9b833c35d41cacd02797d6bc6b233",
+          "features": {
+            "propertyOperations": 25,
+            "distinctOperationPropertyPairs": 23,
+            "pogHash": "4df98568561bc40e",
+            "graphNodes": 19,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 33,
+            "distinctGraphOperationPropertyPairs": 22,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/bc7fdc25d9a39e8815aa",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "cc4143615b27c66eafbe913f132a9e41ac14c1e2ec6b2df24dafeaa97f028850"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     },
     {
-      "library": "uplot",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "library": "lodash-es",
+      "declaredVersion": "^4.17.21",
+      "origin": {
+        "kind": "npm-package",
+        "name": "lodash-es",
+        "version": "4.18.1",
+        "integrity": "sha512-J8xewKD/Gk22OZbhpOVSwcs60zhd95ESDwezOFuA3/099925PdHJ7OFHNTGtajL3AlZkykD32HykiMo+BIBI8A==",
+        "shasum": "b962eeb80d9d983a900bf342961fb7418ca10b1d",
+        "tarballSHA256": "b0c810e5cd4cd580ed7b18fc71384b9a80c151dc5c85b1729bd656a49e3f16f8",
+        "bytes": 149990,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 69,
+      "parsedFunctions": 78,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "_apply.js",
+          "source": "source-js/b2e6d04f093a956feef2d826cba78dab35ea1e87e8fdf7f905120adbc0bd134e.js",
+          "sourceSHA256": "b2e6d04f093a956feef2d826cba78dab35ea1e87e8fdf7f905120adbc0bd134e",
+          "span": [
+            374,
+            688
+          ],
+          "name": "apply",
+          "normalizedASTSHA256": "38347d01718bb5fa9830b605b71c3db70854483cdaf2855d402034af2041d503",
+          "codeSHA256": "8d43e85a2b8a55e2587f9158d547de015355f52e239a909602a3bbdf4cb3f84b",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "f6a77afc4d5f4db8",
+            "graphNodes": 13,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "_baseIntersection.js",
+          "source": "source-js/91185d9c6a2c28c515d452ac0f177a172cdf01da8d3177760921b0b357600207.js",
+          "sourceSHA256": "91185d9c6a2c28c515d452ac0f177a172cdf01da8d3177760921b0b357600207",
+          "span": [
+            797,
+            2225
+          ],
+          "name": "baseIntersection",
+          "normalizedASTSHA256": "19f80b0af3158dbee631559aa3039d0b86331fef0463e76ce3cbbffa7e48a8e1",
+          "codeSHA256": "276b3e57ce2e480d31e71d73f9bf0db8f9ff329c0171ea17f6261e118807b07a",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "1ca1d53d643d47",
+            "graphNodes": 45,
+            "graphEdges": 63,
+            "graphOperationOccurrences": 25,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "_baseIsMatch.js",
+          "source": "source-js/6820e70ce329033393a30946f5e79b8020afe60eb36399ca76062820eb994058.js",
+          "sourceSHA256": "6820e70ce329033393a30946f5e79b8020afe60eb36399ca76062820eb994058",
+          "span": [
+            650,
+            1733
+          ],
+          "name": "baseIsMatch",
+          "normalizedASTSHA256": "5b1e744082810620aaeba8dc0003d4030fe14a40b36263d5099e5391c265b520",
+          "codeSHA256": "4691f95bf50e567cafe5278a8fd62703eae9bfc887e80dea1f1238d5d3cdb0d2",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "44bfb73b4dc269d9",
+            "graphNodes": 26,
+            "graphEdges": 37,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 2,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/0a63ce328b1c883b9919",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
+    },
+    {
+      "library": "luxon",
+      "declaredVersion": "^3.4.4",
+      "origin": {
+        "kind": "npm-package",
+        "name": "luxon",
+        "version": "3.7.2",
+        "integrity": "sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==",
+        "shasum": "d697e48f478553cca187a0f8436aff468e3ba0ba",
+        "tarballSHA256": "498078da47254917ea264631160880fec8936994de3e6271e9c75c542bd35832",
+        "bytes": 1009319,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 8,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/datetime.js",
+          "source": "source-js/be10f67c2abadf2c5b178383d350f7867c051018d61903396fc5449b2bc4c0ef.js",
+          "sourceSHA256": "be10f67c2abadf2c5b178383d350f7867c051018d61903396fc5449b2bc4c0ef",
+          "span": [
+            2173,
+            2404
+          ],
+          "name": "clone",
+          "normalizedASTSHA256": "3419a33af4695dae46042097e2b75be22bce854806a64979a891161f5b8810e3",
+          "codeSHA256": "e202982db786cb5a04e33144432147e9121e94c18fceec88b91e004b2f537add",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "2b59bdfa915a2866",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/datetime.js",
+          "source": "source-js/be10f67c2abadf2c5b178383d350f7867c051018d61903396fc5449b2bc4c0ef.js",
+          "sourceSHA256": "be10f67c2abadf2c5b178383d350f7867c051018d61903396fc5449b2bc4c0ef",
+          "span": [
+            3411,
+            3732
+          ],
+          "name": "tsToObj",
+          "normalizedASTSHA256": "3244e93d54097360619c9f5cea4169bcfbdcbfb7d9d91885850d97004f7f523b",
+          "codeSHA256": "b634550b288550b00e719316b2ba9c020e7e5162d1ffbf80a54ef66c0b9c51b4",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "cd09ac392f6a1a4f",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/datetime.js",
+          "source": "source-js/be10f67c2abadf2c5b178383d350f7867c051018d61903396fc5449b2bc4c0ef.js",
+          "sourceSHA256": "be10f67c2abadf2c5b178383d350f7867c051018d61903396fc5449b2bc4c0ef",
+          "span": [
+            3947,
+            5051
+          ],
+          "name": "adjustTime",
+          "normalizedASTSHA256": "3dc713415ab2d5a118a3df18adbaabb23be02ba7188be758cc61b88ebccb290d",
+          "codeSHA256": "037eaed425034f08c991b5a64bd24b8d5298ebc2b3ea3037a90c54f6ce2fe14a",
+          "features": {
+            "propertyOperations": 57,
+            "distinctOperationPropertyPairs": 34,
+            "pogHash": "b04459c936a5e45c",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 47,
+            "distinctGraphOperationPropertyPairs": 32,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/064cfb74420d2d573b05",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "6cb2f2bf697ee9c6fa9eb8f227c63ee6e7a3cba42d4717f14c745ef9b6cbc006"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
+    },
+    {
+      "library": "socket.io-client",
+      "declaredVersion": "~4.8.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "socket.io-client",
+        "version": "4.8.4",
+        "integrity": "sha512-7wjKAvVXYOJsbmUgkWbnhPD4bFpkqrUR0++XOjpGFmqDqsqV1CI93VTraeExLxpjxEqrWgFoSRZu1ihjLWfkAA==",
+        "shasum": "98865b4b55abe0658f4bff5ca3ed583fbd0fc945",
+        "tarballSHA256": "0b40f47a2e2fe81182785dfcd333156d854e50bc4a5f23e654de7d7f7b0c151b",
+        "bytes": 331401,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 10,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "build/cjs/contrib/backo2.js",
+          "source": "source-js/dbd89b5c47cce2f54a1bc722c7cceba738c08fcf37e16074dd4a8f92d0e40bbd.js",
+          "sourceSHA256": "dbd89b5c47cce2f54a1bc722c7cceba738c08fcf37e16074dd4a8f92d0e40bbd",
+          "span": [
+            314,
+            560
+          ],
+          "name": "Backoff",
+          "normalizedASTSHA256": "2058e03cabf9d4404d7f5f97c28bc6dca80a8a6829994c8f9629a5e02e478604",
+          "codeSHA256": "b8faca844d9369074dd53835830ad7cd74d7ccbbd0b657e2c5fc93f5fd20810e",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "60d1a7d0fb9d10c1",
+            "graphNodes": 21,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/cjs/contrib/backo2.js",
+          "source": "source-js/dbd89b5c47cce2f54a1bc722c7cceba738c08fcf37e16074dd4a8f92d0e40bbd.js",
+          "sourceSHA256": "dbd89b5c47cce2f54a1bc722c7cceba738c08fcf37e16074dd4a8f92d0e40bbd",
+          "span": [
+            668,
+            990
+          ],
+          "name": "duration",
+          "normalizedASTSHA256": "316cad5dfab7eb3be08739870d695ccb9c3c02c759a4af318688015a379a02f2",
+          "codeSHA256": "d85f82863b4d2e422c8d17342a73cfaf4a458103df30414e9e08778cacdf0d65",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "b4b106afffa74b4c",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 9,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/cjs/index.js",
+          "source": "source-js/6b39eee0bb9bfe63c29d350d20176648f2e8cc30bb60783bad8841840925f8fa.js",
+          "sourceSHA256": "6b39eee0bb9bfe63c29d350d20176648f2e8cc30bb60783bad8841840925f8fa",
+          "span": [
+            997,
+            1973
+          ],
+          "name": "lookup",
+          "normalizedASTSHA256": "a2d9939c22faa98f25b49c69f4f7291489b05e9bd9578ab3a353c57ca935143e",
+          "codeSHA256": "4050aed2d7f27c7f055eaf89e016162f3544f89417b23f60d98929727aaf839d",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "63c6b5a6d23c36e8",
+            "graphNodes": 33,
+            "graphEdges": 42,
+            "graphOperationOccurrences": 42,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/bbf0e8bbef29c7fcb669",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "73cb68c437d59e066f9386ef97be57298df4db119fdbd7d7150817c6dbd9f189"
+        }
+      ],
+      "lockfileSHA256": "c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642",
+      "lockfileSnapshot": "lockfiles/c7008969b5a5cafe9f18bb89105b93e8e5b3cb7b6f4a9877faa476594b007642-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
@@ -668,465 +1114,24 @@
     "luxon",
     "socket.io-client"
   ],
-  "status": "included",
-  "referenceFailures": [],
-  "referenceFiles": 277,
-  "bundleUnits": 65,
-  "candidateOrder": [
-    "@immich/ui",
-    "@formatjs/icu-messageformat-parser",
-    "tailwind-merge",
-    "tabbable",
-    "tailwind-variants",
-    "justified-layout",
-    "svelte-persisted-store",
-    "@futo-org/backups-orchestrator-ui",
-    "@tanstack/svelte-query",
-    "media-chrome",
-    "@immich/justified-layout-wasm",
-    "@immich/sdk",
-    "@mdi/js",
-    "@noble/hashes",
-    "@photo-sphere-viewer/core",
-    "@photo-sphere-viewer/equirectangular-video-adapter",
-    "@photo-sphere-viewer/markers-plugin",
-    "@photo-sphere-viewer/resolution-plugin",
-    "@photo-sphere-viewer/settings-plugin",
-    "@photo-sphere-viewer/video-plugin",
-    "@simplewebauthn/browser",
-    "@types/geojson",
-    "@zoom-image/core",
-    "@zoom-image/svelte",
-    "dom-to-image",
-    "fabric",
-    "geo-coordinates-parser",
-    "geojson",
-    "handlebars",
-    "hash-wasm",
-    "hls-video-element",
-    "hls.js",
-    "intl-messageformat",
-    "lodash-es",
-    "luxon",
-    "maplibre-gl",
-    "pmtiles",
-    "qrcode",
-    "simple-icons",
-    "socket.io-client",
-    "svelte-confetti",
-    "svelte-gestures",
-    "svelte-i18n",
-    "svelte-jsoneditor",
-    "svelte-maplibre",
-    "thumbhash",
-    "transformation-matrix",
-    "uplot"
-  ],
-  "selectionAttempts": [
-    {
-      "library": "svelte-persisted-store",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "svelte-persisted-store"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
     },
-    {
-      "library": "@futo-org/backups-orchestrator-ui",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "@futo-org/backups-orchestrator-ui"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@tanstack/svelte-query",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "@tanstack/svelte-query"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "media-chrome",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "media-chrome"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@immich/justified-layout-wasm",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "@immich/justified-layout-wasm"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@mdi/js",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "@mdi/js"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "intl-messageformat",
-      "initialAnchors": 7,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "intl-messageformat"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "lodash-es",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "intl-messageformat",
-        "lodash-es"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "luxon",
-      "initialAnchors": 58,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "intl-messageformat",
-        "lodash-es",
-        "luxon"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "socket.io-client",
-      "initialAnchors": 14,
-      "trialLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
-        "tailwind-merge",
-        "tabbable",
-        "tailwind-variants",
-        "justified-layout",
-        "intl-messageformat",
-        "lodash-es",
-        "luxon",
-        "socket.io-client"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    }
-  ],
-  "sourceDiagnostics": [
-    {
-      "kind": "parse-error",
-      "unit": "s-60c6b2e154af0fe861ae10c282ca39487089e50c9e20f6d52215968938a08cf4",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3e81b8977402dd0013a43f83669e200bc00b6969060e4a992de8ae95f6a95096",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e13fd7a60347a58759f4bf111717f03c09d01ddb21b6fcca33cef65199e4e79b",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3d990ca305e4c2807df46e8771e7f67c4b6a590c599312f0b171aff254213364",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-738b109466abb2e2ed379fa4273a71bee6477901e3a307707bda1104e0b5c8fe",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-119061fc713db6970c44215728bbf3d2ec91314e1d52a6f728df9882565749b5",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-97909287d61cb7e71a1aeae67ce61f97ea074a4db67d8f330ccb3833e0a96785",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-003f572b727279eace742c664c3b3ea9eb4981054489d47335eadd3f06230600",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-5ce5eb73de77bc1efa36ded2e8e4c02dfd40ca20f3fa3b912000e554fdcaa7a1",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-0c8a11b399b17494c01cb8d27bedeb0feb068ad2bd9562b07034e367838fe9fc",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8fe2d9032f393bbd137ec58156c2c2ad2d2a2e544ce11b4e09b60438563da404",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-cc4b343b86c76dca62332da1127e04bc77d3049b8145ae7ee5f1d8eefe9647a7",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-1eb385410370512ee3697b632b9627681b8e8d1011197d5c5e956f2bbcd76df7",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-fabdecd7d71031a45f6c2ca63dcd5b6436fab53b1a31a61cbf3c9fcf003a6509",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-f8ffea69614c3ed4b74355861c8b132f5894d241733375468ee3afd45feae19e",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-89832062201a0a6bca8ffcb74ff81f69ce7639b294aebf611ed3d412468a0351",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-34f85e14031d1f472f381c4f94e020775844b9b48b92a953e681f0d11e5c1f6d",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-06f263d703d5b2387c2718665e8af7d86a4994676cb616cd4d366e44dc8acd84",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-0d3344fff566d7ff327b710a9165c9e247b2b627a60c8b91e1b654ac30a432ac",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-74e10c542356b814c0b31224ceceabc6a6bb6b71ae33f79c6cd1139375f332ca",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-7d494524cdef714e8dd0e9c74f841522207e8603d4ce3b5c0e85a289d7d97f84",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c7701eb330073877a1be5c4e5ad23ee0cd2e9fbc2de658a5d51310bbde497d60",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a9adbd2f287b22aad258e703a062e23639f142082131f1b3fe501bf4eb3f8238",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-85ecd9a06457196dacb168d9a0fb8a0ee72a8ecadb5a8168ada5d6317f3db6ef",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-646122d41262257e34849b3067c2575b8b8a49ab2d905b77d00cc7b47a9bec77",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-7d87a0248a024e8a9fbded5d4dc1c872932b9852e1dcb2232bf5df1bdb239019",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-67599d386482ffb529a1eea4ff6cb7fa4b0bcbbf35eba78ba14a58f411c8362c",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-67953e3725180ef7989a3c1c45242e099f497983eadec27a2062fcbf5313586a",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-99b8a4643cd5043f5806da0c1eac9cbe08d49b6368aacd63a90d19fe05ae6a7a",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-1b5fd1a04002daacddf1f8cd14d4cd7ff61deea97b0f8efe4f57d36652265b93",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-5e419792c48e72e4ccfe96413f0be0cbdb6958f429beb48866752b9cada7ee34",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-07e48101bf5199ce65bd863ea336cf82ef8be192df00c1a7572a32ea8d96baa3",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-ef21cf44777e1b53e35f4437b8b8d5aaf46192a0cfe210d6b7e455245d93bb65",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3f506bcb9f707ec47504b64dca6d37632e26c4e9cfbb3f97dbdfe8406cd794af",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3994682da5fe3d31061918a92ab6b7f902da2f0b5e56eae96a50c1e717e416cb",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e50ac631187d6efd3678551324a27572227eef25c1a523f231df061fa22f33ed",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-ea936a3865b4c684e6eca2e79faab53db3231e78c40238bcf17428134a714f54",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-debc1dee4b2ee782a1d7af1895b5bb0cf9f1951c7e294ddc52d7606667e63f65",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-b8966de02a982ede3ae0329219f7e3fc6c967158ed80a473daa5d8ab53eb87e3",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-40e57ddb2119d856e236222f73c2162bd2bd0a4b1356ea6aec2da3fb574d7ad6",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-9b489e22ab982abda4acd2e679943f80dcfac3ef7a517e2140856145c0128d0f",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8bafcea4a2561a47f3e54507ddedd8b92459b4579d52cf870b6babd386dbe2b4",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8514d071c953fbd7ff3339ac86f2942b421962755fd5e0cab051a9745e3bc3f3",
-      "error": "[1:0-1:1]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-54fb4cfc3631e29f6abb533fccc0e8bc1b391c3b1996562b5e05c053b1f04988",
-      "error": "[4:7-4:16]: Unexpected token: 'interface'"
-    }
-  ],
-  "bundleDiagnostics": [],
-  "sourceDigest": "623418b792f3cfa74af9e60c481123e286e860b674ffed6fd427ef7e63d3ac1a",
-  "bundleDigest": "d2645c51038c5d1d1d6242633f3d99a5bb5c0f7eb64e9e2d75226d2bf605f40d",
-  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
-  "finalSourceDigest": "cdd14916631db66b79768ff7f8c976ec7015497d20e86a19c8dface0e2937869",
+    "frontendManifestSHA256": "065ed2f44406e397bb9dea8d742733740566b088dd8964bbd5746f9a73b78d39",
+    "manifestRelative": "web/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:14.753Z",
   "reason": null,
-  "organizationSignature": "9716e1a4a21e7a1e0451499a6fb05137b7d7d42047fbb9b65472e7f60a16897f"
+  "finished": "2026-11-09T03:44:15.059Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/immich-app--immich/qualification.json",
+  "sourceEligibilityRecordSHA256": "7fb56cd03bf90e53c7bcc8336fc49f9eec416c73d42b2a73929b00533a2c2438",
+  "organizationSignature": "ee1fd2d50830fda1b5618f213066af228633b0ee81cedefa01aa506b5377a429"
 }

@@ -1,26 +1,20 @@
 {
-  "schema": "recall.dataset-anchor-qualification/v1",
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "webpack/dokploy--dokploy",
+  "repo": "dokploy/dokploy",
+  "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
   "policy": {
-    "candidateField": "dependencies",
-    "minInitialAnchors": 3,
-    "minLibraries": 5,
-    "maxLibraries": 10,
-    "counting": "distinct source functions before propagation; repeated target copies count once",
-    "options": {
-      "minFeatures": 10,
-      "featureMetric": "propertyOperations",
-      "minAnchors": 3,
-      "uniqueBundle": true
-    }
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "provenance": {
-    "groundTruthSHA256": "b85eb3568c86c2d1caa0b35ee7fd24f62dc3029ed1b6a626661c6538b030e91e",
-    "manifestSHA256": "53a4bb794faa71fe88f01fb807e15d80ab17e0ea254ee3a0fc612aad569a1ed4",
-    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
-    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
-    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
-    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
-  },
+  "selectionOverride": {},
   "candidates": [
     "@ai-sdk/anthropic",
     "@ai-sdk/azure",
@@ -137,1157 +131,1275 @@
     "zod",
     "zod-form-data"
   ],
-  "excludedPreviouslySelected": [],
   "libraries": [
     {
-      "library": "@ai-sdk/anthropic",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@ai-sdk/azure",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@ai-sdk/cohere",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@ai-sdk/deepinfra",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@ai-sdk/mistral",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@ai-sdk/openai",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@ai-sdk/openai-compatible",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@aws-sdk/client-cloudwatch",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@aws-sdk/client-cloudwatch-logs",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@aws-sdk/client-route-53",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@aws-sdk/client-secrets-manager",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@aws-sdk/client-ssm",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@better-auth/api-key",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@better-auth/api-key"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 1,
-      "sourceFiles": 2
-    },
-    {
-      "library": "@better-auth/passkey",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@better-auth/passkey"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 8,
-      "sourceFiles": 2
-    },
-    {
-      "library": "@better-auth/scim",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@better-auth/sso",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@better-auth/sso"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 1,
-      "sourceFiles": 2
-    },
-    {
-      "library": "@codemirror/autocomplete",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/lang-css",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/lang-json",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/lang-yaml",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/language",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/legacy-modes",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/search",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/view",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@dokploy/server",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@dokploy/trpc-openapi",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@faker-js/faker",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@hookform/resolvers",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@hookform/resolvers"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 15,
-      "sourceFiles": 2
-    },
-    {
-      "library": "@octokit/auth-app",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@octokit/webhooks",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@openpanel/nextjs",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@openpanel/nextjs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 21,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@react-email/components",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@stepperize/react",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@stripe/stripe-js",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@tailwindcss/typography",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@tanstack/react-query",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 64,
-      "sourceFiles": 18,
-      "finalInitialAnchors": 4
-    },
-    {
-      "library": "@tanstack/react-table",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@tanstack/react-virtual",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@trpc/client",
-      "initialAnchors": 18,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 323,
-      "sourceFiles": 10,
-      "finalInitialAnchors": 18
-    },
-    {
-      "library": "@trpc/next",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/next"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 32,
-      "sourceFiles": 2
-    },
-    {
-      "library": "@trpc/react-query",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 154,
-      "sourceFiles": 3,
-      "finalInitialAnchors": 3
-    },
-    {
-      "library": "@trpc/server",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "@trpc/server"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 160,
-      "sourceFiles": 5
-    },
-    {
-      "library": "@uiw/codemirror-theme-github",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@uiw/react-codemirror",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@xterm/addon-attach",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@xterm/addon-clipboard",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@xterm/xterm",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "adm-zip",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ai",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ai-sdk-ollama",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "bcrypt",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
       "library": "better-auth",
-      "initialAnchors": 10,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "@better-auth/passkey",
-        "next",
-        "react"
-      ],
+      "declaredVersion": "1.6.23",
+      "origin": {
+        "kind": "npm-package",
+        "name": "better-auth",
+        "version": "1.6.23",
+        "integrity": "sha512-4vOaRd9UiKGKm9R+ej0jjU1es3MiJIiNc9Qq3VCnYqOZ4/nb5272QqTxWYoDxyUXl5x6A2x2we5KZKQO9teTQQ==",
+        "shasum": "1af5228d94be69fb2e63b5bfd57d843c849cc28a",
+        "tarballSHA256": "aab69e4ec8d694a68cd89c9dce8a6815844e4d3ba0d7e88d4b3385d00e5c7d57",
+        "bytes": 364058,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 169,
-      "sourceFiles": 29,
-      "finalInitialAnchors": 10
-    },
-    {
-      "library": "bl",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "boxen",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "class-variance-authority",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "class-variance-authority"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 25,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/api/dispatch.mjs",
+          "source": "source-js/18567f3d00a505d912edf655d881695302aefce4ab641648a5ef67452c04c1b0.js",
+          "sourceSHA256": "18567f3d00a505d912edf655d881695302aefce4ab641648a5ef67452c04c1b0",
+          "span": [
+            2726,
+            4449
+          ],
+          "name": "runBeforeHooks",
+          "normalizedASTSHA256": "61bdf210783a16e0bf00388d114eb59012d5d79ab4639e580ebbad644ad339b2",
+          "codeSHA256": "aa1843324853da1b828ac6f690750eaee2b6a3c534bf6e5608ac2f047f8c0f08",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "c075c7cc2e413862",
+            "graphNodes": 27,
+            "graphEdges": 35,
+            "graphOperationOccurrences": 35,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/api/dispatch.mjs",
+          "source": "source-js/18567f3d00a505d912edf655d881695302aefce4ab641648a5ef67452c04c1b0.js",
+          "sourceSHA256": "18567f3d00a505d912edf655d881695302aefce4ab641648a5ef67452c04c1b0",
+          "span": [
+            4450,
+            5399
+          ],
+          "name": "runAfterHooks",
+          "normalizedASTSHA256": "f0e715049212e7628f3d4bfd69a32a6736011e71f80eafe8ba3abef331547b8d",
+          "codeSHA256": "b0f7c8f9d80edb6fe5fff9a5fe93c65943c51bcf43bc6ce57374f2fce79677d7",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "d9afe7f1302cd9b0",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 30,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/api/dispatch.mjs",
+          "source": "source-js/18567f3d00a505d912edf655d881695302aefce4ab641648a5ef67452c04c1b0.js",
+          "sourceSHA256": "18567f3d00a505d912edf655d881695302aefce4ab641648a5ef67452c04c1b0",
+          "span": [
+            5400,
+            6508
+          ],
+          "name": "getHooks",
+          "normalizedASTSHA256": "b08b963974b4f8cdfc40f89fbbfaa1e811727730e8b18c0e924520c2e290699e",
+          "codeSHA256": "a4b59778c2166220689d9379d32135d2cbf8d133457a24de25aa3a06bf0ffea0",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "c2b04211709b887c",
+            "graphNodes": 19,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 36,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 7,
-      "sourceFiles": 1
-    },
-    {
-      "library": "clsx",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "clsx"
+      "proofDirectory": "eligibility/libraries/bbf91d4eab6e0ee657f0",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "7a07f7d9085cb3157e4377d944988c9712933141b0f7201955ceccfac92abde4"
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 2,
-      "sourceFiles": 1
-    },
-    {
-      "library": "cmdk",
-      "initialAnchors": 8,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 100,
-      "sourceFiles": 2,
-      "finalInitialAnchors": 8
-    },
-    {
-      "library": "copy-to-clipboard",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "copy-to-clipboard"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 3,
-      "sourceFiles": 1
-    },
-    {
-      "library": "date-fns",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "dockerode",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "dompurify",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "dotenv",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "drizzle-orm",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "drizzle-zod",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "fancy-ansi",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "input-otp",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "js-cookie",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "lodash",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "lucide-react",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "micromatch",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "nanoid",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "next",
-      "initialAnchors": 5,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "@better-auth/passkey",
-        "next",
-        "react"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 127,
-      "sourceFiles": 13,
-      "finalInitialAnchors": 5
-    },
-    {
-      "library": "next-themes",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "next-themes"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 25,
-      "sourceFiles": 1
-    },
-    {
-      "library": "nextjs-toploader",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "nextjs-toploader"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 36,
-      "sourceFiles": 1
-    },
-    {
-      "library": "node-os-utils",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "node-pty",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "node-schedule",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "nodemailer",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "octokit",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "pino",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "pino-pretty",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "postgres",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "posthog-js",
-      "initialAnchors": 149,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "posthog-js"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 2041,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 149
-    },
-    {
-      "library": "public-ip",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "qrcode",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "radix-ui",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "@better-auth/passkey",
-        "next",
-        "react"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 68,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 4
-    },
-    {
-      "library": "react-confetti-explosion",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react-day-picker",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
     },
     {
       "library": "react-dom",
-      "initialAnchors": 104,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "@better-auth/passkey",
-        "next",
-        "react"
-      ],
+      "declaredVersion": "19.2.7",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react-dom",
+        "version": "19.2.7",
+        "integrity": "sha512-t0BRVXvbiE/o20Hfw669rLbMCDWtYZLvmJigy2f0MxsXF+71pxhR3xOkspmsO8h3ZlNzyibAmtCa3l4lYKk6gQ==",
+        "shasum": "0450dc9ae9ddbff76ef196401cd8b8c7fb466ccc",
+        "tarballSHA256": "e47bae602149b38b90b452c89e53d2d60639fee09361d90374983a6aac62739e",
+        "bytes": 1276388,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 653,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 104
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 26,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs/react-dom-client.development.js",
+          "source": "source-js/638fcb800207eaf4c5b2427f13fb82362b8e06df51e65d92fa350fbfeaa8fd89.js",
+          "sourceSHA256": "638fcb800207eaf4c5b2427f13fb82362b8e06df51e65d92fa350fbfeaa8fd89",
+          "span": [
+            1354,
+            1896
+          ],
+          "name": "copyWithRenameImpl",
+          "normalizedASTSHA256": "a541518110416de447df2ef869f46e63ff8e3b745fbbbcfd523af8d32c6cacff",
+          "codeSHA256": "d5ecc063a17ba365cfcc4c41cd8bfbfa5910469b37defd54dc3dae1da97cd336",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "f9613c5bf1174628",
+            "graphNodes": 13,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-dom-client.development.js",
+          "source": "source-js/638fcb800207eaf4c5b2427f13fb82362b8e06df51e65d92fa350fbfeaa8fd89.js",
+          "sourceSHA256": "638fcb800207eaf4c5b2427f13fb82362b8e06df51e65d92fa350fbfeaa8fd89",
+          "span": [
+            5573,
+            8199
+          ],
+          "name": "findCurrentFiberUsingSlowPath",
+          "normalizedASTSHA256": "b3c49c63101b3cf452f7a5a07fefb6ba962bf11f7675ccdc06db2044624bfa63",
+          "codeSHA256": "ef95cd900b9075a6620b8180b5958771013bbe32ad41eb0fb14c2bceac53990f",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "90c38d3830c80b61",
+            "graphNodes": 50,
+            "graphEdges": 70,
+            "graphOperationOccurrences": 25,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-dom-client.development.js",
+          "source": "source-js/638fcb800207eaf4c5b2427f13fb82362b8e06df51e65d92fa350fbfeaa8fd89.js",
+          "sourceSHA256": "638fcb800207eaf4c5b2427f13fb82362b8e06df51e65d92fa350fbfeaa8fd89",
+          "span": [
+            8895,
+            10977
+          ],
+          "name": "getComponentNameFromType",
+          "normalizedASTSHA256": "86dd4c4b399fdf5fe368ddf1543c81735901e6afddd8c7f0e4288023215da3f4",
+          "codeSHA256": "b98b702c059597904ffd1563d0137ad96b3ba5529bd41255c4b54a9599422cb0",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "c1756c041d3cccfb",
+            "graphNodes": 46,
+            "graphEdges": 73,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/de7f2df91c095f0cd45d",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
+    },
+    {
+      "library": "next",
+      "declaredVersion": "16.4.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "next",
+        "version": "16.4.1",
+        "integrity": "sha512-uc657V62E34fOI6W5NtG9IzwsPcms0Z60grz2MJGtglgD+pTFnNt4Yw2PzaU622tfX4vhrDgLZzicE2YlhI20Q==",
+        "shasum": "a4e3397b5d2b1356950cb13be7e6a05d1a4e7545",
+        "tarballSHA256": "2e5dc3186f842e4871b99aa2b8dedb80677a823f8628b37b46de024f38cf8906",
+        "bytes": 43677546,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/build/adapter/build-complete.js",
+          "source": "source-js/9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550.js",
+          "sourceSHA256": "9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550",
+          "span": [
+            2921,
+            3962
+          ],
+          "name": "_interop_require_wildcard",
+          "normalizedASTSHA256": "91c7159087b73589f1efadfce31fed37bdc2183883bfe478f7a3d8a2b446fa4a",
+          "codeSHA256": "45629495911ae4198756845c82ad30a6cfb144bb09cb2cec8275261207365a1d",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "4c07a80ddd72876a",
+            "graphNodes": 36,
+            "graphEdges": 51,
+            "graphOperationOccurrences": 19,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/build/adapter/build-complete.js",
+          "source": "source-js/9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550.js",
+          "sourceSHA256": "9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550",
+          "span": [
+            5540,
+            6045
+          ],
+          "name": "normalizePathnames",
+          "normalizedASTSHA256": "ce0bac5cd0fdf42e0c01fe22a801e1d69dda6a92f2ce39c0f0305df2f294904d",
+          "codeSHA256": "430fc1f179373630b8d273fe45e54cdc051d806a4f9fa96d1d447c778895f3a3",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "6ad8ed5fd54af195",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/build/adapter/build-complete.js",
+          "source": "source-js/9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550.js",
+          "sourceSHA256": "9d59af31d856b59e28dfea3481375045e98a422d0c747e5f049b435ce689e550",
+          "span": [
+            13651,
+            14360
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "bab421be23091bcc8183eb6fceb29d3a5187fffb577c8cf55224919e9b6319b7",
+          "codeSHA256": "c6c6748d30ded49770cb0b5c0ab3c2f8cafd317e5ca2b6504b4451ce1a4f0e5b",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "109018fa0856c895",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/c6c1c9a9c8543f1e4cd9",
+      "licenses": [
+        {
+          "path": "licenses/license.md",
+          "sha256": "ee765244e2d59f5234d474f62e0766fa0c8b99af967fdd4c0cb8dcb0c76ea224"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
+    },
+    {
+      "library": "react",
+      "declaredVersion": "19.2.7",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react",
+        "version": "19.2.7",
+        "integrity": "sha512-HNe9WslTbXmFK8o8cmwgAeJFSBvt1bPdHCVKtaaV+WlAN36mpT4hcRpwbf3fY56ar2oIXzsBpOAiIRHAdY0OlQ==",
+        "shasum": "1f47a1bfc06f8ec885752c6f4af14369a9f8260b",
+        "tarballSHA256": "d0065884db7670ffb89046826995cf0d7754a31653d23908532e52671bf83d7d",
+        "bytes": 24805,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 4,
+      "parsedFunctions": 17,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6.js",
+          "sourceSHA256": "5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6",
+          "span": [
+            329,
+            2411
+          ],
+          "name": "getComponentNameFromType",
+          "normalizedASTSHA256": "86dd4c4b399fdf5fe368ddf1543c81735901e6afddd8c7f0e4288023215da3f4",
+          "codeSHA256": "b98b702c059597904ffd1563d0137ad96b3ba5529bd41255c4b54a9599422cb0",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "c1756c041d3cccfb",
+            "graphNodes": 46,
+            "graphEdges": 73,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6.js",
+          "sourceSHA256": "5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6",
+          "span": [
+            5443,
+            6710
+          ],
+          "name": "ReactElement",
+          "normalizedASTSHA256": "b18cc8facd1bd73f3368c10c7c5f031688201b1b722acec17670f7ffebfbb594",
+          "codeSHA256": "fe2e3d588fce318b699bbc9b6ddfe9524709bf422e494bbc1a22ec31dc713dd3",
+          "features": {
+            "propertyOperations": 38,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "8d3675760b68c9c8",
+            "graphNodes": 10,
+            "graphEdges": 11,
+            "graphOperationOccurrences": 47,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6.js",
+          "sourceSHA256": "5a36d0fbb3554be840e6367736f88ebafdb1873a4f40c13f499c3969fa918dd6",
+          "span": [
+            6715,
+            9241
+          ],
+          "name": "jsxDEVImpl",
+          "normalizedASTSHA256": "8df55cec69d114e5e279ac24ce16773ec136ba8d9a943aa6345d591381066ecf",
+          "codeSHA256": "eb360597528102e2cb99492a47784e50a4b2624060c29bbf16ce148fa12fe910",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "c843a45f0e5bbdba",
+            "graphNodes": 40,
+            "graphEdges": 56,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/275976081ce1abf67779",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
+    },
+    {
+      "library": "@tanstack/react-query",
+      "declaredVersion": "^5.90.21",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tanstack/react-query",
+        "version": "5.90.21",
+        "integrity": "sha512-0Lu6y5t+tvlTJMTO7oh5NSpJfpg/5D41LlThfepTixPYkJ0sE2Jj0m0f6yYqujBwIXlId87e234+MxG3D3g7kg==",
+        "shasum": "e0eb40831a76510be438109435b8807ef63ab1b9",
+        "tarballSHA256": "7b3997828545c8b208d643c70ba67942c360592e60e69463fd755b0947224360",
+        "bytes": 76225,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 21,
+      "diagnostics": [
+        {
+          "file": "src/errorBoundaryUtils.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/HydrationBoundary.tsx",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/infiniteQueryOptions.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/mutationOptions.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/QueryClientProvider.tsx",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/QueryErrorResetBoundary.tsx",
+          "error": "SyntaxError: [5:7-5:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/queryOptions.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/suspense.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/types.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useBaseQuery.ts",
+          "error": "SyntaxError: [19:12-19:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useInfiniteQuery.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useIsFetching.ts",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useMutation.ts",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useMutationState.ts",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/usePrefetchInfiniteQuery.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/usePrefetchQuery.tsx",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useQueries.ts",
+          "error": "SyntaxError: [23:12-23:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useQuery.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useSuspenseInfiniteQuery.ts",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useSuspenseQueries.ts",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/useSuspenseQuery.ts",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "build/codemods/src/utils/index.cjs",
+          "source": "source-js/6fb91b9655b003408a686661fff975e7320766417b242cd2ee9c70d8899bf7f6.js",
+          "sourceSHA256": "6fb91b9655b003408a686661fff975e7320766417b242cd2ee9c70d8899bf7f6",
+          "span": [
+            716,
+            1019
+          ],
+          "name": "findNamespaceImportIdentifier",
+          "normalizedASTSHA256": "4a2b1316edde2d48e944014d6942f70aa28d8904adb11bb4791acb3f4d29864f",
+          "codeSHA256": "75264db361d06128009d15081f0a81598c47ace8ad21a75d38439cce597ad476",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "ab4c0ed1dec87a29",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/codemods/src/utils/index.cjs",
+          "source": "source-js/6fb91b9655b003408a686661fff975e7320766417b242cd2ee9c70d8899bf7f6.js",
+          "sourceSHA256": "6fb91b9655b003408a686661fff975e7320766417b242cd2ee9c70d8899bf7f6",
+          "span": [
+            1955,
+            2232
+          ],
+          "name": "findAllMethodCalls",
+          "normalizedASTSHA256": "9fe5b9cfb061784d3209e71248d312f2f85d9cf9ab84612ce67ea5b7f2ebee12",
+          "codeSHA256": "646691dff4e9d8791e4f1758baad9eca1b580b55d41450d08036c989747599eb",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "895fbfa9a2a67af",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/codemods/src/utils/index.cjs",
+          "source": "source-js/6fb91b9655b003408a686661fff975e7320766417b242cd2ee9c70d8899bf7f6.js",
+          "sourceSHA256": "6fb91b9655b003408a686661fff975e7320766417b242cd2ee9c70d8899bf7f6",
+          "span": [
+            4325,
+            4688
+          ],
+          "name": "isClassInstantiationOf",
+          "normalizedASTSHA256": "74c2eb2f93bf198f9774ddcfd4887dec760fdd0f60daf54de84454e7e37c723b",
+          "codeSHA256": "6a1230e10a494d30dfaeb6127b411ea7b577513eeb56144544c9c4db64e3eae2",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "5c501abafb924728",
+            "graphNodes": 14,
+            "graphEdges": 17,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/8e213ec8bec3b5dccfeb",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "a405ee70c632bb938acb7ac5f210e814409b3760ea9d2329d8ed8ffcfd11a0e7"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
+    },
+    {
+      "library": "@trpc/client",
+      "declaredVersion": "^11.10.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@trpc/client",
+        "version": "11.10.0",
+        "integrity": "sha512-h0s2AwDtuhS8INRb4hlo4z3RKCkarWqlOy+3ffJgrlDxzzW6aLUN+9nDrcN4huPje1Em15tbCOqhIc6oaKYTRw==",
+        "shasum": "f8e7e74b8bf072fcd7144b95d4da18b87000334e",
+        "tarballSHA256": "622b37baba5b8c652f70dc4ded12ad6d3013c8ee74a0ab7fa14759128b94b4ad",
+        "bytes": 135181,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 29,
+      "diagnostics": [
+        {
+          "file": "src/createTRPCClient.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/createTRPCUntypedClient.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/getFetch.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internals/dataLoader.ts",
+          "error": "SyntaxError: [3:5-3:14]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/internals/inputWithTrackedEventId.ts",
+          "error": "SyntaxError: [2:7-2:8]: Expected ')'"
+        },
+        {
+          "file": "src/internals/signals.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internals/transformer.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internals/TRPCUntypedClient.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internals/types.ts",
+          "error": "SyntaxError: [8:7-8:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/links/httpBatchLink.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/HTTPBatchLinkOptions.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/httpBatchStreamLink.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/httpLink.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/httpSubscriptionLink.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/internals/contentTypes.ts",
+          "error": "SyntaxError: [2:7-2:8]: Expected ')'"
+        },
+        {
+          "file": "src/links/internals/createChain.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/internals/dedupeLink.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/internals/httpUtils.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/internals/urlWithConnectionParams.ts",
+          "error": "SyntaxError: [1:14-1:29]: Expected ','"
+        },
+        {
+          "file": "src/links/localLink.ts",
+          "error": "SyntaxError: [7:39-7:49]: Expected ','"
+        },
+        {
+          "file": "src/links/loggerLink.ts",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/retryLink.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/splitLink.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/wsLink/createWsClient.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/wsLink/wsClient/encoder.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/wsLink/wsClient/options.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/wsLink/wsClient/requestManager.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/wsLink/wsClient/utils.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/wsLink/wsClient/wsClient.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/wsLink/wsClient/wsConnection.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/links/wsLink/wsLink.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/TRPCClientError.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/httpBatchLink-cNDaD5bT.cjs",
+          "source": "source-js/d717cf7d83ae9dfe1e79b38ec1f72b8402352b72d6564fbf336f2bac2ad5e8dc.js",
+          "sourceSHA256": "d717cf7d83ae9dfe1e79b38ec1f72b8402352b72d6564fbf336f2bac2ad5e8dc",
+          "span": [
+            1327,
+            2183
+          ],
+          "name": "groupItems",
+          "normalizedASTSHA256": "2d0f8ae46d232f1e0e2658c982b0ef4b93b1b4cf09d8a1b7ba9d577866266b14",
+          "codeSHA256": "ac1d8b9439b2f598d1db7c5f7471c3f34ccf4bcbd48bbb37f63e6e3a650eb8bf",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "b52a663e811dafd0",
+            "graphNodes": 21,
+            "graphEdges": 27,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/httpBatchLink-cNDaD5bT.cjs",
+          "source": "source-js/d717cf7d83ae9dfe1e79b38ec1f72b8402352b72d6564fbf336f2bac2ad5e8dc.js",
+          "sourceSHA256": "d717cf7d83ae9dfe1e79b38ec1f72b8402352b72d6564fbf336f2bac2ad5e8dc",
+          "span": [
+            2582,
+            3104
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "90a979d1e59d6ab1447a56fb8a172529e055d9d25a02edf2d70c71995a5ba32e",
+          "codeSHA256": "6452559d5761e8a69aa06d76010fe1748aee23bee7ebd28c01e37a50a2fcae42",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "7a030912302b9b92",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/httpBatchLink-cNDaD5bT.cjs",
+          "source": "source-js/d717cf7d83ae9dfe1e79b38ec1f72b8402352b72d6564fbf336f2bac2ad5e8dc.js",
+          "sourceSHA256": "d717cf7d83ae9dfe1e79b38ec1f72b8402352b72d6564fbf336f2bac2ad5e8dc",
+          "span": [
+            6239,
+            6735
+          ],
+          "name": "validate",
+          "normalizedASTSHA256": "3421b16d92d8091e8b50e9f739617df3b094f6d787e9c4db7c19178fb09dedf7",
+          "codeSHA256": "a46826e8425250de6ac20c03d3d30e2313319cf01437185eaa2f0701e19fb7fd",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "25215ef935a3a2b7",
+            "graphNodes": 9,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/70047b1fce7cba46a01b",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "e714dd84c8fa242600844b05d317a31003423723178c1f1603dbfad1bc68d906"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
+    },
+    {
+      "library": "@trpc/react-query",
+      "declaredVersion": "^11.10.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@trpc/react-query",
+        "version": "11.10.0",
+        "integrity": "sha512-SKLpwEMU32mpDTCc3msMxb0fx113x4Jsiw0/t+ENY6AtyvhvDMRF1bpWtoNyY6zpX5wN4JCQMhHef8k0T1rJIw==",
+        "shasum": "344a15f9a8f0d3c554d1be9032c51a48b66073c0",
+        "tarballSHA256": "d98bf140fe2b9035740e4efb6963292b7456b568994b3d05f0064bc6a779ce96",
+        "bytes": 125317,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 6,
+      "parsedFunctions": 92,
+      "diagnostics": [
+        {
+          "file": "src/createTRPCQueryUtils.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/createTRPCReact.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internals/context.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internals/getClientArgs.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internals/getQueryKey.ts",
+          "error": "SyntaxError: [4:7-4:18]: Expected ','"
+        },
+        {
+          "file": "src/internals/trpcResult.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internals/useQueries.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/rsc.tsx",
+          "error": "SyntaxError: [6:7-6:18]: Expected ','"
+        },
+        {
+          "file": "src/server/ssgProxy.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/hooks/createHooksInternal.tsx",
+          "error": "SyntaxError: [16:12-16:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/hooks/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/index.ts",
+          "error": "SyntaxError: [4:7-4:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/shared/polymorphism/mutationLike.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/polymorphism/queryLike.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/proxy/decorationProxy.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/proxy/useQueriesProxy.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/proxy/utilsProxy.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/queryClient.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/shared/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utils/createUtilityFunctions.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/getQueryKey-PyKLS56S.cjs",
+          "source": "source-js/bc7fbb73a61576b60314ab11c5c2893d8d2bf8b95bdb7a41580754948fd72a7c.js",
+          "sourceSHA256": "bc7fbb73a61576b60314ab11c5c2893d8d2bf8b95bdb7a41580754948fd72a7c",
+          "span": [
+            7565,
+            8359
+          ],
+          "name": "getQueryKeyInternal",
+          "normalizedASTSHA256": "6e0a7c675e73f129bc8e0dd8a662b2dc4d10fc87181c772bab0ed27e791f7725",
+          "codeSHA256": "65539064c833b915953808c5b115254fd646a2f953b7bccce346797d154e5d70",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "905dc2c9d4e7d463",
+            "graphNodes": 27,
+            "graphEdges": 37,
+            "graphOperationOccurrences": 19,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/rsc.cjs",
+          "source": "source-js/df123c9150baa761d28db8efbfb6afa8c7ae1cbf66a69be67873b602ddb87f49.js",
+          "sourceSHA256": "df123c9150baa761d28db8efbfb6afa8c7ae1cbf66a69be67873b602ddb87f49",
+          "span": [
+            1257,
+            2368
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "9a25d31816aae6927fb84859c78afa0334cffd9a25aabedd2747c9afc48b85d6",
+          "codeSHA256": "a929a7986c1970589776b2f11e8c5d1b5ca70a639703674206066a8af9858683",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "85e0fd7498ad5db7",
+            "graphNodes": 16,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 23,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/rsc.mjs",
+          "source": "source-js/ac4494b769ea75332d689bdd08759b1ab274c6dc939a81f12853459790d70801.js",
+          "sourceSHA256": "ac4494b769ea75332d689bdd08759b1ab274c6dc939a81f12853459790d70801",
+          "span": [
+            1037,
+            2108
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "82e9bf7812ec8f04ba823ad92845602d9614304647feb180820359e68cf9b299",
+          "codeSHA256": "24d135299dab8e59c85549c089148071e86a8b64a8ae6d7edc23b1b80725d9cc",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "1027ca5f8b5b58ef",
+            "graphNodes": 16,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/f2aee11fc03b0f351531",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "e714dd84c8fa242600844b05d317a31003423723178c1f1603dbfad1bc68d906"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
+    },
+    {
+      "library": "cmdk",
+      "declaredVersion": "^0.2.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "cmdk",
+        "version": "0.2.1",
+        "integrity": "sha512-U6//9lQ6JvT47+6OF6Gi8BvkxYQ8SCRRSKIJkthIMsFsLZRG0cKvTtuTaefyIKMQb8rvvXy0wGdpTNq/jPtm+g==",
+        "shasum": "aa8e1332bb0b8d8484e793017c82537351188d9a",
+        "tarballSHA256": "5115c84a3d1b6fe081d332d720e4ed65a062c6dd2e74ebf3b5444809ee5d3efd",
+        "bytes": 15791,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 28,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/chunk-XJATAMEX.mjs",
+          "source": "source-js/c80b4aea90ea7c400fb83bff1e3b8fa73505bfdc9d8d1a63d8980ecbdf874188.js",
+          "sourceSHA256": "c80b4aea90ea7c400fb83bff1e3b8fa73505bfdc9d8d1a63d8980ecbdf874188",
+          "span": [
+            124,
+            762
+          ],
+          "name": "G",
+          "normalizedASTSHA256": "2ee3c894a07e4641bba26ccd4c5b3dd8d909b344d6f73f0cb2ee4f845db44087",
+          "codeSHA256": "55f7ac84ff3bf57fc2d92f7694892c57c91b13c3abc7efbbf20b9c4720b27231",
+          "features": {
+            "propertyOperations": 29,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "ed38c2e22934edd7",
+            "graphNodes": 49,
+            "graphEdges": 67,
+            "graphOperationOccurrences": 45,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/command-score.js",
+          "source": "source-js/396509daf917ecfcc247b02baab6a4960f40aa903800325c80f46d5cb6c17775.js",
+          "sourceSHA256": "396509daf917ecfcc247b02baab6a4960f40aa903800325c80f46d5cb6c17775",
+          "span": [
+            591,
+            1229
+          ],
+          "name": "L",
+          "normalizedASTSHA256": "0783f735b6ba6f34c49388266c6c7fde9643aad4616d99fd8edbd837af43c01a",
+          "codeSHA256": "46fc331628c2b392f0b92e8dc4b11ae8043c8d5b67280822312df3f39bcf26fb",
+          "features": {
+            "propertyOperations": 29,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "ed38c2e22934edd7",
+            "graphNodes": 49,
+            "graphEdges": 67,
+            "graphOperationOccurrences": 45,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/a6e6cd67eaf330c1ea44db6fbb779ba5e5a94b9d8631c5fb38a042730d5657fb.js",
+          "sourceSHA256": "a6e6cd67eaf330c1ea44db6fbb779ba5e5a94b9d8631c5fb38a042730d5657fb",
+          "span": [
+            1036,
+            1685
+          ],
+          "name": "J",
+          "normalizedASTSHA256": "42ec1401d833520ec2725f788b05570da46f198aedce31d78a490baafd69f031",
+          "codeSHA256": "a10046d220370b441aca9efd19bde9c305d97cb07f3b18659a1014d781ca7177",
+          "features": {
+            "propertyOperations": 29,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "ed38c2e22934edd7",
+            "graphNodes": 49,
+            "graphEdges": 67,
+            "graphOperationOccurrences": 45,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/e38ea3e624d2ddf8ec82",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "b5acfd21b3b61508365224c40ec1b03ec71091248baaf989d4be916551e7d532"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
+    },
+    {
+      "library": "posthog-js",
+      "declaredVersion": "1.438.10",
+      "origin": {
+        "kind": "npm-package",
+        "name": "posthog-js",
+        "version": "1.438.10",
+        "integrity": "sha512-ShXOXaZ7gtqDAMvvJjWS7Wq+Sh62pedp+6gzeyVKKKCBEmd0tmh0LSYRVj8X7WzFB7QMNdl+FlhrKyZ2XvUBUg==",
+        "shasum": "222e8dba80271144f6aec83cfa176f67d030b131",
+        "tarballSHA256": "46f63e4abe19e729d35b661c8149c2cc941aa78f31943a95884b36a9f6175fdb",
+        "bytes": 8451040,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 15,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "lib/src/autocapture.js",
+          "source": "source-js/9659d7f679740222c745f6bea5af2f1c6a18c55efb387da285a77bf3798dc352.js",
+          "sourceSHA256": "9659d7f679740222c745f6bea5af2f1c6a18c55efb387da285a77bf3798dc352",
+          "span": [
+            4280,
+            5344
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "b2572b1a7ad7abd04626f7826b59c70adf65ca53acd5cb81f6188c8b65547eea",
+          "codeSHA256": "8fcee591b42d1b970fcd496bd5acd8f688081ce9bd2d8608c2d8ee272902617f",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "61f4c186aa489253",
+            "graphNodes": 25,
+            "graphEdges": 34,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/src/autocapture.js",
+          "source": "source-js/9659d7f679740222c745f6bea5af2f1c6a18c55efb387da285a77bf3798dc352.js",
+          "sourceSHA256": "9659d7f679740222c745f6bea5af2f1c6a18c55efb387da285a77bf3798dc352",
+          "span": [
+            3031,
+            5691
+          ],
+          "name": "getPropertiesFromElement",
+          "normalizedASTSHA256": "0d428e42238437cd37e6154c532edff128ec91b8bb0615c04272f3476465012b",
+          "codeSHA256": "59c60ff9638ceab7c750df1c73190b03cfc939962ef356066b9d819804ff18cd",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 17,
+            "pogHash": "c6a2482d2fa5f08a",
+            "graphNodes": 33,
+            "graphEdges": 43,
+            "graphOperationOccurrences": 39,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/src/autocapture.js",
+          "source": "source-js/9659d7f679740222c745f6bea5af2f1c6a18c55efb387da285a77bf3798dc352.js",
+          "sourceSHA256": "9659d7f679740222c745f6bea5af2f1c6a18c55efb387da285a77bf3798dc352",
+          "span": [
+            8030,
+            9662
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "ca90ecfea02fa2356c45a6937b79b75d3e1e8cb7ae0cebe3d765c091f077d1ca",
+          "codeSHA256": "23230e1c2d5b9e405ffb36463ebfa753db4ed1f7338a9f1d9dd84d72108d3731",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "8a023efa0d96cbfe",
+            "graphNodes": 27,
+            "graphEdges": 35,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/c863af4e960f98acfa7d",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "d3fb92ac01f0bef4078f89aac9f20f76da3383ad45becf6204abdf5495f43f8f"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
     },
     {
       "library": "react-hook-form",
-      "initialAnchors": 21,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "posthog-js",
-        "react-hook-form"
-      ],
+      "declaredVersion": "^7.71.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react-hook-form",
+        "version": "7.71.2",
+        "integrity": "sha512-1CHvcDYzuRUNOflt4MOq3ZM46AronNJtQ1S7tnX6YN4y72qhgiUItpacZUAQ0TyWYci3yz1X+rXaSxiuEm86PA==",
+        "shasum": "a5f1d2b855be9ecf1af6e74df9b80f54beae7e35",
+        "tarballSHA256": "57586f4daeeb85255c403e63a7042464ee7f8dac39d13393cdef2a0cc242e210",
+        "bytes": 291207,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 255,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 21
-    },
-    {
-      "library": "react-markdown",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "recharts",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "resend",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "semver",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "shadcn",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "shell-quote",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "slugify",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "sonner",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 138,
-      "sourceFiles": 1
-    },
-    {
-      "library": "ssh2",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "stripe",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "superjson",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 132,
-      "sourceFiles": 11
-    },
-    {
-      "library": "swagger-ui-react",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "tailwind-merge",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 78,
-      "sourceFiles": 1
-    },
-    {
-      "library": "tailwindcss-animate",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "toml",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "tw-animate-css",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "undici",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "use-resize-observer",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ws",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "xterm-addon-fit",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "yaml",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "zod",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 1275,
-      "sourceFiles": 18
-    },
-    {
-      "library": "zod-form-data",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 37,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.cjs.js",
+          "source": "source-js/73de00a9d032954fd4949e917e1598db6d1043c3269b8ac476487f38b3acb8a7.js",
+          "sourceSHA256": "73de00a9d032954fd4949e917e1598db6d1043c3269b8ac476487f38b3acb8a7",
+          "span": [
+            1835,
+            2281
+          ],
+          "name": "D",
+          "normalizedASTSHA256": "020fa163a8b91daaa14aa25e9485b9ba7f75b337541fbf69e005e14c4d5088ad",
+          "codeSHA256": "bccafab71bd9c9f2ecabf2d498c4d79d4bd9b0db172aeb7df2f71595486eb6fd",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "d3bfc8fa3c63dec2",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs.js",
+          "source": "source-js/73de00a9d032954fd4949e917e1598db6d1043c3269b8ac476487f38b3acb8a7.js",
+          "sourceSHA256": "73de00a9d032954fd4949e917e1598db6d1043c3269b8ac476487f38b3acb8a7",
+          "span": [
+            2452,
+            2887
+          ],
+          "name": "j",
+          "normalizedASTSHA256": "d2ef8827f7c77eca0142d256964cac9c5f27b33a8a3a8f8367262729683a5f58",
+          "codeSHA256": "8d5178a387ca81cd9e79ca3fc6a6984911b9e0852f6a158ccb015b6f9c7c5b7f",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "669370231483a5ba",
+            "graphNodes": 29,
+            "graphEdges": 44,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs.js",
+          "source": "source-js/73de00a9d032954fd4949e917e1598db6d1043c3269b8ac476487f38b3acb8a7.js",
+          "sourceSHA256": "73de00a9d032954fd4949e917e1598db6d1043c3269b8ac476487f38b3acb8a7",
+          "span": [
+            3491,
+            3636
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "23861fa1fafb1a48f1b548accf4367fb67cc6c56edb58c841d0214b9a5a613b5",
+          "codeSHA256": "6b45b0f0facee3b430bc2bfdaf6f4e8f541482295ffa28b5216378fdeaabde97",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "5b35857cff0a41c",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/34395641ea383514657f",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "e8eeb472f0a5889c2c51625b86a3f9b8630680adb9f49a125352e2e426392780"
+        }
+      ],
+      "lockfileSHA256": "7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b",
+      "lockfileSnapshot": "lockfiles/7a483d6b585ffa541c2c00cb89b9217f62e2697bd6c6f8870ea13eba8122f75b-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
@@ -1302,447 +1414,24 @@
     "posthog-js",
     "react-hook-form"
   ],
-  "status": "included",
-  "referenceFailures": [
-    {
-      "source": "webpack://_N_E/node_modules/.pnpm/next@16.4.1_@babel+core@7.29.7_@opentelemetry+api@1.9.0_@types+node@24.10.13_react-dom@19.2.7_react@19.2.7__react@19.2.7/node_modules/next/dist/compiled/client-only/index.js",
-      "error": "missing source text"
-    }
-  ],
-  "referenceFiles": 137,
-  "bundleUnits": 12,
-  "candidateOrder": [
-    "better-auth",
-    "react-dom",
-    "next",
-    "react",
-    "@better-auth/passkey",
-    "@ai-sdk/anthropic",
-    "@ai-sdk/azure",
-    "@ai-sdk/cohere",
-    "@ai-sdk/deepinfra",
-    "@ai-sdk/mistral",
-    "@ai-sdk/openai",
-    "@ai-sdk/openai-compatible",
-    "@aws-sdk/client-cloudwatch",
-    "@aws-sdk/client-cloudwatch-logs",
-    "@aws-sdk/client-route-53",
-    "@aws-sdk/client-secrets-manager",
-    "@aws-sdk/client-ssm",
-    "@better-auth/api-key",
-    "@better-auth/scim",
-    "@better-auth/sso",
-    "@codemirror/autocomplete",
-    "@codemirror/lang-css",
-    "@codemirror/lang-json",
-    "@codemirror/lang-yaml",
-    "@codemirror/language",
-    "@codemirror/legacy-modes",
-    "@codemirror/search",
-    "@codemirror/view",
-    "@dokploy/server",
-    "@dokploy/trpc-openapi",
-    "@faker-js/faker",
-    "@hookform/resolvers",
-    "@octokit/auth-app",
-    "@octokit/webhooks",
-    "@openpanel/nextjs",
-    "@react-email/components",
-    "@stepperize/react",
-    "@stripe/stripe-js",
-    "@tailwindcss/typography",
-    "@tanstack/react-query",
-    "@tanstack/react-table",
-    "@tanstack/react-virtual",
-    "@trpc/client",
-    "@trpc/next",
-    "@trpc/react-query",
-    "@trpc/server",
-    "@uiw/codemirror-theme-github",
-    "@uiw/react-codemirror",
-    "@xterm/addon-attach",
-    "@xterm/addon-clipboard",
-    "@xterm/xterm",
-    "adm-zip",
-    "ai",
-    "ai-sdk-ollama",
-    "bcrypt",
-    "bl",
-    "boxen",
-    "class-variance-authority",
-    "clsx",
-    "cmdk",
-    "copy-to-clipboard",
-    "date-fns",
-    "dockerode",
-    "dompurify",
-    "dotenv",
-    "drizzle-orm",
-    "drizzle-zod",
-    "fancy-ansi",
-    "input-otp",
-    "js-cookie",
-    "lodash",
-    "lucide-react",
-    "micromatch",
-    "nanoid",
-    "next-themes",
-    "nextjs-toploader",
-    "node-os-utils",
-    "node-pty",
-    "node-schedule",
-    "nodemailer",
-    "octokit",
-    "pino",
-    "pino-pretty",
-    "postgres",
-    "posthog-js",
-    "public-ip",
-    "qrcode",
-    "radix-ui",
-    "react-confetti-explosion",
-    "react-day-picker",
-    "react-hook-form",
-    "react-markdown",
-    "recharts",
-    "resend",
-    "semver",
-    "shadcn",
-    "shell-quote",
-    "slugify",
-    "sonner",
-    "ssh2",
-    "stripe",
-    "superjson",
-    "swagger-ui-react",
-    "tailwind-merge",
-    "tailwindcss-animate",
-    "toml",
-    "tw-animate-css",
-    "undici",
-    "use-resize-observer",
-    "ws",
-    "xterm-addon-fit",
-    "yaml",
-    "zod",
-    "zod-form-data"
-  ],
-  "selectionAttempts": [
-    {
-      "library": "@better-auth/passkey",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@better-auth/passkey"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
     },
-    {
-      "library": "@better-auth/api-key",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@better-auth/api-key"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@better-auth/sso",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@better-auth/sso"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@hookform/resolvers",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@hookform/resolvers"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@openpanel/nextjs",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@openpanel/nextjs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@tanstack/react-query",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@trpc/client",
-      "initialAnchors": 18,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@trpc/next",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/next"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@trpc/react-query",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@trpc/server",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "@trpc/server"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "class-variance-authority",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "class-variance-authority"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "clsx",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "clsx"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "cmdk",
-      "initialAnchors": 8,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "copy-to-clipboard",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "copy-to-clipboard"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "next-themes",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "next-themes"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "nextjs-toploader",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "nextjs-toploader"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "posthog-js",
-      "initialAnchors": 149,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "posthog-js"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "react-hook-form",
-      "initialAnchors": 21,
-      "trialLibraries": [
-        "better-auth",
-        "react-dom",
-        "next",
-        "react",
-        "@tanstack/react-query",
-        "@trpc/client",
-        "@trpc/react-query",
-        "cmdk",
-        "posthog-js",
-        "react-hook-form"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    }
-  ],
-  "sourceDiagnostics": [],
-  "bundleDiagnostics": [],
-  "sourceDigest": "96f9778a7f2a5f778b273270a5c53e64459ca9046d3a135a2f5acee1e0254d5c",
-  "bundleDigest": "7617c55a0b8a8c1acccfb4d7201384cddf2073ede38adb544c8e8f338f61dafe",
-  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
-  "finalSourceDigest": "fef2bc68f3014cd86489bcc4d58eb6586d53c7eb549c88afa55f494673728f6b",
+    "frontendManifestSHA256": "53a4bb794faa71fe88f01fb807e15d80ab17e0ea254ee3a0fc612aad569a1ed4",
+    "manifestRelative": "apps/dokploy/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:15.487Z",
   "reason": null,
-  "organizationSignature": "2f0f1773cdfc5e79a9d05ef1b3d8561c0ed3942c58c12eb3652b74923bc71efd"
+  "finished": "2026-11-09T03:44:15.820Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/dokploy--dokploy/qualification.json",
+  "sourceEligibilityRecordSHA256": "f85aaf901c1010cc5cd3ebe83d653519c8b7bc25bdc6c5b1d04f12bd97f7ff6b",
+  "organizationSignature": "11f3a1bbd5b56dc3b0bc4db0526b0c84a0848d0a21a6ea4b80aa15452e806824"
 }

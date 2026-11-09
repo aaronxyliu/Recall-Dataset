@@ -52,7 +52,7 @@ services:
 
   media-server:
     build:
-      context: ../../../../builds/capsoftware--cap/apps/media-server
+      context: ${RECALL_SOURCE_DIR}/apps/media-server
       dockerfile: ${RECALL_RECIPE_DIR}/runtime/media-server.Dockerfile
     restart: unless-stopped
     environment:

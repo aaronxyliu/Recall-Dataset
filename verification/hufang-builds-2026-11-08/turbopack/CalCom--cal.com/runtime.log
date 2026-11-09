@@ -1,0 +1,164 @@
+ Network recall-hufang-14-default  Creating
+ Network recall-hufang-14-default  Created
+ Container recall-hufang-14-db  Creating
+ Container recall-hufang-14-db  Created
+ Container recall-hufang-14-app  Creating
+ Container recall-hufang-14-app  Created
+ Container recall-hufang-14-db  Starting
+ Container recall-hufang-14-db  Started
+ Container recall-hufang-14-db  Waiting
+ Container recall-hufang-14-db  Healthy
+ Container recall-hufang-14-app  Starting
+ Container recall-hufang-14-app  Started
+ Container recall-hufang-14-app  Waiting
+ Container recall-hufang-14-db  Waiting
+ Container recall-hufang-14-db  Healthy
+ Container recall-hufang-14-app  Healthy
+recall-hufang-14-db  | The files belonging to this database system will be owned by user "postgres".
+recall-hufang-14-db  | This user must also own the server process.
+recall-hufang-14-db  | 
+recall-hufang-14-db   | The database cluster will be initialized with locale "en_US.utf8".
+recall-hufang-14-db   | The default database encoding has accordingly been set to "UTF8".
+recall-hufang-14-db   | The default text search configuration will be set to "english".
+recall-hufang-14-db   | 
+recall-hufang-14-db   | Data page checksums are disabled.
+recall-hufang-14-db   | 
+recall-hufang-14-db   | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+recall-hufang-14-db   | creating subdirectories ... ok
+recall-hufang-14-db   | selecting dynamic shared memory implementation ... posix
+recall-hufang-14-db   | selecting default "max_connections" ... 100
+recall-hufang-14-db   | selecting default "shared_buffers" ... 128MB
+recall-hufang-14-app  | 📲 Updated app: 'make'
+recall-hufang-14-db   | selecting default time zone ... UTC
+recall-hufang-14-db   | creating configuration files ... ok
+recall-hufang-14-app  | 📲 Created app: 'matomo'
+recall-hufang-14-db   | running bootstrap script ... ok
+recall-hufang-14-db   | sh: locale: not found
+recall-hufang-14-db   | 2026-11-09 01:07:53.132 UTC [35] WARNING:  no usable system locales were found
+recall-hufang-14-db   | performing post-bootstrap initialization ... ok
+recall-hufang-14-db   | syncing data to disk ... ok
+recall-hufang-14-db   | 
+recall-hufang-14-db   | 
+recall-hufang-14-db   | Success. You can now start the database server using:
+recall-hufang-14-db   | initdb: warning: enabling "trust" authentication for local connections
+recall-hufang-14-db   | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+recall-hufang-14-db   | 
+recall-hufang-14-db   |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+recall-hufang-14-db   | 
+recall-hufang-14-db   | waiting for server to start....2026-11-09 01:07:53.348 UTC [41] LOG:  starting PostgreSQL 17.11 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+recall-hufang-14-db   | 2026-11-09 01:07:53.348 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+recall-hufang-14-db   | 2026-11-09 01:07:53.350 UTC [44] LOG:  database system was shut down at 2026-11-09 01:07:53 UTC
+recall-hufang-14-db   | 2026-11-09 01:07:53.351 UTC [41] LOG:  database system is ready to accept connections
+recall-hufang-14-db   |  done
+recall-hufang-14-db   | server started
+recall-hufang-14-db   | CREATE DATABASE
+recall-hufang-14-db   | 
+recall-hufang-14-db   | 
+recall-hufang-14-db   | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+recall-hufang-14-db   | 
+recall-hufang-14-db   | waiting for server to shut down....2026-11-09 01:07:53.465 UTC [41] LOG:  received fast shutdown request
+recall-hufang-14-db   | 2026-11-09 01:07:53.466 UTC [41] LOG:  aborting any active transactions
+recall-hufang-14-db   | 2026-11-09 01:07:53.466 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+recall-hufang-14-db   | 2026-11-09 01:07:53.467 UTC [42] LOG:  shutting down
+recall-hufang-14-db   | 2026-11-09 01:07:53.467 UTC [42] LOG:  checkpoint starting: shutdown immediate
+recall-hufang-14-db   | 2026-11-09 01:07:53.498 UTC [42] LOG:  checkpoint complete: wrote 926 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.023 s, total=0.032 s; sync files=301, longest=0.005 s, average=0.001 s; distance=4266 kB, estimate=4266 kB; lsn=0/191E7F8, redo lsn=0/191E7F8
+recall-hufang-14-db   | 2026-11-09 01:07:53.500 UTC [41] LOG:  database system is shut down
+recall-hufang-14-app  | 📲 Created app: 'metapixel'
+recall-hufang-14-app  | 📲 Created app: 'millis-ai'
+recall-hufang-14-app  | 📲 Created app: 'mirotalk'
+recall-hufang-14-app  | 📲 Created app: 'mock-payment-app'
+recall-hufang-14-app  | 📲 Created app: 'monobot'
+recall-hufang-14-app  | 📲 Created app: 'n8n'
+recall-hufang-14-app  | 📲 Created app: 'nextcloudtalk'
+recall-hufang-14-app  | 📲 Created app: 'office365-calendar'
+recall-hufang-14-app  | 📲 Created app: 'msteams'
+recall-hufang-14-app  | 📲 Created app: 'paypal'
+recall-hufang-14-app  | 📲 Created app: 'ping'
+recall-hufang-14-app  | 📲 Created app: 'pipedream'
+recall-hufang-14-app  | 📲 Created app: 'pipedrive-crm'
+recall-hufang-14-app  | 📲 Created app: 'plausible'
+recall-hufang-14-app  | 📲 Created app: 'posthog'
+recall-hufang-14-app  | 📲 Created app: 'qr_code'
+recall-hufang-14-app  | 📲 Created app: 'raycast'
+recall-hufang-14-db   |  done
+recall-hufang-14-db   | server stopped
+recall-hufang-14-db   | 
+recall-hufang-14-db   | PostgreSQL init process complete; ready for start up.
+recall-hufang-14-app  | 📲 Created app: 'retell-ai'
+recall-hufang-14-app  | 📲 Created app: 'riverside'
+recall-hufang-14-app  | 📲 Created app: 'roam'
+recall-hufang-14-app  | 📲 Created app: 'routing-forms'
+recall-hufang-14-app  | 📲 Created app: 'salesforce'
+recall-hufang-14-app  | 📲 Created app: 'salesroom'
+recall-hufang-14-app  | 📲 Created app: 'sendgrid'
+recall-hufang-14-app  | 📲 Created app: 'shimmervideo'
+recall-hufang-14-db   | 
+recall-hufang-14-db   | 2026-11-09 01:07:53.573 UTC [1] LOG:  starting PostgreSQL 17.11 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+recall-hufang-14-db   | 2026-11-09 01:07:53.573 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+recall-hufang-14-db   | 2026-11-09 01:07:53.573 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+recall-hufang-14-db   | 2026-11-09 01:07:53.575 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+recall-hufang-14-db   | 2026-11-09 01:07:53.578 UTC [57] LOG:  database system was shut down at 2026-11-09 01:07:53 UTC
+recall-hufang-14-db   | 2026-11-09 01:07:53.581 UTC [1] LOG:  database system is ready to accept connections
+recall-hufang-14-app  | 📲 Created app: 'signal'
+recall-hufang-14-app  | 📲 Created app: 'sirius_video'
+recall-hufang-14-app  | 📲 Created app: 'skype'
+recall-hufang-14-app  | 📲 Created app: 'stripe'
+recall-hufang-14-app  | 📲 Created app: 'sylapsvideo'
+recall-hufang-14-app  | 📲 Created app: 'synthflow'
+recall-hufang-14-app  | 📲 Created app: 'tandem'
+recall-hufang-14-app  | 📲 Created app: 'telegram'
+recall-hufang-14-app  | 📲 Created app: 'telli'
+recall-hufang-14-app  | 📲 Created app: 'twipla'
+recall-hufang-14-app  | 📲 Created app: 'umami'
+recall-hufang-14-app  | 📲 Created app: 'vimcal'
+recall-hufang-14-app  | 📲 Created app: 'vital-automation'
+recall-hufang-14-app  | 📲 Created app: 'weather_in_your_calendar'
+recall-hufang-14-app  | 📲 Created app: 'webex'
+recall-hufang-14-app  | 📲 Created app: 'whatsapp'
+recall-hufang-14-app  | 📲 Created app: 'whereby'
+recall-hufang-14-app  | 📲 Updated app: 'wipe-my-cal'
+recall-hufang-14-app  | 📲 Created app: 'wordpress'
+recall-hufang-14-app  | 📲 Created app: 'zapier'
+recall-hufang-14-app  | 📲 Created app: 'zoho-bigin'
+recall-hufang-14-app  | 📲 Created app: 'zohocalendar'
+recall-hufang-14-app  | 📲 Created app: 'zohocrm'
+recall-hufang-14-app  | 📲 Created app: 'zoom'
+recall-hufang-14-app  | + yarn start
+recall-hufang-14-app  | 
+recall-hufang-14-app  | Attention:
+recall-hufang-14-app  | Turborepo now collects completely anonymous telemetry regarding usage.
+recall-hufang-14-app  | This information is used to shape the Turborepo roadmap and prioritize features.
+recall-hufang-14-app  | You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+recall-hufang-14-app  | https://turborepo.com/docs/telemetry
+recall-hufang-14-app  | 
+recall-hufang-14-app  | • turbo 2.7.1
+recall-hufang-14-app  | • Packages in scope: @calcom/web
+recall-hufang-14-app  | • Running start in 1 packages
+recall-hufang-14-app  | • Remote caching disabled
+recall-hufang-14-app  | @calcom/web:start: cache bypass, force executing 5d424b788e41a1b4
+recall-hufang-14-app  | @calcom/web:start: ▲ Next.js 16.1.5
+recall-hufang-14-app  | @calcom/web:start: - Local:         http://localhost:3000
+recall-hufang-14-app  | @calcom/web:start: - Network:       http://172.19.0.3:3000
+recall-hufang-14-app  | @calcom/web:start: 
+recall-hufang-14-app  | @calcom/web:start: ✓ Starting...
+recall-hufang-14-app  | @calcom/web:start: [33mwarn [0m EMAIL_FROM environment variable is not set, this may indicate mailing is currently disabled. Please refer to the .env.example file.
+recall-hufang-14-app  | @calcom/web:start: [Phase: phase-production-server] Skipping rewrite config for organizations because ORGANIZATIONS_ENABLED is not set
+recall-hufang-14-app  | @calcom/web:start: ✓ Ready in 437ms
+recall-hufang-14-app  | @calcom/web:start: [33m[Nest] 326  - [39m11/09/2026, 1:08:09 AM [33m   WARN[39m [38;5;3m[WebPush] [39m[33mMissing VAPID keys. Web push notifications are disabled.[39m
+recall-hufang-14-app  | @calcom/web:start: {"0":"getDeploymentKey","1":"Signature token not found in database or set in environment variable","_meta":{"runtime":"Nodejs","runtimeVersion":"v20.20.2","hostname":"259816919ccd","name":"[undefined]","parentNames":"[undefined]","date":"2026-11-09T01:08:26.932Z","logLevelId":5,"logLevelName":"ERROR","path":{"fullFilePath":"/calcom/apps/web/.next/server/chunks/ssr/_9b212846._.js:1:13359","fileName":"_9b212846._.js","fileNameWithLine":"_9b212846._.js:1","fileColumn":"13359","fileLine":"1","filePath":"/.next/server/chunks/ssr/_9b212846._.js","filePathWithLine":"/.next/server/chunks/ssr/_9b212846._.js:1","method":"e"}}}
+recall-hufang-14-app  | @calcom/web:start: react-i18next:: You will need to pass in an i18next instance by using initReactI18next
+recall-hufang-14-app  | @calcom/web:start: {"0":"orgDomains.ts","1":"Match of WEBAPP_URL with ALLOWED_HOSTNAMES failed","2":{"WEBAPP_URL":"http://127.0.0.1:19214","ALLOWED_HOSTNAMES":[]},"_meta":{"runtime":"Nodejs","runtimeVersion":"v20.20.2","hostname":"259816919ccd","name":"[undefined]","parentNames":"[undefined]","date":"2026-11-09T01:08:28.415Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"/calcom/apps/web/.next/server/chunks/_ffba71cc._.js:1:10271","fileName":"_ffba71cc._.js","fileNameWithLine":"_ffba71cc._.js:1","fileColumn":"10271","fileLine":"1","filePath":"/.next/server/chunks/_ffba71cc._.js","filePathWithLine":"/.next/server/chunks/_ffba71cc._.js:1","method":"[undefined]"}}}
+recall-hufang-14-app  | @calcom/web:start: {"0":"orgDomains.ts","1":"Match of WEBAPP_URL with ALLOWED_HOSTNAMES failed","2":{"WEBAPP_URL":"http://127.0.0.1:19214","ALLOWED_HOSTNAMES":[]},"_meta":{"runtime":"Nodejs","runtimeVersion":"v20.20.2","hostname":"259816919ccd","name":"[undefined]","parentNames":"[undefined]","date":"2026-11-09T01:08:28.434Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"/calcom/apps/web/.next/server/chunks/_ffba71cc._.js:1:10271","fileName":"_ffba71cc._.js","fileNameWithLine":"_ffba71cc._.js:1","fileColumn":"10271","fileLine":"1","filePath":"/.next/server/chunks/_ffba71cc._.js","filePathWithLine":"/.next/server/chunks/_ffba71cc._.js:1","method":"[undefined]"}}}
+recall-hufang-14-app  | @calcom/web:start: {"0":"orgDomains.ts","1":"Match of WEBAPP_URL with ALLOWED_HOSTNAMES failed","2":{"WEBAPP_URL":"http://127.0.0.1:19214","ALLOWED_HOSTNAMES":[]},"_meta":{"runtime":"Nodejs","runtimeVersion":"v20.20.2","hostname":"259816919ccd","name":"[undefined]","parentNames":"[undefined]","date":"2026-11-09T01:08:28.455Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"/calcom/apps/web/.next/server/chunks/_ffba71cc._.js:1:10271","fileName":"_ffba71cc._.js","fileNameWithLine":"_ffba71cc._.js:1","fileColumn":"10271","fileLine":"1","filePath":"/.next/server/chunks/_ffba71cc._.js","filePathWithLine":"/.next/server/chunks/_ffba71cc._.js:1","method":"[undefined]"}}}
+recall-hufang-14-app  | @calcom/web:start: {"0":"orgDomains.ts","1":"Match of WEBAPP_URL with ALLOWED_HOSTNAMES failed","2":{"WEBAPP_URL":"http://127.0.0.1:19214","ALLOWED_HOSTNAMES":[]},"_meta":{"runtime":"Nodejs","runtimeVersion":"v20.20.2","hostname":"259816919ccd","name":"[undefined]","parentNames":"[undefined]","date":"2026-11-09T01:08:35.662Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"/calcom/apps/web/.next/server/chunks/ssr/_046030ad._.js:1:2112","fileName":"_046030ad._.js","fileNameWithLine":"_046030ad._.js:1","fileColumn":"2112","fileLine":"1","filePath":"/.next/server/chunks/ssr/_046030ad._.js","filePathWithLine":"/.next/server/chunks/ssr/_046030ad._.js:1","method":"[undefined]"}}}
+recall-hufang-14-app  | @calcom/web:start: {"0":"orgDomains.ts","1":"Match of WEBAPP_URL with ALLOWED_HOSTNAMES failed","2":{"WEBAPP_URL":"http://127.0.0.1:19214","ALLOWED_HOSTNAMES":[]},"_meta":{"runtime":"Nodejs","runtimeVersion":"v20.20.2","hostname":"259816919ccd","name":"[undefined]","parentNames":"[undefined]","date":"2026-11-09T01:08:35.669Z","logLevelId":4,"logLevelName":"WARN","path":{"fullFilePath":"/calcom/apps/web/.next/server/chunks/ssr/_046030ad._.js:1:2112","fileName":"_046030ad._.js","fileNameWithLine":"_046030ad._.js:1","fileColumn":"2112","fileLine":"1","filePath":"/.next/server/chunks/ssr/_046030ad._.js","filePathWithLine":"/.next/server/chunks/ssr/_046030ad._.js:1","method":"[undefined]"}}}
+ Container recall-hufang-14-app  Stopping
+ Container recall-hufang-14-app  Stopped
+ Container recall-hufang-14-app  Removing
+ Container recall-hufang-14-app  Removed
+ Container recall-hufang-14-db  Stopping
+ Container recall-hufang-14-db  Stopped
+ Container recall-hufang-14-db  Removing
+ Container recall-hufang-14-db  Removed
+ Network recall-hufang-14-default  Removing
+ Network recall-hufang-14-default  Removed

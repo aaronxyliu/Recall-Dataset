@@ -33,6 +33,8 @@ function inventory(code,prefix,pkg){
   return inv.point
 }
 function packageOf(source){
+  const explicit=sample.sourceOwnership?.[source]
+  if(explicit){if(!sample.selected.includes(explicit.library))throw Error('Ownership names an unselected library');return explicit.library}
   const matches=[...source.replaceAll('\\','/').matchAll(/(?:^|\/)(?:node_modules|~)\/((?:@[^/]+\/)?[^/]+)/g)]
   return matches.at(-1)?.[1]
 }
@@ -58,6 +60,8 @@ for(const a of capture.assets){
           if(presence.has(pkg)){
             found.push([pkg,m.source])
             const content=consumer.sourceContentFor(m.source,true)
+            const explicit=sample.sourceOwnership?.[m.source]
+            if(explicit&&digest(content)!==explicit.sha256)throw Error('Explicit source ownership hash mismatch')
             if(content==null)missingSources.add(m.source)
             if(content!=null){try{loc=inventory(content,m.source+'#'+digest(content),pkg)}catch{failures.push({asset:a.url,source:m.source,reason:'source parse failed'})}}
           }

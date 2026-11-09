@@ -1,26 +1,20 @@
 {
-  "schema": "recall.dataset-anchor-qualification/v1",
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "webpack/akveo--ngx-admin",
+  "repo": "akveo/ngx-admin",
+  "commit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
   "policy": {
-    "candidateField": "dependencies",
-    "minInitialAnchors": 3,
-    "minLibraries": 5,
-    "maxLibraries": 10,
-    "counting": "distinct source functions before propagation; repeated target copies count once",
-    "options": {
-      "minFeatures": 10,
-      "featureMetric": "propertyOperations",
-      "minAnchors": 3,
-      "uniqueBundle": true
-    }
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "provenance": {
-    "groundTruthSHA256": "f40e01069bf754d507c73a3854e4823ce11ac04d4074ec473b9e08c569b8dbf3",
-    "manifestSHA256": "4060df1e57f71b861c4ffe1b0f861c9d8ff6622a052fb78d84c9fca7960d3abe",
-    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
-    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
-    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
-    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
-  },
+  "selectionOverride": {},
   "candidates": [
     "@angular/animations",
     "@angular/cdk",
@@ -68,528 +62,974 @@
     "web-animations-js",
     "zone.js"
   ],
-  "excludedPreviouslySelected": [],
   "libraries": [
     {
-      "library": "@angular/animations",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/cdk",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/common",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/compiler",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/core",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/forms",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/google-maps",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/platform-browser",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/platform-browser-dynamic",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@angular/router",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@asymmetrik/ngx-leaflet",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "@asymmetrik/ngx-leaflet"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 0,
-      "sourceFiles": 12
-    },
-    {
-      "library": "@nebular/auth",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@nebular/eva-icons",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@nebular/security",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@nebular/theme",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@swimlane/ngx-charts",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "@swimlane/ngx-charts"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 17,
-      "sourceFiles": 86
-    },
-    {
-      "library": "angular2-chartjs",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "angular2-chartjs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 11,
-      "sourceFiles": 3
-    },
-    {
-      "library": "bootstrap",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "chart.js",
-      "initialAnchors": 40,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "chart.js"
-      ],
+      "library": "web-animations-js",
+      "declaredVersion": "^2.3.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "web-animations-js",
+        "version": "2.3.2",
+        "integrity": "sha512-TOMFWtQdxzjWp8qx4DAraTWTsdhxVSiWa6NkPFSaPtZ1diKUxTn4yTix73A1euG1WbSOMMPcY51cnjTIHrGtDA==",
+        "shasum": "a51963a359c543f97b47c7d4bc2d811f9fc9e153",
+        "tarballSHA256": "5e444351f2ee163dd2857b61f587586320e0b2914243343a829369c3a3e3b773",
+        "bytes": 120314,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 1616,
-      "sourceFiles": 52,
-      "finalInitialAnchors": 40
-    },
-    {
-      "library": "ckeditor",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "classlist.js",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "classlist.js"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 3,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/animation.js",
+          "source": "source-js/84de7806c1692f3327dcbc930e98f2d2631c8370f58e61c92af1bd6e8c3ae22e.js",
+          "sourceSHA256": "84de7806c1692f3327dcbc930e98f2d2631c8370f58e61c92af1bd6e8c3ae22e",
+          "span": [
+            704,
+            1075
+          ],
+          "name": "AnimationEvent",
+          "normalizedASTSHA256": "2d51259aa74147e19e181449a66b87a7c2c8c02fee69f918ce35198d1d2338c6",
+          "codeSHA256": "ab41f805e4345923eed6a222907df795a04e69661817086a7a5184074ab27076",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "9ddc17c11aa61c0c",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/animation.js",
+          "source": "source-js/84de7806c1692f3327dcbc930e98f2d2631c8370f58e61c92af1bd6e8c3ae22e.js",
+          "sourceSHA256": "84de7806c1692f3327dcbc930e98f2d2631c8370f58e61c92af1bd6e8c3ae22e",
+          "span": [
+            1098,
+            1616
+          ],
+          "name": "Animation",
+          "normalizedASTSHA256": "43867af5c6c5396eb03821d2d5e42253b0435691f8a09c54c2a5473c342ee98d",
+          "codeSHA256": "7d86ffd4131f739381345d8f4dd9332e4a494fe163299ed87e77ad3a79e4f501",
+          "features": {
+            "propertyOperations": 20,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "f20a382734b8a9e7",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 55,
+            "distinctGraphOperationPropertyPairs": 19,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/animation.js",
+          "source": "source-js/84de7806c1692f3327dcbc930e98f2d2631c8370f58e61c92af1bd6e8c3ae22e.js",
+          "sourceSHA256": "84de7806c1692f3327dcbc930e98f2d2631c8370f58e61c92af1bd6e8c3ae22e",
+          "span": [
+            1669,
+            2245
+          ],
+          "name": "_ensureAlive",
+          "normalizedASTSHA256": "14a4242a07299ce84fc809509d10877932a8592442458f08337c6d481c7ff3b9",
+          "codeSHA256": "a2940aa03ca19168ef11b15216cee243ab6a3bc6c63ace3a047f127c05e5c504",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "7fee32b62dc8c702",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 18,
-      "sourceFiles": 1
+      "proofDirectory": "eligibility/libraries/e38bedb4c6927300a2b5",
+      "licenses": [],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
     },
     {
       "library": "core-js",
-      "initialAnchors": 11,
-      "trialLibraries": [
-        "ngx-echarts",
-        "angular2-chartjs",
-        "web-animations-js",
-        "tslib",
-        "rxjs",
-        "core-js",
-        "tinymce",
-        "@swimlane/ngx-charts",
-        "classlist.js",
-        "leaflet"
-      ],
+      "declaredVersion": "2.5.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "core-js",
+        "version": "2.5.1",
+        "integrity": "sha512-Ekp5N+IEt1CpSSPii9pzpcvf9Wdtoo8ksCO/y5imsopL77FTidtti1WUfnmXmjKL72AV/MgL7DucrbaDiQ3+NA==",
+        "shasum": "ae6874dc66937789b80754ff5428df66819ca50b",
+        "tarballSHA256": "ef72d43d15816a2c6b13e70b697947454125d8d05b0436e6a968650e7b6e278a",
+        "bytes": 585674,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 213,
-      "sourceFiles": 118,
-      "finalInitialAnchors": 11
-    },
-    {
-      "library": "echarts",
-      "initialAnchors": 870,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "chart.js",
-        "echarts"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 12,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "build/index.js",
+          "source": "source-js/758992142a2fc00070f491f288788314c668c4e63af155d8d07a9810c443638e.js",
+          "sourceSHA256": "758992142a2fc00070f491f288788314c668c4e63af155d8d07a9810c443638e",
+          "span": [
+            1075,
+            3721
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "e55d98220093ba8f0e5ebd6d72a0bd9a78b9893b2b2dcf9a2ab416a471098193",
+          "codeSHA256": "80c222c2d149d03febbf8276ae86089dcbacb3e7d8dc18185871004d763a347a",
+          "features": {
+            "propertyOperations": 28,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "b1439bc5db31352d",
+            "graphNodes": 42,
+            "graphEdges": 54,
+            "graphOperationOccurrences": 31,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/index.js",
+          "source": "source-js/758992142a2fc00070f491f288788314c668c4e63af155d8d07a9810c443638e.js",
+          "sourceSHA256": "758992142a2fc00070f491f288788314c668c4e63af155d8d07a9810c443638e",
+          "span": [
+            34,
+            3970
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "4e57822d81e87fffd3eed4878d2f3509f00d496a8f508b65b5b82c27df223193",
+          "codeSHA256": "26a65f5ebc374a8271c1a5e11857b8daef3536573ac90344ae9e4cc00e84b4a8",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "f271e58b80b2d528",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "client/core.js",
+          "source": "source-js/f7c095d9095c26d20aaf37d26f66c80fd5d404b326492829ecbb2c2b0824a4bf.js",
+          "sourceSHA256": "f7c095d9095c26d20aaf37d26f66c80fd5d404b326492829ecbb2c2b0824a4bf",
+          "span": [
+            346,
+            1077
+          ],
+          "name": "__webpack_require__",
+          "normalizedASTSHA256": "2b3326a82339937d52b60627eb762e128d307e7e93d4306f3787ceceb72c7786",
+          "codeSHA256": "73299d16ef22421c1693b09fb9e97bd7596c8af710a954607e20d08eefb25377",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "4a860f95346f9ba1",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 8569,
-      "sourceFiles": 411,
-      "finalInitialAnchors": 870
-    },
-    {
-      "library": "eva-icons",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "intl",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ionicons",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "leaflet",
-      "initialAnchors": 90,
-      "trialLibraries": [
-        "ngx-echarts",
-        "angular2-chartjs",
-        "web-animations-js",
-        "tslib",
-        "rxjs",
-        "core-js",
-        "tinymce",
-        "@swimlane/ngx-charts",
-        "classlist.js",
-        "leaflet"
+      "proofDirectory": "eligibility/libraries/a421b0bafc79bc3423c9",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "fe8b389324bb5bbd97934b2fdd16acf5aef22bd49e404134a9366b9e9cb23575"
+        }
       ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 861,
-      "sourceFiles": 78,
-      "finalInitialAnchors": 90
-    },
-    {
-      "library": "nebular-icons",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ng2-ckeditor",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ng2-completer",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ng2-smart-table",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ngx-echarts",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "ngx-echarts"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 0,
-      "sourceFiles": 3
-    },
-    {
-      "library": "node-sass",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "normalize.css",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "pace-js",
-      "initialAnchors": 10,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "chart.js",
-        "echarts",
-        "pace-js"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 89,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 10
-    },
-    {
-      "library": "roboto-fontface",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rxjs",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "rxjs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 2,
-      "sourceFiles": 113
-    },
-    {
-      "library": "rxjs-compat",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "socicon",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "style-loader",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
     },
     {
       "library": "tinymce",
-      "initialAnchors": 549,
-      "trialLibraries": [
-        "ngx-echarts",
-        "angular2-chartjs",
-        "web-animations-js",
-        "tslib",
-        "rxjs",
-        "core-js",
-        "tinymce",
-        "@swimlane/ngx-charts",
-        "classlist.js",
-        "leaflet"
-      ],
+      "declaredVersion": "4.5.7",
+      "origin": {
+        "kind": "npm-package",
+        "name": "tinymce",
+        "version": "4.5.7",
+        "integrity": "sha512-zniKbtjkm0zOnZ+6cG0xGeJCK85VP8cqQHISp9mUEMuG9zI/I3zmfwUPDhgR2PYUN/7bLaeC2f9/yz2j4r8OUA==",
+        "shasum": "e1f5cd286ec3c9977bd672a4c14e496f63bc4fef",
+        "tarballSHA256": "0a25533204a38d9fecc5499dc5b6159b1420b200ec1a3c1f3756016649b66f7a",
+        "bytes": 1435997,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 3544,
-      "sourceFiles": 5,
-      "finalInitialAnchors": 549
-    },
-    {
-      "library": "tslib",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "tslib"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "jquery.tinymce.js",
+          "source": "source-js/0ba588090282092b198e3a499bb2232cfa5421e902690de144ad5ee30b0bf110.js",
+          "sourceSHA256": "0ba588090282092b198e3a499bb2232cfa5421e902690de144ad5ee30b0bf110",
+          "span": [
+            951,
+            2053
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "37cc6c3770c8a20ce612e482c4d704918a6f2a80016cb0e78a9b5b192c076826",
+          "codeSHA256": "483326a76fdc2d5d8f69fb8e936a2e3a637a9522ee79f1f3ff4cb7e7a93b6428",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "937f30e64ca03a5f",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "jquery.tinymce.js",
+          "source": "source-js/0ba588090282092b198e3a499bb2232cfa5421e902690de144ad5ee30b0bf110.js",
+          "sourceSHA256": "0ba588090282092b198e3a499bb2232cfa5421e902690de144ad5ee30b0bf110",
+          "span": [
+            4286,
+            4748
+          ],
+          "name": "onreadystatechange",
+          "normalizedASTSHA256": "ebd413e2425e65192e7bd4fd7897b122526f1a7224e6395fe1bd542f037f38a8",
+          "codeSHA256": "b5c059cf81843f51b21af9fee8472b3121f21cdeea1e603d45f70ec65f430cc4",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "ed44eee94b0066b8",
+            "graphNodes": 15,
+            "graphEdges": 18,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "jquery.tinymce.js",
+          "source": "source-js/0ba588090282092b198e3a499bb2232cfa5421e902690de144ad5ee30b0bf110.js",
+          "sourceSHA256": "0ba588090282092b198e3a499bb2232cfa5421e902690de144ad5ee30b0bf110",
+          "span": [
+            369,
+            4978
+          ],
+          "name": "tinymce",
+          "normalizedASTSHA256": "e9ce62fce68f8b299ef36e7e7a6193d859ba2d242a3494902ea32cba0ed9e92e",
+          "codeSHA256": "cc30f647297cbda6ec9160fde68460aae13d938379b89bc57999142695bc1947",
+          "features": {
+            "propertyOperations": 32,
+            "distinctOperationPropertyPairs": 30,
+            "pogHash": "5ea9bc886368c83d",
+            "graphNodes": 42,
+            "graphEdges": 56,
+            "graphOperationOccurrences": 53,
+            "distinctGraphOperationPropertyPairs": 30,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 66,
-      "sourceFiles": 1
-    },
-    {
-      "library": "typeface-exo",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "web-animations-js",
-      "initialAnchors": 11,
-      "trialLibraries": [
-        "ngx-echarts",
-        "angular2-chartjs",
-        "web-animations-js",
-        "tslib",
-        "rxjs",
-        "core-js",
-        "tinymce",
-        "@swimlane/ngx-charts",
-        "classlist.js",
-        "leaflet"
+      "proofDirectory": "eligibility/libraries/91565d2cdc742aca7ad1",
+      "licenses": [
+        {
+          "path": "licenses/license.txt",
+          "sha256": "5fda611b8191f00121f161a93e7399cdb71789dba923e8ed09b50a1f78d32c5e"
+        }
       ],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
+    },
+    {
+      "library": "leaflet",
+      "declaredVersion": "1.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "leaflet",
+        "version": "1.2.0",
+        "integrity": "sha512-Bold8phAE6WcRsuwhofrQ7cOK1REFHaYIkKuj7+TBYK3ONKRpGGIb5oXR5akYotFnrWN0TWKh6Svlhflm3dogg==",
+        "shasum": "fd5d93d9cb00091f5f8a69206d0d6744c1c82697",
+        "tarballSHA256": "af92be2aeb6a9b0ebcf905a10f928ebc4baea6e1899776feb0613d136556f712",
+        "bytes": 642970,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 69,
-      "sourceFiles": 6,
-      "finalInitialAnchors": 11
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 13,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/control/Control.Attribution.js",
+          "source": "source-js/7a23b49b3e30e4cb40fe9d990257fd0b3441f152fe7455ca56ba816bbf8c13b3.js",
+          "sourceSHA256": "7a23b49b3e30e4cb40fe9d990257fd0b3441f152fe7455ca56ba816bbf8c13b3",
+          "span": [
+            1126,
+            1530
+          ],
+          "name": "onAdd",
+          "normalizedASTSHA256": "1bcaf9826c22eb4e1132f85900a49247821f3d231ad937d72a7b315ceb043296",
+          "codeSHA256": "b4a15bbac259cb78a4dbff96171f91bce3f3d3e79e101de0f162dc675cd83694",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "6ebb396f8636f0a2",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/control/Control.Attribution.js",
+          "source": "source-js/7a23b49b3e30e4cb40fe9d990257fd0b3441f152fe7455ca56ba816bbf8c13b3.js",
+          "sourceSHA256": "7a23b49b3e30e4cb40fe9d990257fd0b3441f152fe7455ca56ba816bbf8c13b3",
+          "span": [
+            2353,
+            2788
+          ],
+          "name": "_update",
+          "normalizedASTSHA256": "4cc4ecb623b0bb61e21f4cfe2e98ace4bdd6e4584c6d3879c5563552ddfdb172",
+          "codeSHA256": "7c121d1fa8900861bb6863e91f89165a1cfefae955715e7bd6314a1e8c44d6ed",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "a9bade0630922f82",
+            "graphNodes": 18,
+            "graphEdges": 21,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/control/Control.js",
+          "source": "source-js/efd8f53ac9f0d9ed6a522dca4fd2a4e7d51b9168274f4c3c64693c6e4dfe331a.js",
+          "sourceSHA256": "efd8f53ac9f0d9ed6a522dca4fd2a4e7d51b9168274f4c3c64693c6e4dfe331a",
+          "span": [
+            1539,
+            1947
+          ],
+          "name": "addTo",
+          "normalizedASTSHA256": "249af39d950181f7e73596a10bed0f0394116a44ac9e16a74c8f77a3c436e4d3",
+          "codeSHA256": "59b3ccdfc8d15cd25a1aa03ff3d09698b5d65a996b94251201e9666d8b1feefe",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "b8c182db8e26d134",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/73e47f3ae78b3400ae23",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c22922085f136052ce704d8e63fa987646e6b6223ff571fa5338e47bbdc5d802"
+        }
+      ],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
+    },
+    {
+      "library": "chart.js",
+      "declaredVersion": "2.7.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "chart.js",
+        "version": "2.7.1",
+        "integrity": "sha512-pX1oQAY86MiuyZ2hY593Acbl4MLHKrBBhhmZ1YqSadzQbbsBE2rnd6WISoHjIsdf0WDeC0hbePYCz2ZxkV8L+g==",
+        "shasum": "ae90b4aa4ff1f02decd6b1a2a8dabfd73c9f9886",
+        "tarballSHA256": "a57e195a8cc0c7e380b5d19aee6f5a1cfb7d06980aa677e2884db392835b5a2b",
+        "bytes": 1938933,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 8,
+      "parsedFunctions": 20,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/controllers/controller.bar.js",
+          "source": "source-js/755fbdea01e2197f65a4fb38466d4fb9bb6faac481734ca1f5ff79a9a2667d99.js",
+          "sourceSHA256": "755fbdea01e2197f65a4fb38466d4fb9bb6faac481734ca1f5ff79a9a2667d99",
+          "span": [
+            1020,
+            1339
+          ],
+          "name": "title",
+          "normalizedASTSHA256": "65300d72e1cbbe57fec4d31511a5615d86259ef30e04cf98faeff41e1d362732",
+          "codeSHA256": "f6326c3a7705d98e1de9e74d784474d2dea78e5f7ef22fae26ab28ba8742f88a",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "17255f9fc9605726",
+            "graphNodes": 13,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/controllers/controller.bar.js",
+          "source": "source-js/755fbdea01e2197f65a4fb38466d4fb9bb6faac481734ca1f5ff79a9a2667d99.js",
+          "sourceSHA256": "755fbdea01e2197f65a4fb38466d4fb9bb6faac481734ca1f5ff79a9a2667d99",
+          "span": [
+            2142,
+            3304
+          ],
+          "name": "updateElement",
+          "normalizedASTSHA256": "7ca7a5c14d0577b60f62e041112880e088c8ac272a0d0259224d1d5659b8a654",
+          "codeSHA256": "ba25636f4e36692942e2960058a48009ab1fc72939a6f9044646221fdfed56be",
+          "features": {
+            "propertyOperations": 47,
+            "distinctOperationPropertyPairs": 33,
+            "pogHash": "4380dedca5af0b14",
+            "graphNodes": 19,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 76,
+            "distinctGraphOperationPropertyPairs": 33,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/controllers/controller.bar.js",
+          "source": "source-js/755fbdea01e2197f65a4fb38466d4fb9bb6faac481734ca1f5ff79a9a2667d99.js",
+          "sourceSHA256": "755fbdea01e2197f65a4fb38466d4fb9bb6faac481734ca1f5ff79a9a2667d99",
+          "span": [
+            3358,
+            4075
+          ],
+          "name": "updateElementGeometry",
+          "normalizedASTSHA256": "b2f7ae44c906e73d75319a30efd3906e0daf31fb24765d31c458fc3e21efa72b",
+          "codeSHA256": "20736b1e81f757883bc16fd07f33085898a3e1d2d0cea84e3a62b69dc7a34d95",
+          "features": {
+            "propertyOperations": 23,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "c075b5561c86360b",
+            "graphNodes": 26,
+            "graphEdges": 32,
+            "graphOperationOccurrences": 35,
+            "distinctGraphOperationPropertyPairs": 19,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/bb74933adfea82ab055e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "4cfd85460914bb9c300189e8b7953134cbc42e56c884d1e1116e51638acf8aaf"
+        }
+      ],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
+    },
+    {
+      "library": "echarts",
+      "declaredVersion": "^4.9.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "echarts",
+        "version": "4.9.0",
+        "integrity": "sha512-+ugizgtJ+KmsJyyDPxaw2Br5FqzuBnyOWwcxPKO6y0gc5caYcfnEUIlNStx02necw8jmKmTafmpHhGo4XDtEIA==",
+        "shasum": "a9b9baa03f03a2a731e6340c55befb57a9e1347d",
+        "tarballSHA256": "d2bdf8af1b218d3885a518072788a3b7f0c2d3f8925ec8585a36be5ee5add3f2",
+        "bytes": 10241622,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 7,
+      "parsedFunctions": 14,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/action/geoRoam.js",
+          "source": "source-js/3d056c231dd5d88b6d70e813015b4e91c9d631d84cf7ee946bbcdd020f553481.js",
+          "sourceSHA256": "3d056c231dd5d88b6d70e813015b4e91c9d631d84cf7ee946bbcdd020f553481",
+          "span": [
+            1422,
+            2342
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "337752e60b28d08a12f0752b5088ab1aa119f75b107202f053fc872531213dc3",
+          "codeSHA256": "4ebf2b9095094b70a49c1b7139f0d094f4d68a1bd4224d4e1ed2a0aaae496284",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "2c589c4320233587",
+            "graphNodes": 13,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/action/roamHelper.js",
+          "source": "source-js/b23a100a54fcfc9f6daf8a69e02e1ece7c80dde6e230365d9a275d6bb3c3cd66.js",
+          "sourceSHA256": "b23a100a54fcfc9f6daf8a69e02e1ece7c80dde6e230365d9a275d6bb3c3cd66",
+          "span": [
+            908,
+            2230
+          ],
+          "name": "updateCenterAndZoom",
+          "normalizedASTSHA256": "5114e03ae1f91bb3e578fcbd75390345a2e3b5719d9e2a5bdd082360672b2ffa",
+          "codeSHA256": "d25bba067c652d32ae3be511be2d34a4c05d1ac053e9e521e054805d2d8e6730",
+          "features": {
+            "propertyOperations": 35,
+            "distinctOperationPropertyPairs": 22,
+            "pogHash": "2927f697ffd45c5a",
+            "graphNodes": 19,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 76,
+            "distinctGraphOperationPropertyPairs": 20,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/chart/bar/BarView.js",
+          "source": "source-js/e7801bddc70824d92553b2e5dddabd800fef1ee306dcf976d2c6a8e87a726cb1.js",
+          "sourceSHA256": "e7801bddc70824d92553b2e5dddabd800fef1ee306dcf976d2c6a8e87a726cb1",
+          "span": [
+            1519,
+            2334
+          ],
+          "name": "getClipArea",
+          "normalizedASTSHA256": "071fbd96c91cbe574b410d84fc1bad9c59ce1cc8f9549dc893cbdcf94f2ba081",
+          "codeSHA256": "1c5417abe2f60dfdcfc3f45096f6db2a8a1d84b6f6219e0cb7e45d1632ba2ab8",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "3ad3e8f3496857a2",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/f84035fd958129fc73b7",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "512b2001a3a2ddd456a08d1392d5831da992daaf18b10e76f9b4a5b4ae7fe96c"
+        },
+        {
+          "path": "licenses/NOTICE",
+          "sha256": "c40dc495b6220f2006119ea08218a4c2b15bd113a06af071950edaf34037626e"
+        }
+      ],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
+    },
+    {
+      "library": "pace-js",
+      "declaredVersion": "1.0.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "pace-js",
+        "version": "1.0.2",
+        "integrity": "sha512-5rIBZm4u7xQz2eYWwatBfUnurKxXRyO6meLvlxhQYyhJZoZDjvLt249nUikj9VMpmtMR0owHqade9RSSNRT/GQ==",
+        "shasum": "673a717f833ccb4f4315531b75ee4788376600f7",
+        "tarballSHA256": "240da35ace858995e9c92858de1d98c4f6f93585ac7c52e8a0478a134615d6ff",
+        "bytes": 117617,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 17,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "pace.js",
+          "source": "source-js/9c1e48cf1b739e976c561fe210b1b761d445ef5adcc6e878b48b47da359f83fc.js",
+          "sourceSHA256": "9c1e48cf1b739e976c561fe210b1b761d445ef5adcc6e878b48b47da359f83fc",
+          "span": [
+            3025,
+            3648
+          ],
+          "name": "extend",
+          "normalizedASTSHA256": "6422636bb04566e48086b6455c68086d8511c1998e08d53f5d56a96ca0a74c37",
+          "codeSHA256": "929d9c142556ab6f1596ab6f162bfa78ab6a6165e669ac744533589a4ffdf1fd",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "3ba3915953b04e80",
+            "graphNodes": 26,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "pace.js",
+          "source": "source-js/9c1e48cf1b739e976c561fe210b1b761d445ef5adcc6e878b48b47da359f83fc.js",
+          "sourceSHA256": "9c1e48cf1b739e976c561fe210b1b761d445ef5adcc6e878b48b47da359f83fc",
+          "span": [
+            4537,
+            4925
+          ],
+          "name": "on",
+          "normalizedASTSHA256": "aef0914e7cfd37fb45420b2b659727cb31c034cb81805b6747567759ea6929cd",
+          "codeSHA256": "48980cd9dd5a2351b08b7e77bdd88cb1a8e81cebe1c13dbb23a0f7a1fc3158b5",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "74a6616e5cf4caa8",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "pace.js",
+          "source": "source-js/9c1e48cf1b739e976c561fe210b1b761d445ef5adcc6e878b48b47da359f83fc.js",
+          "sourceSHA256": "9c1e48cf1b739e976c561fe210b1b761d445ef5adcc6e878b48b47da359f83fc",
+          "span": [
+            5074,
+            5641
+          ],
+          "name": "off",
+          "normalizedASTSHA256": "0e1a55d738f0eb8fa03061694002dd110b5236d196e2498115a92518c9bba733",
+          "codeSHA256": "4c7e206888d1f1144bec9ea98558884bbfe671f3fc4b5ad9a8c04d1d94ebf29c",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "88d442d1aec08451",
+            "graphNodes": 15,
+            "graphEdges": 18,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/ca402f79b0941d9b1de3",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "7415a0a1c245c068a22c955200ef39e80a4a938b2383d3f30b028e0d8b5602e3"
+        }
+      ],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
     },
     {
       "library": "zone.js",
-      "initialAnchors": 26,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "chart.js",
-        "echarts",
-        "pace-js",
-        "zone.js"
-      ],
+      "declaredVersion": "~0.11.4",
+      "origin": {
+        "kind": "npm-package",
+        "name": "zone.js",
+        "version": "0.11.5",
+        "integrity": "sha512-D1/7VxEuQ7xk6z/kAROe4SUbd9CzxY4zOwVGnGHerd/SgLIVU5f4esDzQUsOCeArn933BZfWMKydH7l7dPEp0g==",
+        "shasum": "ab0b449e91fadb5ebb2db189ffe1b7b6048dc8b1",
+        "tarballSHA256": "ae6e8769ec53c0af4e5e6dd4cb816b4a1f9015f9443c761e5eac7779f0f251d3",
+        "bytes": 1043205,
+        "lockfile": "package-lock.json"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 242,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 26
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 15,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "bundles/async-test.umd.js",
+          "source": "source-js/a5de82841843ea2ba0917183c5b4e6a6b9af852ec863acf086ed76d3223879b3.js",
+          "sourceSHA256": "a5de82841843ea2ba0917183c5b4e6a6b9af852ec863acf086ed76d3223879b3",
+          "span": [
+            595,
+            1456
+          ],
+          "name": "AsyncTestZoneSpec",
+          "normalizedASTSHA256": "97c106cbf0c81ee38bac1858abb8d2653b540e05346e6b8d210951f1e834df82",
+          "codeSHA256": "0d424f0e886ccfcb86c41f70ba806e9011abf01f1a2fe88676b46446ae165531",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "b0a878375abfdd87",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "bundles/async-test.umd.js",
+          "source": "source-js/a5de82841843ea2ba0917183c5b4e6a6b9af852ec863acf086ed76d3223879b3.js",
+          "sourceSHA256": "a5de82841843ea2ba0917183c5b4e6a6b9af852ec863acf086ed76d3223879b3",
+          "span": [
+            3270,
+            3913
+          ],
+          "name": "onScheduleTask",
+          "normalizedASTSHA256": "bfd90a8000613bb4014080784c33af9543e86979062a85f1d39765a8315c5f57",
+          "codeSHA256": "0fb14cf6365145958eb4025f00af1fb4f5503a4d82a96a7efbd28191bda530c1",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "ed3f3ea6f2d44e48",
+            "graphNodes": 19,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "bundles/async-test.umd.js",
+          "source": "source-js/a5de82841843ea2ba0917183c5b4e6a6b9af852ec863acf086ed76d3223879b3.js",
+          "sourceSHA256": "a5de82841843ea2ba0917183c5b4e6a6b9af852ec863acf086ed76d3223879b3",
+          "span": [
+            569,
+            8031
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "22f049ea2ed0818078ba40f16e905dbe7ad010b6cc8d9fb958bd15d5114a71db",
+          "codeSHA256": "b10f0a72dbe56063313cc177a69ed6c52fa83ef751edb5a776ee19d631973dac",
+          "features": {
+            "propertyOperations": 20,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "889e216aa9daa900",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/1226d6d20ccd5d9c5663",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "1d65ce0e0d6f0f237eeeb8fa186402ec8c6169d05ddadac6bcf9fa683eb5b34b"
+        },
+        {
+          "path": "licenses/LICENSE.wrapped",
+          "sha256": "a99e52642d7541ab1c0cb2c07d3111e87173a3cf5a474e0e5c2aaec9f97f3543"
+        }
+      ],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
+    },
+    {
+      "library": "@angular/animations",
+      "declaredVersion": "^15.2.10",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/animations",
+        "version": "15.2.10",
+        "integrity": "sha512-yxfN8qQpMaukRU5LjFkJBmy85rqrOp86tYVCsf+hmPEFRiXBMUj6xYLeCMcpk3Mt1JtnWGBR34ivGx+7bNeAow==",
+        "shasum": "c9194ba9a2b9b4e466e9c76e18591cde096a28e8",
+        "tarballSHA256": "53ace4defc299fac5462a5b4b9b3056c863d270fd5851fb1d45450d5724aa201",
+        "bytes": 577021,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "esm2020/browser/src/dsl/animation_ast_builder.mjs",
+          "source": "source-js/0c5347f5d4d492d1c976b7512579930f20931328331481fbf2164f79bc1487fb.js",
+          "sourceSHA256": "0c5347f5d4d492d1c976b7512579930f20931328331481fbf2164f79bc1487fb",
+          "span": [
+            4240,
+            5109
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "35130ac7cf49306570a059d1fc1fc6cc916743ab872919914a48cafcb1789e20",
+          "codeSHA256": "eb1747d4085594a13d1f517f095bf5b784edf342f320eda64fc1eef3af386545",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "6b57f9950f43c239",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "esm2020/browser/src/dsl/animation_ast_builder.mjs",
+          "source": "source-js/0c5347f5d4d492d1c976b7512579930f20931328331481fbf2164f79bc1487fb.js",
+          "sourceSHA256": "0c5347f5d4d492d1c976b7512579930f20931328331481fbf2164f79bc1487fb",
+          "span": [
+            3921,
+            5352
+          ],
+          "name": "visitTrigger",
+          "normalizedASTSHA256": "2e6f7edfde95299cd1562244bf1224b6ddbe8c99e4ee43098d3e582e1f2a59f6",
+          "codeSHA256": "a873489fe1ee5249c9d7b6c99f818237770c941e9325bd8d92b6ab02fb966228",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "9d4a6ef7d139eef1",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "esm2020/browser/src/dsl/animation_ast_builder.mjs",
+          "source": "source-js/0c5347f5d4d492d1c976b7512579930f20931328331481fbf2164f79bc1487fb.js",
+          "sourceSHA256": "0c5347f5d4d492d1c976b7512579930f20931328331481fbf2164f79bc1487fb",
+          "span": [
+            5367,
+            6539
+          ],
+          "name": "visitState",
+          "normalizedASTSHA256": "ad8cf701294c1fdd905121d2e1a4d8e8d8ce22205706196ad8a9c2ccb1f01df0",
+          "codeSHA256": "78c6f16967727bb63d28d12a604dda82a8bfdd58e91d48bdbdbfdebb723be74a",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "acddcfd40afc2749",
+            "graphNodes": 21,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 33,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/057def2e0275d899723a",
+      "licenses": [],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
+    },
+    {
+      "library": "@angular/cdk",
+      "declaredVersion": "^15.2.9",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@angular/cdk",
+        "version": "15.2.9",
+        "integrity": "sha512-koaM07N1AIQ5oHU27l0/FoQSSoYAwlAYwVZ4Di3bYrJsTBNCN2Xsby7wI8gZxdepMnV4Fe9si382BDBov+oO4Q==",
+        "shasum": "e22df07b296fec6dccf66d569c3acc3c504c2058",
+        "tarballSHA256": "44ab0314900b625161ca9fc53b19076257812af2b6f165f3b0346ef9e2d2e179",
+        "bytes": 2573669,
+        "lockfile": "package-lock.json"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 6,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "esm2020/a11y/aria-describer/aria-describer.mjs",
+          "source": "source-js/1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1.js",
+          "sourceSHA256": "1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1",
+          "span": [
+            2155,
+            2826
+          ],
+          "name": "describe",
+          "normalizedASTSHA256": "c59341560ee44706284a0d462e4c01de98d1e8071093d9a62b0401381e85c721",
+          "codeSHA256": "a9ea297c2195cea69490f296f9db595409285494737e491d2aab3ed902018e92",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "a57e75c6b2e1d86a",
+            "graphNodes": 13,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "esm2020/a11y/aria-describer/aria-describer.mjs",
+          "source": "source-js/1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1.js",
+          "sourceSHA256": "1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1",
+          "span": [
+            2848,
+            3757
+          ],
+          "name": "removeDescription",
+          "normalizedASTSHA256": "205003ab2b024c76eaa5f776ba006af0759f88b2dc885cd003ad703632698944",
+          "codeSHA256": "97cfdbf210d58186ea5ac9996f791ad6306941ff7075c2bad43013c0e7eb8d17",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "3506883a12c99062",
+            "graphNodes": 20,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "esm2020/a11y/aria-describer/aria-describer.mjs",
+          "source": "source-js/1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1.js",
+          "sourceSHA256": "1b15bac1cf4e3da7968e702922270cb046aa9916d0035f0b5d3618359a968ce1",
+          "span": [
+            3860,
+            4339
+          ],
+          "name": "ngOnDestroy",
+          "normalizedASTSHA256": "95b899ece8ba54afc5a3a207e1d9760bdae4d7eea4dd5215baa37a30a0a47c54",
+          "codeSHA256": "d8a9ceb1428a937281cc65cdcac7324f73284b011013009a7185862a9bf00770",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "65e0a686a1dd95c7",
+            "graphNodes": 8,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/b170efff09bd93e29836",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c8a1be159e4213a9afbe18360b8f24499ca2de7a2f03e6849293d7df5aeeed64"
+        }
+      ],
+      "lockfileSHA256": "7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006",
+      "lockfileSnapshot": "lockfiles/7c4bc8c11b69e12ae40302a96305885365742f6380399a2dff70b0fce8aa2006-package-lock.json"
     }
   ],
   "selectedLibraries": [
@@ -600,1169 +1040,28 @@
     "chart.js",
     "echarts",
     "pace-js",
-    "zone.js"
-  ],
-  "status": "included",
-  "referenceFailures": [],
-  "referenceFiles": 891,
-  "bundleUnits": 7,
-  "candidateOrder": [
-    "web-animations-js",
-    "core-js",
-    "tinymce",
-    "leaflet",
-    "ngx-echarts",
-    "angular2-chartjs",
-    "tslib",
-    "rxjs",
-    "@swimlane/ngx-charts",
-    "classlist.js",
+    "zone.js",
     "@angular/animations",
-    "@angular/cdk",
-    "@angular/common",
-    "@angular/compiler",
-    "@angular/core",
-    "@angular/forms",
-    "@angular/google-maps",
-    "@angular/platform-browser",
-    "@angular/platform-browser-dynamic",
-    "@angular/router",
-    "@asymmetrik/ngx-leaflet",
-    "@nebular/auth",
-    "@nebular/eva-icons",
-    "@nebular/security",
-    "@nebular/theme",
-    "bootstrap",
-    "chart.js",
-    "ckeditor",
-    "echarts",
-    "eva-icons",
-    "intl",
-    "ionicons",
-    "nebular-icons",
-    "ng2-ckeditor",
-    "ng2-completer",
-    "ng2-smart-table",
-    "node-sass",
-    "normalize.css",
-    "pace-js",
-    "roboto-fontface",
-    "rxjs-compat",
-    "socicon",
-    "style-loader",
-    "typeface-exo",
-    "zone.js"
+    "@angular/cdk"
   ],
-  "selectionAttempts": [
-    {
-      "library": "ngx-echarts",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "ngx-echarts"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "angular2-chartjs",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "angular2-chartjs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "tslib",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "tslib"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "rxjs",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "rxjs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@swimlane/ngx-charts",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "@swimlane/ngx-charts"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "classlist.js",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "classlist.js"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@asymmetrik/ngx-leaflet",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "@asymmetrik/ngx-leaflet"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "chart.js",
-      "initialAnchors": 40,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "chart.js"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "echarts",
-      "initialAnchors": 870,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "chart.js",
-        "echarts"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "pace-js",
-      "initialAnchors": 10,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "chart.js",
-        "echarts",
-        "pace-js"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "zone.js",
-      "initialAnchors": 26,
-      "trialLibraries": [
-        "web-animations-js",
-        "core-js",
-        "tinymce",
-        "leaflet",
-        "chart.js",
-        "echarts",
-        "pace-js",
-        "zone.js"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    }
-  ],
-  "sourceDiagnostics": [
-    {
-      "kind": "parse-error",
-      "unit": "s-ca3f8f2fd9bc47c89e6614e28f51d959bdf8a94c1e5dd7f893a5426ed159afd0",
-      "error": "[7:7-7:16]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-4ab98eec7e88848bb675ef86151e91162d644239c5f75e3c594071bbb62e2b4f",
-      "error": "[13:28-13:29]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-76e2bf1b47ea86cc6399ad7e83ed5fc704c20088986f50895259f56dc5af667d",
-      "error": "[12:7-12:11]: Unexpected token: 'enum'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c61adedd35e9fe2bfc7f4f47e6b3a4bacc2919ce4160f89c190cfc7eeae091a8",
-      "error": "[19:23-19:24]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c4c0a16becc46a0b00b81324b6de982b70cdc38257ae335eb2839d4539f9ef3a",
-      "error": "[6:28-6:29]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-2b37d4b872e9228a7920d8e0ee72be463d55f6aa1439aee73adfd2ab264e6efa",
-      "error": "[10:39-10:40]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c11e24b58a3f8ca7956672fa06f0eb07fe9ce552b1bc8c38aa2a449b531885ed",
-      "error": "[5:18-5:19]: Missing initializer in const declaration"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-082cb57814d50a0d501358adaad3f7661bbf36b4c93afe6f232663d11051bdf5",
-      "error": "[11:24-11:25]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-10656fcf40c0dd07c4713cafbc67a5f7d0397cc70d19248b16ce1ce3befc7314",
-      "error": "[16:26-16:27]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-08aaa60ddcfc65bb6e64d513e0b580ccc9e13f1dfee6fcbb379cdfe15f65ecd0",
-      "error": "[13:30-13:31]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8ff856f7a4753c4cf69f9741906a4dcd635564a8968dee1ebbbf874c2e4608e7",
-      "error": "[10:32-10:33]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-5a2699f38c9ad2f27881640d86f83cc5012cefb6390e12b85896be3042ddc755",
-      "error": "[19:23-19:24]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-6f727b0744360c5ccda1d95e521635a0c542a0ad6268b212d9900cba099fb006",
-      "error": "[1:7-1:16]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-defeb117f1319924c994420397f99b908ece7ca177ee764857b7999ea14ee389",
-      "error": "[19:26-19:36]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c72f18c6787be46cab177d87e5f556c3c9968cf350cf12b13a4b9b504078a421",
-      "error": "[12:21-12:23]: Expected '}'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-fe220eb8a68b91fe10c7c65e005e28a3dc185838021a8848a17f9cc070dce99c",
-      "error": "[7:0-7:9]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-909ffcc4311bdcd0f7a848a7d671ba5f4e8b64d1777ade413e4a86d078183993",
-      "error": "[12:34-12:35]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-62b52264d5f13326ca15f58063f4b3692bf38033369157e68bb3ebb060cd337b",
-      "error": "[9:28-9:29]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-d893e04da0b1c47236c3cdde6ca8fc53ec2ae8b6932dedecd10380277e20f6e8",
-      "error": "[9:28-9:29]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-753b83186d60d48daad25e8d8934529703f3e43d8fea8f82e7502a78df3ab4ff",
-      "error": "[8:33-8:34]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-31da96e985a7ac7c665d136ea4d1a000b1ef299d16b499ca250d36c6c5189824",
-      "error": "[18:29-18:30]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-b78ccbc363f0685ff1ca31c153d2de595e093399f69c52616ce7003dde271ee8",
-      "error": "[10:22-10:23]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c2eb3bbd49ab6ccabe32932a47a704b9b5aeb099b5acc9109ab1139532593efd",
-      "error": "[5:25-5:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3eac5846fe4e42ef51ed376ae0f2c7c8c275e53c67316aabc81e070d814bc516",
-      "error": "[62:31-62:32]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8ae656fb24413aa08a34308ab4be114fabd72d2944f31678d128187fcfc1fc90",
-      "error": "[13:24-13:25]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-14c33fc36b017441232d1e41bd8daeef7452bcd3aba9b3487cce8994fd03eafc",
-      "error": "[6:20-6:21]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e6d56156c133eb8e45c3f1c3c8694062e0f0a743d472d242031954a630ae293c",
-      "error": "[22:25-22:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8ecf7ed459d2dd9d2a675238a5b612906611519206082351de0b305d7430282a",
-      "error": "[5:41-5:42]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-4bc2abda534673e407b842ac6b81087b1ddad0de5afae6dc2fdaadd6bb07177b",
-      "error": "[6:34-6:35]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c20fc1afd2345b51868fbbbc12b02c04bd9b57cb798a9bb830d16bf7e33a0308",
-      "error": "[5:31-5:32]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-50afbcabf16cb20276222c1b0920099698d71a6e2c88185ec3e413896d81b63f",
-      "error": "[4:32-4:33]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-837fd1ec789bedd573734262aabb0c67fd95c1f67798507fc9cb7e4e45cca721",
-      "error": "[6:32-6:33]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-02d047721b26ac74910e79a48e8f5594bca7b0e013ac21bab2585045c85c2847",
-      "error": "[6:25-6:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-03f4d02eb5faddd21f4f32d794e8a3bf77a710b019d054cd08cc62aaaa878bf0",
-      "error": "[7:14-7:15]: Missing initializer in const declaration"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-0fa39a85e9c2eed4924395423d87e72e9ec6a5b8860169e4981ff44240bf78c4",
-      "error": "[56:34-56:35]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-88c68950d75eea7496615c5c66b25b4ceb2ba6ac69d3fb771b9644d7c5bdac79",
-      "error": "[9:21-9:22]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-9bf5d1a3de864a081d55ac11cc644c9d4d334cd86273eacc7366ae848761cc75",
-      "error": "[9:18-9:19]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8e68d9fa475452b4e8a4268de6caa8b9703894deb8ec171aad6d6f8204d711f4",
-      "error": "[69:32-69:33]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-6c1663b18945ebd593727d76d7d33c4491e9bc590ee7c3ebc22db5bc178e1d60",
-      "error": "[58:29-58:30]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-0d5e2be1ea529878900f00f30389928fb542cbf020f4c0bb97dd2ea2b06447be",
-      "error": "[9:26-9:27]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c6e61de53f7b37df2ba2859a96ee657964088f007e206a269ff07aaa1390e1af",
-      "error": "[5:25-5:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-7d49e280f2e68049766d8a3f8aea49618390c0692206badd20070d33a2023b97",
-      "error": "[60:28-60:29]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-999cc68c23752ede4eaa7a9462c12b98903783305a52b38a374857649cd53fb5",
-      "error": "[60:21-60:22]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-584654555c57f72ec1c91006670ea65edfc610b81c133833f30e4447ec8ad258",
-      "error": "[1:28-1:29]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-64f14206a89c46ed5dd61ec300c5ee19d1fd5e1b0fefdb96182953bfebd35f5d",
-      "error": "[7:36-7:37]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-2204dba6a4d3f79e1e7b06ec54861dd30d2c49518b44e2c961f4887164dad68d",
-      "error": "[7:22-7:23]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-2af08b6adb45f464f1af403e8f9051ba409dc03a08108875a4caaa1960e37d33",
-      "error": "[15:24-15:25]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3e8a78c93e7b1b09d5ba6fd0e7525f1da795bd4c2e9b98b634fa03450acbe43b",
-      "error": "[45:19-45:20]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-fb2fac895047d04e9591cca809e3ac08e3c66c8fcd1cca229bde84a1090104a6",
-      "error": "[64:24-64:25]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c4e76719341c83e18a60968f1d9f418d2232d66d58803db7f660fa1dcb977b81",
-      "error": "[11:24-11:25]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-9aaa6a0e1d7b3f37b9087680097aa68cebb202328702f8803c0c36fa6789c7d7",
-      "error": "[9:25-9:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-67ccecd9e1d0f7427e836b2166ddf5f51697bccba49f4824d0a052b024b0e47a",
-      "error": "[60:25-60:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-9fddd3d2c32c75bc3a1320bf7f379cb3dee792c5e5b293b10f47b4eba7d8819f",
-      "error": "[61:24-61:25]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-773c3978e58961eb1af34361b445bb554b21bbff48cc3007820640e98a20845b",
-      "error": "[24:21-24:22]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e020448f3045ffce9c35249a9db58a99cba7153f3e95b9aee6b95341fb5ed1d8",
-      "error": "[17:20-17:21]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-34a5c3f16a9e8abb14ae493879674807cb69cb55a27c8661df08babcf90f9a8d",
-      "error": "[8:25-8:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-500cd5cf549125f07c41766fde020922c8f394ef0078412ce4c7acef28a9fa9e",
-      "error": "[11:25-11:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-27e5fd266226013f3def4bb201573fd6dc587c8e6d1fc6b8632e514beb81b9f0",
-      "error": "[54:20-54:21]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-6dafef7c9e4787f4c00938f488c466d03f6c8d497ed622c176636f16a3e519ac",
-      "error": "[48:25-48:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c8166d8e7bf5d7ff328fa57fa1ee87a5e71406f5983e59399b8a41a30883ee09",
-      "error": "[6:25-6:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-81f2e6bffd1897394ea6b24d4179f63ae7ba492019643f38b06d144365e67c8e",
-      "error": "[10:19-10:20]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8e510d9b32ad1e4084afc83255b0aeff59c18b11177865e434100dfbae5b7734",
-      "error": "[5:29-5:30]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-b922d28e59c1eb7a228917fe4b8343cd84bdd73577f1e94c5e7c34436c461459",
-      "error": "[19:19-19:20]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-6c0a390d25c34e3877196d1eca9f6e8b7a30fd57be6a30c50ebdbac3d633ee5b",
-      "error": "[11:24-11:25]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c37a8e869c520c7965c7c30b0cd47eb766f1fa9c306a0230bcde492a5be3c7ee",
-      "error": "[24:23-24:33]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-7fc4258069a1ab7f418a3de7ad5d105e74a7d13f70a9a0ed7762dff554a048e2",
-      "error": "[8:9-8:15]: Unexpected token: 'static'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-34b74d5fe1c1e7466cef304f7836823441aefdecde0d18f278fed0c793842c90",
-      "error": "[1:35-1:36]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-d20133c0993efa1bef6a364cb8220e1c4f2e310e51f9823dc98f177986ff0a6b",
-      "error": "[4:8-4:14]: Unexpected token: 'identifier'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a691293e085834227ef219735a0d7a523f5b766da282d1107b525eefa46e1e83",
-      "error": "[1:7-1:16]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-76a3c39dc1d6696e6edec5185c56525c32c8756ddadf13f2973f91424074274e",
-      "error": "[1:7-1:16]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-2767f35b0813c26c406ae8853d2173595babcaa871b64d82cab248f0ad912ace",
-      "error": "[6:35-6:36]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-d562d3c66fef0265c3af47e0f8fa2d99b4d98b9265f2766e35c126d43107e220",
-      "error": "[1:24-1:25]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8e6e440ad70723f4b4d276ec4c1e54563dc3614fc7ad4b89560a5e3836e54cf0",
-      "error": "[1:48-1:49]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-ec4f4c9cabdbb4f9e4bbe9c72e5dffb526e1426478385d6c7c82001d008ccb68",
-      "error": "[1:28-1:29]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-aac67b7f6e3d7f0fa52408e74633a6b05727f98ccee1c16e2d2e6172fbc597a5",
-      "error": "[1:28-1:29]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-36c471aaa11992698d714bf614471c0176e81cd590e6400e75a7ab96a689f931",
-      "error": "[3:29-3:30]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-d312cd7f92c34aaae4274453e376aece4e046a50b73774f28d256ed3878ecee7",
-      "error": "[1:26-1:27]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-7e6d39fccb7f34418a6a2bb9f69a21f7d4a2d59ab60669bdf8c1cc0559193d95",
-      "error": "[6:31-6:32]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-af0de029eb50ee974143e6537f4e010fd7c29de40e4e6231b0da9e6771994dec",
-      "error": "[3:33-3:34]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-328c6bc7267ac7edfc7a6b1dfbe6eb2ac8aab7a37f8a2b9701e1e0214cccbb39",
-      "error": "[6:20-6:21]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-db14b133dce0bdf1275c8f4c3ff5278056c03a8377d8fea6e591d57675fa29c8",
-      "error": "[14:27-14:28]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-fce1f0b5466d7253cb217114b6760f577b0597a2886683ba55e8c6a39b157e09",
-      "error": "[9:37-9:38]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-fc675ba8515e57183e774f8bb175e36408f21fe94cbc218a022ff1f5be4fb704",
-      "error": "[4:34-4:35]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e91263548118f8f54414c9af10d26647875da145c96615fd9836b2b720859c70",
-      "error": "[4:35-4:36]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-565dcb1f9cffbfacf02acdd3164c471e16e527a06b68fb5a4269af3301113756",
-      "error": "[7:32-7:33]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-4eaa4298559d20a8e58ee518defc4eecf610bac36828330f50ee6622a73842d2",
-      "error": "[1:7-1:16]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-f3da3341098451fc8e7b113a1636974886c98500116f4f821d2754c37ada2e31",
-      "error": "[55:21-55:22]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-05c144b952bd5b0aa4da5dfdd57a4c74ba9daacb4389b43e4ee9bf9b143c5746",
-      "error": "[7:30-7:31]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a3f335256ea5924a393b9474cb796257bfcbc6e98d498d25747833fbbb2252ae",
-      "error": "[37:29-37:30]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a23924113254c384f723d30c9c3b9406b1fe1500aad28524ac07517e2340e01a",
-      "error": "[13:21-13:22]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-87a56e55aeab5762f3ce36914148f2968746e55295b830678db6aee805d39617",
-      "error": "[7:20-7:21]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-55287f232562693557b5c9eaacfa86e193cb993f21616837e18505157e4cd3f1",
-      "error": "[50:24-50:25]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-64e99146c26d08fd4d4030af00be107a4dd24f87cfc45c9b4855081fca0f75a4",
-      "error": "[13:20-13:21]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-70b64a83d69371d95fe7a6a49747cfe1377f87c69f7544109b1c177a25827163",
-      "error": "[38:21-38:22]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8130efdec33a6b739120581053a174062906aca0cc6fdbd4abaab94e623efd52",
-      "error": "[5:9-5:14]: Unexpected token: 'identifier'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-4c3038f30ac0118f361f77eb01603d4502431a5d18cf1b4f7765ba74373e4fca",
-      "error": "[10:33-10:34]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-6ad6e089d0aca31bff911e6a8cde3edac98c666298683206958649f2f38e3c42",
-      "error": "[49:24-49:25]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-5eb20a9c06ebf0b321f047fa2fa4b0bccba6119362aca78fd4617d8b71d16856",
-      "error": "[63:22-63:23]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-b0b9b407ed0c61607f845a7bfd85b3727fb9a6581805cb474bb798775ebcb9cf",
-      "error": "[8:23-8:24]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-1cab3869e7909d8a06f48e037e7759e7ef8d31dcf5f48ca750fa9013a137733f",
-      "error": "[9:7-9:16]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-7fb5693f3c0561c13702026291f75baa000218312f9f5823feb5dd700673cb2d",
-      "error": "[3:19-3:20]: Missing initializer in const declaration"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8e747cd547075447bea9906b3d3266b453c1ebd6d5e842bef7a1d43deb6cd67f",
-      "error": "[5:9-5:14]: Unexpected token: 'identifier'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-2995d4ac030689b8368082755b807dec2e0d25aec3634a5c83ecefd9b43a3d58",
-      "error": "[10:23-10:24]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-4601180ad026f718ec2173c3bcd470e8011746bac167248afac0cce6431e6baa",
-      "error": "[54:21-54:22]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-7d76d414558f01a7b9bc788bcf3cf2e8f572b8322a0287b205b44c3e05319ba1",
-      "error": "[55:25-55:26]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-15e7425dba96bcbec8718f3d89032c86fbc7adf3966644ba679d886ff367fd93",
-      "error": "[8:28-8:29]: Expected '('"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-62f0eff8fc1651dcf9608c4e41fda61a6f87b5b6bf217fed4f6be69ca168f72a",
-      "error": "[12:1-12:11]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-dafd61411987d5da3ea934975ae86a54564493998fa8ce8a41ae004123b57de3",
-      "error": "[8:11-8:27]: Unexpected token: 'identifier'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3c6f076f7dc763cf8f7c5a7735077101e00b3dd0bf3d8b0b92577d4a5c38b7c4",
-      "error": "[28:1-28:11]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-498fc7fce440fd709136657262eafed309f9ed381ad6261de99a5cca4e058977",
-      "error": "[20:1-20:11]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-9799ae35f5286631729c10c34d3a37a8a9efd1250728fc668b13fbc8a037506e",
-      "error": "[2:14-2:15]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-0cb4c1f284309a3da9f958b4b3a9589ff50993c5e3eb3e7ffb881a916b84fec8",
-      "error": "[9:11-9:15]: Unexpected token: 'identifier'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-f598db9bb4752ed43aa4378783a56f1997f205d38ea7ed8e1630b59b65c733b9",
-      "error": "[4:11-4:12]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-f1b25c3f379e8e480146657a462c2410785611c9de51bcfff9c069d5620f3850",
-      "error": "[3:18-3:19]: Unexpected token: '<'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a6d055f3e5d1a0e5c96a78a2ecd0e8d58cdd004c746ae35fcb7f3116015d8963",
-      "error": "[25:1-25:11]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-75181055d2049d0ce031789e9fe1f963b3dc6f65384e4903232a1beb66af0892",
-      "error": "[27:17-27:18]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a1a35fa5e841b05a956089699cfa14f64e42f775e554090ef970dc48b88332ef",
-      "error": "[26:1-26:11]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a2a40b98f2371ebba621aad31b76a0666da915d0c0a8241be8c80d19df0f245d",
-      "error": "[6:2-6:8]: Unexpected strict mode reserved word"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-2d95f6e72c5b2fb5bce42af66abc7936970be2056e97894ea21cccd3240de3a6",
-      "error": "[13:29-13:30]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-66ce61308ca0438e6bba935c3d8307f3d232600858e627f9d0187ed4c506dfc8",
-      "error": "[5:29-5:30]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-87f0e794cce0912cc5c3e0e8efeb33a94fdd740422310005b458cca308624115",
-      "error": "[1:7-1:11]: Unexpected token: 'enum'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-94b9845fd8d095321ccec664ec30eac54532897e46627484326ff383f87484cd",
-      "error": "[48:79-48:80]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c2db1ca002239248d8b679b8ead2684e25356e535a2be2e594c4dcbd20fbc997",
-      "error": "[35:37-35:47]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-03b3b745b9701b0f96b6cc22c3bd920b0cbc02fdd56be7e3e5c920286d128702",
-      "error": "[4:7-4:16]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-830a77fdd509003384be6b9667b4eac1fd284ad514b3777ca5d746e4e7eccc81",
-      "error": "[6:61-6:62]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e7ca22d6b710ffe7997e9743a45e81b4bee4c6699dc704a6ade9ebd1370e0d97",
-      "error": "[55:28-55:38]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-d3dd2332664b4f7e179e8cf4f6f0096b0c818bb825fa4266761c3efa88215a2f",
-      "error": "[10:19-10:20]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-567b5abf6fdeef8b4a59c4827965b9b0294a14719ef5090aed78d9ebe94e007b",
-      "error": "[23:32-23:42]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e8a807eb9d6178910b65ee32916bc4fc4c5a91172267cbd929cbda705bd30624",
-      "error": "[18:32-18:42]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-61df79291c8bb1d115f2a2803947e2ddb581195d0530aec47d062227ebf7410e",
-      "error": "[1:38-1:39]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-60941883d5c0777d6bfbe9fd3fd79dd7d138d07881a1f6b9fe11d08bf43c6528",
-      "error": "[41:33-41:43]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-578ed7c0e5e988323780ed7cf5be2510ddfd79e651671651d1dcfe3b258985e4",
-      "error": "[48:28-48:38]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-450a1165118eeae856da785076b55a4dfff74aeeb15f463718d24583ba82516b",
-      "error": "[7:59-7:60]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-dd2595c8eabbb64a2b5ce9e35852b348c4700bb7e12f08a021f6c973ebb7394c",
-      "error": "[84:33-84:43]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a29a68ff9750d957e86e152f1aad07fc2df263189dac051eef05b93485dd97f1",
-      "error": "[50:28-50:38]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-ecd5e797fc40b2cb3db7c1b7f9bc1488ef846baf58432df3260a29feb1a04551",
-      "error": "[1:7-1:11]: Unexpected token: 'enum'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-1f636e58a852d52e18d78da38f943d586cc9ccab1e4eb20b56eb8f6a0401af22",
-      "error": "[1:7-1:11]: Unexpected token: 'enum'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-82122f0e786bd5142ac6c5ba2f91bc8b79ebdc46e186b8a294ab5792caa46d01",
-      "error": "[1:7-1:11]: Unexpected token: 'enum'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-6444286b976de8a9082b5cf6da5e4ec052d5514d43225941a0239655f6bdce9f",
-      "error": "[20:30-20:40]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e20ea59c917d5b48e2df98256d8b3bd70f795b73a91ee329a7d7eac737b099e6",
-      "error": "[6:33-6:34]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-ef68945d398f37c4805f67bfb3807d33c4f68b3cb0e62523db34a37004229f3a",
-      "error": "[13:20-13:21]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-54ee219b53651baa3eeb7cb84a5cdae5da5d211b1f759adb2170efba9738c525",
-      "error": "[75:35-75:45]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-96e43dd9256cab9d7f886d4a592aefcb6ca48f8f65f347d011a897e4b7eac803",
-      "error": "[28:29-28:39]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e9e4f9b16f610aeb2d7365b6b1a5d5c92bfdd9b1794e25142529cb21deb19256",
-      "error": "[17:40-17:50]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c6b84c1825d9f68b13c4df7dadf883586ae38e3d7da09e393a496aae02bffc63",
-      "error": "[20:38-20:48]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-bc0bf1171a30873990f7d86b545cf4c33eb23379846640d2e8b685b243b1e430",
-      "error": "[17:40-17:50]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-86d4bcc9fc1bceb9877886b8317bd076ab9d9a20572e546415c7261281c8e13d",
-      "error": "[24:27-24:37]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c99e90b8dcd53a973d21d24c8c06dac0f3cf0bcee5419876500ac540a2e3966e",
-      "error": "[17:30-17:40]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-8f1e670b75a8bdf34dd76aff08ab907cd98c081d1cf075becaa169f18e20cd9c",
-      "error": "[1:8-1:11]: Unexpected token: 'let'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-f5008697807e70029fe15b10517a0a13f77dae19f5f34503aedac72367a46897",
-      "error": "[67:15-67:16]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-d8abf32c8fc18131b84f20c8e65f5c11220eb24339a74e25f34717b586d84cd3",
-      "error": "[40:22-40:32]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-a36847ac74f2e80639c89b7d978b357a0fe3833c255f0ae3d9dd7275bab489e4",
-      "error": "[43:29-43:39]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-03af7ea752491473460b82c4fd96f37d781c331c445447530634923ad1788dd8",
-      "error": "[16:16-16:17]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-6218bb3e96b8e94791dedc20fb487387d60be27245455cbc4537f31a984394c5",
-      "error": "[26:34-26:44]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3b0c8d3ed33cd2ef40b405453f209c3b3a14909b63526409b83c6874f4da2fb8",
-      "error": "[70:37-70:47]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-324867d9f6792c5ab46afef767450c7f2ea6d0105f7f0f014bd57ae946f96dbc",
-      "error": "[1:7-1:16]: Unexpected token: 'interface'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-86273df9d024b9184ee6848d40c6a1660f9680c83a71b6124885b6771bd7ff97",
-      "error": "[7:7-7:8]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-393c9ffe565e3a51da9b19a6fab271ec66c1f6e15948e49fe9ca8b580bb50e3c",
-      "error": "[7:46-7:47]: Expected ')'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-be3fcfa9ba7776f67d5c07d697c516e6e5029feba4597e03c9a93b0218598d52",
-      "error": "[160:22-160:23]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-202aebb864d59a8e3c50fa5b945290f7d662859dd1fd9d05fd6cdba7cbf58f92",
-      "error": "[161:22-161:23]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3bda83374bfff24cb941a006c1ee77272aa041f36b9a17b3259f18e271ac1524",
-      "error": "[34:33-34:43]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-717437cf98ef87da24dd1aa4f4f8307f46e8f9ce418ae74cf4ce5e1055465540",
-      "error": "[40:26-40:36]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-9da550b7334cd49714c956239d8bea86889608a7740cf22436a6c35702dba5bf",
-      "error": "[91:22-91:23]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-7b045804380adf9d7068593bfc88bfd7410b55a5b83d0932458a93ea3e749673",
-      "error": "[110:22-110:23]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-9be753319fd2376959acf5441d79eecb51982c695e764844aea0de36e74a8602",
-      "error": "[109:22-109:23]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-f050939e68e8a1e4fb4648cc16142fed4ed5e6361aa303ea6ff14f250b171e3f",
-      "error": "[6:7-6:11]: Unexpected token: 'enum'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-1edf67b5a3637b9485a208da0016de0ca780a2a87f06d2800871546d8dc5e2cc",
-      "error": "[30:31-30:41]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-032b54bbd46b7cf3fd26efa0906b98b68cedac561b50d4c10ea1bbf588c89b30",
-      "error": "[75:30-75:40]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-673901f5e6350742b06cbc50ee4c93fb1f3b40ed3afa65c1163df76a6bb41e99",
-      "error": "[89:22-89:23]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-2def0e92c1e46c11c700614517b2b1f780adf77c5f05be0601424acdaa0ed22d",
-      "error": "[44:27-44:37]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-1ba21968bd1378d09b659d5185260d0b5db462a3d4ab99d8538f4f15000cb657",
-      "error": "[178:22-178:23]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e3376451ff892e661905cecebaacce807193ecc615a598e54415be329679b7b5",
-      "error": "[60:33-60:43]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-41dcbf983e40a43c05bcc7ba02622684aa5d1ed80ab2c80ba0162b74a18869f7",
-      "error": "[136:17-136:18]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-3c73a4d423b9b44f9bf3d59399a62b057162e0f9631f3aa7d9c767bb39cf3e52",
-      "error": "[68:34-68:44]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-606ba3f713bfaf684f64579644b5dedbb97a4f8feb69f84f58092eed88ab6e0e",
-      "error": "[66:19-66:20]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-68eda9bff1bc179b3a97516b9324c08fe9ff34d28820792d5fbaa2af1b8ce605",
-      "error": "[31:31-31:41]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-13df32c4e160c338d219a9940b653a6ce6eb1dc259e02334ae7596c1a91a717f",
-      "error": "[47:29-47:39]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-bda37c78133fbff34b3ac01a4745165d230a38437b2869f53f1018bfd3e9cc39",
-      "error": "[62:22-62:23]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-4ae091d292dbf59b9ae01aa5282219ae5f8002020a43648137c04cf9de126b2a",
-      "error": "[64:32-64:42]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-c4525ebf69bbe37e0e315e66617aa3d39859cdb029f416ccb8141fccbbe95889",
-      "error": "[93:26-93:27]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-5455111376be2749df9428f65fbbc75ca5381fa36218924e80da5e237f1295b5",
-      "error": "[39:36-39:46]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e2f492a8f06ecc69d1deab5332c7439d8a0f24ef1b0af1cab97ffc73a7d5daa2",
-      "error": "[35:20-35:21]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-2e86b3507d72ebdcc7b7bcbfc96cbd3b99c95a9eeb730f6d2f00eb43ddb688c2",
-      "error": "[44:26-44:27]: Unexpected token: ':'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-e8e3ccec6fb282b52e4c8f3a8aa7915bee036bb19b2c344c81108dc72d975069",
-      "error": "[27:32-27:42]: Expected '{'"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-06013d17fe4a4ed99946887e264d21d50bb8e659b8681572552662c7c9869d40",
-      "error": "[5:14-5:21]: Unexpected strict mode reserved word"
-    },
-    {
-      "kind": "parse-error",
-      "unit": "s-5645c1f35c07b6623f6c2214fa22b3cee33e2e05a006ffbb4310c8cfbe6f4de9",
-      "error": "[10:33-10:43]: Expected '{'"
-    }
-  ],
-  "bundleDiagnostics": [],
-  "sourceDigest": "e766e6381959552c534b02a55e3ef6f73ac48b91a698aa6c8703fc8083b682f3",
-  "bundleDigest": "6f0183978c432de4181cfc640f34c91ced95c20af769255f6304af5a2ae35973",
-  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
-  "finalSourceDigest": "c7bf7160966b7e51433608d02122dc5aa1d94a65ffb2846b53d33801742825b4",
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
+    },
+    "frontendManifestSHA256": "4060df1e57f71b861c4ffe1b0f861c9d8ff6622a052fb78d84c9fca7960d3abe",
+    "manifestRelative": "package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:15.158Z",
   "reason": null,
-  "organizationSignature": "65b47f2f1e05008e099c1e5708ab354fe0463cd4823fa2db4d6b6b841e29d430"
+  "finished": "2026-11-09T03:44:15.261Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/akveo--ngx-admin/qualification.json",
+  "sourceEligibilityRecordSHA256": "3d278946c2a3a9562c269756c671588ce33bf41f5b8ba504a7d01fdaf82f3513",
+  "organizationSignature": "80ebfec99ec18259c281a26fed3f350fd4b2b6ff37e783e7407830c44cd514e7"
 }

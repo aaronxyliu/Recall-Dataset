@@ -8,7 +8,7 @@ for subject in plan:
  key=subject['subject'];work=pathlib.Path(subject.get('output',base/'work'/key));qp=work/'qualification.json'
  if not qp.exists():decisions.append({'subject':key,'status':'unassessed','reason':subject.get('reason','qualification did not complete')});continue
  q=json.loads(qp.read_text())
- if q['provenance']['groundTruthSHA256']!=sha(pathlib.Path(subject['record'])) or q['provenance']['manifestSHA256']!=sha(pathlib.Path(subject['manifest'])):
+ if q['provenance']['groundTruthSHA256']!=sha(pathlib.Path(subject['record'])) or q['provenance']['manifestSHA256']!=sha(pathlib.Path(subject['manifest'])) or q['provenance'].get('qualificationRunnerSHA256')!=sha(base/'anchors.mjs') or q['provenance'].get('selectionSHA256')!=sha(base/'selection.mjs') or q['provenance'].get('matcherSHA256')!=sha(base/'runtime/components/pog/index.mjs'):
   decisions.append({'subject':key,'status':'unassessed','reason':'qualification input changed; recomputation required'});continue
  decision={'subject':key,'status':q['status'],'reason':q.get('reason'),'productionDependencyCount':len(q['candidates']),'qualifiedCandidateCount':sum(bool(x.get('qualified')) for x in q['libraries']) if any('qualified' in x for x in q['libraries']) else None,'selectedLibraries':q['selectedLibraries'],'libraries':q['libraries']};decisions.append(decision)
  if q['status']!='included':continue
@@ -39,6 +39,9 @@ for subject in plan:
   relations['capture']=capture;relations['selectedLibraries']=selected;relations['qualification']={'policy':'initial-anchors-3','minInitialAnchors':3,'productionDependenciesOnly':True,'minLibraries':5,'maxLibraries':10};relations['provenance']={'upstreamCommit':subject['commit'],'archiveRecord':str(source.relative_to(root)),'archiveRecordSHA256':sha(source),'collectorSHA256':sha(collector/'relations.mjs'),'spanVerifierSHA256':sha(collector/'verify_pairs.mjs')};complete.write_text(json.dumps(relations,indent=2)+'\n')
  q['organizationSignature']=signature;(dest/'qualification.json').write_text(json.dumps(q,indent=2)+'\n');shutil.copyfile(work/'initial-anchors.json',dest/'initial-anchors.json');shutil.copyfile(work/'frontend-package.json',dest/'frontend-package.json')
  refs=json.loads((work/'reference-manifest.json').read_text())
+ expected_refs={ref['path'] for ref in refs['files']}
+ for old in (dest/'reference-js').glob('*.js'):
+  if str(old.relative_to(dest)) not in expected_refs:old.unlink()
  for ref in refs['files']:
   p=work/ref['path'];target=dest/ref['path'];target.parent.mkdir(parents=True,exist_ok=True)
   if not target.exists():shutil.copyfile(p,target)

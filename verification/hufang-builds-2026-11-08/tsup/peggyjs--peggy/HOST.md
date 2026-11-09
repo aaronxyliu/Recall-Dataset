@@ -3,7 +3,7 @@ Production image from the recorded pinned commit. Source checkouts are ignored; 
 ```recall-capture
 {
   "url": "http://127.0.0.1:19211/online.html",
-  "manifest": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/tsup/peggyjs--peggy/package.json",
+  "manifest": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/tsup/peggyjs--peggy/docs/package.json",
   "preparePage": "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/verification/hufang-builds-2026-11-08/page-hook.mjs"
 }
 ```

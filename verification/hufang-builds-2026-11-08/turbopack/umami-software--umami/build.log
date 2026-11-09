@@ -1,1 +1,847 @@
-ERROR: Cannot connect to the Docker daemon at unix:///tmp/recall-hufang-docker.sock. Is the docker daemon running?
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 4.46kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22.23.4-alpine
+#2 DONE 0.0s
+
+#3 [context recipe] load .dockerignore
+#3 transferring recipe: 2B done
+#3 DONE 0.0s
+
+#4 [deps  1/10] FROM docker.io/library/node:22.23.4-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+#4 resolve docker.io/library/node:22.23.4-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202 0.0s done
+#4 DONE 0.1s
+
+#5 [context recipe] load from client
+#5 transferring recipe: 584B done
+#5 DONE 0.1s
+
+#6 [internal] load build context
+#6 transferring context: 5.51MB 0.1s
+#6 ...
+
+#7 [builder  2/11] WORKDIR /app
+#7 DONE 0.2s
+
+#6 [internal] load build context
+#6 transferring context: 8.85MB 0.3s done
+#6 DONE 0.4s
+
+#8 [runner  3/16] RUN addgroup --system --gid 1001 nodejs
+#8 DONE 0.2s
+
+#9 [builder  3/11] RUN npm install -g pnpm@12.3.4
+#9 ...
+
+#10 [runner  4/16] RUN adduser --system --uid 1001 nextjs
+#10 DONE 0.2s
+
+#11 [runner  5/16] RUN set -x     && apk add --no-cache curl libc6-compat     && npm install -g pnpm@12.3.4     && rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
+#11 0.111 + apk add --no-cache curl libc6-compat
+#11 3.217 ( 1/12) Installing brotli-libs (1.2.1-r0)
+#11 3.507 ( 2/12) Installing c-ares (1.34.9-r0)
+#11 3.638 ( 3/12) Installing libunistring (1.4.2-r0)
+#11 4.060 ( 4/12) Installing libidn2 (2.3.8-r0)
+#11 4.189 ( 5/12) Installing nghttp2-libs (1.70.0-r0)
+#11 4.300 ( 6/12) Installing libpsl (0.21.5-r3)
+#11 ...
+
+#12 [deps  2/10] RUN apk add --no-cache libc6-compat
+#12 4.595 (1/3) Installing musl-obstack (1.2.3-r2)
+#12 4.686 (2/3) Installing libucontext (1.5.1-r0)
+#12 4.779 (3/3) Installing gcompat (1.1.0-r4)
+#12 4.897 OK: 11.4 MiB in 22 packages
+#12 DONE 4.9s
+
+#13 [deps  3/10] WORKDIR /app
+#13 DONE 0.0s
+
+#14 [deps  4/10] COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+#14 DONE 0.0s
+
+#15 [deps  5/10] COPY packages/api-client/package.json ./packages/api-client/
+#15 DONE 0.0s
+
+#16 [deps  6/10] COPY packages/mcp/package.json ./packages/mcp/
+#16 DONE 0.0s
+
+#17 [deps  7/10] COPY packages/mcp/bin ./packages/mcp/bin/
+#17 DONE 0.0s
+
+#11 [runner  5/16] RUN set -x     && apk add --no-cache curl libc6-compat     && npm install -g pnpm@12.3.4     && rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
+#11 4.406 ( 7/12) Installing zstd-libs (1.5.7-r2)
+#11 4.732 ( 8/12) Installing libcurl (8.23.0-r0)
+#11 4.996 ( 9/12) Installing curl (8.23.0-r0)
+#11 5.166 (10/12) Installing musl-obstack (1.2.3-r2)
+#11 5.251 (11/12) Installing libucontext (1.5.1-r0)
+#11 5.337 (12/12) Installing gcompat (1.1.0-r4)
+#11 5.486 Executing busybox-1.37.0-r31.trigger
+#11 5.492 OK: 16.7 MiB in 31 packages
+#11 5.508 + npm install -g pnpm@12.3.4
+#11 5.569 (node:10) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#11 5.569 (Use `node --trace-warnings ...` to show where the warning was created)
+#11 ...
+
+#9 [builder  3/11] RUN npm install -g pnpm@12.3.4
+#9 6.825 
+#9 6.825 added 2 packages in 6s
+#9 6.825 npm notice
+#9 6.825 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#9 6.825 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#9 6.825 npm notice To update run: npm install -g npm@12.2.2
+#9 6.825 npm notice
+#9 DONE 6.9s
+
+#18 [deps  8/10] RUN npm install -g pnpm@12.3.4
+#18 5.891 
+#18 5.891 added 2 packages in 6s
+#18 5.892 npm notice
+#18 5.892 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#18 5.892 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#18 5.892 npm notice To update run: npm install -g npm@12.2.2
+#18 5.892 npm notice
+#18 DONE 6.0s
+
+#19 [deps  9/10] RUN printf 'strictDepBuilds: false\n' >> pnpm-workspace.yaml
+#19 DONE 0.1s
+
+#11 [runner  5/16] RUN set -x     && apk add --no-cache curl libc6-compat     && npm install -g pnpm@12.3.4     && rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
+#11 ...
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 0.147 Scope: all 3 workspace projects
+#20 0.179 ? Verifying lockfile against supply-chain policies (1162 entries)...
+#20 1.202 Progress: resolved 1022, reused 0, downloaded 12, added 0
+#20 1.319 Update available! 12.3.4 → 12.18.0.
+#20 1.319 Changelog: https://pnpm.io/v/12.18.0
+#20 1.319 To update, run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+#20 1.556 Downloading @rolldown/binding-linux-arm64-musl@1.1.5: 0.00 B/7.39 MB
+#20 2.567 Progress: resolved 1022, reused 0, downloaded 23, added 0
+#20 3.193 Packages are copied from the content-addressable store to the virtual store.
+#20 3.193   Content-addressable store is at: /pnpm/store/v11
+#20 3.193   Virtual store is at:             node_modules/.pnpm
+#20 4.230 Progress: resolved 1022, reused 0, downloaded 48, added 32
+#20 ...
+
+#11 [runner  5/16] RUN set -x     && apk add --no-cache curl libc6-compat     && npm install -g pnpm@12.3.4     && rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
+#11 15.73 
+#11 15.73 added 2 packages in 10s
+#11 15.73 npm notice
+#11 15.73 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#11 15.73 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#11 15.73 npm notice To update run: npm install -g npm@12.2.2
+#11 15.73 npm notice
+#11 15.76 + rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
+#11 DONE 16.1s
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 5.284 Downloading @rolldown/binding-linux-arm64-musl@1.1.5: 5.38 MB/7.39 MB
+#20 ...
+
+#21 [runner  6/16] RUN echo {} > package.json
+#21 DONE 0.1s
+
+#22 [runner  7/16] RUN printf "allowBuilds:\n  '@prisma/engines': true\n  prisma: false\nverifyDepsBeforeRun: false\n" > pnpm-workspace.yaml
+#22 DONE 0.1s
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 6.166 Downloading @next/swc-linux-arm64-musl@16.4.2: 0.00 B/32.14 MB
+#20 7.206 Progress: resolved 1022, reused 0, downloaded 87, added 64
+#20 8.247 Progress: resolved 1022, reused 0, downloaded 99, added 96
+#20 9.287 Progress: resolved 1022, reused 0, downloaded 111, added 96
+#20 10.43 Downloading @next/swc-linux-arm64-musl@16.4.2: 10.04 MB/32.14 MB
+#20 10.99 Downloading @img/sharp-libvips-linuxmusl-arm64@1.3.4: 0.00 B/8.52 MB
+#20 12.01 Downloading @img/sharp-libvips-linuxmusl-arm64@1.3.4: 1.42 MB/8.52 MB
+#20 13.05 Progress: resolved 1022, reused 0, downloaded 152, added 128
+#20 14.12 Downloading @img/sharp-libvips-linuxmusl-arm64@1.3.4: 3.93 MB/8.52 MB
+#20 15.16 Downloading @img/sharp-libvips-linuxmusl-arm64@1.3.4: 4.68 MB/8.52 MB
+#20 ...
+
+#23 [runner  8/16] RUN pnpm add npm-run-all dotenv chalk semver     prisma@7.10.0     @prisma/client@7.10.0     @prisma/adapter-pg@7.10.0
+#23 1.416 Update available! 12.3.4 → 12.18.0.
+#23 1.416 Changelog: https://pnpm.io/v/12.18.0
+#23 1.416 To update, run: curl -fsSL https://get.pnpm.io/install.sh | sh -
+#23 8.605 Progress: resolved 0, reused 0, downloaded 1, added 0
+#23 8.872 Downloading @prisma/client@7.10.0: 0.00 B/26.82 MB
+#23 8.944 Downloading prisma@7.10.0: 0.00 B/14.17 MB
+#23 9.585 Downloading @prisma/dev@0.24.17: 0.00 B/9.16 MB
+#23 10.05 Downloading @prisma/studio-core@0.33.0: 0.00 B/10.12 MB
+#23 ...
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 16.19 Downloading @img/sharp-libvips-linuxmusl-arm64@1.3.4: 5.17 MB/8.52 MB
+#20 17.19 Progress: resolved 1022, reused 0, downloaded 192, added 160
+#20 18.36 Downloading @img/sharp-libvips-linuxmusl-arm64@1.3.4: 5.99 MB/8.52 MB
+#20 19.43 Progress: resolved 1022, reused 0, downloaded 206, added 192
+#20 20.50 Downloading @img/sharp-libvips-linuxmusl-arm64@1.3.4: 7.01 MB/8.52 MB
+#20 21.42 Downloading @img/sharp-libvips-linuxmusl-arm64@1.3.4: 7.60 MB/8.52 MB
+#20 22.43 Progress: resolved 1022, reused 0, downloaded 233, added 224
+#20 23.47 Progress: resolved 1022, reused 0, downloaded 249, added 224
+#20 23.68 Downloading @swc/core-linux-arm64-musl@1.15.46: 0.00 B/12.90 MB
+#20 24.72 Downloading @swc/core-linux-arm64-musl@1.15.46: 638.97 kB/12.90 MB
+#20 25.76 Downloading @next/swc-linux-arm64-musl@16.4.2: 28.91 MB/32.14 MB
+#20 ...
+
+#23 [runner  8/16] RUN pnpm add npm-run-all dotenv chalk semver     prisma@7.10.0     @prisma/client@7.10.0     @prisma/adapter-pg@7.10.0
+#23 11.07 Progress: resolved 0, reused 0, downloaded 191, added 0
+#23 11.09 Downloading @electric-sql/pglite@0.4.3: 0.00 B/8.29 MB
+#23 12.12 Progress: resolved 0, reused 0, downloaded 271, added 0
+#23 12.92 [WARN] Tarball download average speed 6 KiB/s (size 13 KiB) is below 50 KiB/s: https://registry.npmjs.org/@types/d3-geo/-/d3-geo-3.1.0.tgz (GET)
+#23 14.01 Progress: resolved 0, reused 0, downloaded 287, added 0
+#23 15.12 Downloading @prisma/client@7.10.0: 2.37 MB/26.82 MB
+#23 16.15 Downloading @prisma/client@7.10.0: 2.69 MB/26.82 MB
+#23 17.18 Downloading @prisma/dev@0.24.17: 3.75 MB/9.16 MB
+#23 18.21 Downloading @prisma/dev@0.24.17: 5.02 MB/9.16 MB
+#23 19.22 Downloading @prisma/dev@0.24.17: 6.19 MB/9.16 MB
+#23 20.33 Downloading @electric-sql/pglite@0.4.3: 5.16 MB/8.29 MB
+#23 21.02 [WARN] Request took 11688ms: https://registry.npmjs.org/@prisma%2Fget-platform
+#23 21.02 Packages are hard linked from the content-addressable store to the virtual store.
+#23 21.02   Content-addressable store is at: /root/.local/share/pnpm/store/v11
+#23 21.02   Virtual store is at:             node_modules/.pnpm
+#23 ...
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 26.82 Downloading @next/swc-linux-arm64-musl@16.4.2: 30.97 MB/32.14 MB
+#20 27.82 Progress: resolved 1022, reused 0, downloaded 273, added 256
+#20 28.82 Progress: resolved 1022, reused 0, downloaded 292, added 288
+#20 29.91 Progress: resolved 1022, reused 0, downloaded 309, added 288
+#20 30.94 Progress: resolved 1022, reused 0, downloaded 317, added 288
+#20 31.96 Progress: resolved 1022, reused 0, downloaded 335, added 320
+#20 32.98 Progress: resolved 1022, reused 0, downloaded 346, added 320
+#20 34.02 Progress: resolved 1022, reused 0, downloaded 367, added 352
+#20 35.05 Progress: resolved 1022, reused 0, downloaded 394, added 384
+#20 35.48 Downloading @prisma/studio-core@0.33.0: 0.00 B/10.12 MB
+#20 36.49 Downloading @prisma/studio-core@0.33.0: 2.42 MB/10.12 MB
+#20 37.33 Downloading @biomejs/cli-linux-arm64-musl@2.5.13: 0.00 B/22.28 MB
+#20 ...
+
+#23 [runner  8/16] RUN pnpm add npm-run-all dotenv chalk semver     prisma@7.10.0     @prisma/client@7.10.0     @prisma/adapter-pg@7.10.0
+#23 22.19 Downloading @prisma/studio-core@0.33.0: 5.43 MB/10.12 MB
+#23 23.28 Downloading @prisma/studio-core@0.33.0: 6.33 MB/10.12 MB
+#23 24.37 Downloading @prisma/studio-core@0.33.0: 7.17 MB/10.12 MB
+#23 25.41 Downloading @prisma/studio-core@0.33.0: 8.02 MB/10.12 MB
+#23 26.43 Downloading @prisma/studio-core@0.33.0: 8.82 MB/10.12 MB
+#23 27.45 Downloading @prisma/studio-core@0.33.0: 9.66 MB/10.12 MB
+#23 28.51 Downloading prisma@7.10.0: 12.55 MB/14.17 MB
+#23 29.52 Downloading prisma@7.10.0: 13.24 MB/14.17 MB
+#23 30.55 Downloading prisma@7.10.0: 13.96 MB/14.17 MB
+#23 31.84 Downloading @prisma/client@7.10.0: 19.14 MB/26.82 MB
+#23 ...
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 38.36 Downloading @biomejs/cli-linux-arm64-musl@2.5.13: 2.99 MB/22.28 MB
+#20 39.36 Downloading @biomejs/cli-linux-arm64-musl@2.5.13: 6.37 MB/22.28 MB
+#20 40.37 Downloading @biomejs/cli-linux-arm64-musl@2.5.13: 9.33 MB/22.28 MB
+#20 41.38 Downloading @biomejs/cli-linux-arm64-musl@2.5.13: 12.41 MB/22.28 MB
+#20 42.28 Downloading @biomejs/cli-linux-arm64-musl@2.5.13: 15.89 MB/22.28 MB
+#20 43.28 Progress: resolved 1022, reused 0, downloaded 543, added 512
+#20 44.17 Downloading prisma@7.10.0: 0.00 B/14.17 MB
+#20 45.18 Downloading prisma@7.10.0: 2.37 MB/14.17 MB
+#20 46.20 Downloading prisma@7.10.0: 4.56 MB/14.17 MB
+#20 47.06 Downloading next@16.4.2: 0.00 B/43.67 MB
+#20 48.07 Downloading next@16.4.2: 2.08 MB/43.67 MB
+#20 ...
+
+#23 [runner  8/16] RUN pnpm add npm-run-all dotenv chalk semver     prisma@7.10.0     @prisma/client@7.10.0     @prisma/adapter-pg@7.10.0
+#23 32.86 Downloading @prisma/client@7.10.0: 20.88 MB/26.82 MB
+#23 33.86 Downloading @prisma/client@7.10.0: 22.62 MB/26.82 MB
+#23 34.91 Downloading @prisma/client@7.10.0: 23.95 MB/26.82 MB
+#23 35.82 Downloading @prisma/client@7.10.0: 25.70 MB/26.82 MB
+#23 36.58 Packages: +295
+#23 36.58 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#23 36.59 Progress: resolved 295, reused 0, downloaded 303, added 295, done
+#23 36.59 .../node_modules/@prisma/engines postinstall$ node scripts/postinstall.js
+#23 36.67 .../node_modules/@prisma/engines postinstall: (node:63) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#23 36.67 .../node_modules/@prisma/engines postinstall: (Use `node --trace-warnings ...` to show where the warning was created)
+#23 ...
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 49.12 Progress: resolved 1022, reused 0, downloaded 659, added 640
+#20 ...
+
+#23 [runner  8/16] RUN pnpm add npm-run-all dotenv chalk semver     prisma@7.10.0     @prisma/client@7.10.0     @prisma/adapter-pg@7.10.0
+#23 43.84 .../node_modules/@prisma/engines postinstall: Done
+#23 43.92 
+#23 43.92 dependencies:
+#23 43.92 + @prisma/adapter-pg 7.10.0
+#23 43.92 + @prisma/client 7.10.0
+#23 43.92 + chalk 6.0.1
+#23 43.92 + dotenv 18.0.9
+#23 43.92 + npm-run-all 4.1.5
+#23 43.92 + prisma 7.10.0
+#23 43.92 + semver 7.8.6
+#23 43.92 
+#23 43.93 Done in 43.8s using pnpm v12.3.4
+#23 DONE 44.3s
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 50.13 Progress: resolved 1022, reused 0, downloaded 690, added 672
+#20 50.21 Downloading @prisma/client@7.10.0: 0.00 B/26.82 MB
+#20 ...
+
+#24 [runner  9/16] RUN ls node_modules/.pnpm/@prisma+engines@7.10.0/node_modules/@prisma/engines/*engine*     || (echo "ERROR: Prisma engine binaries missing - @prisma/engines postinstall was blocked" && exit 1)
+#24 0.167 node_modules/.pnpm/@prisma+engines@7.10.0/node_modules/@prisma/engines/schema-engine-linux-musl-arm64-openssl-3.0.x
+#24 DONE 0.2s
+
+#20 [deps 10/10] RUN --mount=type=cache,id=recall-umami-pnpm,target=/pnpm/store     pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=8     || pnpm install --frozen-lockfile --store-dir=/pnpm/store --network-concurrency=4
+#20 51.23 Downloading @prisma/client@7.10.0: 2.68 MB/26.82 MB
+#20 51.34 ✓ Lockfile passes supply-chain policies (1162 entries in 51.5s)
+#20 51.34 Lockfile is up to date, resolution step is skipped
+#20 52.37 Downloading next@16.4.2: 10.09 MB/43.67 MB
+#20 53.38 Downloading next@16.4.2: 11.68 MB/43.67 MB
+#20 54.38 Downloading next@16.4.2: 13.12 MB/43.67 MB
+#20 54.90 Downloading @electric-sql/pglite@0.4.3: 0.00 B/8.29 MB
+#20 55.93 Downloading @electric-sql/pglite@0.4.3: 674.23 kB/8.29 MB
+#20 56.94 Progress: resolved 1022, reused 0, downloaded 866, added 864
+#20 57.94 Progress: resolved 1022, reused 0, downloaded 893, added 864
+#20 58.97 Downloading @electric-sql/pglite@0.4.3: 4.08 MB/8.29 MB
+#20 59.98 Progress: resolved 1022, reused 0, downloaded 974, added 960
+#20 60.35 Downloading @prisma/dev@0.24.17: 0.00 B/9.16 MB
+#20 61.36 Progress: resolved 1022, reused 0, downloaded 1019, added 992
+#20 62.27 Downloading @prisma/dev@0.24.17: 1.63 MB/9.16 MB
+#20 63.29 Downloading @prisma/dev@0.24.17: 2.49 MB/9.16 MB
+#20 64.30 Downloading @prisma/dev@0.24.17: 3.39 MB/9.16 MB
+#20 65.31 Downloading @prisma/dev@0.24.17: 4.32 MB/9.16 MB
+#20 66.32 Downloading @prisma/dev@0.24.17: 5.29 MB/9.16 MB
+#20 67.33 Downloading @prisma/dev@0.24.17: 6.41 MB/9.16 MB
+#20 68.34 Downloading @prisma/dev@0.24.17: 7.78 MB/9.16 MB
+#20 68.79 Packages: +1022
+#20 68.79 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#20 68.88 Progress: resolved 1022, reused 0, downloaded 1021, added 1022, done
+#20 68.89 .../node_modules/@prisma/engines postinstall$ node scripts/postinstall.js
+#20 74.08 .../node_modules/@prisma/engines postinstall: Done
+#20 74.12 .../node_modules/prisma preinstall$ node scripts/preinstall-entry.js
+#20 74.16 .../node_modules/prisma preinstall: Done
+#20 74.39 
+#20 74.39 dependencies:
+#20 74.39 + @clickhouse/client 1.23.1
+#20 74.39 + @dicebear/collection 9.4.3
+#20 74.39 + @dicebear/core 9.4.3
+#20 74.39 + @playwright/test 1.63.0
+#20 74.39 + @prisma/adapter-pg 7.10.0
+#20 74.39 + @prisma/client 7.10.0
+#20 74.39 + @prisma/extension-read-replicas 0.5.0
+#20 74.39 + @svgr/cli 8.1.0
+#20 74.39 + @tanstack/react-query 5.102.8
+#20 74.39 + @umami/api-client link:packages/api-client
+#20 74.39 + @umami/mcp link:packages/mcp
+#20 74.39 + @umami/react-zen 0.254.0
+#20 74.39 + bcryptjs 3.0.3
+#20 74.39 + chalk 5.6.2
+#20 74.39 + chart.js 4.5.1
+#20 74.39 + chartjs-adapter-date-fns 3.0.0
+#20 74.39 + colord 2.10.0
+#20 74.39 + date-fns 4.4.0
+#20 74.39 + date-fns-tz 3.2.0
+#20 74.39 + debug 4.4.3
+#20 74.39 + detect-browser 5.3.0
+#20 74.39 + dotenv 17.4.2
+#20 74.39 + esbuild 0.28.2
+#20 74.39 + immer 11.1.18
+#20 74.39 + ipaddr.js 2.5.0
+#20 74.39 + is-ci 4.1.0
+#20 74.39 + is-docker 4.0.0
+#20 74.39 + is-localhost-ip 3.0.1
+#20 74.39 + isbot 5.2.2
+#20 74.39 + jsonwebtoken 9.0.3
+#20 74.39 + jszip 3.10.2
+#20 74.39 + kafkajs 2.2.4
+#20 74.39 + lucide-react 1.44.0
+#20 74.39 + maxmind 5.0.7
+#20 74.39 + motion 12.43.0
+#20 74.39 + next 16.4.2
+#20 74.39 + next-intl 4.13.4
+#20 74.39 + node-fetch 3.3.2
+#20 74.39 + npm-run-all 4.1.5
+#20 74.39 + otplib 13.5.0
+#20 74.39 + papaparse 5.7.0
+#20 74.39 + prisma 7.10.0
+#20 74.39 + prop-types 15.8.1
+#20 74.39 + punycode 2.3.1
+#20 74.39 + qrcode 1.5.4
+#20 74.39 + react 19.3.1
+#20 74.39 + react-dom 19.3.1
+#20 74.39 + react-error-boundary 6.1.5
+#20 74.39 + react-resizable-panels 4.12.4
+#20 74.39 + react-simple-maps 3.0.0
+#20 74.39 + react-window 2.3.1
+#20 74.39 + redis 5.12.1
+#20 74.39 + rrweb 2.0.1
+#20 74.39 + rrweb-player 2.0.0-alpha.20
+#20 74.39 + semver 7.8.5
+#20 74.39 + serialize-error 13.0.1
+#20 74.39 + thenby 1.4.1
+#20 74.39 + ua-parser-js 2.0.10
+#20 74.39 + uuid 14.0.2
+#20 74.39 + zod 4.6.2
+#20 74.39 + zustand 5.0.15
+#20 74.39 
+#20 74.39 devDependencies:
+#20 74.39 + @biomejs/biome 2.5.13
+#20 74.39 + @netlify/plugin-nextjs 5.15.13
+#20 74.39 + @rollup/plugin-commonjs 29.0.3
+#20 74.39 + @rollup/plugin-node-resolve 16.0.3
+#20 74.39 + @rollup/plugin-replace 6.0.3
+#20 74.39 + @rollup/plugin-terser 1.0.0
+#20 74.39 + @rollup/plugin-typescript 12.3.0
+#20 74.39 + @testing-library/jest-dom 7.0.1
+#20 74.39 + @testing-library/react 16.3.3
+#20 74.39 + @testing-library/user-event 14.6.7
+#20 74.39 + @types/jest 30.0.0
+#20 74.39 + @types/node 26.5.1
+#20 74.39 + @types/qrcode 1.5.6
+#20 74.39 + @types/react 19.3.0
+#20 74.39 + @types/react-dom 19.3.0
+#20 74.39 + babel-plugin-react-compiler 19.1.0-rc.2
+#20 74.39 + dotenv-cli 11.0.0
+#20 74.39 + jsdom 30.0.1
+#20 74.39 + msw 2.15.0
+#20 74.39 + openapi-typescript 7.13.0
+#20 74.39 + postcss 8.5.28
+#20 74.39 + postcss-flexbugs-fixes 5.0.2
+#20 74.39 + postcss-preset-env 11.3.2
+#20 74.39 + rollup 4.63.1
+#20 74.39 + tar 7.5.22
+#20 74.39 + tsup 8.5.1
+#20 74.39 + tsx 4.23.13
+#20 74.39 + typescript 6.0.3
+#20 74.39 + vitest 4.1.11
+#20 74.39 + zod-openapi 6.0.2
+#20 74.39 
+#20 74.45 Done in 1m 14.3s using pnpm v12.3.4
+#20 DONE 74.9s
+
+#25 [builder  4/11] COPY --from=deps /app/node_modules ./node_modules
+#25 DONE 3.4s
+
+#26 [builder  5/11] COPY --from=deps /app/packages/api-client/node_modules ./packages/api-client/node_modules
+#26 DONE 0.3s
+
+#27 [builder  6/11] COPY --from=deps /app/packages/mcp/node_modules ./packages/mcp/node_modules
+#27 DONE 0.0s
+
+#28 [builder  7/11] COPY . .
+#28 DONE 0.1s
+
+#29 [builder  8/11] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#29 DONE 0.0s
+
+#30 [builder  9/11] RUN node /tmp/recall-enable-maps.cjs
+#30 0.094 Enabled production browser maps in next.config.ts
+#30 DONE 0.1s
+
+#31 [builder 10/11] COPY docker/proxy.ts ./src
+#31 DONE 0.0s
+
+#32 [builder 11/11] RUN pnpm build:docker
+#32 0.108 $ npm-run-all build:db build:tracker build:recorder build:geo build:openapi build:packages build:app
+#32 0.171 (node:33) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 0.171 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 0.193 $ npm-run-all generate:db:client build:prisma:client
+#32 0.147 (node:77) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 0.147 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 0.170 $ prisma generate
+#32 0.566 Loaded Prisma config from prisma.config.ts.
+#32 0.566 
+#32 0.601 Prisma schema loaded from prisma/schema.prisma.
+#32 0.906 
+#32 0.906 ✔ Generated Prisma Client (7.10.0) to ./src/generated/prisma in 194ms
+#32 0.906 
+#32 0.925 $ node scripts/build-prisma-client.js
+#32 0.958 (node:200) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 0.958 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 0.996 $ npm-run-all check:tracker build:tracker:script build:tracker:types
+#32 1.055 (node:245) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 1.055 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 1.077 $ tsc -p tsconfig.tracker.json --noEmit
+#32 1.540 $ rollup -c rollup.tracker.config.js
+#32 1.597 (node:329) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 1.597 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 1.810 [36m
+#32 1.810 [1msrc/tracker/index.ts[22m → [1mpublic/script.js[22m...[39m
+#32 2.257 (node:329) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 2.257 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 2.348 [32mcreated [1mpublic/script.js[22m in [1m538ms[22m[39m
+#32 2.362 $ tsc -p tsconfig.tracker.types.json && biome format --write src/tracker/index.d.ts
+#32 2.822 Formatted 1 file in 2ms. Fixed 1 file.
+#32 2.823 (node:374) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 2.823 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 2.836 $ rollup -c rollup.recorder.config.js
+#32 2.885 (node:439) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 2.885 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 2.923 [36m
+#32 2.923 [1msrc/recorder/index.js[22m → [1mpublic/recorder.js[22m...[39m
+#32 3.321 (node:439) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 3.321 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 3.900 [32mcreated [1mpublic/recorder.js[22m in [1m977ms[22m[39m
+#32 3.917 $ node scripts/build-geo.js
+#32 3.944 (node:484) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 3.944 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 4.529 Saved geo database: /app/geo/GeoLite2-City.mmdb
+#32 10.90 $ npm-run-all openapi:generate generate:api:client
+#32 10.96 (node:523) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 10.96 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 10.98 $ tsx scripts/generate-openapi.ts
+#32 11.00 (node:567) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 11.00 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 11.05 (node:584) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 11.05 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 11.57 (node:584) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 11.57 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 16.26 Generated public/openapi.json.
+#32 16.26 179/179 API operations are included in the generated spec (179 explicit, 0 source-inferred).
+#32 16.32 $ tsx scripts/generate-api-client.ts
+#32 16.35 (node:634) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 16.35 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 16.40 (node:651) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 16.40 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 16.98 (node:651) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 16.98 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 17.39 Generated 166 operations into packages/api-client/src/generated.
+#32 17.41 $ pnpm --filter "./packages/**" -r build
+#32 17.43 packages/api-client build$ tsup
+#32 17.43 packages/mcp build$ tsup
+#32 17.47 packages/api-client build: (node:754) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 17.47 packages/api-client build: (Use `node --trace-warnings ...` to show where the warning was created)
+#32 17.47 packages/mcp build: (node:753) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 17.47 packages/mcp build: (Use `node --trace-warnings ...` to show where the warning was created)
+#32 17.58 packages/api-client build: CLI Building entry: {"index":"src/index.ts"}
+#32 17.58 packages/api-client build: CLI Using tsconfig: tsconfig.json
+#32 17.58 packages/api-client build: CLI tsup v8.5.1
+#32 17.58 packages/api-client build: CLI Using tsup config: /app/packages/api-client/tsup.config.ts
+#32 17.59 packages/api-client build: CLI Target: es2022
+#32 17.59 packages/mcp build: CLI Building entry: {"index":"src/index.ts","cli":"src/cli.ts"}
+#32 17.59 packages/mcp build: CLI Using tsconfig: tsconfig.json
+#32 17.59 packages/mcp build: CLI tsup v8.5.1
+#32 17.59 packages/mcp build: CLI Using tsup config: /app/packages/mcp/tsup.config.ts
+#32 17.59 packages/api-client build: CLI Cleaning output folder
+#32 17.59 packages/api-client build: ESM Build start
+#32 17.59 packages/api-client build: CJS Build start
+#32 17.60 packages/mcp build: CLI Target: es2022
+#32 17.60 packages/mcp build: CLI Cleaning output folder
+#32 17.60 packages/mcp build: ESM Build start
+#32 17.60 packages/mcp build: CJS Build start
+#32 17.61 packages/api-client build: (node:754) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 17.61 packages/api-client build: (Use `node --trace-warnings ...` to show where the warning was created)
+#32 17.62 packages/api-client build: ESM dist/index.js     119.50 KB
+#32 17.62 packages/api-client build: ESM dist/index.js.map 222.30 KB
+#32 17.62 packages/api-client build: ESM ⚡️ Build success in 23ms
+#32 17.62 packages/api-client build: CJS dist/index.cjs     120.73 KB
+#32 17.62 packages/api-client build: CJS dist/index.cjs.map 222.95 KB
+#32 17.62 packages/api-client build: CJS ⚡️ Build success in 24ms
+#32 17.63 packages/mcp build: (node:753) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 17.63 packages/mcp build: (Use `node --trace-warnings ...` to show where the warning was created)
+#32 17.64 packages/mcp build: ESM dist/cli.js       61.28 KB
+#32 17.64 packages/mcp build: ESM dist/index.js     62.15 KB
+#32 17.64 packages/mcp build: ESM dist/index.js.map 120.38 KB
+#32 17.64 packages/mcp build: ESM dist/cli.js.map   118.46 KB
+#32 17.64 packages/mcp build: ESM ⚡️ Build success in 35ms
+#32 17.64 packages/mcp build: CJS dist/cli.cjs       62.52 KB
+#32 17.64 packages/mcp build: CJS dist/index.cjs     64.91 KB
+#32 17.64 packages/mcp build: CJS dist/cli.cjs.map   118.39 KB
+#32 17.64 packages/mcp build: CJS dist/index.cjs.map 121.17 KB
+#32 17.64 packages/mcp build: CJS ⚡️ Build success in 35ms
+#32 17.74 packages/api-client build: DTS Build start
+#32 17.75 packages/mcp build: DTS Build start
+#32 19.20 packages/api-client build: DTS ⚡️ Build success in 1459ms
+#32 19.20 packages/api-client build: DTS dist/index.d.ts  990.26 KB
+#32 19.20 packages/api-client build: DTS dist/index.d.cts 990.26 KB
+#32 19.21 packages/api-client build: Done
+#32 19.26 packages/mcp build: DTS ⚡️ Build success in 1505ms
+#32 19.26 packages/mcp build: DTS dist/index.d.ts  6.70 KB
+#32 19.26 packages/mcp build: DTS dist/index.d.cts 6.70 KB
+#32 19.28 packages/mcp build: Done
+#32 19.29 $ next build --turbo
+#32 19.35 (node:842) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 19.35 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 19.48 ▲ Next.js 16.4.2 (Turbopack)
+#32 19.51 ✓ Running next.config.ts took 34ms
+#32 19.52 
+#32 19.55   Creating an optimized production build ...
+#32 21.25 (node:874) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 21.25 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 21.46 (node:882) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 21.46 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 21.75 (node:890) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 21.75 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 29.43 ✓ Compiled successfully in 10.0s
+#32 29.44   Skipping validation of types
+#32 29.45   Finished TypeScript config validation in 8ms ...
+#32 29.45   Collecting page data using 7 workers ...
+#32 30.13 (node:898) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 30.13 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 30.13 (node:905) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 30.13 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 30.13 (node:914) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 30.13 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 30.13 (node:922) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 30.13 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 30.13 (node:930) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 30.13 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 30.13 (node:937) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 30.13 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 30.13 (node:945) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+#32 30.13 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 32.26   Generating static pages using 7 workers (0/70) ...
+#32 32.61   Generating static pages using 7 workers (17/70) 
+#32 32.68   Generating static pages using 7 workers (34/70) 
+#32 32.78   Generating static pages using 7 workers (52/70) 
+#32 32.85 ✓ Generating static pages using 7 workers (70/70) in 593ms
+#32 32.86   Finalizing page optimization ...
+#32 33.30 
+#32 33.30 Route (app)
+#32 33.30 ┌ ƒ /
+#32 33.30 ├ ƒ /_not-found
+#32 33.30 ├ ƒ /admin/security
+#32 33.30 ├ ƒ /admin/teams
+#32 33.30 ├ ƒ /admin/teams/[teamId]
+#32 33.30 ├ ƒ /admin/users
+#32 33.30 ├ ƒ /admin/users/[userId]
+#32 33.30 ├ ƒ /admin/websites
+#32 33.30 ├ ƒ /admin/websites/[websiteId]
+#32 33.30 ├ ƒ /api/2fa/disable
+#32 33.30 ├ ƒ /api/2fa/setup/cancel
+#32 33.30 ├ ƒ /api/2fa/setup/confirm
+#32 33.30 ├ ƒ /api/2fa/setup/initiate
+#32 33.30 ├ ƒ /api/2fa/status
+#32 33.30 ├ ƒ /api/2fa/verify
+#32 33.30 ├ ƒ /api/admin/2fa/global
+#32 33.30 ├ ƒ /api/admin/teams
+#32 33.30 ├ ƒ /api/admin/teams/[teamId]/2fa
+#32 33.30 ├ ƒ /api/admin/users
+#32 33.30 ├ ƒ /api/admin/users/[userId]/2fa
+#32 33.30 ├ ƒ /api/admin/websites
+#32 33.30 ├ ƒ /api/auth/login
+#32 33.30 ├ ƒ /api/auth/logout
+#32 33.30 ├ ƒ /api/auth/sso
+#32 33.30 ├ ƒ /api/auth/subscription
+#32 33.30 ├ ƒ /api/auth/verify
+#32 33.30 ├ ƒ /api/batch
+#32 33.30 ├ ƒ /api/boards
+#32 33.30 ├ ƒ /api/boards/[boardId]
+#32 33.30 ├ ƒ /api/boards/[boardId]/clone
+#32 33.30 ├ ƒ /api/boards/[boardId]/shares
+#32 33.30 ├ ƒ /api/config
+#32 33.30 ├ ƒ /api/dashboard
+#32 33.30 ├ ƒ /api/heartbeat
+#32 33.30 ├ ƒ /api/links
+#32 33.30 ├ ƒ /api/links/[linkId]
+#32 33.30 ├ ƒ /api/links/[linkId]/shares
+#32 33.30 ├ ƒ /api/links/charts
+#32 33.30 ├ ƒ /api/me
+#32 33.30 ├ ƒ /api/me/api-keys
+#32 33.30 ├ ƒ /api/me/api-keys/[keyId]
+#32 33.30 ├ ƒ /api/me/password
+#32 33.30 ├ ƒ /api/me/teams
+#32 33.30 ├ ƒ /api/me/websites
+#32 33.30 ├ ƒ /api/pixels
+#32 33.30 ├ ƒ /api/pixels/[pixelId]
+#32 33.30 ├ ƒ /api/pixels/[pixelId]/shares
+#32 33.30 ├ ƒ /api/pixels/charts
+#32 33.30 ├ ƒ /api/realtime/[websiteId]
+#32 33.30 ├ ƒ /api/record
+#32 33.30 ├ ƒ /api/scripts/telemetry
+#32 33.30 ├ ƒ /api/send
+#32 33.30 ├ ƒ /api/share
+#32 33.30 ├ ƒ /api/share/[slug]
+#32 33.30 ├ ƒ /api/share/id/[shareId]
+#32 33.30 ├ ƒ /api/teams
+#32 33.30 ├ ƒ /api/teams/[teamId]
+#32 33.30 ├ ƒ /api/teams/[teamId]/boards
+#32 33.30 ├ ƒ /api/teams/[teamId]/links
+#32 33.30 ├ ƒ /api/teams/[teamId]/pixels
+#32 33.30 ├ ƒ /api/teams/[teamId]/users
+#32 33.30 ├ ƒ /api/teams/[teamId]/users/[userId]
+#32 33.30 ├ ƒ /api/teams/[teamId]/websites
+#32 33.30 ├ ƒ /api/teams/join
+#32 33.30 ├ ƒ /api/users
+#32 33.30 ├ ƒ /api/users/[userId]
+#32 33.30 ├ ƒ /api/users/[userId]/teams
+#32 33.30 ├ ƒ /api/users/[userId]/websites
+#32 33.30 ├ ƒ /api/websites
+#32 33.30 ├ ƒ /api/websites/[websiteId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/active
+#32 33.30 ├ ƒ /api/websites/[websiteId]/annotations
+#32 33.30 ├ ƒ /api/websites/[websiteId]/annotations/[annotationId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/attribution
+#32 33.30 ├ ƒ /api/websites/[websiteId]/breakdown
+#32 33.30 ├ ƒ /api/websites/[websiteId]/daterange
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data-pivot
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data-pivot/array-series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data-pivot/date-series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data-pivot/numeric-series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data-pivot/numeric-stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data-pivot/property-series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data/[eventId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data/events
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data/fields
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data/properties
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/event-data/values
+#32 33.30 ├ ƒ /api/websites/[websiteId]/events
+#32 33.30 ├ ƒ /api/websites/[websiteId]/events/series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/events/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/export
+#32 33.30 ├ ƒ /api/websites/[websiteId]/funnels
+#32 33.30 ├ ƒ /api/websites/[websiteId]/funnels/[funnelId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/funnels/[funnelId]/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/funnels/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/goals
+#32 33.30 ├ ƒ /api/websites/[websiteId]/goals/[goalId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/goals/[goalId]/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/goals/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/heatmaps
+#32 33.30 ├ ƒ /api/websites/[websiteId]/journeys
+#32 33.30 ├ ƒ /api/websites/[websiteId]/metrics
+#32 33.30 ├ ƒ /api/websites/[websiteId]/metrics/expanded
+#32 33.30 ├ ƒ /api/websites/[websiteId]/pageviews
+#32 33.30 ├ ƒ /api/websites/[websiteId]/performance/chart
+#32 33.30 ├ ƒ /api/websites/[websiteId]/performance/metrics
+#32 33.30 ├ ƒ /api/websites/[websiteId]/performance/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/recorder
+#32 33.30 ├ ƒ /api/websites/[websiteId]/replays
+#32 33.30 ├ ƒ /api/websites/[websiteId]/replays/[replayId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/replays/saved
+#32 33.30 ├ ƒ /api/websites/[websiteId]/replays/saved/[replayId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/reset
+#32 33.30 ├ ƒ /api/websites/[websiteId]/retention
+#32 33.30 ├ ƒ /api/websites/[websiteId]/revenue/chart
+#32 33.30 ├ ƒ /api/websites/[websiteId]/revenue/metrics
+#32 33.30 ├ ƒ /api/websites/[websiteId]/revenue/sessions
+#32 33.30 ├ ƒ /api/websites/[websiteId]/revenue/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/segments
+#32 33.30 ├ ƒ /api/websites/[websiteId]/segments/[segmentId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data-pivot
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data/array-series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data/date-series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data/numeric-series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data/numeric-stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data/properties
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data/property-series
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/session-data/values
+#32 33.30 ├ ƒ /api/websites/[websiteId]/sessions
+#32 33.30 ├ ƒ /api/websites/[websiteId]/sessions/[sessionId]
+#32 33.30 ├ ƒ /api/websites/[websiteId]/sessions/[sessionId]/activity
+#32 33.30 ├ ƒ /api/websites/[websiteId]/sessions/[sessionId]/properties
+#32 33.30 ├ ƒ /api/websites/[websiteId]/sessions/[sessionId]/replays
+#32 33.30 ├ ƒ /api/websites/[websiteId]/sessions/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/sessions/weekly
+#32 33.30 ├ ƒ /api/websites/[websiteId]/shares
+#32 33.30 ├ ƒ /api/websites/[websiteId]/stats
+#32 33.30 ├ ƒ /api/websites/[websiteId]/transfer
+#32 33.30 ├ ƒ /api/websites/[websiteId]/utm/metrics
+#32 33.30 ├ ƒ /api/websites/[websiteId]/values
+#32 33.30 ├ ƒ /api/websites/charts
+#32 33.30 ├ ƒ /boards
+#32 33.30 ├ ƒ /boards/[boardId]
+#32 33.30 ├ ƒ /boards/[boardId]/design
+#32 33.30 ├ ƒ /boards/[boardId]/edit
+#32 33.30 ├ ƒ /boards/create
+#32 33.30 ├ ƒ /compat/api/reports
+#32 33.30 ├ ƒ /compat/api/reports/[reportId]
+#32 33.30 ├ ƒ /compat/api/reports/attribution
+#32 33.30 ├ ƒ /compat/api/reports/breakdown
+#32 33.30 ├ ƒ /compat/api/reports/funnel
+#32 33.30 ├ ƒ /compat/api/reports/goal
+#32 33.30 ├ ƒ /compat/api/reports/heatmap
+#32 33.30 ├ ƒ /compat/api/reports/journey
+#32 33.30 ├ ƒ /compat/api/reports/performance
+#32 33.30 ├ ƒ /compat/api/reports/retention
+#32 33.30 ├ ƒ /compat/api/reports/revenue
+#32 33.30 ├ ƒ /compat/api/reports/utm
+#32 33.30 ├ ƒ /compat/api/websites/[websiteId]/reports
+#32 33.30 ├ ƒ /console/[websiteId]
+#32 33.30 ├ ƒ /dashboard
+#32 33.30 ├ ƒ /dashboard/edit
+#32 33.30 ├ ƒ /links
+#32 33.30 ├ ƒ /links/[linkId]
+#32 33.30 ├ ƒ /links/[linkId]/edit
+#32 33.30 ├ ƒ /login
+#32 33.30 ├ ƒ /login/two-factor
+#32 33.30 ├ ƒ /logout
+#32 33.30 ├ ƒ /mcp
+#32 33.30 ├ ƒ /p/[slug]
+#32 33.30 ├ ƒ /pixels
+#32 33.30 ├ ƒ /pixels/[pixelId]
+#32 33.30 ├ ƒ /pixels/[pixelId]/edit
+#32 33.30 ├ ƒ /q/[slug]
+#32 33.30 ├ ƒ /settings/api-keys
+#32 33.30 ├ ƒ /settings/preferences
+#32 33.30 ├ ƒ /settings/profile
+#32 33.30 ├ ƒ /settings/security
+#32 33.30 ├ ƒ /settings/teams
+#32 33.30 ├ ƒ /settings/teams/[teamId]
+#32 33.30 ├ ƒ /settings/websites
+#32 33.30 ├ ƒ /settings/websites/[websiteId]
+#32 33.30 ├ ƒ /share/[slug]/[[...path]]
+#32 33.30 ├ ƒ /sso
+#32 33.30 ├ ƒ /teams
+#32 33.30 ├ ƒ /websites
+#32 33.30 ├ ƒ /websites/[websiteId]
+#32 33.30 ├ ƒ /websites/[websiteId]/(.)replays/[sessionId]
+#32 33.30 ├ ƒ /websites/[websiteId]/(.)sessions/[sessionId]
+#32 33.30 ├ ƒ /websites/[websiteId]/attribution
+#32 33.30 ├ ƒ /websites/[websiteId]/breakdown
+#32 33.30 ├ ƒ /websites/[websiteId]/cohorts
+#32 33.30 ├ ƒ /websites/[websiteId]/compare
+#32 33.30 ├ ƒ /websites/[websiteId]/events
+#32 33.30 ├ ƒ /websites/[websiteId]/funnels
+#32 33.30 ├ ƒ /websites/[websiteId]/goals
+#32 33.30 ├ ƒ /websites/[websiteId]/heatmaps
+#32 33.30 ├ ƒ /websites/[websiteId]/journeys
+#32 33.30 ├ ƒ /websites/[websiteId]/performance
+#32 33.30 ├ ƒ /websites/[websiteId]/realtime
+#32 33.30 ├ ƒ /websites/[websiteId]/replays
+#32 33.30 ├ ƒ /websites/[websiteId]/replays/[replayId]
+#32 33.30 ├ ƒ /websites/[websiteId]/retention
+#32 33.30 ├ ƒ /websites/[websiteId]/revenue
+#32 33.30 ├ ƒ /websites/[websiteId]/segments
+#32 33.30 ├ ƒ /websites/[websiteId]/sessions
+#32 33.30 ├ ƒ /websites/[websiteId]/sessions/[sessionId]
+#32 33.30 ├ ƒ /websites/[websiteId]/settings
+#32 33.30 └ ƒ /websites/[websiteId]/utm
+#32 33.30 
+#32 33.30 
+#32 33.30 ƒ Proxy (Middleware)
+#32 33.30 
+#32 33.30 ƒ  (Dynamic)  server-rendered on demand
+#32 33.30 
+#32 DONE 33.7s
+
+#33 [runner 10/16] COPY --from=builder --chown=nextjs:nodejs /app/public ./public
+#33 DONE 0.1s
+
+#34 [runner 11/16] COPY --from=builder /app/prisma ./prisma
+#34 DONE 0.0s
+
+#35 [runner 12/16] COPY --from=builder /app/prisma.config.ts ./prisma.config.ts
+#35 DONE 0.0s
+
+#36 [runner 13/16] COPY --from=builder /app/scripts ./scripts
+#36 DONE 0.0s
+
+#37 [runner 14/16] COPY --from=builder /app/generated ./generated
+#37 DONE 0.0s
+
+#38 [runner 15/16] COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+#38 DONE 0.3s
+
+#39 [runner 16/16] COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+#39 DONE 0.1s
+
+#40 exporting to image
+#40 exporting layers
+#40 exporting layers 8.5s done
+#40 exporting manifest sha256:45d44f35e536a5ff2fde17704d572ab64fe0434c6b885444700782c93be673b6 done
+#40 exporting config sha256:96d505a6949a5f6a8768747f6944c62c32778fcc9326f7500cb94b99d787ce97 done
+#40 exporting attestation manifest sha256:4ab585a50e981ad18a18b1d38b82e73d8dd55861703d2cdb67d72b77d5d833bc done
+#40 exporting manifest list sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6 done
+#40 naming to docker.io/recall-hufang/umami-software--umami:559e3c607c23 done
+#40 unpacking to docker.io/recall-hufang/umami-software--umami:559e3c607c23
+#40 unpacking to docker.io/recall-hufang/umami-software--umami:559e3c607c23 2.9s done
+#40 DONE 11.4s

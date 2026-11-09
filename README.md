@@ -1,10 +1,12 @@
 # ReCall Dataset
 
-The active [qualified dataset](qualified-dataset/README.md) contains **18 repositories, 156 library instances, and 135,988 one-to-one function pairs**. It uses production dependencies only, with 5–10 qualifying libraries per repository and at least three distinct initial function anchors per library.
+The active [organized dataset](qualified-dataset/README.md) contains **43 repositories, 350 library instances, and 119,327 one-to-one function pairs**.
 
-Use [qualified-dataset/index.json](qualified-dataset/index.json) for membership and artifact paths, the [policy](qualification/initial-anchors-3/POLICY.md) for selection details, and [catalog decisions](qualification/initial-anchors-3/catalog-decisions.json) for exclusions and unassessed cases. Hufang's independent [build/browser verification](verification/hufang-builds-2026-11-08/README.md) records successful captures and unresolved attempts.
+Each repository has **3–10 production libraries**, each with **at least three source functions containing ≥10 POG features**, using the existing own-body property-operation counter. **Initial anchors are not required.** The [source-only policy](qualification/source-functions-3/POLICY.md) is enforced before new Docker builds and applied retrospectively to existing archives.
 
-Older cohort manifests are preserved in [historical-cohorts/](historical-cohorts/before-initial-anchors-3/). The catalog and historical descriptions below do not define current dataset membership. Both `bundling-dataset/one-to-one-evaluation*.json` entry points now refer to the qualified v2 records.
+Use [qualified-dataset/index.json](qualified-dataset/index.json) for membership and artifact paths, [catalog decisions](qualification/source-functions-3/catalog-decisions.json) for exclusions and unassessed cases, and the [build/browser report](verification/hufang-builds-2026-11-08/README.md) for independent Hufang verification. Selected libraries with zero accepted function pairs remain explicit; pair counts are not a source-eligibility gate.
+
+Earlier cohorts are preserved in Git history and [historical-cohorts/](historical-cohorts/). Both active evaluation manifests point to the source-qualified v2 records. The following historical catalog does not define current membership.
 
 ## Historical build and capture catalog
 

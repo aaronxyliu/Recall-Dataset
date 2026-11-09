@@ -1,0 +1,8 @@
+var o = {
+    color: "{form.field.icon.color}"
+  },
+  r = {
+    icon: o
+  };
+export { r as default, o as icon };
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL3ByZXNldHMvYXVyYS9pY29uZmllbGQvaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBJY29uRmllbGREZXNpZ25Ub2tlbnMsIEljb25GaWVsZFRva2VuU2VjdGlvbnMgfSBmcm9tICdAcHJpbWV1aXgvdGhlbWVzL3R5cGVzL2ljb25maWVsZCc7XG5cbmV4cG9ydCBjb25zdCBpY29uOiBJY29uRmllbGRUb2tlblNlY3Rpb25zLkljb24gPSB7XG4gICAgY29sb3I6ICd7Zm9ybS5maWVsZC5pY29uLmNvbG9yfSdcbn07XG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgICBpY29uXG59IHNhdGlzZmllcyBJY29uRmllbGREZXNpZ25Ub2tlbnM7XG4iXSwibWFwcGluZ3MiOiIiLCJpZ25vcmVMaXN0IjpbXX0=

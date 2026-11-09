@@ -1,0 +1,1 @@
+self.__next_f.push([1,"king-[-0.02em]\",\"children\":\"The whole market\"}]\na9:[\"$\",\"div\",null,{\"className\":\"text-[14px] leading-relaxed text-muted-foreground\",\"children\":\"Sector heatmap, movers and top stories on one screen before the bell.\"}]\n"])

@@ -8,7 +8,7 @@ const edits = [
   {
     "file": "apps/v4/next.config.mjs",
     "old": "  experimental: {",
-    "new": "  experimental: {\n    cpus: 1,\n    staticGenerationMaxConcurrency: 2,"
+    "new": "  experimental: {\n    cpus: 1,\n    turbopackPluginRuntimeStrategy: 'workerThreads',\n    staticGenerationMaxConcurrency: 2,"
   }
 ];
 for (const edit of edits) {

@@ -1,0 +1,1 @@
+self.__next_f.push([1,"40:I[893759,[\"/_next/static/chunks/4f59912ba9f05052.js\",\"/_next/static/chunks/2f1aa8e4b524061e.js\"],\"IconMark\"]\n"])

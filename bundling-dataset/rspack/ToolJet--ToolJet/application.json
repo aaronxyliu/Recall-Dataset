@@ -5,7 +5,7 @@
   "repo": "ToolJet/ToolJet",
   "latestRelease": "v3.20.253-lts (uses Webpack)",
   "applicationDirectory": ".",
-  "packageManifest": "package.json",
+  "packageManifest": "frontend/package.json",
   "upstreamProductionScripts": {
     "plugins": "npm --prefix plugins run build",
     "frontend": "NODE_ENV=production npm --prefix frontend run build",
@@ -32,5 +32,7 @@
   "containerPort": 3000,
   "pageRoute": "/",
   "runtime": "CE entrypoint and NestJS API/static server",
-  "verificationUrl": "http://127.0.0.1:43221/"
+  "verificationUrl": "http://127.0.0.1:43221/",
+  "submittedPackageManifest": "package.json",
+  "manifestCorrection": "Use the actual selected frontend manifest, rather than its repository root, for production-library eligibility."
 }

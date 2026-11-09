@@ -1,0 +1,8 @@
+var r = {
+    borderRadius: "{content.border.radius}"
+  },
+  o = {
+    root: r
+  };
+export { o as default, r as root };
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL3ByZXNldHMvYXVyYS9ibG9ja3VpL2luZGV4LnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB0eXBlIHsgQmxvY2tVSURlc2lnblRva2VucywgQmxvY2tVSVRva2VuU2VjdGlvbnMgfSBmcm9tICdAcHJpbWV1aXgvdGhlbWVzL3R5cGVzL2Jsb2NrdWknO1xuXG5leHBvcnQgY29uc3Qgcm9vdDogQmxvY2tVSVRva2VuU2VjdGlvbnMuUm9vdCA9IHtcbiAgICBib3JkZXJSYWRpdXM6ICd7Y29udGVudC5ib3JkZXIucmFkaXVzfSdcbn07XG5cbmV4cG9ydCBkZWZhdWx0IHtcbiAgICByb290XG59IHNhdGlzZmllcyBCbG9ja1VJRGVzaWduVG9rZW5zO1xuIl0sIm1hcHBpbmdzIjoiIiwiaWdub3JlTGlzdCI6W119

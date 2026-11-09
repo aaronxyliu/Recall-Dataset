@@ -1,1 +1,100 @@
-ERROR: Cannot connect to the Docker daemon at unix:///tmp/recall-hufang-docker.sock. Is the docker daemon running?
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.30kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:24-bookworm
+#2 DONE 0.0s
+
+#3 [context recipe] load .dockerignore
+#3 transferring recipe: 2B done
+#3 DONE 0.1s
+
+#4 [internal] load metadata for docker.io/library/node:24-bookworm-slim
+#4 DONE 1.5s
+
+#5 [build  1/14] FROM docker.io/library/node:24-bookworm@sha256:6dac556d980b7f0e5498d08f08cee0ca67798b4ad6c23964a9214920e67758d0
+#5 resolve docker.io/library/node:24-bookworm@sha256:6dac556d980b7f0e5498d08f08cee0ca67798b4ad6c23964a9214920e67758d0 0.0s done
+#5 DONE 0.0s
+
+#6 [runtime 1/3] FROM docker.io/library/node:24-bookworm-slim@sha256:01d566e8d94d8c619591d78652babfccd3c6992a3dffa9ed5ab39e11cf6c70e9
+#6 resolve docker.io/library/node:24-bookworm-slim@sha256:01d566e8d94d8c619591d78652babfccd3c6992a3dffa9ed5ab39e11cf6c70e9 0.0s done
+#6 DONE 0.0s
+
+#7 [runtime 2/3] WORKDIR /app/packages/docs
+#7 CACHED
+
+#8 [context recipe] load from client
+#8 transferring recipe: 569B done
+#8 DONE 0.0s
+
+#9 [context recipe] load from client
+#9 transferring recipe: 71B done
+#9 DONE 0.0s
+
+#10 [context recipe] load from client
+#10 transferring recipe: 934B done
+#10 DONE 0.0s
+
+#11 [context recipe] load from client
+#11 transferring recipe: 1.86kB done
+#11 DONE 0.0s
+
+#12 [internal] load build context
+#12 transferring context: 46.12kB 0.0s done
+#12 DONE 0.1s
+
+#13 [build  6/14] RUN nub run build
+#13 CACHED
+
+#14 [build 11/14] COPY --from=recipe github-stars.json /app/packages/docs/loaders/github-stars.json
+#14 CACHED
+
+#15 [build  5/14] RUN --mount=type=cache,id=recall-zod-nub-cache,target=/root/.cache/nub/pm     --mount=type=cache,id=recall-zod-nub-store,target=/root/.local/share/nub/store     for attempt in 1 2 3; do nub install --frozen-lockfile && exit 0; done; exit 1
+#15 CACHED
+
+#16 [build  9/14] COPY --from=recipe fonts/Inter-latin.woff2 /app/packages/docs/app/Inter-latin.woff2
+#16 CACHED
+
+#17 [build 10/14] COPY --from=recipe stars-loader.ts /app/packages/docs/loaders/stars.ts
+#17 CACHED
+
+#18 [build 12/14] WORKDIR /app/packages/docs
+#18 CACHED
+
+#19 [build  8/14] RUN node /tmp/recall-enable-maps.cjs
+#19 CACHED
+
+#20 [build  4/14] COPY . .
+#20 CACHED
+
+#21 [build  7/14] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#21 CACHED
+
+#22 [build 13/14] RUN RAYON_NUM_THREADS=2 nub run build     || { cat /tmp/next-panic-*.log 2>/dev/null; exit 1; }
+#22 CACHED
+
+#23 [build  3/14] RUN --mount=type=cache,target=/root/.npm npm install -g @nubjs/nub@0.8.3
+#23 CACHED
+
+#24 [build  2/14] WORKDIR /app
+#24 CACHED
+
+#25 [build 14/14] RUN test -s .next/BUILD_ID
+#25 CACHED
+
+#26 [runtime 3/3] COPY --from=build /app /app
+#26 DONE 8.0s
+
+#27 exporting to image
+#27 exporting layers
+#27 exporting layers 18.0s done
+#27 exporting manifest sha256:aefa8f1d2f0295664ec4a90c705b8b7a5b1ec182fe798dc937c1fa67dc812dc9 done
+#27 exporting config sha256:b6bc9f498e4d33b6a6bf3f1a83400d96ea37542ef47a1ebed7189268e72bca69 done
+#27 exporting attestation manifest sha256:7e51bcc291936d0eb10b1daf46798bc1044c7204ac819081d557801680ac8ebc done
+#27 exporting manifest list sha256:bd8168d6ca27db6ba2045b773e2f38773072c02c8fcfccdf63e200a75d53cd5d done
+#27 naming to docker.io/recall-hufang/colinhacks--zod:b500a2ee9513 done
+#27 unpacking to docker.io/recall-hufang/colinhacks--zod:b500a2ee9513
+#27 unpacking to docker.io/recall-hufang/colinhacks--zod:b500a2ee9513 5.1s done
+#27 DONE 23.1s

@@ -1,0 +1,9 @@
+var t = {
+    gap: "0.5rem",
+    transitionDuration: "{transition.duration}"
+  },
+  a = {
+    root: t
+  };
+export { a as default, t as root };
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL3ByZXNldHMvYXVyYS9zcGVlZGRpYWwvaW5kZXgudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHR5cGUgeyBTcGVlZERpYWxEZXNpZ25Ub2tlbnMsIFNwZWVkRGlhbFRva2VuU2VjdGlvbnMgfSBmcm9tICdAcHJpbWV1aXgvdGhlbWVzL3R5cGVzL3NwZWVkZGlhbCc7XG5cbmV4cG9ydCBjb25zdCByb290OiBTcGVlZERpYWxUb2tlblNlY3Rpb25zLlJvb3QgPSB7XG4gICAgZ2FwOiAnMC41cmVtJyxcbiAgICB0cmFuc2l0aW9uRHVyYXRpb246ICd7dHJhbnNpdGlvbi5kdXJhdGlvbn0nXG59O1xuXG5leHBvcnQgZGVmYXVsdCB7XG4gICAgcm9vdFxufSBzYXRpc2ZpZXMgU3BlZWREaWFsRGVzaWduVG9rZW5zO1xuIl0sIm1hcHBpbmdzIjoiIiwiaWdub3JlTGlzdCI6W119

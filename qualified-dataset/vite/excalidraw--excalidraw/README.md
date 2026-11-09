@@ -1,5 +1,5 @@
 # excalidraw/excalidraw
 
-Pinned commit `701b901a0f1ba3d0b390d9cdf63d112e25abac4b`. 5 production libraries satisfy the minimum of three distinct initial POG source-function anchors. See `qualification.json`, `initial-anchors.json`, and `frontend-package.json` for eligibility evidence. `ground-truth/func-mapping.json` contains 809 independently span-verified one-to-one pairs.
+Pinned commit `701b901a0f1ba3d0b390d9cdf63d112e25abac4b`. 9 declared production libraries each have at least three verified source functions with at least ten own-body POG property-operation features. No initial-anchor or matching-count criterion is used. See `qualification.json`, `eligibility/`, and `frontend-package.json` for standalone source witnesses.
 
-The captured scripts and maps are retained byte-for-byte. Reference snapshots are explicit JavaScript inputs; map positions and pair labels do not enter anchor matching. The saved build/browser evidence remains in the build archive under `bundling-dataset/vite/excalidraw--excalidraw`.
+`ground-truth/func-mapping.json` contains 809 independently span-verified one-to-one pairs for the selected libraries. Pair counts may be zero for a selected library; they are not an acceptance condition. All captured JS and maps are preserved byte-for-byte. `reference-manifest.json` lists available original source text from those maps separately from the source-only eligibility proof. The existing collector attributes pairs by package name and does not establish one installed version for every captured copy.

@@ -1,0 +1,24 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 6.98kB done
+#1 DONE 0.0s
+
+#2 [context recipe] load .dockerignore
+#2 transferring recipe: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:22.23.4-bookworm
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:22.23.4-bookworm
+#4 DONE 0.0s
+Dockerfile:14
+--------------------
+  12 |     RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm --prefix frontend ci
+  13 |     COPY ./frontend/ ./frontend/
+  14 | >>> COPY --from=builder /app/plugins/client.js /app/plugins/package.json ./plugins/
+  15 |     COPY --from=builder /app/plugins/packages ./plugins/packages
+  16 |     COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+--------------------
+ERROR: failed to build: failed to solve: cannot copy from stage "builder", it needs to be defined before current stage "frontend-builder"

@@ -11,6 +11,7 @@ const json=file=>JSON.parse(fs.readFileSync(file))
 const report=json(path.join(folder,'relations.json')), capture=json(path.join(folder,'capture.json'))
 assert.equal(report.imageID,capture.imageID)
 const sha=bytes=>crypto.createHash('sha256').update(bytes).digest('hex')
+const selection=json(path.join(folder,'selection.json'))
 const maps=new Map(),codes=new Map(),trees=new Map(),sourceContents=new Map()
 function identify(id){
  const match=/^(.*)#([a-f0-9]{64})@(\d+)-(\d+)$/s.exec(id)
@@ -59,6 +60,7 @@ for(const pair of report.pairs){
  }
  const original=sourceContents.get(sourceKey).content
  assert.equal(sourceContents.get(sourceKey).hash,s.hash)
+ if(selection.sourceOwnership?.[s.url]){assert.equal(selection.sourceOwnership[s.url].sha256,s.hash);assert.equal(selection.sourceOwnership[s.url].library,pair.library)}
  tree(original,s);tree(codes.get(g.hash),g)
  // Legacy files may contain this field; new collections store relationships only.
  if('syntaxIdentical' in pair)assert.equal(tree(original,s)===tree(codes.get(g.hash),g),pair.syntaxIdentical)

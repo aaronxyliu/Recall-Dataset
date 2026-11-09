@@ -1,0 +1,1 @@
+self.__next_f.push([1,"26:[\"$\",\"path\",null,{\"d\":\"$b3\",\"fill\":\"#C73E5D\",\"transform\":\"translate(298,161)\"}]\nb4:T41f,"])

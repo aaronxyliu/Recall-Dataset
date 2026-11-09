@@ -5,6 +5,8 @@ RUN --mount=type=cache,target=/root/.npm npm install -g pnpm@10.33.4
 COPY . .
 COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
 RUN node /tmp/recall-enable-maps.cjs
+COPY --from=recipe repair-guest-editor.cjs /tmp/recall-repair-guest-editor.cjs
+RUN node /tmp/recall-repair-guest-editor.cjs
 RUN --mount=type=cache,id=recall-pnpm,target=/pnpm-store pnpm install --frozen-lockfile --store-dir=/pnpm-store
 RUN mkdir -p node_modules/@next \
     && ln -s ../.pnpm/@next+eslint-plugin-next@15.4.10/node_modules/@next/eslint-plugin-next node_modules/@next/eslint-plugin-next

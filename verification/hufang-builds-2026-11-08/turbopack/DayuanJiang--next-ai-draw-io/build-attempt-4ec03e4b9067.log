@@ -1,0 +1,78 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 3.62kB done
+#1 DONE 0.0s
+
+#2 [context recipe] load .dockerignore
+#2 transferring recipe: 2B done
+#2 DONE 0.0s
+
+#3 [context maptools] load .dockerignore
+#3 transferring maptools: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/library/node:24-alpine
+#4 DONE 1.5s
+
+#5 [context maptools] load from client
+#5 transferring maptools: 38B done
+#5 DONE 0.0s
+
+#6 [deps 1/5] FROM docker.io/library/node:24-alpine@sha256:a34ab6d7f6f4813f4d0c5469d74685604b962fbdbf5793a7bc7b4998ecb867c8
+#6 resolve docker.io/library/node:24-alpine@sha256:a34ab6d7f6f4813f4d0c5469d74685604b962fbdbf5793a7bc7b4998ecb867c8 0.0s done
+#6 DONE 0.0s
+
+#7 [context recipe] load from client
+#7 transferring recipe: 434B done
+#7 DONE 0.0s
+
+#8 [builder 2/7] WORKDIR /app
+#8 CACHED
+
+#9 [runner 3/8] RUN addgroup --system --gid 1001 nodejs
+#9 CACHED
+
+#10 [runner 4/8] RUN adduser --system --uid 1001 nextjs
+#10 CACHED
+
+#11 [context recipe] load from client
+#11 transferring recipe: 590B done
+#11 DONE 0.0s
+
+#12 [internal] load build context
+#12 transferring context: 30.45kB 0.0s done
+#12 DONE 0.0s
+
+#13 [deps 4/5] COPY package.json package-lock.json* ./
+#13 CACHED
+
+#14 [deps 5/5] RUN --mount=type=cache,target=/root/.npm npm ci --no-audit --no-fund
+#14 CACHED
+
+#15 [deps 2/5] RUN apk add --no-cache libc6-compat
+#15 CACHED
+
+#16 [builder 5/7] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#16 CACHED
+
+#17 [builder 4/7] COPY . .
+#17 CACHED
+
+#18 [builder 3/7] COPY --from=deps /app/node_modules ./node_modules
+#18 CACHED
+
+#19 [deps 3/5] WORKDIR /app
+#19 CACHED
+
+#20 [builder 6/7] RUN node /tmp/recall-enable-maps.cjs
+#20 CACHED
+
+#21 [builder 7/7] RUN npm run build
+#21 0.447 
+#21 0.447 > next-ai-draw-io@0.5.1 prebuild
+#21 0.447 > node scripts/fetch-drawio.mjs
+#21 0.447 
+#21 0.474 [fetch-drawio] Downloading draw.io v32.0.2 ...
+#21 CANCELED
+ERROR: failed to build: failed to solve: Canceled: context canceled

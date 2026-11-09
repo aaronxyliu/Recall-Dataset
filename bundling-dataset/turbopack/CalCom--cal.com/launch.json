@@ -1,17 +1,24 @@
 {
   "containerPort": 3000,
-  "route": "/auth/login",
-  "expectedSelector": "form",
-  "expectedText": "Sign in|Log in|Email",
+  "route": "/auth/setup?step=1",
+  "expectedSelector": "form input[type=\"email\"]",
+  "expectedText": "\u7ba1\u7406\u5458|\u7535\u5b50\u90ae\u4ef6|\u90ae\u7bb1|Administrator|Email|Set up",
   "composeFile": "compose.yaml",
   "readinessTimeoutSeconds": 360,
-  "generateEnvironment": ["POSTGRES_PASSWORD", "NEXTAUTH_SECRET", "CALENDSO_ENCRYPTION_KEY"],
-  "generateEnvironmentBytes": {"CALENDSO_ENCRYPTION_KEY": 24},
+  "generateEnvironment": [
+    "POSTGRES_PASSWORD",
+    "NEXTAUTH_SECRET",
+    "CALENDSO_ENCRYPTION_KEY"
+  ],
+  "generateEnvironmentBytes": {
+    "CALENDSO_ENCRYPTION_KEY": 24
+  },
   "environmentTemplates": {
     "DATABASE_URL": "postgresql://calcom:{POSTGRES_PASSWORD}@db:5432/calcom",
     "DATABASE_DIRECT_URL": "postgresql://calcom:{POSTGRES_PASSWORD}@db:5432/calcom",
     "DATABASE_HOST": "db:5432",
     "NEXT_PUBLIC_WEBAPP_URL": "http://127.0.0.1:{port}",
     "NEXTAUTH_URL": "http://127.0.0.1:{port}"
-  }
+  },
+  "scopeNote": "Fresh local database: verify first-run administrator setup, not an existing-user login or authenticated scheduling workflow."
 }

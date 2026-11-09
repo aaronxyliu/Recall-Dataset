@@ -1,0 +1,1 @@
+if (localStorage.getItem('nd-banner-zod46') === 'true') document.documentElement.classList.add('nd-banner-zod46');

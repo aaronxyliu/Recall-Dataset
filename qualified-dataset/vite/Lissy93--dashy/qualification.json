@@ -1,26 +1,20 @@
 {
-  "schema": "recall.dataset-anchor-qualification/v1",
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "vite/Lissy93--dashy",
+  "repo": "Lissy93/dashy",
+  "commit": "002c6dd559c8d7ba662aeae9228164f6cf398c75",
   "policy": {
-    "candidateField": "dependencies",
-    "minInitialAnchors": 3,
-    "minLibraries": 5,
-    "maxLibraries": 10,
-    "counting": "distinct source functions before propagation; repeated target copies count once",
-    "options": {
-      "minFeatures": 10,
-      "featureMetric": "propertyOperations",
-      "minAnchors": 3,
-      "uniqueBundle": true
-    }
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "provenance": {
-    "groundTruthSHA256": "214db1bf977799f52d1100f137b6218e2b2c760da85d814b60910349d4b509c4",
-    "manifestSHA256": "6515c27336fe22b3f2832c476d862455bc3ba017f9bf7900fdb78c505590bfeb",
-    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
-    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
-    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
-    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
-  },
+  "selectionOverride": {},
   "candidates": [
     "@codemirror/autocomplete",
     "@codemirror/commands",
@@ -57,438 +51,1306 @@
     "vuex",
     "yaml"
   ],
-  "excludedPreviouslySelected": [],
   "libraries": [
     {
-      "library": "@codemirror/autocomplete",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/commands",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/lang-yaml",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/language",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/lint",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/search",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/state",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/view",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@jsonforms/core",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@jsonforms/vue",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@jsonforms/vue-vanilla",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@lezer/highlight",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@sentry/vue",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ajv",
-      "initialAnchors": 69,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "sortablejs",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select",
-        "ajv"
-      ],
+      "library": "vuex",
+      "declaredVersion": "^4.1.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "vuex",
+        "version": "4.1.0",
+        "integrity": "sha512-hmV6UerDrPcgbSy9ORAtNXDr9M4wlNP4pEFKye4ujJF8oqgFFuxDCdOLS3eNoRTtq5O3hoBDh9Doj1bQMYHRbQ==",
+        "shasum": "aa1b3ea5c7385812b074c86faeeec2217872e36c",
+        "tarballSHA256": "f4e084314ec286e3bfae7e21f759d4527a7f18cd3698e6fa69c8f2ca670a1938",
+        "bytes": 67181,
+        "lockfile": "yarn.lock"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 679,
-      "sourceFiles": 61,
-      "finalInitialAnchors": 69
-    },
-    {
-      "library": "ajv-formats",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "sortablejs",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select",
-        "ajv-formats"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 27,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/vuex.cjs.js",
+          "source": "source-js/9992c4f6be2d3cbc6ca8d291e78252bba702b2400adb8311e1631c117dc45069.js",
+          "sourceSHA256": "9992c4f6be2d3cbc6ca8d291e78252bba702b2400adb8311e1631c117dc45069",
+          "span": [
+            2148,
+            2531
+          ],
+          "name": "resetStore",
+          "normalizedASTSHA256": "48bd288cb5d7f5339d83a5562ad8192e873c45967018d758fc41a3a0acb8ba3e",
+          "codeSHA256": "c86daeb45e8760ec0a6daa2951a4e8f4271cb75ca781d048de629b3e8029e7ba",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "a7d953fd575bc4d5",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 7,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vuex.cjs.js",
+          "source": "source-js/9992c4f6be2d3cbc6ca8d291e78252bba702b2400adb8311e1631c117dc45069.js",
+          "sourceSHA256": "9992c4f6be2d3cbc6ca8d291e78252bba702b2400adb8311e1631c117dc45069",
+          "span": [
+            2533,
+            4343
+          ],
+          "name": "resetStoreState",
+          "normalizedASTSHA256": "e16866b8f77146fe2dcae4d7f552cedec71ab593fd93c17e816bd8ed14edb67e",
+          "codeSHA256": "46acb82fb55234df629066517ee5792c3bf15c853da15c297d5f4ec78710b5d4",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "dd4b0d8bf2f4b1c0",
+            "graphNodes": 10,
+            "graphEdges": 12,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vuex.cjs.js",
+          "source": "source-js/9992c4f6be2d3cbc6ca8d291e78252bba702b2400adb8311e1631c117dc45069.js",
+          "sourceSHA256": "9992c4f6be2d3cbc6ca8d291e78252bba702b2400adb8311e1631c117dc45069",
+          "span": [
+            4345,
+            6065
+          ],
+          "name": "installModule",
+          "normalizedASTSHA256": "aaa3cd261f008fe6851c060765aa88033621b339c7f4d63265596cee090dd476",
+          "codeSHA256": "38f0b1794b43778b5a9e05f71d6dc79535817d1afdc2a7638e6c2c1a05672ce6",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "a76d9419f94a8609",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 35,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 28,
-      "sourceFiles": 3
+      "proofDirectory": "eligibility/libraries/89016d801741250312fc",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "1f5a4606eff61476af9503b4d1ea45a8459194c1f0c4b5f359de58af05b3bae1"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
     },
     {
       "library": "crypto-js",
-      "initialAnchors": 24,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "ajv-formats",
-        "sortablejs",
-        "simple-icons",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select"
-      ],
+      "declaredVersion": "^4.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "crypto-js",
+        "version": "4.2.0",
+        "integrity": "sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==",
+        "shasum": "4d931639ecdfd12ff80e8186dba6af2c2e856631",
+        "tarballSHA256": "2d288a658b3eae000d7fadfdfdf5fe2bec3952cb19212360db8c7686c2b6ce09",
+        "bytes": 87283,
+        "lockfile": "yarn.lock"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 133,
-      "sourceFiles": 10,
-      "finalInitialAnchors": 24
-    },
-    {
-      "library": "dompurify",
-      "initialAnchors": 11,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "ajv-formats",
-        "sortablejs",
-        "simple-icons",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 5,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "aes.js",
+          "source": "source-js/d6bb48feacbd63fd455becce7a5528877242f70e73ba1f7838c186ed8f35fd3c.js",
+          "sourceSHA256": "d6bb48feacbd63fd455becce7a5528877242f70e73ba1f7838c186ed8f35fd3c",
+          "span": [
+            948,
+            2530
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "e619baf4d4d09dc4146aadbbe1a657f098f05d3fff8bc30e0273d75c59521479",
+          "codeSHA256": "aca4adf59019635729a5b05e3e10d51ee6c5bc99535c1e47e18e70fbe0710e3a",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 2,
+            "pogHash": "5891de1a9cf8d2ac",
+            "graphNodes": 13,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 2,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "aes.js",
+          "source": "source-js/d6bb48feacbd63fd455becce7a5528877242f70e73ba1f7838c186ed8f35fd3c.js",
+          "sourceSHA256": "d6bb48feacbd63fd455becce7a5528877242f70e73ba1f7838c186ed8f35fd3c",
+          "span": [
+            2775,
+            5302
+          ],
+          "name": "_doReset",
+          "normalizedASTSHA256": "2212d68aaa5fe177e6ecab4b5f2f57b0f1a55c7dbdbfe9441563ae4cc56ee6bf",
+          "codeSHA256": "84ce9a31ca0c277dc6b84032891491174b0ab86e34230650d2d041f2258ecca2",
+          "features": {
+            "propertyOperations": 36,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "61693a1b54f13e26",
+            "graphNodes": 32,
+            "graphEdges": 41,
+            "graphOperationOccurrences": 49,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "aes.js",
+          "source": "source-js/d6bb48feacbd63fd455becce7a5528877242f70e73ba1f7838c186ed8f35fd3c.js",
+          "sourceSHA256": "d6bb48feacbd63fd455becce7a5528877242f70e73ba1f7838c186ed8f35fd3c",
+          "span": [
+            5500,
+            5975
+          ],
+          "name": "decryptBlock",
+          "normalizedASTSHA256": "ab760fb403e8e0e2ac4eaa44572a319ba4bafa56d7bb26ad88e4aff24380ebb1",
+          "codeSHA256": "52ea33c9ae17c01ee76780c56d143d89f9b8d86a94942a389a3ca3c85a0d5237",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 4,
+            "pogHash": "a7952a3ddb07a7ce",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 118,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 11
-    },
-    {
-      "library": "express",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "express-basic-auth",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "frappe-charts",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "jose",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "js-yaml",
-      "initialAnchors": 58,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "ajv-formats",
-        "sortablejs",
-        "simple-icons",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select"
+      "proofDirectory": "eligibility/libraries/01318172ceef00b4a4d3",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "f729d14b7e1bf8adca0dcc38b93b929d14d53fcd5db56c3d1c9b2daa7aa69396"
+        }
       ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 266,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 58
-    },
-    {
-      "library": "keycloak-js",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "oidc-client-ts",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "pingman",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rsup-progress",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "ajv-formats",
-        "sortablejs",
-        "simple-icons",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 23,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 3
-    },
-    {
-      "library": "simple-icons",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "sortablejs",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select",
-        "simple-icons"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 3467,
-      "sourceFiles": 1
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
     },
     {
       "library": "sortablejs",
-      "initialAnchors": 40,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "ajv-formats",
-        "sortablejs",
-        "simple-icons",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select"
-      ],
+      "declaredVersion": "^1.15.7",
+      "origin": {
+        "kind": "npm-package",
+        "name": "sortablejs",
+        "version": "1.15.7",
+        "integrity": "sha512-Kk8wLQPlS+yi1ZEf48a4+fzHa4yxjC30M/Sr2AnQu+f/MPwvvX9XjZ6OWejiz8crBsLwSq8GHqaxaET7u6ux0A==",
+        "shasum": "83a0bddc472117ee328dea20b2e6f490fed20f86",
+        "tarballSHA256": "66cbfc8fa18860783584fe0c346baf6cbf3399da72d23d21053425ba232abed4",
+        "bytes": 155441,
+        "lockfile": "yarn.lock"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 239,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 40
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 10,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/Animation.js",
+          "source": "source-js/b8bd43e6c87f8223dabb2affb6f3091b90e572d725dd8af092fdab249323c577.js",
+          "sourceSHA256": "b8bd43e6c87f8223dabb2affb6f3091b90e572d725dd8af092fdab249323c577",
+          "span": [
+            407,
+            957
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "2c8e39aadc92fd74f8246a33462bedbd8a84bda92f0952660685158392d57b9d",
+          "codeSHA256": "7368b79758fb845489946da7c9163320296dcafaf560fd2baa220a9d7698e30e",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "76ae4121c59080af",
+            "graphNodes": 12,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/Animation.js",
+          "source": "source-js/b8bd43e6c87f8223dabb2affb6f3091b90e572d725dd8af092fdab249323c577.js",
+          "sourceSHA256": "b8bd43e6c87f8223dabb2affb6f3091b90e572d725dd8af092fdab249323c577",
+          "span": [
+            1413,
+            3320
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "1d9de9dc82abd8e725110dc43e89911a3317cb83cac25acc2c0789e37019fa71",
+          "codeSHA256": "28c7794464f2faed4c1e714729fb1cafe5c1f83d541c198a7e3661a92aa7483a",
+          "features": {
+            "propertyOperations": 29,
+            "distinctOperationPropertyPairs": 22,
+            "pogHash": "12afb69c1d8e8871",
+            "graphNodes": 20,
+            "graphEdges": 26,
+            "graphOperationOccurrences": 31,
+            "distinctGraphOperationPropertyPairs": 21,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/Animation.js",
+          "source": "source-js/b8bd43e6c87f8223dabb2affb6f3091b90e572d725dd8af092fdab249323c577.js",
+          "sourceSHA256": "b8bd43e6c87f8223dabb2affb6f3091b90e572d725dd8af092fdab249323c577",
+          "span": [
+            3635,
+            4752
+          ],
+          "name": "animate",
+          "normalizedASTSHA256": "3d1b4c8569eef5dab957e936e0e891a437689487a7707aa8889fbb5f61e3bb56",
+          "codeSHA256": "98699098acf2679bb03ef8fec1f3a47b602bbb5ea1adc012b08e84aefc94cf32",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "f36c69b403cf9dcc",
+            "graphNodes": 22,
+            "graphEdges": 27,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/e7014e90a80ba2c9ab48",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "e94dfc31e800d169257569db270457c9f028440c9ccae41e7eb78b2db18f1298"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
     },
     {
-      "library": "vue",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "library": "dompurify",
+      "declaredVersion": "^3.4.17",
+      "origin": {
+        "kind": "npm-package",
+        "name": "dompurify",
+        "version": "3.4.17",
+        "integrity": "sha512-B/pSlYVHQ58kqISD/yDjuJ1yfzI34m1gF4lAod2bwSRhiN4K5Cl3H8Af7hqB2PmTL911tdEudnnXn5FnhRoz0w==",
+        "shasum": "074bbb24eaa419535ac19ffe7f663104b0e1543d",
+        "tarballSHA256": "056cbdae276897208b88c21d1d779adfa09ad7be488a2f510a28e900d3bbffe7",
+        "bytes": 335573,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 65,
+      "diagnostics": [
+        {
+          "file": "src/config.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/purify.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utils.ts",
+          "error": "SyntaxError: [13:20-13:21]: Expected '('"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/purify.cjs.js",
+          "source": "source-js/e89caec0717b7c1726e819b480133beaa1cdf7439c22fbfb753e5688be6922c3.js",
+          "sourceSHA256": "e89caec0717b7c1726e819b480133beaa1cdf7439c22fbfb753e5688be6922c3",
+          "span": [
+            480,
+            1061
+          ],
+          "name": "_iterableToArrayLimit",
+          "normalizedASTSHA256": "0a991c49968c67b676ff3e28867ec200a5a63ba4fc043ef4ecb41c77986c4892",
+          "codeSHA256": "39a80dea481675a3553a2aabff69e190cd660b4033448eed1b43cab6081e9d7e",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "d28063d75b2cd098",
+            "graphNodes": 24,
+            "graphEdges": 34,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/purify.cjs.js",
+          "source": "source-js/e89caec0717b7c1726e819b480133beaa1cdf7439c22fbfb753e5688be6922c3.js",
+          "sourceSHA256": "e89caec0717b7c1726e819b480133beaa1cdf7439c22fbfb753e5688be6922c3",
+          "span": [
+            31926,
+            38688
+          ],
+          "name": "_parseConfig",
+          "normalizedASTSHA256": "a4cbd863aebebaa6db7a90098b29ecfdfb3ff39628538e1efdfee22721a276d0",
+          "codeSHA256": "723a407bf3d0f3110bf9b7f053eb66dbc8e74dffb9f0940b7be30cef9c013bab",
+          "features": {
+            "propertyOperations": 76,
+            "distinctOperationPropertyPairs": 45,
+            "pogHash": "e56ac9c2dbe3153a",
+            "graphNodes": 134,
+            "graphEdges": 189,
+            "graphOperationOccurrences": 126,
+            "distinctGraphOperationPropertyPairs": 45,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/purify.cjs.js",
+          "source": "source-js/e89caec0717b7c1726e819b480133beaa1cdf7439c22fbfb753e5688be6922c3.js",
+          "sourceSHA256": "e89caec0717b7c1726e819b480133beaa1cdf7439c22fbfb753e5688be6922c3",
+          "span": [
+            46434,
+            47005
+          ],
+          "name": "_walkTree",
+          "normalizedASTSHA256": "e7545bca4616f3a3cf929797308bb8519acc8fe14f16ad378dd790f5efed8b39",
+          "codeSHA256": "ad912ca0895ec6ca3440c919866d44c4e41aca473ebef3e793409f18f39eeda4",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "7e7f7f0cb74adb39",
+            "graphNodes": 22,
+            "graphEdges": 29,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/50126505a949757a0584",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
+    },
+    {
+      "library": "rsup-progress",
+      "declaredVersion": "^3.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "rsup-progress",
+        "version": "3.2.0",
+        "integrity": "sha512-icnpDOj4bYrpCJ4cZYWf/jNqfyKwSKh8ULCZ1TWpGFZ3Y3b7SlhFhLz2CIGakcf+RPQ/UGB9WirH5E0mOX9+zg==",
+        "shasum": "f9f3fa3158b8ced9dace14f33f4e9157717b5837",
+        "tarballSHA256": "083cee8c0dacc522510bdb2480870bb86601b5ba208e7b9c639c4ee845086f59",
+        "bytes": 4939,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 7,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/cjs/index.js",
+          "source": "source-js/28ce8c4789685e43e31b5fb6c89639f86af1e39478c8d4ffb48b93770312c081.js",
+          "sourceSHA256": "28ce8c4789685e43e31b5fb6c89639f86af1e39478c8d4ffb48b93770312c081",
+          "span": [
+            281,
+            1005
+          ],
+          "name": "Progress",
+          "normalizedASTSHA256": "f5a7876745d13dce52d8c046d9e532f221b031d2e345af34e50394336e3f3932",
+          "codeSHA256": "a300df0500761112ec66b2a12ad1bafd29f0dd26356ba7c046364fd741779d0e",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 22,
+            "pogHash": "7f7d98f09b874f5c",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 44,
+            "distinctGraphOperationPropertyPairs": 22,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/index.js",
+          "source": "source-js/28ce8c4789685e43e31b5fb6c89639f86af1e39478c8d4ffb48b93770312c081.js",
+          "sourceSHA256": "28ce8c4789685e43e31b5fb6c89639f86af1e39478c8d4ffb48b93770312c081",
+          "span": [
+            1042,
+            1859
+          ],
+          "name": "setOptions",
+          "normalizedASTSHA256": "5687fa62dbaed4ad59946bd5ba6b8262ea7954b5f5d330efb2a048db542bb1b6",
+          "codeSHA256": "0242583c5f89223c28189ec47443c837a8051dd48202c34bbf6d786aaf5e85ed",
+          "features": {
+            "propertyOperations": 31,
+            "distinctOperationPropertyPairs": 21,
+            "pogHash": "3e979f740a54e214",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 58,
+            "distinctGraphOperationPropertyPairs": 19,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/index.js",
+          "source": "source-js/28ce8c4789685e43e31b5fb6c89639f86af1e39478c8d4ffb48b93770312c081.js",
+          "sourceSHA256": "28ce8c4789685e43e31b5fb6c89639f86af1e39478c8d4ffb48b93770312c081",
+          "span": [
+            2189,
+            3185
+          ],
+          "name": "start",
+          "normalizedASTSHA256": "41c3a6cf4410c7463c9e976c4df2f79fb3f79a7b86722b649b679b65f8d33438",
+          "codeSHA256": "3363c660d6c0ce812429da890d48d547f30d2794ae678ffab4b97af08da8ca0b",
+          "features": {
+            "propertyOperations": 23,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "384cbec88e80ec14",
+            "graphNodes": 15,
+            "graphEdges": 17,
+            "graphOperationOccurrences": 25,
+            "distinctGraphOperationPropertyPairs": 19,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/9045a42a10ae63963652",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "946f5beaa70bfc93dae200f10fae78d80b97e39a775085e23388a3159c881a75"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
+    },
+    {
+      "library": "js-yaml",
+      "declaredVersion": "^5.5.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "js-yaml",
+        "version": "5.5.0",
+        "integrity": "sha512-paNr4LFIFPjeeSmwNYdrb8FafLLG/Cr2Af3GjbsHJ5CxIjH4r0c2emlmRdAtpPAieP1gRVzk6buBbVP5gBMGAg==",
+        "shasum": "ec843f09ffb2a54b6758a41eee109a1815d16442",
+        "tarballSHA256": "23cb2e121ad69acd15fc786b7a9265a81eeeaa9f684ee73e717d6ecdbd8b0c90",
+        "bytes": 387491,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 12,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/js-yaml.cjs.js",
+          "source": "source-js/b9e4f9b63c9fc56b034f0b032127d57028d347070fdabdc33b3a28abc02bc5b0.js",
+          "sourceSHA256": "b9e4f9b63c9fc56b034f0b032127d57028d347070fdabdc33b3a28abc02bc5b0",
+          "span": [
+            374,
+            1363
+          ],
+          "name": "defineScalarTag",
+          "normalizedASTSHA256": "0601a098f19d8917216273ee48f4301d4287606d704d23a7327d461807eb64d8",
+          "codeSHA256": "1ba3bf853eaacaec0e66ed62380452bcdaf5b5c2a9d16ec3038ea7e8dc6a5546",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "16a4ddca86abdc70",
+            "graphNodes": 29,
+            "graphEdges": 37,
+            "graphOperationOccurrences": 42,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/js-yaml.cjs.js",
+          "source": "source-js/b9e4f9b63c9fc56b034f0b032127d57028d347070fdabdc33b3a28abc02bc5b0.js",
+          "sourceSHA256": "b9e4f9b63c9fc56b034f0b032127d57028d347070fdabdc33b3a28abc02bc5b0",
+          "span": [
+            1437,
+            2394
+          ],
+          "name": "defineSequenceTag",
+          "normalizedASTSHA256": "97d61a940215cdb288339cf405d2cbc1d48d18a203ae87a8ffdaf046a9905812",
+          "codeSHA256": "2af89eb9b4213dc8982eba159f51952088b0929ac22085b9e6e9c898e8953589",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "8bb41231efa98f0",
+            "graphNodes": 24,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 47,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/js-yaml.cjs.js",
+          "source": "source-js/b9e4f9b63c9fc56b034f0b032127d57028d347070fdabdc33b3a28abc02bc5b0.js",
+          "sourceSHA256": "b9e4f9b63c9fc56b034f0b032127d57028d347070fdabdc33b3a28abc02bc5b0",
+          "span": [
+            2467,
+            3488
+          ],
+          "name": "defineMappingTag",
+          "normalizedASTSHA256": "3d49ce4c3ce21fdc6913856b0716f33e230f2b1336315763e2aa151a19b10a82",
+          "codeSHA256": "79257df3cd96d46f6e2f10d4adc22965105adf38596016ef6fda7a8efee7915a",
+          "features": {
+            "propertyOperations": 25,
+            "distinctOperationPropertyPairs": 24,
+            "pogHash": "c047eb09798caa6",
+            "graphNodes": 24,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 65,
+            "distinctGraphOperationPropertyPairs": 24,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/e68affe23118fe6e26fb",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
     },
     {
       "library": "vue-i18n",
-      "initialAnchors": 9,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "ajv-formats",
-        "sortablejs",
-        "simple-icons",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select"
-      ],
+      "declaredVersion": "^11.4.16",
+      "origin": {
+        "kind": "npm-package",
+        "name": "vue-i18n",
+        "version": "11.4.16",
+        "integrity": "sha512-Kv9tp6iTmaAeOwop7hkAo28N1IBsbSVpnxyE26b6gqc4Q2E9Ke3ZHHA3oqqwS6/cYLT1henZU4etTaLQxrK98Q==",
+        "shasum": "3b3e16d1cc3effa37afbdcf4730f3c320ba110f4",
+        "tarballSHA256": "74028e9cf16912c5bdec585e7ecf5a76b3fff5656bf64ef204d4977f21f43123",
+        "bytes": 351951,
+        "lockfile": "yarn.lock"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 267,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 9
-    },
-    {
-      "library": "vue-router",
-      "initialAnchors": 19,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "sortablejs",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select",
-        "ajv",
-        "vue-router"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 19,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/vue-i18n.cjs",
+          "source": "source-js/9eb97ec68cfc5c485b3ac79f4b1e582fc1512074d49fc17dacb43f369b3c7b45.js",
+          "sourceSHA256": "9eb97ec68cfc5c485b3ac79f4b1e582fc1512074d49fc17dacb43f369b3c7b45",
+          "span": [
+            2317,
+            4705
+          ],
+          "name": "handleFlatJson",
+          "normalizedASTSHA256": "72d22abab12fe86b936496daacdff5ae47505940036a64a31cada95cfd89f16e",
+          "codeSHA256": "25a6b6c8739c1df65d0bf12ed65b37ce671128c4af86d244ff578f44add01950",
+          "features": {
+            "propertyOperations": 34,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "b5a0e3eb6935879e",
+            "graphNodes": 42,
+            "graphEdges": 55,
+            "graphOperationOccurrences": 51,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vue-i18n.cjs",
+          "source": "source-js/9eb97ec68cfc5c485b3ac79f4b1e582fc1512074d49fc17dacb43f369b3c7b45.js",
+          "sourceSHA256": "9eb97ec68cfc5c485b3ac79f4b1e582fc1512074d49fc17dacb43f369b3c7b45",
+          "span": [
+            6109,
+            7435
+          ],
+          "name": "adjustI18nResources",
+          "normalizedASTSHA256": "4bac67ef69c4fd941606179fb3c69ac8e7084316a1c49853d996aefd8f54c707",
+          "codeSHA256": "543ee369f2664b8ff3ae7716fe850ffdbb728ab4d7b0e1dd44250469d078b200",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "cbd262b110be9f76",
+            "graphNodes": 23,
+            "graphEdges": 28,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vue-i18n.cjs",
+          "source": "source-js/9eb97ec68cfc5c485b3ac79f4b1e582fc1512074d49fc17dacb43f369b3c7b45.js",
+          "sourceSHA256": "9eb97ec68cfc5c485b3ac79f4b1e582fc1512074d49fc17dacb43f369b3c7b45",
+          "span": [
+            11782,
+            12964
+          ],
+          "name": "getCoreContext",
+          "normalizedASTSHA256": "f6717aaaa48ab9a55c5cc067d2469b70325a581cde49a58e34ef078365577fa5",
+          "codeSHA256": "ee8291b720f967c9ff6bc4500ebb4e77978b02a2fff8b368da9f847c14bbc96b",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 25,
+            "pogHash": "780e6e73e567d03d",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 58,
+            "distinctGraphOperationPropertyPairs": 25,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 341,
-      "sourceFiles": 3,
-      "finalInitialAnchors": 19
+      "proofDirectory": "eligibility/libraries/47a657200f2440f28135",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "403a4d6f9815ae33bd7a613202529f0805045c642f92a169fa673d7fa07dd568"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
     },
     {
       "library": "vue-select",
-      "initialAnchors": 11,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "ajv-formats",
-        "sortablejs",
-        "simple-icons",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select"
-      ],
+      "declaredVersion": "4.0.0-beta.6",
+      "origin": {
+        "kind": "npm-package",
+        "name": "vue-select",
+        "version": "4.0.0-beta.6",
+        "integrity": "sha512-K+zrNBSpwMPhAxYLTCl56gaMrWZGgayoWCLqe5rWwkB8aUbAUh7u6sXjIR7v4ckp2WKC7zEEUY27g6h1MRsIHw==",
+        "shasum": "7c250cb7c01280b54a311cb446629801b3c8df98",
+        "tarballSHA256": "70934193ebdc2a15322c8d5f11a4b974c6afae4b60acfc69839ca6fda86b43f1",
+        "bytes": 15516,
+        "lockfile": "yarn.lock"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 126,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 11
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 56,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/vue-select.es.js",
+          "source": "source-js/a6ac660282560c614f04169393e13397abdfc3e170cfd024d868c0b313b41de0.js",
+          "sourceSHA256": "a6ac660282560c614f04169393e13397abdfc3e170cfd024d868c0b313b41de0",
+          "span": [
+            1331,
+            1791
+          ],
+          "name": "maybeAdjustScroll",
+          "normalizedASTSHA256": "ebe8243d15a7227c0083e5dc1528bfc55b4f9f91b3fe52c2b228719313dfd4d5",
+          "codeSHA256": "bf5877a9fa0ffb1af6247ee0c1c05c5e343918f6b321e1fcfa5fb95167fe9217",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "bcd9f6a4c41da6c0",
+            "graphNodes": 13,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vue-select.es.js",
+          "source": "source-js/a6ac660282560c614f04169393e13397abdfc3e170cfd024d868c0b313b41de0.js",
+          "sourceSHA256": "a6ac660282560c614f04169393e13397abdfc3e170cfd024d868c0b313b41de0",
+          "span": [
+            5161,
+            5622
+          ],
+          "name": "mounted",
+          "normalizedASTSHA256": "618306d5b98c517770ef6e2231c1d52735df51643b97d1975795ecc9a6673cdd",
+          "codeSHA256": "d18ace5ca7614e71a86e95016ae7c9c54562207b29a75587a4b9901d0cbf1fde",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "54721097985bb22c",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 23,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vue-select.es.js",
+          "source": "source-js/a6ac660282560c614f04169393e13397abdfc3e170cfd024d868c0b313b41de0.js",
+          "sourceSHA256": "a6ac660282560c614f04169393e13397abdfc3e170cfd024d868c0b313b41de0",
+          "span": [
+            11317,
+            13110
+          ],
+          "name": "scope",
+          "normalizedASTSHA256": "0cef073106760aef890f3148312efe9254971d818216231e62153f2baa4c2921",
+          "codeSHA256": "b34f43cd3ed3f3598a0df3ce2830f91d23ae9f8063eb742428cdef612cc3a802",
+          "features": {
+            "propertyOperations": 71,
+            "distinctOperationPropertyPairs": 54,
+            "pogHash": "a30b61ede84706af",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 141,
+            "distinctGraphOperationPropertyPairs": 54,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/f849762797ce4132e047",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "f290a9ac3bd0d3ea0c60e0f10ec6767ba0f4278fefbeff1e9d15233811ca0860"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
     },
     {
-      "library": "vuex",
-      "initialAnchors": 13,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "ajv-formats",
-        "sortablejs",
-        "simple-icons",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select"
-      ],
+      "library": "ajv",
+      "declaredVersion": "^8.20.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "ajv",
+        "version": "8.20.0",
+        "integrity": "sha512-Thbli+OlOj+iMPYFBVBfJ3OmCAnaSyNn4M1vz9T6Gka5Jt9ba/HIR56joy65tY6kx/FCF5VXNB819Y7/GUrBGA==",
+        "shasum": "304b3636add88ba7d936760dd50ece006dea95f9",
+        "tarballSHA256": "b2f0b3a893bbb8cc5efb6814f08b1499e19e31d5dd73683f5893382f48f6e7b3",
+        "bytes": 217611,
+        "lockfile": "yarn.lock"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 173,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 13
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 7,
+      "parsedFunctions": 136,
+      "diagnostics": [
+        {
+          "file": "lib/2019.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/2020.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/ajv.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/codegen/code.ts",
+          "error": "SyntaxError: [2:7-2:15]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "lib/compile/codegen/index.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/codegen/scope.ts",
+          "error": "SyntaxError: [3:0-3:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "lib/compile/errors.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/index.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/jtd/parse.ts",
+          "error": "SyntaxError: [1:12-1:15]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/jtd/serialize.ts",
+          "error": "SyntaxError: [1:12-1:15]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/resolve.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/rules.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/util.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/validate/applicability.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/validate/boolSchema.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/validate/dataType.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/validate/defaults.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/validate/index.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/validate/keyword.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/compile/validate/subschema.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/core.ts",
+          "error": "SyntaxError: [24:7-24:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "lib/jtd.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/refs/json-schema-2019-09/index.ts",
+          "error": "SyntaxError: [1:12-1:15]: Expected 'from'"
+        },
+        {
+          "file": "lib/refs/json-schema-2020-12/index.ts",
+          "error": "SyntaxError: [1:12-1:15]: Expected 'from'"
+        },
+        {
+          "file": "lib/refs/jtd-schema.ts",
+          "error": "SyntaxError: [3:5-3:15]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "lib/runtime/parseJson.ts",
+          "error": "SyntaxError: [3:27-3:28]: Expected ')'"
+        },
+        {
+          "file": "lib/runtime/quote.ts",
+          "error": "SyntaxError: [5:13-5:14]: Missing initializer in const declaration"
+        },
+        {
+          "file": "lib/runtime/timestamp.ts",
+          "error": "SyntaxError: [6:42-6:43]: Expected ')'"
+        },
+        {
+          "file": "lib/runtime/ucs2length.ts",
+          "error": "SyntaxError: [3:38-3:39]: Expected ')'"
+        },
+        {
+          "file": "lib/standalone/index.ts",
+          "error": "SyntaxError: [1:12-1:19]: Expected 'from'"
+        },
+        {
+          "file": "lib/types/index.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/types/json-schema.ts",
+          "error": "SyntaxError: [2:5-2:28]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/additionalItems.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/additionalProperties.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/allOf.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/contains.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/dependencies.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/dependentSchemas.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/if.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/index.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/items.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/items2020.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/not.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/oneOf.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/patternProperties.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/prefixItems.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/properties.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/applicator/propertyNames.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/code.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/core/ref.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/discriminator/index.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/dynamic/dynamicAnchor.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/dynamic/dynamicRef.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/dynamic/recursiveRef.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/format/format.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/discriminator.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/elements.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/enum.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/error.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/metadata.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/nullable.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/properties.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/ref.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/type.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/jtd/values.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/unevaluated/unevaluatedItems.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/unevaluated/unevaluatedProperties.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/const.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/dependentRequired.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/enum.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/limitItems.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/limitLength.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/limitNumber.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/limitProperties.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/multipleOf.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/pattern.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/required.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "lib/vocabularies/validation/uniqueItems.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/2019.js",
+          "source": "source-js/4a1b1d479d0b946af0119f3a3960fcabfd964e1c20e87f7a9575f8f9e705d0c4.js",
+          "sourceSHA256": "4a1b1d479d0b946af0119f3a3960fcabfd964e1c20e87f7a9575f8f9e705d0c4",
+          "span": [
+            948,
+            1289
+          ],
+          "name": "_addVocabularies",
+          "normalizedASTSHA256": "b8087491b2cc41e030cc348bef564b4e984acc10d2c5118376a436892fbbf55b",
+          "codeSHA256": "836cbb9b58841e576328ecfe679ba26ca63ebc26523e9a91e9f51b8d115176c4",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "a5d947f460e60500",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/compile/codegen/index.js",
+          "source": "source-js/f03b2b72597ef86878d1d4030580c2d0964046efad4867f3d05aa91065ba034c.js",
+          "sourceSHA256": "f03b2b72597ef86878d1d4030580c2d0964046efad4867f3d05aa91065ba034c",
+          "span": [
+            6778,
+            7450
+          ],
+          "name": "optimizeNodes",
+          "normalizedASTSHA256": "ea48981e8be89ec856a7c8da1162b7d6e1e60ece471d525c092822c895f4520f",
+          "codeSHA256": "249332f8499f73043be573bbbe19f6a42d0682fa4e7bbca1daf9b0449d2eeb49",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "717e9668d1dcf080",
+            "graphNodes": 23,
+            "graphEdges": 31,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/compile/codegen/index.js",
+          "source": "source-js/f03b2b72597ef86878d1d4030580c2d0964046efad4867f3d05aa91065ba034c.js",
+          "sourceSHA256": "f03b2b72597ef86878d1d4030580c2d0964046efad4867f3d05aa91065ba034c",
+          "span": [
+            11731,
+            12044
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "286c3cee234858e060119742f3046241cec91052d385ea6aad2194082bc25ec1",
+          "codeSHA256": "bd971e9e97c3cc0b6995b14728255ad537c352be0f21d1911300f3824b6c67bb",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "e6ede5d39f32f2de",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/0e2b5d38f82d809a5326",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "a05350a88e318e4f5f2c2a1ff1e2e88daa4dd38e6e78b71cccae422bdc762cc3"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
     },
     {
-      "library": "yaml",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "library": "vue-router",
+      "declaredVersion": "^5.4.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "vue-router",
+        "version": "5.4.0",
+        "integrity": "sha512-pFvcYcxinDHjZUlf7AzFBrT8r8Xqvv4uMHoJnjc+EqPawXQvHTkF8S4tfSmQLpriVHUGfkaKlI7Et0KRjTMTdw==",
+        "shasum": "77205289f898a8b2bae23b69d0a4c49aaecd1b83",
+        "tarballSHA256": "0c3a6d93f5236da11d0d2496fa4244e56a2518d8a2c5cb93a81e6956e117dbab",
+        "bytes": 350728,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/devtools-CxgSYwGp.js",
+          "source": "source-js/49ea1269c96b1dddf0e5009704abc18723c9d3a9d79b33e2389e4fa815e1be69.js",
+          "sourceSHA256": "49ea1269c96b1dddf0e5009704abc18723c9d3a9d79b33e2389e4fa815e1be69",
+          "span": [
+            5389,
+            6140
+          ],
+          "name": "parseURL",
+          "normalizedASTSHA256": "1487f66f9788a2124c3a1b6fbb613bc82e6f5603b7e64bbb20a877cf1cb6df70",
+          "codeSHA256": "676efebcbe97201460878e502b81bd5444a93bb5f3756ae996f2493d372d1b2b",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "d9da11129076776b",
+            "graphNodes": 18,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/devtools-CxgSYwGp.js",
+          "source": "source-js/49ea1269c96b1dddf0e5009704abc18723c9d3a9d79b33e2389e4fa815e1be69.js",
+          "sourceSHA256": "49ea1269c96b1dddf0e5009704abc18723c9d3a9d79b33e2389e4fa815e1be69",
+          "span": [
+            7171,
+            7555
+          ],
+          "name": "isSameRouteLocation",
+          "normalizedASTSHA256": "d860ace4a46b8c539ea2cda5c5b01fd93f711f5356795722714cab97ab03830e",
+          "codeSHA256": "8c45573668f6068147aa93405b2085db21d0ca5d22cb6e0d06e9d3885d749ce7",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "f6f2f675ea76cfa5",
+            "graphNodes": 13,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/devtools-CxgSYwGp.js",
+          "source": "source-js/49ea1269c96b1dddf0e5009704abc18723c9d3a9d79b33e2389e4fa815e1be69.js",
+          "sourceSHA256": "49ea1269c96b1dddf0e5009704abc18723c9d3a9d79b33e2389e4fa815e1be69",
+          "span": [
+            8808,
+            9644
+          ],
+          "name": "resolveRelativePath",
+          "normalizedASTSHA256": "672cb0c5cdd610c2b49611bac75e74d514dd33b92794b3b5c0b53fcd7a22aa0e",
+          "codeSHA256": "1c3c4b3e93d7a7b64e586c11cba7f63bfc69e084ff27f11c04662fab006b021c",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "7f55c8727558e43a",
+            "graphNodes": 23,
+            "graphEdges": 31,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/446a8e79cb7a7ea2186f",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "91a2845c4db44e7497b514b98634a674c737986ad0db81599307cf733bf850b2"
+        }
+      ],
+      "lockfileSHA256": "3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7",
+      "lockfileSnapshot": "lockfiles/3f92beb56ccd0ab28810f129a314055fbe64ddaad87f711fe415e9f054d4b8a7-yarn.lock"
     }
   ],
   "selectedLibraries": [
@@ -503,131 +1365,24 @@
     "ajv",
     "vue-router"
   ],
-  "status": "included",
-  "referenceFailures": [],
-  "referenceFiles": 85,
-  "bundleUnits": 17,
-  "candidateOrder": [
-    "vuex",
-    "crypto-js",
-    "sortablejs",
-    "dompurify",
-    "rsup-progress",
-    "js-yaml",
-    "vue-i18n",
-    "vue-select",
-    "ajv-formats",
-    "simple-icons",
-    "@codemirror/autocomplete",
-    "@codemirror/commands",
-    "@codemirror/lang-yaml",
-    "@codemirror/language",
-    "@codemirror/lint",
-    "@codemirror/search",
-    "@codemirror/state",
-    "@codemirror/view",
-    "@jsonforms/core",
-    "@jsonforms/vue",
-    "@jsonforms/vue-vanilla",
-    "@lezer/highlight",
-    "@sentry/vue",
-    "ajv",
-    "express",
-    "express-basic-auth",
-    "frappe-charts",
-    "jose",
-    "keycloak-js",
-    "oidc-client-ts",
-    "pingman",
-    "vue",
-    "vue-router",
-    "yaml"
-  ],
-  "selectionAttempts": [
-    {
-      "library": "ajv-formats",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "sortablejs",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select",
-        "ajv-formats"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
     },
-    {
-      "library": "simple-icons",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "sortablejs",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select",
-        "simple-icons"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "ajv",
-      "initialAnchors": 69,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "sortablejs",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select",
-        "ajv"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "vue-router",
-      "initialAnchors": 19,
-      "trialLibraries": [
-        "vuex",
-        "crypto-js",
-        "sortablejs",
-        "dompurify",
-        "rsup-progress",
-        "js-yaml",
-        "vue-i18n",
-        "vue-select",
-        "ajv",
-        "vue-router"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    }
-  ],
-  "sourceDiagnostics": [],
-  "bundleDiagnostics": [],
-  "sourceDigest": "d36a9a8b069c219ef764b19e65d089d4682bfd91f0eb00421e2dd1fe59962c51",
-  "bundleDigest": "7ac6b4a7dd1e943f66331d259597062e312b3d5c6d6dfa9bb53b2901dd23341d",
-  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
-  "finalSourceDigest": "9ba7ae308821ff52af5c3cc79768a2029648574f01360bc62e74a01836b82fc5",
+    "frontendManifestSHA256": "6515c27336fe22b3f2832c476d862455bc3ba017f9bf7900fdb78c505590bfeb",
+    "manifestRelative": "package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:13.824Z",
   "reason": null,
-  "organizationSignature": "24989e35655f0888dee2c54baa71b78ab4fecea7aac10d6c4398ae3bba2eb312"
+  "finished": "2026-11-09T03:44:13.943Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/Lissy93--dashy/qualification.json",
+  "sourceEligibilityRecordSHA256": "86880a334746d037c469c5eecb00a886d09518be13e90baae145ab7a9d21766d",
+  "organizationSignature": "90cd03eee090063985268ea2fcb835030aba01b02cf8d42b51e39aa23b1c0dfb"
 }

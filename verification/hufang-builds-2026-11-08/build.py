@@ -1,6 +1,11 @@
-import pathlib,json,subprocess,os,time,hashlib,shutil,concurrent.futures,fcntl
+import pathlib,json,subprocess,os,time,hashlib,shutil,concurrent.futures,fcntl,sys
 base=pathlib.Path(__file__).resolve().parent;root=base.parents[1]
+sys.path.insert(0,str(root/'qualification/source-functions-3'))
+from gate import check as check_preflight
 subjects=json.loads((base/'subjects.json').read_text())
+# The full Metabase JAR build can take much longer than the frontend builds.
+# Keep it last so completed frontend cases can be verified first.
+subjects.sort(key=lambda s:s['subject']=='rspack/metabase--metabase')
 def run(s):
  key=s['subject'];e=base/key;e.mkdir(parents=True,exist_ok=True);p=e/'verification.json';recipe=base/'submission'/s['submissionPath'];repo=root/'builds/hufang'/key;app=s['application'];tag='recall-hufang/'+key.split('/')[1].lower()+':'+app['commit'][:12]
  if os.environ.get('RECALL_ONLY') and key!=os.environ['RECALL_ONLY']:return
@@ -12,6 +17,10 @@ def run(s):
     repo.parent.mkdir(parents=True,exist_ok=True);subprocess.run(['git','-c','http.version=HTTP/1.1','clone','--filter=blob:none','--no-checkout','https://github.com/'+app['repository']+'.git',str(repo)],check=True,stdout=log,stderr=subprocess.STDOUT,timeout=600)
    current=subprocess.run(['git','-C',str(repo),'rev-parse','HEAD'],capture_output=True,text=True).stdout.strip()
    if current!=app['commit'] or not (repo/app['packageManifest']).exists():subprocess.run(['git','-c','http.version=HTTP/1.1','-C',str(repo),'checkout','--detach',app['commit']],check=True,stdout=log,stderr=subprocess.STDOUT,timeout=600)
+  gate=check_preflight(key,repo,app['packageManifest'],app['commit']);result['sourcePreflight']=gate
+  if not gate['passed']:
+   result.update(buildStatus='preflight-not-passed',finished=time.time());p.write_text(json.dumps(result,indent=2)+'\n');print(key,'preflight-not-passed',gate.get('reason'),flush=True);return
+  shutil.copyfile(gate['receipt'],e/'source-preflight.json');result['sourcePreflight']['receipt']=str((e/'source-preflight.json').relative_to(root))
   target=root/'bundling-dataset'/key;target.mkdir(parents=True,exist_ok=True)
   imported=(target/'application.json').exists() and json.loads((target/'application.json').read_text()).get('commit')==app['commit']
   for f in ([] if imported else recipe.iterdir()):

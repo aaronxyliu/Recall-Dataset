@@ -27,6 +27,8 @@ for path in sorted(cat.glob('*/*/subject.json')):
     decisions[key] = {'subject': key, 'status': 'unassessed', 'reason': 'no verified captured inputs for anchor qualification', 'buildStatus': verification.get('buildStatus', 'not verified'), 'pageStatus': verification.get('pageStatus', 'not verified')}
 (base / 'catalog-decisions.json').write_text(json.dumps(list(decisions.values()), indent=2) + '\n')
 groups = collections.defaultdict(lambda: [0, 0, 0])
+for subject in cat.glob('*/*/subject.json'):
+    groups[subject.parent.parent.name]
 for entry in index['subjects']:
     counts = groups[entry['subject'].split('/')[0]]
     counts[0] += 1

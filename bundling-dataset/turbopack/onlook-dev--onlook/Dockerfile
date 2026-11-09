@@ -10,6 +10,9 @@ ENV STANDALONE_BUILD=true
 COPY . .
 COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
 RUN bun /tmp/recall-enable-maps.cjs
+COPY --from=recipe repair-local-homepage.cjs /tmp/recall-repair-local-homepage.cjs
+RUN bun /tmp/recall-repair-local-homepage.cjs
+ENV NEXT_PUBLIC_RECALL_LOCAL_CAPTURE=1
 
 # The published email-domain package already includes domains.json. Skip its
 # network refresh and other dependency scripts for the public frontend build.

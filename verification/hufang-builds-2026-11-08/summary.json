@@ -490,7 +490,25 @@
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "0c644f3bc99d5dece16391d53135a0a7618f95bc",
     "image": "recall-hufang/metabase--metabase:0c644f3bc99d",
-    "started": 1794146272.445407,
+    "started": 1794190468.794306,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/rspack/metabase--metabase/source-preflight.json",
+      "receiptSHA256": "b19c2cfeb98570a6229c6061a9e28a8f035f3a29777eda7db9f1fb7b7dc790d6",
+      "selectedLibraries": [
+        "@codemirror/autocomplete",
+        "@codemirror/commands",
+        "@codemirror/lang-html",
+        "@codemirror/lang-javascript",
+        "@codemirror/lang-json",
+        "@codemirror/lang-markdown",
+        "@codemirror/lang-python",
+        "@codemirror/lang-sql",
+        "@codemirror/language",
+        "@codemirror/legacy-modes"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -518,16 +536,51 @@
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/rspack/metabase--metabase"
     ],
     "recipeSHA256": "eb1482e3d94bd910765993122487476f7d84c31a39c69fa4b931f11c849f1be6",
-    "buildStatus": "blocked",
-    "error": "Command '['docker', 'build', '--progress=plain', '--build-arg', 'HTTP_PROXY=http://host.docker.internal:7897', '--build-arg', 'HTTPS_PROXY=http://host.docker.internal:7897', '--build-arg', 'NO_PROXY=localhost,127.0.0.1,::1', '--build-arg', 'no_proxy=localhost,127.0.0.1,::1', '--build-arg', 'RECALL_COMMIT=0c644f3bc99d5dece16391d53135a0a7618f95bc', '--build-context', 'recipe=/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/bundling-dataset/rspack/metabase--metabase', '--build-context', 'sourcegit=/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/rspack/metabase--metabase/.git', '--build-context', 'maptools=/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/verification/hufang-builds-2026-11-08/map-tools', '-f', '/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/bundling-dataset/rspack/metabase--metabase/Dockerfile', '-t', 'recall-hufang/metabase--metabase:0c644f3bc99d', '/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/rspack/metabase--metabase']' timed out after 1799.999933708 seconds",
-    "finished": 1794148072.4777339
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:d731ac7144aac3dea4e1871c706c5fab3e014494fe55aa8dd09fd5688b29ae3f",
+    "finished": 1794191623.109622,
+    "captureExitCode": 0,
+    "pairCount": 0,
+    "pageStatus": "rendered",
+    "pageEvidence": "verification/hufang-builds-2026-11-08/rspack/metabase--metabase/page.json",
+    "browser": {
+      "url": "http://127.0.0.1:19209/setup/",
+      "title": "Metabase",
+      "bodyText": "Welcome to Metabase\nLooks like everything is working. Now let\u2019s get to know you, connect to your data, and start finding you some answers!\nLet's get started\nIf you feel stuck, our getting started guide is just a click away.",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 10,
+    "maps": 5
   },
   {
     "subject": "rspack/ToolJet--ToolJet",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "7f8ac7d54b0492819d64485eb7621d486b1115c3",
     "image": "recall-hufang/tooljet--tooljet:7f8ac7d54b04",
-    "started": 1794148072.488859,
+    "started": 1794191094.364686,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/rspack/ToolJet--ToolJet/source-preflight.json",
+      "receiptSHA256": "4a71c155659d7e97c3875940802ee6b38226a711a30b670de9d1568e80301306",
+      "selectedLibraries": [
+        "@apidevtools/json-schema-ref-parser",
+        "@base-ui/react",
+        "@codemirror/autocomplete",
+        "@codemirror/commands",
+        "@codemirror/lang-javascript",
+        "@codemirror/lang-python",
+        "@codemirror/lang-sql",
+        "@codemirror/language",
+        "@codemirror/view",
+        "@dnd-kit/core"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -556,12 +609,10 @@
       "linux/amd64",
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/rspack/ToolJet--ToolJet"
     ],
-    "recipeSHA256": "f627f642703b4ff65fedd2ba07781f3338673e1910c8f7c4a3d55e67cede1094",
+    "recipeSHA256": "2cee9d2a8655b1053840f2e2d9fe63a954508ebf54f6cc3407f7e6ba8808aaf6",
     "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148117.273908,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker build lost daemon connection (RPC Unavailable/EOF) after plugin dependency installation. A successful rebuild is still required."
+    "buildStatus": "build-failed",
+    "finished": 1794191758.720545
   },
   {
     "subject": "tsup/peggyjs--peggy",
@@ -596,10 +647,10 @@
     "buildStatus": "built",
     "imageID": "sha256:21863a4c5a8d77ecf522bec521f44f8707b0067cfee2c273da927ff60b54fe95",
     "finished": 1794145350.6152692,
-    "captureExitCode": 0,
-    "pairCount": 68,
-    "pageStatus": "rendered",
     "pageEvidence": "verification/hufang-builds-2026-11-08/tsup/peggyjs--peggy/page.json",
+    "captureExitCode": 0,
+    "pairCount": 0,
+    "pageStatus": "rendered",
     "browser": {
       "url": "http://127.0.0.1:19211/online.html",
       "title": "Online Version \u00bb Peggy \u2013 Parser Generator for JavaScript",
@@ -673,7 +724,7 @@
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "e3d4d11d5916daf8d68a9f087b36c8ca9a79200e",
     "image": "recall-hufang/dayuanjiang--next-ai-draw-io:e3d4d11d5916",
-    "started": 1794148117.275933,
+    "started": 1794185476.825593,
     "buildCommand": [
       "docker",
       "build",
@@ -700,19 +751,34 @@
       "recall-hufang/dayuanjiang--next-ai-draw-io:e3d4d11d5916",
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/DayuanJiang--next-ai-draw-io"
     ],
-    "recipeSHA256": "31245ecb11b90fa7ca6b7fc874fde57cc26911d52b149c9c8283c289388e513b",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148117.443172,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "recipeSHA256": "8850c6b718438292377c9f8f726c8821ab5f1f9d9bd83359ade718bb603b7ea2",
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:079245223f1ad23b1a565e0cbb50050d93249448e0fb1fce3d5c2621580d28ca",
+    "finished": 1794185510.147105,
+    "captureExitCode": 0,
+    "pairCount": 0,
+    "pageStatus": "rendered",
+    "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/DayuanJiang--next-ai-draw-io/page.json",
+    "browser": {
+      "url": "http://127.0.0.1:19213/zh",
+      "title": "Next AI Draw.io - AI \u9a71\u52a8\u7684\u56fe\u8868\u751f\u6210\u5668",
+      "bodyText": "Next AI Draw.io\n\n\u63cf\u8ff0\u4e00\u5f20\u56fe\uff0c\u6216\u4e0a\u4f20\u622a\u56fe\u3001PDF\u3002\u5f97\u5230\u7684\u662f\u53ef\u4ee5\u7ee7\u7eed\u7f16\u8f91\u548c\u5bfc\u51fa\u7684 draw.io \u56fe\u3002\n\n\u5173\u4e8e\n\u8bf4\u8bf4\u4f60\u8981\u753b\u4ec0\u4e48\n\n\u63cf\u8ff0\u4e00\u5f20\u56fe\uff0c\u6216\u4e0a\u4f20\u622a\u56fe\u3001PDF\u3002\u5f97\u5230\u7684\u662f\u53ef\u4ee5\u7ee7\u7eed\u7f16\u8f91\u548c\u5bfc\u51fa\u7684 draw.io \u56fe\u3002\n\nMCP \u670d\u52a1\u5668\n\u8ba9 Claude Code\u3001Cursor \u6216 VS Code \u76f4\u63a5\u8bfb\u53d6\u672c\u5730\u6587\u4ef6\u548c\u4ee3\u7801\u6765\u753b\u56fe\u3002\u753b\u5e03\u548c\u8fd9\u91cc\u4e00\u6837\uff1a\u5b9e\u65f6\u9884\u89c8\u3001\u6807\u51fa\u6539\u52a8\u3001\u4e00\u952e\u64a4\u9500\u3002\n\u670d\u52a1\u5668\u6a21\u578b\n\u8bba\u6587\u8f6c\u56fe\u8868\n\u52a8\u753b\u56fe\u8868\nAWS \u67b6\u6784\n\u590d\u523b\u6d41\u7a0b\u56fe\n\u521b\u610f\u7ed8\u753b\n\n\u9009\u4e00\u4e2a\u793a\u4f8b\uff0c\u518d\u70b9\u53d1\u9001\uff1a\u4fdd\u5b58\u597d\u7684\u7b54\u6848\u4f1a\u7acb\u5373\u663e\u793a\uff0c\u4e0d\u8c03\u7528 AI\u3002\n\n\u6253\u5f00 .drawio \u6587\u4ef6\n\u4ece\u7a7a\u767d\u753b\u5e03\u5f00\u59cb\nNext AI Draw.io",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 29,
+    "maps": 18
   },
   {
     "subject": "turbopack/CalCom--cal.com",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "1c193cca8682b33b9866c792186033f7ef886682",
     "image": "recall-hufang/calcom--cal.com:1c193cca8682",
-    "started": 1794148117.4442308,
+    "started": 1794185516.15095,
     "buildCommand": [
       "docker",
       "build",
@@ -742,18 +808,46 @@
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/CalCom--cal.com"
     ],
     "recipeSHA256": "0b888c835657f49cc91476d81cac48693d67409482ca6a0931e8a97e4d1ddefd",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148117.600636,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:b4386030f0c79ce045232229afe218e5e67a3c961be492508686eb38a8f47556",
+    "finished": 1794185969.248078,
+    "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/CalCom--cal.com/page.json",
+    "captureExitCode": 0,
+    "pairCount": 0,
+    "pageStatus": "rendered",
+    "browser": {
+      "url": "http://127.0.0.1:19214/auth/setup?step=1",
+      "title": "\u8bbe\u7f6e | Cal.com",
+      "bodyText": "\u7ba1\u7406\u5458\u7528\u6237\n\n\u8ba9\u6211\u4eec\u521b\u5efa\u7b2c\u4e00\u4e2a\u7ba1\u7406\u5458\u7528\u6237\u3002\n\n\u7b2c 1 \u6b65\uff0c\u5171 3 \u6b65\n\n\u7528\u6237\u540d\n\u7528\u6237\u540d\nhttp://127.0.0.1:19214/\n\u5168\u540d\n\u90ae\u7bb1\u5730\u5740\n\u5bc6\u7801\n\u663e\u793a\u5bc6\u7801\n\u5927\u5199\u548c\u5c0f\u5199\u5b57\u6bcd\u6df7\u5408\n\u81f3\u5c11 15 \u4e2a\u5b57\u7b26\u957f\n\u5305\u542b\u81f3\u5c11 1 \u4e2a\u6570\u5b57\n\u4e0b\u4e00\u6b65",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [
+        {
+          "url": "http://127.0.0.1:19214/api/logo?type=favicon-32",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:19214/api/logo?type=android-chrome-192",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:19214/api/logo?type=favicon-16",
+          "status": 404
+        }
+      ],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 47,
+    "maps": 34
   },
   {
     "subject": "turbopack/CapSoftware--Cap",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
     "image": "recall-hufang/capsoftware--cap:bb16822e00a5",
-    "started": 1794148117.601519,
+    "started": 1794185975.251402,
     "buildCommand": [
       "docker",
       "build",
@@ -781,18 +875,58 @@
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/CapSoftware--Cap"
     ],
     "recipeSHA256": "dd694cd84c33dc6f639ee8a63fc7b17b4110ce6e2320743332096bc20fed0b1d",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148117.7624419,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:5e2b15a032e2433f0177fd15edbf62bce866dfab865a46e2e1d85612c0b30326",
+    "finished": 1794186472.456345,
+    "serviceImageIDs": {
+      "cap-web": "sha256:5e2b15a032e2433f0177fd15edbf62bce866dfab865a46e2e1d85612c0b30326",
+      "media-server": "sha256:1a8f751aacae5bbadb0638bf63414496f0cf081098d0f5b8f478db6ee540538d",
+      "minio": "sha256:b6bfe7239bfc83fb90d31612d9704d86039dd714f7904b3f1ad68f211e602372",
+      "minio-setup": "sha256:cfc83108c3abb371f8fb84d99c1fdc88f8c237e022409b0081fb7c0a3be634dd",
+      "mysql": "sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b"
+    },
+    "captureExitCode": 0,
+    "pairCount": 0,
+    "pageStatus": "rendered",
+    "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/CapSoftware--Cap/page.json",
+    "browser": {
+      "url": "http://127.0.0.1:19215/login",
+      "title": "Cap \u2014 Beautiful screen recordings, owned by you.",
+      "bodyText": "Home\nSign in to Cap\n\nBeautiful screen recordings, owned by you.\n\nLogin with email\n\nDon't have an account? Sign up here\n\nBy typing your email and clicking continue, you acknowledge that you have both read and agree to Cap's Terms of Service and Privacy Policy.",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 32,
+    "maps": 26
   },
   {
     "subject": "turbopack/colinhacks--zod",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "b500a2ee95134f81d74da7911d7378dd2853d042",
     "image": "recall-hufang/colinhacks--zod:b500a2ee9513",
-    "started": 1794148117.763144,
+    "started": 1794188950.4004421,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/turbopack/colinhacks--zod/source-preflight.json",
+      "receiptSHA256": "33d8767841dbf00fb731d5cee221586b14728e7b8d982f6bdc5f79b863154da2",
+      "selectedLibraries": [
+        "@inkeep/cxkit-react",
+        "@radix-ui/react-accordion",
+        "@vercel/analytics",
+        "@vercel/og",
+        "fumadocs-core",
+        "fumadocs-mdx",
+        "fumadocs-ui",
+        "gray-matter",
+        "next",
+        "react"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -819,19 +953,57 @@
       "recall-hufang/colinhacks--zod:b500a2ee9513",
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/colinhacks--zod"
     ],
-    "recipeSHA256": "c7f7f77705d74a4f2d4dc5b7483b1984f74b386008450103ffa33031d1c1ae69",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148117.908248,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "recipeSHA256": "ccf7f82e459712e4b0a0a70ac3f9d83330348ff17420fb4f8231ea3688aaf391",
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:bd8168d6ca27db6ba2045b773e2f38773072c02c8fcfccdf63e200a75d53cd5d",
+    "finished": 1794188983.6636128,
+    "captureExitCode": 0,
+    "pairCount": 1970,
+    "pageStatus": "rendered",
+    "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/colinhacks--zod/page.json",
+    "browser": {
+      "url": "http://127.0.0.1:19216/",
+      "title": "Intro | Zod",
+      "bodyText": "\ud83d\udc8e Zod 4.6 is out!\n\u00a0\nRead the announcement.\n\nZod 4\n\nThe latest version of Zod\n\nSearch\n\u2318\nK\n\nDocumentation\n\nIntro\n\nBasic usage\n\nDefining schemas\n\nCustomizing errors\n\nFormatting errors\n\nMetadata and registries\n\nJSON Schema\n\nCodecs\n\nAOT compilation\n\nEcosystem\n\nFor library authors\n\nPackages\n\nZod\n\nZod Mini\n\nZod Core\n\nBlog\n\nZod 4.6\n\nZod 4.5\n\nReducing Zod's memory footprint by an order of magnitude with method memoization\n\nView all\n\nOn this page\nNEW\nZod 4.6\nZod\n\nTypeScript-first schema validation with static type inference\nby @colinhacks\n\n\n\nWebsite\n\u00a0\u00a0\u2022\u00a0\u00a0\nDiscord\n\u00a0\u00a0\u2022\u00a0\u00a0\n\ud835\udd4f\n\u00a0\u00a0\u2022\u00a0\u00a0\nBluesky\n\n\n\n\n\nZod 4 is stable. Read the release notes and migration guide.\n\n\n\n\n\nIntroduction\n\nZod is a TypeScript-first validation library. Using Zod, you can define schemas you can use to validate data, from a simple string to a complex nested object.\n\nimport * as z from \"zod\";\n \nconst User = z.object({\n  name: z.string(),\n});\n \n// some untrusted data...\nconst input = { /* stuff */ };\n \n// the parsed result is validated and type safe!\nconst data = User.parse(input);\n \n// so you can use it with confidence :)\nconsole.log(data.name);\nFeatures\nZero external dependencies\nWorks in Node.js and all modern browsers\nTiny: 2kb core bundle (gzipped)\nImmutable API: methods return a new instance\nConcise interface\nWorks with TypeScript and plain JS\nBuilt-in JSON Schema conversion\nExtensive ecosystem\nInstallation\nnpm install zod\n\nZod is also available as @zod/zod on jsr.io.\n\nZod provides an MCP server that can be used by agents to search Zod's docs. To add to your editor, follow these instructions. Zod also provides an llms.txt file.\n\nRequirements\n\nZod is tested against TypeScript v5.5 and later. Older versions may work but are not officially supported.\n\n\"strict\"\n\nYou must enable strict mode in your tsconfig.json. This is a best practice for all TypeScript projects.\n\n// tsconfig.json\n{\n  // ...\n  \"compilerOptions\": {\n    // ...\n    \"strict\": true\n  }\n}\nEcosystem\n\nZod has a thriving ecosystem of libraries, tools, and integrations. Refer to the Ecosystem page for a complete list of libraries that support Zod or are built on top of it.\n\nResources\nAPI Libraries\nForm Integrations\nZod to X\nX to Zod\nMocking Libraries\nPowered by Zod\n\nI also contribute to the following projects, which I'd like to highlight:\n\ntRPC - End-to-end typesafe APIs, with support for Zod schemas\nReact Hook Form - Hook-based form validation with a Zod resolver\nzshy - Originally created as Zod's internal build tool. Bundler-free, batteries-included build tool for TypeScript libraries. Powered by tsc.\nSponsors\n\nSponsorship at any level is appreciated and encouraged. If you built a paid product using Zod, consider one of the corporate tiers.\n\nPlatinum\n\nBuild and deploy fully-managed AI agents and workflows\n\ntrigger.dev\n\n\n\nGold\n\nCut code review time & bugs in half\n\ncoderabbit.ai\n\n\nSilver\nsubtotal.com\npropelauth.com\nscalar.com\ntransloadit.com\nwhop.com\ninngest.com\nstoryblok.com\nmux.link/zod\ncybozu.co.jp\n9thco.com\nstackblitz.com\n\n\nBronze\n\n\n\nBasic usage\n\nBasic usage guide covering schema definition, parsing data, error handling, and type inference",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [
+        {
+          "url": "http://127.0.0.1:19216/_vercel/insights/script.js",
+          "status": 404
+        }
+      ],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 75,
+    "maps": 20
   },
   {
     "subject": "turbopack/formbricks--formbricks",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "5dadbacb6a002e22fad45341ae0da75c896f3ccf",
     "image": "recall-hufang/formbricks--formbricks:5dadbacb6a00",
-    "started": 1794148117.909568,
+    "started": 1794191759.8906062,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/turbopack/formbricks--formbricks/source-preflight.json",
+      "receiptSHA256": "55a846d7817a8fc6e8dbeeb8045d18076d92bfc05e5178803b80adf0642789fb",
+      "selectedLibraries": [
+        "@authzed/authzed-node",
+        "@better-auth/core",
+        "@better-auth/oauth-provider",
+        "@better-auth/utils",
+        "@boxyhq/saml-jackson",
+        "@cubejs-client/core",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@formbricks/hub"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -858,19 +1030,37 @@
       "recall-hufang/formbricks--formbricks:5dadbacb6a00",
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/formbricks--formbricks"
     ],
-    "recipeSHA256": "02bce4227752a6a12133680f3027da28e381e65e3dacf1781a4aac86f12280e4",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148118.062166,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "recipeSHA256": "3c01101e927370412130cc86d9e673664078d44ec62fd98c03aaa9a868f17d8d",
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:9291e432e8979caabaa9a160f3254f104f4d943b49534aefd6bcc73f4bd066fa",
+    "finished": 1794192159.3492649,
+    "captureError": "Command '['/tmp/recall-hufang-docker-compose', '-p', 'recall-hufang-17', '-f', '/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/verification/hufang-builds-2026-11-08/turbopack/formbricks--formbricks/.runtime/compose.json', 'up', '-d', '--wait', '--wait-timeout', '600']' returned non-zero exit status 1."
   },
   {
     "subject": "turbopack/jnsahaj--tweakcn",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
     "image": "recall-hufang/jnsahaj--tweakcn:a3b47b37cba9",
-    "started": 1794148118.0630898,
+    "started": 1794190343.034794,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/turbopack/jnsahaj--tweakcn/source-preflight.json",
+      "receiptSHA256": "dffe96f370789115cb05314e4f059ed4d765a1e29a70d1ceff1e46670552280f",
+      "selectedLibraries": [
+        "@ai-sdk/google",
+        "@ai-sdk/react",
+        "@base-ui-components/react",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@google/generative-ai",
+        "@hookform/resolvers",
+        "@lexical/react",
+        "@neondatabase/serverless"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -897,19 +1087,85 @@
       "recall-hufang/jnsahaj--tweakcn:a3b47b37cba9",
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/jnsahaj--tweakcn"
     ],
-    "recipeSHA256": "48cacf40fa5828ff3b948babaabae4d5d386fc3f59a71a54bf1bbf32129cfc24",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148118.2157829,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "recipeSHA256": "b253b4259d82255ae61d86947002b54cb1a6fd71eb41a03beb49b580bd1b0925",
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:0db88feca9d74650b2a56bcbe34c5804c9edbec18e9f8686fa5c4c142aacd789",
+    "finished": 1794190448.870443,
+    "captureExitCode": 0,
+    "pairCount": 78,
+    "pageStatus": "rendered",
+    "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/jnsahaj--tweakcn/page.json",
+    "browser": {
+      "url": "http://127.0.0.1:19218/editor/theme",
+      "title": "tweakcn \u2014 Theme Generator for shadcn/ui",
+      "bodyText": "tweakcn\nExport to Figma\nSign In\nSign Up\nDefault\nColors\nTypography\nOther\nGenerate\nPRIMARY\nBackground\nForeground\nSECONDARY\nBackground\nForeground\nACCENT\nBackground\nForeground\nBASE\nBackground\nForeground\nCARD\nBackground\nForeground\nPOPOVER\nBackground\nForeground\nMUTED\nBackground\nForeground\nDESTRUCTIVE\nBackground\nForeground\nBORDER & INPUT\nBorder\nInput\nRing\nCHART\nChart 1\nChart 2\nChart 3\nChart 4\nChart 5\nSIDEBAR\nSYNC\nBackground\nForeground\nPrimary\nPrimary FG\nAccent\nAccent FG\nBorder\nRing\nReset\nImport\nShare\nSave\nCode\nCustom\nCards\nDashboard\nApplication\nMarketing\nOpen in\nTotal Revenue\n$15,231.89\n+20.1% from last month\nSubscriptions\n+2,350\n+180.1% from last month\nMove Goal\nSet your daily activity goal.\nDecrease\n350\nCALORIES/DAY\nIncrease\nSet Goal\nExercise Minutes\nYour exercise minutes are ahead of where you normally are.\nMon\nTue\nWed\nThu\nFri\nSat\nSun\nUpgrade your subscription\nYou are currently on the free plan. Upgrade to the pro plan to get access to all features.\nName\nEmail\nCard Number\nPlan\n\nSelect the plan that best fits your needs.\n\nStarter Plan\nPerfect for small businesses.\nPro Plan\nMore features and storage.\nNotes\nI agree to the terms and conditions\nAllow us to send you emails\nCancel\nUpgrade Plan\nTeam Members\nInvite your team members to collaborate.\nS\n\nSofia Davis\n\nm@example.com\n\nOwner\nJ\n\nJackson Lee\n\np@example.com\n\nDeveloper\nI\n\nIsabella Nguyen\n\ni@example.com\n\nBilling\nCookie Settings\nManage your cookie settings here.\nStrictly Necessary\nThese cookies are essential in order to use the website and use its features.\nFunctional Cookies\nThese cookies allow the website to provide personalized functionality.\nSave preferences\nCreate an account\nEnter your email below to create your account\nGitHub\nGoogle\nOR CONTINUE WITH\nEmail\nPassword\nCreate account\nS\n\nSofia Davis\n\nm@example.com\n\nNew message\nHi, how can I help you today?\nHey, I'm having trouble with my account.\nWhat seems to be the problem?\nI can't log in.\nSend\ntweakcn\nA visual editor for shadcn/ui components with beautiful themes. Accessible. Customizable. Open Source.\nStar\nTypeScript\n20k\nUpdated April 2023\nDate picker with range\nSelect a date range.\nJan 20, 2022 - Feb 09, 2022\nShare this document\nAnyone with the link can view this document.\nLink\nCopy Link\nPeople with access\nO\n\nOlivia Martin\n\nm@example.com\n\nCan edit\nI\n\nIsabella Nguyen\n\nb@example.com\n\nCan edit\nS\n\nSofia Davis\n\np@example.com\n\nCan edit\nE\n\nEthan Thompson\n\ne@example.com\n\nCan edit\nReport an issue\nWhat area are you having problems with?\nArea\nBilling\nSecurity Level\nSeverity 2\nSubject\nDescription\nCancel\nSubmit\nMon",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [
+        {
+          "url": "http://127.0.0.1:19218/site.webmanifest",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:19218/site.webmanifest",
+          "status": 404
+        },
+        {
+          "url": "https://api.github.com/repos/jnsahaj/tweakcn",
+          "status": 403
+        },
+        {
+          "url": "http://127.0.0.1:19218/avatars/01.png",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:19218/avatars/02.png",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:19218/avatars/03.png",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:19218/avatars/04.png",
+          "status": 404
+        },
+        {
+          "url": "http://127.0.0.1:19218/avatars/05.png",
+          "status": 404
+        }
+      ],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 86,
+    "maps": 46
   },
   {
     "subject": "turbopack/onlook-dev--onlook",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "423e2e924366419e418ee049093872d535eea41a",
     "image": "recall-hufang/onlook-dev--onlook:423e2e924366",
-    "started": 1794148118.216699,
+    "started": 1794192907.40145,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/turbopack/onlook-dev--onlook/source-preflight.json",
+      "receiptSHA256": "1930181bc0f267dc60ad77b1ccc65958cc73b2da359c5cb05aafdca3417d8c9a",
+      "selectedLibraries": [
+        "@ai-sdk/provider-utils",
+        "@ai-sdk/react",
+        "@codemirror/lang-css",
+        "@codemirror/lang-html",
+        "@codemirror/lang-javascript",
+        "@codemirror/lang-json",
+        "@codemirror/lang-markdown",
+        "@opentelemetry/instrumentation",
+        "@opentelemetry/sdk-logs",
+        "@storybook/test"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -936,19 +1192,68 @@
       "recall-hufang/onlook-dev--onlook:423e2e924366",
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/onlook-dev--onlook"
     ],
-    "recipeSHA256": "a307cf9cfee9482a3cd6565f19196b7455e97552f9654a98bf416b36c8e8cc4d",
+    "recipeSHA256": "3cfd89b2468b0a23aa188f4141a1839abd7731eef26c965b7350a03b3a2c2c88",
     "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148118.364228,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "buildStatus": "build-failed",
+    "finished": 1794192911.2716658,
+    "browser": {
+      "url": "http://127.0.0.1:19219/",
+      "title": "Onlook \u2013 Cursor for Designers",
+      "bodyText": "Product\nResources\nAbout\n22k\nSign In\nCursor for\nDesigners\n\nDesign with your real components.\nShip PRs, not prototypes.\n\nBook a Demo\nVillainterest - Product Notes\nImplement evil pin creation (mwahaha)\nAdd 'light mode' (begrudgingly)\nBuild villain-to-villain messaging (evil DMs)\nCreate villain collaboration boards\nAdd villain lair location sharing (evil meetups)\nCreate devious recommendation page\nHome\nV\nBrutalist lair decor\n\nMINIMALIST INTERIOR WITH DRAMATIC LIGHTING\n\nBLACK LEATHER BAR STOOL WITH BRASS ACCENTS\n\nSPIKEY CERAMIC IRON METAL SCULPTURE\n\nBLACK BAR STOOL SILHOUETTE DESIGN\n\nCERAMIC BRUTALIST OBJECTS WITH SPIKES\n\nBRUTALIST DARK GLASS VASE SCULPTURE\n\nGOLDEN MUTED INTERIOR WITH SHARP LINES\n\nCONTEMPORARY BRUTALIST INTERIOR DESIGN\n\nMINIMALIST ZIG-ZAG CHAIR DESIGN\n\nMINIMALIST METALLIC SHEER DESIGN\n\nLOUNGE CHAIR AGAINST CLEAN WALL\n\nMETALLIC CHAIR WITH BRUTALIST DESIGN\n\nLIVING ROOM WITH METAL FURNITURE DESIGN\n\nMETALLIC BRUSHED METAL CHAIR DESIGN\n\nBLACK LEATHER FURNITURE DESIGN\n\nHome\nV\nBrutalist lair decor\n\nMINIMALIST INTERIOR WITH DRAMATIC LIGHTING\n\nBLACK LEATHER BAR STOOL WITH BRASS ACCENTS\n\nBLACK BAR STOOL SILHOUETTE DESIGN\n\nCERAMIC BRUTALIST OBJECTS WITH SPIKES\n\nBRUTALIST DARK GLASS VASE SCULPTURE\n\nGOLDEN MUTED INTERIOR WITH SHARP LINES\n\nCONTEMPORARY BRUTALIST INTERIOR DESIGN\n\nMINIMALIST ZIG-ZAG CHAIR DESIGN\n\nMINIMALIST METALLIC SHEER DESIGN\n\nLOUNGE CHAIR AGAINST CLEAN WALL\n\nSPIKEY CERAMIC IRON METAL SCULPTURE\n\nMETALLIC CHAIR WITH BRUTALIST DESIGN\n\nLIVING ROOM WITH METAL FURNITURE DESIGN\n\nMETALLIC BRUSHED METAL CHAIR DESIGN\n\nVillainterest\nDesign\nPreview\nLive\n\nLayers\n\nBrand\n\nPages\n\nAssets\n\nElements\n\nApps\n\nDesign Mockup Container\nTop Navigation Bar\nLogo\nSearch Bar\nSearch Text\nClear Button\nUser Button\nMain Content\nLeft Sidebar\nNavigation Icons\nMagnifying Glass\nSparkles\nChat Bubble\nPerson\nSettings Icon\nImage Grid\nImage Columns\nImage Card 1\nImage Container\nBackground Overlay\nImage\nCaption\nImage Card 2\nImage Container\nBackground Overlay\nImage\nCaption\nImage Card 3\nImage Container\nBackground Overlay\nImage\nCaption\nImage Card 4\nImage Container\nBackground Overlay\nImage\nCaption\nImage Card 5\nImage Container\nBackground Overlay\nImage\nCaption\nImage Card 6\nImage Container\nBackground Overlay\nImage\nCaption\nChat\nCode\nThe masonry layout is breaking on mobile - can you fix the responsive columns?\nI see the issue! The CSS columns aren't adapting properly to smaller screens. Let me update the responsive breakpoints and add proper mobile optimization.\nWebsite.tsx\n\nBuild\n\nAI \u2022 Code \u2022 Design\nSide-by-side-by-side\nCanvas Manipulation\n\nDrag, resize, and arrange elements directly on the canvas. See changes in real code instantly.\n\nComponents\n\n11\u6708\n2026\nS\nM\nT\nW\nT\nF\nS\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nCalendar\nLogin\nSign Up\nEnter your email below\nEmail\nm@example.com\nPassword\nForgot?\nLogin\nLogin with Google\nCard\n2\nCarousel\nBar Chart\nVisitors last 3 months\nChart\nName\nAge\nCity\nJohn\n25\nNYC\nJane\n30\nLA\nTable\n72\u00b0\nWeather\n11\u6708\n2026\nSu\nMo\nTu\nWe\nTh\nFr\nSa\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\nYour Real Components\n\nDesign with the buttons, cards, and layouts your engineers already built. Your actual design system.\n\nVersions\n\nToday\nNew typography and layout\nAlessandro \u00b7 3h ago\nUpdate colors\nJonathan \u00b7 10h ago\nAdded new background image\nSandra \u00b7 12h ago\nCopy improvements and new branding\nJonathan \u00b7 3d ago\nYesterday\nRevision history\n\nNever lose your progress \u2013 revert when you need to\n\nDesign me an inventory tracker website for my Cafe\nAbsolutely! Let's start by getting the general layout in place with a top navigation bar and a main content area.\nWebsite.tsx\n\nBuild\n\nAI That Understands Context\n\nReference images, designs, and docs in chat. AI sees what you see \u2014 no more explaining from scratch.\n\nBrand Colors\n\nSlate\nGray\nZinc\nOrange\nAmber\nLime\nGreen\n\nBrand Colors\n\nCyan\nBlue\nIndigo\nViolet\nPurple\nPink\nRose\nDesign System Guardrails\n\nAI is constrained to your colors, fonts, and tokens. No drift. No off-brand outputs.\n\nLayers\n\nNavigation Bar\nModels\nExotic\nRoadster\nTerrestrial\nLogo\nReserve\nHeader\nEndorphins\nIn Motion\nOrder Now\nVideo\nSection\nExperience excellence\nThe feel of something more\nNavigate Your Code\n\nSee your component hierarchy. Click any layer to select it on the canvas.\n\n...and so\nmuch more\nWorks With Your Codebase\nConnect your existing React, Next.js, or Vue project. No rebuilding. No migration. Start designing in minutes.\nBuilt for Teams\nShare your canvas. Leave spatial comments. Work together on designs that become real PRs.\nDirect GitHub Integration\nPush changes directly to your repository. Review diffs before committing.\nShip PRs, Not Prototypes\nYour changes become a real pull request. Engineers review and merge \u2014 no handoff, no translation.\nPower User Shortcuts\nAll your familiar hotkeys work here. CMD+C and everything in between.\nReference Anything in Chat\nDrop images, mockups, or docs into your conversation. AI uses them as context for better results.\nSupported by you &\n9,412 other builders\n\nJoin the community building\nthe open source Cursor for Designers\n\nContribute to Onlook\nJoin the Discord\nTens of thousands of\nbuilders love Onlook\nWhat is this, something like Figma and v0 fused into a devilish combo? There's something called 'onlook' trending on GitHub, and it's so insanely cool it's scary.\nKoder@\u6d77\u5916Tech\u901f\u5831\nFrom an era where web designers were synonymous with Photoshop and XD, we've moved into the Figma era. And now, a new tool powered by AI has emerged! Its name is 'Onlook'. In summary, it seems you can publish your designs directly.\nRyutaro\nStudio Nika\nlookin' rad!\nAdam Argyle\nChrome CSS Developer Advocate at Google\nPromising new tool for designers \u2013 gives you a Figma-like front end to visually edit your React app.\nAaron Epstein\nCofounder of Creative Market\nYour products have helped me a lot. Thank you from the bottom of my heart.\nUtsumura Fuki\nthis is getting pretty ergonomically close to the synthesis of generative code & design. great product @onlookdev \ud83d\udc23\nTina He\nProduct Lead, Developer Tools at Coinbase\nV nice!\nJohn Maeda\nHead of Computational Design / AI Platform at Microsoft\nWhile playing with it, I once again thought, 'The boundary between design and development is melting away.'\nKawai Design\nFrequently\nasked questions\nRead our FAQs\nWhat is Onlook?\n\nOnlook is a visual design canvas that connects to your existing codebase. Designers drag real components onto an infinite canvas, make changes visually, and submit pull requests \u2014 no coding required.\n\nHow is Onlook different from other design tools?\n\nTraditional design tools create static mockups that must be rebuilt in code. Onlook works with your real components \u2014 what you design IS the code. Changes become PRs, not handoff specs.\n\nHow is Onlook different from AI code generators?\n\nAI generators create new code from scratch. Onlook constrains AI to YOUR existing components, so outputs match your design system. No translation, no drift.\n\nDo I need to know how to code?\n\nNo. Designers use a visual canvas with familiar tools. Real code runs underneath \u2014 you don't need to touch it unless you want to.\n\nCan my team collaborate?\n\nYes. Share your canvas, leave spatial comments, and work together in real-time. Changes sync to code and can be submitted as PRs for engineers to review.\n\nWhat tech stack does Onlook support?\n\nReact, Next.js, and any CSS approach (Tailwind, CSS modules, styled-components). Works with any component library.\n\nIs there a free version of Onlook?\n\nYes, Onlook can be self-hosted for free on GitHub. For the hosted cloud version, please contact our team or book a demo.\n\nWho owns the code?\n\nThe code you make with Onlook is all yours. Export it locally, publish to GitHub, or deploy to a custom domain.\n\nReady to stop rebuilding?\nYour design system, on a canvas.\nBook a Demo\nCompany\nAbout\nDocs\nFAQ\nBlog\nContact\nProduct\nMy Projects\nGitHub Repo\nFeatures\nAI\nAI for Frontend\nPrototyping\nVisual Builder\nPricing\nWorkflows\nClaude Code\nVibe Coding\nFollow Us\nTerms of Service\nPrivacy Policy\nSitemap\n\u00a9 2026 On Off, Inc.",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [
+        "Error: Minified React error #418; visit https://react.dev/errors/418?args[]=text&args[]= for the full message or use the non-minified dev environment for full errors and additional helpful warnings.",
+        "SyntaxError: Failed to execute 'appendChild' on 'Node': Unexpected token '-'\nhttps://z.onlook.com/cdn-cgi/zaraz/s.js?z=JTdCJTIyZXhlY3V0ZWQlMjIlM0ElNUIlNUQlMkMlMjJjJTIyJTNBJTIyJTIyJTJDJTIydCUyMiUzQSUyMk9ubG9vayUyMCVFMiU4MCU5MyUyMEN1cnNvciUyMGZvciUyMERlc2lnbmVycyUyMiUyQyUyMnglMjIlM0EwLjU1ODkzOTY0NzY1MTUyNzElMkMlMjJ3JTIyJTNBODAwJTJDJTIyaCUyMiUzQTYwMCUyQyUyMmolMjIlM0E2MDAlMkMlMjJlJTIyJTNBODAwJTJDJTIybCUyMiUzQSUyMmh0dHAlM0ElMkYlMkYxMjcuMC4wLjElM0ExOTIxOSUyRiUyMiUyQyUyMnIlMjIlM0ElMjIlMjIlMkMlMjJrJTIyJTNBMjQlMkMlMjJuJTIyJTNBJTIyVVRGLTglMjIlMkMlMjJvJTIyJTNBLTQ4MCUyQyUyMnElMjIlM0ElNUIlNUQlN0Q=:1:1277\nArray.forEach (<anonymous>)"
+      ],
+      "failedResources": [
+        {
+          "url": "https://api.github.com/repos/onlook-dev/onlook",
+          "status": 403
+        },
+        {
+          "url": "https://api.github.com/repos/onlook-dev/onlook",
+          "status": 403
+        },
+        {
+          "url": "https://api.github.com/repos/onlook-dev/onlook/contributors?per_page=100",
+          "status": 403
+        },
+        {
+          "url": "https://api.github.com/repos/onlook-dev/onlook",
+          "status": 403
+        }
+      ],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "pairCount": 0,
+    "scripts": 65,
+    "maps": 43
   },
   {
     "subject": "turbopack/Open-Dev-Society--OpenStock",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "b72306d39fa27dc55252ceecf858165ecf5a3fa3",
     "image": "recall-hufang/open-dev-society--openstock:b72306d39fa2",
-    "started": 1794148118.365111,
+    "started": 1794189865.871868,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/turbopack/Open-Dev-Society--OpenStock/source-preflight.json",
+      "receiptSHA256": "0fd75a5f69bb1b23ef3f11407180429c1ada5cee5cfd77c606668882a20db4af",
+      "selectedLibraries": [
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-popover",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@vercel/analytics",
+        "better-auth",
+        "cmdk",
+        "country-data-list",
+        "date-fns"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -976,18 +1281,55 @@
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/Open-Dev-Society--OpenStock"
     ],
     "recipeSHA256": "c9a96b7ed3119e3c439c143e04361ecca42aabb6a44503a89254fcffb1952ef0",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148118.517879,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:07613042e0661b6bbd5274d1fe87ada90b03b0324cb47e928fd2a82f34a8b103",
+    "finished": 1794189967.800246,
+    "serviceImageIDs": {
+      "app": "sha256:07613042e0661b6bbd5274d1fe87ada90b03b0324cb47e928fd2a82f34a8b103",
+      "mongodb": "sha256:e16e606f792ea89d2b4907b54e5e31eb86a7a23e27231dce3a982cc8f2d73cd2"
+    },
+    "captureExitCode": 0,
+    "pairCount": 46,
+    "pageStatus": "rendered",
+    "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/Open-Dev-Society--OpenStock/page.json",
+    "browser": {
+      "url": "http://127.0.0.1:19220/",
+      "title": "OpenStock",
+      "bodyText": "New\nOctober update: Draw on charts, keep your indicators, and safer sign-in\nSee what\u2019s new\nProduct\nData\nSelf-host\nAbout\nSponsor\n21.4K\nSign in\nGet started\nMarket closed \u00b7 opens in 12h 23m\nMarkets, minus\nthe paywall.\n\nOpenStock is an open-source alternative to expensive market platforms. Track prices, watch the whole market and dig into company insights, built openly, for everyone.\n\nGet started free\nSelf-host it\n21.4K stars\n21:07\nNEW YORK\nPre\nRegular\nAfter\nOverview\nAAPL\nNVDA\nIndex pulse\n\nTracking ETFs via Finnhub\n\nDelayed \u00b7 refreshed hourly\nS&P 500\nSPY\n\u2014\nQuote unavailable\nNasdaq 100\nQQQ\n\u2014\nQuote unavailable\nDow 30\nDIA\n\u2014\nQuote unavailable\nRussell 2000\nIWM\n\u2014\nQuote unavailable\n\nWHAT'S INSIDE\n\nA terminal for people who aren't at a bank.\n\nEverything you need to follow the market, in one place, without a subscription.\n\nCharts that move\nTradingView candles, technicals and financials for any listed company, full screen when you need room.\nAlerts by email\nWith OpenStock Cloud, set a target above or below the price. We check every five minutes and write when it crosses.\nSentiment in one read\nBuzz and bullishness from Reddit, X.com, news and Polymarket, side by side for each stock.\nThe whole market\nSector heatmap, movers and top stories on one screen before the bell.\nFind anything with \u2318K\nSearch every exchange Finnhub covers and open a stock as a tab, like a browser.\nA Monday digest\nA short, AI-written summary of the week\u2019s news for the stocks you watch.\n\nDATA\n\nPick how fresh your numbers are.\n\nCharts always stream live from TradingView. Quotes, watchlists and alerts come from Finnhub, and this is how often they update.\n\nCommunity\n\nFree\n\nThis site. Quotes refresh every hour and are shared by everyone from the edge. Charts stay live.\n\nHourly\n1 update an hour\n\nGet started\nOpenStock Cloud\nComing soon\n\n$5 /month\n\nThe same app with live quotes and email price alerts, hosted on a pool of market data keys. Nothing to set up.\n\nEvery 15 seconds\n240 updates an hour\n\nGet notified on Discord\nSelf-host\n\nFree\n\nRun it on your own server with your own Finnhub keys: realtime quotes and alerts for you and your team.\n\nYour call\n240 updates an hour\n\nSetup guide\n\nSELF-HOST\n\nYour server, your keys, live quotes.\n\nAdd as many free Finnhub keys as you like: each one adds 60 requests a minute. Switch the data mode to realtime and prices refresh every 15 seconds.\n\nFull setup in the README\n$ git clone https://github.com/Open-Dev-Society/OpenStock.git\n$ cd OpenStock\n\n# .env (every variable is in the README)\nFINNHUB_API_KEYS=key_one,key_two,key_three\nNEXT_PUBLIC_OPENSTOCK_DATA_MODE=realtime\n\n$ docker compose up -d --build\n\nSUPPORT\n\nOpenStock is open for sponsors.\n\nIt stays free because people and companies back it. Pay what you can, or give time instead.\n\nSponsor\nMonthly tiers from $5, a one-time gift, or a custom partnership. Sponsors are shown on this site, in the app and in the README.\nSee sponsor tiers\nContribute\nPick a good first issue, improve the docs or design a screen. Every merged pull request keeps OpenStock moving.\nGood first issues\nSpread the word\nStar the repo and share it with someone paying for a terminal they barely use.\nStar on GitHub\n\nOPEN DEV SOCIETY\n\nTechnology should belong to everyone. Knowledge should be open, free, and accessible.\nGet started free\nRead the manifesto\nSTARS\n21.4K\nFORKS\n2.7K\nLICENSE\nAGPL-3.0\nWRITTEN IN\nTypeScript\n\nOPEN FOR SPONSORS\n\nKeep market data free for everyone.\n\nCURRENT SPONSORS\n\nPARTNER (LIMITED)\n\nOrbit\nSlot open\nSlot open\n\nCOMPANY\n\nAdd yours\n\nPREVIOUSLY BACKED BY\n\nPARTNER\n\n2026\n\nSUPPORTER\n\nJonas Gunklach\nDan Sellars\nMangolito\nBecome a sponsor\nTalk with us\n\n\u00a9 2026 Open Dev Society \u00b7 AGPL-3.0\n\nStocks\nGuides\nAbout\nHelp\nArchitecture\nTerms\nSponsor\nWall of love\nChangelog\nGitHub\nDiscord\nLinkedIn\nInitiative by\nOpen Dev Society",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 108,
+    "maps": 14
   },
   {
     "subject": "turbopack/shadcn-ui--ui",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "d549251bab2e57dbf72f7c909d6458c02c43f529",
     "image": "recall-hufang/shadcn-ui--ui:d549251bab2e",
-    "started": 1794148118.518976,
+    "started": 1794192214.334235,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/turbopack/shadcn-ui--ui/source-preflight.json",
+      "receiptSHA256": "9d603d749380988001964bf7f2465ef55968b4bb14d7daa12f7366fb4bb30e41",
+      "selectedLibraries": [
+        "@ai-sdk/anthropic",
+        "@ai-sdk/openai",
+        "@ai-sdk/react",
+        "@base-ui/react",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@faker-js/faker",
+        "@formisch/react",
+        "@hookform/resolvers"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -1014,19 +1356,57 @@
       "recall-hufang/shadcn-ui--ui:d549251bab2e",
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/shadcn-ui--ui"
     ],
-    "recipeSHA256": "18888a3fd7b2da06cbfe81b581bf0eb2cae0ec7aef4050246129602c52040481",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148118.683962,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "recipeSHA256": "e9833ecbf169a5fa65dc58f250a1bdeb10d85e58555adfbf0207f77841b12f83",
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:2598c37904b81c0c1ae178582c87c23a73b9e08410c457aad4c6d724e581ae59",
+    "finished": 1794192673.9045389,
+    "captureExitCode": 0,
+    "pairCount": 1651,
+    "pageStatus": "rendered",
+    "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/shadcn-ui--ui/page.json",
+    "browser": {
+      "url": "http://127.0.0.1:19221/",
+      "title": "shadcn/ui - The Foundation for your Design System",
+      "bodyText": "Toggle Menu\nMenu\nSearch...\n128k\nToggle theme\nNew\nTrace, Code Block and AI Elements\nThe Foundation for your Design System\n\nComposable, accessible components with thoughtful defaults. Build your own component library with code you can customize, extend, and make your own.\n\nGet Started\nView Components\nButton\nSecondary\nOutline\nBadge\nSecondary\nAlert Dialog\nButton Group\nOverview\nAnalytics\nTransactions\nInvestments\nAccounts\nSpending\nPlanning\nDocuments\nBudget\nReports\nGoals\nCalendar\nSupport\nHelp Center\nDocs\nContact Us\nStatus\nCommunity\nAccount\nProfile\nBilling\nNotifications\nSecurity\nAppearance\nSavings Targets\nActive milestones for 2024 across your portfolio. Monitor how close you are to each savings goal.\n\nRETIREMENT\n\n$420,000\nx\n65% achieved\n$273,000\n\nREAL ESTATE\n\n$85,000\nx\n32% achieved\n$27,200\nYou have not met your targets for this year.\nScan to connect your mobile device\nOpen the Ledger mobile app and scan this code to link your device.\nNew Chat\nHow can I help you today?\nMorning, shadcn!\nWhat are we working on today? Press send to start a new conversation\nI'm building a chat for our app and the scroll behavior is driving me nuts. Every time the AI streams a reply, the whole thread jumps around.\nSend\nHome\nAccount options\nPayments\nChange transfer limit\n\nAdjust how much you can send from your balance.\n\nScheduled transfers\n\nSet up a transfer to send at a later date.\n\nRecurring card payments\n\nManage your repeated card transactions.\n\nBuilt by shadcn at Vercel. The source code is available on GitHub.",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [
+        {
+          "url": "http://127.0.0.1:19221/_vercel/insights/script.js",
+          "status": 404
+        }
+      ],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 177,
+    "maps": 159
   },
   {
     "subject": "turbopack/umami-software--umami",
     "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
     "upstreamCommit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
     "image": "recall-hufang/umami-software--umami:559e3c607c23",
-    "started": 1794148118.684984,
+    "started": 1794192707.4299479,
+    "sourcePreflight": {
+      "passed": true,
+      "status": "passed",
+      "receipt": "verification/hufang-builds-2026-11-08/turbopack/umami-software--umami/source-preflight.json",
+      "receiptSHA256": "1cb1c0ef767bff957aa36f2296c49b17efc0065743c74e22b5df4b353df7ec22",
+      "selectedLibraries": [
+        "@clickhouse/client",
+        "@dicebear/core",
+        "@prisma/adapter-pg",
+        "@prisma/client",
+        "@svgr/cli",
+        "@tanstack/react-query",
+        "@umami/react-zen",
+        "bcryptjs",
+        "chalk",
+        "chart.js"
+      ]
+    },
     "buildCommand": [
       "docker",
       "build",
@@ -1053,11 +1433,35 @@
       "recall-hufang/umami-software--umami:559e3c607c23",
       "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/turbopack/umami-software--umami"
     ],
-    "recipeSHA256": "d4fd7cbc95989ed189dcec7d3dde8fb6c4f9ecc3efa76e7f41bd1ffdf654a283",
-    "buildExitCode": 1,
-    "buildStatus": "blocked",
-    "finished": 1794148118.83697,
-    "failureClassification": "environment-unavailable",
-    "error": "Docker host socket unavailable; this does not establish an upstream build failure."
+    "recipeSHA256": "68b7f7eb9b5143a8ec2059dde514c1be885e05cba4f73ff9815e8ed4b78c1914",
+    "buildExitCode": 0,
+    "buildStatus": "built",
+    "imageID": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
+    "finished": 1794192847.017387,
+    "serviceImageIDs": {
+      "app": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
+      "db": "sha256:aae6554de426ae1990f1a939ff183a0299146cf7142a6f4c379c3357af9cc2d8"
+    },
+    "captureExitCode": 0,
+    "pairCount": 796,
+    "pageStatus": "rendered",
+    "pageEvidence": "verification/hufang-builds-2026-11-08/turbopack/umami-software--umami/page.json",
+    "browser": {
+      "url": "http://127.0.0.1:19222/login",
+      "title": "Login | Umami",
+      "bodyText": "umami\nUsername\nPassword\nLogin",
+      "selectorFound": true,
+      "textFound": true,
+      "errors": [],
+      "failedResources": [
+        {
+          "url": "http://127.0.0.1:19222/api/auth/verify",
+          "status": 401
+        }
+      ],
+      "scope": "Selected route and readiness only; authenticated workflows and external integrations unverified."
+    },
+    "scripts": 16,
+    "maps": 11
   }
 ]

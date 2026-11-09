@@ -9,7 +9,9 @@ RUN npm ci --no-audit --no-fund
 # Node 16 does not require the pre-10.15.3 destructor workaround, so initialize it false.
 RUN node -e 'require("fs").appendFileSync("node_modules/@parcel/source-map/src/napi/SourceMap.cpp", "\nnamespace Napi { namespace details { std::atomic_bool needs_objectwrap_destructor_fix(false); } }\n")'
 RUN node /usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js rebuild --directory node_modules/@parcel/source-map --nodedir=/usr/local
-RUN npx parcel build index.html
+# Parcel 2 beta.1 scope-hoisting emits out-of-bounds generated map positions.
+# Keep the production minifier, but retain module boundaries for valid provenance.
+RUN npx parcel build index.html --no-scope-hoist
 
 FROM nginx:1.27-alpine
 COPY --from=build /app/18-forkify/final/dist/ /usr/share/nginx/html/

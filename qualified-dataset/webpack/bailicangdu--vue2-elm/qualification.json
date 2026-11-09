@@ -1,0 +1,807 @@
+{
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "webpack/bailicangdu--vue2-elm",
+  "repo": "bailicangdu/vue2-elm",
+  "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
+  "policy": {
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
+  },
+  "selectionOverride": {},
+  "candidates": [
+    "better-scroll",
+    "fastclick",
+    "iscroll",
+    "showdown",
+    "vue",
+    "vue-router",
+    "vuex"
+  ],
+  "libraries": [
+    {
+      "library": "better-scroll",
+      "declaredVersion": "1.15.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "better-scroll",
+        "version": "1.15.2",
+        "integrity": "sha512-sSY2N8I9/B+YX/9JpIz6pMQYnmBuvspBqZG4UxYaQEfz/ZWrnxwdyKLL4t6IKpFmxqtZadVypXw7vSSHxBZpBQ==",
+        "shasum": "65ffc6058b8b4ff337b8dfad4bcb334d7699ceb6",
+        "tarballSHA256": "e25b362d7a4ac8972f0db33204ca9fb01f14cb164fe0d1a77582279c4a188d7a",
+        "bytes": 154501,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 3,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/index.js",
+          "source": "source-js/c3c70eb36282a5ca39633c28eef2e752b6c9f86e6a24e573e3f996a8445d9119.js",
+          "sourceSHA256": "c3c70eb36282a5ca39633c28eef2e752b6c9f86e6a24e573e3f996a8445d9119",
+          "span": [
+            548,
+            976
+          ],
+          "name": "BScroll",
+          "normalizedASTSHA256": "d2ac99215b598bf898fffe87449477777090fd34e30059b0338af28956290ab8",
+          "codeSHA256": "97c91ffb7beee154eb8fa69839e06248bacd4dbf8b934cd1a467462bc03c9439",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "cf87952f3e2f8088",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 23,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/scroll/core.js",
+          "source": "source-js/b5c11d26a4166872b73cc0530b5b6827b6e9c606a7f7681ddb123b3c588a4cbf.js",
+          "sourceSHA256": "b5c11d26a4166872b73cc0530b5b6827b6e9c606a7f7681ddb123b3c588a4cbf",
+          "span": [
+            632,
+            1742
+          ],
+          "name": "_start",
+          "normalizedASTSHA256": "06edba4858a23e941e5a4ea0fa613a7edc3c72117b4b1cb4213444c121cf6bfc",
+          "codeSHA256": "77020f3a0fc35a99d816e5a870a53722559a23ea2c5fd1a21bf1fc3bd090d6f4",
+          "features": {
+            "propertyOperations": 48,
+            "distinctOperationPropertyPairs": 38,
+            "pogHash": "3c60d44b008f836a",
+            "graphNodes": 33,
+            "graphEdges": 42,
+            "graphOperationOccurrences": 83,
+            "distinctGraphOperationPropertyPairs": 37,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/scroll/core.js",
+          "source": "source-js/b5c11d26a4166872b73cc0530b5b6827b6e9c606a7f7681ddb123b3c588a4cbf.js",
+          "sourceSHA256": "b5c11d26a4166872b73cc0530b5b6827b6e9c606a7f7681ddb123b3c588a4cbf",
+          "span": [
+            1772,
+            6195
+          ],
+          "name": "_move",
+          "normalizedASTSHA256": "ae846d3c0eadafa8585d2b834671af1fe7df63c1f2731b02e4a758ebd6f0c453",
+          "codeSHA256": "59ce9de7b9ae3365b31f1d8f60edefca8369cf4ff0327d9fbc3ed12501609708",
+          "features": {
+            "propertyOperations": 143,
+            "distinctOperationPropertyPairs": 65,
+            "pogHash": "ff623228aa6ec2e0",
+            "graphNodes": 162,
+            "graphEdges": 217,
+            "graphOperationOccurrences": 233,
+            "distinctGraphOperationPropertyPairs": 63,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/e668ac8aa455228ff4d1",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "d13b74f3c98e141064161830fbe793dba9ab3d7aad9771da5a2c45a71250949a"
+        }
+      ],
+      "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
+      "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
+    },
+    {
+      "library": "fastclick",
+      "declaredVersion": "^1.0.6",
+      "origin": {
+        "kind": "npm-package",
+        "name": "fastclick",
+        "version": "1.0.6",
+        "integrity": "sha512-cXyDBT4g0uWl/Xe75QspBDAgAWQ0lkPi/zgp6YFEUHj6WV6VIZl7R6TiDZhdOVU3W4ehp/8tG61Jev1jit+ztQ==",
+        "shasum": "161625b27b1a5806405936bda9a2c1926d06be6a",
+        "tarballSHA256": "14c07168701858989f3fa4285fbdd9277b0d3aff039f6ae9b79fba912a356d6b",
+        "bytes": 11622,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 15,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "lib/fastclick.js",
+          "source": "source-js/1aa08cb3c7aa70d268d24d59c374c14af7bd08e0af8c85f8e4f60a2651f4bab5.js",
+          "sourceSHA256": "1aa08cb3c7aa70d268d24d59c374c14af7bd08e0af8c85f8e4f60a2651f4bab5",
+          "span": [
+            558,
+            4415
+          ],
+          "name": "FastClick",
+          "normalizedASTSHA256": "73aee1c9bc1ec469d92d784888104dc2181f8fbaa3968f34558c96cd10e9952b",
+          "codeSHA256": "1b49aebb7fb34f74ce278e46de000e95550526eb4ca60bfa403cf3b6d3d0540e",
+          "features": {
+            "propertyOperations": 43,
+            "distinctOperationPropertyPairs": 30,
+            "pogHash": "78213e511c2b68d6",
+            "graphNodes": 28,
+            "graphEdges": 35,
+            "graphOperationOccurrences": 70,
+            "distinctGraphOperationPropertyPairs": 30,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/fastclick.js",
+          "source": "source-js/1aa08cb3c7aa70d268d24d59c374c14af7bd08e0af8c85f8e4f60a2651f4bab5.js",
+          "sourceSHA256": "1aa08cb3c7aa70d268d24d59c374c14af7bd08e0af8c85f8e4f60a2651f4bab5",
+          "span": [
+            7241,
+            7973
+          ],
+          "name": "sendClick",
+          "normalizedASTSHA256": "548a52404d4835c874d43f1801ee4a33158086ca3fa93a70d1331d190acad869",
+          "codeSHA256": "2b4c36494d35d61e737defd2b016f6f6926b37b363236aec147a874695795257",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "b8e453d9f2c095e1",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 37,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/fastclick.js",
+          "source": "source-js/1aa08cb3c7aa70d268d24d59c374c14af7bd08e0af8c85f8e4f60a2651f4bab5.js",
+          "sourceSHA256": "1aa08cb3c7aa70d268d24d59c374c14af7bd08e0af8c85f8e4f60a2651f4bab5",
+          "span": [
+            10622,
+            13228
+          ],
+          "name": "onTouchStart",
+          "normalizedASTSHA256": "285713c22ed3bdb27cc2a4e386de4fe1f19401343066a0fbcfe1190473f86363",
+          "codeSHA256": "ae4e5adbe730948b0389d8067eb64bce916b51887b36a2e8b5aba2c75d909afc",
+          "features": {
+            "propertyOperations": 28,
+            "distinctOperationPropertyPairs": 23,
+            "pogHash": "e3d3529a74181cb",
+            "graphNodes": 23,
+            "graphEdges": 29,
+            "graphOperationOccurrences": 64,
+            "distinctGraphOperationPropertyPairs": 23,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/20f85f57c34feb245f83",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "5a5264212b5d90f0b1c0ee48e4989fab3cd4c3eb5bc2deb8fbc5477a6a0b0fe4"
+        }
+      ],
+      "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
+      "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
+    },
+    {
+      "library": "iscroll",
+      "declaredVersion": "^5.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "iscroll",
+        "version": "5.2.0",
+        "integrity": "sha512-HyEu3cR8ulc0JONuQq6yht7s4iYgIPpYvy0h8IJflOUMDB95pwZ7e5FQtA6qfCESxhfxv7JZb9kIQe0JFPL05g==",
+        "shasum": "d513307088b5b25a4f893af474804468481829c8",
+        "tarballSHA256": "12c970beef2b12171333d0be17146ad29fb32a27282b7f11da813a4af215b81e",
+        "bytes": 514691,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 5,
+      "diagnostics": [
+        {
+          "file": "src/close.js",
+          "error": "SyntaxError: [12:0-12:1]: Unexpected token: '}'"
+        },
+        {
+          "file": "src/core.js",
+          "error": "SyntaxError: [624:2-624:3]: Unexpected token: 'end of source'"
+        },
+        {
+          "file": "src/default/_animate.js",
+          "error": "SyntaxError: [2:11-2:19]: In strict mode code, functions can only be declared at top level or inside a block"
+        },
+        {
+          "file": "src/default/handleEvent.js",
+          "error": "SyntaxError: [2:14-2:22]: In strict mode code, functions can only be declared at top level or inside a block"
+        },
+        {
+          "file": "src/indicator/_initIndicators.js",
+          "error": "SyntaxError: [2:18-2:26]: In strict mode code, functions can only be declared at top level or inside a block"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "src/indicator/indicator.js",
+          "source": "source-js/2cd4954647abf37db94fbee9cbd579a3c7ac96a7acdd459093350cd29852e62d.js",
+          "sourceSHA256": "2cd4954647abf37db94fbee9cbd579a3c7ac96a7acdd459093350cd29852e62d",
+          "span": [
+            1,
+            1102
+          ],
+          "name": "createDefaultScrollbar",
+          "normalizedASTSHA256": "f560f8c8fd378ab46a49689051e58a4b860dc385394dbcf717c49d837d0e4767",
+          "codeSHA256": "012ded3065ac5364dd321a084684eb021c4d7cfc5a97dca0e54007ebfad21e7b",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "fda7b8198104e137",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 32,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/indicator/indicator.js",
+          "source": "source-js/2cd4954647abf37db94fbee9cbd579a3c7ac96a7acdd459093350cd29852e62d.js",
+          "sourceSHA256": "2cd4954647abf37db94fbee9cbd579a3c7ac96a7acdd459093350cd29852e62d",
+          "span": [
+            1104,
+            2730
+          ],
+          "name": "Indicator",
+          "normalizedASTSHA256": "ed619b46a5a4260c19d3cf8f3de9b5a388e72827d60012ae504538558c224b70",
+          "codeSHA256": "bb0bb25be6509681571ca646eb5828d688ec52527063aeb67ee7ff7a024a4b50",
+          "features": {
+            "propertyOperations": 68,
+            "distinctOperationPropertyPairs": 43,
+            "pogHash": "4e0166b69be34456",
+            "graphNodes": 31,
+            "graphEdges": 38,
+            "graphOperationOccurrences": 102,
+            "distinctGraphOperationPropertyPairs": 42,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/indicator/indicator.js",
+          "source": "source-js/2cd4954647abf37db94fbee9cbd579a3c7ac96a7acdd459093350cd29852e62d.js",
+          "sourceSHA256": "2cd4954647abf37db94fbee9cbd579a3c7ac96a7acdd459093350cd29852e62d",
+          "span": [
+            3278,
+            4088
+          ],
+          "name": "destroy",
+          "normalizedASTSHA256": "6222b6ed3be3dc64a19dcd6812c240350ebef50ff44afff32c156a88b34d4738",
+          "codeSHA256": "78c4563ce665c29f7e2c5d8d1831a0a51b4e59a619fecc7903c79143d6a242f5",
+          "features": {
+            "propertyOperations": 27,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "754658bfe2bfe0db",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 31,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/ea468aef7dab830d6f43",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "b9d6f1cbffda2948f05637f03cf57c4af57dff2b5c8c314b7477909d4b398a76"
+        }
+      ],
+      "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
+      "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
+    },
+    {
+      "library": "showdown",
+      "declaredVersion": "^1.6.4",
+      "origin": {
+        "kind": "npm-package",
+        "name": "showdown",
+        "version": "1.9.1",
+        "integrity": "sha512-9cGuS382HcvExtf5AHk7Cb4pAeQQ+h0eTr33V1mu+crYWV4KvWAw6el92bDrqGEk5d46Ai/fhbEUwqJ/mTCNEA==",
+        "shasum": "134e148e75cd4623e09c21b0511977d79b5ad0ef",
+        "tarballSHA256": "0d6e0eaddfcef5e7c8bce1e5cd01ed2acba9e73ed6eeabc0fc61165fa16786bc",
+        "bytes": 310453,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 6,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/cli/makehtml.cmd.js",
+          "source": "source-js/b2af22c24779f8d0c4fdedba9c1b930ca1f964165a4244c97142bb9178e01b91.js",
+          "sourceSHA256": "b2af22c24779f8d0c4fdedba9c1b930ca1f964165a4244c97142bb9178e01b91",
+          "span": [
+            3598,
+            4802
+          ],
+          "name": "parseOptions",
+          "normalizedASTSHA256": "31bf915ee33c571ed95c7fd2520017f2501576d7642c6d0a3edc53d8a964d792",
+          "codeSHA256": "3d8a2ef777dd92031de87ce8c7f2f0eaf9430bf42f290c6a48834c4dbb5019e5",
+          "features": {
+            "propertyOperations": 20,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "d2edd3105e248892",
+            "graphNodes": 28,
+            "graphEdges": 36,
+            "graphOperationOccurrences": 23,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/cli/makehtml.cmd.js",
+          "source": "source-js/b2af22c24779f8d0c4fdedba9c1b930ca1f964165a4244c97142bb9178e01b91.js",
+          "sourceSHA256": "b2af22c24779f8d0c4fdedba9c1b930ca1f964165a4244c97142bb9178e01b91",
+          "span": [
+            4806,
+            5104
+          ],
+          "name": "readFromStdIn",
+          "normalizedASTSHA256": "789e96510dd30e5d9dc259e0ae39c66deb07cfdaaf18aeec0efcfd43adc7abad",
+          "codeSHA256": "737127cd5649cd9a34e5e59e9dccb5f22dbfbdf4d545eac7bbfbd0a59204eb76",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "19df2a4f7afa3aa5",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 8,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/cli/makehtml.cmd.js",
+          "source": "source-js/b2af22c24779f8d0c4fdedba9c1b930ca1f964165a4244c97142bb9178e01b91.js",
+          "sourceSHA256": "b2af22c24779f8d0c4fdedba9c1b930ca1f964165a4244c97142bb9178e01b91",
+          "span": [
+            2137,
+            5665
+          ],
+          "name": "run",
+          "normalizedASTSHA256": "6f4238b6e03139b27d18af3d36cc6350974fe2a6a324e8308944dc1219c46e35",
+          "codeSHA256": "ee6adf22f384a572f0f1ce891f81846051f4699f7204fcf2f14659f3135c1245",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "363e0250de980b1b",
+            "graphNodes": 33,
+            "graphEdges": 42,
+            "graphOperationOccurrences": 45,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/8b33db6387f2972106a9",
+      "licenses": [
+        {
+          "path": "licenses/license.txt",
+          "sha256": "4a6fe13fbd108daad0050c3a3e0c91befe36e77d3f7b5e8be5bf626780314a94"
+        }
+      ],
+      "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
+      "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
+    },
+    {
+      "library": "vue",
+      "declaredVersion": "^2.1.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "vue",
+        "version": "2.6.14",
+        "integrity": "sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==",
+        "shasum": "e51aa5250250d569a3fbad3a8a5a687d6036e235",
+        "tarballSHA256": "330a8750c598b5a16dd20b5813ff95601e59635053071eb34c7b78f00c82526e",
+        "bytes": 848560,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 8,
+      "diagnostics": [
+        {
+          "file": "src/compiler/codeframe.js",
+          "error": "SyntaxError: [6:8-6:9]: Expected ')'"
+        },
+        {
+          "file": "src/compiler/codegen/events.js",
+          "error": "SyntaxError: [8:14-8:15]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/compiler/codegen/index.js",
+          "error": "SyntaxError: [9:5-9:22]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/compiler/create-compiler.js",
+          "error": "SyntaxError: [7:50-7:51]: Expected ')'"
+        },
+        {
+          "file": "src/compiler/directives/bind.js",
+          "error": "SyntaxError: [3:32-3:33]: Expected ')'"
+        },
+        {
+          "file": "src/compiler/directives/model.js",
+          "error": "SyntaxError: [7:4-7:5]: Expected ')'"
+        },
+        {
+          "file": "src/compiler/directives/on.js",
+          "error": "SyntaxError: [5:30-5:31]: Expected ')'"
+        },
+        {
+          "file": "src/compiler/error-detector.js",
+          "error": "SyntaxError: [5:5-5:10]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/compiler/helpers.js",
+          "error": "SyntaxError: [6:5-6:10]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/compiler/index.js",
+          "error": "SyntaxError: [12:10-12:11]: Expected ')'"
+        },
+        {
+          "file": "src/compiler/optimizer.js",
+          "error": "SyntaxError: [21:30-21:31]: Expected ')'"
+        },
+        {
+          "file": "src/compiler/parser/filter-parser.js",
+          "error": "SyntaxError: [5:33-5:34]: Expected ')'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "src/compiler/parser/html-parser.js",
+          "source": "source-js/bb7053a708d9a5505e11ccf792843ef78461dfdcf2ecdf126e5d575a63edcbfe.js",
+          "sourceSHA256": "bb7053a708d9a5505e11ccf792843ef78461dfdcf2ecdf126e5d575a63edcbfe",
+          "span": [
+            5778,
+            6403
+          ],
+          "name": "parseStartTag",
+          "normalizedASTSHA256": "5024e8f952f848f719aa3898e2c0781b85dbc4241ff845b092526816df43accd",
+          "codeSHA256": "f2603a6328529c0d9e6b5783147ac94dba5d44c9684e90f2877217284b10c7cf",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "76be310613cc2bd0",
+            "graphNodes": 15,
+            "graphEdges": 18,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/compiler/parser/html-parser.js",
+          "source": "source-js/bb7053a708d9a5505e11ccf792843ef78461dfdcf2ecdf126e5d575a63edcbfe.js",
+          "sourceSHA256": "bb7053a708d9a5505e11ccf792843ef78461dfdcf2ecdf126e5d575a63edcbfe",
+          "span": [
+            6407,
+            7712
+          ],
+          "name": "handleStartTag",
+          "normalizedASTSHA256": "01589de897cdd3766e32f4ce38d374ba3480588fc6e7bb76a1b74e84a40e5f0b",
+          "codeSHA256": "ced49070dcbca5b475535928aa4988b4a9ec79e42a29be9122017b086b7fac22",
+          "features": {
+            "propertyOperations": 41,
+            "distinctOperationPropertyPairs": 30,
+            "pogHash": "334f3d89dbb1d841",
+            "graphNodes": 35,
+            "graphEdges": 49,
+            "graphOperationOccurrences": 57,
+            "distinctGraphOperationPropertyPairs": 23,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/compiler/parser/html-parser.js",
+          "source": "source-js/bb7053a708d9a5505e11ccf792843ef78461dfdcf2ecdf126e5d575a63edcbfe.js",
+          "sourceSHA256": "bb7053a708d9a5505e11ccf792843ef78461dfdcf2ecdf126e5d575a63edcbfe",
+          "span": [
+            7716,
+            9186
+          ],
+          "name": "parseEndTag",
+          "normalizedASTSHA256": "1998507ff5021410debf6fe35b45a7545975d3960ca49a4c5d33f023ed89f212",
+          "codeSHA256": "1f028de9a8b34b063bd7c65cff1d3990b005c777030b528624d536d176bb4850",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "d8ee61d22c3936b0",
+            "graphNodes": 42,
+            "graphEdges": 58,
+            "graphOperationOccurrences": 35,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/564382267519ae7fa9d8",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "17fb24bc303763f3fe1911ee24e5225c7ad59f0e3a5d8123e9b730c100a306a6"
+        }
+      ],
+      "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
+      "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
+    },
+    {
+      "library": "vue-router",
+      "declaredVersion": "^2.1.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "vue-router",
+        "version": "2.8.1",
+        "integrity": "sha512-MC4jacHBhTPKtmcfzvaj2N7g6jgJ/Z/eIjZdt+yUaUOM1iKC0OUIlO/xCtz6OZFFTNUJs/1YNro2GN/lE+nOXA==",
+        "shasum": "9833c9ee57ac83beb0269056fefee71713f20695",
+        "tarballSHA256": "d6a58585179b483d399f99d3965275463bc7a69c6e14f00e3df3c9c64cff4574",
+        "bytes": 63538,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/vue-router.common.js",
+          "source": "source-js/bdfc0e3733ecb67be7d0436cbf3adc1846a4dfd6318c5ef229e33e2ce24071b4.js",
+          "sourceSHA256": "bdfc0e3733ecb67be7d0436cbf3adc1846a4dfd6318c5ef229e33e2ce24071b4",
+          "span": [
+            634,
+            3126
+          ],
+          "name": "render",
+          "normalizedASTSHA256": "450fc97c2170e4c55b7e94490d22a9a8f9b88df5007adb4effc6ac78c8e9be9c",
+          "codeSHA256": "3af1e6483d5e71dd40fcc0cdeef20a755092c0abf6fcbb2b5e2b33a33d5631ee",
+          "features": {
+            "propertyOperations": 41,
+            "distinctOperationPropertyPairs": 27,
+            "pogHash": "dcc408d31b8910da",
+            "graphNodes": 47,
+            "graphEdges": 60,
+            "graphOperationOccurrences": 52,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vue-router.common.js",
+          "source": "source-js/bdfc0e3733ecb67be7d0436cbf3adc1846a4dfd6318c5ef229e33e2ce24071b4.js",
+          "sourceSHA256": "bdfc0e3733ecb67be7d0436cbf3adc1846a4dfd6318c5ef229e33e2ce24071b4",
+          "span": [
+            4768,
+            5136
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "82dbedbe634af555d459fd95b86f436f38c3c950cff89ab62c5afd9e1ab2a390",
+          "codeSHA256": "4ccc21add1fec2233566942efdf1d2fef4e474dcbaea584ba70f04d7671f6d21",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "4fffc653e83bec58",
+            "graphNodes": 13,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vue-router.common.js",
+          "source": "source-js/bdfc0e3733ecb67be7d0436cbf3adc1846a4dfd6318c5ef229e33e2ce24071b4.js",
+          "sourceSHA256": "bdfc0e3733ecb67be7d0436cbf3adc1846a4dfd6318c5ef229e33e2ce24071b4",
+          "span": [
+            5910,
+            6609
+          ],
+          "name": "createRoute",
+          "normalizedASTSHA256": "4bdc4a1b1722f256d6ed7e344f255ae2572339b53561555b0088e2db0607160e",
+          "codeSHA256": "3df460292650d40575c8c91711fe132b978d46195dd15a3f6b1040c269caccf7",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "64b7b587de51dc9b",
+            "graphNodes": 34,
+            "graphEdges": 43,
+            "graphOperationOccurrences": 34,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/446a8e79cb7a7ea2186f",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "a7d1aff41d8195b638278a103fcd0112e933f01baace5cd03cc5099d0d790e3f"
+        }
+      ],
+      "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
+      "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
+    },
+    {
+      "library": "vuex",
+      "declaredVersion": "^2.0.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "vuex",
+        "version": "2.5.0",
+        "integrity": "sha512-5oJPOJySBgSgSzoeO+gZB/BbN/XsapgIF6tz34UwJqnGZMQurzIO3B4KIBf862gfc9ya+oduY5sSkq+5/oOilQ==",
+        "shasum": "20f0265ade6c9a5ac6724a405d3ffdb4726c9741",
+        "tarballSHA256": "b8161fa322cdb59333e7354c8ba26a34484d0c185ec6a7a5fe5f7803f5cbf97a",
+        "bytes": 15065,
+        "lockfile": "yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 31,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/logger.js",
+          "source": "source-js/ce58f581070bc41323a2c4adf347bb61bba61e60942151ac0388d104aa852549.js",
+          "sourceSHA256": "ce58f581070bc41323a2c4adf347bb61bba61e60942151ac0388d104aa852549",
+          "span": [
+            2156,
+            3368
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "fcb696c63bbcde84ad3376f4bc79328efa5513e19b96b69811a52f801b65630d",
+          "codeSHA256": "12ef8cbaaedb93807e574746da9d1b0cfbcd6cfa7d356df509a9332574d72a90",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "484b76e07e1f17df",
+            "graphNodes": 9,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vuex.common.js",
+          "source": "source-js/2d519e90e2b3832cbba1fb824923e91709e5d8925db1654f6a61b62a7a354a80.js",
+          "sourceSHA256": "2d519e90e2b3832cbba1fb824923e91709e5d8925db1654f6a61b62a7a354a80",
+          "span": [
+            683,
+            1004
+          ],
+          "name": "vuexInit",
+          "normalizedASTSHA256": "d093fdbbdfa07b837030adb03d5f41321b1593808e3f9b008613da57e3f60741",
+          "codeSHA256": "d95b1d8c6c18a82e72e593dcc412b7c44808df5c519cdd0c2e1f9810ad51c2b1",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "a36efff5bf345749",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/vuex.common.js",
+          "source": "source-js/2d519e90e2b3832cbba1fb824923e91709e5d8925db1654f6a61b62a7a354a80.js",
+          "sourceSHA256": "2d519e90e2b3832cbba1fb824923e91709e5d8925db1654f6a61b62a7a354a80",
+          "span": [
+            3011,
+            3341
+          ],
+          "name": "update",
+          "normalizedASTSHA256": "600dfa5157152fa808851a9ef7ca1ff2fdb41324e2a801597c9e13c95d4f8cf7",
+          "codeSHA256": "5d6688e36b61b855af2da35e89cca881e82c345c7ae1f6144088aa7f9e1ab325",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "8d08ba3c9c9be493",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/89016d801741250312fc",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "5e0e91974459a5defe390661b893209baa7b623a3baeeea60601f522f1c5d0de"
+        }
+      ],
+      "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
+      "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
+    }
+  ],
+  "selectedLibraries": [
+    "better-scroll",
+    "fastclick",
+    "iscroll",
+    "showdown",
+    "vue",
+    "vue-router",
+    "vuex"
+  ],
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
+    },
+    "frontendManifestSHA256": "fe7ad220760c2d27a9e3f84f5387d60c9cd35e1734c0d1813a2b89bbd490bd4f",
+    "manifestRelative": "package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:15.275Z",
+  "reason": null,
+  "finished": "2026-11-09T03:44:15.323Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/bailicangdu--vue2-elm/qualification.json",
+  "sourceEligibilityRecordSHA256": "485518f026acfab8800f0a6c922e6ac7c87d8fa8e90f83b190e80360146a8ed4",
+  "organizationSignature": "273da7187ca8a193d8912013b43f33bd9dbfb73b17c79fa1a4b1f8568b20da9a"
+}

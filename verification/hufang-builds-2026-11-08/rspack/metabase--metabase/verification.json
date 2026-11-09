@@ -3,7 +3,25 @@
   "submissionCommit": "feea3f3f247aecd097cb01f7a7de282b02f9b446",
   "upstreamCommit": "0c644f3bc99d5dece16391d53135a0a7618f95bc",
   "image": "recall-hufang/metabase--metabase:0c644f3bc99d",
-  "started": 1794146272.445407,
+  "started": 1794190468.794306,
+  "sourcePreflight": {
+    "passed": true,
+    "status": "passed",
+    "receipt": "verification/hufang-builds-2026-11-08/rspack/metabase--metabase/source-preflight.json",
+    "receiptSHA256": "b19c2cfeb98570a6229c6061a9e28a8f035f3a29777eda7db9f1fb7b7dc790d6",
+    "selectedLibraries": [
+      "@codemirror/autocomplete",
+      "@codemirror/commands",
+      "@codemirror/lang-html",
+      "@codemirror/lang-javascript",
+      "@codemirror/lang-json",
+      "@codemirror/lang-markdown",
+      "@codemirror/lang-python",
+      "@codemirror/lang-sql",
+      "@codemirror/language",
+      "@codemirror/legacy-modes"
+    ]
+  },
   "buildCommand": [
     "docker",
     "build",
@@ -31,7 +49,12 @@
     "/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/rspack/metabase--metabase"
   ],
   "recipeSHA256": "eb1482e3d94bd910765993122487476f7d84c31a39c69fa4b931f11c849f1be6",
-  "buildStatus": "blocked",
-  "error": "Command '['docker', 'build', '--progress=plain', '--build-arg', 'HTTP_PROXY=http://host.docker.internal:7897', '--build-arg', 'HTTPS_PROXY=http://host.docker.internal:7897', '--build-arg', 'NO_PROXY=localhost,127.0.0.1,::1', '--build-arg', 'no_proxy=localhost,127.0.0.1,::1', '--build-arg', 'RECALL_COMMIT=0c644f3bc99d5dece16391d53135a0a7618f95bc', '--build-context', 'recipe=/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/bundling-dataset/rspack/metabase--metabase', '--build-context', 'sourcegit=/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/rspack/metabase--metabase/.git', '--build-context', 'maptools=/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/verification/hufang-builds-2026-11-08/map-tools', '-f', '/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/bundling-dataset/rspack/metabase--metabase/Dockerfile', '-t', 'recall-hufang/metabase--metabase:0c644f3bc99d', '/Users/aaronxyliu/GitHub/ReCall Research/ReCall Dataset/builds/hufang/rspack/metabase--metabase']' timed out after 1799.999933708 seconds",
-  "finished": 1794148072.4777339
+  "buildExitCode": 0,
+  "buildStatus": "built",
+  "imageID": "sha256:d731ac7144aac3dea4e1871c706c5fab3e014494fe55aa8dd09fd5688b29ae3f",
+  "finished": 1794191623.109622,
+  "captureExitCode": 0,
+  "pairCount": 0,
+  "pageStatus": "rendered",
+  "pageEvidence": "verification/hufang-builds-2026-11-08/rspack/metabase--metabase/page.json"
 }

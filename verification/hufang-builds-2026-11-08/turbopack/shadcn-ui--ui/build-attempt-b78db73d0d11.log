@@ -1,0 +1,744 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.50kB done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22-bookworm
+#2 DONE 0.0s
+
+#3 [context recipe] load .dockerignore
+#3 transferring recipe: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load metadata for docker.io/oven/bun:1.4
+#4 DONE 1.8s
+
+#5 [bun 1/1] FROM docker.io/oven/bun:1.4@sha256:1d22548f177f4ff38e0c15baa3c2c46c6c2060ba2d1bc573bb4720b407548f1d
+#5 resolve docker.io/oven/bun:1.4@sha256:1d22548f177f4ff38e0c15baa3c2c46c6c2060ba2d1bc573bb4720b407548f1d done
+#5 CACHED
+
+#6 [build  2/14] WORKDIR /app
+#6 CACHED
+
+#7 [build  1/14] FROM docker.io/library/node:22-bookworm@sha256:8a34c4ab3ea2c5cd194f07e317b2a8f09461d3c8b05c4e34c8ccd56d56024c4d
+#7 resolve docker.io/library/node:22-bookworm@sha256:8a34c4ab3ea2c5cd194f07e317b2a8f09461d3c8b05c4e34c8ccd56d56024c4d done
+#7 CACHED
+
+#8 [context recipe] load from client
+#8 transferring recipe: 982B done
+#8 DONE 0.1s
+
+#9 [context recipe] load from client
+#9 transferring recipe: 784B done
+#9 DONE 0.1s
+
+#10 [runtime 2/3] WORKDIR /app/apps/v4
+#10 DONE 0.1s
+
+#11 [context recipe] load from client
+#11 transferring recipe: 1.19kB done
+#11 DONE 0.1s
+
+#12 [internal] load build context
+#12 transferring context: 4.49MB 0.1s
+#12 ...
+
+#13 [build  3/14] COPY --from=bun /usr/local/bin/bun /usr/local/bin/bun
+#13 DONE 0.2s
+
+#12 [internal] load build context
+#12 transferring context: 51.91MB 0.7s done
+#12 DONE 0.8s
+
+#14 [build  4/14] RUN --mount=type=cache,target=/root/.npm npm install -g pnpm@10.33.4
+#14 1.566 
+#14 1.566 added 1 package in 1s
+#14 1.566 
+#14 1.566 1 package is looking for funding
+#14 1.566   run `npm fund` for details
+#14 DONE 1.7s
+
+#15 [build  5/14] COPY . .
+#15 DONE 0.5s
+
+#16 [build  6/14] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#16 DONE 0.0s
+
+#17 [build  7/14] RUN node /tmp/recall-enable-maps.cjs
+#17 0.089 Applied production build configuration to apps/v4/next.config.mjs
+#17 0.089 Applied production build configuration to apps/v4/next.config.mjs
+#17 DONE 0.1s
+
+#18 [build  8/14] RUN --mount=type=cache,id=recall-pnpm,target=/pnpm-store pnpm install --frozen-lockfile --store-dir=/pnpm-store
+#18 0.289 Scope: all 7 workspace projects
+#18 0.351 Lockfile is up to date, resolution step is skipped
+#18 0.388 Progress: resolved 1, reused 0, downloaded 0, added 0
+#18 0.435 Packages: +1674
+#18 0.435 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#18 1.390 Progress: resolved 1674, reused 0, downloaded 9, added 9
+#18 1.525 
+#18 1.525    ╭──────────────────────────────────────────╮
+#18 1.525    │                                          │
+#18 1.525    │   Update available! 10.33.4 → 12.18.0.   │
+#18 1.525    │   Changelog: https://pnpm.io/v/12.18.0   │
+#18 1.525    │     To update, run: pnpm add -g pnpm     │
+#18 1.525    │                                          │
+#18 1.525    ╰──────────────────────────────────────────╯
+#18 1.525 
+#18 2.391 Progress: resolved 1674, reused 0, downloaded 47, added 47
+#18 3.391 Progress: resolved 1674, reused 0, downloaded 80, added 83
+#18 4.392 Progress: resolved 1674, reused 0, downloaded 112, added 115
+#18 5.287  WARN  GET https://registry.npmjs.org/undici-types/-/undici-types-6.21.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 5.395 Progress: resolved 1674, reused 0, downloaded 148, added 153
+#18 6.395 Progress: resolved 1674, reused 0, downloaded 178, added 183
+#18 7.396 Progress: resolved 1674, reused 0, downloaded 211, added 218
+#18 8.399 Progress: resolved 1674, reused 0, downloaded 231, added 238
+#18 9.399 Progress: resolved 1674, reused 0, downloaded 257, added 264
+#18 10.40 Progress: resolved 1674, reused 0, downloaded 275, added 282
+#18 11.40 Progress: resolved 1674, reused 0, downloaded 293, added 299
+#18 12.40 Progress: resolved 1674, reused 0, downloaded 327, added 334
+#18 13.40 Progress: resolved 1674, reused 0, downloaded 348, added 354
+#18 14.40 Progress: resolved 1674, reused 0, downloaded 365, added 372
+#18 15.10  WARN  Tarball download average speed 44 KiB/s (size 45 KiB) is below 50 KiB/s: https://registry.npmjs.org/@vercel/analytics/-/analytics-1.5.0.tgz (GET)
+#18 15.40 Progress: resolved 1674, reused 0, downloaded 390, added 397
+#18 16.41 Progress: resolved 1674, reused 0, downloaded 415, added 422
+#18 17.41 Progress: resolved 1674, reused 0, downloaded 448, added 455
+#18 18.41 Progress: resolved 1674, reused 0, downloaded 491, added 497
+#18 19.41 Progress: resolved 1674, reused 0, downloaded 526, added 532
+#18 20.42 Progress: resolved 1674, reused 0, downloaded 556, added 563
+#18 21.41 Progress: resolved 1674, reused 0, downloaded 587, added 594
+#18 22.42 Progress: resolved 1674, reused 0, downloaded 611, added 618
+#18 23.42 Progress: resolved 1674, reused 0, downloaded 634, added 641
+#18 23.61  WARN  GET https://registry.npmjs.org/@radix-ui/react-use-rect/-/react-use-rect-1.1.1.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 24.42 Progress: resolved 1674, reused 0, downloaded 667, added 673
+#18 25.42 Progress: resolved 1674, reused 0, downloaded 693, added 699
+#18 26.25  WARN  GET https://registry.npmjs.org/@types/d3-scale/-/d3-scale-4.0.9.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 26.42 Progress: resolved 1674, reused 0, downloaded 705, added 712
+#18 27.42 Progress: resolved 1674, reused 0, downloaded 737, added 744
+#18 28.42 Progress: resolved 1674, reused 0, downloaded 771, added 778
+#18 29.42 Progress: resolved 1674, reused 0, downloaded 796, added 803
+#18 29.89  WARN  Tarball download average speed 39 KiB/s (size 39 KiB) is below 50 KiB/s: https://registry.npmjs.org/robust-predicates/-/robust-predicates-3.0.3.tgz (GET)
+#18 30.42 Progress: resolved 1674, reused 0, downloaded 823, added 830
+#18 30.66  WARN  GET https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 31.36  WARN  GET https://registry.npmjs.org/@typescript-eslint/project-service/-/project-service-8.39.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 31.42 Progress: resolved 1674, reused 0, downloaded 852, added 859
+#18 32.42 Progress: resolved 1674, reused 0, downloaded 874, added 882
+#18 33.42 Progress: resolved 1674, reused 0, downloaded 897, added 906
+#18 34.43 Progress: resolved 1674, reused 0, downloaded 927, added 936
+#18 35.43 Progress: resolved 1674, reused 0, downloaded 966, added 975
+#18 36.43 Progress: resolved 1674, reused 0, downloaded 998, added 1007
+#18 37.43 Progress: resolved 1674, reused 0, downloaded 1030, added 1040
+#18 38.43 Progress: resolved 1674, reused 0, downloaded 1070, added 1080
+#18 39.43 Progress: resolved 1674, reused 0, downloaded 1115, added 1126
+#18 40.43 Progress: resolved 1674, reused 0, downloaded 1143, added 1157
+#18 41.43 Progress: resolved 1674, reused 0, downloaded 1175, added 1189
+#18 42.44 Progress: resolved 1674, reused 0, downloaded 1209, added 1223
+#18 43.44 Progress: resolved 1674, reused 0, downloaded 1247, added 1261
+#18 44.44 Progress: resolved 1674, reused 0, downloaded 1281, added 1296
+#18 45.44 Progress: resolved 1674, reused 0, downloaded 1316, added 1331
+#18 46.44 Progress: resolved 1674, reused 0, downloaded 1346, added 1360
+#18 47.44 Progress: resolved 1674, reused 0, downloaded 1386, added 1401
+#18 47.47  WARN  GET https://registry.npmjs.org/@noble/ciphers/-/ciphers-1.3.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 48.08  WARN  GET https://registry.npmjs.org/defer-to-connect/-/defer-to-connect-1.1.3.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 48.44 Progress: resolved 1674, reused 0, downloaded 1429, added 1443
+#18 49.34 Progress: resolved 1674, reused 0, downloaded 1466, added 1481
+#18 50.34  WARN  GET https://registry.npmjs.org/postcss-js/-/postcss-js-4.1.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 50.34 Progress: resolved 1674, reused 0, downloaded 1494, added 1509
+#18 50.92  WARN  GET https://registry.npmjs.org/pac-proxy-agent/-/pac-proxy-agent-7.2.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 51.34 Progress: resolved 1674, reused 0, downloaded 1518, added 1533
+#18 52.34 Progress: resolved 1674, reused 0, downloaded 1540, added 1555
+#18 53.34 Progress: resolved 1674, reused 0, downloaded 1561, added 1576
+#18 54.34 Progress: resolved 1674, reused 0, downloaded 1580, added 1595
+#18 55.34 Progress: resolved 1674, reused 0, downloaded 1604, added 1620
+#18 56.34 Progress: resolved 1674, reused 0, downloaded 1629, added 1645
+#18 57.35 Progress: resolved 1674, reused 0, downloaded 1649, added 1665
+#18 58.34 Progress: resolved 1674, reused 0, downloaded 1650, added 1666
+#18 58.54  WARN  GET https://registry.npmjs.org/commander/-/commander-11.1.0.tgz error (ECONNRESET). Will retry in 10 seconds. 2 retries left.
+#18 59.35 Progress: resolved 1674, reused 0, downloaded 1651, added 1667
+#18 60.71 Progress: resolved 1674, reused 0, downloaded 1652, added 1667
+#18 61.71 Progress: resolved 1674, reused 0, downloaded 1653, added 1669
+#18 62.71 Progress: resolved 1674, reused 0, downloaded 1654, added 1670
+#18 65.22 Progress: resolved 1674, reused 0, downloaded 1655, added 1670
+#18 66.22 Progress: resolved 1674, reused 0, downloaded 1656, added 1672
+#18 69.10 Progress: resolved 1674, reused 0, downloaded 1657, added 1672
+#18 69.66 Progress: resolved 1674, reused 0, downloaded 1658, added 1674, done
+#18 70.12  WARN  Failed to create bin at /app/apps/v4/node_modules/.bin/shadcn. ENOENT: no such file or directory, open '/app/packages/shadcn/dist/index.js'
+#18 70.12  WARN  Failed to create bin at /app/packages/tests/node_modules/.bin/shadcn. ENOENT: no such file or directory, open '/app/packages/shadcn/dist/index.js'
+#18 70.20 
+#18 70.20 dependencies:
+#18 70.20 + @babel/core 7.28.0
+#18 70.20 + @changesets/changelog-github 1.0.1
+#18 70.20 + @changesets/cli 2.31.1
+#18 70.20 + @commitlint/cli 20.1.0
+#18 70.20 + @commitlint/config-conventional 17.8.1
+#18 70.20 + @ianvs/prettier-plugin-sort-imports 4.6.1
+#18 70.20 + @manypkg/cli 0.20.0
+#18 70.20 + @typescript-eslint/eslint-plugin 8.49.0
+#18 70.20 + @typescript-eslint/parser 8.54.0
+#18 70.20 + autoprefixer 10.4.21
+#18 70.20 + chokidar 4.0.3
+#18 70.20 + concurrently 8.2.2
+#18 70.20 + cross-env 7.0.3
+#18 70.20 + eslint 9.26.0
+#18 70.20 + eslint-config-next 15.5.11
+#18 70.20 + eslint-config-prettier 8.10.2
+#18 70.20 + eslint-config-turbo 2.9.16
+#18 70.20 + eslint-plugin-react 7.37.5
+#18 70.20 + eslint-plugin-tailwindcss 3.13.1
+#18 70.20 + motion 12.23.12
+#18 70.20 + prettier 3.6.2
+#18 70.20 + pretty-quick 4.2.2
+#18 70.20 + puppeteer 23.11.1
+#18 70.20 + tailwindcss 3.4.19
+#18 70.20 + tsx 4.20.3
+#18 70.20 + turbo 2.9.18
+#18 70.20 + vite 7.3.7
+#18 70.20 + vite-tsconfig-paths 4.3.2
+#18 70.20 + vitest 3.2.7
+#18 70.20 
+#18 70.20 devDependencies:
+#18 70.20 + @types/hast 3.0.4
+#18 70.20 + @types/node 20.19.10
+#18 70.20 + @types/react 19.2.2
+#18 70.20 + @types/react-dom 19.2.2
+#18 70.20 + prettier-plugin-tailwindcss 0.7.2
+#18 70.20 + start-server-and-test 2.0.13
+#18 70.20 + typescript 5.9.2
+#18 70.20 
+#18 70.24  WARN  Failed to create bin at /app/packages/tests/node_modules/.bin/shadcn. ENOENT: no such file or directory, open '/app/packages/tests/node_modules/shadcn/dist/index.js'
+#18 70.24  WARN  Failed to create bin at /app/apps/v4/node_modules/.bin/shadcn. ENOENT: no such file or directory, open '/app/apps/v4/node_modules/shadcn/dist/index.js'
+#18 70.25 apps/v4 postinstall$ fumadocs-mdx
+#18 70.46 apps/v4 postinstall: [MDX] generated files in 15.13516899999999ms
+#18 70.46 apps/v4 postinstall: Done
+#18 70.47 ╭ Warning ─────────────────────────────────────────────────────────────────────╮
+#18 70.47 │                                                                              │
+#18 70.47 │   Ignored build scripts: esbuild@0.25.11, esbuild@0.27.7, esbuild@0.28.1,    │
+#18 70.47 │   msw@2.10.4, puppeteer@23.11.1, unrs-resolver@1.11.1.                       │
+#18 70.47 │   Run "pnpm approve-builds" to pick which dependencies should be allowed     │
+#18 70.47 │   to run scripts.                                                            │
+#18 70.47 │                                                                              │
+#18 70.47 ╰──────────────────────────────────────────────────────────────────────────────╯
+#18 70.51 Done in 1m 10.3s using pnpm v10.33.4
+#18 DONE 71.8s
+
+#19 [build  9/14] COPY --from=recipe pin-stars.cjs github-stars.json /tmp/recall/
+#19 DONE 0.7s
+
+#20 [build 10/14] RUN node /tmp/recall/pin-stars.cjs
+#20 DONE 0.1s
+
+#21 [build 11/14] RUN pnpm --filter=v4 run registry:build
+#21 0.379 
+#21 0.379 > v4@0.1.0 registry:build /app/apps/v4
+#21 0.379 > pnpm --filter=@shadcn/react build && pnpm --filter=@shadcn/helpers build && pnpm --filter=shadcn... build && bun run ./scripts/build-registry.mts
+#21 0.379 
+#21 0.511 
+#21 0.511 > @shadcn/react@0.3.1 build /app/packages/react
+#21 0.511 > tsup
+#21 0.511 
+#21 0.702 CLI Building entry: {"message-scroller/index":"src/message-scroller/index.ts","questionnaire/index":"src/questionnaire/index.ts"}
+#21 0.702 CLI Using tsconfig: tsconfig.json
+#21 0.702 CLI tsup v8.5.0
+#21 0.703 CLI Using tsup config: /app/packages/react/tsup.config.ts
+#21 0.704 CLI Target: esnext
+#21 0.707 CLI Cleaning output folder
+#21 0.708 ESM Build start
+#21 0.825 ESM dist/chunk-HBS6WEDP.js         1.16 KB
+#21 0.825 ESM dist/message-scroller/index.js 18.91 KB
+#21 0.825 ESM dist/questionnaire/index.js    20.37 KB
+#21 0.825 ESM ⚡️ Build success in 117ms
+#21 0.858 DTS Build start
+#21 2.225 DTS ⚡️ Build success in 1367ms
+#21 2.225 DTS dist/message-scroller/index.d.ts 3.68 KB
+#21 2.225 DTS dist/questionnaire/index.d.ts    7.60 KB
+#21 2.225 DTS dist/index-DoP2hiBu.d.ts         530.00 B
+#21 2.398 
+#21 2.398 > @shadcn/helpers@0.3.0 build /app/packages/helpers
+#21 2.398 > tsup
+#21 2.398 
+#21 2.553 CLI Building entry: {"ai-sdk/index":"src/ai-sdk/index.ts","tanstack-ai/index":"src/tanstack-ai/index.ts"}
+#21 2.553 CLI Using tsconfig: tsconfig.json
+#21 2.553 CLI tsup v8.5.0
+#21 2.553 CLI Using tsup config: /app/packages/helpers/tsup.config.ts
+#21 2.555 CLI Target: esnext
+#21 2.558 CLI Cleaning output folder
+#21 2.558 ESM Build start
+#21 2.620 ESM dist/chunk-ZEGKA56A.js    13.64 KB
+#21 2.620 ESM dist/tanstack-ai/index.js 5.85 KB
+#21 2.620 ESM dist/ai-sdk/index.js      7.72 KB
+#21 2.620 ESM ⚡️ Build success in 62ms
+#21 2.682 DTS Build start
+#21 4.164 DTS ⚡️ Build success in 1482ms
+#21 4.164 DTS dist/ai-sdk/index.d.ts      2.00 KB
+#21 4.164 DTS dist/tanstack-ai/index.d.ts 2.80 KB
+#21 4.164 DTS dist/chat-ChArRzRi.d.ts     9.50 KB
+#21 4.324 Scope: 2 of 7 workspace projects
+#21 4.330 ../../packages/registry build$ tsup
+#21 4.482 ../../packages/registry build: CLI Building entry: src/add-components.ts, src/compare.ts, src/env-helpers.ts, src/env-loader.ts, src/font-markers.ts, src/frameworks.ts, src/get-config.ts, src/get-monorepo-info.ts, src/get-package-info.ts, src/get-package-manager.ts, src/get-project-info.ts, src/highlighter.ts, src/import-matcher.ts, src/is-safe-target.ts, src/json-config.ts, src/logger.ts, src/package-imports.ts, src/resolve-file-path.ts, src/resolve-import.ts, src/spinner.ts, src/tailwind-theme-colors.ts, src/target-aliases.ts, src/workspace.ts, src/codemod/array-literals.ts, src/codemod/comma-lists.ts, src/codemod/comment-nodes.ts, src/codemod/edits.ts, src/codemod/import-declarations.ts, src/codemod/indentation.ts, src/codemod/jsx-attributes.ts, src/codemod/named-imports.ts, src/codemod/object-literals.ts, src/codemod/parse.ts, src/codemod/rename.ts, src/codemod/statements.ts, src/codemod/string-literals.ts, src/codemod/trivia.ts, src/codemod/variables.ts, src/icons/libraries.ts, src/transformers/index.ts, src/transformers/source-text.ts, src/transformers/transform-aschild.ts, src/transformers/transform-cleanup.ts, src/transformers/transform-css-vars.ts, src/transformers/transform-font.ts, src/transformers/transform-icons.ts, src/transformers/transform-import.ts, src/transformers/transform-jsx.ts, src/transformers/transform-menu.ts, src/transformers/transform-next.ts, src/transformers/transform-rsc.ts, src/transformers/transform-rtl.ts, src/transformers/transform-tw-prefix.ts, src/updaters/update-css-vars.ts, src/updaters/update-css.ts, src/updaters/update-dependencies.ts, src/updaters/update-env-vars.ts, src/updaters/update-files.ts, src/updaters/update-fonts.ts, src/updaters/update-tailwind-config.ts, src/schema/index.ts, src/registry/add.ts, src/registry/address.ts, src/registry/api.ts, src/registry/builder.ts, src/registry/config.ts, src/registry/constants.ts, src/registry/context.ts, src/registry/env.ts, src/registry/errors.ts, src/registry/fetcher.ts, src/registry/github-auth.ts, src/registry/github-cli.ts, src/registry/github-ref.ts, src/registry/github.ts, src/registry/index.ts, src/registry/loader.ts, src/registry/namespaces.ts, src/registry/parser.ts, src/registry/proxy.ts, src/registry/resolve-file-imports.ts, src/registry/resolver.ts, src/registry/schema.ts, src/registry/search.ts, src/registry/source.ts, src/registry/utils.ts, src/registry/validate.ts, src/registry/validator.ts, src/preset/preset.ts
+#21 4.483 ../../packages/registry build: CLI Using tsconfig: tsconfig.json
+#21 4.483 ../../packages/registry build: CLI tsup v8.5.0
+#21 4.483 ../../packages/registry build: CLI Using tsup config: /app/packages/registry/tsup.config.ts
+#21 4.485 ../../packages/registry build: CLI Target: esnext
+#21 4.485 ../../packages/registry build: CLI Cleaning output folder
+#21 4.486 ../../packages/registry build: ESM Build start
+#21 4.725 ../../packages/registry build: DTS Build start
+#21 4.857 ../../packages/registry build: "promises" and "existsSync" are imported from external module "fs" but never used in "dist/chunk-34X3C4PK.js".
+#21 4.894 ../../packages/registry build: ESM dist/chunk-LG2CSJ52.js                   4.57 KB
+#21 4.895 ../../packages/registry build: ESM dist/registry/loader.js                  1.15 KB
+#21 4.895 ../../packages/registry build: ESM dist/updaters/update-env-vars.js         169.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-menu.js      198.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/parse.js                    305.00 B
+#21 4.899 ../../packages/registry build: ESM dist/schema/index.js                     817.00 B
+#21 4.899 ../../packages/registry build: ESM dist/icons/libraries.js                  53.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/resolver.js                1.03 KB
+#21 4.899 ../../packages/registry build: ESM dist/registry/validate.js                9.93 KB
+#21 4.899 ../../packages/registry build: ESM dist/registry/parser.js                  70.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/proxy.js                   81.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/builder.js                 1.07 KB
+#21 4.899 ../../packages/registry build: ESM dist/registry/config.js                  986.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/constants.js               215.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/env.js                     102.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-FW7YV53V.js                   7.30 KB
+#21 4.899 ../../packages/registry build: ESM dist/registry/errors.js                  604.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/fetcher.js                 1.00 KB
+#21 4.899 ../../packages/registry build: ESM dist/updaters/update-fonts.js            1.25 KB
+#21 4.899 ../../packages/registry build: ESM dist/registry/github-auth.js             286.00 B
+#21 4.899 ../../packages/registry build: ESM dist/updaters/update-tailwind-config.js  587.00 B
+#21 4.899 ../../packages/registry build: ESM dist/updaters/update-files.js            1.87 KB
+#21 4.899 ../../packages/registry build: ESM dist/registry/index.js                   2.73 KB
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-next.js      198.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/add.js                     2.07 KB
+#21 4.899 ../../packages/registry build: ESM dist/registry/address.js                 1.05 KB
+#21 4.899 ../../packages/registry build: ESM dist/registry/context.js                 211.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-rsc.js       226.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-rtl.js       1.23 KB
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-tw-prefix.js 1.25 KB
+#21 4.899 ../../packages/registry build: ESM dist/updaters/update-css-vars.js         201.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/api.js                     1.25 KB
+#21 4.899 ../../packages/registry build: ESM dist/transformers/source-text.js         139.00 B
+#21 4.899 ../../packages/registry build: ESM dist/updaters/update-dependencies.js     309.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-aschild.js   201.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/namespaces.js              1.44 KB
+#21 4.899 ../../packages/registry build: ESM dist/updaters/update-css.js              183.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-font.js      227.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-css-vars.js  244.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-cleanup.js   299.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-icons.js     344.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-5DIETFYX.js                   1.35 KB
+#21 4.899 ../../packages/registry build: ESM dist/codemod/rename.js                   190.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/string-literals.js          198.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/trivia.js                   475.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-import.js    200.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/statements.js               338.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/transform-jsx.js       52.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/variables.js                170.00 B
+#21 4.899 ../../packages/registry build: ESM dist/transformers/index.js               1.44 KB
+#21 4.899 ../../packages/registry build: ESM dist/codemod/indentation.js              165.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/import-declarations.js      249.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/edits.js                    252.00 B
+#21 4.899 ../../packages/registry build: ESM dist/package-imports.js                  201.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/comma-lists.js              308.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/jsx-attributes.js           253.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/named-imports.js            247.00 B
+#21 4.899 ../../packages/registry build: ESM dist/resolve-import.js                   303.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/object-literals.js          377.00 B
+#21 4.899 ../../packages/registry build: ESM dist/resolve-file-path.js                152.00 B
+#21 4.899 ../../packages/registry build: ESM dist/spinner.js                          123.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/comment-nodes.js            89.00 B
+#21 4.899 ../../packages/registry build: ESM dist/codemod/array-literals.js           233.00 B
+#21 4.899 ../../packages/registry build: ESM dist/tailwind-theme-colors.js            74.00 B
+#21 4.899 ../../packages/registry build: ESM dist/workspace.js                        208.00 B
+#21 4.899 ../../packages/registry build: ESM dist/get-package-manager.js              143.00 B
+#21 4.899 ../../packages/registry build: ESM dist/highlighter.js                      50.00 B
+#21 4.899 ../../packages/registry build: ESM dist/target-aliases.js                   101.00 B
+#21 4.899 ../../packages/registry build: ESM dist/get-package-info.js                 53.00 B
+#21 4.899 ../../packages/registry build: ESM dist/import-matcher.js                   173.00 B
+#21 4.899 ../../packages/registry build: ESM dist/json-config.js                      63.00 B
+#21 4.899 ../../packages/registry build: ESM dist/add-components.js                   1.96 KB
+#21 4.899 ../../packages/registry build: ESM dist/is-safe-target.js                   51.00 B
+#21 4.899 ../../packages/registry build: ESM dist/get-project-info.js                 1.20 KB
+#21 4.899 ../../packages/registry build: ESM dist/logger.js                           73.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-HCSB2HDL.js                   4.64 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-KPHNE4X3.js                   1.22 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-THH3TBJI.js                   6.18 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-EMFC532V.js                   1.18 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-IXDOBROW.js                   8.04 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-LUREFXYS.js                   1.69 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-WEOWLCYM.js                   1.73 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-5BPHTCTW.js                   536.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-CWUFLU4G.js                   8.04 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-SCY2QYAU.js                   3.79 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-LI3P22R4.js                   2.34 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-EOBWHQPW.js                   6.39 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-CK2FZNSZ.js                   307.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-XORMY7UM.js                   2.24 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-T724YMDJ.js                   581.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-GP5XIDBG.js                   407.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-3GDISCE6.js                   9.29 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-BJD3QN5N.js                   1.23 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-RV345KCS.js                   4.37 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-HUX6MG2A.js                   1.08 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-HLMZ34OQ.js                   1.00 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-EPVH3ST2.js                   1.32 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-DFLMJYWW.js                   862.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-INLAVGVY.js                   1.71 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-UL3BFSP3.js                   3.19 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-ECVSMHVI.js                   4.43 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-3OKCQO2T.js                   1.24 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-4RGI4SXE.js                   1.77 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-FFFAOODY.js                   788.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-QXGOI5SP.js                   3.28 KB
+#21 4.899 ../../packages/registry build: ESM dist/env-helpers.js                      134.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-5AKVIUQ5.js                   1.83 KB
+#21 4.899 ../../packages/registry build: ESM dist/compare.js                          52.00 B
+#21 4.899 ../../packages/registry build: ESM dist/env-loader.js                       107.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-Y6IONZQ3.js                   465.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-A55HZE32.js                   1.26 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-6DACHLHO.js                   848.00 B
+#21 4.899 ../../packages/registry build: ESM dist/font-markers.js                     62.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-6MJC67AJ.js                   365.00 B
+#21 4.899 ../../packages/registry build: ESM dist/get-config.js                       1.26 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-HSL5JFW6.js                   445.00 B
+#21 4.899 ../../packages/registry build: ESM dist/frameworks.js                       77.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-KCYSLHET.js                   2.19 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-4SFT74AY.js                   217.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-SYDUW4LN.js                   984.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-BQ3HTKQJ.js                   208.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-FY7HT2AG.js                   764.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-37TZNUWF.js                   8.21 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-IP7LRVEH.js                   2.73 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-JSGATXUP.js                   2.73 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-XADSAWBY.js                   574.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-DMPLUZHK.js                   1.76 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-G4XCG644.js                   6.19 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-GKE6AP6I.js                   1.57 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-72U3XV6C.js                   2.18 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-H3QGI6CM.js                   6.05 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-PBI5MCZH.js                   414.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-TJHEOZ2C.js                   1.21 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-P2PPVRX4.js                   2.02 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-ODVA5IOJ.js                   177.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-LA2WH2E5.js                   412.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-SCN73OHW.js                   1.93 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-7PG7PSM2.js                   2.96 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-DJXK7GGZ.js                   359.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-V47DXQF3.js                   846.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-T5GV6K3G.js                   1.22 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-WFW2POHH.js                   744.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-XEIRIT2K.js                   150.00 B
+#21 4.899 ../../packages/registry build: ESM dist/get-monorepo-info.js                218.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-P7AMHUOT.js                   1.72 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-7BJVMVDG.js                   1.91 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-4XJHS6CV.js                   2.25 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-JGH4L3MV.js                   314.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-KTIPZNE2.js                   1.97 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-WN656L3S.js                   118.00 B
+#21 4.899 ../../packages/registry build: ESM dist/chunk-XBITR7ZN.js                   12.56 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-C33XYYN3.js                   40.02 KB
+#21 4.899 ../../packages/registry build: ESM dist/chunk-34X3C4PK.js                   62.87 KB
+#21 4.899 ../../packages/registry build: ESM dist/preset/preset.js                    523.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/resolve-file-imports.js    513.00 B
+#21 4.899 ../../packages/registry build: ESM dist/registry/github-ref.js              399.00 B
+#21 4.900 ../../packages/registry build: ESM dist/registry/validator.js               1.04 KB
+#21 4.900 ../../packages/registry build: ESM dist/registry/github-cli.js              377.00 B
+#21 4.900 ../../packages/registry build: ESM dist/registry/schema.js                  817.00 B
+#21 4.900 ../../packages/registry build: ESM dist/registry/github.js                  1.03 KB
+#21 4.900 ../../packages/registry build: ESM dist/registry/utils.js                   1.13 KB
+#21 4.900 ../../packages/registry build: ESM dist/registry/search.js                  1.28 KB
+#21 4.900 ../../packages/registry build: ESM dist/registry/source.js                  1.00 KB
+#21 4.901 ../../packages/registry build: ESM ⚡️ Build success in 409ms
+#21 11.68 ../../packages/registry build: DTS ⚡️ Build success in 7056ms
+#21 11.68 ../../packages/registry build: DTS dist/registry/index.d.ts                   815.00 B
+#21 11.68 ../../packages/registry build: DTS dist/add-components.d.ts                   902.00 B
+#21 11.68 ../../packages/registry build: DTS dist/compare.d.ts                          157.00 B
+#21 11.68 ../../packages/registry build: DTS dist/env-helpers.d.ts                      626.00 B
+#21 11.68 ../../packages/registry build: DTS dist/env-loader.d.ts                       150.00 B
+#21 11.68 ../../packages/registry build: DTS dist/font-markers.d.ts                     301.00 B
+#21 11.68 ../../packages/registry build: DTS dist/get-monorepo-info.d.ts                594.00 B
+#21 11.68 ../../packages/registry build: DTS dist/get-package-manager.d.ts              611.00 B
+#21 11.68 ../../packages/registry build: DTS dist/highlighter.d.ts                      256.00 B
+#21 11.68 ../../packages/registry build: DTS dist/is-safe-target.d.ts                   99.00 B
+#21 11.68 ../../packages/registry build: DTS dist/logger.d.ts                           249.00 B
+#21 11.68 ../../packages/registry build: DTS dist/package-imports.d.ts                  862.00 B
+#21 11.68 ../../packages/registry build: DTS dist/resolve-import.d.ts                   962.00 B
+#21 11.68 ../../packages/registry build: DTS dist/target-aliases.d.ts                   374.00 B
+#21 11.68 ../../packages/registry build: DTS dist/workspace.d.ts                        416.00 B
+#21 11.68 ../../packages/registry build: DTS dist/import-matcher.d.ts                   1.16 KB
+#21 11.68 ../../packages/registry build: DTS dist/codemod/array-literals.d.ts           535.00 B
+#21 11.68 ../../packages/registry build: DTS dist/codemod/comma-lists.d.ts              1.45 KB
+#21 11.68 ../../packages/registry build: DTS dist/codemod/import-declarations.d.ts      343.00 B
+#21 11.68 ../../packages/registry build: DTS dist/codemod/indentation.d.ts              497.00 B
+#21 11.68 ../../packages/registry build: DTS dist/codemod/jsx-attributes.d.ts           613.00 B
+#21 11.69 ../../packages/registry build: DTS dist/codemod/named-imports.d.ts            424.00 B
+#21 11.69 ../../packages/registry build: DTS dist/codemod/object-literals.d.ts          1.26 KB
+#21 11.69 ../../packages/registry build: DTS dist/get-config.d.ts                       4.98 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/resolver.d.ts                9.75 KB
+#21 11.69 ../../packages/registry build: DTS dist/json-config.d.ts                      379.00 B
+#21 11.69 ../../packages/registry build: DTS dist/preset/preset.d.ts                    3.70 KB
+#21 11.69 ../../packages/registry build: DTS dist/frameworks.d.ts                       3.28 KB
+#21 11.69 ../../packages/registry build: DTS dist/get-package-info.d.ts                 160.00 B
+#21 11.69 ../../packages/registry build: DTS dist/get-project-info.d.ts                 2.21 KB
+#21 11.69 ../../packages/registry build: DTS dist/resolve-file-path.d.ts                930.00 B
+#21 11.69 ../../packages/registry build: DTS dist/spinner.d.ts                          223.00 B
+#21 11.69 ../../packages/registry build: DTS dist/tailwind-theme-colors.d.ts            268.00 B
+#21 11.69 ../../packages/registry build: DTS dist/codemod/parse.d.ts                    1.50 KB
+#21 11.69 ../../packages/registry build: DTS dist/codemod/comment-nodes.d.ts            346.00 B
+#21 11.69 ../../packages/registry build: DTS dist/codemod/edits.d.ts                    889.00 B
+#21 11.69 ../../packages/registry build: DTS dist/codemod/rename.d.ts                   240.00 B
+#21 11.69 ../../packages/registry build: DTS dist/codemod/statements.d.ts               1.02 KB
+#21 11.69 ../../packages/registry build: DTS dist/codemod/string-literals.d.ts          927.00 B
+#21 11.69 ../../packages/registry build: DTS dist/codemod/trivia.d.ts                   1.95 KB
+#21 11.69 ../../packages/registry build: DTS dist/codemod/variables.d.ts                181.00 B
+#21 11.69 ../../packages/registry build: DTS dist/icons/libraries.d.ts                  1.94 KB
+#21 11.69 ../../packages/registry build: DTS dist/transformers/index.d.ts               664.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/source-text.d.ts         298.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-aschild.d.ts   249.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-cleanup.d.ts   407.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-css-vars.d.ts  524.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-font.d.ts      243.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-icons.d.ts     245.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-import.d.ts    247.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-jsx.d.ts       241.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-menu.d.ts      243.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-next.d.ts      243.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-rsc.d.ts       241.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-rtl.d.ts       419.00 B
+#21 11.69 ../../packages/registry build: DTS dist/transformers/transform-tw-prefix.d.ts 1.07 KB
+#21 11.69 ../../packages/registry build: DTS dist/updaters/update-css-vars.d.ts         1.21 KB
+#21 11.69 ../../packages/registry build: DTS dist/updaters/update-css.d.ts              921.00 B
+#21 11.69 ../../packages/registry build: DTS dist/updaters/update-dependencies.d.ts     1.17 KB
+#21 11.69 ../../packages/registry build: DTS dist/updaters/update-env-vars.d.ts         481.00 B
+#21 11.69 ../../packages/registry build: DTS dist/updaters/update-files.d.ts            2.18 KB
+#21 11.69 ../../packages/registry build: DTS dist/updaters/update-fonts.d.ts            3.95 KB
+#21 11.69 ../../packages/registry build: DTS dist/updaters/update-tailwind-config.d.ts  1.69 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/add.d.ts                     421.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/address.d.ts                 1.45 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/api.d.ts                     38.45 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/builder.d.ts                 921.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/config.d.ts                  1.30 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/constants.d.ts               1.25 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/context.d.ts                 749.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/env.d.ts                     156.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/errors.d.ts                  5.00 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/fetcher.d.ts                 6.21 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/github-auth.d.ts             646.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/github-cli.d.ts              1.57 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/github-ref.d.ts              804.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/github.d.ts                  13.61 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/search.d.ts                  1.94 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/loader.d.ts                  54.73 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/namespaces.d.ts              278.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/parser.d.ts                  196.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/proxy.d.ts                   269.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/resolve-file-imports.d.ts    714.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/source.d.ts                  12.98 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/utils.d.ts                   1.73 KB
+#21 11.69 ../../packages/registry build: DTS dist/registry/validate.d.ts                510.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/validator.d.ts               604.00 B
+#21 11.69 ../../packages/registry build: DTS dist/registry/schema.d.ts                  106.84 KB
+#21 11.69 ../../packages/registry build: DTS dist/schema/index.d.ts                     823.00 B
+#21 12.00 ../../packages/registry build: Done
+#21 12.00 ../../packages/shadcn build$ tsup
+#21 12.23 ../../packages/shadcn build: CLI Building entry: src/index.ts, src/tailwind.css, src/icons/index.ts, src/mcp/index.ts, src/preset/index.ts, src/schema/index.ts, src/registry/index.ts, src/utils/index.ts
+#21 12.23 ../../packages/shadcn build: CLI Using tsconfig: tsconfig.json
+#21 12.23 ../../packages/shadcn build: CLI tsup v8.5.0
+#21 12.23 ../../packages/shadcn build: CLI Using tsup config: /app/packages/shadcn/tsup.config.ts
+#21 12.24 ../../packages/shadcn build: CLI Target: esnext
+#21 12.24 ../../packages/shadcn build: CLI Cleaning output folder
+#21 12.24 ../../packages/shadcn build: ESM Build start
+#21 12.76 ../../packages/shadcn build: DTS Build start
+#21 12.76 ../../packages/shadcn build: ESM dist/tailwind.css      13.95 KB
+#21 12.76 ../../packages/shadcn build: ESM dist/mcp/index.js      64.00 B
+#21 12.76 ../../packages/shadcn build: ESM dist/preset/index.js   410.00 B
+#21 12.76 ../../packages/shadcn build: ESM dist/registry/index.js 30.00 B
+#21 12.76 ../../packages/shadcn build: ESM dist/schema/index.js   37.00 B
+#21 12.76 ../../packages/shadcn build: ESM dist/icons/index.js    166.00 B
+#21 12.76 ../../packages/shadcn build: ESM dist/utils/index.js    9.15 KB
+#21 12.76 ../../packages/shadcn build: ESM dist/chunk-3W6BGJGE.js 1.02 KB
+#21 12.76 ../../packages/shadcn build: ESM dist/chunk-I2VXPUS4.js 9.80 KB
+#21 12.76 ../../packages/shadcn build: ESM dist/index.js          156.55 KB
+#21 12.76 ../../packages/shadcn build: ESM ⚡️ Build success in 525ms
+#21 17.22 ../../packages/shadcn build: DTS ⚡️ Build success in 4658ms
+#21 17.22 ../../packages/shadcn build: DTS dist/tailwind.d.ts       111.00 B
+#21 17.22 ../../packages/shadcn build: DTS dist/index.d.ts          6.52 KB
+#21 17.22 ../../packages/shadcn build: DTS dist/icons/index.d.ts    595.00 B
+#21 17.22 ../../packages/shadcn build: DTS dist/mcp/index.d.ts      288.00 B
+#21 17.22 ../../packages/shadcn build: DTS dist/utils/index.d.ts    1.17 KB
+#21 17.22 ../../packages/shadcn build: DTS dist/preset/index.d.ts   463.00 B
+#21 17.22 ../../packages/shadcn build: DTS dist/schema/index.d.ts   41.00 B
+#21 17.22 ../../packages/shadcn build: DTS dist/registry/index.d.ts 34.00 B
+#21 17.29 ../../packages/shadcn build: Done
+#21 17.95 
+#21 17.95 🏗️ Building bases...
+#21 18.74    ✅ base-vega...
+#21 18.74    ✅ base-nova...
+#21 18.74    ✅ base-maia...
+#21 18.74    ✅ base-lyra...
+#21 26.38    ✅ base-mira...
+#21 26.38    ✅ base-luma...
+#21 26.41    ✅ base-sera...
+#21 26.41    ✅ base-rhea...
+#21 32.96    ✅ aria-vega...
+#21 32.96    ✅ aria-nova...
+#21 33.03    ✅ aria-maia...
+#21 33.03    ✅ aria-lyra...
+#21 39.75    ✅ aria-mira...
+#21 39.77    ✅ aria-luma...
+#21 39.80    ✅ aria-sera...
+#21 39.82    ✅ aria-rhea...
+#21 46.36    ✅ radix-vega...
+#21 46.39    ✅ radix-nova...
+#21 46.42    ✅ radix-maia...
+#21 46.45    ✅ radix-lyra...
+#21 52.14    ✅ radix-mira...
+#21 52.14    ✅ radix-luma...
+#21 52.19    ✅ radix-sera...
+#21 52.24    ✅ radix-rhea...
+#21 58.53 
+#21 58.53 📦 Building registry/__index__.tsx...
+#21 59.32 
+#21 59.32 📋 Building examples/__index__.tsx...
+#21 59.32    Found 597 demos for base
+#21 59.32    Found 582 demos for radix
+#21 59.32    Found 585 demos for aria
+#21 59.75 
+#21 59.75 💅 Building styles...
+#21 60.63    ✅ base-nova
+#21 60.63    ✅ aria-nova
+#21 60.66    ✅ radix-nova
+#21 60.78    ✅ new-york-v4
+#21 61.34    ✅ base-maia
+#21 61.38    ✅ base-vega
+#21 61.44    ✅ base-lyra
+#21 61.52    ✅ base-mira
+#21 62.04    ✅ base-luma
+#21 62.15    ✅ base-sera
+#21 62.19    ✅ base-rhea
+#21 62.24    ✅ aria-vega
+#21 62.76    ✅ aria-maia
+#21 62.87    ✅ aria-lyra
+#21 62.90    ✅ aria-mira
+#21 62.95    ✅ aria-luma
+#21 63.47    ✅ aria-sera
+#21 63.58    ✅ aria-rhea
+#21 63.61    ✅ radix-maia
+#21 63.63    ✅ radix-vega
+#21 64.16    ✅ radix-lyra
+#21 64.24    ✅ radix-mira
+#21 64.29    ✅ radix-luma
+#21 64.30    ✅ radix-sera
+#21 64.67    ✅ radix-rhea
+#21 64.67 
+#21 64.67 🗂️ Building registry/__blocks__.json...
+#21 64.67 
+#21 64.67 ⚙️ Building public/r/config.json...
+#21 64.67 
+#21 64.67 📦 Building public/r/index.json...
+#21 64.68 
+#21 64.68 🎨 Building public/r/colors...
+#21 64.68    ✅ neutral.json
+#21 64.68    ✅ olive.json
+#21 64.68    ✅ stone.json
+#21 64.68    ✅ taupe.json
+#21 64.68    ✅ zinc.json
+#21 64.68    ✅ mauve.json
+#21 64.68    ✅ mist.json
+#21 64.68 
+#21 64.68 📋 Copying compiled ui to styles...
+#21 66.64    ✅ registry/base-vega/ui → styles/base-vega/ui
+#21 66.64    ✅ registry/base-nova/ui → styles/base-nova/ui
+#21 66.65    ✅ registry/base-rhea/ui → styles/base-rhea/ui
+#21 66.65    ✅ registry/base-mira/ui → styles/base-mira/ui
+#21 66.65    ✅ registry/base-lyra/ui → styles/base-lyra/ui
+#21 66.65    ✅ registry/base-luma/ui → styles/base-luma/ui
+#21 66.65    ✅ registry/base-sera/ui → styles/base-sera/ui
+#21 66.66    ✅ registry/base-maia/ui → styles/base-maia/ui
+#21 68.93    ✅ registry/aria-vega/ui → styles/aria-vega/ui
+#21 68.95    ✅ registry/aria-maia/ui → styles/aria-maia/ui
+#21 68.97    ✅ registry/aria-luma/ui → styles/aria-luma/ui
+#21 68.98    ✅ registry/aria-sera/ui → styles/aria-sera/ui
+#21 68.98    ✅ registry/aria-lyra/ui → styles/aria-lyra/ui
+#21 68.98    ✅ registry/aria-nova/ui → styles/aria-nova/ui
+#21 68.98    ✅ registry/aria-mira/ui → styles/aria-mira/ui
+#21 68.98    ✅ registry/aria-rhea/ui → styles/aria-rhea/ui
+#21 71.22    ✅ registry/radix-nova/ui → styles/radix-nova/ui
+#21 71.24    ✅ registry/radix-vega/ui → styles/radix-vega/ui
+#21 71.25    ✅ registry/radix-maia/ui → styles/radix-maia/ui
+#21 71.25    ✅ registry/radix-luma/ui → styles/radix-luma/ui
+#21 71.25    ✅ registry/radix-mira/ui → styles/radix-mira/ui
+#21 71.25    ✅ registry/radix-rhea/ui → styles/radix-rhea/ui
+#21 71.25    ✅ registry/radix-lyra/ui → styles/radix-lyra/ui
+#21 71.25    ✅ registry/radix-sera/ui → styles/radix-sera/ui
+#21 71.25 
+#21 71.25 🔄 Building RTL styles...
+#21 72.69    ✅ styles/aria-nova/ui-rtl
+#21 72.69    ✅ styles/radix-nova/ui-rtl
+#21 72.70    ✅ styles/base-nova/ui-rtl
+#21 72.70 
+#21 72.70 🧹 Cleaning up...
+#21 72.70    🗑️ registry/base-nova
+#21 72.70    🗑️ registry/radix-nova
+#21 72.70    🗑️ registry/aria-nova
+#21 72.70    🗑️ registry/base-vega
+#21 72.70    🗑️ registry/base-maia
+#21 72.70    🗑️ registry/base-lyra
+#21 72.70    🗑️ registry/base-mira
+#21 72.70    🗑️ registry/base-luma
+#21 72.70    🗑️ registry/base-sera
+#21 72.70    🗑️ registry/base-rhea
+#21 72.70    🗑️ registry/aria-vega
+#21 72.70    🗑️ registry/aria-maia
+#21 72.70    🗑️ registry/aria-lyra
+#21 72.70    🗑️ registry/aria-mira
+#21 72.70    🗑️ registry/aria-luma
+#21 72.70    🗑️ registry/aria-sera
+#21 72.70    🗑️ registry/aria-rhea
+#21 72.70    🗑️ registry/radix-vega
+#21 72.70    🗑️ registry/radix-maia
+#21 72.70    🗑️ registry/radix-lyra
+#21 72.70    🗑️ registry/radix-mira
+#21 72.70    🗑️ registry/radix-luma
+#21 72.70    🗑️ registry/radix-sera
+#21 72.70    🗑️ registry/radix-rhea
+#21 72.74 
+#21 72.74 ✅ Build complete in 54.90s!
+#21 DONE 73.0s
+
+#22 [build 12/14] RUN NODE_OPTIONS=--max-old-space-size=4096 pnpm --filter=v4 exec next build --turbopack --experimental-build-mode compile
+#22 0.631 ▲ Next.js 16.4.2 (Turbopack)
+#22 0.672 ✓ Running next.config.mjs took 41ms
+#22 0.886 - Experiments (use with caution):
+#22 0.886   · cpus: 1
+#22 0.886   · optimizePackageImports
+#22 0.886   · staticGenerationMaxConcurrency: 2
+#22 0.886   ⨯ turbopackSharedRuntime
+#22 0.886 
+#22 0.888 [MDX] generated files in 15.283223999999962ms
+#22 0.902   Creating an optimized production build ...
+#22 57.87 undefined
+#22 57.89 /app/apps/v4:
+#22 57.89  ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command was killed with SIGKILL (Forced termination): next build --turbopack --experimental-build-mode compile
+#22 ERROR: process "/bin/sh -c NODE_OPTIONS=--max-old-space-size=4096 pnpm --filter=v4 exec next build --turbopack --experimental-build-mode compile" did not complete successfully: cannot allocate memory
+------
+ > [build 12/14] RUN NODE_OPTIONS=--max-old-space-size=4096 pnpm --filter=v4 exec next build --turbopack --experimental-build-mode compile:
+0.886   · cpus: 1
+0.886   · optimizePackageImports
+0.886   · staticGenerationMaxConcurrency: 2
+0.886   ⨯ turbopackSharedRuntime
+0.886 
+0.888 [MDX] generated files in 15.283223999999962ms
+0.902   Creating an optimized production build ...
+57.87 undefined
+57.89 /app/apps/v4:
+57.89  ERR_PNPM_RECURSIVE_EXEC_FIRST_FAIL  Command was killed with SIGKILL (Forced termination): next build --turbopack --experimental-build-mode compile
+------
+Dockerfile:14
+--------------------
+  12 |     RUN node /tmp/recall/pin-stars.cjs
+  13 |     RUN pnpm --filter=v4 run registry:build
+  14 | >>> RUN NODE_OPTIONS=--max-old-space-size=4096 pnpm --filter=v4 exec next build --turbopack --experimental-build-mode compile
+  15 |     COPY --from=recipe static-worker-heap.cjs /tmp/recall/
+  16 |     RUN node /tmp/recall/static-worker-heap.cjs apply \
+--------------------
+ERROR: failed to build: failed to solve: ResourceExhausted: process "/bin/sh -c NODE_OPTIONS=--max-old-space-size=4096 pnpm --filter=v4 exec next build --turbopack --experimental-build-mode compile" did not complete successfully: cannot allocate memory

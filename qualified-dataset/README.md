@@ -1,19 +1,26 @@
 # Qualified ReCall Dataset
 
-18 repositories, 156 repository/library instances, and 135,988 one-to-one function pairs.
+**43 repositories, 350 repository/library instances, and 119,327 one-to-one function pairs.**
 
-Only original frontend production `dependencies` are candidates. Every included repository has 5–10 selected libraries, each with at least three distinct initial POG source-function anchors before propagation or model calls. Repeated target copies count once. See the [policy](../qualification/initial-anchors-3/POLICY.md) for exact matching, selection, and supplied-reference coverage.
+Every included repository has **3–10 declared production libraries**. Each selected library has at least **three independently checkable source-function witnesses with ≥10 own-body POG property-operation features**. Source eligibility is checked before new builds. Existing archives are re-filtered with the same source-only rule. **No initial-anchor or target-matching threshold is used.**
 
 | Bundler | Repositories | Library instances | Function pairs |
 |---|---:|---:|---:|
-| bun | 1 | 5 | 412 |
-| esbuild | 2 | 16 | 45,386 |
+| bun | 2 | 9 | 1,688 |
+| esbuild | 7 | 51 | 48,252 |
+| parcel | 3 | 12 | 2,896 |
 | rolldown | 2 | 20 | 9,803 |
-| vite | 7 | 63 | 57,113 |
-| webpack | 6 | 52 | 23,274 |
+| rollup | 3 | 9 | 1,062 |
+| rspack | 1 | 10 | 1,509 |
+| tsup | 1 | 5 | 565 |
+| turbopack | 8 | 80 | 8,729 |
+| vite | 8 | 79 | 19,630 |
+| webpack | 8 | 75 | 25,193 |
 
-The [index](index.json) is the canonical membership list. Each subject directory contains exact captured runtime JS, source maps, independently span-verified one-to-one pairs, original frontend manifest, explicit source-reference snapshots, and final initial-anchor evidence. Pair counts reflect the newly selected library scope; they are not recovery scores and are not directly comparable with older cohorts.
+The source evidence contains 1,050 function witnesses; these are lower-bound certificates, not a census of every function. 110 selected library instances have zero accepted one-to-one pairs. Correspondence counts are reported separately and do not determine source eligibility.
 
-The [70-subject decisions](../qualification/initial-anchors-3/catalog-decisions.json) distinguish qualification exclusions from repositories without verified inputs. Unassessed repositories are not claimed to have zero anchors. The full build/capture archive remains under `bundling-dataset/`; archive membership does not imply membership here.
+The [index](index.json) defines active membership. Each subject includes captured runtime JS, source maps, independently span-verified function pairs, the original frontend manifest, and source witnesses under `eligibility/`. `reference-manifest.json` separately lists available original text from captured maps. Source eligibility uses locked package/workspace code; correspondence attribution follows the existing package-name collector and does not prove that every captured copy is one installed version.
 
-Reproduction: install frozen dependencies in `qualification/initial-anchors-3/runtime/` and `verification/hufang-builds-2026-11-08/collector/`, then run `prepare-plan.py`, `run.py`, `organize.py`, `audit.py`, and `publish.py` in that order. Source checkouts are needed to regenerate the pinned frontend snapshots; the organized output and audit are standalone. See the build verification report for build/capture reproduction.
+See the [policy](../qualification/source-functions-3/POLICY.md), [all-catalog decisions](../qualification/source-functions-3/catalog-decisions.json), and [standalone audit](../qualification/source-functions-3/audit-result.json). Source failures, incomplete source evidence, and technical build/page failures are separate statuses. The broader `bundling-dataset/` is a build/capture archive and may include excluded subjects or older sampling rules.
+
+To reproduce the source gate, install the frozen POG runtime and `qualification/source-functions-3/` dependencies with `npm ci`, prepare pinned source checkouts, then run `prepare-plan.py` and `preflight.mjs`. `verification/hufang-builds-2026-11-08/run-source-pipeline.py` gates remaining builds on those source certificates. Run `organize.py`, `audit.mjs`, and `publish.py` after verified captures. The organized output and audit do not require local source checkouts.

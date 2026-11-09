@@ -1,26 +1,20 @@
 {
-  "schema": "recall.dataset-anchor-qualification/v1",
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "vite/hoppscotch--hoppscotch",
+  "repo": "hoppscotch/hoppscotch",
+  "commit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
   "policy": {
-    "candidateField": "dependencies",
-    "minInitialAnchors": 3,
-    "minLibraries": 5,
-    "maxLibraries": 10,
-    "counting": "distinct source functions before propagation; repeated target copies count once",
-    "options": {
-      "minFeatures": 10,
-      "featureMetric": "propertyOperations",
-      "minAnchors": 3,
-      "uniqueBundle": true
-    }
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "provenance": {
-    "groundTruthSHA256": "6907db78989b7116f0380ecb750ef5b31b3f80b17d6508b5e0f117649e496f40",
-    "manifestSHA256": "4fcd4b5f39c4d0a6d4c71762cc1d00c3a01484cdf8e915e10b189696879f6b58",
-    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
-    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
-    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
-    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
-  },
+  "selectionOverride": {},
   "candidates": [
     "@fontsource-variable/inter",
     "@fontsource-variable/material-symbols-rounded",
@@ -49,416 +43,2730 @@
     "workbox-window",
     "zod"
   ],
-  "excludedPreviouslySelected": [],
   "libraries": [
     {
-      "library": "@fontsource-variable/inter",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fontsource-variable/material-symbols-rounded",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fontsource-variable/roboto-mono",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@hoppscotch/common",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@hoppscotch/data",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@hoppscotch/kernel",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@hoppscotch/plugin-appload",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@hoppscotch/ui",
-      "initialAnchors": 103,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 996,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 103
-    },
-    {
-      "library": "@import-meta-env/unplugin",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@tauri-apps/api",
-      "initialAnchors": 6,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 321,
-      "sourceFiles": 11,
-      "finalInitialAnchors": 6
-    },
-    {
-      "library": "@tauri-apps/plugin-dialog",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@tauri-apps/plugin-dialog"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 5,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@tauri-apps/plugin-fs",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "@tauri-apps/plugin-fs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 33,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@tauri-apps/plugin-shell",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "@tauri-apps/plugin-shell"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 25,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@vueuse/core",
-      "initialAnchors": 7,
-      "trialLibraries": [
-        "buffer",
-        "@tauri-apps/plugin-dialog",
-        "workbox-window",
-        "stream-browserify",
-        "@vueuse/core",
-        "util",
-        "verzod",
-        "process",
-        "dioc",
-        "axios"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 1229,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 7
-    },
-    {
-      "library": "axios",
-      "initialAnchors": 34,
-      "trialLibraries": [
-        "buffer",
-        "@tauri-apps/plugin-dialog",
-        "workbox-window",
-        "stream-browserify",
-        "@vueuse/core",
-        "util",
-        "verzod",
-        "process",
-        "dioc",
-        "axios"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 360,
-      "sourceFiles": 55,
-      "finalInitialAnchors": 34
-    },
-    {
       "library": "buffer",
-      "initialAnchors": 10,
-      "trialLibraries": [
-        "buffer",
-        "@tauri-apps/plugin-dialog",
-        "workbox-window",
-        "stream-browserify",
-        "@vueuse/core",
-        "util",
-        "verzod",
-        "process",
-        "dioc",
-        "axios"
-      ],
+      "declaredVersion": "6.0.3",
+      "origin": {
+        "kind": "npm-package",
+        "name": "buffer",
+        "version": "6.0.3",
+        "integrity": "sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==",
+        "shasum": "2ace578459cc8fbe2a70aaa8f52ee63b6a74c6c6",
+        "tarballSHA256": "555b6f49224afcf6b2c5a9aea7cd34a7f443f395b10532bc5580022d57aa51f5",
+        "bytes": 23108,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 133,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 10
-    },
-    {
-      "library": "dioc",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "dioc"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 23,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "index.js",
+          "source": "source-js/c25853fd31addfce188b01061fe85bfe667d5fb6c7a7bbb1c83d0ddfd8627acc.js",
+          "sourceSHA256": "c25853fd31addfce188b01061fe85bfe667d5fb6c7a7bbb1c83d0ddfd8627acc",
+          "span": [
+            3471,
+            5024
+          ],
+          "name": "from",
+          "normalizedASTSHA256": "bc77ee6079ed2f04facafd859a2d8f8dd3e08958daf060664ec5ed0424b50fa2",
+          "codeSHA256": "2689b312ca5f082d171011de2429a3e137191baf24b41f5eb6654390602fcba5",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "8b0ff76b234abfc1",
+            "graphNodes": 28,
+            "graphEdges": 44,
+            "graphOperationOccurrences": 8,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/c25853fd31addfce188b01061fe85bfe667d5fb6c7a7bbb1c83d0ddfd8627acc.js",
+          "sourceSHA256": "c25853fd31addfce188b01061fe85bfe667d5fb6c7a7bbb1c83d0ddfd8627acc",
+          "span": [
+            8686,
+            9191
+          ],
+          "name": "fromObject",
+          "normalizedASTSHA256": "bad3ea2848dcd28c8404a17a1bffd5041ebc6b995dd0fdd5d67f2a8c2433b039",
+          "codeSHA256": "48b98686a68d8bcd5bbc2426a05824b92a22344f9163ccd52f24d6234999296a",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "b36a4466902e296d",
+            "graphNodes": 19,
+            "graphEdges": 24,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "index.js",
+          "source": "source-js/c25853fd31addfce188b01061fe85bfe667d5fb6c7a7bbb1c83d0ddfd8627acc.js",
+          "sourceSHA256": "c25853fd31addfce188b01061fe85bfe667d5fb6c7a7bbb1c83d0ddfd8627acc",
+          "span": [
+            9895,
+            10494
+          ],
+          "name": "compare",
+          "normalizedASTSHA256": "833b3decf67ccee31970299af5e6b3884bc0b5a330e6bb94a363253cc1dd6123",
+          "codeSHA256": "b3f6ef4855cf6bd9a7887f326116a377bf0df0457142d03e5da13eeefa89c02d",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "a5ee08b947b38542",
+            "graphNodes": 20,
+            "graphEdges": 27,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 130,
-      "sourceFiles": 3
-    },
-    {
-      "library": "fp-ts",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "fp-ts"
+      "proofDirectory": "eligibility/libraries/d0ca8c2ac0dab879bf27",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "06bafa45fdad2579ba0e43b0c9b2c6290287c99c4203c300254a462b38a307f6"
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 1844,
-      "sourceFiles": 27
-    },
-    {
-      "library": "process",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "process"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 16,
-      "sourceFiles": 1
-    },
-    {
-      "library": "rxjs",
-      "initialAnchors": 5,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "rxjs"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 215,
-      "sourceFiles": 51,
-      "finalInitialAnchors": 5
-    },
-    {
-      "library": "stream-browserify",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "stream-browserify"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 8,
-      "sourceFiles": 1
-    },
-    {
-      "library": "util",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "buffer",
-        "@tauri-apps/plugin-dialog",
-        "workbox-window",
-        "stream-browserify",
-        "@vueuse/core",
-        "util",
-        "verzod",
-        "process",
-        "dioc",
-        "axios"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 143,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 3
-    },
-    {
-      "library": "verzod",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "verzod"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 15,
-      "sourceFiles": 1
-    },
-    {
-      "library": "vue",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
     },
     {
       "library": "workbox-window",
-      "initialAnchors": 6,
-      "trialLibraries": [
-        "buffer",
-        "@tauri-apps/plugin-dialog",
-        "workbox-window",
-        "stream-browserify",
-        "@vueuse/core",
-        "util",
-        "verzod",
-        "process",
-        "dioc",
-        "axios"
-      ],
+      "declaredVersion": "7.4.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "workbox-window",
+        "version": "7.4.1",
+        "integrity": "sha512-notZDH2u8VXaqyuD7xaqIfEFi6SRM4SUSd7ewe9PDsVqADuepxX2ZMY3uvuZGxzY5ZOsGC/vD3A/3smFtJt4/A==",
+        "shasum": "ab3bfb2db306fb1584e791cc9ea02bf6e2f69e19",
+        "tarballSHA256": "3ec1a1bf3043e4e462ad847110b5bc46cc17da2d99979b6babc3cd38e3f5e751",
+        "bytes": 137207,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 56,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 6
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 38,
+      "diagnostics": [
+        {
+          "file": "src/messageSW.ts",
+          "error": "SyntaxError: [27:21-27:22]: Expected ')'"
+        },
+        {
+          "file": "src/utils/urlsMatch.ts",
+          "error": "SyntaxError: [20:30-20:31]: Expected ')'"
+        },
+        {
+          "file": "src/utils/WorkboxEventTarget.ts",
+          "error": "SyntaxError: [11:7-11:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/Workbox.ts",
+          "error": "SyntaxError: [47:10-47:18]: Unexpected token: 'identifier'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "build/workbox-window.dev.es5.mjs",
+          "source": "source-js/e9f164bad8d4b7ffbfecff9ba162976ee220469165d440f18b13e29417018236.js",
+          "sourceSHA256": "e9f164bad8d4b7ffbfecff9ba162976ee220469165d440f18b13e29417018236",
+          "span": [
+            5316,
+            6255
+          ],
+          "name": "print",
+          "normalizedASTSHA256": "0ceb003170fe75ee04a1a7d06bea1160159f57a73959d8f51c0528cf379896a6",
+          "codeSHA256": "a1e5139e7219b85520adaafec00be10b2c0d7a583dcb721bd889644f1e4ad560",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "1d4e54d1ad7b3449",
+            "graphNodes": 16,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/workbox-window.dev.es5.mjs",
+          "source": "source-js/e9f164bad8d4b7ffbfecff9ba162976ee220469165d440f18b13e29417018236.js",
+          "sourceSHA256": "e9f164bad8d4b7ffbfecff9ba162976ee220469165d440f18b13e29417018236",
+          "span": [
+            12726,
+            16031
+          ],
+          "name": "_onUpdateFound",
+          "normalizedASTSHA256": "872ec8e6de13008cfbd982958f5f831241f8973a23dd6f98457e6680e3229502",
+          "codeSHA256": "7c22c37d67fb877b06631c40d96bba8302a65dea9fa51b007861d99364881a3f",
+          "features": {
+            "propertyOperations": 23,
+            "distinctOperationPropertyPairs": 22,
+            "pogHash": "c9c96470508d0cc2",
+            "graphNodes": 16,
+            "graphEdges": 18,
+            "graphOperationOccurrences": 46,
+            "distinctGraphOperationPropertyPairs": 22,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/workbox-window.dev.es5.mjs",
+          "source": "source-js/e9f164bad8d4b7ffbfecff9ba162976ee220469165d440f18b13e29417018236.js",
+          "sourceSHA256": "e9f164bad8d4b7ffbfecff9ba162976ee220469165d440f18b13e29417018236",
+          "span": [
+            16128,
+            19320
+          ],
+          "name": "_onStateChange",
+          "normalizedASTSHA256": "042dc4f52d35ba7a88cd5f0705b44a0ed841c6abec8bcedf23258b40177d6969",
+          "codeSHA256": "a68a4a989069974d33340d5d977c0e2213639677cc8db3c8653ac54a5fdeb18f",
+          "features": {
+            "propertyOperations": 25,
+            "distinctOperationPropertyPairs": 20,
+            "pogHash": "c8628e1d333ac6ce",
+            "graphNodes": 32,
+            "graphEdges": 43,
+            "graphOperationOccurrences": 27,
+            "distinctGraphOperationPropertyPairs": 20,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/722768e8bf5958091f5f",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "aee9670e09b75ca8a2a1fe62d545ae38a6797970caf0335628e3a4dd15bc9b6c"
+        }
+      ],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
+    },
+    {
+      "library": "@vueuse/core",
+      "declaredVersion": "14.4.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@vueuse/core",
+        "version": "14.4.0",
+        "integrity": "sha512-X4WHz1HlCzCBoYXesUkifzzWBAcZgXG8Fi5iNPQg/epdzOB3gu8Fawj3hvuwYR1nGcXGnvxwYYcUC/71++svtQ==",
+        "shasum": "a841da6b3c7d548bdeed5bf611e73f3de62d20fa",
+        "tarballSHA256": "7d2e831eb0aeee5b0c21dd80ce7067da83ef30e152e43b87572788399b4c7b1a",
+        "bytes": 217124,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 21,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.iife.js",
+          "source": "source-js/485a5d4fab1d3d4a62abe77dd2788284c02140b2820e7b7e1a0bee75ee42dd25.js",
+          "sourceSHA256": "485a5d4fab1d3d4a62abe77dd2788284c02140b2820e7b7e1a0bee75ee42dd25",
+          "span": [
+            151,
+            1597
+          ],
+          "name": "computedAsync",
+          "normalizedASTSHA256": "32dd171d2a0c085822574ccebfb88723057e0b1a9ebffc962be4489f25b40c58",
+          "codeSHA256": "f319529c3a53f65238c7ca71041563178ec6d98d2a0153e81328790b37336655",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "98331caad207debd",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.iife.js",
+          "source": "source-js/485a5d4fab1d3d4a62abe77dd2788284c02140b2820e7b7e1a0bee75ee42dd25.js",
+          "sourceSHA256": "485a5d4fab1d3d4a62abe77dd2788284c02140b2820e7b7e1a0bee75ee42dd25",
+          "span": [
+            2501,
+            3583
+          ],
+          "name": "createReusableTemplate",
+          "normalizedASTSHA256": "06fc0959c43b62ba11a283d391baac3b52f57c19a61f0e01ac928672c391876f",
+          "codeSHA256": "fe01da686dc440a0697fa6d4bd94bd963cbd26cbec6209e2fefaaf0567aa730e",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "6b392f62142ab326",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.iife.js",
+          "source": "source-js/485a5d4fab1d3d4a62abe77dd2788284c02140b2820e7b7e1a0bee75ee42dd25.js",
+          "sourceSHA256": "485a5d4fab1d3d4a62abe77dd2788284c02140b2820e7b7e1a0bee75ee42dd25",
+          "span": [
+            4032,
+            4639
+          ],
+          "name": "create",
+          "normalizedASTSHA256": "c8e56e5c71a06285c9fb87fc7d8ea2765fc52d116036fd89574a06e9f5e3241b",
+          "codeSHA256": "b4986f1780c29d46939cabf9f35f79f269cf216263f7695f5a0d44a67845fb7c",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "959dd1cd18927b15",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/747c46a360e486d037ad",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0f844b1160603552a01662ac2999c14e5fb4df487e65619b9ed4406e43eb3c0b"
+        }
+      ],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
+    },
+    {
+      "library": "util",
+      "declaredVersion": "0.12.5",
+      "origin": {
+        "kind": "npm-package",
+        "name": "util",
+        "version": "0.12.5",
+        "integrity": "sha512-kZf/K6hEIrWHI6XqOFUiiMa+79wE/D8Q+NCNAWclkyg3b4d2k7s0QGepNjiABc+aR3N1PAyHL7p6UcLY6LmrnA==",
+        "shasum": "5f17a6059b73db61a875668781a1c2b136bd6fbc",
+        "tarballSHA256": "d3b9dac1449f7d6b6995355f5cc73179fec7b90bfa8967ff7d3c0654525ab282",
+        "bytes": 9981,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 4,
+      "parsedFunctions": 68,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "util.js",
+          "source": "source-js/c4552c9c14122795f3920548f834559ebf64fd00ab5694bc9d0a34dee6290a29.js",
+          "sourceSHA256": "c4552c9c14122795f3920548f834559ebf64fd00ab5694bc9d0a34dee6290a29",
+          "span": [
+            4176,
+            4909
+          ],
+          "name": "inspect",
+          "normalizedASTSHA256": "b22bdb26fb6653986e21daff84797ea7bec8062bdfedaac2d3fa8408954946a8",
+          "codeSHA256": "aa3a24333d9f2ddd13053f2988bb248bb5bdaf8474179970cfb2955bff01f6cc",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "d8a627822a9ea4e6",
+            "graphNodes": 29,
+            "graphEdges": 36,
+            "graphOperationOccurrences": 29,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "util.js",
+          "source": "source-js/c4552c9c14122795f3920548f834559ebf64fd00ab5694bc9d0a34dee6290a29.js",
+          "sourceSHA256": "c4552c9c14122795f3920548f834559ebf64fd00ab5694bc9d0a34dee6290a29",
+          "span": [
+            6024,
+            9140
+          ],
+          "name": "formatValue",
+          "normalizedASTSHA256": "f74c57730c46b91738310a5244036fad0638bac8f252924f9c887824f9a3ab99",
+          "codeSHA256": "05bd528487b1ce42d024c216ce97112ebeaf7c6e1a0599b00ffdbd791fde609f",
+          "features": {
+            "propertyOperations": 47,
+            "distinctOperationPropertyPairs": 20,
+            "pogHash": "1e620ef3db2476f2",
+            "graphNodes": 64,
+            "graphEdges": 92,
+            "graphOperationOccurrences": 48,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "util.js",
+          "source": "source-js/c4552c9c14122795f3920548f834559ebf64fd00ab5694bc9d0a34dee6290a29.js",
+          "sourceSHA256": "c4552c9c14122795f3920548f834559ebf64fd00ab5694bc9d0a34dee6290a29",
+          "span": [
+            10423,
+            12025
+          ],
+          "name": "formatProperty",
+          "normalizedASTSHA256": "9be802413494ddd9fed2b712c4a6e971796d9de8fe8e1be6b95a673013810d31",
+          "codeSHA256": "39089b2e8c39065f0004dfaa852bf2275707e78238248e892d9cd87fd54d157c",
+          "features": {
+            "propertyOperations": 32,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "f94e9271264d98b9",
+            "graphNodes": 35,
+            "graphEdges": 47,
+            "graphOperationOccurrences": 33,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/9342af224fa264b0e961",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "6239c6144c31e58cf925c34483606969c555574d64ffa96518ab5d7f45c75d43"
+        }
+      ],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
+    },
+    {
+      "library": "axios",
+      "declaredVersion": "1.19.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "axios",
+        "version": "1.20.0",
+        "integrity": "sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==",
+        "shasum": "515513445aa60e71d04b6521ca6210829ccb4786",
+        "tarballSHA256": "5aa2dc9a5d6ced926e4b6ca8ef8e0253b118867e240db8650c49379e972c12ac",
+        "bytes": 554708,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 32,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "lib/adapters/adapters.js",
+          "source": "source-js/2d3df49937264cb77ddfae5121bfb15f606b6b8d74582da4691bca983fc81a5d.js",
+          "sourceSHA256": "2d3df49937264cb77ddfae5121bfb15f606b6b8d74582da4691bca983fc81a5d",
+          "span": [
+            1911,
+            3183
+          ],
+          "name": "getAdapter",
+          "normalizedASTSHA256": "6d2754a58031c57e600fc0496f184c05e5242bf2d8c198d351912e0d495e9d70",
+          "codeSHA256": "e6b818dc1e92b48f1455fd3875383566c45f79481c5498637e82a339ff11aa4a",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "ff380ead13dacb5c",
+            "graphNodes": 27,
+            "graphEdges": 36,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/adapters/fetch.js",
+          "source": "source-js/017c61b81b549c1e8ced539306df7495f41a433b3178a03d9e0771eef1eb2c9a.js",
+          "sourceSHA256": "017c61b81b549c1e8ced539306df7495f41a433b3178a03d9e0771eef1eb2c9a",
+          "span": [
+            4640,
+            5244
+          ],
+          "name": "getBodyLength",
+          "normalizedASTSHA256": "dcb4df81538bc06b83994f7b0626b18befa5f3719671b037af0f177084262745",
+          "codeSHA256": "d87cd9251b976ec34cf30b893f434f7a1ed1e3125c28a24d40d6ef27a0088f55",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "6c0d1ad6d1ca9a0f",
+            "graphNodes": 22,
+            "graphEdges": 27,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/adapters/fetch.js",
+          "source": "source-js/017c61b81b549c1e8ced539306df7495f41a433b3178a03d9e0771eef1eb2c9a.js",
+          "sourceSHA256": "017c61b81b549c1e8ced539306df7495f41a433b3178a03d9e0771eef1eb2c9a",
+          "span": [
+            18445,
+            18722
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "d6846333c2d6199d86384f9f00d92881c061652e210365f5f4e50a48c8765092",
+          "codeSHA256": "c5a31a5255e2c31890aab3f765f60af6696ba6b066bf7981b0ecb6ba1b956156",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "cb8e103fa3477a3",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/b45312c3f297dfaa5e2c",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "82761059eaedacb3356803aea8a170d8298609f91b14fc32ee1bfb40d690183c"
+        }
+      ],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
+    },
+    {
+      "library": "@hoppscotch/ui",
+      "declaredVersion": "0.2.6",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@hoppscotch/ui",
+        "version": "0.2.6",
+        "integrity": "sha512-wVM+Ba7XTswVZ0hNKAf1559Hw2/zp4KLBz9nxDaIH3t9JtB7/DCV+Nvjm3aiGdiw7NKX9tKN4ESQQCqqvH9bGQ==",
+        "shasum": "dcf0cc6400f85fb7e68f78b597fdb15e83b0b1a2",
+        "tarballSHA256": "d56d40c132ff0c35cc934906e3a56788de00d9c1e96c0acf58b6b4d177e9c8e8",
+        "bytes": 324352,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 135,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/826c29b90d4085b252c2e43f60be05630d3f9f42611f699fcf01fb61e7ec0999.js",
+          "sourceSHA256": "826c29b90d4085b252c2e43f60be05630d3f9f42611f699fcf01fb61e7ec0999",
+          "span": [
+            5662,
+            6000
+          ],
+          "name": "apply",
+          "normalizedASTSHA256": "38347d01718bb5fa9830b605b71c3db70854483cdaf2855d402034af2041d503",
+          "codeSHA256": "e3937dc74c69ee50fb69553a31f7f3dcddd9dcd941389ce61cc44421afa4f014",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "f6a77afc4d5f4db8",
+            "graphNodes": 13,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/826c29b90d4085b252c2e43f60be05630d3f9f42611f699fcf01fb61e7ec0999.js",
+          "sourceSHA256": "826c29b90d4085b252c2e43f60be05630d3f9f42611f699fcf01fb61e7ec0999",
+          "span": [
+            25691,
+            26079
+          ],
+          "name": "stackSet",
+          "normalizedASTSHA256": "408a1ea0a891fcd32193cb19b24811364b2a3a50d42ffa6bb7e16033a2b35117",
+          "codeSHA256": "771c15494aa55c84831e8d08e0186a2181b4e85a00cbdc49ded44386de18cd0a",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "d01a4e000fb5faab",
+            "graphNodes": 13,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/826c29b90d4085b252c2e43f60be05630d3f9f42611f699fcf01fb61e7ec0999.js",
+          "sourceSHA256": "826c29b90d4085b252c2e43f60be05630d3f9f42611f699fcf01fb61e7ec0999",
+          "span": [
+            38511,
+            40051
+          ],
+          "name": "equalArrays",
+          "normalizedASTSHA256": "f70c94bfa23e8bd5e126a626a5fe1aa6e1d4415da4fe34cf1f99de900a03c47c",
+          "codeSHA256": "5d00a5f25c0f9d7f6318d7acf19143e13f7a36b7a24661ccb4701934370301f2",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "857cc0fb1b793152",
+            "graphNodes": 30,
+            "graphEdges": 44,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/b94c8327a4f5e3d72fb1",
+      "licenses": [],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
+    },
+    {
+      "library": "@tauri-apps/api",
+      "declaredVersion": "2.1.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tauri-apps/api",
+        "version": "2.1.1",
+        "integrity": "sha512-fzUfFFKo4lknXGJq8qrCidkUcKcH2UHhfaaCNt4GzgzGaW2iS26uFOg4tS3H4P8D6ZEeUxtiD5z0nwFF0UN30A==",
+        "shasum": "77d4ddb683d31072de4e6a47c8613d9db011652b",
+        "tarballSHA256": "769d81ab0847f27f2e0444163829a154978668d5c833a84c0c0bef1e724a54f3",
+        "bytes": 117112,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 5,
+      "parsedFunctions": 61,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "core.cjs",
+          "source": "source-js/15b22df724e8bfd5f38ff46e5e45c752f9675806bf8638d22d76b70467b2e7d8.js",
+          "sourceSHA256": "15b22df724e8bfd5f38ff46e5e45c752f9675806bf8638d22d76b70467b2e7d8",
+          "span": [
+            2358,
+            4357
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "5cc2d16858097ac059ea3f9b05290bd5a10d4c209d4b1eb971fc5802b4701d8e",
+          "codeSHA256": "8e83510d6a63951146be96978b38f3b4e45ae947ef9b8ad5a05b1e76ebd8b5b2",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "cbf8f342a9c087c8",
+            "graphNodes": 15,
+            "graphEdges": 17,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "event.cjs",
+          "source": "source-js/5b9672753caef1731dd7f206309dc3bacf7072cb5b64d414245dfef93cc3450a.js",
+          "sourceSHA256": "5b9672753caef1731dd7f206309dc3bacf7072cb5b64d414245dfef93cc3450a",
+          "span": [
+            547,
+            1370
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "f9031b8f0013160bc7c4fcacb72763d42e8a6d0df67705bf75424a49e7f82d0c",
+          "codeSHA256": "82fdaf4b048521b0f283465134480d41740027e155f4aad6ce76ba130bbd4ec5",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "dc382dea8c0c5532",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "event.cjs",
+          "source": "source-js/5b9672753caef1731dd7f206309dc3bacf7072cb5b64d414245dfef93cc3450a.js",
+          "sourceSHA256": "5b9672753caef1731dd7f206309dc3bacf7072cb5b64d414245dfef93cc3450a",
+          "span": [
+            2522,
+            3095
+          ],
+          "name": "listen",
+          "normalizedASTSHA256": "5c33c0d7926033a0ffeb35c6e0ba069cb6c44dfa513c883944bc380eb6799fc0",
+          "codeSHA256": "8c550f3075214d27ab028f77bb4ca062f868023dc9212cb057b8928fcea1dc50",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "26487ba010414356",
+            "graphNodes": 16,
+            "graphEdges": 21,
+            "graphOperationOccurrences": 31,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/641aee828cc54a77901b",
+      "licenses": [],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
+    },
+    {
+      "library": "rxjs",
+      "declaredVersion": "7.8.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "rxjs",
+        "version": "7.8.2",
+        "integrity": "sha512-dhKf903U/PQZY6boNNtAGdWbG85WAbjT/1xYoZIC7FAY0yWapOBQVsVrDl58W86//e1VpMNBtRV4MaXfdMySFA==",
+        "shasum": "955bc473ed8af11a002a2be52071bf475638607b",
+        "tarballSHA256": "2312f8ffd9726ffd7bd53ea12c5f13663d09a3dc3326f448c70b88f5ef6fac82",
+        "bytes": 751525,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 8,
+      "parsedFunctions": 29,
+      "diagnostics": [
+        {
+          "file": "src/internal/ajax/ajax.ts",
+          "error": "SyntaxError: [7:7-7:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/ajax/AjaxResponse.ts",
+          "error": "SyntaxError: [18:25-18:26]: Expected '{'"
+        },
+        {
+          "file": "src/internal/ajax/errors.ts",
+          "error": "SyntaxError: [10:7-10:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/ajax/getXHRResponse.ts",
+          "error": "SyntaxError: [13:34-13:35]: Expected ')'"
+        },
+        {
+          "file": "src/internal/ajax/types.ts",
+          "error": "SyntaxError: [8:7-8:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/internal/AnyCatcher.ts",
+          "error": "SyntaxError: [6:8-6:13]: Unexpected token: 'const'"
+        },
+        {
+          "file": "src/internal/config.ts",
+          "error": "SyntaxError: [8:19-8:20]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/internal/firstValueFrom.ts",
+          "error": "SyntaxError: [5:7-5:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/lastValueFrom.ts",
+          "error": "SyntaxError: [4:7-4:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/Notification.ts",
+          "error": "SyntaxError: [13:7-13:11]: Unexpected token: 'enum'"
+        },
+        {
+          "file": "src/internal/NotificationFactories.ts",
+          "error": "SyntaxError: [8:90-8:92]: Expected ')'"
+        },
+        {
+          "file": "src/internal/Observable.ts",
+          "error": "SyntaxError: [15:23-15:24]: Expected '{'"
+        },
+        {
+          "file": "src/internal/observable/bindCallback.ts",
+          "error": "SyntaxError: [7:14-7:15]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/bindCallbackInternals.ts",
+          "error": "SyntaxError: [10:13-10:14]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/bindNodeCallback.ts",
+          "error": "SyntaxError: [7:14-7:15]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/combineLatest.ts",
+          "error": "SyntaxError: [26:29-26:30]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/concat.ts",
+          "error": "SyntaxError: [7:22-7:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/connectable.ts",
+          "error": "SyntaxError: [7:7-7:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/observable/ConnectableObservable.ts",
+          "error": "SyntaxError: [16:34-16:35]: Expected '{'"
+        },
+        {
+          "file": "src/internal/observable/defer.ts",
+          "error": "SyntaxError: [52:21-52:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/dom/animationFrames.ts",
+          "error": "SyntaxError: [75:49-75:50]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/dom/fetch.ts",
+          "error": "SyntaxError: [6:25-6:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/dom/webSocket.ts",
+          "error": "SyntaxError: [159:25-159:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/dom/WebSocketSubject.ts",
+          "error": "SyntaxError: [106:7-106:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/observable/empty.ts",
+          "error": "SyntaxError: [73:31-73:32]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/forkJoin.ts",
+          "error": "SyntaxError: [22:24-22:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/from.ts",
+          "error": "SyntaxError: [6:20-6:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/fromEvent.ts",
+          "error": "SyntaxError: [9:66-9:68]: Unexpected token: 'as'"
+        },
+        {
+          "file": "src/internal/observable/fromEventPattern.ts",
+          "error": "SyntaxError: [7:32-7:33]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/fromSubscribable.ts",
+          "error": "SyntaxError: [15:32-15:33]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/generate.ts",
+          "error": "SyntaxError: [8:5-8:18]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/internal/observable/iif.ts",
+          "error": "SyntaxError: [83:19-83:20]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/innerFrom.ts",
+          "error": "SyntaxError: [15:25-15:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/interval.ts",
+          "error": "SyntaxError: [50:46-50:47]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/merge.ts",
+          "error": "SyntaxError: [9:21-9:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/of.ts",
+          "error": "SyntaxError: [11:24-11:25]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/onErrorResumeNext.ts",
+          "error": "SyntaxError: [8:33-8:34]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/pairs.ts",
+          "error": "SyntaxError: [8:21-8:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/partition.ts",
+          "error": "SyntaxError: [8:25-8:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/race.ts",
+          "error": "SyntaxError: [9:20-9:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/range.ts",
+          "error": "SyntaxError: [5:27-5:28]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/throwError.ts",
+          "error": "SyntaxError: [98:39-98:40]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/timer.ts",
+          "error": "SyntaxError: [84:25-84:26]: Expected ')'"
+        },
+        {
+          "file": "src/internal/observable/using.ts",
+          "error": "SyntaxError: [32:21-32:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/observable/zip.ts",
+          "error": "SyntaxError: [9:19-9:20]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/audit.ts",
+          "error": "SyntaxError: [53:21-53:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/auditTime.ts",
+          "error": "SyntaxError: [53:25-53:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/buffer.ts",
+          "error": "SyntaxError: [45:22-45:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/bufferCount.ts",
+          "error": "SyntaxError: [57:27-57:28]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/bufferTime.ts",
+          "error": "SyntaxError: [10:26-10:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/bufferToggle.ts",
+          "error": "SyntaxError: [52:28-52:29]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/bufferWhen.ts",
+          "error": "SyntaxError: [46:26-46:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/catchError.ts",
+          "error": "SyntaxError: [9:26-9:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/combineLatest.ts",
+          "error": "SyntaxError: [10:29-10:30]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/combineLatestAll.ts",
+          "error": "SyntaxError: [5:32-5:33]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/combineLatestWith.ts",
+          "error": "SyntaxError: [44:33-44:34]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/concat.ts",
+          "error": "SyntaxError: [8:22-8:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/concatAll.ts",
+          "error": "SyntaxError: [60:25-60:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/concatMap.ts",
+          "error": "SyntaxError: [6:25-6:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/concatMapTo.ts",
+          "error": "SyntaxError: [6:27-6:28]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/concatWith.ts",
+          "error": "SyntaxError: [44:26-44:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/connect.ts",
+          "error": "SyntaxError: [11:7-11:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/count.ts",
+          "error": "SyntaxError: [59:21-59:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/debounce.ts",
+          "error": "SyntaxError: [66:24-66:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/debounceTime.ts",
+          "error": "SyntaxError: [63:28-63:29]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/defaultIfEmpty.ts",
+          "error": "SyntaxError: [40:30-40:31]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/delay.ts",
+          "error": "SyntaxError: [62:21-62:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/delayWhen.ts",
+          "error": "SyntaxError: [11:25-11:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/dematerialize.ts",
+          "error": "SyntaxError: [54:29-54:30]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/distinct.ts",
+          "error": "SyntaxError: [64:24-64:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/distinctUntilChanged.ts",
+          "error": "SyntaxError: [6:36-6:37]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/distinctUntilKeyChanged.ts",
+          "error": "SyntaxError: [4:39-4:40]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/elementAt.ts",
+          "error": "SyntaxError: [57:25-57:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/endWith.ts",
+          "error": "SyntaxError: [8:23-8:24]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/every.ts",
+          "error": "SyntaxError: [6:21-6:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/exhaustAll.ts",
+          "error": "SyntaxError: [49:26-49:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/exhaustMap.ts",
+          "error": "SyntaxError: [10:26-10:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/expand.ts",
+          "error": "SyntaxError: [6:22-6:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/filter.ts",
+          "error": "SyntaxError: [6:22-6:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/finalize.ts",
+          "error": "SyntaxError: [65:24-65:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/find.ts",
+          "error": "SyntaxError: [7:20-7:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/findIndex.ts",
+          "error": "SyntaxError: [6:25-6:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/first.ts",
+          "error": "SyntaxError: [10:21-10:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/groupBy.ts",
+          "error": "SyntaxError: [8:7-8:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/ignoreElements.ts",
+          "error": "SyntaxError: [41:32-41:33]: Expected '{'"
+        },
+        {
+          "file": "src/internal/operators/isEmpty.ts",
+          "error": "SyntaxError: [66:23-66:24]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/joinAllInternals.ts",
+          "error": "SyntaxError: [19:32-19:33]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/last.ts",
+          "error": "SyntaxError: [10:20-10:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/map.ts",
+          "error": "SyntaxError: [5:19-5:20]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/mapTo.ts",
+          "error": "SyntaxError: [5:21-5:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/materialize.ts",
+          "error": "SyntaxError: [54:27-54:28]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/max.ts",
+          "error": "SyntaxError: [52:19-52:20]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/merge.ts",
+          "error": "SyntaxError: [8:21-8:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/mergeAll.ts",
+          "error": "SyntaxError: [64:24-64:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/mergeInternals.ts",
+          "error": "SyntaxError: [21:30-21:31]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/mergeMap.ts",
+          "error": "SyntaxError: [9:24-9:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/mergeMapTo.ts",
+          "error": "SyntaxError: [6:26-6:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/mergeScan.ts",
+          "error": "SyntaxError: [70:25-70:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/mergeWith.ts",
+          "error": "SyntaxError: [45:25-45:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/min.ts",
+          "error": "SyntaxError: [52:19-52:20]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/multicast.ts",
+          "error": "SyntaxError: [21:25-21:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/observeOn.ts",
+          "error": "SyntaxError: [59:25-59:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/onErrorResumeNextWith.ts",
+          "error": "SyntaxError: [5:37-5:38]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/OperatorSubscriber.ts",
+          "error": "SyntaxError: [15:40-15:41]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/pairwise.ts",
+          "error": "SyntaxError: [48:24-48:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/partition.ts",
+          "error": "SyntaxError: [56:25-56:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/pluck.ts",
+          "error": "SyntaxError: [6:21-6:22]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/publish.ts",
+          "error": "SyntaxError: [20:23-20:24]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/publishBehavior.ts",
+          "error": "SyntaxError: [20:31-20:32]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/publishLast.ts",
+          "error": "SyntaxError: [70:27-70:28]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/publishReplay.ts",
+          "error": "SyntaxError: [23:29-23:30]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/race.ts",
+          "error": "SyntaxError: [6:20-6:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/raceWith.ts",
+          "error": "SyntaxError: [32:24-32:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/reduce.ts",
+          "error": "SyntaxError: [5:22-5:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/refCount.ts",
+          "error": "SyntaxError: [65:24-65:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/repeat.ts",
+          "error": "SyntaxError: [9:7-9:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/repeatWhen.ts",
+          "error": "SyntaxError: [44:26-44:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/retry.ts",
+          "error": "SyntaxError: [13:7-13:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/retryWhen.ts",
+          "error": "SyntaxError: [67:25-67:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/sample.ts",
+          "error": "SyntaxError: [47:22-47:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/sampleTime.ts",
+          "error": "SyntaxError: [49:26-49:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/scan.ts",
+          "error": "SyntaxError: [5:20-5:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/scanInternals.ts",
+          "error": "SyntaxError: [14:29-14:30]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/sequenceEqual.ts",
+          "error": "SyntaxError: [63:29-63:30]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/share.ts",
+          "error": "SyntaxError: [8:7-8:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/shareReplay.ts",
+          "error": "SyntaxError: [5:7-5:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/single.ts",
+          "error": "SyntaxError: [10:22-10:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/skip.ts",
+          "error": "SyntaxError: [37:20-37:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/skipLast.ts",
+          "error": "SyntaxError: [48:24-48:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/skipUntil.ts",
+          "error": "SyntaxError: [52:25-52:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/skipWhile.ts",
+          "error": "SyntaxError: [5:25-5:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/startWith.ts",
+          "error": "SyntaxError: [11:25-11:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/subscribeOn.ts",
+          "error": "SyntaxError: [63:27-63:28]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/switchAll.ts",
+          "error": "SyntaxError: [63:25-63:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/switchMap.ts",
+          "error": "SyntaxError: [8:25-8:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/switchMapTo.ts",
+          "error": "SyntaxError: [6:27-6:28]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/switchScan.ts",
+          "error": "SyntaxError: [24:26-24:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/take.ts",
+          "error": "SyntaxError: [48:20-48:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/takeLast.ts",
+          "error": "SyntaxError: [45:24-45:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/takeUntil.ts",
+          "error": "SyntaxError: [45:25-45:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/takeWhile.ts",
+          "error": "SyntaxError: [5:25-5:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/tap.ts",
+          "error": "SyntaxError: [52:7-52:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/throttle.ts",
+          "error": "SyntaxError: [15:7-15:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/throttleTime.ts",
+          "error": "SyntaxError: [55:28-55:29]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/throwIfEmpty.ts",
+          "error": "SyntaxError: [42:28-42:29]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/timeInterval.ts",
+          "error": "SyntaxError: [45:28-45:29]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/timeout.ts",
+          "error": "SyntaxError: [12:7-12:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/operators/timeoutWith.ts",
+          "error": "SyntaxError: [8:27-8:28]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/timestamp.ts",
+          "error": "SyntaxError: [37:25-37:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/toArray.ts",
+          "error": "SyntaxError: [5:23-5:24]: Expected ')'"
+        },
+        {
+          "file": "src/internal/operators/window.ts",
+          "error": "SyntaxError: [53:22-53:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/windowCount.ts",
+          "error": "SyntaxError: [68:27-68:28]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/windowTime.ts",
+          "error": "SyntaxError: [12:26-12:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/windowToggle.ts",
+          "error": "SyntaxError: [56:28-56:29]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/windowWhen.ts",
+          "error": "SyntaxError: [54:26-54:27]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/withLatestFrom.ts",
+          "error": "SyntaxError: [9:30-9:31]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/zip.ts",
+          "error": "SyntaxError: [6:19-6:20]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/zipAll.ts",
+          "error": "SyntaxError: [13:22-13:23]: Expected '('"
+        },
+        {
+          "file": "src/internal/operators/zipWith.ts",
+          "error": "SyntaxError: [27:23-27:24]: Expected '('"
+        },
+        {
+          "file": "src/internal/scheduled/scheduleArray.ts",
+          "error": "SyntaxError: [4:29-4:30]: Expected '('"
+        },
+        {
+          "file": "src/internal/scheduled/scheduleAsyncIterable.ts",
+          "error": "SyntaxError: [5:37-5:38]: Expected '('"
+        },
+        {
+          "file": "src/internal/scheduled/scheduled.ts",
+          "error": "SyntaxError: [28:25-28:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/scheduled/scheduleIterable.ts",
+          "error": "SyntaxError: [12:32-12:33]: Expected '('"
+        },
+        {
+          "file": "src/internal/scheduled/scheduleObservable.ts",
+          "error": "SyntaxError: [6:34-6:35]: Expected '('"
+        },
+        {
+          "file": "src/internal/scheduled/schedulePromise.ts",
+          "error": "SyntaxError: [6:31-6:32]: Expected '('"
+        },
+        {
+          "file": "src/internal/scheduled/scheduleReadableStreamLike.ts",
+          "error": "SyntaxError: [6:42-6:43]: Expected '('"
+        },
+        {
+          "file": "src/internal/Scheduler.ts",
+          "error": "SyntaxError: [24:23-24:33]: Expected '{'"
+        },
+        {
+          "file": "src/internal/scheduler/Action.ts",
+          "error": "SyntaxError: [17:19-17:20]: Expected '{'"
+        },
+        {
+          "file": "src/internal/scheduler/AnimationFrameAction.ts",
+          "error": "SyntaxError: [7:33-7:34]: Expected '{'"
+        },
+        {
+          "file": "src/internal/scheduler/animationFrameProvider.ts",
+          "error": "SyntaxError: [3:0-3:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/scheduler/AsapAction.ts",
+          "error": "SyntaxError: [7:23-7:24]: Expected '{'"
+        },
+        {
+          "file": "src/internal/scheduler/AsyncAction.ts",
+          "error": "SyntaxError: [9:24-9:25]: Expected '{'"
+        },
+        {
+          "file": "src/internal/scheduler/AsyncScheduler.ts",
+          "error": "SyntaxError: [7:9-7:16]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/internal/scheduler/dateTimestampProvider.ts",
+          "error": "SyntaxError: [3:0-3:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/scheduler/immediateProvider.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internal/scheduler/intervalProvider.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internal/scheduler/performanceTimestampProvider.ts",
+          "error": "SyntaxError: [3:0-3:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/scheduler/QueueAction.ts",
+          "error": "SyntaxError: [7:24-7:25]: Expected '{'"
+        },
+        {
+          "file": "src/internal/scheduler/timeoutProvider.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internal/scheduler/VirtualTimeScheduler.ts",
+          "error": "SyntaxError: [17:9-17:14]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/internal/Subject.ts",
+          "error": "SyntaxError: [17:20-17:21]: Expected '{'"
+        },
+        {
+          "file": "src/internal/Subscriber.ts",
+          "error": "SyntaxError: [19:23-19:24]: Expected '{'"
+        },
+        {
+          "file": "src/internal/Subscription.ts",
+          "error": "SyntaxError: [16:26-16:36]: Expected '{'"
+        },
+        {
+          "file": "src/internal/symbol/iterator.ts",
+          "error": "SyntaxError: [1:35-1:36]: Expected '{'"
+        },
+        {
+          "file": "src/internal/symbol/observable.ts",
+          "error": "SyntaxError: [7:23-7:24]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/internal/testing/ColdObservable.ts",
+          "error": "SyntaxError: [11:27-11:28]: Expected '{'"
+        },
+        {
+          "file": "src/internal/testing/HotObservable.ts",
+          "error": "SyntaxError: [11:26-11:27]: Expected '{'"
+        },
+        {
+          "file": "src/internal/testing/TestScheduler.ts",
+          "error": "SyntaxError: [13:12-13:13]: Expected 'from'"
+        },
+        {
+          "file": "src/internal/types.ts",
+          "error": "SyntaxError: [11:8-11:14]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/internal/util/applyMixins.ts",
+          "error": "SyntaxError: [1:39-1:40]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/args.ts",
+          "error": "SyntaxError: [5:13-5:14]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/argsArgArrayOrObject.ts",
+          "error": "SyntaxError: [10:36-10:37]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/argsOrArgArray.ts",
+          "error": "SyntaxError: [7:30-7:31]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/ArgumentOutOfRangeError.ts",
+          "error": "SyntaxError: [3:7-3:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/util/arrRemove.ts",
+          "error": "SyntaxError: [6:25-6:26]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/createErrorClass.ts",
+          "error": "SyntaxError: [10:32-10:33]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/createObject.ts",
+          "error": "SyntaxError: [1:33-1:34]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/EmptyError.ts",
+          "error": "SyntaxError: [3:7-3:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/util/errorContext.ts",
+          "error": "SyntaxError: [3:11-3:12]: Unexpected token: ':'"
+        },
+        {
+          "file": "src/internal/util/executeSchedule.ts",
+          "error": "SyntaxError: [5:20-5:21]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/identity.ts",
+          "error": "SyntaxError: [43:24-43:25]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/Immediate.ts",
+          "error": "SyntaxError: [3:12-3:13]: Unexpected token: ':'"
+        },
+        {
+          "file": "src/internal/util/isArrayLike.ts",
+          "error": "SyntaxError: [1:28-1:29]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/internal/util/isAsyncIterable.ts",
+          "error": "SyntaxError: [3:31-3:32]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/isDate.ts",
+          "error": "SyntaxError: [8:33-8:34]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/isFunction.ts",
+          "error": "SyntaxError: [5:32-5:33]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/isInteropObservable.ts",
+          "error": "SyntaxError: [6:41-6:42]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/isIterable.ts",
+          "error": "SyntaxError: [5:32-5:33]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/isObservable.ts",
+          "error": "SyntaxError: [9:32-9:33]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/isPromise.ts",
+          "error": "SyntaxError: [7:31-7:32]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/isReadableStreamLike.ts",
+          "error": "SyntaxError: [4:57-4:58]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/isScheduler.ts",
+          "error": "SyntaxError: [4:33-4:34]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/lift.ts",
+          "error": "SyntaxError: [9:30-9:31]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/mapOneOrManyArgs.ts",
+          "error": "SyntaxError: [6:20-6:21]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/not.ts",
+          "error": "SyntaxError: [1:19-1:20]: Expected '('"
+        },
+        {
+          "file": "src/internal/util/NotFoundError.ts",
+          "error": "SyntaxError: [3:7-3:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/util/ObjectUnsubscribedError.ts",
+          "error": "SyntaxError: [3:7-3:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/util/pipe.ts",
+          "error": "SyntaxError: [4:22-4:23]: Expected '{'"
+        },
+        {
+          "file": "src/internal/util/reportUnhandledError.ts",
+          "error": "SyntaxError: [13:40-13:41]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/SequenceError.ts",
+          "error": "SyntaxError: [3:7-3:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/internal/util/subscribeToArray.ts",
+          "error": "SyntaxError: [7:32-7:33]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/internal/util/throwUnobservableError.ts",
+          "error": "SyntaxError: [5:54-5:55]: Expected ')'"
+        },
+        {
+          "file": "src/internal/util/UnsubscriptionError.ts",
+          "error": "SyntaxError: [3:7-3:16]: Unexpected token: 'interface'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/bundles/rxjs.umd.js",
+          "source": "source-js/1e41ea39143e34c256fbf9056b56afdd6c0438d84ed772e4e3f6230ccfeee81b.js",
+          "sourceSHA256": "1e41ea39143e34c256fbf9056b56afdd6c0438d84ed772e4e3f6230ccfeee81b",
+          "span": [
+            24484,
+            24991
+          ],
+          "name": "__rest",
+          "normalizedASTSHA256": "47819006f5d7afc0f42f8d7c54cb623081439aa842540284019c8efbda08c2bb",
+          "codeSHA256": "4d677121507d2289b601b58720be907e8d610a8fb7681ac6168801a4c69e9829",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "73ef873394d45112",
+            "graphNodes": 19,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/bundles/rxjs.umd.js",
+          "source": "source-js/1e41ea39143e34c256fbf9056b56afdd6c0438d84ed772e4e3f6230ccfeee81b.js",
+          "sourceSHA256": "1e41ea39143e34c256fbf9056b56afdd6c0438d84ed772e4e3f6230ccfeee81b",
+          "span": [
+            26100,
+            27566
+          ],
+          "name": "step",
+          "normalizedASTSHA256": "fba31d90c2ba5ba8467a7e424687f62e6bb46d8d29ef1080b651e89c99dd0a39",
+          "codeSHA256": "348b26fc8397281ca2d8f93e3f2d253e840423b90ac9a6a0fa014bce5edbec41",
+          "features": {
+            "propertyOperations": 59,
+            "distinctOperationPropertyPairs": 21,
+            "pogHash": "7beefe3643fa8222",
+            "graphNodes": 76,
+            "graphEdges": 99,
+            "graphOperationOccurrences": 77,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/bundles/rxjs.umd.js",
+          "source": "source-js/1e41ea39143e34c256fbf9056b56afdd6c0438d84ed772e4e3f6230ccfeee81b.js",
+          "sourceSHA256": "1e41ea39143e34c256fbf9056b56afdd6c0438d84ed772e4e3f6230ccfeee81b",
+          "span": [
+            28065,
+            28596
+          ],
+          "name": "__read",
+          "normalizedASTSHA256": "ebecb39e8e30e03fb937d2a2b0f9290ee4a36eb12ba29081dc6f1db06de78f31",
+          "codeSHA256": "88c3b8ebbd752231df85a4b7788da6629c74006b0c32eb12e234490da383345b",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "36904f6f29e94173",
+            "graphNodes": 24,
+            "graphEdges": 31,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/b348b1ecf712d6ab42d4",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "81c407ac717813b0e3795402960e04003c7bba8ba59b621624707028531c9ade"
+        }
+      ],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
     },
     {
       "library": "zod",
-      "initialAnchors": 5,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "rxjs",
-        "zod"
-      ],
+      "declaredVersion": "3.25.32",
+      "origin": {
+        "kind": "npm-package",
+        "name": "zod",
+        "version": "3.25.32",
+        "integrity": "sha512-OSm2xTIRfW8CV5/QKgngwmQW/8aPfGdaQFlrGoErlgg/Epm7cjb6K6VEyExfe65a3VybUOnu381edLb0dfJl0g==",
+        "shasum": "769cc684072df780fc8f38130b0cd9283a8d3818",
+        "tarballSHA256": "7d8451b8132464ba2eee2b9d763ed3a00829b37530d028e5cef01468a2598193",
+        "bytes": 202295,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 434,
-      "sourceFiles": 7,
-      "finalInitialAnchors": 5
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 5,
+      "parsedFunctions": 26,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/cjs/v3/helpers/parseUtil.js",
+          "source": "source-js/c11294edb27ad7c9318bea04b199153765cd17b7a73e9d101722b0379549dd24.js",
+          "sourceSHA256": "c11294edb27ad7c9318bea04b199153765cd17b7a73e9d101722b0379549dd24",
+          "span": [
+            580,
+            1296
+          ],
+          "name": "makeIssue",
+          "normalizedASTSHA256": "21233afce55b145ec26b73ceed5aaad5a37092288dd2cf88274ecf8ac8ae7b64",
+          "codeSHA256": "15100b9815d973a62eccd11bbef2bf595fbeab1e05246d36ec845be497a38a68",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "2e011b76320a7344",
+            "graphNodes": 14,
+            "graphEdges": 15,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/v3/helpers/parseUtil.js",
+          "source": "source-js/c11294edb27ad7c9318bea04b199153765cd17b7a73e9d101722b0379549dd24.js",
+          "sourceSHA256": "c11294edb27ad7c9318bea04b199153765cd17b7a73e9d101722b0379549dd24",
+          "span": [
+            1354,
+            1981
+          ],
+          "name": "addIssueToContext",
+          "normalizedASTSHA256": "8883d8d53f43cef96892bebbe47eb4ca238138174aa5fe44b54929b82cee1ccd",
+          "codeSHA256": "4ccbd49680f30890683b4acfc6d32522930e6a37d8b0927c0a7905bcf6bdc574",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "31165e24d7601ded",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/v3/helpers/parseUtil.js",
+          "source": "source-js/c11294edb27ad7c9318bea04b199153765cd17b7a73e9d101722b0379549dd24.js",
+          "sourceSHA256": "c11294edb27ad7c9318bea04b199153765cd17b7a73e9d101722b0379549dd24",
+          "span": [
+            3008,
+            3694
+          ],
+          "name": "mergeObjectSync",
+          "normalizedASTSHA256": "abcdc21f011f56a334b903f28208196218f79fc76c018b3df72917932f584768",
+          "codeSHA256": "4215f67b1d22ff6e85994d5af4239967a969532a6eccbe2f3180523d98e96e6e",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "5e64fd1f682075be",
+            "graphNodes": 26,
+            "graphEdges": 32,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/4f63cf5cd8ae579d5ec0",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "3f1189b28e3866e0d979968d466b78f813f76827cfdca1fbb124cc0a5c8841f8"
+        }
+      ],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
+    },
+    {
+      "library": "@hoppscotch/common",
+      "declaredVersion": "workspace:^",
+      "origin": {
+        "kind": "pinned-repository-source",
+        "commit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
+        "path": "packages/hoppscotch-common",
+        "packageName": "@hoppscotch/common",
+        "version": "2026.10.1",
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 12,
+      "parsedFunctions": 47,
+      "diagnostics": [
+        {
+          "file": "src/components/importExport/types.ts",
+          "error": "SyntaxError: [5:7-5:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/composables/ai-experiments.ts",
+          "error": "SyntaxError: [14:54-14:55]: Expected ')'"
+        },
+        {
+          "file": "src/composables/auth.ts",
+          "error": "SyntaxError: [13:31-13:32]: Expected ')'"
+        },
+        {
+          "file": "src/composables/chat-context.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composables/codemirror.ts",
+          "error": "SyntaxError: [82:5-82:25]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/composables/desktop-settings.ts",
+          "error": "SyntaxError: [26:7-26:22]: Expected ','"
+        },
+        {
+          "file": "src/composables/desktop-zoom.ts",
+          "error": "SyntaxError: [1:21-1:36]: Expected ','"
+        },
+        {
+          "file": "src/composables/graphql.ts",
+          "error": "SyntaxError: [29:5-29:13]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/composables/lens-actions.ts",
+          "error": "SyntaxError: [15:49-15:50]: Expected ')'"
+        },
+        {
+          "file": "src/composables/mockServer.ts",
+          "error": "SyntaxError: [4:12-4:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composables/oauth2/useOAuth2AdvancedParams.ts",
+          "error": "SyntaxError: [4:7-4:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/composables/oauth2/useOAuth2GrantTypes.ts",
+          "error": "SyntaxError: [31:7-31:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/composables/picker.ts",
+          "error": "SyntaxError: [4:7-4:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/composables/poll.ts",
+          "error": "SyntaxError: [3:25-3:26]: Expected '('"
+        },
+        {
+          "file": "src/composables/ref.ts",
+          "error": "SyntaxError: [3:24-3:25]: Expected '('"
+        },
+        {
+          "file": "src/composables/settings.ts",
+          "error": "SyntaxError: [6:26-6:27]: Expected '('"
+        },
+        {
+          "file": "src/composables/step-components.ts",
+          "error": "SyntaxError: [4:7-4:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/composables/stream.ts",
+          "error": "SyntaxError: [5:5-5:14]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/composables/theming.ts",
+          "error": "SyntaxError: [4:54-4:56]: Unexpected token: 'as'"
+        },
+        {
+          "file": "src/composables/update-check.ts",
+          "error": "SyntaxError: [1:29-1:32]: Expected ','"
+        },
+        {
+          "file": "src/composables/useDocumentationWorker.ts",
+          "error": "SyntaxError: [8:7-8:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/composables/useFileUpload.ts",
+          "error": "SyntaxError: [6:7-6:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/composables/useMockServer.ts",
+          "error": "SyntaxError: [10:12-10:13]: Expected 'from'"
+        },
+        {
+          "file": "src/composables/useScrollerRef.ts",
+          "error": "SyntaxError: [15:7-15:8]: Expected ')'"
+        },
+        {
+          "file": "src/composables/whats-new.ts",
+          "error": "SyntaxError: [28:28-28:29]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/actions.ts",
+          "error": "SyntaxError: [19:55-19:56]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/aichat/app-actions.ts",
+          "error": "SyntaxError: [49:24-49:25]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/aichat/collection-requests.ts",
+          "error": "SyntaxError: [1:37-1:52]: Expected ','"
+        },
+        {
+          "file": "src/helpers/aichat/collections.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/aichat/commands.ts",
+          "error": "SyntaxError: [3:7-3:21]: Expected ','"
+        },
+        {
+          "file": "src/helpers/aichat/context-serializers.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/aichat/external-links.ts",
+          "error": "SyntaxError: [20:7-20:8]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/aichat/provider-logos.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/aichat/script-hosts.ts",
+          "error": "SyntaxError: [5:7-5:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/helpers/aichat/secret-references.ts",
+          "error": "SyntaxError: [111:26-111:27]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/aichat/skills.ts",
+          "error": "SyntaxError: [9:7-9:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/aichat/step-lines.ts",
+          "error": "SyntaxError: [8:7-8:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/aichat/suggestions.ts",
+          "error": "SyntaxError: [48:42-48:43]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/auth/auth-types.ts",
+          "error": "SyntaxError: [30:6-30:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/auth/digest.ts",
+          "error": "SyntaxError: [8:7-8:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/helpers/auth/index.ts",
+          "error": "SyntaxError: [11:52-11:53]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/helpers/auth/types/api-key.ts",
+          "error": "SyntaxError: [10:6-10:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/auth/types/aws-signature.ts",
+          "error": "SyntaxError: [13:5-13:16]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/auth/types/basic.ts",
+          "error": "SyntaxError: [12:21-12:22]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/auth/types/bearer.ts",
+          "error": "SyntaxError: [9:6-9:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/auth/types/digest.ts",
+          "error": "SyntaxError: [16:6-16:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/auth/types/hawk.ts",
+          "error": "SyntaxError: [12:6-12:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/auth/types/jwt.ts",
+          "error": "SyntaxError: [11:6-11:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/auth/types/oauth2.ts",
+          "error": "SyntaxError: [10:6-10:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/backend/GQLClient.ts",
+          "error": "SyntaxError: [35:5-35:14]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/helpers.ts",
+          "error": "SyntaxError: [30:5-30:23]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/MockServer.ts",
+          "error": "SyntaxError: [12:12-12:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/Profile.ts",
+          "error": "SyntaxError: [8:5-8:21]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/PublishedDocs.ts",
+          "error": "SyntaxError: [16:5-16:28]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/Shortcode.ts",
+          "error": "SyntaxError: [13:5-13:26]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/Team.ts",
+          "error": "SyntaxError: [25:5-25:21]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/TeamCollection.ts",
+          "error": "SyntaxError: [37:5-37:33]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/TeamEnvironment.ts",
+          "error": "SyntaxError: [17:5-17:31]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/TeamInvitation.ts",
+          "error": "SyntaxError: [13:7-13:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/mutations/TeamRequest.ts",
+          "error": "SyntaxError: [20:5-20:24]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/backend/queries/MockServer.ts",
+          "error": "SyntaxError: [8:7-8:28]: Expected ','"
+        },
+        {
+          "file": "src/helpers/backend/queries/MockServerLogs.ts",
+          "error": "SyntaxError: [13:14-13:15]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/backend/queries/PublishedDocs.ts",
+          "error": "SyntaxError: [7:7-7:33]: Expected ','"
+        },
+        {
+          "file": "src/helpers/backend/types/Email.ts",
+          "error": "SyntaxError: [6:0-6:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/helpers/backend/types/TeamName.ts",
+          "error": "SyntaxError: [3:0-3:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/helpers/clientLocalVariables.ts",
+          "error": "SyntaxError: [1:35-1:49]: Expected ','"
+        },
+        {
+          "file": "src/helpers/collection/affectedIndex.ts",
+          "error": "SyntaxError: [8:39-8:40]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/collection/collection.ts",
+          "error": "SyntaxError: [19:9-19:10]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/collection/request.ts",
+          "error": "SyntaxError: [20:58-20:59]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/curl/curlparser.ts",
+          "error": "SyntaxError: [41:33-41:34]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/auth.ts",
+          "error": "SyntaxError: [11:38-11:39]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/body.ts",
+          "error": "SyntaxError: [20:5-20:19]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/contentParser.ts",
+          "error": "SyntaxError: [13:22-13:23]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/cookies.ts",
+          "error": "SyntaxError: [12:42-12:43]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/headers.ts",
+          "error": "SyntaxError: [18:48-18:50]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/method.ts",
+          "error": "SyntaxError: [13:42-13:43]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/preproc.ts",
+          "error": "SyntaxError: [6:18-6:19]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/queries.ts",
+          "error": "SyntaxError: [7:29-7:30]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/curl/sub_helpers/url.ts",
+          "error": "SyntaxError: [10:31-10:32]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/dragDropValidation.ts",
+          "error": "SyntaxError: [1:7-1:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/editor/completion/gqlQuery.ts",
+          "error": "SyntaxError: [6:15-6:16]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/completion/index.ts",
+          "error": "SyntaxError: [1:7-1:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/editor/completion/preRequest.ts",
+          "error": "SyntaxError: [4:15-4:16]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/completion/testScript.ts",
+          "error": "SyntaxError: [4:22-4:23]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/extensions/helpers.ts",
+          "error": "SyntaxError: [10:31-10:32]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/editor/extensions/HoppEnvironment.ts",
+          "error": "SyntaxError: [64:41-64:42]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/editor/extensions/HoppPredefinedVariables.ts",
+          "error": "SyntaxError: [160:21-160:23]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/editor/gql/operation.ts",
+          "error": "SyntaxError: [5:42-5:43]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/editor/linting/gqlQuery.ts",
+          "error": "SyntaxError: [14:33-14:34]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/linting/json.ts",
+          "error": "SyntaxError: [5:12-5:13]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/linting/jsonc.ts",
+          "error": "SyntaxError: [6:12-6:13]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/linting/jsoncPretty.ts",
+          "error": "SyntaxError: [3:33-3:34]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/editor/linting/linter.ts",
+          "error": "SyntaxError: [1:7-1:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/editor/linting/preRequest.ts",
+          "error": "SyntaxError: [5:12-5:13]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/linting/rawKeyValue.ts",
+          "error": "SyntaxError: [6:12-6:13]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/linting/testScript.ts",
+          "error": "SyntaxError: [5:12-5:13]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/editor/themes/baseTheme.ts",
+          "error": "SyntaxError: [415:6-415:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/editor/utils.ts",
+          "error": "SyntaxError: [2:6-2:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/editorutils.ts",
+          "error": "SyntaxError: [11:49-11:50]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/error-messages/index.ts",
+          "error": "SyntaxError: [3:44-3:45]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/experimental-sandbox-integration.ts",
+          "error": "SyntaxError: [28:17-28:18]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/findStatusGroup.ts",
+          "error": "SyntaxError: [1:39-1:40]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/fixBrokenEnvironmentVersion.ts",
+          "error": "SyntaxError: [19:48-19:49]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/fixBrokenRequestVersion.ts",
+          "error": "SyntaxError: [9:5-9:23]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/functional/array.ts",
+          "error": "SyntaxError: [9:2-9:3]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/helpers/functional/debug.ts",
+          "error": "SyntaxError: [6:21-6:22]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/helpers/functional/domain-settings.ts",
+          "error": "SyntaxError: [6:7-6:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/functional/error.ts",
+          "error": "SyntaxError: [1:34-1:35]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/functional/files.ts",
+          "error": "SyntaxError: [3:35-3:36]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/functional/filter-active.ts",
+          "error": "SyntaxError: [6:11-6:12]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/functional/formData.ts",
+          "error": "SyntaxError: [1:5-1:18]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/functional/json.ts",
+          "error": "SyntaxError: [10:5-10:18]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/functional/object.ts",
+          "error": "SyntaxError: [6:2-6:3]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/helpers/functional/option.ts",
+          "error": "SyntaxError: [13:2-13:3]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/helpers/functional/parse.ts",
+          "error": "SyntaxError: [3:38-3:39]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/functional/primtive.ts",
+          "error": "SyntaxError: [1:7-1:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/functional/process-request.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/functional/record.ts",
+          "error": "SyntaxError: [9:29-9:30]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/helpers/functional/yaml.ts",
+          "error": "SyntaxError: [6:33-6:34]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/gist.ts",
+          "error": "SyntaxError: [5:9-5:10]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/globalEnvShape.ts",
+          "error": "SyntaxError: [3:7-3:24]: Expected ','"
+        },
+        {
+          "file": "src/helpers/graphql/connection.ts",
+          "error": "SyntaxError: [37:5-37:29]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/graphql/default.ts",
+          "error": "SyntaxError: [24:38-24:39]: Expected '=>'"
+        },
+        {
+          "file": "src/helpers/graphql/eq.ts",
+          "error": "SyntaxError: [15:27-15:28]: Unexpected token: '<'"
+        },
+        {
+          "file": "src/helpers/graphql/explorer.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/graphql/index.ts",
+          "error": "SyntaxError: [7:7-7:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/graphql/query.ts",
+          "error": "SyntaxError: [22:5-22:12]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/graphql/testRunner.ts",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/handleTokenValidation.ts",
+          "error": "SyntaxError: [14:45-14:46]: Unexpected token: ':'"
+        },
+        {
+          "file": "src/helpers/hopp-fetch.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/import-export/export/environment.ts",
+          "error": "SyntaxError: [10:16-10:17]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/export/environments.ts",
+          "error": "SyntaxError: [4:51-4:52]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/export/gist.ts",
+          "error": "SyntaxError: [5:18-5:19]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/export/gqlCollections.ts",
+          "error": "SyntaxError: [5:53-5:54]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/export/index.ts",
+          "error": "SyntaxError: [11:14-11:15]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/export/myCollections.ts",
+          "error": "SyntaxError: [5:51-5:52]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/export/openapi.ts",
+          "error": "SyntaxError: [12:5-12:13]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/import-export/export/runnerResults.ts",
+          "error": "SyntaxError: [20:7-20:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/import-export/export/teamCollections.ts",
+          "error": "SyntaxError: [3:46-3:47]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/export/testResults.ts",
+          "error": "SyntaxError: [5:51-5:52]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/har.ts",
+          "error": "SyntaxError: [17:9-17:10]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/hopp.ts",
+          "error": "SyntaxError: [18:40-18:41]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/hoppEnv.ts",
+          "error": "SyntaxError: [11:40-11:41]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/hoppGql.ts",
+          "error": "SyntaxError: [6:10-6:11]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/import-sources/FileSource.ts",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/import-export/import/import-sources/GistSource.ts",
+          "error": "SyntaxError: [16:35-16:36]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/import-sources/UrlSource.ts",
+          "error": "SyntaxError: [7:34-7:35]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/index.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/import-export/import/insomnia/insomniaColl.ts",
+          "error": "SyntaxError: [41:29-41:30]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/insomnia/insomniaEnv.ts",
+          "error": "SyntaxError: [30:52-30:53]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/myCollections.ts",
+          "error": "SyntaxError: [3:39-3:40]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/openapi/example-generators/v2.ts",
+          "error": "SyntaxError: [7:5-7:24]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/import-export/import/openapi/example-generators/v3.ts",
+          "error": "SyntaxError: [5:5-5:15]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/import-export/import/openapi/example-generators/v31.ts",
+          "error": "SyntaxError: [6:5-6:25]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/import-export/import/openapi/index.ts",
+          "error": "SyntaxError: [45:57-45:59]: Unexpected token: 'as'"
+        },
+        {
+          "file": "src/helpers/import-export/import/postman.ts",
+          "error": "SyntaxError: [38:30-38:31]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/import-export/import/postmanEnv.ts",
+          "error": "SyntaxError: [24:5-24:15]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/import-export/import/workers/openapi-import-worker.ts",
+          "error": "SyntaxError: [12:32-12:33]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/isValidUser.ts",
+          "error": "SyntaxError: [3:7-3:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/jsoncParse.ts",
+          "error": "SyntaxError: [22:5-22:17]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/jsonParse.ts",
+          "error": "SyntaxError: [22:5-22:17]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/kernel/common/auth.ts",
+          "error": "SyntaxError: [8:5-8:13]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/kernel/common/content.ts",
+          "error": "SyntaxError: [23:18-23:19]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/kernel/gql/request.ts",
+          "error": "SyntaxError: [12:39-12:40]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/kernel/gql/response.ts",
+          "error": "SyntaxError: [8:7-8:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/kernel/rest/request.ts",
+          "error": "SyntaxError: [17:25-17:26]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/kernel/rest/response.ts",
+          "error": "SyntaxError: [8:7-8:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/keybindings.ts",
+          "error": "SyntaxError: [9:7-9:29]: Expected ','"
+        },
+        {
+          "file": "src/helpers/keyboard-strategy.ts",
+          "error": "SyntaxError: [6:12-6:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/lenses/audioLens.ts",
+          "error": "SyntaxError: [4:15-4:16]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/lenses/htmlLens.ts",
+          "error": "SyntaxError: [4:14-4:15]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/lenses/imageLens.ts",
+          "error": "SyntaxError: [4:15-4:16]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/lenses/jsonLens.ts",
+          "error": "SyntaxError: [8:44-8:45]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/lenses/lenses.ts",
+          "error": "SyntaxError: [12:7-12:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/lenses/pdfLens.ts",
+          "error": "SyntaxError: [4:13-4:14]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/lenses/rawLens.ts",
+          "error": "SyntaxError: [4:13-4:14]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/lenses/videoLens.ts",
+          "error": "SyntaxError: [4:15-4:16]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/lenses/xmlLens.ts",
+          "error": "SyntaxError: [4:13-4:14]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/helpers/migrations.ts",
+          "error": "SyntaxError: [8:35-8:36]: Expected '{'"
+        },
+        {
+          "file": "src/helpers/mockServer/exampleCollection.ts",
+          "error": "SyntaxError: [15:40-15:41]: Expected '{'"
+        },
+        {
+          "file": "src/helpers/mockServer/exampleMockCollection.ts",
+          "error": "SyntaxError: [26:40-26:41]: Expected '{'"
+        },
+        {
+          "file": "src/helpers/network.ts",
+          "error": "SyntaxError: [11:7-11:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/new-codegen/har.ts",
+          "error": "SyntaxError: [11:32-11:33]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/new-codegen/index.ts",
+          "error": "SyntaxError: [189:2-189:4]: Unexpected token: 'as'"
+        },
+        {
+          "file": "src/helpers/newOutline.ts",
+          "error": "SyntaxError: [8:5-8:14]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/oauth.ts",
+          "error": "SyntaxError: [14:7-14:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/proxyUrl.ts",
+          "error": "SyntaxError: [11:37-11:38]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/realtime/MQTTConnection.ts",
+          "error": "SyntaxError: [5:7-5:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/realtime/SIOClients.ts",
+          "error": "SyntaxError: [6:5-6:12]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/realtime/SIOConnection.ts",
+          "error": "SyntaxError: [10:2-10:4]: Unexpected token: 'as'"
+        },
+        {
+          "file": "src/helpers/realtime/SSEConnection.ts",
+          "error": "SyntaxError: [4:7-4:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/realtime/WSConnection.ts",
+          "error": "SyntaxError: [4:7-4:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/request-type.ts",
+          "error": "SyntaxError: [8:5-8:15]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/RequestRunner.ts",
+          "error": "SyntaxError: [94:7-94:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/rest/default.ts",
+          "error": "SyntaxError: [3:39-3:40]: Expected '=>'"
+        },
+        {
+          "file": "src/helpers/rest/labelColoring.ts",
+          "error": "SyntaxError: [14:2-14:4]: Unexpected token: 'as'"
+        },
+        {
+          "file": "src/helpers/RESTExtURLParams.ts",
+          "error": "SyntaxError: [9:11-9:12]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/retryAuthGuard.ts",
+          "error": "SyntaxError: [17:48-17:49]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/rules/BodyTransition.ts",
+          "error": "SyntaxError: [19:5-19:13]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/runner/adapter.ts",
+          "error": "SyntaxError: [6:7-6:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/runner/collection-tree.ts",
+          "error": "SyntaxError: [5:5-5:6]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/runner/dataset.ts",
+          "error": "SyntaxError: [5:7-5:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/runner/iteration-vars.ts",
+          "error": "SyntaxError: [23:6-23:7]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/runner/selection.ts",
+          "error": "SyntaxError: [8:9-8:10]: Expected ')'"
+        },
+        {
+          "file": "src/helpers/runner/temp_envs.ts",
+          "error": "SyntaxError: [4:64-4:65]: Unexpected token: ']'"
+        },
+        {
+          "file": "src/helpers/shortcode/ShortcodeListAdapter.ts",
+          "error": "SyntaxError: [16:8-16:9]: Unexpected token: ':'"
+        },
+        {
+          "file": "src/helpers/shortcuts.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/tab/document.ts",
+          "error": "SyntaxError: [10:14-10:30]: Expected ','"
+        },
+        {
+          "file": "src/helpers/tab/protocol-switch.ts",
+          "error": "SyntaxError: [14:7-14:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/tab/type-converter.ts",
+          "error": "SyntaxError: [14:12-14:13]: Expected 'from'"
+        },
+        {
+          "file": "src/helpers/teams/TeamCollection.ts",
+          "error": "SyntaxError: [11:7-11:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/helpers/teams/TeamEnvironmentAdapter.ts",
+          "error": "SyntaxError: [19:5-19:15]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/helpers/teams/TeamListAdapter.ts",
+          "error": "SyntaxError: [11:8-11:9]: Unexpected token: ':'"
+        },
+        {
+          "file": "src/helpers/teams/TeamRequest.ts",
+          "error": "SyntaxError: [19:7-19:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/helpers/teams/TeamsSearch.service.ts",
+          "error": "SyntaxError: [30:33-30:34]: Expected ')'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "src/helpers/app/index.ts",
+          "source": "source-js/deb77baf10883b82d132b3899c9c72522e8d047b3de0ba2476d5271a2b08ff52.js",
+          "sourceSHA256": "deb77baf10883b82d132b3899c9c72522e8d047b3de0ba2476d5271a2b08ff52",
+          "span": [
+            110,
+            557
+          ],
+          "name": "initializeApp",
+          "normalizedASTSHA256": "f041b369a7349fce2f4cdd2694887a044e299e3940c76f5b4b92959c6b3cd91e",
+          "codeSHA256": "d6a25c52c494048a2ea9b3ef1a6853e235e530fe4a155d91d18620137e63bae0",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "272dfa63f8625463",
+            "graphNodes": 5,
+            "graphEdges": 4,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/helpers/syntax/gqlQueryLangMode.js",
+          "source": "source-js/a69bada264027a9ca9d94e88fa0c0bc8930fabe374e8705f546ebccaec1a6af1.js",
+          "sourceSHA256": "a69bada264027a9ca9d94e88fa0c0bc8930fabe374e8705f546ebccaec1a6af1",
+          "span": [
+            419,
+            2710
+          ],
+          "name": "GQLQueryTextHighlightRules",
+          "normalizedASTSHA256": "a2f1b5811f1652499086546bc65f6ce823d862a556099e1c17b74362a393d3e9",
+          "codeSHA256": "87a06e1f8a4015981e49c7a91de96411b910c4f2ac75dc62970779426402a779",
+          "features": {
+            "propertyOperations": 48,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "d4c9088af871f62",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 48,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/helpers/tern.js",
+          "source": "source-js/dfc856508577a2e45e2116b73c926d34fe814bb8426e1fcfa6bddb2abe7558ba.js",
+          "sourceSHA256": "dfc856508577a2e45e2116b73c926d34fe814bb8426e1fcfa6bddb2abe7558ba",
+          "span": [
+            1628,
+            2203
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "68bbe4970e71f063d3e4b46d18be6c6259b2273d7288de423cfbd1e996d857d3",
+          "codeSHA256": "305dd636883f772c7ab7258920a0001f9632e8b5028f0d426862fd8a5d43c06e",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "e8a47ad5c7fe2058",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/309b16071b996db1c307",
+      "licenses": [],
+      "lockfileSHA256": "284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9",
+      "lockfileSnapshot": "lockfiles/284269e698bf574c6b04021d91c089b8c35931778cb4f855f3b8aaaa70b715a9-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
@@ -470,252 +2778,27 @@
     "@hoppscotch/ui",
     "@tauri-apps/api",
     "rxjs",
-    "zod"
+    "zod",
+    "@hoppscotch/common"
   ],
-  "status": "included",
-  "referenceFailures": [],
-  "referenceFiles": 168,
-  "bundleUnits": 30,
-  "candidateOrder": [
-    "buffer",
-    "workbox-window",
-    "@vueuse/core",
-    "util",
-    "axios",
-    "@tauri-apps/plugin-dialog",
-    "stream-browserify",
-    "verzod",
-    "process",
-    "dioc",
-    "@fontsource-variable/inter",
-    "@fontsource-variable/material-symbols-rounded",
-    "@fontsource-variable/roboto-mono",
-    "@hoppscotch/common",
-    "@hoppscotch/data",
-    "@hoppscotch/kernel",
-    "@hoppscotch/plugin-appload",
-    "@hoppscotch/ui",
-    "@import-meta-env/unplugin",
-    "@tauri-apps/api",
-    "@tauri-apps/plugin-fs",
-    "@tauri-apps/plugin-shell",
-    "fp-ts",
-    "rxjs",
-    "vue",
-    "zod"
-  ],
-  "selectionAttempts": [
-    {
-      "library": "@tauri-apps/plugin-dialog",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@tauri-apps/plugin-dialog"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
     },
-    {
-      "library": "stream-browserify",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "stream-browserify"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "verzod",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "verzod"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "process",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "process"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "dioc",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "dioc"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@hoppscotch/ui",
-      "initialAnchors": 103,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@tauri-apps/api",
-      "initialAnchors": 6,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@tauri-apps/plugin-fs",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "@tauri-apps/plugin-fs"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@tauri-apps/plugin-shell",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "@tauri-apps/plugin-shell"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "fp-ts",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "fp-ts"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "rxjs",
-      "initialAnchors": 5,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "rxjs"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "zod",
-      "initialAnchors": 5,
-      "trialLibraries": [
-        "buffer",
-        "workbox-window",
-        "@vueuse/core",
-        "util",
-        "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
-        "rxjs",
-        "zod"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    }
-  ],
-  "sourceDiagnostics": [],
-  "bundleDiagnostics": [],
-  "sourceDigest": "973f9086cec47d2a813e15958e74fc489fa7c06b78b91d432bf47d4736ada19c",
-  "bundleDigest": "98415c2f4d3d8b025abab43660ae6683a9c4c99555dd2a96d7bca844b10d1ef8",
-  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
-  "finalSourceDigest": "9f85de6a69ac66a8a19d2486793910b364f4ce8a01887be1173fa7242842a686",
+    "frontendManifestSHA256": "4fcd4b5f39c4d0a6d4c71762cc1d00c3a01484cdf8e915e10b189696879f6b58",
+    "manifestRelative": "packages/hoppscotch-selfhost-web/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:14.311Z",
   "reason": null,
-  "organizationSignature": "7a581d1aaeedf3d5ed943445abbfcb8403b8ec76d6afc833d4a6013b787f14d1"
+  "finished": "2026-11-09T03:44:14.737Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/hoppscotch--hoppscotch/qualification.json",
+  "sourceEligibilityRecordSHA256": "79369fc25dc112c7062b627795ab191aa9302f830e7ed9f9421e23353eeea165",
+  "organizationSignature": "a13bc1cf8980dd78a937ff1ceee84260debcd3af74ffbce5b79ec3d5ed1129e5"
 }

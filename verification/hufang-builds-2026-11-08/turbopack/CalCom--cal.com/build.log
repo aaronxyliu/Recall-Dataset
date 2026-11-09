@@ -1,1 +1,1286 @@
-ERROR: Cannot connect to the Docker daemon at unix:///tmp/recall-hufang-docker.sock. Is the docker daemon running?
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 4.01kB done
+#1 WARN: SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ARG "NEXTAUTH_SECRET") (line 12)
+#1 WARN: SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ARG "CALENDSO_ENCRYPTION_KEY") (line 13)
+#1 WARN: SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "NEXTAUTH_SECRET") (line 22)
+#1 WARN: SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "CALENDSO_ENCRYPTION_KEY") (line 22)
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:20
+#2 DONE 0.0s
+
+#3 [builder  1/15] FROM docker.io/library/node:20@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5
+#3 resolve docker.io/library/node:20@sha256:8f693eaa7e0a8e71560c9a82b55fd54c2ae920a2ba5d2cde28bac7d1c01c9ba5 done
+#3 CACHED
+
+#4 [builder  2/15] WORKDIR /calcom
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 5.51MB 0.1s
+#5 transferring context: 213.22MB 1.5s done
+#5 DONE 1.6s
+
+#6 [runner 3/4] RUN apt-get update && apt-get install -y --no-install-recommends netcat-openbsd wget && rm -rf /var/lib/apt/lists/*
+#6 0.641 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#6 1.388 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#6 1.867 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [34.8 kB]
+#6 ...
+
+#7 [builder-two  3/11] COPY package.json .yarnrc.yml turbo.json i18n.json ./
+#7 DONE 0.3s
+
+#8 [builder  3/15] COPY package.json yarn.lock .yarnrc.yml playwright.config.ts turbo.json i18n.json ./
+#8 DONE 0.4s
+
+#9 [builder-two  4/11] COPY .yarn ./.yarn
+#9 DONE 0.1s
+
+#10 [builder  4/15] COPY .yarn ./.yarn
+#10 DONE 0.1s
+
+#6 [runner 3/4] RUN apt-get update && apt-get install -y --no-install-recommends netcat-openbsd wget && rm -rf /var/lib/apt/lists/*
+#6 2.182 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8689 kB]
+#6 ...
+
+#11 [builder  5/15] COPY apps/web ./apps/web
+#11 DONE 0.2s
+
+#12 [builder  6/15] COPY apps/api/v2 ./apps/api/v2
+#12 DONE 0.1s
+
+#13 [builder  7/15] COPY packages ./packages
+#13 DONE 0.5s
+
+#6 [runner 3/4] RUN apt-get update && apt-get install -y --no-install-recommends netcat-openbsd wget && rm -rf /var/lib/apt/lists/*
+#6 ...
+
+#14 [builder  8/15] RUN yarn config set httpTimeout 1200000
+#14 0.525 ➤ YN0000: Successfully set httpTimeout to 1200000
+#14 DONE 0.5s
+
+#15 [builder  9/15] RUN npx turbo prune --scope=@calcom/web --scope=@calcom/trpc --docker
+#15 1.396 npm warn exec The following package was not found and will be installed: turbo@2.11.10
+#15 ...
+
+#6 [runner 3/4] RUN apt-get update && apt-get install -y --no-install-recommends netcat-openbsd wget && rm -rf /var/lib/apt/lists/*
+#6 9.959 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
+#6 10.13 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [361 kB]
+#6 10.89 Fetched 9299 kB in 11s (878 kB/s)
+#6 10.89 Reading package lists...
+#6 ...
+
+#15 [builder  9/15] RUN npx turbo prune --scope=@calcom/web --scope=@calcom/trpc --docker
+#15 7.143  WARNING  --scope is deprecated and will be removed in a future major version. Use positional arguments instead (e.g. `turbo prune web`)
+#15 7.146 • turbo 2.11.10
+#15 7.146 
+#15 7.146 Attention:
+#15 7.146 Turborepo now collects completely anonymous telemetry regarding usage.
+#15 7.146 This information is used to shape the Turborepo roadmap and prioritize features.
+#15 7.146 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#15 7.146 https://turborepo.dev/docs/telemetry
+#15 7.146 
+#15 7.179 Generating pruned monorepo for @calcom/web, @calcom/trpc in /calcom/out
+#15 7.282  - Added @calcom/app-store
+#15 7.284  - Added @calcom/app-store-cli
+#15 7.286  - Added @calcom/atoms
+#15 7.287  - Added @calcom/config
+#15 7.287  - Added @calcom/dailyvideo
+#15 7.287  - Added @calcom/dayjs
+#15 7.289  - Added @calcom/embed-core
+#15 7.290  - Added @calcom/embed-react
+#15 7.290  - Added @calcom/embed-snippet
+#15 7.310  - Added @calcom/features
+#15 7.313  - Added @calcom/i18n
+#15 7.317  - Added @calcom/lib
+#15 7.318  - Added @calcom/office365video
+#15 7.318  - Added @calcom/platform-constants
+#15 7.319  - Added @calcom/platform-enums
+#15 7.321  - Added @calcom/platform-types
+#15 7.333  - Added @calcom/prisma
+#15 7.334  - Added @calcom/testing
+#15 7.344  - Added @calcom/trpc
+#15 7.345  - Added @calcom/tsconfig
+#15 7.345  - Added @calcom/types
+#15 7.349  - Added @calcom/ui
+#15 7.381  - Added @calcom/web
+#15 7.382  - Added @calcom/zoomvideo
+#15 7.383  - Added @coss/ui
+#15 7.402 npm notice
+#15 7.402 npm notice New major version of npm available! 10.8.2 -> 12.2.2
+#15 7.402 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#15 7.402 npm notice To update run: npm install -g npm@12.2.2
+#15 7.402 npm notice
+#15 DONE 7.7s
+
+#6 [runner 3/4] RUN apt-get update && apt-get install -y --no-install-recommends netcat-openbsd wget && rm -rf /var/lib/apt/lists/*
+#6 10.89 Reading package lists...
+#6 11.23 Reading package lists...
+#6 11.66 Building dependency tree...
+#6 11.74 Reading state information...
+#6 11.90 wget is already the newest version (1.21.3-1+deb12u1).
+#6 11.90 The following NEW packages will be installed:
+#6 11.90   netcat-openbsd
+#6 12.08 0 upgraded, 1 newly installed, 0 to remove and 109 not upgraded.
+#6 12.08 Need to get 40.8 kB of archives.
+#6 12.08 After this operation, 135 kB of additional disk space will be used.
+#6 12.08 Get:1 http://deb.debian.org/debian bookworm/main arm64 netcat-openbsd arm64 1.219-1 [40.8 kB]
+#6 12.41 debconf: delaying package configuration, since apt-utils is not installed
+#6 12.46 Fetched 40.8 kB in 0s (107 kB/s)
+#6 12.48 Selecting previously unselected package netcat-openbsd.
+#6 12.48 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 23281 files and directories currently installed.)
+#6 12.55 Preparing to unpack .../netcat-openbsd_1.219-1_arm64.deb ...
+#6 12.55 Unpacking netcat-openbsd (1.219-1) ...
+#6 12.57 Setting up netcat-openbsd (1.219-1) ...
+#6 12.59 update-alternatives: using /bin/nc.openbsd to provide /bin/nc (nc) in auto mode
+#6 DONE 12.6s
+
+#16 [builder 10/15] RUN yarn install
+#16 0.912 ➤ YN0000: · Yarn 4.12.0
+#16 0.916 ➤ YN0000: ┌ Resolution step
+#16 1.125 ➤ YN0085: │ - @apidevtools/json-schema-ref-parser@npm:9.0.9, @apidevtools/openapi-schemas@npm:2.1.0, @apidevtools/swagger-methods@npm:3.0.2, and 59 more.
+#16 1.216 ➤ YN0000: └ Completed in 0s 300ms
+#16 1.218 ➤ YN0000: ┌ Post-resolution validation
+#16 1.218 ➤ YN0060: │ @types/react is listed by your project with version 18.0.26 (p2ea0e7), which doesn't satisfy what @testing-library/react-hooks (via @calcom/features) and other dependencies request (but they have non-overlapping ranges!).
+#16 1.218 ➤ YN0060: │ @urql/core is listed by your project with version 5.1.1 (pec12f0), which doesn't satisfy what @urql/exchange-retry requests (^6.0.0).
+#16 1.218 ➤ YN0060: │ i18next is listed by your project with version 23.2.3 (p46596c), which doesn't satisfy what next-i18next and other dependencies request (>=23.7.13).
+#16 1.218 ➤ YN0060: │ next is listed by your project with version 16.1.5 (p9f7abf), which doesn't satisfy what @next/third-parties and other dependencies request (but they have non-overlapping ranges!).
+#16 1.218 ➤ YN0060: │ prisma is listed by your project with version 6.16.1 (pc18db8), which doesn't satisfy what prisma-kysely and other dependencies request (~6.15.0).
+#16 1.218 ➤ YN0060: │ react is listed by your project with version 18.2.0 (p732e66), which doesn't satisfy what ink-select-input and other dependencies request (^17.0.2).
+#16 1.218 ➤ YN0060: │ react is listed by your project with version 18.2.0 (pbc00bd), which doesn't satisfy what @dub/embed-react and other dependencies request (but they have non-overlapping ranges!).
+#16 1.218 ➤ YN0060: │ react-dom is listed by your project with version 18.2.0 (p4d7554), which doesn't satisfy what @dub/embed-react and other dependencies request (but they have non-overlapping ranges!).
+#16 1.218 ➤ YN0060: │ react-i18next is listed by your project with version 12.3.1 (pb47931), which doesn't satisfy what next-i18next requests (>=13.5.0).
+#16 1.218 ➤ YN0060: │ reflect-metadata is listed by your project with version 0.1.14 (p762248), which doesn't satisfy what @nest-lab/throttler-storage-redis and other dependencies request (~0.2.1).
+#16 1.218 ➤ YN0060: │ stripe is listed by your project with version 9.16.0 (p2f8c95), which doesn't satisfy what stripe-event-types requests (>=10.0.0).
+#16 1.218 ➤ YN0060: │ stripe is listed by your project with version 9.16.0 (p8d4837), which doesn't satisfy what stripe-event-types requests (>=10.0.0).
+#16 1.218 ➤ YN0060: │ stripe is listed by your project with version 9.16.0 (p9c6b52), which doesn't satisfy what stripe-event-types requests (>=10.0.0).
+#16 1.218 ➤ YN0060: │ stripe is listed by your project with version 9.16.0 (pd5ed0d), which doesn't satisfy what stripe-event-types requests (>=10.0.0).
+#16 1.218 ➤ YN0060: │ stripe is listed by your project with version 9.16.0 (pe5e734), which doesn't satisfy what stripe-event-types requests (>=10.0.0).
+#16 1.218 ➤ YN0060: │ typescript is listed by your project with version 5.9.3 (p318a27), which doesn't satisfy what class-variance-authority requests (^4.5.5).
+#16 1.218 ➤ YN0060: │ typescript is listed by your project with version 5.9.3 (p464494), which doesn't satisfy what class-variance-authority requests (^4.5.5).
+#16 1.218 ➤ YN0060: │ typescript is listed by your project with version 5.9.3 (p6d0328), which doesn't satisfy what class-variance-authority and other dependencies request (^4.5.5).
+#16 1.218 ➤ YN0060: │ typescript is listed by your project with version 5.9.3 (p8710a5), which doesn't satisfy what class-variance-authority requests (^4.5.5).
+#16 1.218 ➤ YN0060: │ typescript is listed by your project with version 5.9.3 (pdd7a59), which doesn't satisfy what class-variance-authority requests (^4.5.5).
+#16 1.218 ➤ YN0060: │ typescript is listed by your project with version 5.9.3 (pe82e67), which doesn't satisfy what class-variance-authority and other dependencies request (^4.5.5).
+#16 1.218 ➤ YN0060: │ typescript is listed by your project with version 5.9.3 (pf2c3c4), which doesn't satisfy what class-variance-authority and other dependencies request (^4.5.5).
+#16 1.218 ➤ YN0060: │ vite is listed by your project with version 6.4.1 (p17772e), which doesn't satisfy what vite-plugin-inspect and other dependencies request (^4.2.0 || ^5.0.0).
+#16 1.218 ➤ YN0060: │ vite is listed by your project with version 6.4.1 (p23a10e), which doesn't satisfy what vite-plugin-inspect and other dependencies request (^4.2.0 || ^5.0.0).
+#16 1.218 ➤ YN0060: │ vite is listed by your project with version 6.4.1 (pcc4d15), which doesn't satisfy what vite-plugin-inspect and other dependencies request (^4.2.0 || ^5.0.0).
+#16 1.219 ➤ YN0002: │ @calcom/alby@workspace:packages/app-store/alby doesn't provide react (p804b61), requested by react-qr-code.
+#16 1.219 ➤ YN0002: │ @calcom/api-v2@workspace:apps/api/v2 doesn't provide @types/node (p832e48), requested by node-mocks-http and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/api-v2@workspace:apps/api/v2 doesn't provide react (p442ee8), requested by @calcom/platform-libraries.
+#16 1.219 ➤ YN0002: │ @calcom/api-v2@workspace:apps/api/v2 doesn't provide react-dom (p4d5b3a), requested by @calcom/platform-libraries.
+#16 1.219 ➤ YN0002: │ @calcom/api-v2@workspace:apps/api/v2 doesn't provide webpack (pdc351c), requested by ts-loader.
+#16 1.219 ➤ YN0002: │ @calcom/app-store-cli@workspace:packages/app-store-cli doesn't provide @types/node (p924244), requested by ts-node.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store [6d903] doesn't provide @tanstack/react-query (p15688c), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store [6d903] doesn't provide i18next (pfd3da2), requested by react-i18next.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store [6d903] doesn't provide next (pb4d60a), requested by @calcom/features.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store [6d903] doesn't provide react-is (p8a923f), requested by @calcom/features.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store [ef4ec] doesn't provide @tanstack/react-query (pdd5b0e), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store [ef4ec] doesn't provide i18next (pacc0d0), requested by react-i18next.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store [ef4ec] doesn't provide next (p83cb9c), requested by @calcom/features.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store [ef4ec] doesn't provide react-is (p8751ad), requested by @calcom/features.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store doesn't provide @tanstack/react-query (pa17241), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store doesn't provide i18next (pef15bb), requested by react-i18next.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store doesn't provide next (pe8f6c8), requested by @calcom/features.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store doesn't provide react (pddaf0b), requested by @calcom/features and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store doesn't provide react-dom (pff8bc5), requested by @calcom/features and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store doesn't provide react-is (p8e3294), requested by @calcom/features.
+#16 1.219 ➤ YN0002: │ @calcom/app-store@workspace:packages/app-store doesn't provide zod (p43b4ec), requested by @calcom/features.
+#16 1.219 ➤ YN0002: │ @calcom/applecalendar@workspace:packages/app-store/applecalendar doesn't provide react (pa774a8), requested by react-hook-form.
+#16 1.219 ➤ YN0002: │ @calcom/atoms@workspace:packages/platform/atoms doesn't provide react (p2187f6), requested by @radix-ui/react-dialog and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/atoms@workspace:packages/platform/atoms doesn't provide react-dom (p7adb16), requested by @radix-ui/react-dialog and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/caldavcalendar@workspace:packages/app-store/caldavcalendar doesn't provide @tanstack/react-query (p3da7df), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/caldavcalendar@workspace:packages/app-store/caldavcalendar doesn't provide react (p6c4883), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/caldavcalendar@workspace:packages/app-store/caldavcalendar doesn't provide react-dom (p30c42c), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/config@workspace:packages/config doesn't provide tailwindcss (pdaf96e), requested by @tailwindcss/typography and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/dub@workspace:packages/app-store/dub doesn't provide zod (p8a0f98), requested by dub.
+#16 1.219 ➤ YN0002: │ @calcom/ee@workspace:packages/features/ee doesn't provide @tanstack/react-query (pbab9e0), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/ee@workspace:packages/features/ee doesn't provide react (p7e3d23), requested by @calcom/ui and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/ee@workspace:packages/features/ee doesn't provide react-dom (p38fc57), requested by @calcom/ui and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/ee@workspace:packages/features/ee doesn't provide react-hook-form (p446cc8), requested by @hookform/error-message and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/exchange2013calendar@workspace:packages/app-store/exchange2013calendar doesn't provide @tanstack/react-query (pbec951), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/exchange2013calendar@workspace:packages/app-store/exchange2013calendar doesn't provide react (pdb6b52), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/exchange2013calendar@workspace:packages/app-store/exchange2013calendar doesn't provide react-dom (p3bdc31), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/exchange2016calendar@workspace:packages/app-store/exchange2016calendar doesn't provide @tanstack/react-query (pb5fdf6), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/exchange2016calendar@workspace:packages/app-store/exchange2016calendar doesn't provide react (pe5fd42), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/exchange2016calendar@workspace:packages/app-store/exchange2016calendar doesn't provide react-dom (p5e2baf), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/feature-auth@workspace:packages/features/auth doesn't provide @tanstack/react-query (pd7cc71), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/feature-auth@workspace:packages/features/auth doesn't provide next (pfe8544), requested by @calcom/trpc and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/feature-auth@workspace:packages/features/auth doesn't provide react (p631333), requested by @calcom/trpc and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/feature-auth@workspace:packages/features/auth doesn't provide react-dom (p59a257), requested by @calcom/trpc and other dependencies.
+#16 1.219 ➤ YN0002: │ @calcom/feature-auth@workspace:packages/features/auth doesn't provide zod (pa55aca), requested by dub.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @ant-design/icons (pd36288), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @emotion/react (pe121dc), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @emotion/styled (p3ab690), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @fortawesome/fontawesome-svg-core (pe30bfc), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @fortawesome/free-solid-svg-icons (pa4cc30), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @fortawesome/react-fontawesome (p5bcca6), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @material-ui/core (pd83305), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @material-ui/icons (pa92ec2), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @material-ui/lab (p3d4ae0), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @material-ui/pickers (p74dd1d), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @mui/icons-material (p458bd7), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @mui/lab (p117d90), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @mui/material (p079ab5), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide @tanstack/react-query (p9f8824), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide antd (p67a9ab), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide bootstrap (pc7de8f), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide date-fns (p6eb442), requested by date-fns-tz.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide material-ui-confirm (p6d2773), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [6d903] doesn't provide reactstrap (p0a4bc1), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @ant-design/icons (p2acd6a), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @emotion/react (p3cd057), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @emotion/styled (p8a1ccb), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @fortawesome/fontawesome-svg-core (p26d0ef), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @fortawesome/free-solid-svg-icons (pa7a53f), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @fortawesome/react-fontawesome (p1a3cbb), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @material-ui/core (pdcdb43), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @material-ui/icons (pd07942), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @material-ui/lab (pf27926), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @material-ui/pickers (p4601a6), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @mui/icons-material (p720a80), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @mui/lab (pdf82af), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @mui/material (pe5db54), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide @tanstack/react-query (pcb9765), requested by @calcom/ui.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide antd (pe81a5a), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide bootstrap (pe085e1), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide date-fns (p9792be), requested by date-fns-tz.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide material-ui-confirm (p829caf), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [7bb91] doesn't provide reactstrap (p94ea47), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @ant-design/icons (p3dfd5d), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @emotion/react (p869a39), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @emotion/styled (p6c454e), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @fortawesome/fontawesome-svg-core (p0a6774), requested by react-awesome-query-builder.
+#16 1.219 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @fortawesome/free-solid-svg-icons (p55a5ee), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @fortawesome/react-fontawesome (p96a3dd), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @material-ui/core (p90a4b8), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @material-ui/icons (p60d13f), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @material-ui/lab (p22fc79), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @material-ui/pickers (p9a41ef), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @mui/icons-material (pa32b59), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @mui/lab (p524017), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @mui/material (pde1b34), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide @tanstack/react-query (pdfc45d), requested by @calcom/ui.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide antd (pc73c52), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide bootstrap (p2f3615), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide date-fns (pf8d5fc), requested by date-fns-tz.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide material-ui-confirm (pf1a075), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [d41b9] doesn't provide reactstrap (p734aef), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @ant-design/icons (p21f4c2), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @emotion/react (p952010), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @emotion/styled (pe79b51), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @fortawesome/fontawesome-svg-core (pd4790d), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @fortawesome/free-solid-svg-icons (pa87732), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @fortawesome/react-fontawesome (p7f27e8), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @material-ui/core (p2ee915), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @material-ui/icons (pcc9d1e), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @material-ui/lab (p33614f), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @material-ui/pickers (pf46146), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @mui/icons-material (p240e52), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @mui/lab (p1dd3f4), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @mui/material (p600f0e), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide @tanstack/react-query (p3ed838), requested by @calcom/ui.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide antd (p6353ad), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide bootstrap (pb86773), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide date-fns (pf324f3), requested by date-fns-tz.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide material-ui-confirm (p825331), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features [f69c1] doesn't provide reactstrap (pbefeb5), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @ant-design/icons (p4179af), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @emotion/react (pa29310), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @emotion/styled (p3abcfd), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @fortawesome/fontawesome-svg-core (pcc1b60), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @fortawesome/free-solid-svg-icons (p7e8a92), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @fortawesome/react-fontawesome (p4734af), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @material-ui/core (p45522b), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @material-ui/icons (p80c693), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @material-ui/lab (pf6235c), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @material-ui/pickers (p38aa6a), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @mui/icons-material (p2ccce0), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @mui/lab (pf9817f), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @mui/material (p1d7b4d), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide @tanstack/react-query (p6b00d2), requested by @calcom/ui.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide antd (pce87c6), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide bootstrap (p43d9af), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide date-fns (p911e27), requested by date-fns-tz.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide material-ui-confirm (p3ba617), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide next (p5d633a), requested by @calcom/trpc.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide react (peb01fe), requested by @calcom/atoms and other dependencies.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide react-dom (pce1a28), requested by @calcom/atoms and other dependencies.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide react-is (p0de657), requested by recharts.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide reactstrap (pf9091b), requested by react-awesome-query-builder.
+#16 1.220 ➤ YN0002: │ @calcom/features@workspace:packages/features doesn't provide zod (p6ed8a0), requested by @trigger.dev/sdk.
+#16 1.220 ➤ YN0002: │ @calcom/ics-feed@workspace:packages/app-store/ics-feedcalendar doesn't provide @tanstack/react-query (pf6a237), requested by @calcom/ui.
+#16 1.220 ➤ YN0002: │ @calcom/ics-feed@workspace:packages/app-store/ics-feedcalendar doesn't provide react (p8665f7), requested by @calcom/ui.
+#16 1.220 ➤ YN0002: │ @calcom/ics-feed@workspace:packages/app-store/ics-feedcalendar doesn't provide react-dom (p4245ae), requested by @calcom/ui.
+#16 1.220 ➤ YN0002: │ @calcom/platform-libraries@workspace:packages/platform/libraries [11945] doesn't provide next (p249c16), requested by @calcom/features.
+#16 1.220 ➤ YN0002: │ @calcom/platform-libraries@workspace:packages/platform/libraries [11945] doesn't provide react-is (pd96218), requested by @calcom/features.
+#16 1.220 ➤ YN0002: │ @calcom/platform-libraries@workspace:packages/platform/libraries doesn't provide next (pf9a80b), requested by @calcom/features.
+#16 1.220 ➤ YN0002: │ @calcom/platform-libraries@workspace:packages/platform/libraries doesn't provide react (p8ffd0b), requested by @calcom/features.
+#16 1.220 ➤ YN0002: │ @calcom/platform-libraries@workspace:packages/platform/libraries doesn't provide react-dom (p529ae9), requested by @calcom/features.
+#16 1.220 ➤ YN0002: │ @calcom/platform-libraries@workspace:packages/platform/libraries doesn't provide react-is (p9b679f), requested by @calcom/features.
+#16 1.220 ➤ YN0002: │ @calcom/platform-libraries@workspace:packages/platform/libraries doesn't provide zod (pc26ba8), requested by @calcom/features.
+#16 1.221 ➤ YN0002: │ @calcom/platform-types@workspace:packages/platform/types doesn't provide @nestjs/core (p335de5), requested by @nestjs/swagger.
+#16 1.221 ➤ YN0002: │ @calcom/platform-types@workspace:packages/platform/types doesn't provide reflect-metadata (p0d1687), requested by @nestjs/common and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/platform-types@workspace:packages/platform/types doesn't provide rxjs (pc84203), requested by @nestjs/common.
+#16 1.221 ➤ YN0002: │ @calcom/platform-utils@workspace:packages/platform/utils doesn't provide typescript (p51c50d), requested by ts-jest.
+#16 1.221 ➤ YN0002: │ @calcom/prisma@workspace:packages/prisma doesn't provide @types/node (p5cd041), requested by ts-node.
+#16 1.221 ➤ YN0002: │ @calcom/prisma@workspace:packages/prisma doesn't provide typescript (p26b5bb), requested by @prisma/client and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @ant-design/icons (pef2ab2), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @emotion/react (pe4a495), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @emotion/styled (p719252), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @fortawesome/fontawesome-svg-core (pca7e3b), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @fortawesome/free-solid-svg-icons (p8af7f7), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @fortawesome/react-fontawesome (p9e3c29), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @material-ui/core (pacafd1), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @material-ui/icons (pd0316a), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @material-ui/lab (pae9b86), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @material-ui/pickers (pcef653), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @mui/icons-material (p372ecc), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @mui/lab (p1e6c2b), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide @mui/material (pe8869a), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide antd (pfc45ab), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide bootstrap (p1a0bee), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide material-ui-confirm (pa697d6), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide react (p935688), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide react-dom (p43069d), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/routing-forms@workspace:packages/app-store/routing-forms doesn't provide reactstrap (p5d8b8e), requested by react-awesome-query-builder.
+#16 1.221 ➤ YN0002: │ @calcom/salesforce@workspace:packages/app-store/salesforce doesn't provide graphql (p03dc67), requested by @graphql-codegen/cli and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/stripepayment@workspace:packages/app-store/stripepayment doesn't provide @types/node (p094c17), requested by ts-node.
+#16 1.221 ➤ YN0002: │ @calcom/stripepayment@workspace:packages/app-store/stripepayment doesn't provide next (p8f63ce), requested by @calcom/features.
+#16 1.221 ➤ YN0002: │ @calcom/stripepayment@workspace:packages/app-store/stripepayment doesn't provide react (pf63884), requested by @calcom/app-store and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/stripepayment@workspace:packages/app-store/stripepayment doesn't provide react-dom (p752041), requested by @calcom/app-store and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/stripepayment@workspace:packages/app-store/stripepayment doesn't provide react-is (p6ce5fc), requested by @calcom/features.
+#16 1.221 ➤ YN0002: │ @calcom/stripepayment@workspace:packages/app-store/stripepayment doesn't provide typescript (p26868b), requested by ts-node.
+#16 1.221 ➤ YN0002: │ @calcom/testing@workspace:packages/testing doesn't provide @prisma/client (p1bb091), requested by prismock.
+#16 1.221 ➤ YN0002: │ @calcom/testing@workspace:packages/testing doesn't provide prisma (pd234c6), requested by prismock.
+#16 1.221 ➤ YN0002: │ @calcom/trpc@workspace:packages/trpc doesn't provide next (pee5e1d), requested by @trpc/next.
+#16 1.221 ➤ YN0002: │ @calcom/trpc@workspace:packages/trpc doesn't provide react (p7c1ec5), requested by @tanstack/react-query and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/trpc@workspace:packages/trpc doesn't provide react-dom (pa445c5), requested by @trpc/next and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui [22cff] doesn't provide @lexical/clipboard (p2dbbf0), requested by @lexical/rich-text.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui [22cff] doesn't provide @testing-library/dom (p77297c), requested by @testing-library/user-event.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui [6d903] doesn't provide @lexical/clipboard (pf2808e), requested by @lexical/rich-text.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui [6d903] doesn't provide @testing-library/dom (pe242b2), requested by @testing-library/user-event.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui [d41b9] doesn't provide @lexical/clipboard (p10a042), requested by @lexical/rich-text.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui [d41b9] doesn't provide @testing-library/dom (p364ea1), requested by @testing-library/user-event.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui doesn't provide @lexical/clipboard (p075131), requested by @lexical/rich-text.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui doesn't provide @testing-library/dom (p5220f8), requested by @testing-library/user-event.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui doesn't provide react (p5c5929), requested by @lexical/react and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/ui@workspace:packages/ui doesn't provide react-dom (pab9257), requested by @lexical/react and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/web@workspace:apps/web doesn't provide @prisma/client (pf8bc33), requested by @next-auth/prisma-adapter.
+#16 1.221 ➤ YN0002: │ @calcom/web@workspace:apps/web doesn't provide @types/node (pf2aacf), requested by node-mocks-http and other dependencies.
+#16 1.221 ➤ YN0002: │ @calcom/web@workspace:apps/web doesn't provide react-is (pb518d7), requested by @calcom/features.
+#16 1.221 ➤ YN0002: │ @coss/ui@workspace:packages/coss-ui [22cff] doesn't provide @types/node (p92f5a5), requested by ts-node.
+#16 1.221 ➤ YN0002: │ @coss/ui@workspace:packages/coss-ui [6d903] doesn't provide @types/node (p7608b7), requested by ts-node.
+#16 1.221 ➤ YN0002: │ @coss/ui@workspace:packages/coss-ui doesn't provide @types/node (pac1c22), requested by ts-node.
+#16 1.221 ➤ YN0002: │ @coss/ui@workspace:packages/coss-ui doesn't provide react (p7d465b), requested by @base-ui/react and other dependencies.
+#16 1.221 ➤ YN0002: │ @coss/ui@workspace:packages/coss-ui doesn't provide react-dom (pdf54be), requested by @base-ui/react.
+#16 1.221 ➤ YN0002: │ calcom-monorepo@workspace:. doesn't provide @prisma/client (pf84d28), requested by prismock.
+#16 1.221 ➤ YN0002: │ calcom-monorepo@workspace:. doesn't provide @testing-library/dom (p6962c8), requested by @testing-library/react.
+#16 1.221 ➤ YN0002: │ calcom-monorepo@workspace:. doesn't provide next (p83ec21), requested by next-router-mock.
+#16 1.221 ➤ YN0002: │ calcom-monorepo@workspace:. doesn't provide prisma (p99681d), requested by prismock.
+#16 1.221 ➤ YN0002: │ calcom-monorepo@workspace:. doesn't provide react (pc09232), requested by @testing-library/react and other dependencies.
+#16 1.221 ➤ YN0002: │ calcom-monorepo@workspace:. doesn't provide react-dom (pa51104), requested by @testing-library/react.
+#16 1.221 ➤ YN0086: │ Some peer dependencies are incorrectly met by your project; run yarn explain peer-requirements <hash> for details, where <hash> is the six-letter p-prefixed code.
+#16 1.221 ➤ YN0086: │ Some peer dependencies are incorrectly met by dependencies; run yarn explain peer-requirements for details.
+#16 1.221 ➤ YN0000: └ Completed
+#16 1.221 ➤ YN0000: ┌ Fetch step
+#16 57.59 ➤ YN0013: │ 3316 packages were added to the project (+ 613.73 MiB).
+#16 57.59 ➤ YN0000: └ Completed in 56s 370ms
+#16 57.68 ➤ YN0000: ┌ Link step
+#16 82.28 ➤ YN0007: │ dotenv-checker@npm:1.1.5 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @prisma/engines@npm:5.22.0 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @prisma/engines@npm:6.16.2 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ esbuild@npm:0.27.2 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @nestjs/core@npm:10.4.20 [11945] must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ sharp@npm:0.34.5 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ sharp@npm:0.33.5 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ esbuild@npm:0.25.12 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @prisma/engines@npm:6.16.1 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ deasync@npm:0.1.31 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ esbuild@npm:0.23.1 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @prisma/engines@npm:6.15.0 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ msw@npm:2.7.0 [266b3] must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @parcel/watcher@npm:2.5.1 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ yarn@npm:1.22.19 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @sentry-internal/node-cpu-profiler@npm:2.2.0 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ sqlite3@npm:5.1.7 [e799a] must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ core-js@npm:3.39.0 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @swc/core@npm:1.15.8 [22629] must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @depot/cli@npm:0.0.1-cli.2.80.0 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ msgpackr-extract@npm:3.0.3 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ @sentry/cli@npm:2.58.4 must be built because it never has been before or the last one failed
+#16 82.28 ➤ YN0007: │ protobufjs@npm:7.4.0 must be built because it never has been before or the last one failed
+#16 93.78 ➤ YN0007: │ calcom-monorepo@workspace:. must be built because it never has been before or the last one failed
+#16 93.78 ➤ YN0007: │ prisma@npm:6.16.1 [5d0b5] must be built because it never has been before or the last one failed
+#16 105.0 ➤ YN0007: │ @prisma/client@npm:6.16.1 [5d0b5] must be built because it never has been before or the last one failed
+#16 106.6 ➤ YN0000: └ Completed in 48s 951ms
+#16 106.8 ➤ YN0000: · Done with warnings in 1m 46s
+#16 DONE 107.6s
+
+#17 [builder 11/15] RUN yarn workspace @calcom/trpc run build
+#17 DONE 38.1s
+
+#18 [builder 12/15] RUN yarn --cwd packages/embeds/embed-core workspace @calcom/embed-core run build
+#18 1.908 fatal: not a git repository (or any of the parent directories): .git
+#18 2.770 ≈ tailwindcss v4.1.16
+#18 2.770 
+#18 2.858 Done in 87ms
+#18 2.985 vite v6.4.1 building for production...
+#18 3.067 transforming...
+#18 3.150 ✓ 24 modules transformed.
+#18 3.163 rendering chunks...
+#18 3.179 computing gzip size...
+#18 3.183 ../../../apps/web/public/embed/preview.html   0.68 kB │ gzip:  0.36 kB
+#18 3.183 ../../../apps/web/public/embed/preview.js     3.15 kB │ gzip:  1.48 kB
+#18 3.183 ../../../apps/web/public/embed/embed.js      87.47 kB │ gzip: 21.85 kB
+#18 3.183 ✓ built in 186ms
+#18 6.802 npm warn exec The following package was not found and will be installed: shx@0.4.0
+#18 DONE 11.5s
+
+#19 [builder 13/15] RUN yarn --cwd apps/web workspace @calcom/web run copy-app-store-static
+#19 0.666 Copied ../../packages/app-store/zoomvideo/static/zoom7.png to /calcom/apps/web/public/app-store/zoomvideo/zoom7.png
+#19 0.667 Copied ../../packages/app-store/zoomvideo/static/zoom6.png to /calcom/apps/web/public/app-store/zoomvideo/zoom6.png
+#19 0.667 Copied ../../packages/app-store/zoomvideo/static/zoom5.jpg to /calcom/apps/web/public/app-store/zoomvideo/zoom5.jpg
+#19 0.667 Copied ../../packages/app-store/zoomvideo/static/zoom4.png to /calcom/apps/web/public/app-store/zoomvideo/zoom4.png
+#19 0.667 Copied ../../packages/app-store/zoomvideo/static/zoom3.png to /calcom/apps/web/public/app-store/zoomvideo/zoom3.png
+#19 0.668 Copied ../../packages/app-store/zoomvideo/static/zoom2.png to /calcom/apps/web/public/app-store/zoomvideo/zoom2.png
+#19 0.668 Copied ../../packages/app-store/zoomvideo/static/zoom1.jpg to /calcom/apps/web/public/app-store/zoomvideo/zoom1.jpg
+#19 0.668 Copied ../../packages/app-store/zoomvideo/static/icon.svg to /calcom/apps/web/public/app-store/zoomvideo/icon.svg
+#19 0.669 Copied ../../packages/app-store/zohocrm/static/icon.svg to /calcom/apps/web/public/app-store/zohocrm/icon.svg
+#19 0.669 Copied ../../packages/app-store/zohocrm/static/icon.png to /calcom/apps/web/public/app-store/zohocrm/icon.png
+#19 0.669 Copied ../../packages/app-store/zohocrm/static/1.png to /calcom/apps/web/public/app-store/zohocrm/1.png
+#19 0.669 Copied ../../packages/app-store/zohocalendar/static/icon.svg to /calcom/apps/web/public/app-store/zohocalendar/icon.svg
+#19 0.669 Copied ../../packages/app-store/zohocalendar/static/ZCal4.jpg to /calcom/apps/web/public/app-store/zohocalendar/ZCal4.jpg
+#19 0.669 Copied ../../packages/app-store/zohocalendar/static/ZCal3.jpg to /calcom/apps/web/public/app-store/zohocalendar/ZCal3.jpg
+#19 0.670 Copied ../../packages/app-store/zohocalendar/static/ZCal2.jpg to /calcom/apps/web/public/app-store/zohocalendar/ZCal2.jpg
+#19 0.670 Copied ../../packages/app-store/zohocalendar/static/ZCal1.jpg to /calcom/apps/web/public/app-store/zohocalendar/ZCal1.jpg
+#19 0.670 Copied ../../packages/app-store/zoho-bigin/static/zohobigin.svg to /calcom/apps/web/public/app-store/zoho-bigin/zohobigin.svg
+#19 0.670 Copied ../../packages/app-store/zoho-bigin/static/1.png to /calcom/apps/web/public/app-store/zoho-bigin/1.png
+#19 0.671 Copied ../../packages/app-store/zapier/static/todoist.svg to /calcom/apps/web/public/app-store/zapier/todoist.svg
+#19 0.671 Copied ../../packages/app-store/zapier/static/salesforce.svg to /calcom/apps/web/public/app-store/zapier/salesforce.svg
+#19 0.671 Copied ../../packages/app-store/zapier/static/icon.svg to /calcom/apps/web/public/app-store/zapier/icon.svg
+#19 0.671 Copied ../../packages/app-store/zapier/static/googleSheets.svg to /calcom/apps/web/public/app-store/zapier/googleSheets.svg
+#19 0.671 Copied ../../packages/app-store/zapier/static/googleCalendar.svg to /calcom/apps/web/public/app-store/zapier/googleCalendar.svg
+#19 0.671 Copied ../../packages/app-store/zapier/static/gmail.svg to /calcom/apps/web/public/app-store/zapier/gmail.svg
+#19 0.671 Copied ../../packages/app-store/zapier/static/2.jpg to /calcom/apps/web/public/app-store/zapier/2.jpg
+#19 0.671 Copied ../../packages/app-store/zapier/static/1.jpg to /calcom/apps/web/public/app-store/zapier/1.jpg
+#19 0.672 Copied ../../packages/app-store/wordpress/static/icon-dark.svg to /calcom/apps/web/public/app-store/wordpress/icon-dark.svg
+#19 0.672 Copied ../../packages/app-store/wipemycalother/static/icon-dark.svg to /calcom/apps/web/public/app-store/wipemycalother/icon-dark.svg
+#19 0.672 Copied ../../packages/app-store/wipemycalother/static/1.jpg to /calcom/apps/web/public/app-store/wipemycalother/1.jpg
+#19 0.672 Copied ../../packages/app-store/whereby/static/whereby2.webp to /calcom/apps/web/public/app-store/whereby/whereby2.webp
+#19 0.672 Copied ../../packages/app-store/whereby/static/whereby1.webp to /calcom/apps/web/public/app-store/whereby/whereby1.webp
+#19 0.672 Copied ../../packages/app-store/whereby/static/logo.svg to /calcom/apps/web/public/app-store/whereby/logo.svg
+#19 0.672 Copied ../../packages/app-store/whereby/static/icon-dark.svg to /calcom/apps/web/public/app-store/whereby/icon-dark.svg
+#19 0.672 Copied ../../packages/app-store/whatsapp/static/icon.svg to /calcom/apps/web/public/app-store/whatsapp/icon.svg
+#19 0.673 Copied ../../packages/app-store/whatsapp/static/3.jpg to /calcom/apps/web/public/app-store/whatsapp/3.jpg
+#19 0.673 Copied ../../packages/app-store/whatsapp/static/2.jpg to /calcom/apps/web/public/app-store/whatsapp/2.jpg
+#19 0.673 Copied ../../packages/app-store/whatsapp/static/1.jpg to /calcom/apps/web/public/app-store/whatsapp/1.jpg
+#19 0.673 Copied ../../packages/app-store/webex/static/icon.ico to /calcom/apps/web/public/app-store/webex/icon.ico
+#19 0.673 Copied ../../packages/app-store/webex/static/4.jpeg to /calcom/apps/web/public/app-store/webex/4.jpeg
+#19 0.673 Copied ../../packages/app-store/webex/static/3.jpeg to /calcom/apps/web/public/app-store/webex/3.jpeg
+#19 0.674 Copied ../../packages/app-store/webex/static/2.jpeg to /calcom/apps/web/public/app-store/webex/2.jpeg
+#19 0.674 Copied ../../packages/app-store/webex/static/1.jpeg to /calcom/apps/web/public/app-store/webex/1.jpeg
+#19 0.674 Copied ../../packages/app-store/weather_in_your_calendar/static/icon.svg to /calcom/apps/web/public/app-store/weather_in_your_calendar/icon.svg
+#19 0.674 Copied ../../packages/app-store/weather_in_your_calendar/static/2.jpeg to /calcom/apps/web/public/app-store/weather_in_your_calendar/2.jpeg
+#19 0.674 Copied ../../packages/app-store/weather_in_your_calendar/static/1.jpeg to /calcom/apps/web/public/app-store/weather_in_your_calendar/1.jpeg
+#19 0.674 Copied ../../packages/app-store/vital/static/icon-dark.svg to /calcom/apps/web/public/app-store/vital/icon-dark.svg
+#19 0.674 Copied ../../packages/app-store/vital/static/1.jpg to /calcom/apps/web/public/app-store/vital/1.jpg
+#19 0.675 Copied ../../packages/app-store/vimcal/static/icon.svg to /calcom/apps/web/public/app-store/vimcal/icon.svg
+#19 0.675 Copied ../../packages/app-store/vimcal/static/4.avif to /calcom/apps/web/public/app-store/vimcal/4.avif
+#19 0.675 Copied ../../packages/app-store/vimcal/static/3.avif to /calcom/apps/web/public/app-store/vimcal/3.avif
+#19 0.676 Copied ../../packages/app-store/vimcal/static/2.gif to /calcom/apps/web/public/app-store/vimcal/2.gif
+#19 0.676 Copied ../../packages/app-store/vimcal/static/2.avif to /calcom/apps/web/public/app-store/vimcal/2.avif
+#19 0.676 Copied ../../packages/app-store/vimcal/static/1.avif to /calcom/apps/web/public/app-store/vimcal/1.avif
+#19 0.676 Copied ../../packages/app-store/umami/static/icon.svg to /calcom/apps/web/public/app-store/umami/icon.svg
+#19 0.676 Copied ../../packages/app-store/umami/static/1.png to /calcom/apps/web/public/app-store/umami/1.png
+#19 0.676 Copied ../../packages/app-store/twipla/static/icon.svg to /calcom/apps/web/public/app-store/twipla/icon.svg
+#19 0.676 Copied ../../packages/app-store/twipla/static/1.png to /calcom/apps/web/public/app-store/twipla/1.png
+#19 0.677 Copied ../../packages/app-store/templates/link-as-an-app/static/icon.svg to /calcom/apps/web/public/app-store/templates/link-as-an-app/icon.svg
+#19 0.678 Copied ../../packages/app-store/templates/link-as-an-app/static/3.jpeg to /calcom/apps/web/public/app-store/templates/link-as-an-app/3.jpeg
+#19 0.678 Copied ../../packages/app-store/templates/link-as-an-app/static/2.jpeg to /calcom/apps/web/public/app-store/templates/link-as-an-app/2.jpeg
+#19 0.679 Copied ../../packages/app-store/templates/link-as-an-app/static/1.jpeg to /calcom/apps/web/public/app-store/templates/link-as-an-app/1.jpeg
+#19 0.679 Copied ../../packages/app-store/templates/general-app-settings/static/icon.svg to /calcom/apps/web/public/app-store/templates/general-app-settings/icon.svg
+#19 0.680 Copied ../../packages/app-store/templates/general-app-settings/static/3.jpeg to /calcom/apps/web/public/app-store/templates/general-app-settings/3.jpeg
+#19 0.681 Copied ../../packages/app-store/templates/general-app-settings/static/2.jpeg to /calcom/apps/web/public/app-store/templates/general-app-settings/2.jpeg
+#19 0.682 Copied ../../packages/app-store/templates/general-app-settings/static/1.jpeg to /calcom/apps/web/public/app-store/templates/general-app-settings/1.jpeg
+#19 0.682 Copied ../../packages/app-store/templates/event-type-location-video-static/static/icon.svg to /calcom/apps/web/public/app-store/templates/event-type-location-video-static/icon.svg
+#19 0.683 Copied ../../packages/app-store/templates/event-type-location-video-static/static/3.jpeg to /calcom/apps/web/public/app-store/templates/event-type-location-video-static/3.jpeg
+#19 0.684 Copied ../../packages/app-store/templates/event-type-location-video-static/static/2.jpeg to /calcom/apps/web/public/app-store/templates/event-type-location-video-static/2.jpeg
+#19 0.685 Copied ../../packages/app-store/templates/event-type-location-video-static/static/1.jpeg to /calcom/apps/web/public/app-store/templates/event-type-location-video-static/1.jpeg
+#19 0.685 Copied ../../packages/app-store/templates/event-type-app-card/static/icon.svg to /calcom/apps/web/public/app-store/templates/event-type-app-card/icon.svg
+#19 0.686 Copied ../../packages/app-store/templates/event-type-app-card/static/3.jpeg to /calcom/apps/web/public/app-store/templates/event-type-app-card/3.jpeg
+#19 0.687 Copied ../../packages/app-store/templates/event-type-app-card/static/2.jpeg to /calcom/apps/web/public/app-store/templates/event-type-app-card/2.jpeg
+#19 0.688 Copied ../../packages/app-store/templates/event-type-app-card/static/1.jpeg to /calcom/apps/web/public/app-store/templates/event-type-app-card/1.jpeg
+#19 0.688 Copied ../../packages/app-store/templates/booking-pages-tag/static/icon.svg to /calcom/apps/web/public/app-store/templates/booking-pages-tag/icon.svg
+#19 0.689 Copied ../../packages/app-store/templates/booking-pages-tag/static/3.jpeg to /calcom/apps/web/public/app-store/templates/booking-pages-tag/3.jpeg
+#19 0.689 Copied ../../packages/app-store/templates/booking-pages-tag/static/2.jpeg to /calcom/apps/web/public/app-store/templates/booking-pages-tag/2.jpeg
+#19 0.691 Copied ../../packages/app-store/templates/booking-pages-tag/static/1.jpeg to /calcom/apps/web/public/app-store/templates/booking-pages-tag/1.jpeg
+#19 0.691 Copied ../../packages/app-store/templates/basic/static/icon.svg to /calcom/apps/web/public/app-store/templates/basic/icon.svg
+#19 0.692 Copied ../../packages/app-store/templates/basic/static/3.jpeg to /calcom/apps/web/public/app-store/templates/basic/3.jpeg
+#19 0.692 Copied ../../packages/app-store/templates/basic/static/2.jpeg to /calcom/apps/web/public/app-store/templates/basic/2.jpeg
+#19 0.693 Copied ../../packages/app-store/templates/basic/static/1.jpeg to /calcom/apps/web/public/app-store/templates/basic/1.jpeg
+#19 0.693 Copied ../../packages/app-store/telli/static/icon-dark.svg to /calcom/apps/web/public/app-store/telli/icon-dark.svg
+#19 0.694 Copied ../../packages/app-store/telli/static/5.jpg to /calcom/apps/web/public/app-store/telli/5.jpg
+#19 0.694 Copied ../../packages/app-store/telli/static/4.jpg to /calcom/apps/web/public/app-store/telli/4.jpg
+#19 0.694 Copied ../../packages/app-store/telli/static/3.jpg to /calcom/apps/web/public/app-store/telli/3.jpg
+#19 0.694 Copied ../../packages/app-store/telli/static/2.jpg to /calcom/apps/web/public/app-store/telli/2.jpg
+#19 0.694 Copied ../../packages/app-store/telli/static/1.jpg to /calcom/apps/web/public/app-store/telli/1.jpg
+#19 0.694 Copied ../../packages/app-store/telegram/static/icon.svg to /calcom/apps/web/public/app-store/telegram/icon.svg
+#19 0.694 Copied ../../packages/app-store/telegram/static/3.jpg to /calcom/apps/web/public/app-store/telegram/3.jpg
+#19 0.695 Copied ../../packages/app-store/telegram/static/2.jpg to /calcom/apps/web/public/app-store/telegram/2.jpg
+#19 0.695 Copied ../../packages/app-store/telegram/static/1.jpg to /calcom/apps/web/public/app-store/telegram/1.jpg
+#19 0.695 Copied ../../packages/app-store/tandemvideo/static/tandem6.jpg to /calcom/apps/web/public/app-store/tandemvideo/tandem6.jpg
+#19 0.695 Copied ../../packages/app-store/tandemvideo/static/tandem5.jpg to /calcom/apps/web/public/app-store/tandemvideo/tandem5.jpg
+#19 0.695 Copied ../../packages/app-store/tandemvideo/static/tandem4.jpg to /calcom/apps/web/public/app-store/tandemvideo/tandem4.jpg
+#19 0.695 Copied ../../packages/app-store/tandemvideo/static/tandem3.jpg to /calcom/apps/web/public/app-store/tandemvideo/tandem3.jpg
+#19 0.695 Copied ../../packages/app-store/tandemvideo/static/tandem2.jpg to /calcom/apps/web/public/app-store/tandemvideo/tandem2.jpg
+#19 0.695 Copied ../../packages/app-store/tandemvideo/static/tandem1.jpg to /calcom/apps/web/public/app-store/tandemvideo/tandem1.jpg
+#19 0.695 Copied ../../packages/app-store/tandemvideo/static/icon.svg to /calcom/apps/web/public/app-store/tandemvideo/icon.svg
+#19 0.695 Copied ../../packages/app-store/synthflow/static/icon.svg to /calcom/apps/web/public/app-store/synthflow/icon.svg
+#19 0.696 Copied ../../packages/app-store/synthflow/static/3.jpg to /calcom/apps/web/public/app-store/synthflow/3.jpg
+#19 0.696 Copied ../../packages/app-store/synthflow/static/2.jpg to /calcom/apps/web/public/app-store/synthflow/2.jpg
+#19 0.696 Copied ../../packages/app-store/synthflow/static/1.jpg to /calcom/apps/web/public/app-store/synthflow/1.jpg
+#19 0.696 Copied ../../packages/app-store/sylapsvideo/static/icon.svg to /calcom/apps/web/public/app-store/sylapsvideo/icon.svg
+#19 0.696 Copied ../../packages/app-store/sylapsvideo/static/1.jpg to /calcom/apps/web/public/app-store/sylapsvideo/1.jpg
+#19 0.696 Copied ../../packages/app-store/stripepayment/static/stripe5.jpg to /calcom/apps/web/public/app-store/stripepayment/stripe5.jpg
+#19 0.696 Copied ../../packages/app-store/stripepayment/static/stripe4.jpg to /calcom/apps/web/public/app-store/stripepayment/stripe4.jpg
+#19 0.697 Copied ../../packages/app-store/stripepayment/static/stripe3.jpg to /calcom/apps/web/public/app-store/stripepayment/stripe3.jpg
+#19 0.697 Copied ../../packages/app-store/stripepayment/static/stripe2.jpg to /calcom/apps/web/public/app-store/stripepayment/stripe2.jpg
+#19 0.697 Copied ../../packages/app-store/stripepayment/static/stripe1.jpg to /calcom/apps/web/public/app-store/stripepayment/stripe1.jpg
+#19 0.697 Copied ../../packages/app-store/stripepayment/static/icon.svg to /calcom/apps/web/public/app-store/stripepayment/icon.svg
+#19 0.697 Copied ../../packages/app-store/skype/static/icon.svg to /calcom/apps/web/public/app-store/skype/icon.svg
+#19 0.697 Copied ../../packages/app-store/skype/static/3.jpeg to /calcom/apps/web/public/app-store/skype/3.jpeg
+#19 0.697 Copied ../../packages/app-store/skype/static/2.jpeg to /calcom/apps/web/public/app-store/skype/2.jpeg
+#19 0.698 Copied ../../packages/app-store/skype/static/1.jpeg to /calcom/apps/web/public/app-store/skype/1.jpeg
+#19 0.698 Copied ../../packages/app-store/sirius_video/static/icon-dark.svg to /calcom/apps/web/public/app-store/sirius_video/icon-dark.svg
+#19 0.698 Copied ../../packages/app-store/sirius_video/static/3.jpg to /calcom/apps/web/public/app-store/sirius_video/3.jpg
+#19 0.698 Copied ../../packages/app-store/sirius_video/static/2.jpg to /calcom/apps/web/public/app-store/sirius_video/2.jpg
+#19 0.698 Copied ../../packages/app-store/sirius_video/static/1.jpg to /calcom/apps/web/public/app-store/sirius_video/1.jpg
+#19 0.698 Copied ../../packages/app-store/signal/static/icon.svg to /calcom/apps/web/public/app-store/signal/icon.svg
+#19 0.698 Copied ../../packages/app-store/signal/static/2.jpg to /calcom/apps/web/public/app-store/signal/2.jpg
+#19 0.698 Copied ../../packages/app-store/signal/static/1.jpg to /calcom/apps/web/public/app-store/signal/1.jpg
+#19 0.698 Copied ../../packages/app-store/shimmervideo/static/icon.png to /calcom/apps/web/public/app-store/shimmervideo/icon.png
+#19 0.699 Copied ../../packages/app-store/shimmervideo/static/2.jpeg to /calcom/apps/web/public/app-store/shimmervideo/2.jpeg
+#19 0.699 Copied ../../packages/app-store/shimmervideo/static/1.jpeg to /calcom/apps/web/public/app-store/shimmervideo/1.jpeg
+#19 0.699 Copied ../../packages/app-store/sendgrid/static/logo.png to /calcom/apps/web/public/app-store/sendgrid/logo.png
+#19 0.699 Copied ../../packages/app-store/sendgrid/static/1.png to /calcom/apps/web/public/app-store/sendgrid/1.png
+#19 0.716 Copied ../../packages/app-store/salesroom/static/salesroom-demo.mp4 to /calcom/apps/web/public/app-store/salesroom/salesroom-demo.mp4
+#19 0.716 Copied ../../packages/app-store/salesroom/static/icon.svg to /calcom/apps/web/public/app-store/salesroom/icon.svg
+#19 0.716 Copied ../../packages/app-store/salesroom/static/5.jpeg to /calcom/apps/web/public/app-store/salesroom/5.jpeg
+#19 0.716 Copied ../../packages/app-store/salesroom/static/4.jpeg to /calcom/apps/web/public/app-store/salesroom/4.jpeg
+#19 0.716 Copied ../../packages/app-store/salesroom/static/3.jpeg to /calcom/apps/web/public/app-store/salesroom/3.jpeg
+#19 0.717 Copied ../../packages/app-store/salesroom/static/2.jpeg to /calcom/apps/web/public/app-store/salesroom/2.jpeg
+#19 0.717 Copied ../../packages/app-store/salesroom/static/1.jpeg to /calcom/apps/web/public/app-store/salesroom/1.jpeg
+#19 0.717 Copied ../../packages/app-store/salesforce/static/icon.png to /calcom/apps/web/public/app-store/salesforce/icon.png
+#19 0.717 Copied ../../packages/app-store/salesforce/static/1.png to /calcom/apps/web/public/app-store/salesforce/1.png
+#19 0.717 Copied ../../packages/app-store/routing-forms/static/icon-dark.svg to /calcom/apps/web/public/app-store/routing-forms/icon-dark.svg
+#19 0.717 Copied ../../packages/app-store/routing-forms/static/3.jpg to /calcom/apps/web/public/app-store/routing-forms/3.jpg
+#19 0.718 Copied ../../packages/app-store/routing-forms/static/2.jpg to /calcom/apps/web/public/app-store/routing-forms/2.jpg
+#19 0.718 Copied ../../packages/app-store/routing-forms/static/1.jpg to /calcom/apps/web/public/app-store/routing-forms/1.jpg
+#19 0.718 Copied ../../packages/app-store/roam/static/icon.png to /calcom/apps/web/public/app-store/roam/icon.png
+#19 0.718 Copied ../../packages/app-store/roam/static/icon-dark.svg to /calcom/apps/web/public/app-store/roam/icon-dark.svg
+#19 0.718 Copied ../../packages/app-store/roam/static/3.jpg to /calcom/apps/web/public/app-store/roam/3.jpg
+#19 0.719 Copied ../../packages/app-store/roam/static/2.jpg to /calcom/apps/web/public/app-store/roam/2.jpg
+#19 0.719 Copied ../../packages/app-store/roam/static/1.jpg to /calcom/apps/web/public/app-store/roam/1.jpg
+#19 0.719 Copied ../../packages/app-store/riverside/static/riverside1.png to /calcom/apps/web/public/app-store/riverside/riverside1.png
+#19 0.719 Copied ../../packages/app-store/riverside/static/icon-dark.svg to /calcom/apps/web/public/app-store/riverside/icon-dark.svg
+#19 0.719 Copied ../../packages/app-store/retell-ai/static/icon-dark.svg to /calcom/apps/web/public/app-store/retell-ai/icon-dark.svg
+#19 0.719 Copied ../../packages/app-store/retell-ai/static/4.jpg to /calcom/apps/web/public/app-store/retell-ai/4.jpg
+#19 0.720 Copied ../../packages/app-store/retell-ai/static/3.jpg to /calcom/apps/web/public/app-store/retell-ai/3.jpg
+#19 0.720 Copied ../../packages/app-store/retell-ai/static/2.jpg to /calcom/apps/web/public/app-store/retell-ai/2.jpg
+#19 0.720 Copied ../../packages/app-store/retell-ai/static/1.jpg to /calcom/apps/web/public/app-store/retell-ai/1.jpg
+#19 0.720 Copied ../../packages/app-store/raycast/static/icon.svg to /calcom/apps/web/public/app-store/raycast/icon.svg
+#19 0.720 Copied ../../packages/app-store/raycast/static/4.png to /calcom/apps/web/public/app-store/raycast/4.png
+#19 0.720 Copied ../../packages/app-store/raycast/static/3.png to /calcom/apps/web/public/app-store/raycast/3.png
+#19 0.720 Copied ../../packages/app-store/raycast/static/2.png to /calcom/apps/web/public/app-store/raycast/2.png
+#19 0.720 Copied ../../packages/app-store/raycast/static/1.png to /calcom/apps/web/public/app-store/raycast/1.png
+#19 0.721 Copied ../../packages/app-store/qr_code/static/icon.svg to /calcom/apps/web/public/app-store/qr_code/icon.svg
+#19 0.721 Copied ../../packages/app-store/posthog/static/icon.svg to /calcom/apps/web/public/app-store/posthog/icon.svg
+#19 0.721 Copied ../../packages/app-store/posthog/static/1.png to /calcom/apps/web/public/app-store/posthog/1.png
+#19 0.721 Copied ../../packages/app-store/plausible/static/icon.svg to /calcom/apps/web/public/app-store/plausible/icon.svg
+#19 0.722 Copied ../../packages/app-store/plausible/static/1.jpg to /calcom/apps/web/public/app-store/plausible/1.jpg
+#19 0.722 Copied ../../packages/app-store/pipedrive-crm/static/pipedrive-banner.jpeg to /calcom/apps/web/public/app-store/pipedrive-crm/pipedrive-banner.jpeg
+#19 0.722 Copied ../../packages/app-store/pipedrive-crm/static/icon.svg to /calcom/apps/web/public/app-store/pipedrive-crm/icon.svg
+#19 0.722 Copied ../../packages/app-store/pipedream/static/icon.svg to /calcom/apps/web/public/app-store/pipedream/icon.svg
+#19 0.722 Copied ../../packages/app-store/pipedream/static/5.png to /calcom/apps/web/public/app-store/pipedream/5.png
+#19 0.722 Copied ../../packages/app-store/pipedream/static/4.png to /calcom/apps/web/public/app-store/pipedream/4.png
+#19 0.723 Copied ../../packages/app-store/pipedream/static/3.png to /calcom/apps/web/public/app-store/pipedream/3.png
+#19 0.723 Copied ../../packages/app-store/pipedream/static/2.png to /calcom/apps/web/public/app-store/pipedream/2.png
+#19 0.723 Copied ../../packages/app-store/pipedream/static/1.png to /calcom/apps/web/public/app-store/pipedream/1.png
+#19 0.723 Copied ../../packages/app-store/ping/static/icon.svg to /calcom/apps/web/public/app-store/ping/icon.svg
+#19 0.724 Copied ../../packages/app-store/ping/static/3.png to /calcom/apps/web/public/app-store/ping/3.png
+#19 0.724 Copied ../../packages/app-store/ping/static/2.png to /calcom/apps/web/public/app-store/ping/2.png
+#19 0.725 Copied ../../packages/app-store/ping/static/1.png to /calcom/apps/web/public/app-store/ping/1.png
+#19 0.725 Copied ../../packages/app-store/paypal/static/paypal-logo.svg to /calcom/apps/web/public/app-store/paypal/paypal-logo.svg
+#19 0.725 Copied ../../packages/app-store/paypal/static/icon.svg to /calcom/apps/web/public/app-store/paypal/icon.svg
+#19 0.726 Copied ../../packages/app-store/paypal/static/3.jpeg to /calcom/apps/web/public/app-store/paypal/3.jpeg
+#19 0.726 Copied ../../packages/app-store/paypal/static/2.jpeg to /calcom/apps/web/public/app-store/paypal/2.jpeg
+#19 0.726 Copied ../../packages/app-store/paypal/static/1.jpeg to /calcom/apps/web/public/app-store/paypal/1.jpeg
+#19 0.726 Copied ../../packages/app-store/office365video/static/teams5.png to /calcom/apps/web/public/app-store/office365video/teams5.png
+#19 0.726 Copied ../../packages/app-store/office365video/static/teams4.png to /calcom/apps/web/public/app-store/office365video/teams4.png
+#19 0.726 Copied ../../packages/app-store/office365video/static/teams3.jpeg to /calcom/apps/web/public/app-store/office365video/teams3.jpeg
+#19 0.727 Copied ../../packages/app-store/office365video/static/teams2.png to /calcom/apps/web/public/app-store/office365video/teams2.png
+#19 0.727 Copied ../../packages/app-store/office365video/static/teams1.png to /calcom/apps/web/public/app-store/office365video/teams1.png
+#19 0.727 Copied ../../packages/app-store/office365video/static/icon.svg to /calcom/apps/web/public/app-store/office365video/icon.svg
+#19 0.727 Copied ../../packages/app-store/office365calendar/static/icon.svg to /calcom/apps/web/public/app-store/office365calendar/icon.svg
+#19 0.728 Copied ../../packages/app-store/office365calendar/static/4.jpg to /calcom/apps/web/public/app-store/office365calendar/4.jpg
+#19 0.728 Copied ../../packages/app-store/office365calendar/static/3.jpg to /calcom/apps/web/public/app-store/office365calendar/3.jpg
+#19 0.728 Copied ../../packages/app-store/office365calendar/static/2.jpg to /calcom/apps/web/public/app-store/office365calendar/2.jpg
+#19 0.728 Copied ../../packages/app-store/office365calendar/static/1.jpg to /calcom/apps/web/public/app-store/office365calendar/1.jpg
+#19 0.728 Copied ../../packages/app-store/nextcloudtalk/static/nextcloudtalk2.jpg to /calcom/apps/web/public/app-store/nextcloudtalk/nextcloudtalk2.jpg
+#19 0.728 Copied ../../packages/app-store/nextcloudtalk/static/nextcloudtalk1.jpg to /calcom/apps/web/public/app-store/nextcloudtalk/nextcloudtalk1.jpg
+#19 0.728 Copied ../../packages/app-store/nextcloudtalk/static/icon.svg to /calcom/apps/web/public/app-store/nextcloudtalk/icon.svg
+#19 0.729 Copied ../../packages/app-store/n8n/static/icon.svg to /calcom/apps/web/public/app-store/n8n/icon.svg
+#19 0.729 Copied ../../packages/app-store/n8n/static/4.gif to /calcom/apps/web/public/app-store/n8n/4.gif
+#19 0.729 Copied ../../packages/app-store/n8n/static/3.png to /calcom/apps/web/public/app-store/n8n/3.png
+#19 0.729 Copied ../../packages/app-store/n8n/static/2.png to /calcom/apps/web/public/app-store/n8n/2.png
+#19 0.729 Copied ../../packages/app-store/n8n/static/1.png to /calcom/apps/web/public/app-store/n8n/1.png
+#19 0.729 Copied ../../packages/app-store/monobot/static/icon.svg to /calcom/apps/web/public/app-store/monobot/icon.svg
+#19 0.730 Copied ../../packages/app-store/monobot/static/3.jpeg to /calcom/apps/web/public/app-store/monobot/3.jpeg
+#19 0.730 Copied ../../packages/app-store/monobot/static/2.jpeg to /calcom/apps/web/public/app-store/monobot/2.jpeg
+#19 0.730 Copied ../../packages/app-store/monobot/static/1.webp to /calcom/apps/web/public/app-store/monobot/1.webp
+#19 0.730 Copied ../../packages/app-store/mock-payment-app/static/icon.svg to /calcom/apps/web/public/app-store/mock-payment-app/icon.svg
+#19 0.730 Copied ../../packages/app-store/mirotalk/static/icon.svg to /calcom/apps/web/public/app-store/mirotalk/icon.svg
+#19 0.731 Copied ../../packages/app-store/mirotalk/static/2.jpeg to /calcom/apps/web/public/app-store/mirotalk/2.jpeg
+#19 0.731 Copied ../../packages/app-store/mirotalk/static/1.jpeg to /calcom/apps/web/public/app-store/mirotalk/1.jpeg
+#19 0.731 Copied ../../packages/app-store/millis-ai/static/icon.png to /calcom/apps/web/public/app-store/millis-ai/icon.png
+#19 0.731 Copied ../../packages/app-store/millis-ai/static/4.jpg to /calcom/apps/web/public/app-store/millis-ai/4.jpg
+#19 0.731 Copied ../../packages/app-store/millis-ai/static/3.jpg to /calcom/apps/web/public/app-store/millis-ai/3.jpg
+#19 0.731 Copied ../../packages/app-store/millis-ai/static/2.jpg to /calcom/apps/web/public/app-store/millis-ai/2.jpg
+#19 0.731 Copied ../../packages/app-store/millis-ai/static/1.jpg to /calcom/apps/web/public/app-store/millis-ai/1.jpg
+#19 0.732 Copied ../../packages/app-store/millis-ai/static/0.jpg to /calcom/apps/web/public/app-store/millis-ai/0.jpg
+#19 0.732 Copied ../../packages/app-store/metapixel/static/icon.svg to /calcom/apps/web/public/app-store/metapixel/icon.svg
+#19 0.732 Copied ../../packages/app-store/metapixel/static/3.png to /calcom/apps/web/public/app-store/metapixel/3.png
+#19 0.732 Copied ../../packages/app-store/metapixel/static/2.png to /calcom/apps/web/public/app-store/metapixel/2.png
+#19 0.732 Copied ../../packages/app-store/metapixel/static/1.png to /calcom/apps/web/public/app-store/metapixel/1.png
+#19 0.732 Copied ../../packages/app-store/matomo/static/icon.svg to /calcom/apps/web/public/app-store/matomo/icon.svg
+#19 0.733 Copied ../../packages/app-store/matomo/static/1.png to /calcom/apps/web/public/app-store/matomo/1.png
+#19 0.733 Copied ../../packages/app-store/make/static/icon.svg to /calcom/apps/web/public/app-store/make/icon.svg
+#19 0.733 Copied ../../packages/app-store/make/static/5.png to /calcom/apps/web/public/app-store/make/5.png
+#19 0.733 Copied ../../packages/app-store/make/static/4.png to /calcom/apps/web/public/app-store/make/4.png
+#19 0.733 Copied ../../packages/app-store/make/static/3.png to /calcom/apps/web/public/app-store/make/3.png
+#19 0.734 Copied ../../packages/app-store/make/static/2.png to /calcom/apps/web/public/app-store/make/2.png
+#19 0.734 Copied ../../packages/app-store/make/static/1.png to /calcom/apps/web/public/app-store/make/1.png
+#19 0.734 Copied ../../packages/app-store/linear/static/icon.svg to /calcom/apps/web/public/app-store/linear/icon.svg
+#19 0.735 Copied ../../packages/app-store/linear/static/1.jpg to /calcom/apps/web/public/app-store/linear/1.jpg
+#19 0.735 Copied ../../packages/app-store/lindy/static/icon-dark.svg to /calcom/apps/web/public/app-store/lindy/icon-dark.svg
+#19 0.735 Copied ../../packages/app-store/lindy/static/5.jpg to /calcom/apps/web/public/app-store/lindy/5.jpg
+#19 0.735 Copied ../../packages/app-store/lindy/static/4.jpg to /calcom/apps/web/public/app-store/lindy/4.jpg
+#19 0.735 Copied ../../packages/app-store/lindy/static/3.jpg to /calcom/apps/web/public/app-store/lindy/3.jpg
+#19 0.736 Copied ../../packages/app-store/lindy/static/2.jpg to /calcom/apps/web/public/app-store/lindy/2.jpg
+#19 0.736 Copied ../../packages/app-store/lindy/static/1.jpg to /calcom/apps/web/public/app-store/lindy/1.jpg
+#19 0.736 Copied ../../packages/app-store/larkcalendar/static/icon.svg to /calcom/apps/web/public/app-store/larkcalendar/icon.svg
+#19 0.736 Copied ../../packages/app-store/larkcalendar/static/4.png to /calcom/apps/web/public/app-store/larkcalendar/4.png
+#19 0.737 Copied ../../packages/app-store/larkcalendar/static/3.png to /calcom/apps/web/public/app-store/larkcalendar/3.png
+#19 0.737 Copied ../../packages/app-store/larkcalendar/static/2.png to /calcom/apps/web/public/app-store/larkcalendar/2.png
+#19 0.737 Copied ../../packages/app-store/larkcalendar/static/1.png to /calcom/apps/web/public/app-store/larkcalendar/1.png
+#19 0.738 Copied ../../packages/app-store/jitsivideo/static/jitsi1.jpg to /calcom/apps/web/public/app-store/jitsivideo/jitsi1.jpg
+#19 0.738 Copied ../../packages/app-store/jitsivideo/static/icon.svg to /calcom/apps/web/public/app-store/jitsivideo/icon.svg
+#19 0.738 Copied ../../packages/app-store/jelly/static/icon.svg to /calcom/apps/web/public/app-store/jelly/icon.svg
+#19 0.738 Copied ../../packages/app-store/jelly/static/3.jpeg to /calcom/apps/web/public/app-store/jelly/3.jpeg
+#19 0.738 Copied ../../packages/app-store/jelly/static/2.jpeg to /calcom/apps/web/public/app-store/jelly/2.jpeg
+#19 0.738 Copied ../../packages/app-store/jelly/static/1.jpeg to /calcom/apps/web/public/app-store/jelly/1.jpeg
+#19 0.738 Copied ../../packages/app-store/intercom/static/icon.svg to /calcom/apps/web/public/app-store/intercom/icon.svg
+#19 0.739 Copied ../../packages/app-store/intercom/static/3.webp to /calcom/apps/web/public/app-store/intercom/3.webp
+#19 0.739 Copied ../../packages/app-store/intercom/static/3.png to /calcom/apps/web/public/app-store/intercom/3.png
+#19 0.740 Copied ../../packages/app-store/intercom/static/2.webp to /calcom/apps/web/public/app-store/intercom/2.webp
+#19 0.741 Copied ../../packages/app-store/intercom/static/2.png to /calcom/apps/web/public/app-store/intercom/2.png
+#19 0.742 Copied ../../packages/app-store/intercom/static/1.webp to /calcom/apps/web/public/app-store/intercom/1.webp
+#19 0.744 Copied ../../packages/app-store/intercom/static/1.png to /calcom/apps/web/public/app-store/intercom/1.png
+#19 0.744 Copied ../../packages/app-store/insihts/static/icon.svg to /calcom/apps/web/public/app-store/insihts/icon.svg
+#19 0.745 Copied ../../packages/app-store/insihts/static/1.png to /calcom/apps/web/public/app-store/insihts/1.png
+#19 0.746 Copied ../../packages/app-store/ics-feedcalendar/static/icon.svg to /calcom/apps/web/public/app-store/ics-feedcalendar/icon.svg
+#19 0.746 Copied ../../packages/app-store/huddle01video/static/icon.svg to /calcom/apps/web/public/app-store/huddle01video/icon.svg
+#19 0.746 Copied ../../packages/app-store/huddle01video/static/6.png to /calcom/apps/web/public/app-store/huddle01video/6.png
+#19 0.747 Copied ../../packages/app-store/huddle01video/static/5.png to /calcom/apps/web/public/app-store/huddle01video/5.png
+#19 0.747 Copied ../../packages/app-store/huddle01video/static/4.png to /calcom/apps/web/public/app-store/huddle01video/4.png
+#19 0.748 Copied ../../packages/app-store/huddle01video/static/3.png to /calcom/apps/web/public/app-store/huddle01video/3.png
+#19 0.748 Copied ../../packages/app-store/huddle01video/static/2.png to /calcom/apps/web/public/app-store/huddle01video/2.png
+#19 0.748 Copied ../../packages/app-store/huddle01video/static/1.png to /calcom/apps/web/public/app-store/huddle01video/1.png
+#19 0.748 Copied ../../packages/app-store/hubspot/static/icon.svg to /calcom/apps/web/public/app-store/hubspot/icon.svg
+#19 0.749 Copied ../../packages/app-store/hubspot/static/hubspot01.webp to /calcom/apps/web/public/app-store/hubspot/hubspot01.webp
+#19 0.749 Copied ../../packages/app-store/horizon-workrooms/static/icon.svg to /calcom/apps/web/public/app-store/horizon-workrooms/icon.svg
+#19 0.749 Copied ../../packages/app-store/horizon-workrooms/static/3.jpeg to /calcom/apps/web/public/app-store/horizon-workrooms/3.jpeg
+#19 0.749 Copied ../../packages/app-store/horizon-workrooms/static/2.jpeg to /calcom/apps/web/public/app-store/horizon-workrooms/2.jpeg
+#19 0.749 Copied ../../packages/app-store/horizon-workrooms/static/1.jpeg to /calcom/apps/web/public/app-store/horizon-workrooms/1.jpeg
+#19 0.749 Copied ../../packages/app-store/hitpay/static/icon.svg to /calcom/apps/web/public/app-store/hitpay/icon.svg
+#19 0.750 Copied ../../packages/app-store/hitpay/static/4.jpeg to /calcom/apps/web/public/app-store/hitpay/4.jpeg
+#19 0.750 Copied ../../packages/app-store/hitpay/static/3.jpeg to /calcom/apps/web/public/app-store/hitpay/3.jpeg
+#19 0.750 Copied ../../packages/app-store/hitpay/static/2.jpeg to /calcom/apps/web/public/app-store/hitpay/2.jpeg
+#19 0.751 Copied ../../packages/app-store/hitpay/static/1.jpeg to /calcom/apps/web/public/app-store/hitpay/1.jpeg
+#19 0.751 Copied ../../packages/app-store/gtm/static/icon.svg to /calcom/apps/web/public/app-store/gtm/icon.svg
+#19 0.752 Copied ../../packages/app-store/gtm/static/2.jpg to /calcom/apps/web/public/app-store/gtm/2.jpg
+#19 0.752 Copied ../../packages/app-store/gtm/static/1.jpg to /calcom/apps/web/public/app-store/gtm/1.jpg
+#19 0.752 Copied ../../packages/app-store/greetmate-ai/static/icon-dark.svg to /calcom/apps/web/public/app-store/greetmate-ai/icon-dark.svg
+#19 0.752 Copied ../../packages/app-store/greetmate-ai/static/2.jpeg to /calcom/apps/web/public/app-store/greetmate-ai/2.jpeg
+#19 0.753 Copied ../../packages/app-store/greetmate-ai/static/1.jpeg to /calcom/apps/web/public/app-store/greetmate-ai/1.jpeg
+#19 0.753 Copied ../../packages/app-store/granola/static/icon.svg to /calcom/apps/web/public/app-store/granola/icon.svg
+#19 0.753 Copied ../../packages/app-store/granola/static/5.jpeg to /calcom/apps/web/public/app-store/granola/5.jpeg
+#19 0.753 Copied ../../packages/app-store/granola/static/4.jpeg to /calcom/apps/web/public/app-store/granola/4.jpeg
+#19 0.753 Copied ../../packages/app-store/granola/static/3.jpeg to /calcom/apps/web/public/app-store/granola/3.jpeg
+#19 0.753 Copied ../../packages/app-store/granola/static/2.jpeg to /calcom/apps/web/public/app-store/granola/2.jpeg
+#19 0.753 Copied ../../packages/app-store/granola/static/1.jpeg to /calcom/apps/web/public/app-store/granola/1.jpeg
+#19 0.754 Copied ../../packages/app-store/googlevideo/static/logo.webp to /calcom/apps/web/public/app-store/googlevideo/logo.webp
+#19 0.754 Copied ../../packages/app-store/googlevideo/static/icon.svg to /calcom/apps/web/public/app-store/googlevideo/icon.svg
+#19 0.754 Copied ../../packages/app-store/googlevideo/static/gmeet2.png to /calcom/apps/web/public/app-store/googlevideo/gmeet2.png
+#19 0.754 Copied ../../packages/app-store/googlevideo/static/gmeet1.png to /calcom/apps/web/public/app-store/googlevideo/gmeet1.png
+#19 0.754 Copied ../../packages/app-store/googlecalendar/static/icon.svg to /calcom/apps/web/public/app-store/googlecalendar/icon.svg
+#19 0.754 Copied ../../packages/app-store/googlecalendar/static/GCal2.png to /calcom/apps/web/public/app-store/googlecalendar/GCal2.png
+#19 0.754 Copied ../../packages/app-store/googlecalendar/static/GCal1.png to /calcom/apps/web/public/app-store/googlecalendar/GCal1.png
+#19 0.754 Copied ../../packages/app-store/giphy/static/icon.svg to /calcom/apps/web/public/app-store/giphy/icon.svg
+#19 0.754 Copied ../../packages/app-store/giphy/static/GIPHY2.png to /calcom/apps/web/public/app-store/giphy/GIPHY2.png
+#19 0.755 Copied ../../packages/app-store/giphy/static/GIPHY1.png to /calcom/apps/web/public/app-store/giphy/GIPHY1.png
+#19 0.755 Copied ../../packages/app-store/ga4/static/icon.svg to /calcom/apps/web/public/app-store/ga4/icon.svg
+#19 0.755 Copied ../../packages/app-store/ga4/static/5.jpeg to /calcom/apps/web/public/app-store/ga4/5.jpeg
+#19 0.755 Copied ../../packages/app-store/ga4/static/4.jpeg to /calcom/apps/web/public/app-store/ga4/4.jpeg
+#19 0.755 Copied ../../packages/app-store/ga4/static/3.jpeg to /calcom/apps/web/public/app-store/ga4/3.jpeg
+#19 0.755 Copied ../../packages/app-store/ga4/static/2.jpeg to /calcom/apps/web/public/app-store/ga4/2.jpeg
+#19 0.755 Copied ../../packages/app-store/ga4/static/1.jpeg to /calcom/apps/web/public/app-store/ga4/1.jpeg
+#19 0.755 Copied ../../packages/app-store/framer/static/icon-dark.svg to /calcom/apps/web/public/app-store/framer/icon-dark.svg
+#19 0.755 Copied ../../packages/app-store/framer/static/4.jpg to /calcom/apps/web/public/app-store/framer/4.jpg
+#19 0.756 Copied ../../packages/app-store/framer/static/3.jpg to /calcom/apps/web/public/app-store/framer/3.jpg
+#19 0.756 Copied ../../packages/app-store/framer/static/2.jpg to /calcom/apps/web/public/app-store/framer/2.jpg
+#19 0.756 Copied ../../packages/app-store/framer/static/1.jpeg to /calcom/apps/web/public/app-store/framer/1.jpeg
+#19 0.756 Copied ../../packages/app-store/fonio-ai/static/icon.png to /calcom/apps/web/public/app-store/fonio-ai/icon.png
+#19 0.757 Copied ../../packages/app-store/fonio-ai/static/5.jpeg to /calcom/apps/web/public/app-store/fonio-ai/5.jpeg
+#19 0.757 Copied ../../packages/app-store/fonio-ai/static/4.jpeg to /calcom/apps/web/public/app-store/fonio-ai/4.jpeg
+#19 0.757 Copied ../../packages/app-store/fonio-ai/static/3.jpeg to /calcom/apps/web/public/app-store/fonio-ai/3.jpeg
+#19 0.758 Copied ../../packages/app-store/fonio-ai/static/2.jpeg to /calcom/apps/web/public/app-store/fonio-ai/2.jpeg
+#19 0.758 Copied ../../packages/app-store/fonio-ai/static/1.jpeg to /calcom/apps/web/public/app-store/fonio-ai/1.jpeg
+#19 0.758 Copied ../../packages/app-store/feishucalendar/static/icon.svg to /calcom/apps/web/public/app-store/feishucalendar/icon.svg
+#19 0.758 Copied ../../packages/app-store/feishucalendar/static/4.png to /calcom/apps/web/public/app-store/feishucalendar/4.png
+#19 0.759 Copied ../../packages/app-store/feishucalendar/static/3.png to /calcom/apps/web/public/app-store/feishucalendar/3.png
+#19 0.759 Copied ../../packages/app-store/feishucalendar/static/2.png to /calcom/apps/web/public/app-store/feishucalendar/2.png
+#19 0.759 Copied ../../packages/app-store/feishucalendar/static/1.png to /calcom/apps/web/public/app-store/feishucalendar/1.png
+#19 0.760 Copied ../../packages/app-store/fathom/static/icon.svg to /calcom/apps/web/public/app-store/fathom/icon.svg
+#19 0.760 Copied ../../packages/app-store/fathom/static/1.jpg to /calcom/apps/web/public/app-store/fathom/1.jpg
+#19 0.760 Copied ../../packages/app-store/facetime/static/logo.svg to /calcom/apps/web/public/app-store/facetime/logo.svg
+#19 0.760 Copied ../../packages/app-store/facetime/static/icon.svg to /calcom/apps/web/public/app-store/facetime/icon.svg
+#19 0.760 Copied ../../packages/app-store/facetime/static/facetime2.png to /calcom/apps/web/public/app-store/facetime/facetime2.png
+#19 0.761 Copied ../../packages/app-store/facetime/static/facetime1.png to /calcom/apps/web/public/app-store/facetime/facetime1.png
+#19 0.761 Copied ../../packages/app-store/exchangecalendar/static/icon.svg to /calcom/apps/web/public/app-store/exchangecalendar/icon.svg
+#19 0.761 Copied ../../packages/app-store/exchange2016calendar/static/icon.svg to /calcom/apps/web/public/app-store/exchange2016calendar/icon.svg
+#19 0.761 Copied ../../packages/app-store/exchange2013calendar/static/icon.svg to /calcom/apps/web/public/app-store/exchange2013calendar/icon.svg
+#19 0.761 Copied ../../packages/app-store/elevenlabs/static/icon-dark.svg to /calcom/apps/web/public/app-store/elevenlabs/icon-dark.svg
+#19 0.761 Copied ../../packages/app-store/elevenlabs/static/2.jpeg to /calcom/apps/web/public/app-store/elevenlabs/2.jpeg
+#19 0.761 Copied ../../packages/app-store/elevenlabs/static/1.jpeg to /calcom/apps/web/public/app-store/elevenlabs/1.jpeg
+#19 0.761 Copied ../../packages/app-store/element-call/static/icon.svg to /calcom/apps/web/public/app-store/element-call/icon.svg
+#19 0.762 Copied ../../packages/app-store/element-call/static/3.png to /calcom/apps/web/public/app-store/element-call/3.png
+#19 0.762 Copied ../../packages/app-store/element-call/static/2.png to /calcom/apps/web/public/app-store/element-call/2.png
+#19 0.762 Copied ../../packages/app-store/element-call/static/1.png to /calcom/apps/web/public/app-store/element-call/1.png
+#19 0.762 Copied ../../packages/app-store/eightxeight/static/icon.svg to /calcom/apps/web/public/app-store/eightxeight/icon.svg
+#19 0.762 Copied ../../packages/app-store/eightxeight/static/2.jpeg to /calcom/apps/web/public/app-store/eightxeight/2.jpeg
+#19 0.762 Copied ../../packages/app-store/eightxeight/static/1.jpeg to /calcom/apps/web/public/app-store/eightxeight/1.jpeg
+#19 0.762 Copied ../../packages/app-store/dub/static/icon-dark.svg to /calcom/apps/web/public/app-store/dub/icon-dark.svg
+#19 0.762 Copied ../../packages/app-store/dub/static/4.jpeg to /calcom/apps/web/public/app-store/dub/4.jpeg
+#19 0.763 Copied ../../packages/app-store/dub/static/3.jpeg to /calcom/apps/web/public/app-store/dub/3.jpeg
+#19 0.763 Copied ../../packages/app-store/dub/static/2.jpeg to /calcom/apps/web/public/app-store/dub/2.jpeg
+#19 0.763 Copied ../../packages/app-store/dub/static/1.jpeg to /calcom/apps/web/public/app-store/dub/1.jpeg
+#19 0.763 Copied ../../packages/app-store/discord/static/icon.svg to /calcom/apps/web/public/app-store/discord/icon.svg
+#19 0.763 Copied ../../packages/app-store/discord/static/4.jpg to /calcom/apps/web/public/app-store/discord/4.jpg
+#19 0.763 Copied ../../packages/app-store/discord/static/3.jpg to /calcom/apps/web/public/app-store/discord/3.jpg
+#19 0.764 Copied ../../packages/app-store/discord/static/2.jpg to /calcom/apps/web/public/app-store/discord/2.jpg
+#19 0.764 Copied ../../packages/app-store/discord/static/1.jpg to /calcom/apps/web/public/app-store/discord/1.jpg
+#19 0.764 Copied ../../packages/app-store/dialpad/static/icon.svg to /calcom/apps/web/public/app-store/dialpad/icon.svg
+#19 0.764 Copied ../../packages/app-store/dialpad/static/3.jpeg to /calcom/apps/web/public/app-store/dialpad/3.jpeg
+#19 0.764 Copied ../../packages/app-store/dialpad/static/2.jpeg to /calcom/apps/web/public/app-store/dialpad/2.jpeg
+#19 0.764 Copied ../../packages/app-store/dialpad/static/1.jpeg to /calcom/apps/web/public/app-store/dialpad/1.jpeg
+#19 0.764 Copied ../../packages/app-store/demodesk/static/icon.svg to /calcom/apps/web/public/app-store/demodesk/icon.svg
+#19 0.764 Copied ../../packages/app-store/demodesk/static/4.webp to /calcom/apps/web/public/app-store/demodesk/4.webp
+#19 0.764 Copied ../../packages/app-store/demodesk/static/3.webp to /calcom/apps/web/public/app-store/demodesk/3.webp
+#19 0.765 Copied ../../packages/app-store/demodesk/static/3.jpeg to /calcom/apps/web/public/app-store/demodesk/3.jpeg
+#19 0.766 Copied ../../packages/app-store/demodesk/static/2.webp to /calcom/apps/web/public/app-store/demodesk/2.webp
+#19 0.766 Copied ../../packages/app-store/demodesk/static/2.jpeg to /calcom/apps/web/public/app-store/demodesk/2.jpeg
+#19 0.766 Copied ../../packages/app-store/demodesk/static/1.jpeg to /calcom/apps/web/public/app-store/demodesk/1.jpeg
+#19 0.766 Copied ../../packages/app-store/deel/static/icon.svg to /calcom/apps/web/public/app-store/deel/icon.svg
+#19 0.766 Copied ../../packages/app-store/deel/static/3.jpeg to /calcom/apps/web/public/app-store/deel/3.jpeg
+#19 0.766 Copied ../../packages/app-store/deel/static/2.jpeg to /calcom/apps/web/public/app-store/deel/2.jpeg
+#19 0.766 Copied ../../packages/app-store/deel/static/1.jpeg to /calcom/apps/web/public/app-store/deel/1.jpeg
+#19 0.767 Copied ../../packages/app-store/databuddy/static/icon.svg to /calcom/apps/web/public/app-store/databuddy/icon.svg
+#19 0.767 Copied ../../packages/app-store/databuddy/static/1.png to /calcom/apps/web/public/app-store/databuddy/1.png
+#19 0.767 Copied ../../packages/app-store/dailyvideo/static/icon.svg to /calcom/apps/web/public/app-store/dailyvideo/icon.svg
+#19 0.767 Copied ../../packages/app-store/dailyvideo/static/3.jpg to /calcom/apps/web/public/app-store/dailyvideo/3.jpg
+#19 0.767 Copied ../../packages/app-store/dailyvideo/static/2.jpg to /calcom/apps/web/public/app-store/dailyvideo/2.jpg
+#19 0.768 Copied ../../packages/app-store/dailyvideo/static/1.jpg to /calcom/apps/web/public/app-store/dailyvideo/1.jpg
+#19 0.768 Copied ../../packages/app-store/cron/static/logo.png to /calcom/apps/web/public/app-store/cron/logo.png
+#19 0.768 Copied ../../packages/app-store/cron/static/4.png to /calcom/apps/web/public/app-store/cron/4.png
+#19 0.768 Copied ../../packages/app-store/cron/static/3.png to /calcom/apps/web/public/app-store/cron/3.png
+#19 0.769 Copied ../../packages/app-store/cron/static/2.png to /calcom/apps/web/public/app-store/cron/2.png
+#19 0.769 Copied ../../packages/app-store/cron/static/1.jpeg to /calcom/apps/web/public/app-store/cron/1.jpeg
+#19 0.769 Copied ../../packages/app-store/closecom/static/icon.svg to /calcom/apps/web/public/app-store/closecom/icon.svg
+#19 0.769 Copied ../../packages/app-store/closecom/static/5.jpg to /calcom/apps/web/public/app-store/closecom/5.jpg
+#19 0.769 Copied ../../packages/app-store/closecom/static/4.jpg to /calcom/apps/web/public/app-store/closecom/4.jpg
+#19 0.769 Copied ../../packages/app-store/closecom/static/3.jpg to /calcom/apps/web/public/app-store/closecom/3.jpg
+#19 0.769 Copied ../../packages/app-store/closecom/static/2.jpg to /calcom/apps/web/public/app-store/closecom/2.jpg
+#19 0.770 Copied ../../packages/app-store/closecom/static/1.jpg to /calcom/apps/web/public/app-store/closecom/1.jpg
+#19 0.770 Copied ../../packages/app-store/clic/static/icon.svg to /calcom/apps/web/public/app-store/clic/icon.svg
+#19 0.770 Copied ../../packages/app-store/clic/static/4.jpg to /calcom/apps/web/public/app-store/clic/4.jpg
+#19 0.771 Copied ../../packages/app-store/clic/static/3.jpg to /calcom/apps/web/public/app-store/clic/3.jpg
+#19 0.771 Copied ../../packages/app-store/clic/static/2.jpg to /calcom/apps/web/public/app-store/clic/2.jpg
+#19 0.772 Copied ../../packages/app-store/clic/static/1.jpg to /calcom/apps/web/public/app-store/clic/1.jpg
+#19 0.773 Copied ../../packages/app-store/chatbase/static/icon-dark.svg to /calcom/apps/web/public/app-store/chatbase/icon-dark.svg
+#19 0.773 Copied ../../packages/app-store/chatbase/static/3.jpg to /calcom/apps/web/public/app-store/chatbase/3.jpg
+#19 0.773 Copied ../../packages/app-store/chatbase/static/2.jpg to /calcom/apps/web/public/app-store/chatbase/2.jpg
+#19 0.773 Copied ../../packages/app-store/chatbase/static/1.jpg to /calcom/apps/web/public/app-store/chatbase/1.jpg
+#19 0.773 Copied ../../packages/app-store/caretta/static/icon.jpeg to /calcom/apps/web/public/app-store/caretta/icon.jpeg
+#19 0.773 Copied ../../packages/app-store/caretta/static/2.jpeg to /calcom/apps/web/public/app-store/caretta/2.jpeg
+#19 0.773 Copied ../../packages/app-store/caretta/static/1.jpeg to /calcom/apps/web/public/app-store/caretta/1.jpeg
+#19 0.773 Copied ../../packages/app-store/campfire/static/icon.svg to /calcom/apps/web/public/app-store/campfire/icon.svg
+#19 0.774 Copied ../../packages/app-store/campfire/static/4.png to /calcom/apps/web/public/app-store/campfire/4.png
+#19 0.774 Copied ../../packages/app-store/campfire/static/4.jpg to /calcom/apps/web/public/app-store/campfire/4.jpg
+#19 0.775 Copied ../../packages/app-store/campfire/static/3.png to /calcom/apps/web/public/app-store/campfire/3.png
+#19 0.776 Copied ../../packages/app-store/campfire/static/3.jpg to /calcom/apps/web/public/app-store/campfire/3.jpg
+#19 0.779 Copied ../../packages/app-store/campfire/static/2.png to /calcom/apps/web/public/app-store/campfire/2.png
+#19 0.779 Copied ../../packages/app-store/campfire/static/2.jpg to /calcom/apps/web/public/app-store/campfire/2.jpg
+#19 0.785 Copied ../../packages/app-store/campfire/static/1.png to /calcom/apps/web/public/app-store/campfire/1.png
+#19 0.786 Copied ../../packages/app-store/campfire/static/1.jpg to /calcom/apps/web/public/app-store/campfire/1.jpg
+#19 0.786 Copied ../../packages/app-store/caldavcalendar/static/icon.svg to /calcom/apps/web/public/app-store/caldavcalendar/icon.svg
+#19 0.786 Copied ../../packages/app-store/caldavcalendar/static/1.jpg to /calcom/apps/web/public/app-store/caldavcalendar/1.jpg
+#19 0.786 Copied ../../packages/app-store/btcpayserver/static/website.png to /calcom/apps/web/public/app-store/btcpayserver/website.png
+#19 0.787 Copied ../../packages/app-store/btcpayserver/static/integrations.png to /calcom/apps/web/public/app-store/btcpayserver/integrations.png
+#19 0.787 Copied ../../packages/app-store/btcpayserver/static/icon.svg to /calcom/apps/web/public/app-store/btcpayserver/icon.svg
+#19 0.787 Copied ../../packages/app-store/btcpayserver/static/checkout.png to /calcom/apps/web/public/app-store/btcpayserver/checkout.png
+#19 0.787 Copied ../../packages/app-store/bolna/static/icon-primary.svg to /calcom/apps/web/public/app-store/bolna/icon-primary.svg
+#19 0.787 Copied ../../packages/app-store/bolna/static/4.png to /calcom/apps/web/public/app-store/bolna/4.png
+#19 0.788 Copied ../../packages/app-store/bolna/static/3.png to /calcom/apps/web/public/app-store/bolna/3.png
+#19 0.788 Copied ../../packages/app-store/bolna/static/2.png to /calcom/apps/web/public/app-store/bolna/2.png
+#19 0.788 Copied ../../packages/app-store/bolna/static/1.png to /calcom/apps/web/public/app-store/bolna/1.png
+#19 0.788 Copied ../../packages/app-store/basecamp3/static/icon-dark.svg to /calcom/apps/web/public/app-store/basecamp3/icon-dark.svg
+#19 0.788 Copied ../../packages/app-store/basecamp3/static/3.png to /calcom/apps/web/public/app-store/basecamp3/3.png
+#19 0.788 Copied ../../packages/app-store/basecamp3/static/2.png to /calcom/apps/web/public/app-store/basecamp3/2.png
+#19 0.789 Copied ../../packages/app-store/basecamp3/static/1.png to /calcom/apps/web/public/app-store/basecamp3/1.png
+#19 0.789 Copied ../../packages/app-store/baa-for-hipaa/static/icon.svg to /calcom/apps/web/public/app-store/baa-for-hipaa/icon.svg
+#19 0.789 Copied ../../packages/app-store/baa-for-hipaa/static/1.jpg to /calcom/apps/web/public/app-store/baa-for-hipaa/1.jpg
+#19 0.789 Copied ../../packages/app-store/autocheckin/static/icon.svg to /calcom/apps/web/public/app-store/autocheckin/icon.svg
+#19 0.789 Copied ../../packages/app-store/autocheckin/static/2.jpeg to /calcom/apps/web/public/app-store/autocheckin/2.jpeg
+#19 0.790 Copied ../../packages/app-store/autocheckin/static/1.jpeg to /calcom/apps/web/public/app-store/autocheckin/1.jpeg
+#19 0.790 Copied ../../packages/app-store/attio/static/icon.svg to /calcom/apps/web/public/app-store/attio/icon.svg
+#19 0.790 Copied ../../packages/app-store/attio/static/icon-dark.svg to /calcom/apps/web/public/app-store/attio/icon-dark.svg
+#19 0.790 Copied ../../packages/app-store/attio/static/6.jpeg to /calcom/apps/web/public/app-store/attio/6.jpeg
+#19 0.790 Copied ../../packages/app-store/attio/static/5.jpeg to /calcom/apps/web/public/app-store/attio/5.jpeg
+#19 0.790 Copied ../../packages/app-store/attio/static/4.jpeg to /calcom/apps/web/public/app-store/attio/4.jpeg
+#19 0.790 Copied ../../packages/app-store/attio/static/3.jpeg to /calcom/apps/web/public/app-store/attio/3.jpeg
+#19 0.791 Copied ../../packages/app-store/attio/static/2.jpeg to /calcom/apps/web/public/app-store/attio/2.jpeg
+#19 0.791 Copied ../../packages/app-store/attio/static/1.jpeg to /calcom/apps/web/public/app-store/attio/1.jpeg
+#19 0.791 Copied ../../packages/app-store/applecalendar/static/icon.svg to /calcom/apps/web/public/app-store/applecalendar/icon.svg
+#19 0.791 Copied ../../packages/app-store/applecalendar/static/1.jpg to /calcom/apps/web/public/app-store/applecalendar/1.jpg
+#19 0.791 Copied ../../packages/app-store/amie/static/icon.svg to /calcom/apps/web/public/app-store/amie/icon.svg
+#19 0.791 Copied ../../packages/app-store/amie/static/3.jpg to /calcom/apps/web/public/app-store/amie/3.jpg
+#19 0.792 Copied ../../packages/app-store/amie/static/2.jpg to /calcom/apps/web/public/app-store/amie/2.jpg
+#19 0.792 Copied ../../packages/app-store/amie/static/1.jpg to /calcom/apps/web/public/app-store/amie/1.jpg
+#19 0.792 Copied ../../packages/app-store/alby/static/logo.svg to /calcom/apps/web/public/app-store/alby/logo.svg
+#19 0.792 Copied ../../packages/app-store/alby/static/logo-dark.svg to /calcom/apps/web/public/app-store/alby/logo-dark.svg
+#19 0.792 Copied ../../packages/app-store/alby/static/icon.svg to /calcom/apps/web/public/app-store/alby/icon.svg
+#19 0.792 Copied ../../packages/app-store/alby/static/icon-borderless.svg to /calcom/apps/web/public/app-store/alby/icon-borderless.svg
+#19 0.792 Copied ../../packages/app-store/alby/static/icon-borderless-dark.svg to /calcom/apps/web/public/app-store/alby/icon-borderless-dark.svg
+#19 0.792 Copied ../../packages/app-store/alby/static/2.png to /calcom/apps/web/public/app-store/alby/2.png
+#19 0.793 Copied ../../packages/app-store/alby/static/1.jpg to /calcom/apps/web/public/app-store/alby/1.jpg
+#19 DONE 0.9s
+
+#20 [builder 14/15] RUN yarn --cwd apps/web workspace @calcom/web run build
+#20 0.992 [33mwarn [0m EMAIL_FROM environment variable is not set, this may indicate mailing is currently disabled. Please refer to the .env.example file.
+#20 0.992 [Phase: phase-production-build] Skipping rewrite config for organizations because ORGANIZATIONS_ENABLED is not set
+#20 1.008 Attention: Next.js now collects completely anonymous telemetry regarding usage.
+#20 1.008 This information is used to shape Next.js' roadmap and prioritize features.
+#20 1.008 You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+#20 1.008 https://nextjs.org/telemetry
+#20 1.008 
+#20 1.015 ▲ Next.js 16.1.5 (Turbopack)
+#20 1.015 - Experiments (use with caution):
+#20 1.015   · optimizePackageImports
+#20 1.015 
+#20 1.084   Creating an optimized production build ...
+#20 1.337 [33mwarn [0m EMAIL_FROM environment variable is not set, this may indicate mailing is currently disabled. Please refer to the .env.example file.
+#20 1.337 [Phase: phase-production-build] Skipping rewrite config for organizations because ORGANIZATIONS_ENABLED is not set
+#20 1.342 [Phase: phase-production-build] Skipping rewrite config for organizations because ORGANIZATIONS_ENABLED is not set
+#20 44.21 ✓ Compiled successfully in 43s
+#20 44.27   Running TypeScript ...
+#20 100.5   Collecting page data using 7 workers ...
+#20 102.3 ⚠ Using edge runtime on a page currently disables static generation for that page
+#20 104.4 Warning: You have opted-out of Automatic Static Optimization due to `getInitialProps` in `pages/_app`. This does not opt-out pages with `getStaticProps`
+#20 104.4 Read more: https://nextjs.org/docs/messages/opt-out-auto-static-optimization
+#20 104.4 
+#20 104.4   Generating static pages using 7 workers (0/181) ...
+#20 104.7   Generating static pages using 7 workers (45/181) 
+#20 104.9   Generating static pages using 7 workers (90/181) 
+#20 105.1   Generating static pages using 7 workers (135/181) 
+#20 105.4 ✓ Generating static pages using 7 workers (181/181) in 1034.7ms
+#20 105.4   Finalizing page optimization ...
+#20 108.9 
+#20 108.9 Route (app)
+#20 108.9 ┌ ƒ /
+#20 108.9 ├ ƒ /_not-found
+#20 108.9 ├ ƒ /[user]
+#20 108.9 ├ ƒ /[user]/[type]
+#20 108.9 ├ ƒ /[user]/[type]/embed
+#20 108.9 ├ ƒ /[user]/embed
+#20 108.9 ├ ƒ /api/auth/forgot-password
+#20 108.9 ├ ƒ /api/auth/oauth/me
+#20 108.9 ├ ƒ /api/auth/oauth/refreshToken
+#20 108.9 ├ ƒ /api/auth/oauth/token
+#20 108.9 ├ ƒ /api/auth/oidc
+#20 108.9 ├ ƒ /api/auth/reset-password
+#20 108.9 ├ ƒ /api/auth/saml/authorize
+#20 108.9 ├ ƒ /api/auth/saml/callback
+#20 108.9 ├ ƒ /api/auth/saml/token
+#20 108.9 ├ ƒ /api/auth/saml/userinfo
+#20 108.9 ├ ƒ /api/auth/setup
+#20 108.9 ├ ƒ /api/auth/signup
+#20 108.9 ├ ƒ /api/auth/two-factor/totp/disable
+#20 108.9 ├ ƒ /api/auth/two-factor/totp/enable
+#20 108.9 ├ ƒ /api/auth/two-factor/totp/setup
+#20 108.9 ├ ƒ /api/availability/calendar
+#20 108.9 ├ ƒ /api/avatar/[uuid]
+#20 108.9 ├ ƒ /api/calAIPhone/subscription/success
+#20 108.9 ├ ƒ /api/cancel
+#20 108.9 ├ ƒ /api/compliance/download
+#20 108.9 ├ ƒ /api/cron/bookingReminder
+#20 108.9 ├ ƒ /api/cron/calendar-subscriptions
+#20 108.9 ├ ƒ /api/cron/calendar-subscriptions-cleanup
+#20 108.9 ├ ƒ /api/cron/changeTimeZone
+#20 108.9 ├ ƒ /api/cron/checkSmsPrices
+#20 108.9 ├ ƒ /api/cron/credentials
+#20 108.9 ├ ƒ /api/cron/downgradeUsers
+#20 108.9 ├ ƒ /api/cron/monthlyDigestEmail
+#20 108.9 ├ ƒ /api/cron/queuedFormResponseCleanup
+#20 108.9 ├ ƒ /api/cron/selected-calendars
+#20 108.9 ├ ƒ /api/cron/syncAppMeta
+#20 108.9 ├ ƒ /api/cron/webhookTriggers
+#20 108.9 ├ ƒ /api/cron/workflows/scheduleEmailReminders
+#20 108.9 ├ ƒ /api/cron/workflows/scheduleSMSReminders
+#20 108.9 ├ ƒ /api/cron/workflows/scheduleWhatsappReminders
+#20 108.9 ├ ƒ /api/csrf
+#20 108.9 ├ ƒ /api/email
+#20 108.9 ├ ƒ /api/geolocation
+#20 108.9 ├ ƒ /api/ip
+#20 108.9 ├ ƒ /api/link
+#20 108.9 ├ ƒ /api/logo
+#20 108.9 ├ ƒ /api/me
+#20 108.9 ├ ƒ /api/organizations/payment-redirect
+#20 108.9 ├ ƒ /api/recorded-daily-video
+#20 108.9 ├ ƒ /api/routing-forms/queued-response
+#20 108.9 ├ ƒ /api/scim/v2.0/[...directory]
+#20 108.9 ├ ƒ /api/social/og/image
+#20 108.9 ├ ƒ /api/support/conversation
+#20 108.9 ├ ƒ /api/support/hash
+#20 108.9 ├ ƒ /api/sync/helpscout
+#20 108.9 ├ ƒ /api/tasks/cleanup
+#20 108.9 ├ ƒ /api/tasks/cron
+#20 108.9 ├ ƒ /api/teams/[team]/upgrade
+#20 108.9 ├ ƒ /api/teams/api/create
+#20 108.9 ├ ƒ /api/teams/create
+#20 108.9 ├ ƒ /api/teams/googleworkspace/add
+#20 108.9 ├ ƒ /api/teams/googleworkspace/callback
+#20 108.9 ├ ƒ /api/user/referrals-token
+#20 108.9 ├ ƒ /api/username
+#20 108.9 ├ ƒ /api/verify-booking-token
+#20 108.9 ├ ƒ /api/version
+#20 108.9 ├ ƒ /api/video/guest-session
+#20 108.9 ├ ƒ /api/video/recording
+#20 108.9 ├ ƒ /api/webhook/app-credential
+#20 108.9 ├ ƒ /api/webhooks/calendar-subscription/[provider]
+#20 108.9 ├ ƒ /api/webhooks/retell-ai
+#20 108.9 ├ ƒ /api/workflows/sms/user-response
+#20 108.9 ├ ƒ /apps
+#20 108.9 ├ ƒ /apps/[slug]
+#20 108.9 ├ ƒ /apps/[slug]/setup
+#20 108.9 ├ ƒ /apps/categories
+#20 108.9 ├ ƒ /apps/categories/[category]
+#20 108.9 ├ ƒ /apps/installation/[[...step]]
+#20 108.9 ├ ƒ /apps/installed/[category]
+#20 108.9 ├ ƒ /apps/routing-forms/[...pages]
+#20 108.9 ├ ƒ /apps/routing-forms/forms/[[...pages]]
+#20 108.9 ├ ƒ /auth/error
+#20 108.9 ├ ƒ /auth/forgot-password
+#20 108.9 ├ ƒ /auth/forgot-password/[id]
+#20 108.9 ├ ƒ /auth/login
+#20 108.9 ├ ƒ /auth/logout
+#20 108.9 ├ ƒ /auth/oauth2/authorize
+#20 108.9 ├ ƒ /auth/platform/authorize
+#20 108.9 ├ ƒ /auth/saml-idp
+#20 108.9 ├ ƒ /auth/setup
+#20 108.9 ├ ƒ /auth/signin
+#20 108.9 ├ ƒ /auth/sso/[provider]
+#20 108.9 ├ ƒ /auth/sso/direct
+#20 108.9 ├ ƒ /auth/verify
+#20 108.9 ├ ƒ /auth/verify-email
+#20 108.9 ├ ƒ /auth/verify-email-change
+#20 108.9 ├ ƒ /availability
+#20 108.9 ├ ƒ /availability/[schedule]
+#20 108.9 ├ ƒ /availability/troubleshoot
+#20 108.9 ├ ƒ /booking-successful/[uid]
+#20 108.9 ├ ƒ /booking/[uid]
+#20 108.9 ├ ƒ /booking/[uid]/embed
+#20 108.9 ├ ƒ /booking/[uid]/logs
+#20 108.9 ├ ƒ /booking/dry-run-successful
+#20 108.9 ├ ƒ /bookings/[status]
+#20 108.9 ├ ƒ /connect-and-join
+#20 108.9 ├ ƒ /d/[link]/[slug]
+#20 108.9 ├ ƒ /e2e/session-warmup
+#20 108.9 ├ ƒ /enterprise
+#20 108.9 ├ ƒ /event-types
+#20 108.9 ├ ƒ /event-types/[type]
+#20 108.9 ├ ƒ /getting-started/[[...step]]
+#20 108.9 ├ ○ /icons
+#20 108.9 ├ ƒ /insights
+#20 108.9 ├ ƒ /insights/call-history
+#20 108.9 ├ ƒ /insights/router-position
+#20 108.9 ├ ƒ /insights/routing
+#20 108.9 ├ ƒ /insights/wrong-routing
+#20 108.9 ├ ƒ /maintenance
+#20 108.9 ├ ƒ /members
+#20 108.9 ├ ƒ /more
+#20 108.9 ├ ƒ /onboarding/getting-started
+#20 108.9 ├ ƒ /onboarding/organization/brand
+#20 108.9 ├ ƒ /onboarding/organization/details
+#20 108.9 ├ ƒ /onboarding/organization/invite
+#20 108.9 ├ ƒ /onboarding/organization/invite/email
+#20 108.9 ├ ƒ /onboarding/organization/migrate-members
+#20 108.9 ├ ƒ /onboarding/organization/migrate-teams
+#20 108.9 ├ ƒ /onboarding/organization/teams
+#20 108.9 ├ ƒ /onboarding/personal/calendar
+#20 108.9 ├ ƒ /onboarding/personal/profile
+#20 108.9 ├ ƒ /onboarding/personal/settings
+#20 108.9 ├ ƒ /onboarding/teams/details
+#20 108.9 ├ ƒ /onboarding/teams/invite
+#20 108.9 ├ ƒ /onboarding/teams/invite/email
+#20 108.9 ├ ƒ /org/[orgSlug]
+#20 108.9 ├ ƒ /org/[orgSlug]/[user]
+#20 108.9 ├ ƒ /org/[orgSlug]/[user]/[type]
+#20 108.9 ├ ƒ /org/[orgSlug]/[user]/[type]/embed
+#20 108.9 ├ ƒ /org/[orgSlug]/[user]/embed
+#20 108.9 ├ ƒ /org/[orgSlug]/embed
+#20 108.9 ├ ƒ /org/[orgSlug]/instant-meeting/team/[slug]/[type]
+#20 108.9 ├ ƒ /org/[orgSlug]/team/[slug]
+#20 108.9 ├ ƒ /org/[orgSlug]/team/[slug]/[type]
+#20 108.9 ├ ƒ /payment/[uid]
+#20 108.9 ├ ƒ /refer
+#20 108.9 ├ ƒ /reschedule/[uid]
+#20 108.9 ├ ƒ /reschedule/[uid]/embed
+#20 108.9 ├ ƒ /routing-forms/[...pages]
+#20 108.9 ├ ƒ /settings/admin
+#20 108.9 ├ ƒ /settings/admin/apps/[category]
+#20 108.9 ├ ƒ /settings/admin/billing
+#20 108.9 ├ ƒ /settings/admin/blocklist
+#20 108.9 ├ ƒ /settings/admin/flags
+#20 108.9 ├ ƒ /settings/admin/impersonation
+#20 108.9 ├ ƒ /settings/admin/lockedSMS
+#20 108.9 ├ ƒ /settings/admin/oauth
+#20 108.9 ├ ƒ /settings/admin/organizations
+#20 108.9 ├ ƒ /settings/admin/organizations/[id]/edit
+#20 108.9 ├ ƒ /settings/admin/playground
+#20 108.9 ├ ƒ /settings/admin/playground/bookings-by-hour
+#20 108.9 ├ ƒ /settings/admin/playground/date-range-filter
+#20 108.9 ├ ƒ /settings/admin/playground/routing-funnel
+#20 108.9 ├ ƒ /settings/admin/playground/weekly-calendar
+#20 108.9 ├ ƒ /settings/admin/users
+#20 108.9 ├ ƒ /settings/admin/users/[id]/edit
+#20 108.9 ├ ƒ /settings/admin/users/add
+#20 108.9 ├ ƒ /settings/admin/workspace-platforms
+#20 108.9 ├ ƒ /settings/billing
+#20 108.9 ├ ƒ /settings/developer/api-keys
+#20 108.9 ├ ƒ /settings/developer/oauth
+#20 108.9 ├ ƒ /settings/developer/webhooks
+#20 108.9 ├ ƒ /settings/developer/webhooks/[id]
+#20 108.9 ├ ƒ /settings/developer/webhooks/new
+#20 108.9 ├ ƒ /settings/license-key/new
+#20 108.9 ├ ƒ /settings/my-account/appearance
+#20 108.9 ├ ƒ /settings/my-account/calendars
+#20 108.9 ├ ƒ /settings/my-account/conferencing
+#20 108.9 ├ ƒ /settings/my-account/features
+#20 108.9 ├ ƒ /settings/my-account/general
+#20 108.9 ├ ƒ /settings/my-account/out-of-office
+#20 108.9 ├ ƒ /settings/my-account/profile
+#20 108.9 ├ ƒ /settings/my-account/push-notifications
+#20 108.9 ├ ƒ /settings/organizations/[id]/members
+#20 108.9 ├ ƒ /settings/organizations/admin-api
+#20 108.9 ├ ƒ /settings/organizations/appearance
+#20 108.9 ├ ƒ /settings/organizations/attributes
+#20 108.9 ├ ƒ /settings/organizations/attributes/[id]/edit
+#20 108.9 ├ ƒ /settings/organizations/attributes/create
+#20 108.9 ├ ƒ /settings/organizations/attributes/sync
+#20 108.9 ├ ƒ /settings/organizations/billing
+#20 108.9 ├ ƒ /settings/organizations/delegation-credential
+#20 108.9 ├ ƒ /settings/organizations/dsync
+#20 108.9 ├ ƒ /settings/organizations/features
+#20 108.9 ├ ƒ /settings/organizations/general
+#20 108.9 ├ ƒ /settings/organizations/guest-notifications
+#20 108.9 ├ ƒ /settings/organizations/members
+#20 108.9 ├ ƒ /settings/organizations/new
+#20 108.9 ├ ƒ /settings/organizations/new/about
+#20 108.9 ├ ƒ /settings/organizations/new/add-teams
+#20 108.9 ├ ƒ /settings/organizations/new/handover
+#20 108.9 ├ ƒ /settings/organizations/new/onboard-members
+#20 108.9 ├ ƒ /settings/organizations/new/resume
+#20 108.9 ├ ƒ /settings/organizations/new/status
+#20 108.9 ├ ƒ /settings/organizations/privacy
+#20 108.9 ├ ƒ /settings/organizations/profile
+#20 108.9 ├ ƒ /settings/organizations/roles
+#20 108.9 ├ ƒ /settings/organizations/sso
+#20 108.9 ├ ƒ /settings/organizations/teams/other
+#20 108.9 ├ ƒ /settings/organizations/teams/other/[id]/appearance
+#20 108.9 ├ ƒ /settings/organizations/teams/other/[id]/members
+#20 108.9 ├ ƒ /settings/organizations/teams/other/[id]/profile
+#20 108.9 ├ ƒ /settings/platform
+#20 108.9 ├ ƒ /settings/platform/billing
+#20 108.9 ├ ƒ /settings/platform/managed-users
+#20 108.9 ├ ƒ /settings/platform/members
+#20 108.9 ├ ƒ /settings/platform/oauth-clients/[clientId]/edit
+#20 108.9 ├ ƒ /settings/platform/oauth-clients/[clientId]/edit/webhooks
+#20 108.9 ├ ƒ /settings/platform/oauth-clients/create
+#20 108.9 ├ ƒ /settings/platform/plans
+#20 108.9 ├ ƒ /settings/security/compliance
+#20 108.9 ├ ƒ /settings/security/impersonation
+#20 108.9 ├ ƒ /settings/security/password
+#20 108.9 ├ ƒ /settings/security/sso
+#20 108.9 ├ ƒ /settings/security/two-factor-auth
+#20 108.9 ├ ƒ /settings/teams/[id]/appearance
+#20 108.9 ├ ƒ /settings/teams/[id]/billing
+#20 108.9 ├ ƒ /settings/teams/[id]/event-type
+#20 108.9 ├ ƒ /settings/teams/[id]/features
+#20 108.9 ├ ƒ /settings/teams/[id]/members
+#20 108.9 ├ ƒ /settings/teams/[id]/onboard-members
+#20 108.9 ├ ƒ /settings/teams/[id]/profile
+#20 108.9 ├ ƒ /settings/teams/[id]/roles
+#20 108.9 ├ ƒ /settings/teams/[id]/settings
+#20 108.9 ├ ƒ /settings/teams/new
+#20 108.9 ├ ƒ /settings/teams/new/invite
+#20 108.9 ├ ƒ /settings/teams/new/invite/email
+#20 108.9 ├ ƒ /signup
+#20 108.9 ├ ƒ /team/[slug]
+#20 108.9 ├ ƒ /team/[slug]/[type]
+#20 108.9 ├ ƒ /team/[slug]/[type]/embed
+#20 108.9 ├ ƒ /team/[slug]/embed
+#20 108.9 ├ ƒ /teams
+#20 108.9 ├ ƒ /upgrade
+#20 108.9 ├ ƒ /video/[uid]
+#20 108.9 ├ ƒ /video/meeting-ended/[uid]
+#20 108.9 ├ ƒ /video/meeting-not-started/[uid]
+#20 108.9 ├ ƒ /video/no-meeting-found
+#20 108.9 ├ ƒ /workflow/new
+#20 108.9 ├ ƒ /workflows
+#20 108.9 └ ƒ /workflows/[workflow]
+#20 108.9 
+#20 108.9 Route (pages)
+#20 108.9 ┌   /_app
+#20 108.9 ├ ƒ /api/auth/[...nextauth]
+#20 108.9 ├ ƒ /api/auth/verify-email
+#20 108.9 ├ ƒ /api/book/event
+#20 108.9 ├ ƒ /api/book/instant-event
+#20 108.9 ├ ƒ /api/book/recurring-event
+#20 108.9 ├ ƒ /api/book/recurring-event.test
+#20 108.9 ├ ƒ /api/get-inbound-dynamic-variables
+#20 108.9 ├ ƒ /api/integrations/[...args]
+#20 108.9 ├ ƒ /api/integrations/alby/webhook
+#20 108.9 ├ ƒ /api/integrations/btcpayserver/webhook
+#20 108.9 ├ ƒ /api/integrations/paypal/webhook
+#20 108.9 ├ ƒ /api/integrations/stripepayment/webhook
+#20 108.9 ├ ƒ /api/integrations/subscriptions/webhook
+#20 108.9 ├ ƒ /api/router
+#20 108.9 ├ ƒ /api/stripe/webhook
+#20 108.9 ├ ƒ /api/trpc/admin/[trpc]
+#20 108.9 ├ ƒ /api/trpc/aiVoiceAgent/[trpc]
+#20 108.9 ├ ƒ /api/trpc/apiKeys/[trpc]
+#20 108.9 ├ ƒ /api/trpc/appRoutingForms/[trpc]
+#20 108.9 ├ ƒ /api/trpc/apps/[trpc]
+#20 108.9 ├ ƒ /api/trpc/appsRouter/[trpc]
+#20 108.9 ├ ƒ /api/trpc/attributes/[trpc]
+#20 108.9 ├ ƒ /api/trpc/attributeSync/[trpc]
+#20 108.9 ├ ƒ /api/trpc/auth/[trpc]
+#20 108.9 ├ ƒ /api/trpc/availability/[trpc]
+#20 108.9 ├ ƒ /api/trpc/bookings/[trpc]
+#20 108.9 ├ ƒ /api/trpc/calendars/[trpc]
+#20 108.9 ├ ƒ /api/trpc/calVideo/[trpc]
+#20 108.9 ├ ƒ /api/trpc/credentials/[trpc]
+#20 108.9 ├ ƒ /api/trpc/credits/[trpc]
+#20 108.9 ├ ƒ /api/trpc/delegationCredential/[trpc]
+#20 108.9 ├ ƒ /api/trpc/deploymentSetup/[trpc]
+#20 108.9 ├ ƒ /api/trpc/dsync/[trpc]
+#20 108.9 ├ ƒ /api/trpc/eventTypes/[trpc]
+#20 108.9 ├ ƒ /api/trpc/eventTypesHeavy/[trpc]
+#20 108.9 ├ ƒ /api/trpc/featureOptIn/[trpc]
+#20 108.9 ├ ƒ /api/trpc/features/[trpc]
+#20 108.9 ├ ƒ /api/trpc/feedback/[trpc]
+#20 108.9 ├ ƒ /api/trpc/filterSegments/[trpc]
+#20 108.9 ├ ƒ /api/trpc/googleWorkspace/[trpc]
+#20 108.9 ├ ƒ /api/trpc/holidays/[trpc]
+#20 108.9 ├ ƒ /api/trpc/i18n/[trpc]
+#20 108.9 ├ ƒ /api/trpc/insights/[trpc]
+#20 108.9 ├ ƒ /api/trpc/loggedInViewerRouter/[trpc]
+#20 108.9 ├ ƒ /api/trpc/me/[trpc]
+#20 108.9 ├ ƒ /api/trpc/oAuth/[trpc]
+#20 108.9 ├ ƒ /api/trpc/ooo/[trpc]
+#20 108.9 ├ ƒ /api/trpc/organizations/[trpc]
+#20 108.9 ├ ƒ /api/trpc/payments/[trpc]
+#20 108.9 ├ ƒ /api/trpc/pbac/[trpc]
+#20 108.9 ├ ƒ /api/trpc/phoneNumber/[trpc]
+#20 108.9 ├ ƒ /api/trpc/public/[trpc]
+#20 108.9 ├ ƒ /api/trpc/routingForms/[trpc]
+#20 108.9 ├ ƒ /api/trpc/saml/[trpc]
+#20 108.9 ├ ƒ /api/trpc/slots/[trpc]
+#20 108.9 ├ ƒ /api/trpc/teams/[trpc]
+#20 108.9 ├ ƒ /api/trpc/timezones/[trpc]
+#20 108.9 ├ ƒ /api/trpc/travelSchedules/[trpc]
+#20 108.9 ├ ƒ /api/trpc/users/[trpc]
+#20 108.9 ├ ƒ /api/trpc/viewer/[trpc]
+#20 108.9 ├ ƒ /api/trpc/webhook/[trpc]
+#20 108.9 ├ ƒ /api/trpc/workflows/[trpc]
+#20 108.9 ├ ƒ /api/twilio/webhook
+#20 108.9 ├ ƒ /router
+#20 108.9 └ ƒ /router/embed
+#20 108.9 
+#20 108.9 ƒ Proxy (Middleware)
+#20 108.9 
+#20 108.9 ○  (Static)   prerendered as static content
+#20 108.9 ƒ  (Dynamic)  server-rendered on demand
+#20 108.9 
+#20 109.4 Skipping release creation as required environment variables are not set: SENTRY_AUTH_TOKEN, SENTRY_ORG, SENTRY_PROJECT
+#20 DONE 109.9s
+
+#21 [builder 15/15] RUN rm -rf node_modules/.cache .yarn/cache apps/web/.next/cache
+#21 DONE 0.3s
+
+#22 [builder-two  5/11] COPY --from=builder /calcom/yarn.lock ./yarn.lock
+#22 DONE 0.0s
+
+#23 [builder-two  6/11] COPY --from=builder /calcom/node_modules ./node_modules
+#23 DONE 13.4s
+
+#24 [builder-two  7/11] COPY --from=builder /calcom/packages ./packages
+#24 DONE 1.8s
+
+#25 [builder-two  8/11] COPY --from=builder /calcom/apps/web ./apps/web
+#25 DONE 4.6s
+
+#26 [builder-two  9/11] COPY --from=builder /calcom/packages/prisma/schema.prisma ./prisma/schema.prisma
+#26 DONE 0.1s
+
+#27 [builder-two 10/11] COPY scripts scripts
+#27 DONE 0.0s
+
+#28 [builder-two 11/11] RUN chmod +x scripts/*
+#28 DONE 0.1s
+
+#29 [runner 4/4] COPY --from=builder-two /calcom ./
+#29 DONE 15.6s
+
+#30 exporting to image
+#30 exporting layers
+#30 exporting layers 65.3s done
+#30 exporting manifest sha256:3cdfa85461f2ded2085a6840a2f49302317e45c75c924ac2e31f092da16546a2 done
+#30 exporting config sha256:96079a6b0471f5045c77a78af9ecdae238cedc895d52ddcdf8865413f3fc3fe2 done
+#30 exporting attestation manifest sha256:ea676c32dd886a5b6bfb70a355a132c5bbbceacb420083b7f08406948f1d2931 done
+#30 exporting manifest list sha256:b4386030f0c79ce045232229afe218e5e67a3c961be492508686eb38a8f47556 done
+#30 naming to docker.io/recall-hufang/calcom--cal.com:1c193cca8682 done
+#30 unpacking to docker.io/recall-hufang/calcom--cal.com:1c193cca8682
+#30 unpacking to docker.io/recall-hufang/calcom--cal.com:1c193cca8682 20.9s done
+#30 DONE 86.2s
+
+ [33m4 warnings found (use docker --debug to expand):
+[0m - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "NEXTAUTH_SECRET") (line 22)
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "CALENDSO_ENCRYPTION_KEY") (line 22)
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ARG "NEXTAUTH_SECRET") (line 12)
+ - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ARG "CALENDSO_ENCRYPTION_KEY") (line 13)

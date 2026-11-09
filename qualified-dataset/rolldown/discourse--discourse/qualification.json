@@ -1,26 +1,20 @@
 {
-  "schema": "recall.dataset-anchor-qualification/v1",
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "rolldown/discourse--discourse",
+  "repo": "discourse/discourse",
+  "commit": "3a1b1ae930e568a8c1c2f12d6e09f8e907da608b",
   "policy": {
-    "candidateField": "dependencies",
-    "minInitialAnchors": 3,
-    "minLibraries": 5,
-    "maxLibraries": 10,
-    "counting": "distinct source functions before propagation; repeated target copies count once",
-    "options": {
-      "minFeatures": 10,
-      "featureMetric": "propertyOperations",
-      "minAnchors": 3,
-      "uniqueBundle": true
-    }
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "provenance": {
-    "groundTruthSHA256": "61b426555e111a7e8a01a4ba47a1732cbc15256970e4d5254d33d4f0a9a05222",
-    "manifestSHA256": "5e35875ce22c9fb8af95dcaa7ffeb13c387610fbe048aac81d3809a8581682ed",
-    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
-    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
-    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
-    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
-  },
+  "selectionOverride": {},
   "candidates": [
     "@atlaskit/pragmatic-drag-and-drop",
     "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
@@ -107,830 +101,1037 @@
     "rrule",
     "strip-test-selectors"
   ],
-  "excludedPreviouslySelected": [],
   "libraries": [
     {
       "library": "@atlaskit/pragmatic-drag-and-drop",
-      "initialAnchors": 8,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll"
-      ],
+      "declaredVersion": "^3.0.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@atlaskit/pragmatic-drag-and-drop",
+        "version": "3.1.0",
+        "integrity": "sha512-VU+2Oh6OgvC6D1xiX3lfm1gZJsaSPD+ZKjAHodOQ9IO6RfOvAyReLlK5ut9gIUpPmbD8d09wlCs7y4A6/I8c5Q==",
+        "shasum": "dcfe6c552e1bf83f80095ad39acbee384d6d1dfd",
+        "tarballSHA256": "36470bf5ee5113bc03ed21de7635345c73e29f303b68c5ea632af05a8bb97122",
+        "bytes": 84940,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 184,
-      "sourceFiles": 54,
-      "finalInitialAnchors": 8
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 4,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/cjs/adapter/element-adapter.js",
+          "source": "source-js/1a337488403c671c47c061f4661090d6304e7cc4c75d257c3494fcc3779ac297.js",
+          "sourceSHA256": "1a337488403c671c47c061f4661090d6304e7cc4c75d257c3494fcc3779ac297",
+          "span": [
+            2035,
+            10828
+          ],
+          "name": "listener",
+          "normalizedASTSHA256": "b725f05be2316af2fb02f759964ee7b4107ee9b0f421aa487e767a23989ffa97",
+          "codeSHA256": "cfc4cc3bd1838d02719c094f28252bdc674cbc0b3e2859340d8bb90330bf012c",
+          "features": {
+            "propertyOperations": 66,
+            "distinctOperationPropertyPairs": 47,
+            "pogHash": "7cdbd3f67e799c3b",
+            "graphNodes": 71,
+            "graphEdges": 98,
+            "graphOperationOccurrences": 112,
+            "distinctGraphOperationPropertyPairs": 44,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/adapter/element-adapter.js",
+          "source": "source-js/1a337488403c671c47c061f4661090d6304e7cc4c75d257c3494fcc3779ac297.js",
+          "sourceSHA256": "1a337488403c671c47c061f4661090d6304e7cc4c75d257c3494fcc3779ac297",
+          "span": [
+            12073,
+            13495
+          ],
+          "name": "draggable",
+          "normalizedASTSHA256": "d811d6fdcd402d5323915f57cc9ed4ffa5f57165a4fc748fb7c1f5e5c8da021e",
+          "codeSHA256": "0b31ee5f3c4c705c1247ecde56a38ebb0f03e607c8f13e58f2a7236c43d6556e",
+          "features": {
+            "propertyOperations": 25,
+            "distinctOperationPropertyPairs": 17,
+            "pogHash": "b67b8a0a4b5132d4",
+            "graphNodes": 19,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 45,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/adapter/external-adapter.js",
+          "source": "source-js/dd212fc36db622383f7ee4bdaf98ed4b96d4d4f5a66b1999ef0ae002654bf1f7.js",
+          "sourceSHA256": "dd212fc36db622383f7ee4bdaf98ed4b96d4d4f5a66b1999ef0ae002654bf1f7",
+          "span": [
+            3374,
+            5054
+          ],
+          "name": "getDropPayload",
+          "normalizedASTSHA256": "a4016dbc6e1f616002e2eb459271ffeffa670cc43c5b3729de3671aef312e542",
+          "codeSHA256": "3d13c7ee2d81366134b2119aaed2c1578ad30e7f214b9a97cc482ec87dfdad19",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "eb1697ecf41599e1",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/a81ef803dfa6bbeb946a",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "c430b34eed4803d6fc5961a2727e5028717e0ef16b606651ab13794aa5712a5f"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-      "initialAnchors": 8,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll"
-      ],
+      "declaredVersion": "^3.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "version": "3.2.0",
+        "integrity": "sha512-vuL+AJae6c6lkmFd63v7c/7J7seyi7ZA8uMLNe9GvvApySToun3Zlv8SfyZU0d+wcNG4+Ix6qpRb8jOobZgNNg==",
+        "shasum": "89cf48a9ff486143a4d6d3a6b9dfe60bf17b21ad",
+        "tarballSHA256": "5d5adf6a4695f47c95656ebf50fbcfc69a2e4769e8c7d9272b25d7f0035feaae",
+        "bytes": 292410,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 69,
-      "sourceFiles": 18,
-      "finalInitialAnchors": 8
-    },
-    {
-      "library": "@codemirror/autocomplete",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/commands",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/lang-javascript",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/language",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/state",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codemirror/view",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@dagrejs/dagre",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@discourse/gif",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@discourse/heic",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@discourse/jpeg",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@discourse/jxl",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@discourse/png",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@discourse/resize",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@discourse/webp",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@embroider/legacy-inspector-support",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@embroider/legacy-inspector-support"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 6,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/cjs/over-element/get-scroll-by.js",
+          "source": "source-js/eaad56e4079f828f6a286f15fd2da95b962e99772717d90576462aea0d530931.js",
+          "sourceSHA256": "eaad56e4079f828f6a286f15fd2da95b962e99772717d90576462aea0d530931",
+          "span": [
+            1022,
+            1795
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "2b710fda40d9f4ecbb68f355a57007d77255fe4d66a62aa9c3e46ecb2c8c86b6",
+          "codeSHA256": "d2b050cfdbabaee38d35f58fc1afb8a556e7d0a8685a9f2f0d8d7b8eab876a09",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "b189f8a12f3f139a",
+            "graphNodes": 10,
+            "graphEdges": 11,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/over-element/get-scroll-by.js",
+          "source": "source-js/eaad56e4079f828f6a286f15fd2da95b962e99772717d90576462aea0d530931.js",
+          "sourceSHA256": "eaad56e4079f828f6a286f15fd2da95b962e99772717d90576462aea0d530931",
+          "span": [
+            1822,
+            2663
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "af3b676ceb4786dfd1a353e925b986228ae3667a234f0067f3cbd409c629957f",
+          "codeSHA256": "664e727688ac54a4c701113c734db2450d55e50af6afd01d3619236391043d59",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "811ab3964ca63855",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/over-element/get-scroll-by.js",
+          "source": "source-js/eaad56e4079f828f6a286f15fd2da95b962e99772717d90576462aea0d530931.js",
+          "sourceSHA256": "eaad56e4079f828f6a286f15fd2da95b962e99772717d90576462aea0d530931",
+          "span": [
+            2679,
+            3518
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "7a3609f40677640c31aa6db5a6beb74f384eac8236718666ca5ac33e8a6581b0",
+          "codeSHA256": "f053bdd623854fbba032ac30b9936398bc2afa0a8fd26eaaa42e0bf25082b6a4",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "811ab3964ca63855",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 3,
-      "sourceFiles": 2
-    },
-    {
-      "library": "@faker-js/faker",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fullcalendar/core",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fullcalendar/daygrid",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fullcalendar/interaction",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fullcalendar/list",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fullcalendar/moment",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fullcalendar/moment-timezone",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fullcalendar/timegrid",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@glimmer/syntax",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@glint/ember-tsc",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@glint/template",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@highlightjs/cdn-assets",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@json-editor/json-editor",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@lezer/common",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@lezer/highlight",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@lezer/javascript",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@lezer/lr",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "proofDirectory": "eligibility/libraries/6e77ec537d5702073cc9",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "29b4010b831e036f22945aaabbfbcb9ec0542088bd9cdbffbc29c5a58e603aa5"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "@warp-drive/core",
-      "initialAnchors": 73,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core"
-      ],
+      "declaredVersion": "5.9.0-alpha.15",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@warp-drive/core",
+        "version": "5.9.0-alpha.15",
+        "integrity": "sha512-WckK31nhuv5n/KDHusPmVMaj6FYR/Us6Zu2ppU7rRO7H6YfZMC+9Lp2q+in0vD9WhMtcOt85dTxMpzfElwv67Q==",
+        "shasum": "5f61ee5646cc8241266f075984ba2b027c077d37",
+        "tarballSHA256": "8e56e9014b85eb1aec91b8b2fb5a4a1f7560e67cec36d5ed68f32e4db3aa63b1",
+        "bytes": 790590,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 1219,
-      "sourceFiles": 14,
-      "finalInitialAnchors": 73
-    },
-    {
-      "library": "@warp-drive/ember",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/ember"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 82,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/configure-BlQ9ebNX.js",
+          "source": "source-js/2e69f5909ffe667435ef0208b1187ec32f9295d3a5a301bd5ba4156bfa286b67.js",
+          "sourceSHA256": "2e69f5909ffe667435ef0208b1187ec32f9295d3a5a301bd5ba4156bfa286b67",
+          "span": [
+            17473,
+            19001
+          ],
+          "name": "memoized",
+          "normalizedASTSHA256": "212c907d6497d64eb53522b00998c92a5b63c9776853c45a3401ef5065b5b029",
+          "codeSHA256": "f0570d1a42147f1dc6987a66c5f74923a94361ab6d804e112d3db1505417e267",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "312e0a4b376b63c7",
+            "graphNodes": 19,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 30,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/configure-BlQ9ebNX.js",
+          "source": "source-js/2e69f5909ffe667435ef0208b1187ec32f9295d3a5a301bd5ba4156bfa286b67.js",
+          "sourceSHA256": "2e69f5909ffe667435ef0208b1187ec32f9295d3a5a301bd5ba4156bfa286b67",
+          "span": [
+            20992,
+            22611
+          ],
+          "name": "watchStream",
+          "normalizedASTSHA256": "0fca034532adb0957b72f3c6fd5855d5f49587d89ee65842a5e1a947b638aa07",
+          "codeSHA256": "d04ad63e09f7ad4160a27f151052d06383f93a4685b153f23039f763a0573fef",
+          "features": {
+            "propertyOperations": 41,
+            "distinctOperationPropertyPairs": 23,
+            "pogHash": "182e1119ea729469",
+            "graphNodes": 30,
+            "graphEdges": 37,
+            "graphOperationOccurrences": 59,
+            "distinctGraphOperationPropertyPairs": 23,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/configure-BlQ9ebNX.js",
+          "source": "source-js/2e69f5909ffe667435ef0208b1187ec32f9295d3a5a301bd5ba4156bfa286b67.js",
+          "sourceSHA256": "2e69f5909ffe667435ef0208b1187ec32f9295d3a5a301bd5ba4156bfa286b67",
+          "span": [
+            28090,
+            28708
+          ],
+          "name": "performRefresh",
+          "normalizedASTSHA256": "590320cf0a693c59a7f75a51bae8c60f5cfcac4b0617ad45c1d94e1a4f442d67",
+          "codeSHA256": "6dfddfae02abdc51946f2d3d3adc723045d817fb9bb9b98438a61a9fff918b26",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "39b71cdd98d404a7",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 10,
-      "sourceFiles": 1
+      "proofDirectory": "eligibility/libraries/bf2a6068504adb3686ff",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "afafcfe4521fdf91c9a4d1bc7117fc105e3168e53ce3b8c9de1eebe0703afb3a"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "@warp-drive/json-api",
-      "initialAnchors": 9,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api"
-      ],
+      "declaredVersion": "5.9.0-alpha.15",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@warp-drive/json-api",
+        "version": "5.9.0-alpha.15",
+        "integrity": "sha512-LgPHAd3QavtnNMBJzRghLX1jHci3sb4mbl01G9/29fxgpCS/baFFg7ANx3s14m2H3Cjg5+bktEdEAKXsqib92A==",
+        "shasum": "1fe987d9bed5e84d007ce3c81dd81a32658b363c",
+        "tarballSHA256": "9e31e82ef472179288976c4eed53d9d9acb099c74adc5e6e8fea981223cf273f",
+        "bytes": 282372,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 189,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 9
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 8,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/a42ef451108b242f4b6e7464fd407cfd5008230ee59f4dd0c8d90dccc7aa5f50.js",
+          "sourceSHA256": "a42ef451108b242f4b6e7464fd407cfd5008230ee59f4dd0c8d90dccc7aa5f50",
+          "span": [
+            1118,
+            1896
+          ],
+          "name": "validateResourceFields",
+          "normalizedASTSHA256": "f6c8199081089bc7a2448bddb872e20dab1b3681d379aab5ee3f0e3c54fec6c6",
+          "codeSHA256": "e3a3e786c7d482a7fa8e0bd47fb005c7f63f31b7a3e36426039f6eee08a9b5c0",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "e72e219e5223f4c2",
+            "graphNodes": 17,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/a42ef451108b242f4b6e7464fd407cfd5008230ee59f4dd0c8d90dccc7aa5f50.js",
+          "sourceSHA256": "a42ef451108b242f4b6e7464fd407cfd5008230ee59f4dd0c8d90dccc7aa5f50",
+          "span": [
+            1897,
+            3219
+          ],
+          "name": "validateBelongsToLinksMode",
+          "normalizedASTSHA256": "270895cd00f6fdfa693dd3ed299518f260b63a5e964607f74a169070e194d5de",
+          "codeSHA256": "78277cebd69fd50d7980a1a08942f294720627c01ec01ed9f2c1ad21fcb5d910",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "e9bb8848da2c724e",
+            "graphNodes": 20,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/a42ef451108b242f4b6e7464fd407cfd5008230ee59f4dd0c8d90dccc7aa5f50.js",
+          "sourceSHA256": "a42ef451108b242f4b6e7464fd407cfd5008230ee59f4dd0c8d90dccc7aa5f50",
+          "span": [
+            5094,
+            6232
+          ],
+          "name": "presence",
+          "normalizedASTSHA256": "14d10ec5d719d3fdd38dea75819772d6de7f1bbaa1ebc627d6e5f43326da99ce",
+          "codeSHA256": "6190b93dc08e06ba2b447c739ecafbacd3f397c6376fffdaa501729a4fd4ae18",
+          "features": {
+            "propertyOperations": 28,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "86307c1caced1275",
+            "graphNodes": 28,
+            "graphEdges": 36,
+            "graphOperationOccurrences": 41,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/f1b12ae5cb87d6208b52",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "afafcfe4521fdf91c9a4d1bc7117fc105e3168e53ce3b8c9de1eebe0703afb3a"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "@warp-drive/legacy",
-      "initialAnchors": 34,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy"
-      ],
+      "declaredVersion": "5.9.0-alpha.15",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@warp-drive/legacy",
+        "version": "5.9.0-alpha.15",
+        "integrity": "sha512-69Y/04GC66zpZn6bxjKwcHRkJBMHaZf4xFS4KoKT6MIRKO+JW53DO2ixH3tZP7Zksrbtyaka8vq0HXPbOzrGWg==",
+        "shasum": "ca46ea0e46d16daf762ff29bb743cb428eebea97",
+        "tarballSHA256": "6628f8f1474ec836ec8ecf671598469e1ded5b0ddeed5735506cb05ca61b212d",
+        "bytes": 683995,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 776,
-      "sourceFiles": 13,
-      "finalInitialAnchors": 33
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 13,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/-private-BG3bMiKp.js",
+          "source": "source-js/adcbdb3605dd72ead94aea781f6d4332b0364796f1463b8228335e19390135d0.js",
+          "sourceSHA256": "adcbdb3605dd72ead94aea781f6d4332b0364796f1463b8228335e19390135d0",
+          "span": [
+            3517,
+            3875
+          ],
+          "name": "snapshots",
+          "normalizedASTSHA256": "32e6fcbd267d67a1fdd6b3db5f009c70ba91e54a63ce8f55200f30ea8a65fe14",
+          "codeSHA256": "67db017a5b1747271700509090daa16f301a7c418fc043950373b64b9d6f2bd7",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "6b7c754808277ab5",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/-private-BG3bMiKp.js",
+          "source": "source-js/adcbdb3605dd72ead94aea781f6d4332b0364796f1463b8228335e19390135d0.js",
+          "sourceSHA256": "adcbdb3605dd72ead94aea781f6d4332b0364796f1463b8228335e19390135d0",
+          "span": [
+            4642,
+            6441
+          ],
+          "name": "validateDocumentStructure",
+          "normalizedASTSHA256": "f06ff950964febb381dda7cc577589225bafffa01aaca033e7a4d49d798d0cc4",
+          "codeSHA256": "44dec49cbd1ad9a1259e723c7670ad5c06a2ad2ae166e56809fc83146ee1986e",
+          "features": {
+            "propertyOperations": 26,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "bc83566d23354706",
+            "graphNodes": 48,
+            "graphEdges": 69,
+            "graphOperationOccurrences": 37,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/-private-BG3bMiKp.js",
+          "source": "source-js/adcbdb3605dd72ead94aea781f6d4332b0364796f1463b8228335e19390135d0.js",
+          "sourceSHA256": "adcbdb3605dd72ead94aea781f6d4332b0364796f1463b8228335e19390135d0",
+          "span": [
+            7961,
+            9107
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "e7ca7a8f69ff45439c9bd60cf3921197e53369ba2e5730114f52c43338f0d56b",
+          "codeSHA256": "70bfafc09222e9ab799c043096bbd4a7c524380eab5e243817f6df5e72bca8f3",
+          "features": {
+            "propertyOperations": 28,
+            "distinctOperationPropertyPairs": 23,
+            "pogHash": "cb772460eeaf5c8f",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 32,
+            "distinctGraphOperationPropertyPairs": 22,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/82a5814444efecf1c8eb",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "afafcfe4521fdf91c9a4d1bc7117fc105e3168e53ce3b8c9de1eebe0703afb3a"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "@warp-drive/utilities",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities"
-      ],
+      "declaredVersion": "5.9.0-alpha.15",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@warp-drive/utilities",
+        "version": "5.9.0-alpha.15",
+        "integrity": "sha512-de/7szw8Qaz6rVv4mxQ3L00iKMhGHlRgTdiOYhq74PEGFrqSdv91sdVB+WOVjVhSdCrvs06FoUhkSZQ0Us/jxQ==",
+        "shasum": "0a340ef16c3f15e254801d42ec494cc7d01ebe9b",
+        "tarballSHA256": "5f927974407951d0afdb0fb8a3b6b12e940ff0c341be3aae368fb784d1a4079e",
+        "bytes": 203757,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 102,
-      "sourceFiles": 5,
-      "finalInitialAnchors": 3
-    },
-    {
-      "library": "ace-builds",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "chart.js",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "chartjs-adapter-moment",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "chartjs-plugin-datalabels",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "codemirror",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "decorator-transforms",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "decorator-transforms"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 40,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs-dist/string.cjs",
+          "source": "source-js/9741e2ec3f3d45f02422381e76e0ca3352b2a48a22a1870afaa1ede9e8f5d8d1.js",
+          "sourceSHA256": "9741e2ec3f3d45f02422381e76e0ca3352b2a48a22a1870afaa1ede9e8f5d8d1",
+          "span": [
+            8927,
+            9199
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "e2f2ea9ca03996aee925dfea1806f4d344fc2dc391799f04895b4685868af1e5",
+          "codeSHA256": "a597513f40f1aca96b34ae59e3a83db08639f2e3122e8e49af231506ae7cb7c3",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 4,
+            "pogHash": "7d0ef024328fc897",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 3,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs-dist/string.cjs",
+          "source": "source-js/9741e2ec3f3d45f02422381e76e0ca3352b2a48a22a1870afaa1ede9e8f5d8d1.js",
+          "sourceSHA256": "9741e2ec3f3d45f02422381e76e0ca3352b2a48a22a1870afaa1ede9e8f5d8d1",
+          "span": [
+            11316,
+            12418
+          ],
+          "name": "inflect",
+          "normalizedASTSHA256": "958d2a0e19b56cb9b8a590f17fd13fe6684247b7dd06b3e7706ecf06e5028ba6",
+          "codeSHA256": "adb5625f6eb2923f8d309032850006ccf9276f295064b38cfc7d41d86125871b",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "d45a697f45bcad50",
+            "graphNodes": 37,
+            "graphEdges": 49,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/active-record.js",
+          "source": "source-js/8b8146b7c47011aa95969fb287a995c71f5d47fa17d393a24c031f79b787cb36.js",
+          "sourceSHA256": "8b8146b7c47011aa95969fb287a995c71f5d47fa17d393a24c031f79b787cb36",
+          "span": [
+            2552,
+            3359
+          ],
+          "name": "findRecord",
+          "normalizedASTSHA256": "204234f32092b28aa51234ce445b8093ac8181ea088d4c5275e08663ecbe49f5",
+          "codeSHA256": "b5ab8511ca48f74a28a72a6ac57d7291a69d2278e498369ad01d24a7bc06dbb7",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "4ee61e02c9bac855",
+            "graphNodes": 12,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 31,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 12,
-      "sourceFiles": 3
-    },
-    {
-      "library": "diff",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "dom-accessibility-api",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "ember-curry-component",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-curry-component"
+      "proofDirectory": "eligibility/libraries/952a15e90dd09aa361bd",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "afafcfe4521fdf91c9a4d1bc7117fc105e3168e53ce3b8c9de1eebe0703afb3a"
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 7,
-      "sourceFiles": 1
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "ember-resolver",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver"
-      ],
+      "declaredVersion": "^13.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "ember-resolver",
+        "version": "13.2.0",
+        "integrity": "sha512-A+BffoSKC0ngiczbgaz/IOY66ovZVRRHHIDDi+d7so5i0By8xuB4nXgZZ6Dv3u/3WwoUyixgUvb0xTUO+MtupA==",
+        "shasum": "6405bcdd9f276800af2bb5c542bdb941ce49456e",
+        "tarballSHA256": "444ef7fff06d7f6e6418bbe2a27645e94b3bb0d901594c158fd4f0fbdc82abff",
+        "bytes": 6499,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 57,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 4
-    },
-    {
-      "library": "ember-route-template",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver",
-        "ember-route-template"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 35,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "addon/index.js",
+          "source": "source-js/e5eadaa8e6753f5caf45cf7b9277c328a2baa4cf5eda0c1fd3626303e93114dd.js",
+          "sourceSHA256": "e5eadaa8e6753f5caf45cf7b9277c328a2baa4cf5eda0c1fd3626303e93114dd",
+          "span": [
+            1706,
+            2688
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "510e0e895cd5dc9db20d71842911d5558790c2fa4801f48de7cac0be32e1f464",
+          "codeSHA256": "4089bcce194c2277e39f6767c5c2866df9aae81b86f07574c79923acbdac00c2",
+          "features": {
+            "propertyOperations": 23,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "4291334b66624bd7",
+            "graphNodes": 18,
+            "graphEdges": 21,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "addon/index.js",
+          "source": "source-js/e5eadaa8e6753f5caf45cf7b9277c328a2baa4cf5eda0c1fd3626303e93114dd.js",
+          "sourceSHA256": "e5eadaa8e6753f5caf45cf7b9277c328a2baa4cf5eda0c1fd3626303e93114dd",
+          "span": [
+            2888,
+            4887
+          ],
+          "name": "parseName",
+          "normalizedASTSHA256": "1027ebcb03549f981e822b1953f1bb3e63171a70d31a319624f2c9cd6a3445db",
+          "codeSHA256": "af439aaa993c6abeee2b582e584667fad50e173c2371a939f0befad3fbd661db",
+          "features": {
+            "propertyOperations": 46,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "9685ee51fcd60e29",
+            "graphNodes": 33,
+            "graphEdges": 41,
+            "graphOperationOccurrences": 67,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "addon/index.js",
+          "source": "source-js/e5eadaa8e6753f5caf45cf7b9277c328a2baa4cf5eda0c1fd3626303e93114dd.js",
+          "sourceSHA256": "e5eadaa8e6753f5caf45cf7b9277c328a2baa4cf5eda0c1fd3626303e93114dd",
+          "span": [
+            11955,
+            12933
+          ],
+          "name": "translateToContainerFullname",
+          "normalizedASTSHA256": "862c1eb060c1b89b8d3baec36870f2fe4c1ee07302ec1eb205325b7f63c78a62",
+          "codeSHA256": "b93c8521d322458f63f6427b3b2e2694008bbbe97af786778e6e469ad29ecfe3",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "3b7c16a48eb146e4",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 0,
-      "sourceFiles": 1
+      "proofDirectory": "eligibility/libraries/5d1c5a511c856db96657",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "14183fa212a506ca47b1641cab79f9746aef1c1956f8e9c9c4aeaf42a08cc440"
+        },
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "0c454de6bb0a94445b9fe315cdad6830e317ca6aa9fb04d0b84fe000d04a5c90"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "ember-source",
-      "initialAnchors": 197,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver",
-        "ember-source"
-      ],
+      "declaredVersion": "~7.3.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "ember-source",
+        "version": "7.3.0",
+        "integrity": "sha512-N6KJ02uztRAzMWo5ZjSNW7qDRVRaw5+rBMUtcwYaGOExQmIp1X82243Mk8RC3RfZuugqjnRZ5u2QQeSHXMJSrg==",
+        "shasum": "70dd5ba2a0707b870bd0654b96d0ac63e2dc9ec5",
+        "tarballSHA256": "df16e7f8908747e64a9ac8375ff47e87fa7886682c0fc4a52c8f8eb77e9625e8",
+        "bytes": 1435338,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 3151,
-      "sourceFiles": 199,
-      "finalInitialAnchors": 197
-    },
-    {
-      "library": "highlight.js",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 9,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "lib/index.cjs",
+          "source": "source-js/df68dafde1655f3e2ebaab98e0951fd48d4879270d3058a72b24a7cfdd612656.js",
+          "sourceSHA256": "df68dafde1655f3e2ebaab98e0951fd48d4879270d3058a72b24a7cfdd612656",
+          "span": [
+            10171,
+            10576
+          ],
+          "name": "init",
+          "normalizedASTSHA256": "7aea9a00c37ab4f66b01b87fc467c3c6bedc54f70300b83dff184c8070d5530c",
+          "codeSHA256": "a454e9874a6ce818ad1416702151916686bb34903dfcaad7c1bd2773f97319a8",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "149606e833d2bce1",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/index.cjs",
+          "source": "source-js/df68dafde1655f3e2ebaab98e0951fd48d4879270d3058a72b24a7cfdd612656.js",
+          "sourceSHA256": "df68dafde1655f3e2ebaab98e0951fd48d4879270d3058a72b24a7cfdd612656",
+          "span": [
+            10730,
+            11204
+          ],
+          "name": "included",
+          "normalizedASTSHA256": "794e758723cf5fb4c903661f0eb47162f43eeb739798841ae72a901e78887f72",
+          "codeSHA256": "31ecac69ac66f6ff80741308eda192658c0ebd9de815a2d01575ef6f62a4c7ce",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "d0108673a4a07e9a",
+            "graphNodes": 12,
+            "graphEdges": 13,
+            "graphOperationOccurrences": 19,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "lib/overrides.cjs",
+          "source": "source-js/9e89855984732bec094527f31dedfa514ae6b81cfd100eed9689dd158a1aa822.js",
+          "sourceSHA256": "9e89855984732bec094527f31dedfa514ae6b81cfd100eed9689dd158a1aa822",
+          "span": [
+            1079,
+            2805
+          ],
+          "name": "addonsInfoFor",
+          "normalizedASTSHA256": "5f398e33e4cd69f9852763fe2a9aba95aff3b8663c9d8aaa72ee1624bf605246",
+          "codeSHA256": "c40f9958b6eddb2f28bef1c019862dfe45de82f753e4a1fd04ceaa1806bed4c4",
+          "features": {
+            "propertyOperations": 46,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "ff730ab01c9bcef1",
+            "graphNodes": 31,
+            "graphEdges": 39,
+            "graphOperationOccurrences": 59,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/86a0960a3c82473524eb",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "0830355dc2c3c09e0ebb5f81de394b38e06b8e0b5e02341d450e6b7c39410760"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "immer",
-      "initialAnchors": 12,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver",
-        "ember-source",
-        "immer"
-      ],
+      "declaredVersion": "^11.1.21",
+      "origin": {
+        "kind": "npm-package",
+        "name": "immer",
+        "version": "11.1.21",
+        "integrity": "sha512-bZSadeCPGdaY5/qRLgr6mDSH1ra21rD3rqpiWk7+QTr4ayYPTE9qZYdLh/NdPhMe0wSrTvHD/Lk8q5EwhUs0aw==",
+        "shasum": "0c36565ea9e0f53e36a9d1d3456cb6f42a0aee96",
+        "tarballSHA256": "47978bdf5cc954ec855ba0f938524b8cf778efdbef0baac9c71f7a45666e0156",
+        "bytes": 257957,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 173,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 12
-    },
-    {
-      "library": "minimasonry",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 80,
+      "diagnostics": [
+        {
+          "file": "src/core/current.ts",
+          "error": "SyntaxError: [15:23-15:24]: Expected '('"
+        },
+        {
+          "file": "src/core/finalize.ts",
+          "error": "SyntaxError: [27:36-27:37]: Expected ')'"
+        },
+        {
+          "file": "src/core/immerClass.ts",
+          "error": "SyntaxError: [40:0-40:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/core/proxy.ts",
+          "error": "SyntaxError: [28:0-28:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/core/scope.ts",
+          "error": "SyntaxError: [21:7-21:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/immer.ts",
+          "error": "SyntaxError: [48:20-48:21]: Missing initializer in const declaration"
+        },
+        {
+          "file": "src/plugins/arrayMethods.ts",
+          "error": "SyntaxError: [19:5-19:24]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/plugins/mapset.ts",
+          "error": "SyntaxError: [28:36-28:38]: Expected ')'"
+        },
+        {
+          "file": "src/plugins/patches.ts",
+          "error": "SyntaxError: [40:15-40:16]: Expected ')'"
+        },
+        {
+          "file": "src/types/types-external.ts",
+          "error": "SyntaxError: [3:5-3:12]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/types/types-internal.ts",
+          "error": "SyntaxError: [12:7-12:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/utils/common.ts",
+          "error": "SyntaxError: [29:27-29:28]: Expected ')'"
+        },
+        {
+          "file": "src/utils/errors.ts",
+          "error": "SyntaxError: [7:20-7:21]: Expected ')'"
+        },
+        {
+          "file": "src/utils/plugins.ts",
+          "error": "SyntaxError: [18:7-18:11]: Unexpected token: 'identifier'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/cjs/immer.cjs.development.js",
+          "source": "source-js/4ebde20aa32add5541a2c9cce5c241ebf5994756c3a035f03d12fc0af8300baf.js",
+          "sourceSHA256": "4ebde20aa32add5541a2c9cce5c241ebf5994756c3a035f03d12fc0af8300baf",
+          "span": [
+            7081,
+            8262
+          ],
+          "name": "shallowCopy",
+          "normalizedASTSHA256": "3037d57f71e659fe92b4153a8bdc283c6cdc338007620d92029bd4c58328efd5",
+          "codeSHA256": "0aa5caa4e20e938d964055fd6dc47626c689ccc070fe6a049f2d64a146bfaadd",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "db25cdb9435436e4",
+            "graphNodes": 28,
+            "graphEdges": 38,
+            "graphOperationOccurrences": 34,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/immer.cjs.development.js",
+          "source": "source-js/4ebde20aa32add5541a2c9cce5c241ebf5994756c3a035f03d12fc0af8300baf.js",
+          "sourceSHA256": "4ebde20aa32add5541a2c9cce5c241ebf5994756c3a035f03d12fc0af8300baf",
+          "span": [
+            10816,
+            11642
+          ],
+          "name": "processResult",
+          "normalizedASTSHA256": "bdb58e65906b039660e2f6610df75a92d1098ced1f70df2510fac5405532e33f",
+          "codeSHA256": "82099380757cd91c938828cbf09f9db59077f5e3ab92020d6438e894ed90e714",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "ef6c2de44aeb371d",
+            "graphNodes": 17,
+            "graphEdges": 22,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/immer.cjs.development.js",
+          "source": "source-js/4ebde20aa32add5541a2c9cce5c241ebf5994756c3a035f03d12fc0af8300baf.js",
+          "sourceSHA256": "4ebde20aa32add5541a2c9cce5c241ebf5994756c3a035f03d12fc0af8300baf",
+          "span": [
+            14985,
+            15570
+          ],
+          "name": "nestedDraftCleanup",
+          "normalizedASTSHA256": "8e23e1567a4d04decc3ec982d9f58c99b41e00090195796d2d24f9763932475c",
+          "codeSHA256": "ba52086bff28b3f6e538af26af5128f41f8c45e0e309d58e2efd24a1cc98bcd3",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "79f6344b77614c01",
+            "graphNodes": 18,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/4bfacbaf9dbb4fc429e0",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "99cf22f6960a6fe228ec84ea9aefb0d75b27999ece83a3a9801e1c2081fa270b"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     },
     {
       "library": "moment",
-      "initialAnchors": 59,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver",
-        "ember-source",
-        "immer",
-        "moment"
-      ],
+      "declaredVersion": "2.31.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "moment",
+        "version": "2.31.0",
+        "integrity": "sha512-0acOTfMiWOheYS4eoWb80yYMb/JLvVv9SHbs2PehaDzfUG0Bw855SKyk0IKTnPGa5+U2bmi3W68l1+sGLX/pvw==",
+        "shasum": "6e19184e8005a9dfc61c9351263d4d6ea2ace7aa",
+        "tarballSHA256": "efddf549c13aa7cf270f573d9c464978ab0810c0652673ae6af1189bb56ab3f8",
+        "bytes": 762471,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 371,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 59
-    },
-    {
-      "library": "moment-timezone",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 58,
-      "sourceFiles": 1
-    },
-    {
-      "library": "morphlex",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "orderedmap",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "photoswipe",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "picomatch",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 73,
-      "sourceFiles": 6
-    },
-    {
-      "library": "pikaday",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "pretty-text",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-codemark",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-commands",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-dropcursor",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-gapcursor",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-highlightjs",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-history",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-inputrules",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-keymap",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-markdown",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-model",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-schema-list",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-state",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-transform",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prosemirror-view",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rete",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rete-area-plugin",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rete-comment-plugin",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rete-connection-plugin",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rete-history-plugin",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rete-render-utils",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "rrule",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "strip-test-selectors",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 5,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/lib/create/check-overflow.js",
+          "source": "source-js/e7740fb7092d2377ca4fb6bead9e2bc1e5564223c091cf0714aec9d24901e38e.js",
+          "sourceSHA256": "e7740fb7092d2377ca4fb6bead9e2bc1e5564223c091cf0714aec9d24901e38e",
+          "span": [
+            260,
+            1621
+          ],
+          "name": "checkOverflow",
+          "normalizedASTSHA256": "acb4fef1c825a41c428dd5bf8bb3c1e302ee9d9e80b2198fd7bb1651e4a1f617",
+          "codeSHA256": "6f51d53cc97237dddd9587d2e81781adefce80f0c120e9f3853ea1eb1eb350a2",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "2bb4235ee75a5e4e",
+            "graphNodes": 73,
+            "graphEdges": 96,
+            "graphOperationOccurrences": 47,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/lib/create/date-from-array.js",
+          "source": "source-js/c77a21ecce508210c21ad92b189551795fb90f89829f619ee3827b4f8a14204f.js",
+          "sourceSHA256": "c77a21ecce508210c21ad92b189551795fb90f89829f619ee3827b4f8a14204f",
+          "span": [
+            544,
+            1075
+          ],
+          "name": "createUTCDate",
+          "normalizedASTSHA256": "65eb4f7c62a7193b1db1e733ddc5e627d85275a2b33875473d2f92b03a326399",
+          "codeSHA256": "a70f1252fc2580fa77762a4e27ec337cdfb04a318cfbd578554b6864a597cd18",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "f09f5b4ce369a2cd",
+            "graphNodes": 10,
+            "graphEdges": 11,
+            "graphOperationOccurrences": 8,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/lib/create/from-anything.js",
+          "source": "source-js/e7cb8110a8d005df6f9a85ef23c6bff05196f072ab4a43cef07f01bf62237a1d.js",
+          "sourceSHA256": "e7cb8110a8d005df6f9a85ef23c6bff05196f072ab4a43cef07f01bf62237a1d",
+          "span": [
+            1117,
+            1911
+          ],
+          "name": "prepareConfig",
+          "normalizedASTSHA256": "5eae5faaeee818ec2aecd57c472f1f292752835427ecfa110dfb5b22f6c5c668",
+          "codeSHA256": "5963aa165c38bea83458fc52f0247262835e93759fb4b3b0051ad4a404ae038a",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "53e859d3f7308a62",
+            "graphNodes": 21,
+            "graphEdges": 29,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/72110207b6499adb0ff6",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "64419cc68debfd9b7c27e9cd926c756181e0857709d2701094874e0fb1a41d28"
+        }
+      ],
+      "lockfileSHA256": "6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497",
+      "lockfileSnapshot": "lockfiles/6d838f3ab43ff62f64f06722f4816f06ef3ffe0a1ab9cb5ef297809d7b940497-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
@@ -945,321 +1146,24 @@
     "immer",
     "moment"
   ],
-  "status": "included",
-  "referenceFailures": [],
-  "referenceFiles": 325,
-  "bundleUnits": 56,
-  "candidateOrder": [
-    "@atlaskit/pragmatic-drag-and-drop",
-    "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-    "@codemirror/autocomplete",
-    "@codemirror/commands",
-    "@codemirror/lang-javascript",
-    "@codemirror/language",
-    "@codemirror/state",
-    "@codemirror/view",
-    "@dagrejs/dagre",
-    "@discourse/gif",
-    "@discourse/heic",
-    "@discourse/jpeg",
-    "@discourse/jxl",
-    "@discourse/png",
-    "@discourse/resize",
-    "@discourse/webp",
-    "@embroider/legacy-inspector-support",
-    "@faker-js/faker",
-    "@fullcalendar/core",
-    "@fullcalendar/daygrid",
-    "@fullcalendar/interaction",
-    "@fullcalendar/list",
-    "@fullcalendar/moment",
-    "@fullcalendar/moment-timezone",
-    "@fullcalendar/timegrid",
-    "@glimmer/syntax",
-    "@glint/ember-tsc",
-    "@glint/template",
-    "@highlightjs/cdn-assets",
-    "@json-editor/json-editor",
-    "@lezer/common",
-    "@lezer/highlight",
-    "@lezer/javascript",
-    "@lezer/lr",
-    "@warp-drive/core",
-    "@warp-drive/ember",
-    "@warp-drive/json-api",
-    "@warp-drive/legacy",
-    "@warp-drive/utilities",
-    "ace-builds",
-    "chart.js",
-    "chartjs-adapter-moment",
-    "chartjs-plugin-datalabels",
-    "codemirror",
-    "decorator-transforms",
-    "diff",
-    "dom-accessibility-api",
-    "ember-curry-component",
-    "ember-resolver",
-    "ember-route-template",
-    "ember-source",
-    "highlight.js",
-    "immer",
-    "minimasonry",
-    "moment",
-    "moment-timezone",
-    "morphlex",
-    "orderedmap",
-    "photoswipe",
-    "picomatch",
-    "pikaday",
-    "pretty-text",
-    "prosemirror-codemark",
-    "prosemirror-commands",
-    "prosemirror-dropcursor",
-    "prosemirror-gapcursor",
-    "prosemirror-highlightjs",
-    "prosemirror-history",
-    "prosemirror-inputrules",
-    "prosemirror-keymap",
-    "prosemirror-markdown",
-    "prosemirror-model",
-    "prosemirror-schema-list",
-    "prosemirror-state",
-    "prosemirror-transform",
-    "prosemirror-view",
-    "rete",
-    "rete-area-plugin",
-    "rete-comment-plugin",
-    "rete-connection-plugin",
-    "rete-history-plugin",
-    "rete-render-utils",
-    "rrule",
-    "strip-test-selectors"
-  ],
-  "selectionAttempts": [
-    {
-      "library": "@embroider/legacy-inspector-support",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@embroider/legacy-inspector-support"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
     },
-    {
-      "library": "@warp-drive/core",
-      "initialAnchors": 73,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@warp-drive/ember",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/ember"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@warp-drive/json-api",
-      "initialAnchors": 9,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@warp-drive/legacy",
-      "initialAnchors": 34,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@warp-drive/utilities",
-      "initialAnchors": 3,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "decorator-transforms",
-      "initialAnchors": 1,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "decorator-transforms"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "ember-curry-component",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-curry-component"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "ember-resolver",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "ember-route-template",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver",
-        "ember-route-template"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "ember-source",
-      "initialAnchors": 197,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver",
-        "ember-source"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "immer",
-      "initialAnchors": 12,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver",
-        "ember-source",
-        "immer"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "moment",
-      "initialAnchors": 59,
-      "trialLibraries": [
-        "@atlaskit/pragmatic-drag-and-drop",
-        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
-        "@warp-drive/core",
-        "@warp-drive/json-api",
-        "@warp-drive/legacy",
-        "@warp-drive/utilities",
-        "ember-resolver",
-        "ember-source",
-        "immer",
-        "moment"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    }
-  ],
-  "sourceDiagnostics": [
-    {
-      "kind": "parse-error",
-      "unit": "s-bde6c2a163e01b02a1183c968567bb8d5f1f0bdb2891fa8945891f56181000e6",
-      "error": "[2:12-2:13]: Expected 'from'"
-    }
-  ],
-  "bundleDiagnostics": [],
-  "sourceDigest": "c30ebc6f0f2596db2d7b6944916c1589ce8a3b7ef3c3a4cd23420e24ad78231d",
-  "bundleDigest": "35f00fe1ac04d765a6e2ea5b16e6be524e0a999c5e8c1a788d70b22eb27cf58f",
-  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
-  "finalSourceDigest": "1b41f407f4b218a53391b8b1d9bda914258efd2f88370a6ab4bde9fdd2ace662",
+    "frontendManifestSHA256": "5e35875ce22c9fb8af95dcaa7ffeb13c387610fbe048aac81d3809a8581682ed",
+    "manifestRelative": "frontend/discourse/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:43:22.776Z",
   "reason": null,
-  "organizationSignature": "55db23fac6f87fd20dd72450c40133f7f9d569a67656e6380668ee97e8b4a2e3"
+  "finished": "2026-11-09T03:43:23.031Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/rolldown/discourse--discourse/qualification.json",
+  "sourceEligibilityRecordSHA256": "5c16190d2990042e9f906d1579a936c62c3b10ba7c426a401163e9e536318d55",
+  "organizationSignature": "517e9bcae0e3547506880284c7a956bbc354ce0e17f9aac7b1704fe65b319072"
 }

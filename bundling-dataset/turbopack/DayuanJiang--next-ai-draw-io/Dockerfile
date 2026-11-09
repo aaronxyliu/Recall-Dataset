@@ -24,7 +24,7 @@ COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
 RUN node /tmp/recall-enable-maps.cjs
 
 # Disable Next.js telemetry during build
-ENV NEXT_TELEMETRY_DISABLED=1
+ENV NEXT_TELEMETRY_DISABLED=1 NODE_USE_ENV_PROXY=1 RAYON_NUM_THREADS=3 NODE_OPTIONS=--max-old-space-size=4096
 
 # Build-time argument for an external draw.io URL. Leave empty to use the
 # copy bundled into public/drawio (downloaded by `npm run build`)

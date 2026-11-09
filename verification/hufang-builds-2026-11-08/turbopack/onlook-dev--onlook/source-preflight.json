@@ -1,0 +1,1255 @@
+{
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "turbopack/onlook-dev--onlook",
+  "repo": "onlook-dev/onlook",
+  "commit": "423e2e924366419e418ee049093872d535eea41a",
+  "policy": {
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
+  },
+  "candidates": [
+    "@ai-sdk/provider-utils",
+    "@ai-sdk/react",
+    "@codemirror/lang-css",
+    "@codemirror/lang-html",
+    "@codemirror/lang-javascript",
+    "@codemirror/lang-json",
+    "@codemirror/lang-markdown",
+    "@onlook/code-provider",
+    "@onlook/constants",
+    "@onlook/db",
+    "@onlook/email",
+    "@onlook/fonts",
+    "@onlook/github",
+    "@onlook/growth",
+    "@onlook/image-server",
+    "@onlook/models",
+    "@onlook/parser",
+    "@onlook/penpal",
+    "@onlook/rpc",
+    "@onlook/stripe",
+    "@onlook/ui",
+    "@onlook/utility",
+    "@opentelemetry/api-logs",
+    "@opentelemetry/instrumentation",
+    "@opentelemetry/sdk-logs",
+    "@storybook/test",
+    "@supabase/ssr",
+    "@t3-oss/env-nextjs",
+    "@tanstack/react-query",
+    "@trpc/client",
+    "@trpc/react-query",
+    "@trpc/server",
+    "@uiw/codemirror-extensions-basic-setup",
+    "@uiw/react-codemirror",
+    "@vercel/otel",
+    "@xterm/addon-fit",
+    "@xterm/xterm",
+    "@zenfs/core",
+    "@zenfs/dom",
+    "ai",
+    "blob-util",
+    "class-variance-authority",
+    "clsx",
+    "culori",
+    "date-fns",
+    "flexsearch",
+    "freestyle-sandboxes",
+    "gleap",
+    "langfuse-vercel",
+    "localforage",
+    "lru-cache",
+    "lucide-react",
+    "mobx-react-lite",
+    "motion",
+    "next",
+    "next-intl",
+    "next-themes",
+    "octokit",
+    "penpal",
+    "posthog-js",
+    "posthog-node",
+    "prosemirror-commands",
+    "prosemirror-history",
+    "prosemirror-keymap",
+    "react",
+    "react-arborist",
+    "react-codemirror-merge",
+    "react-dom",
+    "react-hotkeys-hook",
+    "react-markdown",
+    "remark-gfm",
+    "server-only",
+    "shiki",
+    "strip-ansi",
+    "superjson",
+    "tailwind-merge",
+    "tldts",
+    "tw-animate-css",
+    "unicornstudio-react",
+    "use-resize-observer",
+    "uuid",
+    "webfontloader",
+    "zod"
+  ],
+  "libraries": [
+    {
+      "library": "@ai-sdk/provider-utils",
+      "declaredVersion": "^3.0.10",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@ai-sdk/provider-utils",
+        "version": "3.0.12",
+        "integrity": "sha512-ZtbdvYxdMoria+2SlNarEk6Hlgyf+zzcznlD55EAl+7VZvJaSg2sqPvwArY7L6TfDEDJsnCq0fdhBSkYo0Xqdg==",
+        "shasum": "9812a0b7ce36f2cae81dff3afe70f0c4bde76213",
+        "tarballSHA256": "3096674980eb2a2daa9888f68d8926704a929122cf74b10e29667ce5851f049f",
+        "bytes": 136277,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 85,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/5230dc3fb9a0c6659e486a583cfc9371cc8edffe7db2b7a08c6be7000574a694.js",
+          "sourceSHA256": "5230dc3fb9a0c6659e486a583cfc9371cc8edffe7db2b7a08c6be7000574a694",
+          "span": [
+            7870,
+            8414
+          ],
+          "name": "handleFetchError",
+          "normalizedASTSHA256": "15f210b223cedb80b7dd6370d2d358a60cbad5cef5e5e7088f47476a8e2f5d40",
+          "codeSHA256": "48f65480e94fdde60a7ead1f946048b29bbc4edf9b0b87114741a8bad9e312d4",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "7a7b90d702415c53",
+            "graphNodes": 10,
+            "graphEdges": 12,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/5230dc3fb9a0c6659e486a583cfc9371cc8edffe7db2b7a08c6be7000574a694.js",
+          "sourceSHA256": "5230dc3fb9a0c6659e486a583cfc9371cc8edffe7db2b7a08c6be7000574a694",
+          "span": [
+            8461,
+            9047
+          ],
+          "name": "getRuntimeEnvironmentUserAgent",
+          "normalizedASTSHA256": "0c57af9b86f13b43f129b5f3b1df9549054bc109111112421fade0924ba3e7d9",
+          "codeSHA256": "018f181d10168464fd4df5bc83b3cd7d7fd508c354f6e51066073dfd27a0b7ef",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "d741440cd1570b6a",
+            "graphNodes": 19,
+            "graphEdges": 24,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/5230dc3fb9a0c6659e486a583cfc9371cc8edffe7db2b7a08c6be7000574a694.js",
+          "sourceSHA256": "5230dc3fb9a0c6659e486a583cfc9371cc8edffe7db2b7a08c6be7000574a694",
+          "span": [
+            9882,
+            11633
+          ],
+          "name": "getFromApi",
+          "normalizedASTSHA256": "39c1df324efa4aa9715014e51a0f334dfaf4335f097580c4c65314c3b3577660",
+          "codeSHA256": "3d36a570f5630d4fd76643ef90d21ab64b11998fb599926c13c845f5c579445d",
+          "features": {
+            "propertyOperations": 34,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "7cdb12a1d13e5d3a",
+            "graphNodes": 11,
+            "graphEdges": 12,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/80bb2f00e292af64f28c",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@ai-sdk/react",
+      "declaredVersion": "2.0.60",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@ai-sdk/react",
+        "version": "2.0.60",
+        "integrity": "sha512-Ev0MC0I7eDcCH4FnrHzK48g9bJjyF3F67MMq76qoVsbtcs6fGIO5RjmYgPoFeSo8/yQ5EM6i/14yfcD0oB+moA==",
+        "shasum": "4a17ee5ea6817436d4d0564de08c902bc8227d06",
+        "tarballSHA256": "b68091bf54143b809125e3a98ebc10fc57d57b696e545ce7ca87f2b2b6cb1207",
+        "bytes": 27118,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 60,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e.js",
+          "sourceSHA256": "31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e",
+          "span": [
+            6864,
+            8972
+          ],
+          "name": "useChat",
+          "normalizedASTSHA256": "b1c770f277485a381c3bf4fc26d1ab7c7f264aefcc71e70938d96231c8de7eb1",
+          "codeSHA256": "4b48af641d4eedc4ec21855c4db565df45fea1ca339575ef9f41ec11453ee0da",
+          "features": {
+            "propertyOperations": 45,
+            "distinctOperationPropertyPairs": 27,
+            "pogHash": "7ef1a2a2b37be7a9",
+            "graphNodes": 18,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 81,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e.js",
+          "sourceSHA256": "31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e",
+          "span": [
+            10198,
+            10871
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "f220a8c085b7804b644d6f7ed51efadaa90f29bf2b48f6f99e55fd6daf059dce",
+          "codeSHA256": "2be9259111b451ff0bf29b49bad4f0cecd42f19b0fd2c9ffab28243d6d5dd2d1",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "105b90109cd62916",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e.js",
+          "sourceSHA256": "31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e",
+          "span": [
+            9111,
+            12197
+          ],
+          "name": "useCompletion",
+          "normalizedASTSHA256": "2eed09f245e86161edf8e157bafbbc457c4c2ab73ce6214d6fd6d7e897bc711b",
+          "codeSHA256": "eef5f96b2237ebc3a453f2ed288470f3db9d847c1c634d9b10178da1cd83ad09",
+          "features": {
+            "propertyOperations": 28,
+            "distinctOperationPropertyPairs": 20,
+            "pogHash": "1e833a4ace08d3d6",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 55,
+            "distinctGraphOperationPropertyPairs": 20,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/05b478d62c53e9b2f5a2",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@codemirror/lang-css",
+      "declaredVersion": "^6.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@codemirror/lang-css",
+        "version": "6.3.1",
+        "integrity": "sha512-kr5fwBGiGtmz6l0LSJIbno9QrifNMUusivHbnA1H6Dmqy4HZFte3UAICix1VuKo0lMPKQr2rqB+0BkKi/S3Ejg==",
+        "shasum": "763ca41aee81bb2431be55e3cfcc7cc8e91421a3",
+        "tarballSHA256": "48d29b0297b1afab1f4e6bfd80061749de46e7037e3f943f1ca355bc08af400e",
+        "bytes": 8932,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/3188b8677b8ddb4f3e3f0efbe1b2a59f527c19569ba15b6bd25e8d238ca88a4c.js",
+          "sourceSHA256": "3188b8677b8ddb4f3e3f0efbe1b2a59f527c19569ba15b6bd25e8d238ca88a4c",
+          "span": [
+            162,
+            920
+          ],
+          "name": "properties",
+          "normalizedASTSHA256": "7656faf361f4de1a2775672d4be53a2c8152a4c75a5ba047b993c3f5b24bf0ea",
+          "codeSHA256": "ab43ed195cf3f7c8b892e62359aa0c602bff2f82f520722cefda5e13860649a2",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "d60512b205c66d6d",
+            "graphNodes": 22,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/3188b8677b8ddb4f3e3f0efbe1b2a59f527c19569ba15b6bd25e8d238ca88a4c.js",
+          "sourceSHA256": "3188b8677b8ddb4f3e3f0efbe1b2a59f527c19569ba15b6bd25e8d238ca88a4c",
+          "span": [
+            10570,
+            11005
+          ],
+          "name": "isVarArg",
+          "normalizedASTSHA256": "d0e1021379c4c76ed6dc7ba6954e444d8701090c55e715324d77d10a3f7aeaaa",
+          "codeSHA256": "0587c80387853ca7ff68c5e7055df06e005d4afa0f6d9bf7a3a1668bd289a0a4",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "cd327734e99ada00",
+            "graphNodes": 23,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/3188b8677b8ddb4f3e3f0efbe1b2a59f527c19569ba15b6bd25e8d238ca88a4c.js",
+          "sourceSHA256": "3188b8677b8ddb4f3e3f0efbe1b2a59f527c19569ba15b6bd25e8d238ca88a4c",
+          "span": [
+            12034,
+            12469
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "5cfa08c74adac2d4ff7ade4a7e92a9461a2a331e10dd655d9fd25d55d3f07fc4",
+          "codeSHA256": "574480d5b24c8c1a8ca98955d1f802096382a90cdefd056e20a42f833cb22ca0",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "96858e2bae9d13d1",
+            "graphNodes": 14,
+            "graphEdges": 18,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/0046ba95ab6d139ae96f",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@codemirror/lang-html",
+      "declaredVersion": "^6.4.7",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@codemirror/lang-html",
+        "version": "6.4.11",
+        "integrity": "sha512-9NsXp7Nwp891pQchI7gPdTwBuSuT3K65NGTHWHNJ55HjYcHLllr0rbIZNdOzas9ztc1EUVBlHou85FFZS4BNnw==",
+        "shasum": "c46ba46ae642fd567cf05c4129005d2913ac248d",
+        "tarballSHA256": "bba89bb42e4066c34f8957364baf2660d023b3dab673c6cd81779738a8644f0d",
+        "bytes": 14231,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 12,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/6b827c46b684bc8bd5fa143731b609747682ab5d6f8208aae6772c670274752a.js",
+          "sourceSHA256": "6b827c46b684bc8bd5fa143731b609747682ab5d6f8208aae6772c670274752a",
+          "span": [
+            12597,
+            13066
+          ],
+          "name": "openTags",
+          "normalizedASTSHA256": "d8f7c001d08b5ef4cc7cbb1920888a51a7579d650e00ea519fb07a33ed7b711f",
+          "codeSHA256": "3be1c282f01deb8536d4a404fd3d73ce73680eb048c1bb8fc684ae5074441c1e",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "84d737d34e2aad2c",
+            "graphNodes": 22,
+            "graphEdges": 28,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/6b827c46b684bc8bd5fa143731b609747682ab5d6f8208aae6772c670274752a.js",
+          "sourceSHA256": "6b827c46b684bc8bd5fa143731b609747682ab5d6f8208aae6772c670274752a",
+          "span": [
+            13115,
+            13655
+          ],
+          "name": "completeTag",
+          "normalizedASTSHA256": "1097072d71fb34d132d147f1e0bc0f8a1c127a7a925f8e8035a5e2239e6e20c5",
+          "codeSHA256": "ac0bb0b031527017df64b6d00b42cf4c6b82ff376c8c25e09a644de69362cc38",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "96dd45ca10eed1c7",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 23,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/6b827c46b684bc8bd5fa143731b609747682ab5d6f8208aae6772c670274752a.js",
+          "sourceSHA256": "6b827c46b684bc8bd5fa143731b609747682ab5d6f8208aae6772c670274752a",
+          "span": [
+            13955,
+            14393
+          ],
+          "name": "completeStartTag",
+          "normalizedASTSHA256": "8e93cb673a73850e77d56a88e9baaf880c04432824883179e5c89092491c4c87",
+          "codeSHA256": "92fe20f5ed60ae433630d263d51c8eeba77c15366f94fb9ef269c25733e6ddf2",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "84a42da36d96ff65",
+            "graphNodes": 12,
+            "graphEdges": 12,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/f0272e17f439845f188c",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@codemirror/lang-javascript",
+      "declaredVersion": "^6.2.3",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@codemirror/lang-javascript",
+        "version": "6.2.4",
+        "integrity": "sha512-0WVmhp1QOqZ4Rt6GlVGwKJN3KW7Xh4H2q8ZZNGZaP6lRdxXJzmjm4FqvmOojVj6khWJHIb9sp7U/72W7xQgqAA==",
+        "shasum": "eef2227d1892aae762f3a0f212f72bec868a02c5",
+        "tarballSHA256": "d82ce7bdae912dfa3692812389fe967d9dbcdfbb5fb0c50d9c04950840fe730a",
+        "bytes": 11579,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 12,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/3de213d53bad0eceb440b466b16b4683564e31be26dedaa3bf714b04d0a3e3e0.js",
+          "sourceSHA256": "3de213d53bad0eceb440b466b16b4683564e31be26dedaa3bf714b04d0a3e3e0",
+          "span": [
+            5171,
+            5877
+          ],
+          "name": "localCompletionSource",
+          "normalizedASTSHA256": "ad588cadd482549fa9dace7655311e3ad0773bfe742dfac254c1087890be5c61",
+          "codeSHA256": "d3e611b2119f62946c1234267ec60e4adeaf1f93af063f1a22a47a3f132bdf86",
+          "features": {
+            "propertyOperations": 26,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "209b8f10037b2bff",
+            "graphNodes": 24,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 30,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/3de213d53bad0eceb440b466b16b4683564e31be26dedaa3bf714b04d0a3e3e0.js",
+          "sourceSHA256": "3de213d53bad0eceb440b466b16b4683564e31be26dedaa3bf714b04d0a3e3e0",
+          "span": [
+            5878,
+            6508
+          ],
+          "name": "pathFor",
+          "normalizedASTSHA256": "597d500d0dab3b7eae5c5b657bd2622cd5bde286b4241c42dcb492723d3694e8",
+          "codeSHA256": "75c455c543ef106e360d449bc128be486186fea963906a0cac35edb66eb0b3ef",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "6dbfc186f2625336",
+            "graphNodes": 19,
+            "graphEdges": 26,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/3de213d53bad0eceb440b466b16b4683564e31be26dedaa3bf714b04d0a3e3e0.js",
+          "sourceSHA256": "3de213d53bad0eceb440b466b16b4683564e31be26dedaa3bf714b04d0a3e3e0",
+          "span": [
+            7000,
+            7872
+          ],
+          "name": "completionPath",
+          "normalizedASTSHA256": "7e275aaed9e010d449ba31efc0c9ea28fac1174cfae156b3e347b8b94a44e4e3",
+          "codeSHA256": "8519488a4573b99eb2d75686d08c45da2066bc646306cdc0d287de6edbe98a43",
+          "features": {
+            "propertyOperations": 23,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "5b07f520f69cae95",
+            "graphNodes": 31,
+            "graphEdges": 39,
+            "graphOperationOccurrences": 30,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/451c9dc14672a38a77c5",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@codemirror/lang-json",
+      "declaredVersion": "^6.0.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@codemirror/lang-json",
+        "version": "6.0.2",
+        "integrity": "sha512-x2OtO+AvwEHrEwR0FyyPtfDUiloG3rnVTSZV1W8UteaLL8/MajQd8DpvUb2YVzC+/T18aSDv0H9mu+xw0EStoQ==",
+        "shasum": "054b160671306667e25d80385286049841836179",
+        "tarballSHA256": "cf896487f9b2bc9fb0ca6331b84c3a20c7a12687f52ae41777d24ef719e1bcc3",
+        "bytes": 3665,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 3,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/8679060d8a1bfb9ec2c7e212e0e564ea8c3bbb5d452c95017b53936e056a9577.js",
+          "sourceSHA256": "8679060d8a1bfb9ec2c7e212e0e564ea8c3bbb5d452c95017b53936e056a9577",
+          "span": [
+            333,
+            721
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "bc420bb63f2e40fc4177aa0811f103f7834861b9195e024b1e59a63c86c0e97b",
+          "codeSHA256": "b4b687c9eef16f22e4f764669ea7f24e916b2e54644868aa376bd3ee4248e149",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "cbacad3dfca1c3a0",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/8679060d8a1bfb9ec2c7e212e0e564ea8c3bbb5d452c95017b53936e056a9577.js",
+          "sourceSHA256": "8679060d8a1bfb9ec2c7e212e0e564ea8c3bbb5d452c95017b53936e056a9577",
+          "span": [
+            327,
+            721
+          ],
+          "name": "jsonParseLinter",
+          "normalizedASTSHA256": "def00c11c2f9bf965b1e7ae278f5f01dac7a3e209ba9e800daa307d4777fc5c9",
+          "codeSHA256": "1cd083ebccb4917794f057c3dca56ebec2a126d601c1f946af269d0f39f547ad",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "cbacad3dfca1c3a0",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/8679060d8a1bfb9ec2c7e212e0e564ea8c3bbb5d452c95017b53936e056a9577.js",
+          "sourceSHA256": "8679060d8a1bfb9ec2c7e212e0e564ea8c3bbb5d452c95017b53936e056a9577",
+          "span": [
+            723,
+            1023
+          ],
+          "name": "getErrorPosition",
+          "normalizedASTSHA256": "ea1d2ec67544cc875688d5b953773a93d44c0a740d66b088b6d4ebeb6534a67a",
+          "codeSHA256": "d61679abf239cac9c63914eb79955d91dd59d02dfb1c177aeca29bd10efc81ff",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "4ce0c8c9a8f9faf5",
+            "graphNodes": 9,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/08ff972895239e079481",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@codemirror/lang-markdown",
+      "declaredVersion": "^6.1.7",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@codemirror/lang-markdown",
+        "version": "6.5.0",
+        "integrity": "sha512-0K40bZ35jpHya6FriukbgaleaqzBLZfOh7HuzqbMxBXkbYMJDxfF39c23xOgxFezR+3G+tR2/Mup+Xk865OMvw==",
+        "shasum": "29df87310a555b007beba8e12893363956a26e8e",
+        "tarballSHA256": "fd712558197a24a7fc5facc3894d61a71ee94cec6dc414e2a6569fef2b0d40ec",
+        "bytes": 13356,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 15,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/99d05868edf12ed42abce91b9a78a6677e738b8264e8acbbbd8e3a9fd6aa0cae.js",
+          "sourceSHA256": "99d05868edf12ed42abce91b9a78a6677e738b8264e8acbbbd8e3a9fd6aa0cae",
+          "span": [
+            2706,
+            3402
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "2c8f148cbaef521a15071a1fcc2654173be8dbdc08b0f84e01fdefc95d5f4046",
+          "codeSHA256": "aaf985a9c9ecc1e4527088ad54411e4f7f844e99e63cf779d1d1dd7afb315701",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "4b37e584237e648f",
+            "graphNodes": 18,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/99d05868edf12ed42abce91b9a78a6677e738b8264e8acbbbd8e3a9fd6aa0cae.js",
+          "sourceSHA256": "99d05868edf12ed42abce91b9a78a6677e738b8264e8acbbbd8e3a9fd6aa0cae",
+          "span": [
+            3713,
+            4196
+          ],
+          "name": "blank",
+          "normalizedASTSHA256": "5d9e2c99e88d70dab923e8f9d549443bf46f13cffe36e1e56d99eae3bbe396e9",
+          "codeSHA256": "27af8aee3b17f64e8b01767aeddf27ab17fbd274f493732b3930a2ca813f41b0",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "f92bc0dd038232e4",
+            "graphNodes": 13,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/99d05868edf12ed42abce91b9a78a6677e738b8264e8acbbbd8e3a9fd6aa0cae.js",
+          "sourceSHA256": "99d05868edf12ed42abce91b9a78a6677e738b8264e8acbbbd8e3a9fd6aa0cae",
+          "span": [
+            4408,
+            6162
+          ],
+          "name": "getContext",
+          "normalizedASTSHA256": "77b1cf57bbd3334d87f394a7f4c9297557834f95df2a10ab682bdd2dc08542d4",
+          "codeSHA256": "2658c12cdbaf2d319dd497544617ca0234ded3bf67c5e4f83b48ab66895f5dcd",
+          "features": {
+            "propertyOperations": 54,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "4aacafa2e915e6c4",
+            "graphNodes": 48,
+            "graphEdges": 62,
+            "graphOperationOccurrences": 69,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/cad01afe9eb24342f9e7",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "05c6130cda97e7600ca91427a41e8a065efcf82365fc0293e7de80faec494c07"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@onlook/code-provider",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/code-provider *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/constants",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/constants *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/db",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/db *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/email",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/email *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/fonts",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/fonts *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/github",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/github *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/growth",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/growth *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/image-server",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/image-server *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/models",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/models *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/parser",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/parser *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/penpal",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/penpal *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/rpc",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/rpc *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/stripe",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/stripe *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/ui",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/ui *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@onlook/utility",
+      "declaredVersion": "*",
+      "qualified": null,
+      "status": "unassessed",
+      "error": "Error: Error: Exact source-package version unresolved in the pinned lockfiles: @onlook/utility *; Error: No independently verified source snapshot fallback"
+    },
+    {
+      "library": "@opentelemetry/api-logs",
+      "declaredVersion": "0.57.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@opentelemetry/api-logs",
+        "version": "0.57.2",
+        "integrity": "sha512-uIX52NnTM0iBh84MShlpouI7UKqkZ7MrUszTmaypHBu4r7NofznSnQRfJ+uUeDtQDj6w8eFGg5KBLDAwAPz1+A==",
+        "shasum": "d4001b9aa3580367b40fe889f3540014f766cc87",
+        "tarballSHA256": "1da8201916fd906527d431359418e77b8fcbcc906af971b941d9d1b635be3848",
+        "bytes": 23264,
+        "lockfile": "bun.lock"
+      },
+      "qualified": false,
+      "eligibleFunctionLowerBound": 1,
+      "completeScan": true,
+      "parsedFiles": 15,
+      "parsedFunctions": 42,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "build/esm/types/LogRecord.js",
+          "source": "source-js/5cb696bbae68fb83d16ea13812ebde4009c0cca12deede5bc16b495cf740b4d3.js",
+          "sourceSHA256": "5cb696bbae68fb83d16ea13812ebde4009c0cca12deede5bc16b495cf740b4d3",
+          "span": [
+            634,
+            2185
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "6b1f1605973b82171fb6dccc259c3c564a58635c42a3a322c1161bffbb42f7e9",
+          "codeSHA256": "d1817556fafeef7072e73ba39e8b68542ee476f7d7434f1c96be90bf9164c8ae",
+          "features": {
+            "propertyOperations": 50,
+            "distinctOperationPropertyPairs": 26,
+            "pogHash": "93c4301c2ec1e82e",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 50,
+            "distinctGraphOperationPropertyPairs": 26,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/4cdc6e77ee6f1497dda5",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@opentelemetry/instrumentation",
+      "declaredVersion": "0.57.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@opentelemetry/instrumentation",
+        "version": "0.57.2",
+        "integrity": "sha512-BdBGhQBh8IjZ2oIIX6F2/Q3LKm/FDDKi6ccYKcBTeilh6SNdNKveDOLk73BkSJjQLJk6qe4Yh+hHw1UPhCDdrg==",
+        "shasum": "8924549d7941ba1b5c6f04d5529cf48330456d1d",
+        "tarballSHA256": "de64e59e37d996358d44aafa9066c4ec34f0063c849cb698d463f48318e1d057",
+        "bytes": 54473,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 8,
+      "parsedFunctions": 50,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "build/esm/instrumentation.js",
+          "source": "source-js/e1dff571e4847813f759fcdd77e9c4e5266c232015fe65ddc802b671403b4aab.js",
+          "sourceSHA256": "e1dff571e4847813f759fcdd77e9c4e5266c232015fe65ddc802b671403b4aab",
+          "span": [
+            1275,
+            2310
+          ],
+          "name": "InstrumentationAbstract",
+          "normalizedASTSHA256": "f758aeba2d9836bfb0407b20ac12e9076de095dd813413d6c1f9f6fcd627880b",
+          "codeSHA256": "f22c49e7358c93299081fac69228d24369e543eae2238ecbf5b0fd6187d9e506",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 22,
+            "pogHash": "38da42cdfa3911f3",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 22,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/esm/instrumentation.js",
+          "source": "source-js/e1dff571e4847813f759fcdd77e9c4e5266c232015fe65ddc802b671403b4aab.js",
+          "sourceSHA256": "e1dff571e4847813f759fcdd77e9c4e5266c232015fe65ddc802b671403b4aab",
+          "span": [
+            1257,
+            6118
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "58eb7b8f1c44d45f168f20e8502bffae8cd9b452e919e0737d2378336a0d9396",
+          "codeSHA256": "b1dafd439fb6cab307ace3366cd22003912c744733fd6de52c64592ce9e0ac6b",
+          "features": {
+            "propertyOperations": 31,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "4bdd648bfdd8e232",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/esm/platform/node/instrumentation.js",
+          "source": "source-js/b44b1ad12bee96a515dff9d6b27844ea838195b56e136986fd455a74578c89e1.js",
+          "sourceSHA256": "b44b1ad12bee96a515dff9d6b27844ea838195b56e136986fd455a74578c89e1",
+          "span": [
+            2532,
+            5570
+          ],
+          "name": "InstrumentationBase",
+          "normalizedASTSHA256": "10e37212ca0dd454145452b0237cfe7fd33f3e3fdf5983ea0c8ea581a79d54ef",
+          "codeSHA256": "2433d379843aa5f145b2d52f8d3a68790e876f17115582b95dad006906b50d7f",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "921c4a3ab25c477a",
+            "graphNodes": 14,
+            "graphEdges": 17,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/757e7d699d979d76eb4d",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@opentelemetry/sdk-logs",
+      "declaredVersion": "0.57.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@opentelemetry/sdk-logs",
+        "version": "0.57.2",
+        "integrity": "sha512-TXFHJ5c+BKggWbdEQ/inpgIzEmS2BGQowLE9UhsMd7YYlUfBQJ4uax0VF/B5NYigdM/75OoJGhAV3upEhK+3gg==",
+        "shasum": "ddc9d1e2b86052b4b6bb954dd90fa3878bed8a23",
+        "tarballSHA256": "7007f0df1d0bb9b5402521a75e32aae4726971bf9191941e7ffdbb68bcf0bc7f",
+        "bytes": 47839,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 41,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "build/esm/export/BatchLogRecordProcessorBase.js",
+          "source": "source-js/90364bfc04419ca4c036c9751a7abc85a02b0eaed5da3d2fe0b7b560a079fd43.js",
+          "sourceSHA256": "90364bfc04419ca4c036c9751a7abc85a02b0eaed5da3d2fe0b7b560a079fd43",
+          "span": [
+            1713,
+            3074
+          ],
+          "name": "step",
+          "normalizedASTSHA256": "fba31d90c2ba5ba8467a7e424687f62e6bb46d8d29ef1080b651e89c99dd0a39",
+          "codeSHA256": "714887923afbc4a3d2a8f9b5da140be68463f07fcbd44db6e2eac8236fb8728f",
+          "features": {
+            "propertyOperations": 59,
+            "distinctOperationPropertyPairs": 21,
+            "pogHash": "7beefe3643fa8222",
+            "graphNodes": 76,
+            "graphEdges": 99,
+            "graphOperationOccurrences": 77,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/esm/export/BatchLogRecordProcessorBase.js",
+          "source": "source-js/90364bfc04419ca4c036c9751a7abc85a02b0eaed5da3d2fe0b7b560a079fd43.js",
+          "sourceSHA256": "90364bfc04419ca4c036c9751a7abc85a02b0eaed5da3d2fe0b7b560a079fd43",
+          "span": [
+            3328,
+            4637
+          ],
+          "name": "BatchLogRecordProcessorBase",
+          "normalizedASTSHA256": "d7e9abbaff51566a6f0ea87a4a8b13225ccee011046dc36bde2c2eb984a05e52",
+          "codeSHA256": "2608a0a9eeb0dfc36a1411db463749f56c5904fcc9eb8aef87f0847d3ba62ddd",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "bb5a15ae84485278",
+            "graphNodes": 38,
+            "graphEdges": 53,
+            "graphOperationOccurrences": 41,
+            "distinctGraphOperationPropertyPairs": 19,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "build/esm/export/BatchLogRecordProcessorBase.js",
+          "source": "source-js/90364bfc04419ca4c036c9751a7abc85a02b0eaed5da3d2fe0b7b560a079fd43.js",
+          "sourceSHA256": "90364bfc04419ca4c036c9751a7abc85a02b0eaed5da3d2fe0b7b560a079fd43",
+          "span": [
+            3310,
+            9557
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "d5e11edece43260ea2ca5df7a48bf81a634dffb1d63511f4178c44b324807848",
+          "codeSHA256": "09bd7384b5011873cf9faaae335e5e87e9d899e1cd033dae04a7841bb8f0cf85",
+          "features": {
+            "propertyOperations": 20,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "b692240e203a3a30",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/0e37dd475ac0a24073af",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    },
+    {
+      "library": "@storybook/test",
+      "declaredVersion": "^8.6.14",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@storybook/test",
+        "version": "8.6.14",
+        "integrity": "sha512-GkPNBbbZmz+XRdrhMtkxPotCLOQ1BaGNp/gFZYdGDk2KmUWBKmvc5JxxOhtoXM2703IzNFlQHSSNnhrDZYuLlw==",
+        "shasum": "7b90708f13adabdac0fe8d08889d763608f6a481",
+        "tarballSHA256": "95d134355ca21231d367b0bfc3ab3a35c2711b8839e46bd912a889e3f0dbc41f",
+        "bytes": 348009,
+        "lockfile": "bun.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 60,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/7245a00630fa6f6e9d96d14830b17af00d53d2c99c71bcc47d548db4688faeed.js",
+          "sourceSHA256": "7245a00630fa6f6e9d96d14830b17af00d53d2c99c71bcc47d548db4688faeed",
+          "span": [
+            5079,
+            5509
+          ],
+          "name": "_iterableToArrayLimit",
+          "normalizedASTSHA256": "0f85d67f8e8a20b4d5a51aa07b405dd542d8e3e4de9d7538f27c7cdefc62a78d",
+          "codeSHA256": "dc5f0b8e5619975c7790e901396d0d555f261ac58b7b936c99f1bbbf2f1f98b3",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "357140f4454b5b68",
+            "graphNodes": 24,
+            "graphEdges": 34,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/7245a00630fa6f6e9d96d14830b17af00d53d2c99c71bcc47d548db4688faeed.js",
+          "sourceSHA256": "7245a00630fa6f6e9d96d14830b17af00d53d2c99c71bcc47d548db4688faeed",
+          "span": [
+            4026,
+            8690
+          ],
+          "name": "../../node_modules/aria-query/lib/ariaPropsMap.js",
+          "normalizedASTSHA256": "b2256a241e10f6f597d42e89229fefb875edce6ba670d51bfa6279e89c946597",
+          "codeSHA256": "db8b838e1e1aa71ee08784de43644b4d5b571564f8c38ed9f407897a85f38f8e",
+          "features": {
+            "propertyOperations": 76,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "c2e5686ca2eaeb62",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 75,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/7245a00630fa6f6e9d96d14830b17af00d53d2c99c71bcc47d548db4688faeed.js",
+          "sourceSHA256": "7245a00630fa6f6e9d96d14830b17af00d53d2c99c71bcc47d548db4688faeed",
+          "span": [
+            8769,
+            14081
+          ],
+          "name": "../../node_modules/aria-query/lib/domMap.js",
+          "normalizedASTSHA256": "7fdbeaa381577702d86f099480ab9b3000694595f97455c50850cfef241a3185",
+          "codeSHA256": "1b8b9f2c45e357270a29b08ebc6ace480a46b7c68189458307bb5e8f4971c53e",
+          "features": {
+            "propertyOperations": 141,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "404d81f2cd40086a",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 140,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "libraries/85075dac87981ec322ae",
+      "licenses": [],
+      "lockfileSHA256": "9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6",
+      "lockfileSnapshot": "lockfiles/9e7d54c9fca483129cd78f4205c025e7de2b620d998f58e099f9d6a593e941a6-bun.lock"
+    }
+  ],
+  "selectedLibraries": [
+    "@ai-sdk/provider-utils",
+    "@ai-sdk/react",
+    "@codemirror/lang-css",
+    "@codemirror/lang-html",
+    "@codemirror/lang-javascript",
+    "@codemirror/lang-json",
+    "@codemirror/lang-markdown",
+    "@opentelemetry/instrumentation",
+    "@opentelemetry/sdk-logs",
+    "@storybook/test"
+  ],
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "e0103062839230df3975a6f5c54811679bda5b262cf691f8a0eb73b8347d4908",
+    "codeHashes": {
+      "preflight.mjs": "0ae6a82cadb7b542454829b7a2b6632d5e2556120107890e821efc319b95c11b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f"
+    },
+    "frontendManifestSHA256": "cf835a96e8f0c2a165064f42e5bc89ea9ba2b2a157696863f10b0b6f501d9273",
+    "manifestRelative": "apps/web/client/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T02:08:48.758Z",
+  "reason": null,
+  "finished": "2026-11-09T02:08:49.095Z"
+}

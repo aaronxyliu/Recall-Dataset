@@ -1,0 +1,15 @@
+const fs = require('node:fs');
+const root = 'apps/web/client/src/app/';
+const file = root + '_components/landing-page/feature-blocks/components.tsx';
+let source = fs.readFileSync(file, 'utf8');
+const formatter = "new Date().toLocaleString('default', { month: 'short' })";
+if (source.split(formatter).length !== 2) throw Error('Upstream calendar formatter changed');
+source = source.replace(formatter, "new Date().toLocaleString('en-US', { month: 'short', timeZone: 'UTC' })");
+source = source.replaceAll('new Date().getFullYear()', 'new Date().getUTCFullYear()').replaceAll('today.getFullYear()', 'today.getUTCFullYear()').replaceAll('today.getMonth()', 'today.getUTCMonth()').replaceAll('today.getDate()', 'today.getUTCDate()');
+fs.writeFileSync(file, source);
+const layout = root + 'layout.tsx';source = fs.readFileSync(layout, 'utf8');
+const condition = "const isProduction = env.NODE_ENV === 'production';";
+if (source.split(condition).length !== 2) throw Error('Upstream analytics condition changed');
+source = source.replace(condition, "const isProduction = env.NODE_ENV === 'production' && process.env.NEXT_PUBLIC_RECALL_LOCAL_CAPTURE !== '1';");
+fs.writeFileSync(layout, source);
+console.log('Made the calendar locale deterministic and scoped production tracking away from local capture');

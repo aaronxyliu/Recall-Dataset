@@ -1,1 +1,87 @@
-ERROR: Cannot connect to the Docker daemon at unix:///tmp/recall-hufang-docker.sock. Is the docker daemon running?
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 2.23kB done
+#1 DONE 0.0s
+
+#2 [context recipe] load .dockerignore
+#2 transferring recipe: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/oven/bun:1.3.1
+#3 DONE 2.5s
+
+#4 [build  1/10] FROM docker.io/oven/bun:1.3.1@sha256:9c5d3c92b234b4708198577d2f39aab7397a242a40da7c2f059e51b9dc62b408
+#4 resolve docker.io/oven/bun:1.3.1@sha256:9c5d3c92b234b4708198577d2f39aab7397a242a40da7c2f059e51b9dc62b408 done
+#4 ...
+
+#5 [context recipe] load from client
+#5 transferring recipe: 871.56kB 0.0s done
+#5 DONE 0.2s
+
+#6 [context recipe] load from client
+#6 transferring recipe: 606B 0.0s done
+#6 DONE 0.2s
+
+#7 [context recipe] load from client
+#7 transferring recipe: 1.35kB done
+#7 DONE 0.2s
+
+#4 [build  1/10] FROM docker.io/oven/bun:1.3.1@sha256:9c5d3c92b234b4708198577d2f39aab7397a242a40da7c2f059e51b9dc62b408
+#4 DONE 0.3s
+
+#8 [internal] load build context
+#8 transferring context: 22.74MB 0.3s done
+#8 DONE 0.3s
+
+#9 [build  2/10] WORKDIR /app
+#9 DONE 0.1s
+
+#10 [build  3/10] COPY . .
+#10 DONE 0.2s
+
+#11 [build  4/10] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#11 DONE 0.0s
+
+#12 [build  5/10] RUN bun /tmp/recall-enable-maps.cjs
+#12 0.265 Enabled production browser maps in apps/web/client/next.config.ts
+#12 DONE 0.3s
+
+#13 [build  6/10] COPY --from=recipe repair-local-homepage.cjs /tmp/recall-repair-local-homepage.cjs
+#13 DONE 0.0s
+
+#14 [build  7/10] RUN bun /tmp/recall-repair-local-homepage.cjs
+#14 0.100 1 | const fs = require('node:fs');
+#14 0.100 2 | const root = 'apps/web/client/src/app/';
+#14 0.100 3 | const file = root + '_components/landing-page/feature-blocks/components.tsx';
+#14 0.100 4 | let source = fs.readFileSync(file, 'utf8');
+#14 0.100 5 | const formatter = "new Date().toLocaleString('default', { month: 'short' })";
+#14 0.100 6 | if (source.split(formatter).length !== 2) throw Error('Upstream calendar formatter changed');
+#14 0.100                                                     ^
+#14 0.100 error: Upstream calendar formatter changed
+#14 0.100       at <anonymous> (/tmp/recall-repair-local-homepage.cjs:6:49)
+#14 0.101 
+#14 0.101 Bun v1.3.1 (Linux arm64)
+#14 ERROR: process "/bin/sh -c bun /tmp/recall-repair-local-homepage.cjs" did not complete successfully: exit code: 1
+------
+ > [build  7/10] RUN bun /tmp/recall-repair-local-homepage.cjs:
+0.100 2 | const root = 'apps/web/client/src/app/';
+0.100 3 | const file = root + '_components/landing-page/feature-blocks/components.tsx';
+0.100 4 | let source = fs.readFileSync(file, 'utf8');
+0.100 5 | const formatter = "new Date().toLocaleString('default', { month: 'short' })";
+0.100 6 | if (source.split(formatter).length !== 2) throw Error('Upstream calendar formatter changed');
+0.100                                                     ^
+0.100 error: Upstream calendar formatter changed
+0.100       at <anonymous> (/tmp/recall-repair-local-homepage.cjs:6:49)
+0.101 
+0.101 Bun v1.3.1 (Linux arm64)
+------
+Dockerfile:14
+--------------------
+  12 |     RUN bun /tmp/recall-enable-maps.cjs
+  13 |     COPY --from=recipe repair-local-homepage.cjs /tmp/recall-repair-local-homepage.cjs
+  14 | >>> RUN bun /tmp/recall-repair-local-homepage.cjs
+  15 |     ENV NEXT_PUBLIC_RECALL_LOCAL_CAPTURE=1
+  16 |     
+--------------------
+ERROR: failed to build: failed to solve: process "/bin/sh -c bun /tmp/recall-repair-local-homepage.cjs" did not complete successfully: exit code: 1

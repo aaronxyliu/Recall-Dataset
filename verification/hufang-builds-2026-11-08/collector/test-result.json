@@ -1,8 +1,19 @@
 {
-  "test": "capture and map a production library; reject undeclared inputs",
-  "command": "node --test collect.test.mjs",
-  "passed": 1,
-  "failed": 0,
-  "durationMs": 4500.516667,
-  "scope": "Real Chrome fixture: production-library mapping, matching script/map capture, publication layout, undeclared-library rejection"
+  "status": "passed",
+  "checks": [
+    {
+      "command": "node --test collect.test.mjs",
+      "passed": 1,
+      "failed": 0,
+      "durationMs": 4498.645875,
+      "scope": "Real Chrome, production-library mapping and undeclared-dependency rejection"
+    },
+    {
+      "command": "node --test ownership.test.mjs",
+      "passed": 1,
+      "failed": 0,
+      "durationMs": 209.489417,
+      "scope": "Stripped source paths; exact hash accepted; absent or incorrect ownership rejected"
+    }
+  ]
 }

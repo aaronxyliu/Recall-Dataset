@@ -1,0 +1,48 @@
+{
+  "name": "rsup-progress",
+  "description": "A lightweight (1KB) progress bar with promise support",
+  "version": "3.2.0",
+  "repository": "https://github.com/skt-t1-byungi/rsup-progress.git",
+  "author": "skt-t1-byungi <tiniwz@gmail.com>",
+  "files": [
+    "dist/"
+  ],
+  "workspaces": [
+    "website/"
+  ],
+  "source": "src/index.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js"
+    }
+  },
+  "keywords": [
+    "progress",
+    "progressbar",
+    "loader",
+    "promise",
+    "1kb"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6"
+  },
+  "devDependencies": {
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "gh-pages": "^6.0.0"
+  },
+  "scripts": {
+    "dev": "npm run start --prefix website",
+    "test": "echo skip",
+    "build": "rm -rf dist && npm run esm && npm run cjs",
+    "esm": "tsc -p tsconfig.esm.json",
+    "cjs": "tsc -p tsconfig.cjs.json",
+    "website": "npm run build --prefix website",
+    "deploy": "rm -rf website/dist && npm run website && gh-pages -d website/dist"
+  }
+}

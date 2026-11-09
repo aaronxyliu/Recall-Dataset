@@ -1,26 +1,20 @@
 {
-  "schema": "recall.dataset-anchor-qualification/v1",
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "webpack/freeCodeCamp--freeCodeCamp",
+  "repo": "freeCodeCamp/freeCodeCamp",
+  "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
   "policy": {
-    "candidateField": "dependencies",
-    "minInitialAnchors": 3,
-    "minLibraries": 5,
-    "maxLibraries": 10,
-    "counting": "distinct source functions before propagation; repeated target copies count once",
-    "options": {
-      "minFeatures": 10,
-      "featureMetric": "propertyOperations",
-      "minAnchors": 3,
-      "uniqueBundle": true
-    }
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
   },
-  "provenance": {
-    "groundTruthSHA256": "5c29a85e5165a13e9451468af13ddd80356ccffca59b00bfffa18605d5e61bbd",
-    "manifestSHA256": "9aedf600166c24bf3a8ac4fa087933334e8fa9f25e6619f189c8b392b6243282",
-    "qualificationRunnerSHA256": "c51d6bf54ad4219e38eb40cc03743a9cacbc650abc622d035579dcbfc79d7ed2",
-    "selectionSHA256": "0fb156a3bae99032d61b4c8756582eac89dec027cdb57ce1704265c112eb1dbc",
-    "matcherSHA256": "90203f8432bbcfcbc577bf9b3ce5434f0d85e4be1acf74d5eec64f5628e6b4a9",
-    "referenceMode": "all available source-reference snapshots, not full installed package distributions"
-  },
+  "selectionOverride": {},
   "candidates": [
     "@babel/plugin-proposal-export-default-from",
     "@babel/plugin-proposal-function-bind",
@@ -118,984 +112,989 @@
     "uuid",
     "validator"
   ],
-  "excludedPreviouslySelected": [],
   "libraries": [
     {
-      "library": "@babel/plugin-proposal-export-default-from",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@babel/plugin-proposal-function-bind",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@babel/plugin-transform-runtime",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@babel/preset-env",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@babel/preset-react",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@babel/preset-typescript",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codesandbox/sandpack-react",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@codesandbox/sandpack-themes",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fortawesome/fontawesome-svg-core",
-      "initialAnchors": 38,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core"
-      ],
+      "library": "react-responsive",
+      "declaredVersion": "9.0.2",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react-responsive",
+        "version": "9.0.2",
+        "integrity": "sha512-+4CCab7z8G8glgJoRjAwocsgsv6VA2w7JPxFWHRc7kvz8mec1/K5LutNC2MG28Mn8mu6+bu04XZxHv5gyfT7xQ==",
+        "shasum": "34531ca77a61e7a8775714016d21241df7e4205c",
+        "tarballSHA256": "833f2dc711c2c2eefebac1c9d5a778070f8ac0e194c34a5017c7c629b8324c8b",
+        "bytes": 49786,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 306,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 38
-    },
-    {
-      "library": "@fortawesome/free-brands-svg-icons",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@fortawesome/free-solid-svg-icons",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/free-solid-svg-icons"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 20,
+      "diagnostics": [
+        {
+          "file": "src/Component.ts",
+          "error": "SyntaxError: [5:0-5:9]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/toQuery.ts",
+          "error": "SyntaxError: [5:20-5:21]: Expected ')'"
+        },
+        {
+          "file": "src/useMediaQuery.ts",
+          "error": "SyntaxError: [9:5-9:23]: Unexpected token: 'identifier'"
+        }
       ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 0,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@fortawesome/react-fontawesome",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome"
+      "witnesses": [
+        {
+          "file": "dist/react-responsive.js",
+          "source": "source-js/241a6a0fe9e94309cb52a112e81301596ced65344742fdf10efc8b9b2e5bea84.js",
+          "sourceSHA256": "241a6a0fe9e94309cb52a112e81301596ced65344742fdf10efc8b9b2e5bea84",
+          "span": [
+            4330,
+            4652
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "6605f30e97183e6eff9223f422e1627c54af69cd5175ad4b3b5c6db20f83a6e2",
+          "codeSHA256": "151915114d06fc3fd67ec55c8b130d11f6c44c0500d99d10f8ee27e63a38ffc2",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "57c6c0111970fe6d",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/react-responsive.js",
+          "source": "source-js/241a6a0fe9e94309cb52a112e81301596ced65344742fdf10efc8b9b2e5bea84.js",
+          "sourceSHA256": "241a6a0fe9e94309cb52a112e81301596ced65344742fdf10efc8b9b2e5bea84",
+          "span": [
+            3787,
+            4684
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "c4178c74c794d459a29ef69afe4a85248ec4f60b78c8d37f1cd06701d4512451",
+          "codeSHA256": "999b215275a5f0f088b6142f1f6bad0eb624a6a6652f53209457939325cbd8b8",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "b21a495eb1875721",
+            "graphNodes": 14,
+            "graphEdges": 16,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/react-responsive.js",
+          "source": "source-js/241a6a0fe9e94309cb52a112e81301596ced65344742fdf10efc8b9b2e5bea84.js",
+          "sourceSHA256": "241a6a0fe9e94309cb52a112e81301596ced65344742fdf10efc8b9b2e5bea84",
+          "span": [
+            7323,
+            8194
+          ],
+          "name": "Mql",
+          "normalizedASTSHA256": "b3d813c41ba9079b5bb87c30dddb67fb79967d76d751e1c53294dfc9a5a2745f",
+          "codeSHA256": "edd6c4e4070576dd7c10d81ad7aa910465235f8fd2e26a2fc63d2bd1fa43f6e9",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "88584c0c71a89fec",
+            "graphNodes": 8,
+            "graphEdges": 8,
+            "graphOperationOccurrences": 19,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 25,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 4
-    },
-    {
-      "library": "@freecodecamp/challenge-builder",
-      "initialAnchors": 0,
-      "qualified": false,
-      "status": "no supplied source-reference text",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@freecodecamp/ui",
-      "initialAnchors": 94,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "@freecodecamp/ui"
+      "proofDirectory": "eligibility/libraries/397dc7f0aba626dd441e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "893718b92b6e59dc9944e27a9833ac542e0d9b92947f31cc5a307fbabcebf56b"
+        }
       ],
-      "qualified": false,
-      "status": "would-undercut-retained-library-anchors",
-      "conflicts": [
-        "@fortawesome/react-fontawesome"
-      ],
-      "phase": "replacement",
-      "referenceFunctions": 1202,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "initialAnchors": 22,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "@gatsbyjs/reach-router"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 214,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 22
-    },
-    {
-      "library": "@growthbook/growthbook-react",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "@gatsbyjs/reach-router",
-        "@growthbook/growthbook-react"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 25,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@loadable/component",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@loadable/component"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 53,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@paypal/react-paypal-js",
-      "initialAnchors": 8,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "@gatsbyjs/reach-router",
-        "@paypal/react-paypal-js"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 141,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 8
-    },
-    {
-      "library": "@redux-devtools/extension",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@redux-saga/core",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 239,
-      "sourceFiles": 3
-    },
-    {
-      "library": "@reduxjs/toolkit",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 739,
-      "sourceFiles": 3
-    },
-    {
-      "library": "@stripe/react-stripe-js",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 73,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@stripe/stripe-js",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 12,
-      "sourceFiles": 1
-    },
-    {
-      "library": "@types/react-speech-recognition",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@xterm/addon-fit",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "@xterm/xterm",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "algoliasearch",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 164,
-      "sourceFiles": 1
-    },
-    {
-      "library": "assert",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "babel-plugin-preval",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "babel-plugin-prismjs",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "bezier-easing",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "browser-cookies",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 4,
-      "sourceFiles": 1
-    },
-    {
-      "library": "canvas-confetti",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 59,
-      "sourceFiles": 1
-    },
-    {
-      "library": "crypto-browserify",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "date-fns",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 226,
-      "sourceFiles": 81
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
     },
     {
       "library": "date-fns-tz",
-      "initialAnchors": 9,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react-monaco-editor",
-        "@loadable/component",
-        "react-redux",
-        "react",
-        "reselect",
-        "store"
-      ],
+      "declaredVersion": "3.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "date-fns-tz",
+        "version": "3.2.0",
+        "integrity": "sha512-sg8HqoTEulcbbbVXeg84u5UnlsQa8GS5QXMqjjYIhS4abEVVKIUwe0/l/UhrZdKaL/W5eWZNlbTeEIiOXTcsBQ==",
+        "shasum": "647dc56d38ac33a3e37b65e9d5c4cda5af5e58e6",
+        "tarballSHA256": "bda52c77bf32d3d10a91dde74243311ae2ba5b1a77307c17bebb0e738c7cc6f9",
+        "bytes": 49674,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 24,
-      "sourceFiles": 7,
-      "finalInitialAnchors": 9
-    },
-    {
-      "library": "eslint-config-react-app",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "final-form",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "gatsby",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 4,
-      "sourceFiles": 4
-    },
-    {
-      "library": "gatsby-cli",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "gatsby-plugin-postcss",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "gatsby-plugin-react-helmet",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "gatsby-plugin-remove-serviceworker",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "gatsby-source-filesystem",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "gatsby-transformer-remark",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "i18next",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 239,
-      "sourceFiles": 1
-    },
-    {
-      "library": "instantsearch.js",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 395,
-      "sourceFiles": 61
-    },
-    {
-      "library": "lodash",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "lodash-es",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 251,
-      "sourceFiles": 236
-    },
-    {
-      "library": "micromark",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "monaco-editor",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 19876,
-      "sourceFiles": 1002
-    },
-    {
-      "library": "nanoid",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 6,
-      "sourceFiles": 1
-    },
-    {
-      "library": "normalize-url",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "path-browserify",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "pinyin-tone",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "postcss",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "prismjs",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "process",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 16,
-      "sourceFiles": 1
-    },
-    {
-      "library": "prop-types",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 5,
-      "sourceFiles": 3
-    },
-    {
-      "library": "qrcode.react",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "query-string",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 43,
-      "sourceFiles": 1
-    },
-    {
-      "library": "react",
-      "initialAnchors": 6,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react-monaco-editor",
-        "@loadable/component",
-        "react-redux",
-        "react",
-        "reselect",
-        "store"
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 4,
+      "parsedFunctions": 9,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/cjs/_lib/getTimezoneOffsetInMilliseconds/index.js",
+          "source": "source-js/1f57b18694012385f430edb784210b81b3160d850e0f4aceafbe4cd1a7aedfe2.js",
+          "sourceSHA256": "1f57b18694012385f430edb784210b81b3160d850e0f4aceafbe4cd1a7aedfe2",
+          "span": [
+            682,
+            981
+          ],
+          "name": "getTimezoneOffsetInMilliseconds",
+          "normalizedASTSHA256": "a8485b82ef2881fad1347664592d0e3aca3511c5abe7c2c7508a2a7b5a63dea1",
+          "codeSHA256": "74bd02d715f214d374a8038ed33dc2683cdbe571a86082ca8aa95a1cc571c3af",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "a11a7248a280e0d7",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 9,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/_lib/tzParseTimezone/index.js",
+          "source": "source-js/c8b7e2776111b4a6dfd93e04e060c9bb67bbe7f306609db1bbd9ab5884d90ea7.js",
+          "sourceSHA256": "c8b7e2776111b4a6dfd93e04e060c9bb67bbe7f306609db1bbd9ab5884d90ea7",
+          "span": [
+            525,
+            1875
+          ],
+          "name": "tzParseTimezone",
+          "normalizedASTSHA256": "122560daeed3238d5cd4a48805ea030c530c5f57443eda9f188a8b0078b4682d",
+          "codeSHA256": "f1e774520db04fc177588e557acc1bdd499c5b4b85eb9d31aa05a761ce73f17c",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "86f3566b9e48ed2c",
+            "graphNodes": 20,
+            "graphEdges": 29,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/_lib/tzParseTimezone/index.js",
+          "source": "source-js/c8b7e2776111b4a6dfd93e04e060c9bb67bbe7f306609db1bbd9ab5884d90ea7.js",
+          "sourceSHA256": "c8b7e2776111b4a6dfd93e04e060c9bb67bbe7f306609db1bbd9ab5884d90ea7",
+          "span": [
+            2119,
+            2563
+          ],
+          "name": "calcOffset",
+          "normalizedASTSHA256": "1a6f0c3247ed7ebc6ec6bd3418d603e4fd7eb0c88ca0d42565b261ae97b75080",
+          "codeSHA256": "5ac0f59cf4846ab9658b67bf531534566a3e1a406d6988f3db8c44e69d5392fb",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "2791c5730103b324",
+            "graphNodes": 5,
+            "graphEdges": 4,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 4,
+            "extractionStatus": "ok"
+          }
+        }
       ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 55,
-      "sourceFiles": 4,
-      "finalInitialAnchors": 6
-    },
-    {
-      "library": "react-calendar-heatmap",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react-dom",
-      "initialAnchors": 66,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react-monaco-editor",
-        "@loadable/component",
-        "react-redux",
-        "react",
-        "reselect",
-        "store"
+      "proofDirectory": "eligibility/libraries/766e7efedf451ea1746e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.md",
+          "sha256": "54a4274bc32c7e4f8db2f4169e7d5a1affab53625573eea780bed67ff7cd1f4b"
+        }
       ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 490,
-      "sourceFiles": 3,
-      "finalInitialAnchors": 66
-    },
-    {
-      "library": "react-final-form",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react-gtm-module",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 12,
-      "sourceFiles": 4
-    },
-    {
-      "library": "react-helmet",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 92,
-      "sourceFiles": 1
-    },
-    {
-      "library": "react-hotkeys",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 479,
-      "sourceFiles": 2
-    },
-    {
-      "library": "react-i18next",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 84,
-      "sourceFiles": 11
-    },
-    {
-      "library": "react-instantsearch",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 17,
-      "sourceFiles": 5
-    },
-    {
-      "library": "react-instantsearch-core",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 69,
-      "sourceFiles": 30
-    },
-    {
-      "library": "react-monaco-editor",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "react-monaco-editor"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 41,
-      "sourceFiles": 3
-    },
-    {
-      "library": "react-redux",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "react-redux"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 106,
-      "sourceFiles": 20
-    },
-    {
-      "library": "react-reflex",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react-responsive",
-      "initialAnchors": 8,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react-monaco-editor",
-        "@loadable/component",
-        "react-redux",
-        "react",
-        "reselect",
-        "store"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 154,
-      "sourceFiles": 1,
-      "finalInitialAnchors": 8
-    },
-    {
-      "library": "react-scroll",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 187,
-      "sourceFiles": 16
-    },
-    {
-      "library": "react-speech-recognition",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react-spinkit",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 15,
-      "sourceFiles": 2
-    },
-    {
-      "library": "react-tooltip",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react-transition-group",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "react-youtube",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "redux",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 88,
-      "sourceFiles": 2
-    },
-    {
-      "library": "redux-actions",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 30,
-      "sourceFiles": 17
-    },
-    {
-      "library": "redux-observable",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 35,
-      "sourceFiles": 5
-    },
-    {
-      "library": "redux-saga",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "reselect",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "reselect"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement",
-      "referenceFunctions": 91,
-      "sourceFiles": 3
-    },
-    {
-      "library": "rxjs",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 344,
-      "sourceFiles": 72
-    },
-    {
-      "library": "sanitize-html",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "store",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react-monaco-editor",
-        "@loadable/component",
-        "react-redux",
-        "react",
-        "reselect",
-        "store"
-      ],
-      "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 104,
-      "sourceFiles": 12,
-      "finalInitialAnchors": 4
-    },
-    {
-      "library": "stream-browserify",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "tone",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 1829,
-      "sourceFiles": 173
-    },
-    {
-      "library": "typescript",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 0,
-      "sourceFiles": 0
-    },
-    {
-      "library": "util",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 99,
-      "sourceFiles": 3
-    },
-    {
-      "library": "uuid",
-      "initialAnchors": null,
-      "qualified": null,
-      "status": "not needed: ten qualifying libraries already selected",
-      "referenceFunctions": 4,
-      "sourceFiles": 5
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
     },
     {
       "library": "validator",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react-monaco-editor",
-        "@loadable/component",
-        "react-redux",
-        "react",
-        "reselect",
-        "store"
-      ],
+      "declaredVersion": "13.15.35",
+      "origin": {
+        "kind": "npm-package",
+        "name": "validator",
+        "version": "13.15.35",
+        "integrity": "sha512-TQ5pAGhd5whStmqWvYF4OjQROlmv9SMFVt37qoCBdqRffuuklWYQlCNnEs2ZaIBD1kZRNnikiZOS1eqgkar0iw==",
+        "shasum": "81cf455c51f15b69d8d340be5914f3fab00dbf7f",
+        "tarballSHA256": "f9a6b506bd9eda8df9d2a4120613426948d9f66cde1b6d5fad3406758d2f81f4",
+        "bytes": 200992,
+        "lockfile": "pnpm-lock.yaml"
+      },
       "qualified": true,
-      "status": "retained-existing",
-      "referenceFunctions": 33,
-      "sourceFiles": 9,
-      "finalInitialAnchors": 3
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 12,
+      "parsedFunctions": 15,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "es/lib/isAlpha.js",
+          "source": "source-js/811f2cd4dc644689e1e66d443b5f198f1fad377a9eb00b151507c6682edfb5a7.js",
+          "sourceSHA256": "811f2cd4dc644689e1e66d443b5f198f1fad377a9eb00b151507c6682edfb5a7",
+          "span": [
+            96,
+            871
+          ],
+          "name": "isAlpha",
+          "normalizedASTSHA256": "b732d6107f755ac8168c20028b9fe5f62f14af0bbbfa7f95ae4586200f43e45e",
+          "codeSHA256": "53c031084c2fefc6fc536250e7cdfac79ff53917f79b59093303b5349785220c",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "314d0d0f9adc1918",
+            "graphNodes": 24,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "es/lib/isAlphanumeric.js",
+          "source": "source-js/8e3de4f162accf1174381ed0c9386c2f3decab9d8c8b3055ae2747bdb85771a9.js",
+          "sourceSHA256": "8e3de4f162accf1174381ed0c9386c2f3decab9d8c8b3055ae2747bdb85771a9",
+          "span": [
+            103,
+            899
+          ],
+          "name": "isAlphanumeric",
+          "normalizedASTSHA256": "10d5509d99a8331f1e986fe782af02759d8ccf820af0b29d06c8721d516a457b",
+          "codeSHA256": "a83d67b0210010c1bc16e1efc8ba03dbc567b8b64a74437110fb41dc04414dfd",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "314d0d0f9adc1918",
+            "graphNodes": 24,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "es/lib/isBase64.js",
+          "source": "source-js/6e6990c44e84fe2e7fb4f56f13d3eeedc8c958a266eb1751d699af83c08f3226.js",
+          "sourceSHA256": "6e6990c44e84fe2e7fb4f56f13d3eeedc8c958a266eb1751d699af83c08f3226",
+          "span": [
+            297,
+            880
+          ],
+          "name": "isBase64",
+          "normalizedASTSHA256": "014ac92c9d37c255a38c4e105a6c0f720966bfb8d153e8ec7e2f8cefed53d0b1",
+          "codeSHA256": "af63edf536fa9446aca569d36037774192d414115184c61d6484f5f3461c22ff",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "db0d171bf32d6273",
+            "graphNodes": 30,
+            "graphEdges": 38,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/f82af32160bc53112ca1",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "683b3c34623e01daad41cb2a3d0a93578c590f8d0206cbd8b0b579fb7def2603"
+        }
+      ],
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
+    },
+    {
+      "library": "react-dom",
+      "declaredVersion": "18.3.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react-dom",
+        "version": "18.3.1",
+        "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
+        "shasum": "c2265d79511b57d479b3dd3fdfa51536494c5cb4",
+        "tarballSHA256": "031d4427a99f2f3f6cac18bbbf308594a67e4f47d10f4896fdec446505b040e0",
+        "bytes": 1089001,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 50,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            21397,
+            22185
+          ],
+          "name": "checkControlledValueProps",
+          "normalizedASTSHA256": "e8d26e65d614734309d58bf91ac502384f15173fc98c09f0a6d6b3137e6ff97f",
+          "codeSHA256": "6b3f7ac985198e54ae877e4162943fcface8d31dd6163640ff1336e294971bc2",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "e423c47e5203f48",
+            "graphNodes": 29,
+            "graphEdges": 37,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            24345,
+            26003
+          ],
+          "name": "validateProperty",
+          "normalizedASTSHA256": "63fd97263c44f203a0d9efeed29681943646a6ff4acf9c78d1439be8457f9e18",
+          "codeSHA256": "1d6ddd3cd61e336b9820056573463c99b4b27e65e7ba6cbdb88c853b074f7c72",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "c36a1f55bf39eb11",
+            "graphNodes": 25,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-dom-server-legacy.browser.development.js",
+          "source": "source-js/5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e.js",
+          "sourceSHA256": "5acee43203eac80a9e45284d3e98ffeeac57de2a925299b0c70af639d14fc28e",
+          "span": [
+            41383,
+            47290
+          ],
+          "name": "validateProperty$1",
+          "normalizedASTSHA256": "3b5b7719405a0a3f3c95634a10fdf8ece52db70007eee490f94013d7f6396f58",
+          "codeSHA256": "bbcef362e09863b7357f6b4a8f4878764a392e3a4e54a59676edf7592fc0e84f",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "fb6dad9559a35ede",
+            "graphNodes": 73,
+            "graphEdges": 107,
+            "graphOperationOccurrences": 37,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/de7f2df91c095f0cd45d",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
+    },
+    {
+      "library": "react",
+      "declaredVersion": "18.3.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "react",
+        "version": "18.3.1",
+        "integrity": "sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==",
+        "shasum": "49ab892009c53933625bd16b2533fc754cab2891",
+        "tarballSHA256": "8d9bed01a672e7eaf387942d781ad47c6a43089a30a0306060f9fd5ac7870347",
+        "bytes": 81751,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            5344,
+            7193
+          ],
+          "name": "getComponentNameFromType",
+          "normalizedASTSHA256": "a1e72755ec916bfe92c3abea09c3d4eb80544ce4b414f107e78042d4fc195f65",
+          "codeSHA256": "47167ee9ca2bf32d87a5f1f1074f9d220be358a8d4591777c775beda0bfface0",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "db98a1512acb2dfb",
+            "graphNodes": 33,
+            "graphEdges": 52,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            7687,
+            8600
+          ],
+          "name": "disableLogs",
+          "normalizedASTSHA256": "ac0566cb926bf100c6b3d136902c1b167fc2f341f6507f491e1776d1954b4996",
+          "codeSHA256": "d7ef3859231e043d82d16c9df2e9d198afc9dfa4d1f99ad3374046501b19303b",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 19,
+            "pogHash": "29a358caaedc6d00",
+            "graphNodes": 5,
+            "graphEdges": 4,
+            "graphOperationOccurrences": 18,
+            "distinctGraphOperationPropertyPairs": 18,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "cjs/react-jsx-dev-runtime.development.js",
+          "source": "source-js/cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5.js",
+          "sourceSHA256": "cd9394f47e01e9f1d87f7a8adcfc0ad8f8813d5c124ee74627791921f3277ac5",
+          "span": [
+            8601,
+            9695
+          ],
+          "name": "reenableLogs",
+          "normalizedASTSHA256": "c860344e4606909b8f79ffb4338589b6f8f5f29b9f3673bd05c06fa4129b9c2c",
+          "codeSHA256": "9e45a7165427a340732f72f562a5447c4e7f1483521bab20b140a496573d6193",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "2e4631ecad4ad9ed",
+            "graphNodes": 6,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/275976081ce1abf67779",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85"
+        }
+      ],
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
+    },
+    {
+      "library": "store",
+      "declaredVersion": "2.0.12",
+      "origin": {
+        "kind": "npm-package",
+        "name": "store",
+        "version": "2.0.12",
+        "integrity": "sha512-eO9xlzDpXLiMr9W1nQ3Nfp9EzZieIQc10zPPMP5jsVV7bLOziSFFBP0XoDXACEIFtdI+rIz0NwWVA/QVJ8zJtw==",
+        "shasum": "8c534e2a0b831f72b75fc5f1119857c44ef5d593",
+        "tarballSHA256": "c680a4fc47a542acbb6bd4c646026d05a16a41589053b4b057bf792ef676bb7c",
+        "bytes": 59753,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 9,
+      "parsedFunctions": 71,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/store-engine.js",
+          "source": "source-js/b5f4ecda99e827b725e3e7d8fa988c6fa12a066965f310ced7e0819bc009a4bf.js",
+          "sourceSHA256": "b5f4ecda99e827b725e3e7d8fa988c6fa12a066965f310ced7e0819bc009a4bf",
+          "span": [
+            2410,
+            6733
+          ],
+          "name": "createStore",
+          "normalizedASTSHA256": "29ce3799ba7b682ed78faa82cfeaf0e8a8446b529e81dd4cbe8af48de4b06b67",
+          "codeSHA256": "ca7bbefb576767b2d9b7fd9987919b87496d32e88830e0de1bf3b71f34eb6964",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "b31efaead1d0984b",
+            "graphNodes": 14,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "plugins/compression_test.js",
+          "source": "source-js/5330b6b7e288c5298b70532499131fc21c0c06d1c0ca4bd9f5a86d7800dee0e1.js",
+          "sourceSHA256": "5330b6b7e288c5298b70532499131fc21c0c06d1c0ca4bd9f5a86d7800dee0e1",
+          "span": [
+            487,
+            816
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "1c053e97e89a3f98fabccd1aa2f672808a93bf7fcf7eed54db73f070df2a5d56",
+          "codeSHA256": "2659b45c22b680e30553eaf2c46569cd81dd57971c8688af53f30fd5b4af4044",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "91bb2e7c7fe2221c",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "plugins/events_test.js",
+          "source": "source-js/f367a1405d2bb2a80a0ef57ebfa6896a6a124c394645c9c377bb06c038639d70.js",
+          "sourceSHA256": "f367a1405d2bb2a80a0ef57ebfa6896a6a124c394645c9c377bb06c038639d70",
+          "span": [
+            109,
+            1059
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "2a5c320482810c4bffad11d44d3e629950a99ede295cbeccb28dba023447ece7",
+          "codeSHA256": "ed43f15064d0f116f532b8367087b11a6cc2ca9542bfc5f13a8eef66407f2960",
+          "features": {
+            "propertyOperations": 22,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "679b703de1ecac50",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/824d80d71985f082a269",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "af4a0aa33e3a61cf96a6ffa912f9e13a6981e3161c6ea352eb84902af357c271"
+        }
+      ],
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
+    },
+    {
+      "library": "@fortawesome/fontawesome-svg-core",
+      "declaredVersion": "7.3.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@fortawesome/fontawesome-svg-core",
+        "version": "7.3.1",
+        "integrity": "sha512-BoxVN3PKnMbgStHhjoaky/oWdxHomDqmBVA24IA3KEmssFGeI7u9YT/BJceOjIum/t6TpPa/vcMKaVYQeIQ/3Q==",
+        "shasum": "eca344c1c8094598240c44d28e97ad53eb0c4537",
+        "tarballSHA256": "5d37869eb178c44023f4b7f8516bc3e9f58ecc6239f33a66a8ed1edf14f6484c",
+        "bytes": 110529,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 12,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "import.macro.js",
+          "source": "source-js/a8175986c683391865bfa3ad7714e6f97cf7db558ee40605c37adcee8f353a51.js",
+          "sourceSHA256": "a8175986c683391865bfa3ad7714e6f97cf7db558ee40605c37adcee8f353a51",
+          "span": [
+            1105,
+            1456
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "792dbf6122be8e79fbaba68a9f2791d4bf09436962780b6219e2735e98b78442",
+          "codeSHA256": "ac9e304c98396bf50bc59ffc451bfb45b4429c64882d6f3b065b0fde641cec80",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "6937d6618662ece7",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "import.macro.js",
+          "source": "source-js/a8175986c683391865bfa3ad7714e6f97cf7db558ee40605c37adcee8f353a51.js",
+          "sourceSHA256": "a8175986c683391865bfa3ad7714e6f97cf7db558ee40605c37adcee8f353a51",
+          "span": [
+            2160,
+            3975
+          ],
+          "name": "resolveReplacementLegacyStyle",
+          "normalizedASTSHA256": "d07a493573da3053dd2990d59d31798d66bc70dfac346933e6775aef31d381b7",
+          "codeSHA256": "2c6584082170304c7bed5f0c5b5af4d740d943c83dea9d297ed1871818eafd6d",
+          "features": {
+            "propertyOperations": 56,
+            "distinctOperationPropertyPairs": 15,
+            "pogHash": "fd095f1b4410a389",
+            "graphNodes": 37,
+            "graphEdges": 46,
+            "graphOperationOccurrences": 78,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "import.macro.js",
+          "source": "source-js/a8175986c683391865bfa3ad7714e6f97cf7db558ee40605c37adcee8f353a51.js",
+          "sourceSHA256": "a8175986c683391865bfa3ad7714e6f97cf7db558ee40605c37adcee8f353a51",
+          "span": [
+            3998,
+            7131
+          ],
+          "name": "resolveReplacementIcon",
+          "normalizedASTSHA256": "92dfdae9c57434cebda28d3e93c527de8a60891b305579a9dd8f447dbc32de4e",
+          "codeSHA256": "e8ee95879ac7dc6867032ecfd11f51c0c53f986d9b29a2c9c06f4e46c17656b0",
+          "features": {
+            "propertyOperations": 46,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "a93648af2aedd64c",
+            "graphNodes": 52,
+            "graphEdges": 75,
+            "graphOperationOccurrences": 51,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/9c2535d9b781fea290c0",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "20c6f40715a567c97b80f6944beb8bb325835cab47ea7dcab89ee3b8e077eced"
+        }
+      ],
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
+    },
+    {
+      "library": "@fortawesome/react-fontawesome",
+      "declaredVersion": "3.5.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@fortawesome/react-fontawesome",
+        "version": "3.5.0",
+        "integrity": "sha512-63mlRr6fiBbJ0wjr1Cf6dsDGtP2lNvk9lnatKgxs/fIkhslsZT291hIUzJkuUkI9yr69ZvWnWfgb2qXm4QyVaA==",
+        "shasum": "ce8152e556809326e1253682088bfdd116a453bd",
+        "tarballSHA256": "6b2b55ee1ab1d5332ea2375212400a5196e2a27f8d7a1151277df69e4e9420a3",
+        "bytes": 31824,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 16,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/74f2a69de9b2130c757e15ac433ab00f0205a2d3d490b552a76fcc6f9656ecb2.js",
+          "sourceSHA256": "74f2a69de9b2130c757e15ac433ab00f0205a2d3d490b552a76fcc6f9656ecb2",
+          "span": [
+            722,
+            932
+          ],
+          "name": "createGradientStops",
+          "normalizedASTSHA256": "680bb57ed4b053a5885b5e5016b2b8fe8704d9afff0e9646ef58bd48d5501feb",
+          "codeSHA256": "f3bf1a8428864e9ab9ace3167acc926853f2e4e27d6e06fcdd67ce5c762b2eff",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "f0a9892b1b87e749",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 8,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/74f2a69de9b2130c757e15ac433ab00f0205a2d3d490b552a76fcc6f9656ecb2.js",
+          "sourceSHA256": "74f2a69de9b2130c757e15ac433ab00f0205a2d3d490b552a76fcc6f9656ecb2",
+          "span": [
+            1110,
+            2090
+          ],
+          "name": "styleToObject",
+          "normalizedASTSHA256": "d56236be50d4545198931daaab3b737d61f6d5974858d6732f1c688882487a4f",
+          "codeSHA256": "48d2e08d85e8a5b786f4f723937703073bc3e464ba94b2c4ea1f016e3a2f84db",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "9ccb4ab5e003c1a3",
+            "graphNodes": 30,
+            "graphEdges": 38,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.cjs",
+          "source": "source-js/74f2a69de9b2130c757e15ac433ab00f0205a2d3d490b552a76fcc6f9656ecb2.js",
+          "sourceSHA256": "74f2a69de9b2130c757e15ac433ab00f0205a2d3d490b552a76fcc6f9656ecb2",
+          "span": [
+            2091,
+            4087
+          ],
+          "name": "convert",
+          "normalizedASTSHA256": "2377bb69361d05f9f4e5e0bc86544b5d90d9022d51668dcb4f9d9444c566f797",
+          "codeSHA256": "b0af90b27f7fc8115343a34120ba968ad5e6a84416170757b7cd2405f2274303",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 18,
+            "pogHash": "d41318a93b244b9f",
+            "graphNodes": 38,
+            "graphEdges": 51,
+            "graphOperationOccurrences": 31,
+            "distinctGraphOperationPropertyPairs": 17,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/e5bd58ffe10e583a9f5e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE.txt",
+          "sha256": "aaeca2af41f9d13e49205099914902115ca197cdae49f7d2b31bc5d6aa2bbd83"
+        }
+      ],
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
+    },
+    {
+      "library": "@gatsbyjs/reach-router",
+      "declaredVersion": "1.3.9",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@gatsbyjs/reach-router",
+        "version": "1.3.9",
+        "integrity": "sha512-/354IaUSM54xb7K/TxpLBJB94iEAJ3P82JD38T8bLnIDWF+uw8+W/82DKnQ7y24FJcKxtVmG43aiDLG88KSuYQ==",
+        "shasum": "305c3c4c5041f27e53fc33e344a08ee2c4b985af",
+        "tarballSHA256": "cbc6a1bc3722cc5d5323a771660774866a8b29b87b08e7dbc38a3ed8f4045617",
+        "bytes": 41483,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 20,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "es/index.js",
+          "source": "source-js/36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504.js",
+          "sourceSHA256": "36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504",
+          "span": [
+            878,
+            1372
+          ],
+          "name": "_inherits",
+          "normalizedASTSHA256": "0cd1e6005f4cd13a3fc1f7f0b8d7f97468e568dbe87b5e2a389fe26a9dfc303c",
+          "codeSHA256": "871af3c826f0adce9e2293cf0962c46141383b83ede6297b21b634316f2e4957",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "99cb424834a9175a",
+            "graphNodes": 11,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "es/index.js",
+          "source": "source-js/36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504.js",
+          "sourceSHA256": "36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504",
+          "span": [
+            2746,
+            3272
+          ],
+          "name": "LocationProvider",
+          "normalizedASTSHA256": "0d88e8335b68a52ebc657a427932f335fb905d17c9c406894dc4531019c2f622",
+          "codeSHA256": "9f93b876f1d618638ea0eb8ba6fb851a9a46f875aa9f02bc05743fae301f1182",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "437b262c1eda8155",
+            "graphNodes": 8,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "es/index.js",
+          "source": "source-js/36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504.js",
+          "sourceSHA256": "36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504",
+          "span": [
+            2664,
+            5216
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "04349642edb2fee68ab45025ad40f09f3cfd02539760337f9f763047768ddc39",
+          "codeSHA256": "da96ed22211c9ddd58f441c3394c7368b64e496cb662f0c886b85d6da3e8d088",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "372271284260f8a",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/8838038e649f00a5d2ee",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "95e3d652d18e1a175a128787ddf6e5a1949f01edf406a0c5e39c31cd6e18945c"
+        }
+      ],
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
+    },
+    {
+      "library": "@paypal/react-paypal-js",
+      "declaredVersion": "10.6.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@paypal/react-paypal-js",
+        "version": "10.6.1",
+        "integrity": "sha512-0SuNOf6Qo9F4qx4CpPPcV4UMBcyesjt3qgl+RAQU+MKm7fWW682NSvCK6B64Far40Hc+DcvZ7V3dDpKEhg9iLg==",
+        "shasum": "6dd841eb2868f86a93c512cceb6d2752cf58d5ec",
+        "tarballSHA256": "b6593220c36b28676d3d0f8f05a762ddb8303038d587d7dabf6d6beb20d25561",
+        "bytes": 171486,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/cjs/react-paypal-js.js",
+          "source": "source-js/457238aaad1108aa3d7114cc4baccb1f2a4f1b170234138d6ed071083fac1126.js",
+          "sourceSHA256": "457238aaad1108aa3d7114cc4baccb1f2a4f1b170234138d6ed071083fac1126",
+          "span": [
+            3116,
+            3521
+          ],
+          "name": "__rest$1",
+          "normalizedASTSHA256": "68d2842a3a59fbb86b8459df76de415fc311e758ee886d8cedac1223d24292d5",
+          "codeSHA256": "a7aacb9eb7316add1b24a63cf864f591f280e235824f6a2953013183b41ad8f2",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "73ef873394d45112",
+            "graphNodes": 19,
+            "graphEdges": 25,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/react-paypal-js.js",
+          "source": "source-js/457238aaad1108aa3d7114cc4baccb1f2a4f1b170234138d6ed071083fac1126.js",
+          "sourceSHA256": "457238aaad1108aa3d7114cc4baccb1f2a4f1b170234138d6ed071083fac1126",
+          "span": [
+            3522,
+            3836
+          ],
+          "name": "__spreadArray",
+          "normalizedASTSHA256": "7b8ca41007843370f939d5ec0146e448a70fd734f73068e01a8d4cb203d305c2",
+          "codeSHA256": "5e0306549e547b8f45fa72858cab15dacbdffc9249b1237cdc512f0d806acd45",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "2a657cd07fb202bc",
+            "graphNodes": 19,
+            "graphEdges": 24,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/cjs/react-paypal-js.js",
+          "source": "source-js/457238aaad1108aa3d7114cc4baccb1f2a4f1b170234138d6ed071083fac1126.js",
+          "sourceSHA256": "457238aaad1108aa3d7114cc4baccb1f2a4f1b170234138d6ed071083fac1126",
+          "span": [
+            7931,
+            9353
+          ],
+          "name": "generateErrorMessage",
+          "normalizedASTSHA256": "ca5ae883f12b055fa3725f45c6c74f91f8b2ae034ed52bd3056c13e4164d4c4d",
+          "codeSHA256": "7fd70b6ee7bcba7c307733925dad148e74c73f1e009a2505db1cd1ca9714f24a",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "d2e39b32682c0b91",
+            "graphNodes": 15,
+            "graphEdges": 17,
+            "graphOperationOccurrences": 26,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/9d504c75fcd087deb97c",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "18773940da4b0121e7fe6728134716d4af8e170184a59dfeb1084b4f084d618b"
+        }
+      ],
+      "lockfileSHA256": "9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2",
+      "lockfileSnapshot": "lockfiles/9d115f2b39e51bbef13241cd036940b832481c3cba3cec8574867a9e0fb357c2-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
@@ -1110,316 +1109,24 @@
     "@gatsbyjs/reach-router",
     "@paypal/react-paypal-js"
   ],
-  "status": "included",
-  "referenceFailures": [],
-  "referenceFiles": 1823,
-  "bundleUnits": 25,
-  "candidateOrder": [
-    "react-responsive",
-    "date-fns-tz",
-    "validator",
-    "react-dom",
-    "react",
-    "store",
-    "react-monaco-editor",
-    "@loadable/component",
-    "react-redux",
-    "reselect",
-    "@babel/plugin-proposal-export-default-from",
-    "@babel/plugin-proposal-function-bind",
-    "@babel/plugin-transform-runtime",
-    "@babel/preset-env",
-    "@babel/preset-react",
-    "@babel/preset-typescript",
-    "@codesandbox/sandpack-react",
-    "@codesandbox/sandpack-themes",
-    "@fortawesome/fontawesome-svg-core",
-    "@fortawesome/free-brands-svg-icons",
-    "@fortawesome/free-solid-svg-icons",
-    "@fortawesome/react-fontawesome",
-    "@freecodecamp/challenge-builder",
-    "@freecodecamp/ui",
-    "@gatsbyjs/reach-router",
-    "@growthbook/growthbook-react",
-    "@paypal/react-paypal-js",
-    "@redux-devtools/extension",
-    "@redux-saga/core",
-    "@reduxjs/toolkit",
-    "@stripe/react-stripe-js",
-    "@stripe/stripe-js",
-    "@types/react-speech-recognition",
-    "@xterm/addon-fit",
-    "@xterm/xterm",
-    "algoliasearch",
-    "assert",
-    "babel-plugin-preval",
-    "babel-plugin-prismjs",
-    "bezier-easing",
-    "browser-cookies",
-    "canvas-confetti",
-    "crypto-browserify",
-    "date-fns",
-    "eslint-config-react-app",
-    "final-form",
-    "gatsby",
-    "gatsby-cli",
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-remove-serviceworker",
-    "gatsby-source-filesystem",
-    "gatsby-transformer-remark",
-    "i18next",
-    "instantsearch.js",
-    "lodash",
-    "lodash-es",
-    "micromark",
-    "monaco-editor",
-    "nanoid",
-    "normalize-url",
-    "path-browserify",
-    "pinyin-tone",
-    "postcss",
-    "prismjs",
-    "process",
-    "prop-types",
-    "qrcode.react",
-    "query-string",
-    "react-calendar-heatmap",
-    "react-final-form",
-    "react-gtm-module",
-    "react-helmet",
-    "react-hotkeys",
-    "react-i18next",
-    "react-instantsearch",
-    "react-instantsearch-core",
-    "react-reflex",
-    "react-scroll",
-    "react-speech-recognition",
-    "react-spinkit",
-    "react-tooltip",
-    "react-transition-group",
-    "react-youtube",
-    "redux",
-    "redux-actions",
-    "redux-observable",
-    "redux-saga",
-    "rxjs",
-    "sanitize-html",
-    "stream-browserify",
-    "tone",
-    "typescript",
-    "util",
-    "uuid"
-  ],
-  "selectionAttempts": [
-    {
-      "library": "react-monaco-editor",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "react-monaco-editor"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
     },
-    {
-      "library": "@loadable/component",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@loadable/component"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "react-redux",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "react-redux"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "reselect",
-      "initialAnchors": 2,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "reselect"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@fortawesome/fontawesome-svg-core",
-      "initialAnchors": 38,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@fortawesome/free-solid-svg-icons",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/free-solid-svg-icons"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@fortawesome/react-fontawesome",
-      "initialAnchors": 4,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@freecodecamp/ui",
-      "initialAnchors": 94,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "@freecodecamp/ui"
-      ],
-      "qualified": false,
-      "status": "would-undercut-retained-library-anchors",
-      "conflicts": [
-        "@fortawesome/react-fontawesome"
-      ],
-      "phase": "replacement"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "initialAnchors": 22,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "@gatsbyjs/reach-router"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@growthbook/growthbook-react",
-      "initialAnchors": 0,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "@gatsbyjs/reach-router",
-        "@growthbook/growthbook-react"
-      ],
-      "qualified": false,
-      "status": "fewer-than-three-initial-anchors",
-      "conflicts": [],
-      "phase": "replacement"
-    },
-    {
-      "library": "@paypal/react-paypal-js",
-      "initialAnchors": 8,
-      "trialLibraries": [
-        "react-responsive",
-        "date-fns-tz",
-        "validator",
-        "react-dom",
-        "react",
-        "store",
-        "@fortawesome/fontawesome-svg-core",
-        "@fortawesome/react-fontawesome",
-        "@gatsbyjs/reach-router",
-        "@paypal/react-paypal-js"
-      ],
-      "qualified": true,
-      "status": "accepted-replacement",
-      "conflicts": [],
-      "phase": "replacement"
-    }
-  ],
-  "sourceDiagnostics": [],
-  "bundleDiagnostics": [],
-  "sourceDigest": "f19a03dee1946a3e6349c3b56456b02b77862387679e0b217bc124dfb1f0cbc9",
-  "bundleDigest": "dbe75afc1a9db0c4de4c490004ff6e7b4af710f6d7849029c38d4c6f5df1df20",
-  "selectionPolicy": "Keep qualifying existing production libraries; scan remaining production candidates in deterministic order. Accept a candidate only when it has three distinct initial anchors and every retained library keeps three. Stop at ten, or exhaust all candidates. If that scan cannot retain five, an exact monotone-pruned search tests whether any five-library subset is compatible, then fills toward ten from a found subset.",
-  "finalSourceDigest": "55a58759d64494c68a464c73fda004c04794e2b779ff5d2d4c02fd52946ea129",
+    "frontendManifestSHA256": "9aedf600166c24bf3a8ac4fa087933334e8fa9f25e6619f189c8b392b6243282",
+    "manifestRelative": "client/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:44:15.829Z",
   "reason": null,
-  "organizationSignature": "236d0327c1f5cb9b39bf083b2a6f8e90f707555d78ff887daf4f9e24027ce662"
+  "finished": "2026-11-09T03:44:16.096Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/freeCodeCamp--freeCodeCamp/qualification.json",
+  "sourceEligibilityRecordSHA256": "81cfd420d22bd6484804220fd4d692baaed3625356205dd2022ad3ffac445792",
+  "organizationSignature": "e3e7b29fc188d99ba84d0bdea97f02e9494176fb8552fefe806d72102a432e04"
 }

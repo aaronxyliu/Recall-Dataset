@@ -1,0 +1,327 @@
+{
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "parcel/tensorflow--tfjs",
+  "repo": "tensorflow/tfjs",
+  "commit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
+  "policy": {
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
+  },
+  "selectionOverride": {},
+  "candidates": [
+    "@tensorflow/tfjs-automl",
+    "@tensorflow/tfjs-backend-webgl",
+    "@tensorflow/tfjs-converter",
+    "@tensorflow/tfjs-core"
+  ],
+  "libraries": [
+    {
+      "library": "@tensorflow/tfjs-backend-webgl",
+      "declaredVersion": "^4.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tensorflow/tfjs-backend-webgl",
+        "version": "4.2.0",
+        "integrity": "sha512-Qvf+hD5pSh+xi48kChSGzcDKJemkc4EKfoVVjuxl4k25ZUPwuEd7zZUAtinkLu1dzgHNyvePZY8k+9rVm59HJA==",
+        "shasum": "684368f9a2605511d6d6753bf6fe9a08c73f6791",
+        "tarballSHA256": "04318db64b3ecf6796ea9a4dd82df2779134b9fa2c8ea114efb0cd5bd8ec7578",
+        "bytes": 3647794,
+        "lockfile": "tfjs-automl/demo/img_classification/yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/addn_gpu.js",
+          "source": "source-js/b7e56c7ef917e4eee8a88cacba6cb70483f0d0c60377edf467de1d6898614907.js",
+          "sourceSHA256": "b7e56c7ef917e4eee8a88cacba6cb70483f0d0c60377edf467de1d6898614907",
+          "span": [
+            745,
+            1490
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "2b2b7725f8f0449e4b42db93ae5ac65af3d3e7ed18723626a4889ed2dc571ae3",
+          "codeSHA256": "f2304bdd335a9e16f60723c5761df1e4c614d88f826dad1869ea9ea09d79bee1",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "ae52f17e64b7a815",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 7,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/addn_packed_gpu.js",
+          "source": "source-js/914cfe82830341cbe89a53cef3c768c5fe9c02c77f85a0d77484ea33288a02ac.js",
+          "sourceSHA256": "914cfe82830341cbe89a53cef3c768c5fe9c02c77f85a0d77484ea33288a02ac",
+          "span": [
+            751,
+            1562
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "ec3130d2f10ca0877cf5a3c76d3f10c174fc47faec0c641001ec9db2772ef2a6",
+          "codeSHA256": "bd0ea64e4df7ce41510f22d82e97d7104380df6204261a602be789b703feb59d",
+          "features": {
+            "propertyOperations": 13,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "f5173cb736722c1b",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 13,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/argminmax_packed_gpu.js",
+          "source": "source-js/69f80e1ae4a9c4336550a8f7ac0b0f597f198d0a8e50ad2070a326603acda736.js",
+          "sourceSHA256": "69f80e1ae4a9c4336550a8f7ac0b0f597f198d0a8e50ad2070a326603acda736",
+          "span": [
+            903,
+            5755
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "3215e45009fa4571f7917202becdfb1dca9ce8f4ac26526a3755f247520d05e7",
+          "codeSHA256": "bf56b414ee1f873abf53a46d12f68256a7a0d7820cd7bda3d88d6c809cece2ec",
+          "features": {
+            "propertyOperations": 56,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "7fadc1943a22a36b",
+            "graphNodes": 19,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 77,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/8a232150cd7678098313",
+      "licenses": [],
+      "lockfileSHA256": "f689f4c2e9d282d6e29072e1029cbd4cde5677508ffe85ff2d33ca5194f5f017",
+      "lockfileSnapshot": "lockfiles/f689f4c2e9d282d6e29072e1029cbd4cde5677508ffe85ff2d33ca5194f5f017-yarn.lock"
+    },
+    {
+      "library": "@tensorflow/tfjs-converter",
+      "declaredVersion": "^4.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tensorflow/tfjs-converter",
+        "version": "4.2.0",
+        "integrity": "sha512-m+E2KJM6yGQdi8ElzWpChdD/JaqhWMCi9yK70v/ndkOaCL2q2UN48nYP2T5S15vkDvMIgzAQyZfh7hxQsMuvRQ==",
+        "shasum": "3a51d446dc0d6194f31407345891966e0a77937f",
+        "tarballSHA256": "cfa19ec2d1fab102623467eb4fdacfc5dbc61c40ee4c218fcf5b949051a1623d",
+        "bytes": 3832635,
+        "lockfile": "tfjs-automl/demo/img_classification/yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 10,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/data/compiled_api.js",
+          "source": "source-js/a997ed87a8ca51622824255d17bc1078237f9f332e37fb9a04e2a870490c578d.js",
+          "sourceSHA256": "a997ed87a8ca51622824255d17bc1078237f9f332e37fb9a04e2a870490c578d",
+          "span": [
+            750,
+            3942
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "b9cf62b7af1cfe93750a10332ba5db45cfc842da7b7f833f86f921445105e14e",
+          "codeSHA256": "6d5d340af39ab81228805a8dde4d9fd106a022a231f3a9e2aa3f34c4c70d156e",
+          "features": {
+            "propertyOperations": 94,
+            "distinctOperationPropertyPairs": 48,
+            "pogHash": "b5b96a163bdb5ef",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 94,
+            "distinctGraphOperationPropertyPairs": 48,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/executor/execution_context.js",
+          "source": "source-js/14e04456c6781ac322ef44a11c6a70ad171cf177959b46758cbaeb4e426a3e42.js",
+          "sourceSHA256": "14e04456c6781ac322ef44a11c6a70ad171cf177959b46758cbaeb4e426a3e42",
+          "span": [
+            501,
+            930
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "071ddccb0dbeabdd45584bc20457074ab839fcf7e1d149bc5be6764d135c19f9",
+          "codeSHA256": "d8d40323dcc26f1d33f6f00fd0ccab271411209b5d54e6329a58f290e48e73ab",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "4612f8cb7d7a82ff",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/executor/execution_context.js",
+          "source": "source-js/14e04456c6781ac322ef44a11c6a70ad171cf177959b46758cbaeb4e426a3e42.js",
+          "sourceSHA256": "14e04456c6781ac322ef44a11c6a70ad171cf177959b46758cbaeb4e426a3e42",
+          "span": [
+            1812,
+            2124
+          ],
+          "name": "generateCurrentContextIds",
+          "normalizedASTSHA256": "bf3ca1d6cb4851cdaa10bfcfea42dace2c889ebe73f354747058851486e92804",
+          "codeSHA256": "8c9471c7dc27b57ef716c951c36acba84f87915c37235163773f518086631237",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "ab0b98b37f66c4c",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/9a1d2e342416d4937de2",
+      "licenses": [],
+      "lockfileSHA256": "f689f4c2e9d282d6e29072e1029cbd4cde5677508ffe85ff2d33ca5194f5f017",
+      "lockfileSnapshot": "lockfiles/f689f4c2e9d282d6e29072e1029cbd4cde5677508ffe85ff2d33ca5194f5f017-yarn.lock"
+    },
+    {
+      "library": "@tensorflow/tfjs-core",
+      "declaredVersion": "^4.2.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tensorflow/tfjs-core",
+        "version": "4.2.0",
+        "integrity": "sha512-uuHkiWVC8b00ngFbHvAV7J7haRlN/9PEdeenCi0CzBjgKd7aN25wPWaoN0TSQcU+GT4FJ8mofMZ9VBYZ/s/WLg==",
+        "shasum": "34dc455c0a00feac12015caec34a54414a404230",
+        "tarballSHA256": "71a3082adac8cfa37d93a13375942608893ed82c05186a324ca69a831d23361d",
+        "bytes": 6693993,
+        "lockfile": "tfjs-automl/demo/img_classification/yarn.lock"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 5,
+      "parsedFunctions": 44,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/backends/complex_util.js",
+          "source": "source-js/8f6c81b60d4fd7c1477eedab130b36cd9fbdcbf727a78eb8995821316cba28b0.js",
+          "sourceSHA256": "8f6c81b60d4fd7c1477eedab130b36cd9fbdcbf727a78eb8995821316cba28b0",
+          "span": [
+            1174,
+            1608
+          ],
+          "name": "mergeRealAndImagArrays",
+          "normalizedASTSHA256": "db4838a66e909980386b5259c2fa2f45a962b808ea079f421125d811cb8bb7fd",
+          "codeSHA256": "c6bbbfab03be7a052d64e7541e682fb1751f1e6c608cbbb69371d2b799f7cd96",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 3,
+            "pogHash": "a0d42488653883c7",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 3,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/backends/complex_util.js",
+          "source": "source-js/8f6c81b60d4fd7c1477eedab130b36cd9fbdcbf727a78eb8995821316cba28b0.js",
+          "sourceSHA256": "8f6c81b60d4fd7c1477eedab130b36cd9fbdcbf727a78eb8995821316cba28b0",
+          "span": [
+            2440,
+            2788
+          ],
+          "name": "complexWithEvenIndex",
+          "normalizedASTSHA256": "bbcfb927e09c90bf0eaf21c7251ced8170916f0b4e6b712148652ab8bec40cfb",
+          "codeSHA256": "715f4a762bc288601a6b0e191be59f2c1bdb992cc8bf967b0e5460ad3000eb9a",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "cb9c0c8385b1d02a",
+            "graphNodes": 8,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 8,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/backends/complex_util.js",
+          "source": "source-js/8f6c81b60d4fd7c1477eedab130b36cd9fbdcbf727a78eb8995821316cba28b0.js",
+          "sourceSHA256": "8f6c81b60d4fd7c1477eedab130b36cd9fbdcbf727a78eb8995821316cba28b0",
+          "span": [
+            2906,
+            3254
+          ],
+          "name": "complexWithOddIndex",
+          "normalizedASTSHA256": "5811ae977b69d3d91cf433de2c6b6d1d9942f816eb7da1d8255787752e833105",
+          "codeSHA256": "31da6efb6442e99c3d3b22996e5a4ff40e2b2db0378c11b9dc11e92d658cde93",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "cb9c0c8385b1d02a",
+            "graphNodes": 8,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 8,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/4a0d361db72592749ddb",
+      "licenses": [],
+      "lockfileSHA256": "f689f4c2e9d282d6e29072e1029cbd4cde5677508ffe85ff2d33ca5194f5f017",
+      "lockfileSnapshot": "lockfiles/f689f4c2e9d282d6e29072e1029cbd4cde5677508ffe85ff2d33ca5194f5f017-yarn.lock"
+    }
+  ],
+  "selectedLibraries": [
+    "@tensorflow/tfjs-backend-webgl",
+    "@tensorflow/tfjs-converter",
+    "@tensorflow/tfjs-core"
+  ],
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
+    },
+    "frontendManifestSHA256": "9df6271007c86499e1dbd2d7aa97475fd527675e5f432d4d76164b510592f7af",
+    "manifestRelative": "tfjs-automl/demo/img_classification/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:43:22.324Z",
+  "reason": null,
+  "finished": "2026-11-09T03:43:22.366Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/parcel/tensorflow--tfjs/qualification.json",
+  "sourceEligibilityRecordSHA256": "c2b6b8ee0cee5d8a18de80ebb6bb702b51adb9f729e0280fb720443f987d7400",
+  "organizationSignature": "e6c5141c3ba0725a0da8b6df23c5deecfe1ab6bb3c94da045141ef093472ce7e"
+}

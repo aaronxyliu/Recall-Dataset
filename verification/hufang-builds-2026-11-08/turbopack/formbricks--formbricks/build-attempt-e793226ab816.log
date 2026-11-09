@@ -1,0 +1,154 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 21.49kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1.20
+#2 DONE 3.0s
+
+#3 docker-image://docker.io/docker/dockerfile:1.20@sha256:26147acbda4f14c5add9946e2fd2ed543fc402884fd75146bd342a7f6271dc1d
+#3 resolve docker.io/docker/dockerfile:1.20@sha256:26147acbda4f14c5add9946e2fd2ed543fc402884fd75146bd342a7f6271dc1d done
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 0B / 12.66MB 0.2s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 1.05MB / 12.66MB 1.7s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 2.10MB / 12.66MB 2.6s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 3.15MB / 12.66MB 3.3s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 4.19MB / 12.66MB 3.8s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 6.03MB / 12.66MB 3.9s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 7.34MB / 12.66MB 4.2s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 9.44MB / 12.66MB 4.4s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 10.49MB / 12.66MB 4.5s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 12.66MB / 12.66MB 4.7s
+#3 sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 12.66MB / 12.66MB 4.7s done
+#3 extracting sha256:45399d2e58c18bb0cd4be612e220f9fc6ffd5f83777fe306ab8d48ef3a91ae90 0.1s done
+#3 DONE 4.8s
+
+#4 [internal] load metadata for docker.io/library/alpine:3.23
+#4 ...
+
+#5 [context recipe] load .dockerignore
+#5 transferring recipe: 2B done
+#5 DONE 0.0s
+
+#6 [internal] load metadata for docker.io/library/node:24-alpine3.23
+#6 DONE 1.9s
+
+#7 [internal] load metadata for docker.io/library/node:24.22.2-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#7 ...
+
+#4 [internal] load metadata for docker.io/library/alpine:3.23
+#4 DONE 2.5s
+
+#7 [internal] load metadata for docker.io/library/node:24.22.2-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#7 DONE 2.9s
+
+#8 [internal] load build context
+#8 DONE 0.0s
+
+#9 [context recipe] load from client
+#9 DONE 0.0s
+
+#10 [internal] preparing inline document
+#10 DONE 0.0s
+
+#11 [base 1/1] FROM docker.io/library/node:24-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#11 resolve docker.io/library/node:24-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab done
+#11 resolve docker.io/library/node:24-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab done
+#11 DONE 0.1s
+
+#12 [runtime-node 1/1] FROM docker.io/library/node:24.22.2-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#12 resolve docker.io/library/node:24.22.2-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab done
+#12 DONE 0.0s
+
+#10 [internal] preparing inline document
+#10 DONE 0.1s
+
+#9 [context recipe] load from client
+#9 transferring recipe: 591B done
+#9 DONE 0.1s
+
+#13 [runtime-base 1/7] FROM docker.io/library/alpine:3.23@sha256:469c9ea410b9215eaee7976ba6c0639039b444be8e5d638f7abbada189971eb2
+#13 resolve docker.io/library/alpine:3.23@sha256:469c9ea410b9215eaee7976ba6c0639039b444be8e5d638f7abbada189971eb2 done
+#13 sha256:0aeae9e5c96856ad8a51ac2a81bf4ce73766c2199992b92fd9302dd7ec7a38de 0B / 4.19MB 0.2s
+#13 ...
+
+#8 [internal] load build context
+#8 transferring context: 103.44MB 0.8s done
+#8 DONE 0.9s
+
+#13 [runtime-base 1/7] FROM docker.io/library/alpine:3.23@sha256:469c9ea410b9215eaee7976ba6c0639039b444be8e5d638f7abbada189971eb2
+#13 sha256:0aeae9e5c96856ad8a51ac2a81bf4ce73766c2199992b92fd9302dd7ec7a38de 1.05MB / 4.19MB 1.7s
+#13 sha256:0aeae9e5c96856ad8a51ac2a81bf4ce73766c2199992b92fd9302dd7ec7a38de 2.10MB / 4.19MB 2.6s
+#13 sha256:0aeae9e5c96856ad8a51ac2a81bf4ce73766c2199992b92fd9302dd7ec7a38de 3.15MB / 4.19MB 3.2s
+#13 sha256:0aeae9e5c96856ad8a51ac2a81bf4ce73766c2199992b92fd9302dd7ec7a38de 4.19MB / 4.19MB 3.3s done
+#13 extracting sha256:0aeae9e5c96856ad8a51ac2a81bf4ce73766c2199992b92fd9302dd7ec7a38de 0.1s done
+#13 DONE 3.4s
+
+#11 [base 1/1] FROM docker.io/library/node:24-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#11 sha256:47c400b24aac0bb89b7bb10ce4ac9afd2ce478c0bee6c0b91f59e7f217852e2c 444B / 444B 0.3s done
+#11 sha256:32f41870d4112f2a42807b9da86a6377ace315e3ffafe66001fbaa0c0ebf9ddf 1.26MB / 1.26MB 2.0s done
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 2.10MB / 56.67MB 3.2s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 5.24MB / 56.67MB 3.6s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 9.44MB / 56.67MB 4.2s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 12.58MB / 56.67MB 4.7s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 15.73MB / 56.67MB 5.1s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 18.87MB / 56.67MB 5.6s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 22.02MB / 56.67MB 6.0s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 25.17MB / 56.67MB 6.6s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 28.31MB / 56.67MB 7.1s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 31.46MB / 56.67MB 7.5s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 34.60MB / 56.67MB 8.1s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 37.75MB / 56.67MB 8.6s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 40.89MB / 56.67MB 9.2s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 44.04MB / 56.67MB 9.6s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 47.19MB / 56.67MB 10.1s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 50.33MB / 56.67MB 10.5s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 53.48MB / 56.67MB 11.1s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 56.67MB / 56.67MB 11.6s
+#11 sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 56.67MB / 56.67MB 11.6s done
+#11 extracting sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4
+#11 extracting sha256:59d05f641b6da78fc56950e6bf14d089c794aef210f050d3f6ab1046f7b349f4 0.5s done
+#11 DONE 12.2s
+
+#14 [runtime-base 2/7] RUN apk update && apk upgrade --no-cache     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0"       libgcc libstdc++
+#14 3.868 v3.23.8-18-g133b733e65d [https://dl-cdn.alpinelinux.org/alpine/v3.23/main]
+#14 3.868 v3.23.8-12-g5ae87ecdc75 [https://dl-cdn.alpinelinux.org/alpine/v3.23/community]
+#14 3.868 OK: 27443 distinct packages available
+#14 7.887 (1/1) Upgrading zlib (1.3.2-r1 -> 1.4-r0)
+#14 8.036 OK: 8432 KiB in 16 packages
+#14 ...
+
+#11 [base 1/1] FROM docker.io/library/node:24-alpine3.23@sha256:0efee1e068d21f6edcab7fa8c962fc4ecd50d4e28727bc23963379b63ee318ab
+#11 extracting sha256:32f41870d4112f2a42807b9da86a6377ace315e3ffafe66001fbaa0c0ebf9ddf 0.0s done
+#11 extracting sha256:47c400b24aac0bb89b7bb10ce4ac9afd2ce478c0bee6c0b91f59e7f217852e2c done
+#11 DONE 12.2s
+
+#15 [runtime-base 3/7] COPY --from=runtime-node /usr/local/bin/node /usr/local/libexec/node
+#15 CACHED
+
+#16 [runtime-base 4/7] COPY --from=runtime-node /usr/local/LICENSE /usr/local/share/doc/node/LICENSE
+#16 ERROR: failed to calculate checksum of ref koftdh2drcj5hrxwvddaz4phi::osj0pi45r4fenlr4dpcwfkw77: "/usr/local/LICENSE": not found
+
+#14 [runtime-base 2/7] RUN apk update && apk upgrade --no-cache     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0"       libgcc libstdc++
+#14 ...
+
+#17 [installer  1/18] RUN npm install --ignore-scripts -g corepack@0.35.0
+#17 ...
+
+#14 [runtime-base 2/7] RUN apk update && apk upgrade --no-cache     && apk add --no-cache "ca-certificates>=20261020-r0" "ca-certificates-bundle>=20261020-r0"       libgcc libstdc++
+#14 CANCELED
+
+#17 [installer  1/18] RUN npm install --ignore-scripts -g corepack@0.35.0
+#17 CANCELED
+------
+ > [runtime-base 4/7] COPY --from=runtime-node /usr/local/LICENSE /usr/local/share/doc/node/LICENSE:
+------
+Dockerfile:16
+--------------------
+  14 |           libgcc libstdc++
+  15 |     COPY --from=runtime-node /usr/local/bin/node /usr/local/libexec/node
+  16 | >>> COPY --from=runtime-node /usr/local/LICENSE /usr/local/share/doc/node/LICENSE
+  17 |     
+  18 |     # Always select the patched Alpine CA store, including with a deployment's own NODE_OPTIONS.
+--------------------
+ERROR: failed to build: failed to solve: failed to compute cache key: failed to calculate checksum of ref koftdh2drcj5hrxwvddaz4phi::osj0pi45r4fenlr4dpcwfkw77: "/usr/local/LICENSE": not found

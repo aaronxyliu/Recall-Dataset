@@ -1,0 +1,354 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 6.21kB done
+#1 WARN: LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 101)
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/node:22.23.4-bookworm
+#2 DONE 0.0s
+
+#3 [context recipe] load .dockerignore
+#3 transferring recipe: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [context recipe] load from client
+#5 DONE 0.0s
+
+#6 [context recipe] load from client
+#6 DONE 0.0s
+
+#7 [context recipe] load from client
+#7 DONE 0.0s
+
+#8 [context recipe] load from client
+#8 transferring recipe: 79.86kB done
+#8 DONE 0.0s
+
+#9 [builder  1/25] FROM docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f
+#9 resolve docker.io/library/node:22.23.4-bookworm@sha256:7702d8aa4d5910871692af4480eb3ba86f23047a6417a44d857d06c95d060d3f 0.0s done
+#9 DONE 0.0s
+
+#5 [context recipe] load from client
+#5 transferring recipe: 69.75kB done
+#5 DONE 0.1s
+
+#6 [context recipe] load from client
+#6 transferring recipe: 37B done
+#6 DONE 0.1s
+
+#7 [context recipe] load from client
+#7 transferring recipe: 2.28kB done
+#7 DONE 0.1s
+
+#4 [internal] load build context
+#4 transferring context: 351.93kB 0.2s
+#4 transferring context: 653.41kB 0.4s done
+#4 DONE 0.5s
+
+#10 [runtime  4/28] RUN node -e "if (process.versions.tz < '2026e') throw new Error('stale tz data: ' + process.versions.tz)"
+#10 CACHED
+
+#11 [runtime  2/28] RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list.d/debian.sources     && apt-get update -o Acquire::Retries=3     && apt-get install -y --no-install-recommends postgresql-client freetds-dev libaio1 libxml2 redis-server tini procps     && rm -rf /var/lib/apt/lists/*
+#11 CACHED
+
+#12 [runtime  3/28] COPY ./docker/icu-tz /usr/local/share/icu-tz
+#12 CACHED
+
+#13 [runtime  5/28] RUN mkdir -p /app
+#13 CACHED
+
+#14 [builder  5/25] COPY ./package.json ./package.json
+#14 CACHED
+
+#15 [builder  2/25] RUN npm i -g npm@10.9.9
+#15 CACHED
+
+#16 [builder  4/25] WORKDIR /app
+#16 CACHED
+
+#17 [builder  6/25] COPY ./plugins/package.json ./plugins/package-lock.json ./plugins/
+#17 CACHED
+
+#18 [builder  7/25] RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm --prefix plugins ci
+#18 CACHED
+
+#19 [builder  3/25] RUN mkdir -p /app
+#19 CACHED
+
+#20 [builder  8/25] COPY ./plugins/ ./plugins/
+#20 CACHED
+
+#21 [builder  9/25] COPY --from=recipe build-plugin-projects.cjs /tmp/recall-build-plugin-projects.cjs
+#21 DONE 0.0s
+
+#22 [builder 10/25] RUN node -e "const fs=require('fs'),p='plugins/package.json',j=JSON.parse(fs.readFileSync(p)); if(j.scripts['build:packages']!=='node build-packages.js'||j.scripts['clean:packages']!=='node clean-packages.js') throw Error('upstream task changed'); j.scripts['build:packages']='node /tmp/recall-build-plugin-projects.cjs build'; j.scripts['clean:packages']='node /tmp/recall-build-plugin-projects.cjs clean'; fs.writeFileSync(p,JSON.stringify(j,null,2));"
+#22 DONE 0.7s
+
+#23 [builder 11/25] RUN NODE_ENV=production npm --prefix plugins run build
+#23 1.955 
+#23 1.955 > @tooljet/plugins@0.0.1 build
+#23 1.955 > npm run create:client && npm run create:server && npm run build:packages && npm run build:server && npm run create:operations
+#23 1.955 
+#23 2.902 
+#23 2.902 > @tooljet/plugins@0.0.1 create:client
+#23 2.902 > node create-client-entry
+#23 2.902 
+#23 4.167 
+#23 4.167 > @tooljet/plugins@0.0.1 create:server
+#23 4.167 > node create-server-entry
+#23 4.167 
+#23 5.402 
+#23 5.402 > @tooljet/plugins@0.0.1 prebuild:packages
+#23 5.402 > npm run clean:packages
+#23 5.402 
+#23 6.392 
+#23 6.392 > @tooljet/plugins@0.0.1 clean:packages
+#23 6.392 > node /tmp/recall-build-plugin-projects.cjs clean
+#23 6.392 
+#23 6.832 Cleaned all 49 production plugin projects
+#23 7.018 
+#23 7.018 > @tooljet/plugins@0.0.1 build:packages
+#23 7.018 > node /tmp/recall-build-plugin-projects.cjs build
+#23 7.018 
+#23 7.451 Building all 49 production plugin projects in dependency order: @tooljet-plugins/common, @tooljet-plugins/airtable, @tooljet-plugins/amazonses, @tooljet-plugins/appwrite, @tooljet-plugins/athena, @tooljet-plugins/azureblobstorage, @tooljet-plugins/baserow, @tooljet-plugins/bigquery, @tooljet-plugins/clickhouse, @tooljet-plugins/cosmosdb, @tooljet-plugins/couchdb, @tooljet-plugins/databricks, @tooljet-plugins/dynamodb, @tooljet-plugins/elasticsearch, @tooljet-plugins/firestore, @tooljet-plugins/gcs, @tooljet-plugins/googlesheets, @tooljet-plugins/googlesheetsv2, @tooljet-plugins/graphql, @tooljet-plugins/grpc, @tooljet-plugins/grpcv2, @tooljet-plugins/ibmdb, @tooljet-plugins/influxdb, @tooljet-plugins/mailgun, @tooljet-plugins/mariadb, @tooljet-plugins/minio, @tooljet-plugins/mongodb, @tooljet-plugins/mssql, @tooljet-plugins/mysql, @tooljet-plugins/n8n, @tooljet-plugins/nocodb, @tooljet-plugins/notion, @tooljet-plugins/openapi, @tooljet-plugins/oracledb, @tooljet-plugins/postgresql, @tooljet-plugins/redis, @tooljet-plugins/restapi, @tooljet-plugins/rethinkdb, @tooljet-plugins/s3, @tooljet-plugins/saphana, @tooljet-plugins/sendgrid, @tooljet-plugins/slack, @tooljet-plugins/smtp, @tooljet-plugins/snowflake, @tooljet-plugins/stripe, @tooljet-plugins/twilio, @tooljet-plugins/typesense, @tooljet-plugins/woocommerce, @tooljet-plugins/zendesk
+#23 128.4 
+#23 128.4 > @tooljet/plugins@0.0.1 build:server
+#23 128.4 > rimraf dist/ && tsc -b
+#23 128.4 
+#23 230.3 
+#23 230.3 > @tooljet/plugins@0.0.1 create:operations
+#23 230.3 > node create-operations-file
+#23 230.3 
+#23 230.6 Building operations.json for : woocommerce
+#23 230.7 npm notice
+#23 230.7 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#23 230.7 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#23 230.7 npm notice To update run: npm install -g npm@12.2.2
+#23 230.7 npm notice
+#23 DONE 230.9s
+
+#24 [builder 12/25] RUN npm --prefix plugins prune --omit=dev
+#24 24.33 
+#24 24.33 up to date, audited 924 packages in 23s
+#24 24.33 
+#24 24.33 123 packages are looking for funding
+#24 24.33   run `npm fund` for details
+#24 24.60 
+#24 24.60 38 vulnerabilities (4 low, 16 moderate, 18 high)
+#24 24.60 
+#24 24.60 To address issues that do not require attention, run:
+#24 24.60   npm audit fix
+#24 24.60 
+#24 24.60 To address all issues (including breaking changes), run:
+#24 24.60   npm audit fix --force
+#24 24.60 
+#24 24.60 Run `npm audit` for details.
+#24 DONE 24.7s
+
+#25 [builder 13/25] COPY ./packages/widget-definitions/package.json ./packages/widget-definitions/package.json
+#25 DONE 0.0s
+
+#26 [builder 14/25] COPY ./packages/widget-definitions/src/ ./packages/widget-definitions/src/
+#26 DONE 0.0s
+
+#27 [builder 15/25] COPY ./frontend/package.json ./frontend/package-lock.json ./frontend/
+#27 DONE 0.0s
+
+#28 [builder 16/25] RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm --prefix frontend ci
+#28 10.70 npm warn ERESOLVE overriding peer dependency
+#28 10.70 npm warn While resolving: airbnb-prop-types@2.16.0
+#28 10.70 npm warn Found: react@18.3.1
+#28 10.70 npm warn node_modules/react
+#28 10.70 npm warn   react@"^18.2.0" from the root project
+#28 10.70 npm warn   223 more (@base-ui/react, @base-ui/utils, ...)
+#28 10.70 npm warn
+#28 10.70 npm warn Could not resolve dependency:
+#28 10.70 npm warn peer react@"^0.14 || ^15.0.0 || ^16.0.0-alpha" from airbnb-prop-types@2.16.0
+#28 10.70 npm warn node_modules/airbnb-prop-types
+#28 10.70 npm warn   airbnb-prop-types@"^2.15.0" from react-dates@21.8.0
+#28 10.70 npm warn   node_modules/react-dates
+#28 10.70 npm warn   3 more (react-outside-click-handler, react-with-direction, react-with-styles)
+#28 10.70 npm warn
+#28 10.70 npm warn Conflicting peer dependency: react@16.14.0
+#28 10.70 npm warn node_modules/react
+#28 10.70 npm warn   peer react@"^0.14 || ^15.0.0 || ^16.0.0-alpha" from airbnb-prop-types@2.16.0
+#28 10.70 npm warn   node_modules/airbnb-prop-types
+#28 10.70 npm warn     airbnb-prop-types@"^2.15.0" from react-dates@21.8.0
+#28 10.70 npm warn     node_modules/react-dates
+#28 10.70 npm warn     3 more (react-outside-click-handler, react-with-direction, react-with-styles)
+#28 11.40 npm warn ERESOLVE overriding peer dependency
+#28 11.40 npm warn While resolving: flux@4.0.4
+#28 11.40 npm warn Found: react@18.3.1
+#28 11.40 npm warn node_modules/react
+#28 11.40 npm warn   react@"^18.2.0" from the root project
+#28 11.40 npm warn   223 more (@base-ui/react, @base-ui/utils, ...)
+#28 11.40 npm warn
+#28 11.40 npm warn Could not resolve dependency:
+#28 11.40 npm warn peer react@"^15.0.2 || ^16.0.0 || ^17.0.0" from flux@4.0.4
+#28 11.40 npm warn node_modules/flux
+#28 11.40 npm warn   flux@"^4.0.1" from react-json-view@1.21.3
+#28 11.40 npm warn   node_modules/react-json-view
+#28 11.40 npm warn
+#28 11.40 npm warn Conflicting peer dependency: react@17.0.2
+#28 11.40 npm warn node_modules/react
+#28 11.40 npm warn   peer react@"^15.0.2 || ^16.0.0 || ^17.0.0" from flux@4.0.4
+#28 11.40 npm warn   node_modules/flux
+#28 11.40 npm warn     flux@"^4.0.1" from react-json-view@1.21.3
+#28 11.40 npm warn     node_modules/react-json-view
+#28 13.08 npm warn ERESOLVE overriding peer dependency
+#28 13.08 npm warn While resolving: @react-three/fiber@9.3.0
+#28 13.08 npm warn Found: react@18.3.1
+#28 13.08 npm warn node_modules/react
+#28 13.08 npm warn   react@"^18.2.0" from the root project
+#28 13.08 npm warn   223 more (@base-ui/react, @base-ui/utils, ...)
+#28 13.08 npm warn
+#28 13.08 npm warn Could not resolve dependency:
+#28 13.08 npm warn peer react@"^19.0.0" from @react-three/fiber@9.3.0
+#28 13.08 npm warn node_modules/react-spring/node_modules/@react-three/fiber
+#28 13.08 npm warn   peer @react-three/fiber@">=6.0" from @react-spring/three@9.7.5
+#28 13.08 npm warn   node_modules/react-spring/node_modules/@react-spring/three
+#28 13.08 npm warn
+#28 13.08 npm warn Conflicting peer dependency: react@19.3.1
+#28 13.08 npm warn node_modules/react
+#28 13.08 npm warn   peer react@"^19.0.0" from @react-three/fiber@9.3.0
+#28 13.08 npm warn   node_modules/react-spring/node_modules/@react-three/fiber
+#28 13.08 npm warn     peer @react-three/fiber@">=6.0" from @react-spring/three@9.7.5
+#28 13.08 npm warn     node_modules/react-spring/node_modules/@react-spring/three
+#28 13.23 npm warn ERESOLVE overriding peer dependency
+#28 13.23 npm warn While resolving: @react-three/fiber@9.3.0
+#28 13.23 npm warn Found: react-dom@18.3.1
+#28 13.23 npm warn node_modules/react-dom
+#28 13.23 npm warn   react-dom@"^18.2.0" from the root project
+#28 13.23 npm warn   121 more (@base-ui/react, @base-ui/utils, ...)
+#28 13.23 npm warn
+#28 13.23 npm warn Could not resolve dependency:
+#28 13.23 npm warn peerOptional react-dom@"^19.0.0" from @react-three/fiber@9.3.0
+#28 13.23 npm warn node_modules/react-spring/node_modules/@react-three/fiber
+#28 13.23 npm warn   peer @react-three/fiber@">=6.0" from @react-spring/three@9.7.5
+#28 13.23 npm warn   node_modules/react-spring/node_modules/@react-spring/three
+#28 13.23 npm warn
+#28 13.23 npm warn Conflicting peer dependency: react-dom@19.3.1
+#28 13.23 npm warn node_modules/react-dom
+#28 13.23 npm warn   peerOptional react-dom@"^19.0.0" from @react-three/fiber@9.3.0
+#28 13.23 npm warn   node_modules/react-spring/node_modules/@react-three/fiber
+#28 13.23 npm warn     peer @react-three/fiber@">=6.0" from @react-spring/three@9.7.5
+#28 13.23 npm warn     node_modules/react-spring/node_modules/@react-spring/three
+#28 13.73 npm warn ERESOLVE overriding peer dependency
+#28 13.73 npm warn While resolving: react-native@0.81.4
+#28 13.73 npm warn Found: react@18.3.1
+#28 13.73 npm warn node_modules/react
+#28 13.73 npm warn   react@"^18.2.0" from the root project
+#28 13.73 npm warn   223 more (@base-ui/react, @base-ui/utils, ...)
+#28 13.73 npm warn
+#28 13.73 npm warn Could not resolve dependency:
+#28 13.73 npm warn peer react@"^19.1.0" from react-native@0.81.4
+#28 13.73 npm warn node_modules/react-spring/node_modules/react-native
+#28 13.73 npm warn   peer react-native@">=0.58" from @react-spring/native@9.7.5
+#28 13.73 npm warn   node_modules/react-spring/node_modules/@react-spring/native
+#28 13.73 npm warn   2 more (@react-three/fiber, @react-native/virtualized-lists)
+#28 13.73 npm warn
+#28 13.73 npm warn Conflicting peer dependency: react@19.3.1
+#28 13.73 npm warn node_modules/react
+#28 13.73 npm warn   peer react@"^19.1.0" from react-native@0.81.4
+#28 13.73 npm warn   node_modules/react-spring/node_modules/react-native
+#28 13.73 npm warn     peer react-native@">=0.58" from @react-spring/native@9.7.5
+#28 13.73 npm warn     node_modules/react-spring/node_modules/@react-spring/native
+#28 13.73 npm warn     2 more (@react-three/fiber, @react-native/virtualized-lists)
+#28 13.95 npm warn ERESOLVE overriding peer dependency
+#28 13.95 npm warn While resolving: its-fine@2.0.0
+#28 13.95 npm warn Found: react@18.3.1
+#28 13.95 npm warn node_modules/react
+#28 13.95 npm warn   react@"^18.2.0" from the root project
+#28 13.95 npm warn   223 more (@base-ui/react, @base-ui/utils, ...)
+#28 13.95 npm warn
+#28 13.95 npm warn Could not resolve dependency:
+#28 13.95 npm warn peer react@"^19.0.0" from its-fine@2.0.0
+#28 13.95 npm warn node_modules/react-spring/node_modules/@react-three/fiber/node_modules/its-fine
+#28 13.95 npm warn   its-fine@"^2.0.0" from @react-three/fiber@9.3.0
+#28 13.95 npm warn   node_modules/react-spring/node_modules/@react-three/fiber
+#28 13.95 npm warn
+#28 13.95 npm warn Conflicting peer dependency: react@19.3.1
+#28 13.95 npm warn node_modules/react
+#28 13.95 npm warn   peer react@"^19.0.0" from its-fine@2.0.0
+#28 13.95 npm warn   node_modules/react-spring/node_modules/@react-three/fiber/node_modules/its-fine
+#28 13.95 npm warn     its-fine@"^2.0.0" from @react-three/fiber@9.3.0
+#28 13.95 npm warn     node_modules/react-spring/node_modules/@react-three/fiber
+#28 14.16 npm warn ERESOLVE overriding peer dependency
+#28 14.16 npm warn While resolving: react-reconciler@0.31.0
+#28 14.16 npm warn Found: react@18.3.1
+#28 14.16 npm warn node_modules/react
+#28 14.16 npm warn   react@"^18.2.0" from the root project
+#28 14.16 npm warn   223 more (@base-ui/react, @base-ui/utils, ...)
+#28 14.16 npm warn
+#28 14.16 npm warn Could not resolve dependency:
+#28 14.16 npm warn peer react@"^19.0.0" from react-reconciler@0.31.0
+#28 14.16 npm warn node_modules/react-spring/node_modules/@react-three/fiber/node_modules/react-reconciler
+#28 14.16 npm warn   react-reconciler@"^0.31.0" from @react-three/fiber@9.3.0
+#28 14.16 npm warn   node_modules/react-spring/node_modules/@react-three/fiber
+#28 14.16 npm warn
+#28 14.16 npm warn Conflicting peer dependency: react@19.3.1
+#28 14.16 npm warn node_modules/react
+#28 14.16 npm warn   peer react@"^19.0.0" from react-reconciler@0.31.0
+#28 14.16 npm warn   node_modules/react-spring/node_modules/@react-three/fiber/node_modules/react-reconciler
+#28 14.16 npm warn     react-reconciler@"^0.31.0" from @react-three/fiber@9.3.0
+#28 14.16 npm warn     node_modules/react-spring/node_modules/@react-three/fiber
+#28 23.03 npm warn deprecated abab@2.0.6: Use your platform's native atob() and btoa() methods instead
+#28 26.12 npm warn deprecated glob@10.5.0: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+#28 70.18 npm warn deprecated whatwg-encoding@2.0.0: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+#28 74.42 npm warn deprecated domexception@4.0.0: Use your platform's native DOMException instead
+#28 590.5 
+#28 590.5 added 2505 packages, and audited 2556 packages in 10m
+#28 590.5 
+#28 590.5 559 packages are looking for funding
+#28 590.5   run `npm fund` for details
+#28 593.1 
+#28 593.1 84 vulnerabilities (10 low, 41 moderate, 33 high)
+#28 593.1 
+#28 593.1 To address issues that do not require attention, run:
+#28 593.1   npm audit fix
+#28 593.1 
+#28 593.1 To address all issues (including breaking changes), run:
+#28 593.1   npm audit fix --force
+#28 593.1 
+#28 593.1 Run `npm audit` for details.
+#28 DONE 593.8s
+
+#29 [builder 17/25] COPY ./frontend/ ./frontend/
+#29 DONE 2.2s
+
+#30 [builder 18/25] COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
+#30 DONE 0.1s
+
+#31 [builder 19/25] COPY --from=recipe attach-recorder-maps.cjs media-encoder-host-8.1.0.worker.js.map extendable-media-recorder-wav-encoder-7.0.135.worker.js.map /tmp/recall-maps/
+#31 DONE 0.0s
+
+#32 [builder 20/25] RUN node /tmp/recall-enable-maps.cjs     && node /tmp/recall-maps/attach-recorder-maps.cjs     && NODE_ENV=production TOOLJET_EDITION=ce TOOLJET_SERVER_URL=/ ASSET_PATH=/ RAYON_NUM_THREADS=3 npm --prefix frontend run build     && find frontend/build -maxdepth 1 -name '*.js.map' -print -quit | grep -q .
+#32 1.698 
+#32 1.698 > frontend@0.1.0 prebuild
+#32 1.698 > npm run build:vendor
+#32 1.698 
+#32 2.803 
+#32 2.803 > frontend@0.1.0 build:vendor
+#32 2.803 > node scripts/build-vendor-bundle.js
+#32 2.803 
+#32 3.817 custom-component vendor bundles written to /app/frontend/assets/custom-components/vendor (react 18.3.1) — self-check passed
+#32 3.818 (node:59) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///app/frontend/assets/custom-components/vendor/react.js is not specified and it doesn't parse as CommonJS.
+#32 3.818 Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+#32 3.818 To eliminate this warning, add "type": "module" to /app/frontend/package.json.
+#32 3.818 (Use `node --trace-warnings ...` to show where the warning was created)
+#32 3.865 
+#32 3.865 > frontend@0.1.0 build
+#32 3.865 > rspack build --mode=production && cp -a ./assets/. ./build/assets/
+#32 3.865 
+#32 35.58 Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+#32 35.58   npx update-browserslist-db@latest
+#32 35.58   Why you should do it regularly: https://github.com/browserslist/update-db#readme
+#32 CANCELED
+
+ [33m1 warning found (use docker --debug to expand):
+[0m - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format (line 101)
+ERROR: failed to build: failed to solve: Canceled: context canceled

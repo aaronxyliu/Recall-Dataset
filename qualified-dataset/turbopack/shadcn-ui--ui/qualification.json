@@ -1,0 +1,1366 @@
+{
+  "schema": "recall.source-function-eligibility/v1",
+  "subject": "turbopack/shadcn-ui--ui",
+  "repo": "shadcn-ui/ui",
+  "commit": "d549251bab2e57dbf72f7c909d6458c02c43f529",
+  "policy": {
+    "schema": "recall.source-function-policy/v1",
+    "productionDependenciesOnly": true,
+    "minLibrariesPerRepository": 3,
+    "maxLibrariesPerRepository": 10,
+    "minFunctionsPerLibrary": 3,
+    "minFeatures": 10,
+    "featureMetric": "propertyOperations",
+    "requireInitialAnchors": false,
+    "requireGroundTruthPairs": false
+  },
+  "selectionOverride": {},
+  "candidates": [
+    "@ai-sdk/anthropic",
+    "@ai-sdk/openai",
+    "@ai-sdk/react",
+    "@base-ui/react",
+    "@dnd-kit/core",
+    "@dnd-kit/modifiers",
+    "@dnd-kit/sortable",
+    "@dnd-kit/utilities",
+    "@faker-js/faker",
+    "@formisch/react",
+    "@hookform/resolvers",
+    "@hugeicons/core-free-icons",
+    "@hugeicons/react",
+    "@internationalized/date",
+    "@paper-design/shaders-react",
+    "@phosphor-icons/react",
+    "@remixicon/react",
+    "@shadcn/helpers",
+    "@shadcn/react",
+    "@streamdown/code",
+    "@tabler/icons-react",
+    "@tailwindcss/postcss",
+    "@tanstack/ai",
+    "@tanstack/ai-client",
+    "@tanstack/ai-react",
+    "@tanstack/react-form",
+    "@tanstack/react-table",
+    "@vercel/analytics",
+    "ai",
+    "change-case",
+    "chrono-node",
+    "class-variance-authority",
+    "cmdk",
+    "cn",
+    "date-fns",
+    "dedent",
+    "embla-carousel-autoplay",
+    "embla-carousel-react",
+    "front-matter",
+    "fumadocs-core",
+    "fumadocs-docgen",
+    "fumadocs-mdx",
+    "fumadocs-ui",
+    "input-otp",
+    "jotai",
+    "little-date",
+    "lodash",
+    "lru-cache",
+    "lucide-react",
+    "motion",
+    "next",
+    "next-themes",
+    "nuqs",
+    "postcss",
+    "radix-ui",
+    "react",
+    "react-aria-components",
+    "react-day-picker",
+    "react-dom",
+    "react-hook-form",
+    "react-qr-code",
+    "react-resizable-panels",
+    "react-textarea-autosize",
+    "recharts",
+    "rehype-pretty-code",
+    "rimraf",
+    "server-only",
+    "shadcn",
+    "shiki",
+    "sonner",
+    "streamdown",
+    "swr",
+    "ts-morph",
+    "valibot",
+    "vaul",
+    "zod"
+  ],
+  "libraries": [
+    {
+      "library": "@ai-sdk/anthropic",
+      "declaredVersion": "4.0.0-canary.66",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@ai-sdk/anthropic",
+        "version": "4.0.0-canary.66",
+        "integrity": "sha512-7sVN9mapkqAPfF9ZnZ1cKtAPxdgiq9b8Zffh0drQ1DKqJusdNSkNFQiC9mLB+3k6Py/k+auQs81DHwhCzgeTUQ==",
+        "shasum": "e6492bd7a7da67532f1e4afc01b832890b5be042",
+        "tarballSHA256": "7ce8ee68830fdd8ca8245824a680b53c44d70148f65984d6fc466e3e45d3535d",
+        "bytes": 310902,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 7,
+      "diagnostics": [
+        {
+          "file": "src/anthropic-api.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/anthropic-error.ts",
+          "error": "SyntaxError: [5:7-5:18]: Expected ','"
+        },
+        {
+          "file": "src/anthropic-files.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/anthropic-language-model-options.ts",
+          "error": "SyntaxError: [4:7-4:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/anthropic-language-model.ts",
+          "error": "SyntaxError: [3:7-3:17]: Expected ','"
+        },
+        {
+          "file": "src/anthropic-prepare-tools.ts",
+          "error": "SyntaxError: [3:7-3:33]: Expected ','"
+        },
+        {
+          "file": "src/anthropic-provider.ts",
+          "error": "SyntaxError: [4:7-4:14]: Expected ','"
+        },
+        {
+          "file": "src/convert-anthropic-usage.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/convert-to-anthropic-prompt.ts",
+          "error": "SyntaxError: [3:7-3:22]: Expected ','"
+        },
+        {
+          "file": "src/forward-anthropic-container-id-from-last-step.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/get-cache-control.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/map-anthropic-stop-reason.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/sanitize-json-schema.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/skills/anthropic-skills-api.ts",
+          "error": "SyntaxError: [19:7-19:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/tool/advisor_20260301.ts",
+          "error": "SyntaxError: [50:2-50:3]: Unexpected token: '|'"
+        },
+        {
+          "file": "src/tool/bash_20241022.ts",
+          "error": "SyntaxError: [4:7-4:34]: Expected ','"
+        },
+        {
+          "file": "src/tool/bash_20250124.ts",
+          "error": "SyntaxError: [4:7-4:34]: Expected ','"
+        },
+        {
+          "file": "src/tool/code-execution_20250522.ts",
+          "error": "SyntaxError: [41:16-41:17]: Expected '}'"
+        },
+        {
+          "file": "src/tool/code-execution_20250825.ts",
+          "error": "SyntaxError: [107:2-107:3]: Unexpected token: '|'"
+        },
+        {
+          "file": "src/tool/code-execution_20260120.ts",
+          "error": "SyntaxError: [121:2-121:3]: Unexpected token: '|'"
+        },
+        {
+          "file": "src/tool/computer_20241022.ts",
+          "error": "SyntaxError: [47:6-47:7]: Unexpected token: '|'"
+        },
+        {
+          "file": "src/tool/computer_20250124.ts",
+          "error": "SyntaxError: [64:6-64:7]: Unexpected token: '|'"
+        },
+        {
+          "file": "src/tool/computer_20251124.ts",
+          "error": "SyntaxError: [74:6-74:7]: Unexpected token: '|'"
+        },
+        {
+          "file": "src/tool/memory_20250818.ts",
+          "error": "SyntaxError: [47:2-47:3]: Unexpected token: '|'"
+        },
+        {
+          "file": "src/tool/text-editor_20241022.ts",
+          "error": "SyntaxError: [28:71-28:72]: Expected '}'"
+        },
+        {
+          "file": "src/tool/text-editor_20250124.ts",
+          "error": "SyntaxError: [28:71-28:72]: Expected '}'"
+        },
+        {
+          "file": "src/tool/text-editor_20250429.ts",
+          "error": "SyntaxError: [29:57-29:58]: Expected '}'"
+        },
+        {
+          "file": "src/tool/text-editor_20250728.ts",
+          "error": "SyntaxError: [37:57-37:58]: Expected '}'"
+        },
+        {
+          "file": "src/tool/tool-search-bm25_20251119.ts",
+          "error": "SyntaxError: [49:17-49:18]: Expected '}'"
+        },
+        {
+          "file": "src/tool/tool-search-regex_20251119.ts",
+          "error": "SyntaxError: [61:19-61:20]: Expected '}'"
+        },
+        {
+          "file": "src/tool/web-fetch-20250910.ts",
+          "error": "SyntaxError: [60:15-60:16]: Expected '}'"
+        },
+        {
+          "file": "src/tool/web-fetch-20260209.ts",
+          "error": "SyntaxError: [60:15-60:16]: Expected '}'"
+        },
+        {
+          "file": "src/tool/web-search_20250305.ts",
+          "error": "SyntaxError: [54:17-54:18]: Expected '}'"
+        },
+        {
+          "file": "src/tool/web-search_20260209.ts",
+          "error": "SyntaxError: [54:17-54:18]: Expected '}'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58.js",
+          "sourceSHA256": "376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58",
+          "span": [
+            1136,
+            1399
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "e7b264e611fdd981e8664e2345046e8ad02d01a7176757ee2c17c657ec755a90",
+          "codeSHA256": "3fe4fa002fc316b24c9991aa75e8ce5cb337a2eab5f770d26671176cd61f7e72",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 13,
+            "pogHash": "d4f5fc855e17638c",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58.js",
+          "sourceSHA256": "376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58",
+          "span": [
+            1598,
+            2945
+          ],
+          "name": "uploadFile",
+          "normalizedASTSHA256": "e9071e844638f64a6370be33aa6c4f7bb6f509943863fc509e44d1e5b94f79b8",
+          "codeSHA256": "8e24cf793a7f0212ef316ce7fc3f8d73c1973bf6f410152d369608fe1097958c",
+          "features": {
+            "propertyOperations": 37,
+            "distinctOperationPropertyPairs": 29,
+            "pogHash": "7762ca8cd37838d1",
+            "graphNodes": 13,
+            "graphEdges": 14,
+            "graphOperationOccurrences": 65,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58.js",
+          "sourceSHA256": "376989600568939bf14341904a627a1063bdbf750155bebe8cffdb74f54a2b58",
+          "span": [
+            3925,
+            16527
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "f339748b8f9211993bf6d6f8d1f99e3f3e600bdc81a9855f111b809276d6d483",
+          "codeSHA256": "b2036903ddbcc7c2e78f425ef2fe0b2264530e91c596020674ec34d9b64d47cf",
+          "features": {
+            "propertyOperations": 484,
+            "distinctOperationPropertyPairs": 84,
+            "pogHash": "bfa1fff6f973baaf",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 484,
+            "distinctGraphOperationPropertyPairs": 84,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/03d412e48e6dedaff8db",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@ai-sdk/openai",
+      "declaredVersion": "4.0.0-canary.73",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@ai-sdk/openai",
+        "version": "4.0.0-canary.73",
+        "integrity": "sha512-lGiceTzEDc2gLZvNeUkE8hiucW6nXzhhvsMD8DWshunabIXpO+SxC785mmPUwpxeyi3CeJUy/em1PgkVyneJ5g==",
+        "shasum": "43c9bd420dfa2146993aa13e902fe2d6d157d006",
+        "tarballSHA256": "fee26c55d8e1680a339c40d7e9b88d231648431cb486748eac32c7f210f057ec",
+        "bytes": 438555,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 3,
+      "parsedFunctions": 3,
+      "diagnostics": [
+        {
+          "file": "src/chat/convert-openai-chat-usage.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/chat/convert-to-openai-chat-messages.ts",
+          "error": "SyntaxError: [3:7-3:22]: Expected ','"
+        },
+        {
+          "file": "src/chat/get-response-metadata.ts",
+          "error": "SyntaxError: [5:1-5:2]: Expected ')'"
+        },
+        {
+          "file": "src/chat/map-openai-finish-reason.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/chat/openai-chat-api.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/chat/openai-chat-language-model-options.ts",
+          "error": "SyntaxError: [4:7-4:18]: Expected ','"
+        },
+        {
+          "file": "src/chat/openai-chat-language-model.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/chat/openai-chat-prepare-tools.ts",
+          "error": "SyntaxError: [3:7-3:33]: Expected ','"
+        },
+        {
+          "file": "src/chat/openai-chat-prompt.ts",
+          "error": "SyntaxError: [1:7-1:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/completion/convert-openai-completion-usage.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/completion/convert-to-openai-completion-prompt.ts",
+          "error": "SyntaxError: [4:7-4:28]: Expected ','"
+        },
+        {
+          "file": "src/completion/get-response-metadata.ts",
+          "error": "SyntaxError: [5:1-5:2]: Expected ')'"
+        },
+        {
+          "file": "src/completion/map-openai-finish-reason.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/completion/openai-completion-api.ts",
+          "error": "SyntaxError: [6:7-6:18]: Expected ','"
+        },
+        {
+          "file": "src/completion/openai-completion-language-model-options.ts",
+          "error": "SyntaxError: [4:7-4:18]: Expected ','"
+        },
+        {
+          "file": "src/completion/openai-completion-language-model.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/embedding/openai-embedding-model-options.ts",
+          "error": "SyntaxError: [4:7-4:18]: Expected ','"
+        },
+        {
+          "file": "src/embedding/openai-embedding-model.ts",
+          "error": "SyntaxError: [3:7-3:23]: Expected ','"
+        },
+        {
+          "file": "src/files/openai-files-options.ts",
+          "error": "SyntaxError: [4:7-4:18]: Expected ','"
+        },
+        {
+          "file": "src/files/openai-files.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "src/embedding/openai-embedding-api.ts",
+          "source": "source-js/79647b841e1d7a72137f583cc3c5eb896a1087019c2c27591b1a1ff3c5f10c39.js",
+          "sourceSHA256": "79647b841e1d7a72137f583cc3c5eb896a1087019c2c27591b1a1ff3c5f10c39",
+          "span": [
+            317,
+            493
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "67be346a9f9578fbd973c53aab133d95ba8714ccbf4e30b3ed8584908bedc21d",
+          "codeSHA256": "8497109f27546cb774a9c2fe301fe26f702bab7c82e60875545db6177ed6ba3c",
+          "features": {
+            "propertyOperations": 12,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "e28dada1b59bd382",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 12,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/files/openai-files-api.ts",
+          "source": "source-js/b5bdf2ca34a353d6f4f7758df4e69f8bc1273b92837ff5af8ce18834ae1214e5.js",
+          "sourceSHA256": "b5bdf2ca34a353d6f4f7758df4e69f8bc1273b92837ff5af8ce18834ae1214e5",
+          "span": [
+            145,
+            474
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "fdf14d699cc2a7bbf00d9c9dc75b14c02fdbb33037da46585418234b00c28f61",
+          "codeSHA256": "fc5af2a3f0215076523e1021fbcb734d3be3c0bc422db6bf253f9fbbebb1e5f7",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "1437bb387be56339",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/image/openai-image-api.ts",
+          "source": "source-js/e5b5dfeee843d1d12253dfd632d95355f0a905422958b75a108a2b5afcd38c0f.js",
+          "sourceSHA256": "e5b5dfeee843d1d12253dfd632d95355f0a905422958b75a108a2b5afcd38c0f",
+          "span": [
+            308,
+            1082
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "ce7440d7056d0e1fd742b8ddd2919312ab7a384e095ff5a72be423159f33a7c2",
+          "codeSHA256": "bd6132918af9843b994416792c57c67e1acc423141c0da985e35568b8c4d0e85",
+          "features": {
+            "propertyOperations": 45,
+            "distinctOperationPropertyPairs": 20,
+            "pogHash": "5c53eb8988b8f58d",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 45,
+            "distinctGraphOperationPropertyPairs": 20,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/0ed99d094042b9dc9003",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@ai-sdk/react",
+      "declaredVersion": "4.0.0-canary.162",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@ai-sdk/react",
+        "version": "4.0.0-canary.162",
+        "integrity": "sha512-OSiEDRsgJVviCajzxbRgxLGxDj+jAsAPlp5Uo4QOA0UrvZ3Aecg+78XZK5YJIazX4J9wNam6Uj481uEdIXtR/w==",
+        "shasum": "28f673ed9f79fbe706f95b44ece7088b8049aa8a",
+        "tarballSHA256": "d06a85a5dabe5e1efb89e5900a4021c92bd02fccbbcbede648b8134acca7fd35",
+        "bytes": 53170,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 56,
+      "diagnostics": [
+        {
+          "file": "src/chat.react.ts",
+          "error": "SyntaxError: [3:7-3:15]: Expected ','"
+        },
+        {
+          "file": "src/mcp-apps/app-frame.tsx",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/mcp-apps/app-renderer.tsx",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/mcp-apps/bridge.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/mcp-apps/sandbox.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/mcp-apps/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/mcp-apps/utils.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/setup-test-component.tsx",
+          "error": "SyntaxError: [6:15-6:16]: Expected ')'"
+        },
+        {
+          "file": "src/throttle.ts",
+          "error": "SyntaxError: [3:24-3:25]: Expected '('"
+        },
+        {
+          "file": "src/use-chat.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/use-completion.ts",
+          "error": "SyntaxError: [3:7-3:31]: Expected ','"
+        },
+        {
+          "file": "src/use-object.ts",
+          "error": "SyntaxError: [6:7-6:20]: Expected ','"
+        },
+        {
+          "file": "src/util/use-stable-value.ts",
+          "error": "SyntaxError: [8:30-8:31]: Expected '('"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/a14feb041b9aa6cc5201f40e18acdd27892acc863ace3e727af9c9a8b6c21ac8.js",
+          "sourceSHA256": "a14feb041b9aa6cc5201f40e18acdd27892acc863ace3e727af9c9a8b6c21ac8",
+          "span": [
+            5228,
+            8744
+          ],
+          "name": "useChat",
+          "normalizedASTSHA256": "d927c4b84b3b3b9d54f06a5021be5913c844d3f8e6ebf74b5760d63342182b38",
+          "codeSHA256": "52edf30752e427d588b9af2aea5c519ad57bbbddb01ca2a307e0389d16d486de",
+          "features": {
+            "propertyOperations": 71,
+            "distinctOperationPropertyPairs": 36,
+            "pogHash": "9345ee296cb4c343",
+            "graphNodes": 21,
+            "graphEdges": 27,
+            "graphOperationOccurrences": 188,
+            "distinctGraphOperationPropertyPairs": 36,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/a14feb041b9aa6cc5201f40e18acdd27892acc863ace3e727af9c9a8b6c21ac8.js",
+          "sourceSHA256": "a14feb041b9aa6cc5201f40e18acdd27892acc863ace3e727af9c9a8b6c21ac8",
+          "span": [
+            9895,
+            10552
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "ed062437ac73172a9fe4a4b78f3c19bd5e4002e5a7ee664ba7a706e566ef3170",
+          "codeSHA256": "7c7df3c7fd2f38b6516236354593d85163116e289c9acf2f9b8d61dbbd3f1f9c",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 17,
+            "pogHash": "bb61acd63474cef5",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 15,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/a14feb041b9aa6cc5201f40e18acdd27892acc863ace3e727af9c9a8b6c21ac8.js",
+          "sourceSHA256": "a14feb041b9aa6cc5201f40e18acdd27892acc863ace3e727af9c9a8b6c21ac8",
+          "span": [
+            8953,
+            11769
+          ],
+          "name": "useCompletion",
+          "normalizedASTSHA256": "2f922031642e92bc310238acc235a349029e37ecc4f8efc15777924186ba57d2",
+          "codeSHA256": "dc8e87e7a700478cbd5c3de4e389aa1c1bd40fb0f1a4b335d71eef397e507ea0",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "76782dfed5d227e6",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 28,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/05b478d62c53e9b2f5a2",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@base-ui/react",
+      "declaredVersion": "1.6.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@base-ui/react",
+        "version": "1.6.0",
+        "integrity": "sha512-/jzjTWJYXhRFO45Bev9lc3cHbmjzCMpUqbMZ2AgKy/z25mY9B6shGSNcXcjQar9n5doM0KYW1W8fcFv2jZBuMw==",
+        "shasum": "143a892157224a57046f3f4886c025eba173c258",
+        "tarballSHA256": "583e60023a77fed45caf8a2f980813e8a75e2f2a97f59c30380d2234cc3e0423",
+        "bytes": 1574231,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 14,
+      "parsedFunctions": 35,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "accordion/item/AccordionItem.js",
+          "source": "source-js/f5a54dabc75e52763b6d40254f210255e92280fe53201b7f9b270b37f8724637.js",
+          "sourceSHA256": "f5a54dabc75e52763b6d40254f210255e92280fe53201b7f9b270b37f8724637",
+          "span": [
+            1307,
+            4178
+          ],
+          "name": "AccordionItem",
+          "normalizedASTSHA256": "a38705e853c0507b600fe40a3441c001b1b6e84bd7c37ed78921dee717dcba26",
+          "codeSHA256": "69a36fde2f9e4a60675941e4f94fadbbcf2f2552736f8fdd7242b702886c7343",
+          "features": {
+            "propertyOperations": 36,
+            "distinctOperationPropertyPairs": 27,
+            "pogHash": "c955b124ad554963",
+            "graphNodes": 8,
+            "graphEdges": 8,
+            "graphOperationOccurrences": 68,
+            "distinctGraphOperationPropertyPairs": 27,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "accordion/item/AccordionItem.mjs",
+          "source": "source-js/be903329ca4176decea56c4524fc42e0edd5e6371b48b3262ddbff6163eafa2a.js",
+          "sourceSHA256": "be903329ca4176decea56c4524fc42e0edd5e6371b48b3262ddbff6163eafa2a",
+          "span": [
+            1105,
+            3692
+          ],
+          "name": "AccordionItem",
+          "normalizedASTSHA256": "ec207c3feafe82d53c9de692c98ee38d80c2e8057336ec189d176fe334e7e7a0",
+          "codeSHA256": "23efc11e41686ba8144e0ca7223edafb0b90065e2df8f862e1d34f5f5a3c0b77",
+          "features": {
+            "propertyOperations": 23,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "3d95c189cb176ec5",
+            "graphNodes": 7,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 46,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "accordion/panel/AccordionPanel.js",
+          "source": "source-js/a6c54746668f63095e1f833eae3237061e75009053e590e0519e19e5b3a91975.js",
+          "sourceSHA256": "a6c54746668f63095e1f833eae3237061e75009053e590e0519e19e5b3a91975",
+          "span": [
+            1229,
+            4303
+          ],
+          "name": "AccordionPanel",
+          "normalizedASTSHA256": "ae14c9e9a7f0bb014b256a2e55620958a2f56212fb6eca9a759f83bea6a2cb20",
+          "codeSHA256": "cfd801a32d0694424b4bc22132efc7e37e239e537688ed366702962ffb35ba4e",
+          "features": {
+            "propertyOperations": 39,
+            "distinctOperationPropertyPairs": 32,
+            "pogHash": "b43274ee53fcebda",
+            "graphNodes": 26,
+            "graphEdges": 33,
+            "graphOperationOccurrences": 72,
+            "distinctGraphOperationPropertyPairs": 32,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/c76bec19a64eb27131ba",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@dnd-kit/core",
+      "declaredVersion": "^6.3.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@dnd-kit/core",
+        "version": "6.3.1",
+        "integrity": "sha512-xkGBRQQab4RLwgXxoqETICr6S5JlogafbhNsidmrkVv2YRs5MLwpjoF2qpiGjQt8S9AoxtIV603s0GIUpY5eYQ==",
+        "shasum": "4c36406a62c7baac499726f899935f93f0e6d003",
+        "tarballSHA256": "f68d69af50234872c2e3345bc8bf98d8bcb0a9481eab6d370605c99e76a98c33",
+        "bytes": 270941,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 39,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/core.cjs.development.js",
+          "source": "source-js/6575eed2c700bc9275312ed3fd6f541da3eec11cf23285882fb8e7a44d5ae5bd.js",
+          "sourceSHA256": "6575eed2c700bc9275312ed3fd6f541da3eec11cf23285882fb8e7a44d5ae5bd",
+          "span": [
+            2522,
+            4392
+          ],
+          "name": "Accessibility",
+          "normalizedASTSHA256": "890aa524d9e2806b2dada38c875007395fbdfc88f2db8322ce2038a58037b574",
+          "codeSHA256": "a0738f703f3028ec2f0bd1408687b4da7e593d25dfda97813b869913c100774b",
+          "features": {
+            "propertyOperations": 17,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "effd22d700407668",
+            "graphNodes": 8,
+            "graphEdges": 8,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/core.cjs.development.js",
+          "source": "source-js/6575eed2c700bc9275312ed3fd6f541da3eec11cf23285882fb8e7a44d5ae5bd.js",
+          "sourceSHA256": "6575eed2c700bc9275312ed3fd6f541da3eec11cf23285882fb8e7a44d5ae5bd",
+          "span": [
+            5593,
+            5974
+          ],
+          "name": "getRelativeTransformOrigin",
+          "normalizedASTSHA256": "c70a8517e63919701526f2189b6c0c0459535e19b16645aeee40081e1bcf692c",
+          "codeSHA256": "1f67767bf508019a5d3d82f6e23d72375cc0ac3567f64aafc76e15c15a0ca428",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "681ac65f3f1fe509",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/core.cjs.development.js",
+          "source": "source-js/6575eed2c700bc9275312ed3fd6f541da3eec11cf23285882fb8e7a44d5ae5bd.js",
+          "sourceSHA256": "6575eed2c700bc9275312ed3fd6f541da3eec11cf23285882fb8e7a44d5ae5bd",
+          "span": [
+            9199,
+            9997
+          ],
+          "name": "getIntersectionRatio",
+          "normalizedASTSHA256": "64b11a873d9bf13fef4347dd6d1ae8f366dd0ee9d1539794a030e6e268a4b307",
+          "codeSHA256": "f9e7c8797de0eb4b58b13b0f24f1ecdbb07fe6da64837d30b2ff5a5900f7b037",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 7,
+            "pogHash": "244d30f36e574d8f",
+            "graphNodes": 7,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/77c31a40407ba3101499",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "537607e3f1533ad2c5b12978967f5ab27f34ffb7e626e321017a7ccca6cc24ff"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@dnd-kit/modifiers",
+      "declaredVersion": "^9.0.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@dnd-kit/modifiers",
+        "version": "9.0.0",
+        "integrity": "sha512-ybiLc66qRGuZoC20wdSSG6pDXFikui/dCNGthxv4Ndy8ylErY0N3KVxY2bgo7AWwIbxDmXDg3ylAFmnrjcbVvw==",
+        "shasum": "96a0280c77b10c716ef79d9792ce7ad04370771d",
+        "tarballSHA256": "1ad2f9ecf7b65bd58de367c7b9226b62951916ca2694ad66440a3c8978ebdc29",
+        "bytes": 11290,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 18,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/modifiers.cjs.development.js",
+          "source": "source-js/3bba02cae6a5e2b97a94dd28e0c102602f20788b5dc829d5d1d162eeaa2a4405.js",
+          "sourceSHA256": "3bba02cae6a5e2b97a94dd28e0c102602f20788b5dc829d5d1d162eeaa2a4405",
+          "span": [
+            497,
+            1122
+          ],
+          "name": "restrictToBoundingRect",
+          "normalizedASTSHA256": "3c0ffead67e5d36d658870c3b72e53fdac0582368161e1f718b9e344ddff8287",
+          "codeSHA256": "25db4a27ca2dc6450da8b433e7ef6f6d72f1c4223a7aac586938c4b63c574605",
+          "features": {
+            "propertyOperations": 28,
+            "distinctOperationPropertyPairs": 10,
+            "pogHash": "f03b595427825c17",
+            "graphNodes": 15,
+            "graphEdges": 17,
+            "graphOperationOccurrences": 34,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/modifiers.cjs.development.js",
+          "source": "source-js/3bba02cae6a5e2b97a94dd28e0c102602f20788b5dc829d5d1d162eeaa2a4405.js",
+          "sourceSHA256": "3bba02cae6a5e2b97a94dd28e0c102602f20788b5dc829d5d1d162eeaa2a4405",
+          "span": [
+            2197,
+            2790
+          ],
+          "name": "snapCenterToCursor",
+          "normalizedASTSHA256": "85a8850a9f580493cc4ce4c2469dc15d50a28b81800ced60ed2b9dc1e3759f6b",
+          "codeSHA256": "753358eba42bb365d8c9534d1acb294b61ac8677086dce8e341596db6a5113bf",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "f97542b344b09b24",
+            "graphNodes": 8,
+            "graphEdges": 9,
+            "graphOperationOccurrences": 11,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/modifiers.esm.js",
+          "source": "source-js/1bdebeb97c2ddbef0afccf8cbdd8d629e68b286e35a07b7f31ef84a3f8b8389a.js",
+          "sourceSHA256": "1bdebeb97c2ddbef0afccf8cbdd8d629e68b286e35a07b7f31ef84a3f8b8389a",
+          "span": [
+            2129,
+            2712
+          ],
+          "name": "snapCenterToCursor",
+          "normalizedASTSHA256": "0753a82bfec254c01b008d57e392c8b46c380d4bf5f0e91693b0e279502c5e64",
+          "codeSHA256": "9ad35530156c716346e51d1ceacf37dcc592ca884c51c6b88f7eb03ec2685d10",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "e557209854841255",
+            "graphNodes": 7,
+            "graphEdges": 8,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/1a0a7bc783e56084dee4",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "537607e3f1533ad2c5b12978967f5ab27f34ffb7e626e321017a7ccca6cc24ff"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@dnd-kit/sortable",
+      "declaredVersion": "^10.0.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@dnd-kit/sortable",
+        "version": "10.0.0",
+        "integrity": "sha512-+xqhmIIzvAYMGfBYYnbKuNicfSsk4RksY2XdmJhT+HAC01nix6fHCztU68jooFiMUB01Ky3F0FyOvhG/BZrWkg==",
+        "shasum": "1f9382b90d835cd5c65d92824fa9dafb78c4c3e8",
+        "tarballSHA256": "07d017cb1e84bfad0687c5415594cb3e4a8045cc7edfa9066cadda5e5323f604",
+        "bytes": 58102,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 11,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/sortable.cjs.development.js",
+          "source": "source-js/c19915b83717440a21321aeef468c9ea40c8d2ad072398ad0433a6785575ee9f.js",
+          "sourceSHA256": "c19915b83717440a21321aeef468c9ea40c8d2ad072398ad0433a6785575ee9f",
+          "span": [
+            1793,
+            2876
+          ],
+          "name": "horizontalListSortingStrategy",
+          "normalizedASTSHA256": "1f9d19a6c629d48ed258594fe09ff4cac765606f87dd9896d3a0667c6b4cadd9",
+          "codeSHA256": "86c75e998b2bc87de3acdcac1bb2302a32f5526af7e9229e7fae8e3942af58b7",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "1bcac63c9a91aec5",
+            "graphNodes": 20,
+            "graphEdges": 27,
+            "graphOperationOccurrences": 22,
+            "distinctGraphOperationPropertyPairs": 5,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/sortable.cjs.development.js",
+          "source": "source-js/c19915b83717440a21321aeef468c9ea40c8d2ad072398ad0433a6785575ee9f.js",
+          "sourceSHA256": "c19915b83717440a21321aeef468c9ea40c8d2ad072398ad0433a6785575ee9f",
+          "span": [
+            2879,
+            3431
+          ],
+          "name": "getItemGap",
+          "normalizedASTSHA256": "e84eb6dccd59049826a8fd2dcf8435b351e2bf4976a3ae781489c16f08f7cec4",
+          "codeSHA256": "dae236e6fc5232f5a2db6d6c87fd13c1e9a42f537178839c76d5b0f5bb368270",
+          "features": {
+            "propertyOperations": 15,
+            "distinctOperationPropertyPairs": 3,
+            "pogHash": "3997ecb071555f02",
+            "graphNodes": 14,
+            "graphEdges": 18,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 3,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/sortable.cjs.development.js",
+          "source": "source-js/c19915b83717440a21321aeef468c9ea40c8d2ad072398ad0433a6785575ee9f.js",
+          "sourceSHA256": "c19915b83717440a21321aeef468c9ea40c8d2ad072398ad0433a6785575ee9f",
+          "span": [
+            3461,
+            3899
+          ],
+          "name": "rectSortingStrategy",
+          "normalizedASTSHA256": "e488c7767d74b180d872ce5e6c3fb8e983f457bf82bda481bad9fa14c107b464",
+          "codeSHA256": "95d3dd4c0fe6ff21418a4b59e94029793516b939de471c064ba34340a755b012",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "c2514752bde1d1e6",
+            "graphNodes": 7,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/9df27057b5cc13cd1719",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "537607e3f1533ad2c5b12978967f5ab27f34ffb7e626e321017a7ccca6cc24ff"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@faker-js/faker",
+      "declaredVersion": "^10.1.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@faker-js/faker",
+        "version": "10.1.0",
+        "integrity": "sha512-C3mrr3b5dRVlKPJdfrAXS8+dq+rq8Qm5SNRazca0JKgw1HQERFmrVb0towvMmw5uu8hHKNiQasMaR/tydf3Zsg==",
+        "shasum": "eb72869d01ccbff41a77aa7ac851ce1ac9371129",
+        "tarballSHA256": "2bd262f23b4a5c6a019a7d900cb12adde8ac18cdacd3a54ce3fc9b5b1f3f50c2",
+        "bytes": 1075881,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 25,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/chunk-HC7G5RVA.js",
+          "source": "source-js/6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a.js",
+          "sourceSHA256": "6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a",
+          "span": [
+            1161,
+            1312
+          ],
+          "name": "seat",
+          "normalizedASTSHA256": "2a53f9e53b3703a3b47de85417743b57772cc421b261a2484f7cedab630da0f5",
+          "codeSHA256": "7ed0f3fabac9766fa9fb41e3c7301c5cb96421eb20041f991bc6fdb80e0b7ebc",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 8,
+            "pogHash": "c21bf8f0b0410d1d",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 8,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/chunk-HC7G5RVA.js",
+          "source": "source-js/6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a.js",
+          "sourceSHA256": "6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a",
+          "span": [
+            2212,
+            2783
+          ],
+          "name": "Sr",
+          "normalizedASTSHA256": "dc0d864ef8e513b17a4c7e7068eeb5ed46eade0e99ad354e5fe607025a5fd1a2",
+          "codeSHA256": "5f9c9739a2946afbdc49599b5e418c9654c712f09772b1806da080d931c0e229",
+          "features": {
+            "propertyOperations": 30,
+            "distinctOperationPropertyPairs": 4,
+            "pogHash": "2dd04849204eebd6",
+            "graphNodes": 21,
+            "graphEdges": 28,
+            "graphOperationOccurrences": 30,
+            "distinctGraphOperationPropertyPairs": 1,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/chunk-HC7G5RVA.js",
+          "source": "source-js/6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a.js",
+          "sourceSHA256": "6a51f0391a69e7d8e6ac371d612f83e4ac9df6df28eb1ce29de045b3462d272a",
+          "span": [
+            3217,
+            3542
+          ],
+          "name": "rgb",
+          "normalizedASTSHA256": "9ef3abeb050fe8fa49883d01b713b8cfd039c44153e880d7353583ea5bbd1483",
+          "codeSHA256": "1b5ef6409a16452b3874c121dc85782366f9e4854deee56084397f4a404834ef",
+          "features": {
+            "propertyOperations": 14,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "23fff96c069dca07",
+            "graphNodes": 11,
+            "graphEdges": 12,
+            "graphOperationOccurrences": 17,
+            "distinctGraphOperationPropertyPairs": 10,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/55d20e3252d0a4ac62c2",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "8c0814c525426e67c04ca562f28364be477003697903d257160c081d14b271bf"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@formisch/react",
+      "declaredVersion": "^0.4.4",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@formisch/react",
+        "version": "0.4.4",
+        "integrity": "sha512-7BjxZgWlyn7Xl0g1hi3MmelgPrmWzbonwr0biC+4ffsOXSIvUSsJVWhDqGgy8xltP598YbTaTyKjSZ5tpEbcYg==",
+        "shasum": "a4398f55bca6717b6d60b1dd2aa9052a4310360f",
+        "tarballSHA256": "c08e46e8f70957c580f673b6d5b430686aede353682d9aeb46942d99c0bc05d1",
+        "bytes": 17164,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 1,
+      "parsedFunctions": 12,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "dist/index.js",
+          "source": "source-js/9174f473bbf5c79d5267ac91a0737013df4de22afda0068321167c3d8eb2f105.js",
+          "sourceSHA256": "9174f473bbf5c79d5267ac91a0737013df4de22afda0068321167c3d8eb2f105",
+          "span": [
+            2847,
+            7418
+          ],
+          "name": "initializeFieldStore",
+          "normalizedASTSHA256": "726649b32b36813611698e9737219a7fa36fdcff09698e634a76092848feadb2",
+          "codeSHA256": "05077fd23645ed062e577de0e6c4efb1152f08de722354c46c4c39817845ebf9",
+          "features": {
+            "propertyOperations": 97,
+            "distinctOperationPropertyPairs": 32,
+            "pogHash": "e2b8aa20554252eb",
+            "graphNodes": 121,
+            "graphEdges": 162,
+            "graphOperationOccurrences": 140,
+            "distinctGraphOperationPropertyPairs": 31,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/9174f473bbf5c79d5267ac91a0737013df4de22afda0068321167c3d8eb2f105.js",
+          "sourceSHA256": "9174f473bbf5c79d5267ac91a0737013df4de22afda0068321167c3d8eb2f105",
+          "span": [
+            7963,
+            9453
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "7a2cc9c1d943864cb813ad43b12640fd7c405fdbcb516b1966b0dd8b199282fc",
+          "codeSHA256": "b1b5689b3c6dabb57a1f8c0c70d111aec5d8804ac71668a51f495bd335150822",
+          "features": {
+            "propertyOperations": 56,
+            "distinctOperationPropertyPairs": 22,
+            "pogHash": "8d84e969d2b826fb",
+            "graphNodes": 23,
+            "graphEdges": 28,
+            "graphOperationOccurrences": 60,
+            "distinctGraphOperationPropertyPairs": 21,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/index.js",
+          "source": "source-js/9174f473bbf5c79d5267ac91a0737013df4de22afda0068321167c3d8eb2f105.js",
+          "sourceSHA256": "9174f473bbf5c79d5267ac91a0737013df4de22afda0068321167c3d8eb2f105",
+          "span": [
+            10012,
+            11182
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "a49a8395421ed7743fa66b10a08d6e1f3eb1868998ea6793cd2555e2bb730e37",
+          "codeSHA256": "5d28859bb3ff93c6a41e4d2e5e6c336fc51504d5ed4a582a50b13ffdf1348ca8",
+          "features": {
+            "propertyOperations": 37,
+            "distinctOperationPropertyPairs": 14,
+            "pogHash": "b487ab955e1a880c",
+            "graphNodes": 24,
+            "graphEdges": 30,
+            "graphOperationOccurrences": 42,
+            "distinctGraphOperationPropertyPairs": 14,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/28418055e06f4952f35c",
+      "licenses": [],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@hookform/resolvers",
+      "declaredVersion": "^3.10.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@hookform/resolvers",
+        "version": "3.10.0",
+        "integrity": "sha512-79Dv+3mDF7i+2ajj7SkypSKHhl1cbln1OGavqrsF7p6mbUv11xpqpacPsGDCTRvCSjEEIez2ef1NveSVL3b0Ag==",
+        "shasum": "7bfd18113daca4e57e27e1205b7d5a2d371aa59a",
+        "tarballSHA256": "7fd61afd67da91fdbe3e64da548dee2e44e53dff795ed181b7eb5ea8649dc177",
+        "bytes": 95218,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 8,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "ajv/dist/ajv.js",
+          "source": "source-js/aef7e572a44cd9756128a25343a69322aff5cae9e3168c68081d18e5a11eaf74.js",
+          "sourceSHA256": "aef7e572a44cd9756128a25343a69322aff5cae9e3168c68081d18e5a11eaf74",
+          "span": [
+            350,
+            591
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "715a0c4243e1973ad754bae70a85bda660459f40599b264e26ac831d9e4dd93a",
+          "codeSHA256": "88c3575cee2f4d7afd5419b2e64f7ee51da1ff2cd7ad6a8b7d86e6224cd82841",
+          "features": {
+            "propertyOperations": 19,
+            "distinctOperationPropertyPairs": 12,
+            "pogHash": "450ab1d756211d7d",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 23,
+            "distinctGraphOperationPropertyPairs": 12,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "ajv/dist/ajv.js",
+          "source": "source-js/aef7e572a44cd9756128a25343a69322aff5cae9e3168c68081d18e5a11eaf74.js",
+          "sourceSHA256": "aef7e572a44cd9756128a25343a69322aff5cae9e3168c68081d18e5a11eaf74",
+          "span": [
+            659,
+            1080
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "46c2fbd0a3f756a90a283adddb72f385f9dd8d7c9f578e553f22174d926cbc93",
+          "codeSHA256": "d1b13a5a1d11a6cf6dce6b1c641f4da1eda5ef7dc570d5988e93057b4af76be0",
+          "features": {
+            "propertyOperations": 21,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "7e12c8c57fcda8bf",
+            "graphNodes": 15,
+            "graphEdges": 17,
+            "graphOperationOccurrences": 20,
+            "distinctGraphOperationPropertyPairs": 13,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "ajv/dist/ajv.mjs",
+          "source": "source-js/3f7f060c3601b351b7af2bca1b3553ab05b8eb14f42bc3634e2a2a9f9d34e480.js",
+          "sourceSHA256": "3f7f060c3601b351b7af2bca1b3553ab05b8eb14f42bc3634e2a2a9f9d34e480",
+          "span": [
+            302,
+            530
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "974ff90569445c094c643e47da877f56b6edc28f90fca26eb42906e791354a56",
+          "codeSHA256": "45fe811c1107a9caf4cc8e67f5b4592f9143eaaf8e9de99f1d89ac875524c863",
+          "features": {
+            "propertyOperations": 18,
+            "distinctOperationPropertyPairs": 11,
+            "pogHash": "8720abd666fd6020",
+            "graphNodes": 17,
+            "graphEdges": 20,
+            "graphOperationOccurrences": 21,
+            "distinctGraphOperationPropertyPairs": 11,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/a7eadb18f6f86eaaa275",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "e8eeb472f0a5889c2c51625b86a3f9b8630680adb9f49a125352e2e426392780"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    }
+  ],
+  "selectedLibraries": [
+    "@ai-sdk/anthropic",
+    "@ai-sdk/openai",
+    "@ai-sdk/react",
+    "@base-ui/react",
+    "@dnd-kit/core",
+    "@dnd-kit/modifiers",
+    "@dnd-kit/sortable",
+    "@faker-js/faker",
+    "@formisch/react",
+    "@hookform/resolvers"
+  ],
+  "status": "passed",
+  "provenance": {
+    "codeDigest": "97c6ed83ab8e01f09074c358943837548d7aa28b7ee869dbe819187c7795b104",
+    "codeHashes": {
+      "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
+      "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
+      "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
+      "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
+      "selection-overrides.json": "171768b0031294de68dcc9607d4e77faa254776be690df453e39a2ca3123a5ec"
+    },
+    "frontendManifestSHA256": "f3692cbcc60e47d84859acecd97fbf0cf37358514b317fe05cd8be67ec98b1e9",
+    "manifestRelative": "apps/v4/package.json",
+    "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
+  },
+  "started": "2026-11-09T03:43:57.604Z",
+  "reason": null,
+  "finished": "2026-11-09T03:43:57.899Z",
+  "candidateDecisionRecord": "../../../qualification/source-functions-3/results/turbopack/shadcn-ui--ui/qualification.json",
+  "sourceEligibilityRecordSHA256": "3f26d95158ed17d5307954a1ad8e4b5939e557cfb610e654a5dd3a28b61d3d14",
+  "organizationSignature": "5fbca32f8a5917607d48ce5725ad3fd4be4793a85dbe57020c2e5aa3e04958dd"
+}

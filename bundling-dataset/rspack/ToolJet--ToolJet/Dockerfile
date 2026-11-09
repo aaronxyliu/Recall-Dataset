@@ -16,6 +16,9 @@ COPY ./plugins/package.json ./plugins/package-lock.json ./plugins/
 ENV npm_config_maxsockets=8 npm_config_fetch_retries=4 npm_config_fetch_retry_mintimeout=3000 npm_config_fetch_retry_maxtimeout=30000
 RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm --prefix plugins ci
 COPY ./plugins/ ./plugins/
+ENV NX_DAEMON=false NX_ISOLATE_PLUGINS=false NX_NATIVE_COMMAND_RUNNER=false NX_TASKS_RUNNER_DYNAMIC_OUTPUT=false
+COPY --from=recipe build-plugin-projects.cjs /tmp/recall-build-plugin-projects.cjs
+RUN node -e "const fs=require('fs'),p='plugins/package.json',j=JSON.parse(fs.readFileSync(p)); if(j.scripts['build:packages']!=='node build-packages.js'||j.scripts['clean:packages']!=='node clean-packages.js') throw Error('upstream task changed'); j.scripts['build:packages']='node /tmp/recall-build-plugin-projects.cjs build'; j.scripts['clean:packages']='node /tmp/recall-build-plugin-projects.cjs clean'; fs.writeFileSync(p,JSON.stringify(j,null,2));"
 RUN NODE_ENV=production npm --prefix plugins run build
 RUN npm --prefix plugins prune --omit=dev
 
@@ -23,10 +26,31 @@ RUN npm --prefix plugins prune --omit=dev
 COPY ./packages/widget-definitions/package.json ./packages/widget-definitions/package.json
 COPY ./packages/widget-definitions/src/ ./packages/widget-definitions/src/
 
+
+ENV NODE_ENV=production
+
+# Build server
+COPY ./server/package.json ./server/package-lock.json ./server/
+RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm_config_jobs=2 npm --prefix server ci --include=dev --foreground-scripts
+COPY ./server/ ./server/
+RUN node server/scripts/compress-templates.js
+RUN npm --prefix server run build
+
+# Browser assets are architecture-independent; build them on the host platform.
+# The backend remains amd64 because its IBM driver does not support Linux arm64.
+FROM --platform=$BUILDPLATFORM node:22.23.4-bookworm AS frontend-builder
+WORKDIR /app
+ENV NODE_OPTIONS=--max-old-space-size=4096
+ENV npm_config_maxsockets=8 npm_config_fetch_retries=4 npm_config_fetch_retry_mintimeout=3000 npm_config_fetch_retry_maxtimeout=30000
+RUN npm i -g npm@10.9.9
+COPY ./packages/widget-definitions/package.json ./packages/widget-definitions/package.json
+COPY ./packages/widget-definitions/src/ ./packages/widget-definitions/src/
 # Build frontend
 COPY ./frontend/package.json ./frontend/package-lock.json ./frontend/
 RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm --prefix frontend ci
 COPY ./frontend/ ./frontend/
+COPY --from=builder /app/plugins/client.js /app/plugins/package.json ./plugins/
+COPY --from=builder /app/plugins/packages ./plugins/packages
 COPY --from=recipe enable-maps.cjs /tmp/recall-enable-maps.cjs
 COPY --from=recipe attach-recorder-maps.cjs media-encoder-host-8.1.0.worker.js.map extendable-media-recorder-wav-encoder-7.0.135.worker.js.map /tmp/recall-maps/
 RUN node /tmp/recall-enable-maps.cjs \
@@ -34,14 +58,7 @@ RUN node /tmp/recall-enable-maps.cjs \
     && NODE_ENV=production TOOLJET_EDITION=ce TOOLJET_SERVER_URL=/ ASSET_PATH=/ RAYON_NUM_THREADS=3 npm --prefix frontend run build \
     && find frontend/build -maxdepth 1 -name '*.js.map' -print -quit | grep -q .
 
-ENV NODE_ENV=production
 
-# Build server
-COPY ./server/package.json ./server/package-lock.json ./server/
-RUN --mount=type=cache,id=recall-tooljet-npm,target=/root/.npm npm --prefix server ci --include=dev
-COPY ./server/ ./server/
-RUN node server/scripts/compress-templates.js
-RUN npm --prefix server run build
 
 FROM node:22.23.4-bookworm AS runtime
 RUN sed -i 's|http://deb.debian.org|https://deb.debian.org|g' /etc/apt/sources.list.d/debian.sources \
@@ -64,7 +81,7 @@ COPY --from=builder /app/plugins/node_modules ./app/plugins/node_modules
 COPY --from=builder /app/plugins/packages/common ./app/plugins/packages/common
 COPY --from=builder /app/plugins/package.json ./app/plugins/package.json
 # copy frontend build
-COPY --from=builder /app/frontend/build ./app/frontend/build
+COPY --from=frontend-builder /app/frontend/build ./app/frontend/build
 # copy widget-definitions (server node_modules symlinks to this)
 COPY --from=builder /app/packages/widget-definitions ./app/packages/widget-definitions
 
