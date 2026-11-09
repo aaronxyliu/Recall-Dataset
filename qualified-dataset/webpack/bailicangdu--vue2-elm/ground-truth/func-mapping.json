@@ -2,26 +2,25 @@
   "pairDefinition": "reciprocal-body-mapped-v2",
   "evidence": {
     "bodyToBodyPoints": 12024,
-    "ignoredBoundaryPoints": 3890,
-    "ignoredStructuralPoints": 10223,
-    "unresolvedBodyPoints": 7826,
+    "ignoredBoundaryPoints": 3889,
+    "ignoredStructuralPoints": 9058,
+    "unresolvedBodyPoints": 8992,
     "acceptanceRules": {
       "reciprocal-body-and-full-span": 184,
       "reciprocal-body": 235,
-      "reciprocal-full-span": 73
+      "reciprocal-full-span": 66
     }
   },
   "repo": "bailicangdu/vue2-elm",
   "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
   "imageID": "sha256:961df673d8f780ccdccba3e0ac792038bb9417fa8663420e1ab5c839d2b803b2",
   "coverage": {
+    "vue": 2,
+    "vue-router": 1,
     "better-scroll": 0,
     "fastclick": 0,
     "iscroll": 0,
-    "showdown": 0,
-    "vue": 2,
-    "vue-router": 1,
-    "vuex": 1
+    "showdown": 0
   },
   "pairs": [
     {
@@ -4215,62 +4214,6 @@
       "evidenceRule": "reciprocal-body"
     },
     {
-      "library": "vuex",
-      "source": "webpack:///~/vuex/dist/vuex.common.js#962bacdac4b560118d1bdfa3c23b5b042406814a0a9f8d78bcf30665faa9101a@2028-2104",
-      "bundled": "<local>/elm/static/js/vendor.js#21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392@3830-3880",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 7,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "vuex",
-      "source": "webpack:///~/vuex/dist/vuex.common.js#962bacdac4b560118d1bdfa3c23b5b042406814a0a9f8d78bcf30665faa9101a@2106-2181",
-      "bundled": "<local>/elm/static/js/vendor.js#21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392@3880-3930",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 8,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "vuex",
-      "source": "webpack:///~/vuex/dist/vuex.common.js#962bacdac4b560118d1bdfa3c23b5b042406814a0a9f8d78bcf30665faa9101a@5561-6269",
-      "bundled": "<local>/elm/static/js/vendor.js#21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392@3930-4065",
-      "distinctOriginalPositions": 10,
-      "distinctGeneratedPositions": 31,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "vuex",
-      "source": "webpack:///~/vuex/dist/vuex.common.js#962bacdac4b560118d1bdfa3c23b5b042406814a0a9f8d78bcf30665faa9101a@14052-14429",
-      "bundled": "<local>/elm/static/js/vendor.js#21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392@4165-4378",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 39,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "vuex",
-      "source": "webpack:///~/vuex/dist/vuex.common.js#962bacdac4b560118d1bdfa3c23b5b042406814a0a9f8d78bcf30665faa9101a@21195-21572",
-      "bundled": "<local>/elm/static/js/vendor.js#21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392@6646-6733",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 16,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "vuex",
-      "source": "webpack:///~/vuex/dist/vuex.common.js#962bacdac4b560118d1bdfa3c23b5b042406814a0a9f8d78bcf30665faa9101a@21574-21841",
-      "bundled": "<local>/elm/static/js/vendor.js#21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392@6733-6768",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "vuex",
-      "source": "webpack:///~/vuex/dist/vuex.common.js#962bacdac4b560118d1bdfa3c23b5b042406814a0a9f8d78bcf30665faa9101a@25491-25775",
-      "bundled": "<local>/elm/static/js/vendor.js#21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392@7018-7077",
-      "distinctOriginalPositions": 3,
-      "distinctGeneratedPositions": 12,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
       "library": "vue-router",
       "source": "webpack:///~/vue-router/dist/vue-router.common.js#27ed409dd2df1ca9ac3d8dd4df10aed6f8c57b8a4bd3086ea40b9e7b024a742e@394-487",
       "bundled": "<local>/elm/static/js/vendor.js#21fa45aee4ce0329911ef8288660daaba1b74cdd38124f51f91dd529cf475392@51642-51717",
@@ -4814,13 +4757,13 @@
   "missingSourceContents": [],
   "failures": [],
   "sourceFunctionAccounting": {
-    "total": 945,
-    "oneToOne": 492,
+    "total": 827,
+    "oneToOne": 485,
     "multipleTargets": 0,
     "multipleContributors": 0,
     "unresolvedBody": 0,
     "insufficientEvidence": 182,
-    "noBodyEdge": 271
+    "noBodyEdge": 160
   },
   "relationshipCaution": "Mapping multiplicity is positional provenance, not proof of semantic splitting or combining.",
   "capture": {
@@ -4926,8 +4869,13 @@
     "iscroll",
     "showdown",
     "vue",
-    "vue-router",
-    "vuex"
+    "vue-router"
+  ],
+  "unscoredLibraries": [
+    "better-scroll",
+    "fastclick",
+    "iscroll",
+    "showdown"
   ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
@@ -4951,13 +4899,32 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "b85ff0220366be863868269177a4abf74c7a85ca",
     "archiveRecord": "bundling-dataset/webpack/bailicangdu--vue2-elm/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "cf4a50504d7ba5e240b0f73c44a94acced0071df80dbbe382dd029e77e4750e9",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "9ea05e5e1aa65c303f607793e1571c265d5642178acbd50a220bdbc310815e20",
-    "moduleScopeSHA256": "12dcbf7e08992222b4894c241a8d172a8652affb1ce0237d1568e8804fb03ba8"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "b385eb4e71f466d6a38068afb22ce57a60c96418deaaf98a84af61fdbddaf231",
+    "moduleScopeSHA256": "12dcbf7e08992222b4894c241a8d172a8652affb1ce0237d1568e8804fb03ba8",
+    "duplicateAuditSHA256": "53dc1d6289c826f18cd8273ba018d8d8757c828f0eab7caa74f69764e55707d6"
+  },
+  "evaluationLibraries": [
+    "vue",
+    "vue-router"
+  ]
 }

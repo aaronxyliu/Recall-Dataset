@@ -14,7 +14,26 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [],
+    "preferredLibraries": [
+      "@scarf/scarf",
+      "calendar-utils",
+      "positioning",
+      "tslib"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/esbuild/mattlewis92--angular-calendar/audit.json",
+      "sha256": "c2ac8e6488afa05c37d20e9c46d455f9584f6d0b39a239b13a4ca915f020472f",
+      "retainedUnobservedZeroPairLibraries": [
+        "@scarf/scarf",
+        "calendar-utils",
+        "positioning"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@scarf/scarf",
     "calendar-utils",
@@ -419,22 +438,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "e1b3f9c3f4fdec736c5312f449b5c46c81f833385eda0187e06c6143e74477c7",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:03:59.023Z",
+  "started": "2026-11-09T10:00:57.094Z",
   "reason": null,
-  "finished": "2026-11-09T05:03:59.172Z",
+  "finished": "2026-11-09T10:00:57.230Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/esbuild/mattlewis92--angular-calendar/qualification.json",
-  "sourceEligibilityRecordSHA256": "caf1d9df4174102e759b41dccd005e81e407cd8e4955fb803958e730f92c3ae6",
-  "organizationSignature": "c0cdd5f7762f44ef6785f9d6145d47b17ee8b205f24df927883d87bd85e0c78e"
+  "sourceEligibilityRecordSHA256": "ee2d0e21a383233a504f5601a75e0e90cf2ce69e4b2d2382097dd276a22be532",
+  "organizationSignature": "9fa699534469260a0362f73f08d75d99794221b1aef2dd5c3c384a985ba7ad89"
 }

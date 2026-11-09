@@ -3,8 +3,8 @@
   "evidence": {
     "bodyToBodyPoints": 3619,
     "ignoredBoundaryPoints": 2744,
-    "ignoredStructuralPoints": 13178,
-    "unresolvedBodyPoints": 8223,
+    "ignoredStructuralPoints": 11845,
+    "unresolvedBodyPoints": 9546,
     "acceptanceRules": {
       "reciprocal-body": 16
     }
@@ -14,8 +14,8 @@
   "imageID": "sha256:de49a6724e0642d647c1c816296173e861689e551797be0f62b55a82893cddb3",
   "coverage": {
     "core-js": 347,
-    "fractional": 1,
-    "regenerator-runtime": 1
+    "fractional": 0,
+    "regenerator-runtime": 0
   },
   "pairs": [
     {
@@ -194,13 +194,13 @@
   "missingSourceContents": [],
   "failures": [],
   "sourceFunctionAccounting": {
-    "total": 798,
+    "total": 732,
     "oneToOne": 16,
     "multipleTargets": 105,
     "multipleContributors": 94,
     "unresolvedBody": 37,
     "insufficientEvidence": 0,
-    "noBodyEdge": 546
+    "noBodyEdge": 480
   },
   "relationshipCaution": "Mapping multiplicity is positional provenance, not proof of semantic splitting or combining.",
   "capture": {
@@ -241,6 +241,10 @@
     "fractional",
     "regenerator-runtime"
   ],
+  "unscoredLibraries": [
+    "fractional",
+    "regenerator-runtime"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -263,13 +267,31 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "76b8b79b2994dd00298b2be105aa6bc721e40a22",
     "archiveRecord": "bundling-dataset/parcel/jonasschmedtmann--complete-javascript-course/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "10106dfee1c6794986795d1dc9a795eade80dae71d01d2276371061f22ec714a",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "f47074b340c9434671e128ea91369cdc1766106e993203a427561e208c025e14",
-    "moduleScopeSHA256": "64d1f934e1108bd6632be0876cdb7f20e795ab43ebe8f0c83cc53cfa724bee4a"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "7ff19256f8fb36d0f6e5253b77d6353e622d338b0b22f5c887633b4f58c6cc65",
+    "moduleScopeSHA256": "64d1f934e1108bd6632be0876cdb7f20e795ab43ebe8f0c83cc53cfa724bee4a",
+    "duplicateAuditSHA256": "4e365ad0465e4a275e11f8bad62b7edafb602a95267c58a4c46a6e18427c6dee"
+  },
+  "evaluationLibraries": [
+    "core-js"
+  ]
 }

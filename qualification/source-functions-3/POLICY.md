@@ -15,3 +15,5 @@ When a map strips package directories, `ownership.py` establishes ownership by e
 Explicit repository exclusions are recorded in `excluded-subjects.json` and enforced by the build gate, organizer and standalone audit. `esbuild/okikio--bundlejs` is excluded at the user's request; its historical build/capture archive is retained.
 
 Correspondence scope is additionally restricted to module dependencies under [the module policy](../module-dependencies/POLICY.md). This controls accepted pairs and map-reference snapshots separately from the unchanged source-function threshold. Global-only production libraries do not qualify as replacement module candidates.
+
+Library multiplicity additionally follows the [full-runtime duplicate-library policy](../no-duplicate-libraries/POLICY.md). Duplicate copies in global/vendor inputs also disqualify the library even though those inputs are not scored. Replacement sources must pass the same original source-function threshold; source eligibility does not reinstate an initial-anchor requirement.

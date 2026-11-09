@@ -1,2 +1,0 @@
-// extracted by mini-css-extract-plugin
-module.exports = {"style":{"fontFamily":"'sourceCodePro', 'sourceCodePro Fallback', Source Code Pro, Office Code Pro, Menlo, monospace"},"className":"__className_ab082c","variable":"__variable_ab082c"};

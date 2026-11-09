@@ -9132,6 +9132,10 @@
     "esbuild",
     "lit"
   ],
+  "unscoredLibraries": [
+    "esbuild",
+    "lit"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -9154,13 +9158,32 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "27b7303baf41bb28babc610ac8eaa486e1ddfab5",
     "archiveRecord": "bundling-dataset/esbuild/sissbruecker--linkding/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "df21aeca5685a25d4ca559eae10e8fd34ca981690cb2f1d9eb7525ddcd1ef724",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "9e9de9636fe6040483fbcf368dec7d18d152705acdf0effbafe0594433001557",
-    "moduleScopeSHA256": "a848109161f211e89d141ba6af93f700a26348942b15a361006c3d2a9416e8a4"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "ea916076ebb49c3baa231d6f8a09c1b26e562c85cf1302cf4e0ce1feb229d457",
+    "moduleScopeSHA256": "a848109161f211e89d141ba6af93f700a26348942b15a361006c3d2a9416e8a4",
+    "duplicateAuditSHA256": "3363135351ae79be45eee9c22f90f6fac0cb920c1c864b178d1b6d3197f1e593"
+  },
+  "evaluationLibraries": [
+    "@floating-ui/dom",
+    "@hotwired/turbo"
+  ]
 }

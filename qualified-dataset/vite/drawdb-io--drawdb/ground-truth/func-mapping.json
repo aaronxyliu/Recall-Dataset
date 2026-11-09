@@ -62085,6 +62085,7 @@
     "@dnd-kit/core",
     "@dnd-kit/sortable"
   ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -62107,13 +62108,40 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "a249c7fb730c2de9b5c2ce6e863f2ea7344ac372",
     "archiveRecord": "bundling-dataset/vite/drawdb-io--drawdb/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "ce431a6bb4777e280cebd9e331fc68028e03044a1ed154a022bd0c5910cc05ff",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "707c3900d1ff1a1deb8cf3ba3fce7a509ec7deecdb2a1c4e3a53dabe17763aa7",
-    "moduleScopeSHA256": "ae5aa2725e71d9e47751c7309c9fe6bd6edd4ebdd886d5c66a3452e05d7fe0cb"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "667b71696864336db25d38a55342a8f67e1e1d3e0868c4dddc685a8f21843e4d",
+    "moduleScopeSHA256": "ae5aa2725e71d9e47751c7309c9fe6bd6edd4ebdd886d5c66a3452e05d7fe0cb",
+    "duplicateAuditSHA256": "cef5a21d7a25d229f6fc599f33e9a92343d09f759c3721cd152ef3a1a341f10d"
+  },
+  "evaluationLibraries": [
+    "jsonschema",
+    "oracle-sql-parser",
+    "lexical",
+    "react-tweet",
+    "framer-motion",
+    "react-dom",
+    "@douyinfe/semi-ui",
+    "@dagrejs/dagre",
+    "@dnd-kit/core",
+    "@dnd-kit/sortable"
+  ]
 }

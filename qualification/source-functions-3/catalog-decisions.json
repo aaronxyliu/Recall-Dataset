@@ -113,33 +113,26 @@
   },
   {
     "subject": "esbuild/primefaces--primeng",
-    "sourceEligibility": "passed",
-    "selectedLibraries": [
-      "@primeuix/styled",
-      "@primeuix/utils",
-      "@primeuix/motion"
-    ],
-    "candidateCount": 4,
+    "sourceEligibility": "not-qualified",
+    "selectedLibraries": [],
+    "candidateCount": 2,
     "qualification": "qualification/source-functions-3/results/esbuild/primefaces--primeng/qualification.json",
-    "status": "included",
-    "reason": null
+    "status": "excluded",
+    "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering"
   },
   {
     "subject": "esbuild/primefaces--sakai-ng",
     "sourceEligibility": "passed",
     "selectedLibraries": [
-      "@angular/common",
       "@angular/compiler",
-      "@angular/core",
-      "@angular/forms",
-      "@angular/platform-browser",
-      "@angular/router",
       "@primeuix/themes",
       "@tailwindcss/postcss",
       "chart.js",
-      "primeclt"
+      "primeclt",
+      "rxjs",
+      "tslib"
     ],
-    "candidateCount": 17,
+    "candidateCount": 7,
     "qualification": "qualification/source-functions-3/results/esbuild/primefaces--sakai-ng/qualification.json",
     "status": "included",
     "reason": null
@@ -173,7 +166,7 @@
       "d3-brush",
       "d3-sankey"
     ],
-    "candidateCount": 34,
+    "candidateCount": 19,
     "qualification": "qualification/source-functions-3/results/esbuild/swimlane--ngx-charts/qualification.json",
     "status": "included",
     "reason": null
@@ -184,16 +177,13 @@
     "selectedLibraries": [
       "@angular/animations",
       "@angular/cdk",
-      "@angular/common",
       "@angular/compiler",
-      "@angular/core",
       "@angular/forms",
       "@angular/platform-browser",
-      "@angular/router",
       "rxjs",
       "tslib"
     ],
-    "candidateCount": 12,
+    "candidateCount": 7,
     "qualification": "qualification/source-functions-3/results/esbuild/swimlane--ngx-datatable/qualification.json",
     "status": "included",
     "reason": null
@@ -253,14 +243,13 @@
     "subject": "parcel/parcel-bundler--website",
     "sourceEligibility": "passed",
     "selectedLibraries": [
-      "alpinejs",
       "focus-visible",
       "marked",
       "react",
       "react-dom",
       "react-use"
     ],
-    "candidateCount": 7,
+    "candidateCount": 6,
     "qualification": "qualification/source-functions-3/results/parcel/parcel-bundler--website/qualification.json",
     "status": "included",
     "reason": null
@@ -273,7 +262,7 @@
       "@tensorflow/tfjs-converter",
       "@tensorflow/tfjs-core"
     ],
-    "candidateCount": 4,
+    "candidateCount": 3,
     "qualification": "qualification/source-functions-3/results/parcel/tensorflow--tfjs/qualification.json",
     "status": "included",
     "reason": null
@@ -297,12 +286,12 @@
       "@markdoc/markdoc",
       "@radix-ui/react-scroll-area",
       "@radix-ui/react-select",
-      "@radix-ui/react-slot",
       "@radix-ui/react-tooltip",
       "@react-three/fiber",
-      "@tanstack/react-query"
+      "@tanstack/react-query",
+      "@radix-ui/react-accordion"
     ],
-    "candidateCount": 100,
+    "candidateCount": 59,
     "qualification": "qualification/source-functions-3/results/rolldown/appwrite--appwrite/qualification.json",
     "status": "included",
     "reason": null
@@ -318,11 +307,11 @@
       "@warp-drive/legacy",
       "@warp-drive/utilities",
       "ember-resolver",
-      "ember-source",
       "immer",
-      "moment"
+      "moment",
+      "decorator-transforms"
     ],
-    "candidateCount": 84,
+    "candidateCount": 16,
     "qualification": "qualification/source-functions-3/results/rolldown/discourse--discourse/qualification.json",
     "status": "included",
     "reason": null
@@ -338,16 +327,12 @@
   },
   {
     "subject": "rollup/daybrush--scenejs",
-    "sourceEligibility": "passed",
-    "selectedLibraries": [
-      "@daybrush/page",
-      "@daybrush/utils",
-      "shape-svg"
-    ],
-    "candidateCount": 4,
+    "sourceEligibility": "not-qualified",
+    "selectedLibraries": [],
+    "candidateCount": 2,
     "qualification": "qualification/source-functions-3/results/rollup/daybrush--scenejs/qualification.json",
-    "status": "included",
-    "reason": null
+    "status": "excluded",
+    "reason": "fewer than three source-eligible libraries remain after duplicate-safe candidate filtering"
   },
   {
     "subject": "rollup/fiduswriter--simple-datatables",
@@ -424,11 +409,11 @@
       "@emotion/react",
       "@emotion/styled",
       "@floating-ui/dom",
-      "@floating-ui/react",
       "@juggle/resize-observer",
-      "@mantine/core"
+      "@mantine/dates",
+      "@mantine/hooks"
     ],
-    "candidateCount": 152,
+    "candidateCount": 59,
     "qualification": "qualification/source-functions-3/results/rspack/metabase--metabase/qualification.json",
     "status": "included",
     "reason": null
@@ -456,14 +441,14 @@
       "@radix-ui/react-tooltip",
       "botid",
       "i18next",
-      "next",
       "next-auth",
       "react-i18next",
       "zod",
       "@boxyhq/saml-jackson",
-      "@daily-co/daily-js"
+      "@daily-co/daily-js",
+      "@hookform/resolvers"
     ],
-    "candidateCount": 117,
+    "candidateCount": 22,
     "qualification": "qualification/source-functions-3/results/turbopack/CalCom--cal.com/qualification.json",
     "status": "included",
     "reason": null
@@ -473,17 +458,17 @@
     "sourceEligibility": "passed",
     "selectedLibraries": [
       "@fortawesome/react-fontawesome",
-      "@radix-ui/react-slot",
       "@radix-ui/react-tooltip",
       "@sentry/nextjs",
       "@tanstack/react-query",
       "framer-motion",
       "js-cookie",
-      "lucide-react",
-      "next",
-      "next-auth"
+      "next-auth",
+      "react",
+      "react-dom",
+      "sonner"
     ],
-    "candidateCount": 138,
+    "candidateCount": 11,
     "qualification": "qualification/source-functions-3/results/turbopack/CapSoftware--Cap/qualification.json",
     "status": "included",
     "reason": null
@@ -499,11 +484,11 @@
       "@radix-ui/react-tooltip",
       "ai",
       "cmdk",
-      "next",
       "pako",
-      "prism-react-renderer"
+      "prism-react-renderer",
+      "@ai-sdk/react"
     ],
-    "candidateCount": 58,
+    "candidateCount": 29,
     "qualification": "qualification/source-functions-3/results/turbopack/DayuanJiang--next-ai-draw-io/qualification.json",
     "status": "included",
     "reason": null
@@ -523,7 +508,7 @@
       "country-data-list",
       "date-fns"
     ],
-    "candidateCount": 30,
+    "candidateCount": 18,
     "qualification": "qualification/source-functions-3/results/turbopack/Open-Dev-Society--OpenStock/qualification.json",
     "status": "included",
     "reason": null
@@ -533,17 +518,14 @@
     "sourceEligibility": "passed",
     "selectedLibraries": [
       "@inkeep/cxkit-react",
-      "@radix-ui/react-accordion",
       "@vercel/analytics",
       "@vercel/og",
-      "fumadocs-core",
       "fumadocs-mdx",
-      "fumadocs-ui",
       "gray-matter",
-      "next",
-      "react"
+      "react",
+      "react-dom"
     ],
-    "candidateCount": 18,
+    "candidateCount": 8,
     "qualification": "qualification/source-functions-3/results/turbopack/colinhacks--zod/qualification.json",
     "status": "included",
     "reason": null
@@ -573,7 +555,6 @@
     "sourceEligibility": "passed",
     "selectedLibraries": [
       "@ai-sdk/google",
-      "@ai-sdk/react",
       "@base-ui-components/react",
       "@dnd-kit/core",
       "@dnd-kit/modifiers",
@@ -581,9 +562,10 @@
       "@google/generative-ai",
       "@hookform/resolvers",
       "@lexical/react",
-      "@neondatabase/serverless"
+      "@neondatabase/serverless",
+      "culori"
     ],
-    "candidateCount": 71,
+    "candidateCount": 22,
     "qualification": "qualification/source-functions-3/results/turbopack/jnsahaj--tweakcn/qualification.json",
     "status": "included",
     "reason": null
@@ -615,15 +597,15 @@
       "@ai-sdk/anthropic",
       "@ai-sdk/openai",
       "@ai-sdk/react",
-      "@base-ui/react",
       "@dnd-kit/core",
       "@dnd-kit/modifiers",
       "@dnd-kit/sortable",
       "@faker-js/faker",
       "@formisch/react",
-      "@hookform/resolvers"
+      "@internationalized/date",
+      "@tanstack/ai"
     ],
-    "candidateCount": 76,
+    "candidateCount": 33,
     "qualification": "qualification/source-functions-3/results/turbopack/shadcn-ui--ui/qualification.json",
     "status": "included",
     "reason": null
@@ -643,7 +625,7 @@
       "chalk",
       "chart.js"
     ],
-    "candidateCount": 61,
+    "candidateCount": 25,
     "qualification": "qualification/source-functions-3/results/turbopack/umami-software--umami/qualification.json",
     "status": "included",
     "reason": null
@@ -663,7 +645,7 @@
       "vuedraggable",
       "@it-tools/bip39"
     ],
-    "candidateCount": 67,
+    "candidateCount": 19,
     "qualification": "qualification/source-functions-3/results/vite/CorentinTh--it-tools/qualification.json",
     "status": "included",
     "reason": null
@@ -683,7 +665,7 @@
       "@emotion/react",
       "@gsap/react"
     ],
-    "candidateCount": 44,
+    "candidateCount": 12,
     "qualification": "qualification/source-functions-3/results/vite/DavidHDev--react-bits/qualification.json",
     "status": "included",
     "reason": null
@@ -703,7 +685,7 @@
       "@modelcontextprotocol/ext-apps",
       "@radix-ui/react-toast"
     ],
-    "candidateCount": 109,
+    "candidateCount": 81,
     "qualification": "qualification/source-functions-3/results/vite/LibreChat-AI--LibreChat/qualification.json",
     "status": "included",
     "reason": null
@@ -723,7 +705,7 @@
       "ajv",
       "vue-router"
     ],
-    "candidateCount": 34,
+    "candidateCount": 12,
     "qualification": "qualification/source-functions-3/results/vite/Lissy93--dashy/qualification.json",
     "status": "included",
     "reason": null
@@ -743,7 +725,7 @@
       "@dnd-kit/core",
       "@dnd-kit/sortable"
     ],
-    "candidateCount": 33,
+    "candidateCount": 32,
     "qualification": "qualification/source-functions-3/results/vite/drawdb-io--drawdb/qualification.json",
     "status": "included",
     "reason": null
@@ -756,13 +738,12 @@
       "@sentry/browser",
       "i18next-browser-languagedetector",
       "react",
-      "jotai",
       "firebase",
       "socket.io-client",
       "uqr",
       "vite-plugin-html"
     ],
-    "candidateCount": 12,
+    "candidateCount": 10,
     "qualification": "qualification/source-functions-3/results/vite/excalidraw--excalidraw/qualification.json",
     "status": "included",
     "reason": null
@@ -771,18 +752,18 @@
     "subject": "vite/hoppscotch--hoppscotch",
     "sourceEligibility": "passed",
     "selectedLibraries": [
-      "buffer",
       "workbox-window",
       "@vueuse/core",
-      "util",
       "axios",
-      "@hoppscotch/ui",
-      "@tauri-apps/api",
       "rxjs",
       "zod",
-      "@hoppscotch/common"
+      "@hoppscotch/common",
+      "@tauri-apps/plugin-dialog",
+      "@tauri-apps/plugin-fs",
+      "@tauri-apps/plugin-shell",
+      "dioc"
     ],
-    "candidateCount": 26,
+    "candidateCount": 12,
     "qualification": "qualification/source-functions-3/results/vite/hoppscotch--hoppscotch/qualification.json",
     "status": "included",
     "reason": null
@@ -791,18 +772,18 @@
     "subject": "vite/immich-app--immich",
     "sourceEligibility": "passed",
     "selectedLibraries": [
-      "@immich/ui",
-      "@formatjs/icu-messageformat-parser",
       "tailwind-merge",
       "tabbable",
       "tailwind-variants",
       "justified-layout",
-      "intl-messageformat",
       "lodash-es",
       "luxon",
-      "socket.io-client"
+      "socket.io-client",
+      "@futo-org/backups-orchestrator-ui",
+      "media-chrome",
+      "svelte-i18n"
     ],
-    "candidateCount": 48,
+    "candidateCount": 12,
     "qualification": "qualification/source-functions-3/results/vite/immich-app--immich/qualification.json",
     "status": "included",
     "reason": null
@@ -817,12 +798,11 @@
       "path-to-regexp",
       "element-ui",
       "vue",
-      "core-js",
       "vuex",
       "clipboard",
       "codemirror"
     ],
-    "candidateCount": 27,
+    "candidateCount": 12,
     "qualification": "qualification/source-functions-3/results/webpack/PanJiaChen--vue-element-admin/qualification.json",
     "status": "included",
     "reason": null
@@ -834,15 +814,14 @@
       "web-animations-js",
       "core-js",
       "leaflet",
-      "chart.js",
-      "echarts",
       "zone.js",
-      "@angular/animations",
       "@angular/cdk",
-      "@angular/common",
-      "@angular/core"
+      "@asymmetrik/ngx-leaflet",
+      "classlist.js",
+      "ngx-echarts",
+      "tslib"
     ],
-    "candidateCount": 43,
+    "candidateCount": 9,
     "qualification": "qualification/source-functions-3/results/webpack/akveo--ngx-admin/qualification.json",
     "status": "included",
     "reason": null
@@ -856,10 +835,9 @@
       "iscroll",
       "showdown",
       "vue",
-      "vue-router",
-      "vuex"
+      "vue-router"
     ],
-    "candidateCount": 7,
+    "candidateCount": 6,
     "qualification": "qualification/source-functions-3/results/webpack/bailicangdu--vue2-elm/qualification.json",
     "status": "included",
     "reason": null
@@ -886,7 +864,7 @@
       "react",
       "react-dom"
     ],
-    "candidateCount": 13,
+    "candidateCount": 10,
     "qualification": "qualification/source-functions-3/results/webpack/dair-ai--Prompt-Engineering-Guide/qualification.json",
     "status": "included",
     "reason": null
@@ -906,7 +884,7 @@
       "posthog-js",
       "react-hook-form"
     ],
-    "candidateCount": 114,
+    "candidateCount": 25,
     "qualification": "qualification/source-functions-3/results/webpack/dokploy--dokploy/qualification.json",
     "status": "included",
     "reason": null
@@ -923,10 +901,10 @@
       "store",
       "@fortawesome/fontawesome-svg-core",
       "@fortawesome/react-fontawesome",
-      "@gatsbyjs/reach-router",
-      "@paypal/react-paypal-js"
+      "@paypal/react-paypal-js",
+      "@loadable/component"
     ],
-    "candidateCount": 95,
+    "candidateCount": 42,
     "qualification": "qualification/source-functions-3/results/webpack/freeCodeCamp--freeCodeCamp/qualification.json",
     "status": "included",
     "reason": null
@@ -937,16 +915,16 @@
     "selectedLibraries": [
       "recharts",
       "mdast-util-from-markdown",
-      "next",
-      "motion",
       "@sentry/nextjs",
       "typed.js",
       "@bsmnt/scrollytelling",
       "@code-hike/mdx",
       "@codesandbox/sandpack-react",
-      "@hcaptcha/react-hcaptcha"
+      "@hcaptcha/react-hcaptcha",
+      "@heroicons/react",
+      "@supabase/supabase-js"
     ],
-    "candidateCount": 79,
+    "candidateCount": 17,
     "qualification": "qualification/source-functions-3/results/webpack/supabase--supabase/qualification.json",
     "status": "included",
     "reason": null
@@ -956,17 +934,17 @@
     "sourceEligibility": "passed",
     "selectedLibraries": [
       "remarkable",
-      "lodash",
       "dompurify",
       "xml",
       "zenscroll",
       "@tanstack/react-virtual",
-      "buffer",
-      "immutable",
-      "js-yaml",
-      "randexp"
+      "randexp",
+      "classnames",
+      "prop-types",
+      "react-copy-to-clipboard",
+      "react-debounce-input"
     ],
-    "candidateCount": 36,
+    "candidateCount": 21,
     "qualification": "qualification/source-functions-3/results/webpack/swagger-api--swagger-ui/qualification.json",
     "status": "included",
     "reason": null

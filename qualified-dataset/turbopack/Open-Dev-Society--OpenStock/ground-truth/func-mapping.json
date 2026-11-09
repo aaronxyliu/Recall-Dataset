@@ -15,11 +15,11 @@
   "imageID": "sha256:07613042e0661b6bbd5274d1fe87ada90b03b0324cb47e928fd2a82f34a8b103",
   "coverage": {
     "@radix-ui/react-dialog": 1,
+    "@radix-ui/react-slot": 1,
+    "@vercel/analytics": 8,
     "@radix-ui/react-dropdown-menu": 0,
     "@radix-ui/react-popover": 0,
     "@radix-ui/react-select": 0,
-    "@radix-ui/react-slot": 1,
-    "@vercel/analytics": 8,
     "better-auth": 0,
     "cmdk": 0,
     "country-data-list": 0,
@@ -1950,6 +1950,15 @@
     "country-data-list",
     "date-fns"
   ],
+  "unscoredLibraries": [
+    "@radix-ui/react-dropdown-menu",
+    "@radix-ui/react-popover",
+    "@radix-ui/react-select",
+    "better-auth",
+    "cmdk",
+    "country-data-list",
+    "date-fns"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -1972,13 +1981,33 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "b72306d39fa27dc55252ceecf858165ecf5a3fa3",
     "archiveRecord": "bundling-dataset/turbopack/Open-Dev-Society--OpenStock/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "72557d64cab68b878d740c1cd8d8919f8ec2ac51a0f9030841adeb2cf18455a7",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "24a4a474ed157a9c3ba96af242179d303eea3923f8f6648956ab6ec550d8f73d",
-    "moduleScopeSHA256": "c1821678a2620a3d8b54698e2e464ad9a01731047a2312e7a1954b3cdbd40e33"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "824ae95eeb88db598061f232109d33f59e58c88fa405b4920529369ec2cff1ab",
+    "moduleScopeSHA256": "c1821678a2620a3d8b54698e2e464ad9a01731047a2312e7a1954b3cdbd40e33",
+    "duplicateAuditSHA256": "be39e202cc6435961cf0e439b7fa07740befb0fe7ab52b8a54d91b98631e7cfa"
+  },
+  "evaluationLibraries": [
+    "@radix-ui/react-dialog",
+    "@radix-ui/react-slot",
+    "@vercel/analytics"
+  ]
 }

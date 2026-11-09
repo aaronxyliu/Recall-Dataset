@@ -20,7 +20,17 @@
       "fractional",
       "regenerator-runtime"
     ],
-    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged."
+    "reason": "Prioritize declared production libraries actually present in captured source maps; source-function gate unchanged. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "excludeLibraries": [],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/parcel/jonasschmedtmann--complete-javascript-course/audit.json",
+      "sha256": "e0593b75869cce7a922611ae18d5555c53a4d9c74ac23ad01eaa90919a517221",
+      "retainedUnobservedZeroPairLibraries": [
+        "fractional",
+        "regenerator-runtime"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    }
   },
   "candidates": [
     "core-js",
@@ -322,22 +332,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "fa96a5f2f510f6e88af7668d7a30a1750e3351e68e165b9c95ea9fe3fddcb8c5",
     "manifestRelative": "18-forkify/final/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:02.811Z",
+  "started": "2026-11-09T10:00:58.427Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:02.906Z",
+  "finished": "2026-11-09T10:00:58.513Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/parcel/jonasschmedtmann--complete-javascript-course/qualification.json",
-  "sourceEligibilityRecordSHA256": "d3ecae0c83c087b9bfaf9dab29ab8f8ee827886f5dd5048bae7fd146c77e7bfa",
-  "organizationSignature": "5c13c40a21fed0a278f96c023a2c5f428da1c07038da1a7c522dbddea7cac0ed"
+  "sourceEligibilityRecordSHA256": "b300ea8bdc875deb24f04e96950a2350ca7cc18ac552b429897d3679bff72cc5",
+  "organizationSignature": "b935cbbc9bb7198e596e1d22fc24c1ab1f7c42808501ea903cb9d6f7cea80284"
 }

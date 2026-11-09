@@ -14,36 +14,74 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "@radix-ui/react-avatar",
+      "@radix-ui/react-label",
+      "class-variance-authority",
+      "dotenv",
+      "inngest",
+      "mongodb",
+      "mongoose",
+      "nodemailer",
+      "react-circle-flags",
+      "react-hook-form",
+      "react-select-country-list",
+      "react-tweet"
+    ],
+    "preferredLibraries": [
+      "@radix-ui/react-dialog",
+      "@radix-ui/react-dropdown-menu",
+      "@radix-ui/react-popover",
+      "@radix-ui/react-select",
+      "@radix-ui/react-slot",
+      "@vercel/analytics",
+      "better-auth",
+      "cmdk",
+      "country-data-list",
+      "date-fns",
+      "clsx",
+      "lucide-react",
+      "next",
+      "next-themes",
+      "react",
+      "react-dom",
+      "sonner",
+      "tailwind-merge"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/turbopack/Open-Dev-Society--OpenStock/audit.json",
+      "sha256": "315db6e67a4089f18e947d67e3d6bfcafdf466f867c9ddadb4853561a7045d12",
+      "retainedUnobservedZeroPairLibraries": [
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-popover",
+        "@radix-ui/react-select",
+        "better-auth",
+        "cmdk",
+        "country-data-list",
+        "date-fns"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
-    "@radix-ui/react-avatar",
     "@radix-ui/react-dialog",
     "@radix-ui/react-dropdown-menu",
-    "@radix-ui/react-label",
     "@radix-ui/react-popover",
     "@radix-ui/react-select",
     "@radix-ui/react-slot",
     "@vercel/analytics",
     "better-auth",
-    "class-variance-authority",
     "clsx",
     "cmdk",
     "country-data-list",
     "date-fns",
-    "dotenv",
-    "inngest",
     "lucide-react",
-    "mongodb",
-    "mongoose",
     "next",
     "next-themes",
-    "nodemailer",
     "react",
-    "react-circle-flags",
     "react-dom",
-    "react-hook-form",
-    "react-select-country-list",
-    "react-tweet",
     "sonner",
     "tailwind-merge"
   ],
@@ -1033,22 +1071,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "52d44dd121d8d36ca91421eeaff0d4242d1cd240acb2f659541811c6a24aecb8",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:06.075Z",
+  "started": "2026-11-09T10:01:00.508Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:06.263Z",
+  "finished": "2026-11-09T10:01:00.686Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/turbopack/Open-Dev-Society--OpenStock/qualification.json",
-  "sourceEligibilityRecordSHA256": "08e4eead2cb5d98bb71a6ea13f99c86ac24593b9e0fe41b19bd981681556da68",
-  "organizationSignature": "962996a2c16c15d9d17fc1338e4a6f8b072f7611bd1a0d7d26ec3afb4035a83c"
+  "sourceEligibilityRecordSHA256": "aa7c7308a53bcedb4a54ea852246e11a0f875aa38967b31ca5e25d5bfe1ac8dc",
+  "organizationSignature": "c4637f1771070215d744a6307bf256c44d09610ebf7abfb34fc3668ad194b790"
 }

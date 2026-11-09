@@ -2,9 +2,9 @@
   "pairDefinition": "reciprocal-body-mapped-v2",
   "evidence": {
     "bodyToBodyPoints": 423,
-    "ignoredBoundaryPoints": 16172,
-    "ignoredStructuralPoints": 15800,
-    "unresolvedBodyPoints": 70152,
+    "ignoredBoundaryPoints": 11169,
+    "ignoredStructuralPoints": 9932,
+    "unresolvedBodyPoints": 44944,
     "acceptanceRules": {
       "reciprocal-body-and-full-span": 37
     }
@@ -13,10 +13,10 @@
   "commit": "9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68",
   "imageID": "sha256:36e094597a8731e17370336f498020134259af1f2352948e3e1aeff99742c497",
   "coverage": {
+    "tslib": 1,
     "@scarf/scarf": 0,
-    "calendar-utils": 1,
-    "positioning": 2,
-    "tslib": 1
+    "calendar-utils": 0,
+    "positioning": 0
   },
   "pairs": [
     {
@@ -402,21 +402,8 @@
   },
   "removePercent": null,
   "createPercent": null,
-  "missingSourceContents": [
-    "node_modules/.pnpm/positioning@3.0.1/node_modules/positioning/src/positioning.ts"
-  ],
-  "failures": [
-    {
-      "asset": "<local>/angular-calendar/main-3VNU4WEV.js",
-      "source": "node_modules/.pnpm/calendar-utils@0.12.5_date-fns@4.1.0_moment@2.30.1/node_modules/calendar-utils/package.json",
-      "reason": "source parse failed"
-    },
-    {
-      "asset": "<local>/angular-calendar/main-3VNU4WEV.js",
-      "source": "node_modules/.pnpm/positioning@3.0.1/node_modules/positioning/package.json",
-      "reason": "source parse failed"
-    }
-  ],
+  "missingSourceContents": [],
+  "failures": [],
   "sourceFunctionAccounting": {
     "total": 85,
     "oneToOne": 37,
@@ -777,6 +764,11 @@
     "positioning",
     "tslib"
   ],
+  "unscoredLibraries": [
+    "@scarf/scarf",
+    "calendar-utils",
+    "positioning"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -799,13 +791,31 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68",
     "archiveRecord": "bundling-dataset/esbuild/mattlewis92--angular-calendar/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "c203ddac923e81588ec14d891a12958b27eff9255e94c385fef22c63d04d2bfe",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "50f07e845dda6f77cded1b2980c715929cf831163e9069e22510ebe9b8771c76",
-    "moduleScopeSHA256": "c78269de687398427e5c81311d7bdb5cf460e94074d6eb2fafd5372ed72fbaa4"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "5c8cf1df24f3c76252ecafa5e3612dec12574c542e2538198db3c32ba34499f5",
+    "moduleScopeSHA256": "c78269de687398427e5c81311d7bdb5cf460e94074d6eb2fafd5372ed72fbaa4",
+    "duplicateAuditSHA256": "4d699e4366437427d54f312c1467d4cb39471eda3f268be25b7e83d8e10d94e5"
+  },
+  "evaluationLibraries": [
+    "tslib"
+  ]
 }

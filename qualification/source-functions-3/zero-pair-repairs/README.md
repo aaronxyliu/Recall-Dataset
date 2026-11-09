@@ -4,15 +4,15 @@ DrawDB excludes `@dbml/core` and selects `@dnd-kit/sortable` instead (62 verifie
 
 | Repository | Before | After | Cause and repair |
 |---|---:|---:|---|
-| primefaces/primeng | 0 | 251 | The showcase manifest declared CSS build tools. Corrected the scope to the built PrimeNG library production manifest; peer-only Angular and root dev dependencies remain excluded. |
+| primefaces/primeng | 0 | 0 | Excluded under subsequent scope/duplication rules: fewer than three source-eligible libraries remain after duplicate-safe candidate filtering |
 | jonasschmedtmann/complete-javascript-course | 0 | 16 | Parcel 2.0.0-beta.1 scope-hoisting produced out-of-bounds generated map coordinates. Rebuilt with --no-scope-hoist, retaining production minification, and recaptured the page; no page or map-processing errors. |
 | tensorflow/tfjs | 0 | 2,428 | Source-map originals use sibling source-tree paths without node_modules package names. Attributed exact source bytes using the locked TensorFlow package tarballs and their embedded original source maps. |
-| metabase/metabase | 0 | 1,509 | The first ten alphabetically selected CodeMirror libraries were absent from the landing page capture. Prefer source-eligible declared production libraries present in the captured maps. |
-| peggyjs/peggy | 0 | 0 | Excluded by the subsequent module-only rule: standalone docs vendors do not supply three eligible module libraries. |
-| CapSoftware/Cap | 0 | 1,375 | The old sample mostly selected server-side AI/AWS packages, absent from the login page. Replaced the sample with eligible declared production libraries observed in the page maps. |
+| metabase/metabase | 0 | 773 | The first ten alphabetically selected CodeMirror libraries were absent from the landing page capture. Prefer source-eligible declared production libraries present in the captured maps. |
+| peggyjs/peggy | 0 | 0 | Excluded under subsequent scope/duplication rules: Module-only scope: docs production candidates are copied standalone vendors or docs/test tooling, not imported dependencies of the built docs frontend; fewer than three eligible module libraries. |
+| CapSoftware/Cap | 0 | 428 | The old sample mostly selected server-side AI/AWS packages, absent from the login page. Replaced the sample with eligible declared production libraries observed in the page maps. |
 | DavidHDev/react-bits | 0 | 881 | The old sample selected libraries for unloaded component demos and build tooling. Prefer eligible declared production dependencies present on the captured page. |
 
-Current active dataset: **41 repositories, 335 library instances, 69,580 pairs; zero repositories with zero pairs**. Shadcn UI and Umami have also finished independent build/page verification since the earlier 41-repository table. Technical failures outside active membership remain explicitly unassessed in catalog-decisions.json.
+Current active dataset: **39 repositories, 315 library instances, 49,604 pairs; zero repositories with zero pairs**. Shadcn UI and Umami have also finished independent build/page verification since the earlier 41-repository table. Technical failures outside active membership remain explicitly unassessed in catalog-decisions.json.
 
 No initial-anchor or minimum-pair acceptance gate was introduced. Existing source-function eligibility is unchanged. Selected libraries may still have zero pairs; these remain explicit.
 

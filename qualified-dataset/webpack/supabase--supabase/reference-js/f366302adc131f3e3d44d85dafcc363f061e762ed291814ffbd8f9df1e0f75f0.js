@@ -1,2 +1,0 @@
-// extracted by mini-css-extract-plugin
-module.exports = {"style":{"fontFamily":"'manrope', 'manrope Fallback', system-ui, Helvetica Neue, Helvetica, Arial, sans-serif"},"className":"__className_acff56","variable":"__variable_acff56"};

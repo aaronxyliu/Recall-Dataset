@@ -14,7 +14,27 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [],
+    "preferredLibraries": [
+      "tslib",
+      "vega-expression",
+      "yargs",
+      "json-stringify-pretty-compact",
+      "vega-event-selector",
+      "vega-util"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/rollup/vega--vega-lite/audit.json",
+      "sha256": "0c181085f96e903fcd690700a7c94d25b54a7239a5483157aafc6966af90a71d",
+      "retainedUnobservedZeroPairLibraries": [
+        "tslib",
+        "yargs"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "json-stringify-pretty-compact",
     "tslib",
@@ -323,22 +343,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "f81656c9ec0e39c696f09cd0d462e66a4935973f9845d7f0fa93ae57f9a31a23",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:03.799Z",
+  "started": "2026-11-09T10:00:59.294Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:03.839Z",
+  "finished": "2026-11-09T10:00:59.331Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/rollup/vega--vega-lite/qualification.json",
-  "sourceEligibilityRecordSHA256": "c0d391791cf366cbe1a3a04799ad34b336b6582f02b36772395759cd981bf984",
-  "organizationSignature": "d5365d6b2d1801c0aedf87388fdb85a742090f446a20f5d4ac9c775292b64af2"
+  "sourceEligibilityRecordSHA256": "bc2085fd6444717a378b11a260c0c2f33807624ba2638be2a01a9b02d87a3d51",
+  "organizationSignature": "e71794cbb428c7151bad5c788ef1c39a5987e1f465321f93e4e15e0c68e448af"
 }

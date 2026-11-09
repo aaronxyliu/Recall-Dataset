@@ -1,14 +1,14 @@
 {
   "pairDefinition": "reciprocal-body-mapped-v2",
   "evidence": {
-    "bodyToBodyPoints": 25396,
-    "ignoredBoundaryPoints": 19821,
-    "ignoredStructuralPoints": 21931,
-    "unresolvedBodyPoints": 105923,
+    "bodyToBodyPoints": 22103,
+    "ignoredBoundaryPoints": 19767,
+    "ignoredStructuralPoints": 22272,
+    "unresolvedBodyPoints": 108929,
     "acceptanceRules": {
-      "reciprocal-body-and-full-span": 503,
-      "reciprocal-body": 213,
-      "reciprocal-full-span": 136
+      "reciprocal-body": 170,
+      "reciprocal-body-and-full-span": 402,
+      "reciprocal-full-span": 135
     }
   },
   "repo": "freeCodeCamp/freeCodeCamp",
@@ -23,10 +23,20 @@
     "store": 12,
     "@fortawesome/fontawesome-svg-core": 1,
     "@fortawesome/react-fontawesome": 1,
-    "@gatsbyjs/reach-router": 4,
-    "@paypal/react-paypal-js": 1
+    "@paypal/react-paypal-js": 1,
+    "@loadable/component": 1
   },
   "pairs": [
+    {
+      "library": "@loadable/component",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/@loadable+component@5.16.7_react@18.3.1/node_modules/@loadable/component/dist/esm/loadable.esm.mjs#589316075dbc6a0805dcbcf14ed7d2901ba455d4651acb72e7e69539f1cadf1d@10790-11901",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@9074-9457",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 6,
+      "bodyOriginalPositions": 2,
+      "bodyGeneratedPositions": 6,
+      "evidenceRule": "reciprocal-body"
+    },
     {
       "library": "store",
       "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/oldFF-globalStorage.js#517b7bee8384f82c41353de96a27e49dbdd31288bfa340f64135382331aaaeff@460-602",
@@ -706,966 +716,6 @@
       "bodyOriginalPositions": 1,
       "bodyGeneratedPositions": 7,
       "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@205-297",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@507895-507941",
-      "distinctOriginalPositions": 11,
-      "distinctGeneratedPositions": 11,
-      "bodyOriginalPositions": 7,
-      "bodyGeneratedPositions": 7,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@925-3217",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@507944-508517",
-      "distinctOriginalPositions": 146,
-      "distinctGeneratedPositions": 146,
-      "bodyOriginalPositions": 142,
-      "bodyGeneratedPositions": 142,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@4485-5723",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@508520-508849",
-      "distinctOriginalPositions": 95,
-      "distinctGeneratedPositions": 95,
-      "bodyOriginalPositions": 91,
-      "bodyGeneratedPositions": 91,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@5857-6668",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@508852-509089",
-      "distinctOriginalPositions": 51,
-      "distinctGeneratedPositions": 51,
-      "bodyOriginalPositions": 47,
-      "bodyGeneratedPositions": 47,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@6147-6257",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@508932-508979",
-      "distinctOriginalPositions": 14,
-      "distinctGeneratedPositions": 14,
-      "bodyOriginalPositions": 11,
-      "bodyGeneratedPositions": 11,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@7310-7373",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509103-509132",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 7,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@7389-7458",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509135-509168",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 5,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@7477-7918",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509171-509336",
-      "distinctOriginalPositions": 18,
-      "distinctGeneratedPositions": 18,
-      "bodyOriginalPositions": 14,
-      "bodyGeneratedPositions": 14,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@7232-7292",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509262-509287",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@7938-8108",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509339-509448",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 5,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@8004-8104",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509372-509446",
-      "distinctOriginalPositions": 19,
-      "distinctGeneratedPositions": 19,
-      "bodyOriginalPositions": 15,
-      "bodyGeneratedPositions": 15,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@8128-8247",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509451-509510",
-      "distinctOriginalPositions": 10,
-      "distinctGeneratedPositions": 10,
-      "bodyOriginalPositions": 7,
-      "bodyGeneratedPositions": 7,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@8265-8601",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509513-509693",
-      "distinctOriginalPositions": 38,
-      "distinctGeneratedPositions": 38,
-      "bodyOriginalPositions": 35,
-      "bodyGeneratedPositions": 35,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@8471-8519",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509625-509658",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 5,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@32-256",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509728-509874",
-      "distinctOriginalPositions": 31,
-      "distinctGeneratedPositions": 31,
-      "bodyOriginalPositions": 28,
-      "bodyGeneratedPositions": 28,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@277-1129",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@509877-510229",
-      "distinctOriginalPositions": 77,
-      "distinctGeneratedPositions": 77,
-      "bodyOriginalPositions": 74,
-      "bodyGeneratedPositions": 74,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@1152-3209",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510314-511118",
-      "distinctOriginalPositions": 15,
-      "distinctGeneratedPositions": 15,
-      "bodyOriginalPositions": 12,
-      "bodyGeneratedPositions": 12,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@1358-1403",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510369-510393",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@1410-1465",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510394-510423",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@1495-1591",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510446-510466",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@1605-2100",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510474-510676",
-      "distinctOriginalPositions": 13,
-      "distinctGeneratedPositions": 13,
-      "bodyOriginalPositions": 10,
-      "bodyGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@1695-1829",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510502-510549",
-      "distinctOriginalPositions": 10,
-      "distinctGeneratedPositions": 10,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 8,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@1907-2093",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510590-510675",
-      "distinctOriginalPositions": 9,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 7,
-      "bodyGeneratedPositions": 7,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@2024-2083",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510648-510673",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@2116-3202",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510686-511116",
-      "distinctOriginalPositions": 73,
-      "distinctGeneratedPositions": 73,
-      "bodyOriginalPositions": 70,
-      "bodyGeneratedPositions": 70,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@2984-3048",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511021-511044",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@3075-3169",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511063-511112",
-      "distinctOriginalPositions": 9,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 6,
-      "bodyGeneratedPositions": 6,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@3397-5141",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511128-511790",
-      "distinctOriginalPositions": 46,
-      "distinctGeneratedPositions": 46,
-      "bodyOriginalPositions": 44,
-      "bodyGeneratedPositions": 44,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@3840-3889",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511308-511335",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@4043-4088",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511414-511437",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@4096-4139",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511438-511459",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@4147-4198",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511460-511484",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@4217-4584",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511495-511621",
-      "distinctOriginalPositions": 35,
-      "distinctGeneratedPositions": 35,
-      "bodyOriginalPositions": 30,
-      "bodyGeneratedPositions": 30,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@4606-4940",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511635-511736",
-      "distinctOriginalPositions": 30,
-      "distinctGeneratedPositions": 30,
-      "bodyOriginalPositions": 25,
-      "bodyGeneratedPositions": 25,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@4952-5128",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511740-511787",
-      "distinctOriginalPositions": 15,
-      "distinctGeneratedPositions": 15,
-      "bodyOriginalPositions": 12,
-      "bodyGeneratedPositions": 12,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@32-256",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511823-511969",
-      "distinctOriginalPositions": 31,
-      "distinctGeneratedPositions": 31,
-      "bodyOriginalPositions": 28,
-      "bodyGeneratedPositions": 28,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@259-479",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511971-512092",
-      "distinctOriginalPositions": 27,
-      "distinctGeneratedPositions": 27,
-      "bodyOriginalPositions": 22,
-      "bodyGeneratedPositions": 22,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@481-634",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@512092-512186",
-      "distinctOriginalPositions": 12,
-      "distinctGeneratedPositions": 12,
-      "bodyOriginalPositions": 7,
-      "bodyGeneratedPositions": 7,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@636-876",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@512186-512349",
-      "distinctOriginalPositions": 19,
-      "distinctGeneratedPositions": 19,
-      "bodyOriginalPositions": 14,
-      "bodyGeneratedPositions": 14,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@878-1372",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@512349-512664",
-      "distinctOriginalPositions": 41,
-      "distinctGeneratedPositions": 41,
-      "bodyOriginalPositions": 36,
-      "bodyGeneratedPositions": 36,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@1916-2048",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@512670-512738",
-      "distinctOriginalPositions": 13,
-      "distinctGeneratedPositions": 15,
-      "bodyOriginalPositions": 9,
-      "bodyGeneratedPositions": 11,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@2343-2638",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@512757-512879",
-      "distinctOriginalPositions": 12,
-      "distinctGeneratedPositions": 13,
-      "bodyOriginalPositions": 9,
-      "bodyGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@2475-2631",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@512825-512877",
-      "distinctOriginalPositions": 11,
-      "distinctGeneratedPositions": 12,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 9,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@2746-3272",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@512894-513106",
-      "distinctOriginalPositions": 49,
-      "distinctGeneratedPositions": 49,
-      "bodyOriginalPositions": 46,
-      "bodyGeneratedPositions": 46,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@2664-5216",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@512882-514028",
-      "distinctOriginalPositions": 26,
-      "distinctGeneratedPositions": 26,
-      "bodyOriginalPositions": 23,
-      "bodyGeneratedPositions": 23,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@3316-3532",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513143-513227",
-      "distinctOriginalPositions": 14,
-      "distinctGeneratedPositions": 14,
-      "bodyOriginalPositions": 12,
-      "bodyGeneratedPositions": 12,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@3584-3795",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513258-513341",
-      "distinctOriginalPositions": 18,
-      "distinctGeneratedPositions": 18,
-      "bodyOriginalPositions": 14,
-      "bodyGeneratedPositions": 14,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@3848-4029",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513373-513480",
-      "distinctOriginalPositions": 15,
-      "distinctGeneratedPositions": 15,
-      "bodyOriginalPositions": 11,
-      "bodyGeneratedPositions": 11,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@4081-4696",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513511-513770",
-      "distinctOriginalPositions": 19,
-      "distinctGeneratedPositions": 19,
-      "bodyOriginalPositions": 17,
-      "bodyGeneratedPositions": 17,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@4279-4690",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513618-513768",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@4322-4682",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513652-513766",
-      "distinctOriginalPositions": 3,
-      "distinctGeneratedPositions": 3,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 1,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@4489-4672",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513685-513764",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@4566-4648",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513720-513762",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@4751-4869",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513804-513868",
-      "distinctOriginalPositions": 12,
-      "distinctGeneratedPositions": 12,
-      "bodyOriginalPositions": 10,
-      "bodyGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@4910-5185",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@513888-514025",
-      "distinctOriginalPositions": 23,
-      "distinctGeneratedPositions": 24,
-      "bodyOriginalPositions": 21,
-      "bodyGeneratedPositions": 22,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@6645-7000",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@514134-514281",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 6,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@6740-6993",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@514185-514279",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 5,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@6839-6978",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@514227-514277",
-      "distinctOriginalPositions": 10,
-      "distinctGeneratedPositions": 11,
-      "bodyOriginalPositions": 7,
-      "bodyGeneratedPositions": 8,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@7104-7261",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@514296-514358",
-      "distinctOriginalPositions": 13,
-      "distinctGeneratedPositions": 13,
-      "bodyOriginalPositions": 10,
-      "bodyGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@7020-10003",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@514284-515169",
-      "distinctOriginalPositions": 11,
-      "distinctGeneratedPositions": 11,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 8,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@7295-9978",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@514391-515166",
-      "distinctOriginalPositions": 137,
-      "distinctGeneratedPositions": 142,
-      "bodyOriginalPositions": 135,
-      "bodyGeneratedPositions": 140,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@7878-7993",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@514646-514693",
-      "distinctOriginalPositions": 13,
-      "distinctGeneratedPositions": 13,
-      "bodyOriginalPositions": 9,
-      "bodyGeneratedPositions": 9,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@8479-8577",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@514854-514887",
-      "distinctOriginalPositions": 10,
-      "distinctGeneratedPositions": 10,
-      "bodyOriginalPositions": 6,
-      "bodyGeneratedPositions": 6,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@10144-10658",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@515234-515456",
-      "distinctOriginalPositions": 24,
-      "distinctGeneratedPositions": 25,
-      "bodyOriginalPositions": 21,
-      "bodyGeneratedPositions": 22,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@10422-10651",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@515362-515454",
-      "distinctOriginalPositions": 16,
-      "distinctGeneratedPositions": 17,
-      "bodyOriginalPositions": 13,
-      "bodyGeneratedPositions": 14,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@10855-11455",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@515480-515712",
-      "distinctOriginalPositions": 45,
-      "distinctGeneratedPositions": 45,
-      "bodyOriginalPositions": 42,
-      "bodyGeneratedPositions": 42,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@11298-11398",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@515657-515704",
-      "distinctOriginalPositions": 9,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 6,
-      "bodyGeneratedPositions": 6,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@10771-14241",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@515468-516735",
-      "distinctOriginalPositions": 25,
-      "distinctGeneratedPositions": 25,
-      "bodyOriginalPositions": 22,
-      "bodyGeneratedPositions": 22,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@11503-12008",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@515753-515935",
-      "distinctOriginalPositions": 37,
-      "distinctGeneratedPositions": 37,
-      "bodyOriginalPositions": 33,
-      "bodyGeneratedPositions": 33,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@12060-12137",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@515966-515994",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@12192-12323",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516028-516055",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@12376-12537",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516087-516172",
-      "distinctOriginalPositions": 14,
-      "distinctGeneratedPositions": 14,
-      "bodyOriginalPositions": 10,
-      "bodyGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@12577-13294",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516191-516329",
-      "distinctOriginalPositions": 24,
-      "distinctGeneratedPositions": 24,
-      "bodyOriginalPositions": 22,
-      "bodyGeneratedPositions": 22,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@13335-14210",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516349-516732",
-      "distinctOriginalPositions": 58,
-      "distinctGeneratedPositions": 60,
-      "bodyOriginalPositions": 56,
-      "bodyGeneratedPositions": 58,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@13986-14047",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516624-516652",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 7,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@16914-16965",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516794-516819",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 7,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@14489-14531",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516834-516855",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@14558-16695",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516859-517680",
-      "distinctOriginalPositions": 17,
-      "distinctGeneratedPositions": 18,
-      "bodyOriginalPositions": 13,
-      "bodyGeneratedPositions": 14,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@14747-16688",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516949-517678",
-      "distinctOriginalPositions": 13,
-      "distinctGeneratedPositions": 14,
-      "bodyOriginalPositions": 10,
-      "bodyGeneratedPositions": 11,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@14912-16673",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@517018-517676",
-      "distinctOriginalPositions": 74,
-      "distinctGeneratedPositions": 75,
-      "bodyOriginalPositions": 71,
-      "bodyGeneratedPositions": 72,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@8957-9041",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@517583-517635",
-      "distinctOriginalPositions": 11,
-      "distinctGeneratedPositions": 11,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 8,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@16984-17049",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@517707-517741",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@17231-17389",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@517756-517818",
-      "distinctOriginalPositions": 13,
-      "distinctGeneratedPositions": 13,
-      "bodyOriginalPositions": 10,
-      "bodyGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@17151-18738",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@517744-518382",
-      "distinctOriginalPositions": 14,
-      "distinctGeneratedPositions": 14,
-      "bodyOriginalPositions": 11,
-      "bodyGeneratedPositions": 11,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@17475-18149",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@517862-518130",
-      "distinctOriginalPositions": 42,
-      "distinctGeneratedPositions": 42,
-      "bodyOriginalPositions": 40,
-      "bodyGeneratedPositions": 40,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@17994-18143",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518074-518128",
-      "distinctOriginalPositions": 15,
-      "distinctGeneratedPositions": 15,
-      "bodyOriginalPositions": 13,
-      "bodyGeneratedPositions": 13,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@18186-18711",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518150-518379",
-      "distinctOriginalPositions": 43,
-      "distinctGeneratedPositions": 43,
-      "bodyOriginalPositions": 41,
-      "bodyGeneratedPositions": 41,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@17069-17129",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518338-518365",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 7,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@18773-19170",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518398-518571",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 6,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@18870-19163",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518449-518569",
-      "distinctOriginalPositions": 11,
-      "distinctGeneratedPositions": 12,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 9,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@18998-19148",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518507-518567",
-      "distinctOriginalPositions": 11,
-      "distinctGeneratedPositions": 12,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 9,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@20288-20589",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518574-518809",
-      "distinctOriginalPositions": 15,
-      "distinctGeneratedPositions": 17,
-      "bodyOriginalPositions": 13,
-      "bodyGeneratedPositions": 15,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@22075-22147",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518812-518860",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 5,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@22168-23856",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@518863-519441",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 1,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/utils.js#1467b37535fc172fe6e2f215e446777ef39899a55847003915365decd56dce00@6747-6808",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@519153-519177",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@23880-24041",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@519444-519543",
-      "distinctOriginalPositions": 17,
-      "distinctGeneratedPositions": 17,
-      "bodyOriginalPositions": 14,
-      "bodyGeneratedPositions": 14,
-      "evidenceRule": "reciprocal-body-and-full-span"
     },
     {
       "library": "react-dom",
@@ -6138,496 +5188,6 @@
       "evidenceRule": "reciprocal-body-and-full-span"
     },
     {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@96-324",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1553421-1553649",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 7,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@153-299",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1553478-1553624",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 27,
-      "bodyOriginalPositions": 6,
-      "bodyGeneratedPositions": 26,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@324-456",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1553649-1553781",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 31,
-      "bodyOriginalPositions": 6,
-      "bodyGeneratedPositions": 26,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@464-798",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1553789-1554123",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 66,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 66,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@801-1433",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1554126-1554758",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 9,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@846-870",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1554171-1554195",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@935-1108",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1554260-1554433",
-      "distinctOriginalPositions": 3,
-      "distinctGeneratedPositions": 10,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@963-1004",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1554288-1554329",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 8,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@1436-1959",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1554761-1555284",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 29,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 29,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@1566-1593",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1554891-1554918",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 6,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@1654-1677",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1554979-1555002",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@1725-1830",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1555050-1555155",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 18,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 18,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@1831-1912",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1555156-1555237",
-      "distinctOriginalPositions": 3,
-      "distinctGeneratedPositions": 13,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 13,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@1913-1956",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1555238-1555281",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 13,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 12,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@2075-2345",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1555400-1555670",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@2450-2475",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1555775-1555800",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 7,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@2523-2729",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1555848-1556054",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 30,
-      "bodyOriginalPositions": 6,
-      "bodyGeneratedPositions": 27,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@2632-2682",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1555957-1556007",
-      "distinctOriginalPositions": 3,
-      "distinctGeneratedPositions": 13,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 13,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@2737-2830",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1556062-1556142",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 10,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 10,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@2924-3618",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1556236-1556930",
-      "distinctOriginalPositions": 39,
-      "distinctGeneratedPositions": 137,
-      "bodyOriginalPositions": 39,
-      "bodyGeneratedPositions": 137,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@3646-3969",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1556958-1557281",
-      "distinctOriginalPositions": 13,
-      "distinctGeneratedPositions": 80,
-      "bodyOriginalPositions": 13,
-      "bodyGeneratedPositions": 80,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@3972-4156",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1557284-1557468",
-      "distinctOriginalPositions": 7,
-      "distinctGeneratedPositions": 30,
-      "bodyOriginalPositions": 7,
-      "bodyGeneratedPositions": 30,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@4026-4067",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1557338-1557379",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 11,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 11,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@4811-5651",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1558123-1558963",
-      "distinctOriginalPositions": 23,
-      "distinctGeneratedPositions": 75,
-      "bodyOriginalPositions": 23,
-      "bodyGeneratedPositions": 75,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@5775-6361",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1559101-1559674",
-      "distinctOriginalPositions": 14,
-      "distinctGeneratedPositions": 64,
-      "bodyOriginalPositions": 14,
-      "bodyGeneratedPositions": 64,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@6449-6520",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1559762-1559833",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 5,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@6520-6587",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1559833-1559900",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@6587-6623",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1559900-1559936",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 7,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@6715-6997",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1560028-1560284",
-      "distinctOriginalPositions": 10,
-      "distinctGeneratedPositions": 22,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 18,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7050-7294",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1560337-1560555",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 20,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 19,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7070-7190",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1560357-1560451",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 6,
-      "evidenceRule": "reciprocal-body-and-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7295-7883",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1560556-1561130",
-      "distinctOriginalPositions": 14,
-      "distinctGeneratedPositions": 34,
-      "bodyOriginalPositions": 13,
-      "bodyGeneratedPositions": 29,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7379-7519",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1560640-1560779",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 17,
-      "bodyOriginalPositions": 6,
-      "bodyGeneratedPositions": 16,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7595-7744",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1560855-1561004",
-      "distinctOriginalPositions": 3,
-      "distinctGeneratedPositions": 8,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 8,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7626-7721",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1560886-1560981",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 5,
-      "bodyOriginalPositions": 1,
-      "bodyGeneratedPositions": 3,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7693-7717",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1560953-1560977",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 4,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7887-7969",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1561134-1561203",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 11,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 9,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@7972-8175",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1561206-1561396",
-      "distinctOriginalPositions": 8,
-      "distinctGeneratedPositions": 37,
-      "bodyOriginalPositions": 7,
-      "bodyGeneratedPositions": 33,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@8178-8337",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1561400-1561559",
-      "distinctOriginalPositions": 9,
-      "distinctGeneratedPositions": 32,
-      "bodyOriginalPositions": 8,
-      "bodyGeneratedPositions": 28,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@8426-8554",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1561650-1561766",
-      "distinctOriginalPositions": 5,
-      "distinctGeneratedPositions": 20,
-      "bodyOriginalPositions": 5,
-      "bodyGeneratedPositions": 20,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@8573-9197",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1561785-1562364",
-      "distinctOriginalPositions": 16,
-      "distinctGeneratedPositions": 43,
-      "bodyOriginalPositions": 16,
-      "bodyGeneratedPositions": 43,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@8810-8961",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1562023-1562174",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 33,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 33,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@8991-9096",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1562204-1562276",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 15,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 15,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@9271-9345",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1562438-1562499",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 7,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 7,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@9346-9966",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1562500-1563081",
-      "distinctOriginalPositions": 22,
-      "distinctGeneratedPositions": 82,
-      "bodyOriginalPositions": 21,
-      "bodyGeneratedPositions": 79,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@9475-9518",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1562629-1562672",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 9,
-      "bodyOriginalPositions": 2,
-      "bodyGeneratedPositions": 9,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@9975-10190",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1563090-1563305",
-      "distinctOriginalPositions": 3,
-      "distinctGeneratedPositions": 11,
-      "bodyOriginalPositions": 3,
-      "bodyGeneratedPositions": 11,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@10292-10550",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1563407-1563665",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 22,
-      "bodyOriginalPositions": 4,
-      "bodyGeneratedPositions": 22,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@2.0.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/dist/index.modern.mjs#6901b82b0b9ef708554b8dfb53fa517f8458c34697f2b91e362c6ce10727eaee@10554-10941",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1563669-1564056",
-      "distinctOriginalPositions": 6,
-      "distinctGeneratedPositions": 34,
-      "bodyOriginalPositions": 6,
-      "bodyGeneratedPositions": 34,
-      "evidenceRule": "reciprocal-body"
-    },
-    {
       "library": "react-responsive",
       "source": "webpack://@freecodecamp/node_modules/.pnpm/react-responsive@9.0.2_react@18.3.1/node_modules/react-responsive/dist/react-responsive.js#241a6a0fe9e94309cb52a112e81301596ced65344742fdf10efc8b9b2e5bea84@741-5768",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1567475-1569213",
@@ -7186,6 +5746,30 @@
       "bodyOriginalPositions": 3,
       "bodyGeneratedPositions": 8,
       "evidenceRule": "reciprocal-body"
+    },
+    {
+      "library": "@loadable/component",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/@loadable+component@5.16.7_react@18.3.1/node_modules/@loadable/component/dist/esm/loadable.esm.mjs#589316075dbc6a0805dcbcf14ed7d2901ba455d4651acb72e7e69539f1cadf1d@456-650",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@6141-6250",
+      "distinctOriginalPositions": 7,
+      "distinctGeneratedPositions": 23,
+      "evidenceRule": "reciprocal-full-span"
+    },
+    {
+      "library": "@loadable/component",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/@loadable+component@5.16.7_react@18.3.1/node_modules/@loadable/component/dist/esm/loadable.esm.mjs#589316075dbc6a0805dcbcf14ed7d2901ba455d4651acb72e7e69539f1cadf1d@5752-5802",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@7361-7384",
+      "distinctOriginalPositions": 2,
+      "distinctGeneratedPositions": 2,
+      "evidenceRule": "reciprocal-full-span"
+    },
+    {
+      "library": "@loadable/component",
+      "source": "webpack://@freecodecamp/node_modules/.pnpm/@loadable+component@5.16.7_react@18.3.1/node_modules/@loadable/component/dist/esm/loadable.esm.mjs#589316075dbc6a0805dcbcf14ed7d2901ba455d4651acb72e7e69539f1cadf1d@12662-12865",
+      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@9984-10039",
+      "distinctOriginalPositions": 3,
+      "distinctGeneratedPositions": 11,
+      "evidenceRule": "reciprocal-full-span"
     },
     {
       "library": "store",
@@ -7812,38 +6396,6 @@
       "evidenceRule": "reciprocal-full-span"
     },
     {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@1309-1340",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@510349-510361",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@3913-3951",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511353-511368",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/lib/history.js#b62696bcb27ab90af6d9c284550bd9bdac15ec0ac41fa30272584ab0182b0157@3978-4019",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@511389-511404",
-      "distinctOriginalPositions": 4,
-      "distinctGeneratedPositions": 4,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
-      "library": "@gatsbyjs/reach-router",
-      "source": "webpack://@freecodecamp/node_modules/.pnpm/@gatsbyjs+reach-router@1.3.9_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/@gatsbyjs/reach-router/es/index.js#36b2c96301321989524d1f6dec164551a4a8e8803f2aec11ffb7b8b3bf64f504@14298-14313",
-      "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@516766-516778",
-      "distinctOriginalPositions": 2,
-      "distinctGeneratedPositions": 2,
-      "evidenceRule": "reciprocal-full-span"
-    },
-    {
       "library": "store",
       "source": "webpack://@freecodecamp/node_modules/.pnpm/store@2.0.12/node_modules/store/storages/memoryStorage.js#f86fd31d407083fb61817496aabaab3d13b724d97aa430746d66792ca3c46946@409-458",
       "bundled": "<local>/app-a177237cb29bf3d6c151.js#b3175711838db8e4632051ecae00947b9efb1eaf45157d7e6b041a6a5076c107@1399100-1399124",
@@ -8277,27 +6829,27 @@
     }
   ],
   "observedSplit": {
-    "count": 7,
-    "denominator": 869,
-    "percent": 0.8055235903337169
+    "count": 0,
+    "denominator": 705,
+    "percent": 0
   },
   "observedCombine": {
-    "count": 5,
-    "denominator": 871,
-    "percent": 0.574052812858783
+    "count": 2,
+    "denominator": 701,
+    "percent": 0.28530670470756064
   },
   "removePercent": null,
   "createPercent": null,
   "missingSourceContents": [],
   "failures": [],
   "sourceFunctionAccounting": {
-    "total": 1546,
-    "oneToOne": 852,
-    "multipleTargets": 7,
-    "multipleContributors": 11,
-    "unresolvedBody": 10,
-    "insufficientEvidence": 125,
-    "noBodyEdge": 541
+    "total": 1385,
+    "oneToOne": 707,
+    "multipleTargets": 0,
+    "multipleContributors": 6,
+    "unresolvedBody": 8,
+    "insufficientEvidence": 119,
+    "noBodyEdge": 545
   },
   "relationshipCaution": "Mapping multiplicity is positional provenance, not proof of semantic splitting or combining.",
   "capture": {
@@ -8701,9 +7253,10 @@
     "store",
     "@fortawesome/fontawesome-svg-core",
     "@fortawesome/react-fontawesome",
-    "@gatsbyjs/reach-router",
-    "@paypal/react-paypal-js"
+    "@paypal/react-paypal-js",
+    "@loadable/component"
   ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -8726,13 +7279,40 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
     "archiveRecord": "bundling-dataset/webpack/freeCodeCamp--freeCodeCamp/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "5c29a85e5165a13e9451468af13ddd80356ccffca59b00bfffa18605d5e61bbd",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "72835486be8f5bbd1965fadef8a904dd083da88ceba5d5f7e849d6f918e37aaa",
-    "moduleScopeSHA256": "74a2edc4f7bf3f83f355d64d5d55f44d3737c9bbe186f226f69b32132596676f"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "d70f49b05ac92ba8a98eebad9f40f7afb7f303bf4975e5098301ae9932c0f5c6",
+    "moduleScopeSHA256": "74a2edc4f7bf3f83f355d64d5d55f44d3737c9bbe186f226f69b32132596676f",
+    "duplicateAuditSHA256": "b647811d81e2a1e2f75955447c7653f1ba8dd5ba1e0b58b25afa471f9267c7e1"
+  },
+  "evaluationLibraries": [
+    "react-responsive",
+    "date-fns-tz",
+    "validator",
+    "react-dom",
+    "react",
+    "store",
+    "@fortawesome/fontawesome-svg-core",
+    "@fortawesome/react-fontawesome",
+    "@paypal/react-paypal-js",
+    "@loadable/component"
+  ]
 }

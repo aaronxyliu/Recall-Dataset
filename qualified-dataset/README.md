@@ -1,25 +1,27 @@
 # Qualified ReCall Dataset
 
-**41 repositories, 335 repository/library instances, and 69,580 one-to-one function pairs.**
+**39 repositories, 315 repository/library instances, and 49,604 one-to-one function pairs.**
 
 Every included repository has **3–10 declared production libraries**. Each selected library has at least **three independently checkable source-function witnesses with ≥10 own-body POG property-operation features**. Source eligibility is checked before new builds. Existing archives are re-filtered with the same source-only rule. **No initial-anchor or target-matching threshold is used.**
 
 Only function pairs from reviewed **module dependencies** are counted. Standalone vendor/global-script copies are excluded before the correspondence graph is built; UMD/IIFE module output remains eligible. See the [module policy](../qualification/module-dependencies/POLICY.md) and per-repository `module-scope.json` / `module-evidence/`. Captured JS/maps are retained in full for provenance, while map-reference snapshots follow module-only scope.
 
+Scored libraries also pass the [full-runtime duplication policy](../qualification/no-duplicate-libraries/POLICY.md), including copies in non-scored global scripts. Duplicated and unauditable libraries are replaced or removed. Previously eligible but unobserved libraries remain explicitly unscored; they do not supply replacement candidates or recovery denominators. Use each subject’s `evaluationLibraries` and `reference-manifest.json` as recovery inputs; `eligibility/` contains qualification witnesses rather than extra evaluation cases.
+
 | Bundler | Repositories | Library instances | Function pairs |
 |---|---:|---:|---:|
 | bun | 2 | 9 | 1,688 |
-| esbuild | 6 | 41 | 5,208 |
-| parcel | 3 | 12 | 2,896 |
-| rolldown | 2 | 20 | 9,803 |
-| rollup | 3 | 9 | 1,062 |
-| rspack | 1 | 10 | 1,509 |
+| esbuild | 5 | 32 | 5,410 |
+| parcel | 3 | 11 | 2,453 |
+| rolldown | 2 | 20 | 6,677 |
+| rollup | 2 | 6 | 938 |
+| rspack | 1 | 10 | 773 |
 | tsup | 0 | 0 | 0 |
-| turbopack | 8 | 80 | 8,729 |
-| vite | 8 | 79 | 19,630 |
-| webpack | 8 | 75 | 19,055 |
+| turbopack | 8 | 77 | 2,994 |
+| vite | 8 | 78 | 17,553 |
+| webpack | 8 | 72 | 11,118 |
 
-The source evidence contains 1,005 function witnesses; these are lower-bound certificates, not a census of every function. 107 selected library instances have zero accepted one-to-one pairs. Correspondence counts are reported separately and do not determine source eligibility.
+The source evidence contains 945 function witnesses; these are lower-bound certificates, not a census of every function. 96 selected library instances have zero accepted one-to-one pairs. Correspondence counts are reported separately and do not determine source eligibility.
 
 The [index](index.json) defines active membership. Each subject includes captured runtime JS, source maps, independently span-verified function pairs, the original frontend manifest, and source witnesses under `eligibility/`. `reference-manifest.json` separately lists available original text from captured maps. Source eligibility uses locked package/workspace code; correspondence attribution follows the existing package-name collector and does not prove that every captured copy is one installed version.
 

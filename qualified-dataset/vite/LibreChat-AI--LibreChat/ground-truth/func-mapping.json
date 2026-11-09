@@ -22890,6 +22890,7 @@
     "@modelcontextprotocol/ext-apps",
     "@radix-ui/react-toast"
   ],
+  "unscoredLibraries": [],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -22912,13 +22913,40 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
     "archiveRecord": "bundling-dataset/vite/LibreChat-AI--LibreChat/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "0c45d1e81cdc7b8b6530ffc273d9aab758effb1643a15632e41713241651cb33",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "86c6f5d62b976aae65d3b81775abd5a5f8df466f9d4a861e372c054678234999",
-    "moduleScopeSHA256": "7512e5dbba867037c910b8c40dbfd665d00a7ac64f62dc85a681836e9099ed1a"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "e433c9bd42cbf26951791b06a89fb2a00b07074f0e636bde6b1efe70a058cd96",
+    "moduleScopeSHA256": "7512e5dbba867037c910b8c40dbfd665d00a7ac64f62dc85a681836e9099ed1a",
+    "duplicateAuditSHA256": "4c86af76c67f876672e7c4f5a3a9a86acb3a02c8611465f839bfd99fc9cba5ce"
+  },
+  "evaluationLibraries": [
+    "@mcp-ui/client",
+    "react",
+    "@ariakit/react-components",
+    "swr",
+    "react-dom",
+    "framer-motion",
+    "jotai",
+    "@marsidev/react-turnstile",
+    "@modelcontextprotocol/ext-apps",
+    "@radix-ui/react-toast"
+  ]
 }

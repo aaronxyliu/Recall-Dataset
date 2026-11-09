@@ -14,20 +14,44 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "@angular/common",
+      "@angular/core",
+      "@angular/platform-browser-dynamic",
+      "@angular/router",
+      "zone.js"
+    ],
+    "preferredLibraries": [
+      "@angular/animations",
+      "@angular/cdk",
+      "@angular/compiler",
+      "@angular/forms",
+      "@angular/platform-browser",
+      "rxjs",
+      "tslib"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/esbuild/swimlane--ngx-datatable/audit.json",
+      "sha256": "26cdcfebc141f918ee68dc05e50a0290a3867ad155b9a8a1025c0649020a5fe9",
+      "retainedUnobservedZeroPairLibraries": [
+        "@angular/animations",
+        "@angular/cdk",
+        "@angular/compiler",
+        "@angular/forms"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@angular/animations",
     "@angular/cdk",
-    "@angular/common",
     "@angular/compiler",
-    "@angular/core",
     "@angular/forms",
     "@angular/platform-browser",
-    "@angular/platform-browser-dynamic",
-    "@angular/router",
     "rxjs",
-    "tslib",
-    "zone.js"
+    "tslib"
   ],
   "libraries": [
     {
@@ -225,103 +249,6 @@
       "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
     },
     {
-      "library": "@angular/common",
-      "declaredVersion": "22.0.8",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@angular/common",
-        "version": "22.0.8",
-        "integrity": "sha512-FnwkXndUgAyWk1/p5flMfocIUtuuneJ01mxC1FxRc5/bdWTyNVeQDsM9Lw4PEAPc0AHu//EnblegRq8o6LGdUQ==",
-        "shasum": "833d0c8ad1a1b07f868dab3db28c9ceb4c969e98",
-        "tarballSHA256": "42936cb861ec74e088633a606e82f35c1c912413bd44f4832f2117f6b9c0f151",
-        "bytes": 951942,
-        "lockfile": "yarn.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 30,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "fesm2022/_common_module-chunk.mjs",
-          "source": "source-js/1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8.js",
-          "sourceSHA256": "1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8",
-          "span": [
-            8005,
-            8256
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "dc4842bbc53f03ff7c612e5b9a4775d4162b99a5ff617d262c1a74a4926f874a",
-          "codeSHA256": "9b6d05102e930521de8455613d03819b1fe401795f16b2248d649a3f62941d18",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "ccaf541205ae5690",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 12,
-            "distinctGraphOperationPropertyPairs": 7,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "fesm2022/_common_module-chunk.mjs",
-          "source": "source-js/1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8.js",
-          "sourceSHA256": "1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8",
-          "span": [
-            9384,
-            9737
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "0fa7790256865b61c1d22e709e69c4ab37f4f4159ff68a89f9a563a1d199be06",
-          "codeSHA256": "2ea403919eee0afdcb2f3455acb87412d92d4b3e82c1819a47d06c6c1529e6e6",
-          "features": {
-            "propertyOperations": 14,
-            "distinctOperationPropertyPairs": 8,
-            "pogHash": "6818daff84245f7a",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 14,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "fesm2022/_common_module-chunk.mjs",
-          "source": "source-js/1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8.js",
-          "sourceSHA256": "1d01ec31d79076da3da98d6ec6f13671ee06a2193ea5cb056dbfd7a88e3c1da8",
-          "span": [
-            11745,
-            12206
-          ],
-          "name": "getLocaleNumberSymbol",
-          "normalizedASTSHA256": "48c01ede63707810579e6e966522c635dcf7d8e2a98bee9d9930945c8a2ea588",
-          "codeSHA256": "266636f3694909c159a0684a6c4b74e767f1137a734afd14a032c4a40ae72175",
-          "features": {
-            "propertyOperations": 13,
-            "distinctOperationPropertyPairs": 6,
-            "pogHash": "8dac635660ed1d96",
-            "graphNodes": 11,
-            "graphEdges": 12,
-            "graphOperationOccurrences": 13,
-            "distinctGraphOperationPropertyPairs": 6,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/86224547373741cd99de",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
-        }
-      ],
-      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
-      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
-    },
-    {
       "library": "@angular/compiler",
       "declaredVersion": "22.0.8",
       "origin": {
@@ -409,103 +336,6 @@
         }
       ],
       "proofDirectory": "eligibility/libraries/01a8ce8bf523a95d09a9",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
-        }
-      ],
-      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
-      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
-    },
-    {
-      "library": "@angular/core",
-      "declaredVersion": "22.0.8",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@angular/core",
-        "version": "22.0.8",
-        "integrity": "sha512-HagZZVzbtXd+ZhMb++k/HOtr/UTiBROHHH7xutgYgnSnPRXX0kCca5EQ02OZ/OCWfsMP5liSJDfwiePFULKA6Q==",
-        "shasum": "583a71d7d8e589643f5e1e681bd3d38473faf271",
-        "tarballSHA256": "7374c345d547815efc5a33661b1500645e9f9845e424c0c1b3e87674466ba6a3",
-        "bytes": 1657748,
-        "lockfile": "yarn.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 19,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "fesm2022/_debug_node-chunk.mjs",
-          "source": "source-js/c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6.js",
-          "sourceSHA256": "c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6",
-          "span": [
-            6000,
-            8194
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "117cb732d470d3a3ea0af5a6c81a059bcf5e7873327e40435165e0539b22ab75",
-          "codeSHA256": "3cb7061e7380dd4f5b90e7f45a6ff6a11eca45b6ff5a5f6747ce93dd732fcf34",
-          "features": {
-            "propertyOperations": 52,
-            "distinctOperationPropertyPairs": 27,
-            "pogHash": "b6d358980bacdcda",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 52,
-            "distinctGraphOperationPropertyPairs": 27,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "fesm2022/_debug_node-chunk.mjs",
-          "source": "source-js/c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6.js",
-          "sourceSHA256": "c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6",
-          "span": [
-            9824,
-            10587
-          ],
-          "name": "ngOnChangesSetInput",
-          "normalizedASTSHA256": "bb49d0dda83b5309d8c76d3264461ebdcac741219cb16bce89c4638df3e0610d",
-          "codeSHA256": "03b0f8971cd18de4a1dce3603e614b7d26505331fa4dfc0d8fc2a0d05ca07ccf",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 9,
-            "pogHash": "5011241988235524",
-            "graphNodes": 14,
-            "graphEdges": 16,
-            "graphOperationOccurrences": 14,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "fesm2022/_debug_node-chunk.mjs",
-          "source": "source-js/c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6.js",
-          "sourceSHA256": "c2180060637aa3ce7122f0ccbf2eaedb704941e880efe7ab4528fc18a6ed2cf6",
-          "span": [
-            11643,
-            12348
-          ],
-          "name": "registerPreOrderHooks",
-          "normalizedASTSHA256": "1494f978a92f4a55a081bc76f30168fa7897fdb066adeeb7a943989ec8c93594",
-          "codeSHA256": "e608ac133bc963600024a17776173166271b5b08c92b6c9be6a4b43dd89e8f06",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 5,
-            "pogHash": "7c4061a4e17d920b",
-            "graphNodes": 12,
-            "graphEdges": 14,
-            "graphOperationOccurrences": 14,
-            "distinctGraphOperationPropertyPairs": 5,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/69b1abc2e958fff0c1d7",
       "licenses": [
         {
           "path": "licenses/LICENSE",
@@ -700,103 +530,6 @@
         }
       ],
       "proofDirectory": "eligibility/libraries/95c35c42514970be4986",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "15e77c4692114f87c2020353626c868472c23954a4ed37ecc4c1522d14be1eb7"
-        }
-      ],
-      "lockfileSHA256": "68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8",
-      "lockfileSnapshot": "lockfiles/68b2e810dc0ef26c4b03d4da2c4159cd613a799bd96593072b9edba5acdf45b8-yarn.lock"
-    },
-    {
-      "library": "@angular/router",
-      "declaredVersion": "22.0.8",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@angular/router",
-        "version": "22.0.8",
-        "integrity": "sha512-9NO5K03QqfWMWWZ+Uu4WqBSLw/YAot918cBUFdgl6mTUOfoHi/xWO5pAt0SEpbXMHmWafJBdb99GRlAGybGSTg==",
-        "shasum": "5971cb3b96c4cda4d3fe6e7fcafe75c4130e9f87",
-        "tarballSHA256": "8ed9c4bce282451c1da7239ffd67fda0f9186d695e18ae1d67df5be27cd5453e",
-        "bytes": 281598,
-        "lockfile": "yarn.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 37,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "fesm2022/_router_module-chunk.mjs",
-          "source": "source-js/e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779.js",
-          "sourceSHA256": "e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779",
-          "span": [
-            2933,
-            3183
-          ],
-          "name": "updateState",
-          "normalizedASTSHA256": "ec51f5b20b5727652129ca8398bda258207b6aedb991f2525c453bfe7357d549",
-          "codeSHA256": "6d3cbfce049d44e550e52f7af9b01c6ab1ac265000cac7aff1fce8167b69479d",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 8,
-            "pogHash": "8d16ceca2ee3c6b4",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 10,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "fesm2022/_router_module-chunk.mjs",
-          "source": "source-js/e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779.js",
-          "sourceSHA256": "e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779",
-          "span": [
-            6966,
-            7900
-          ],
-          "name": "constructor",
-          "normalizedASTSHA256": "6ab4f1b23b18f6c720791e818a0e94e9371801b95eece4afec0e0bbf09d1c8ba",
-          "codeSHA256": "dfc6e6ca1644a4369184e1cc44fb5da572d6ccb1e43838af64314ec45ba45eeb",
-          "features": {
-            "propertyOperations": 13,
-            "distinctOperationPropertyPairs": 13,
-            "pogHash": "e32f3d31a66edf36",
-            "graphNodes": 13,
-            "graphEdges": 16,
-            "graphOperationOccurrences": 16,
-            "distinctGraphOperationPropertyPairs": 13,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "fesm2022/_router_module-chunk.mjs",
-          "source": "source-js/e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779.js",
-          "sourceSHA256": "e3f55d91e230be06071a7320d03850a512590e4b0ca28228b37a796b4804a779",
-          "span": [
-            8710,
-            9501
-          ],
-          "name": "onClick",
-          "normalizedASTSHA256": "d9ef26ad9e5c64b2bb4fb8d4dcd9ab36ae83c2f38e11b167a8325d8c6d486917",
-          "codeSHA256": "ebddba0a066568e4dfaa21dea20f713b07392ec7e7817304d2037cae638e3566",
-          "features": {
-            "propertyOperations": 18,
-            "distinctOperationPropertyPairs": 16,
-            "pogHash": "cc9b3876145f08e9",
-            "graphNodes": 19,
-            "graphEdges": 26,
-            "graphOperationOccurrences": 43,
-            "distinctGraphOperationPropertyPairs": 15,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/a58a5f598655b5b17445",
       "licenses": [
         {
           "path": "licenses/LICENSE",
@@ -1897,33 +1630,30 @@
   "selectedLibraries": [
     "@angular/animations",
     "@angular/cdk",
-    "@angular/common",
     "@angular/compiler",
-    "@angular/core",
     "@angular/forms",
     "@angular/platform-browser",
-    "@angular/router",
     "rxjs",
     "tslib"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "1803c245acde0a2f0a41d4e5608d5a63554c4ba22c3194cb4bb4206c9c925514",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:02.277Z",
+  "started": "2026-11-09T10:00:58.148Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:02.778Z",
+  "finished": "2026-11-09T10:00:58.397Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/esbuild/swimlane--ngx-datatable/qualification.json",
-  "sourceEligibilityRecordSHA256": "6051c4058f9039cd45ff630791a450176c0497af4b7d013b37c4433a3294db4a",
-  "organizationSignature": "dddd8479a917869030e16d86862c9f495fe7d8f0233541715b1d9f6051db03a1"
+  "sourceEligibilityRecordSHA256": "88bd8a1324f8c934c8b090ae2a87aca5590808c6757b27b908177ee9f9939f92",
+  "organizationSignature": "9e984252df48cfa8185c41549e81c97b745bb8a9643ee21a98c2dc41df2a6816"
 }

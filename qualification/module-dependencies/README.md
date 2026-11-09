@@ -1,5 +1,7 @@
 # Module-dependency scope review — 2026-11-09
 
+Historical module-only stage at commit `cc5df6cf`. The current active dataset additionally applies [library-duplication exclusions](../no-duplicate-libraries/POLICY.md). These stage counts are preserved for provenance.
+
 Reviewed **42 repositories**. Active result: **41 repositories, 335 library instances, 69,580 pairs**. Removed 6,703 former pairs from standalone/global ingress. Other reviewed repositories retain their pair counts.
 
 | Subject | Before | After | Result |

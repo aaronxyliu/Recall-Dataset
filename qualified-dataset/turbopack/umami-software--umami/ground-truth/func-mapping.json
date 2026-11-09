@@ -14,16 +14,16 @@
   "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
   "imageID": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
   "coverage": {
+    "@tanstack/react-query": 8,
+    "@umami/react-zen": 89,
+    "chart.js": 75,
     "@clickhouse/client": 0,
     "@dicebear/core": 0,
     "@prisma/adapter-pg": 0,
     "@prisma/client": 0,
     "@svgr/cli": 0,
-    "@tanstack/react-query": 8,
-    "@umami/react-zen": 89,
     "bcryptjs": 0,
-    "chalk": 0,
-    "chart.js": 75
+    "chalk": 0
   },
   "pairs": [
     {
@@ -8296,6 +8296,15 @@
     "chalk",
     "chart.js"
   ],
+  "unscoredLibraries": [
+    "@clickhouse/client",
+    "@dicebear/core",
+    "@prisma/adapter-pg",
+    "@prisma/client",
+    "@svgr/cli",
+    "bcryptjs",
+    "chalk"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -8318,13 +8327,33 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
     "archiveRecord": "bundling-dataset/turbopack/umami-software--umami/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "30e6503bd9668253f03168c876e17e68c62f1c17852caae6d3c9fa9deb0f8b98",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "433df9f18b42b7072d73a4062c716bac3129c0d33c1200113e49e4a6a54ff950",
-    "moduleScopeSHA256": "0b21244f208bd1ed2bba57909c0c4aba1a1b0789eef352cfe9fbf8cb063ce832"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "7260e1d675849cb398d4cdd803ed2f64d3eb09c424c4a26fdead678c0aa3087c",
+    "moduleScopeSHA256": "0b21244f208bd1ed2bba57909c0c4aba1a1b0789eef352cfe9fbf8cb063ce832",
+    "duplicateAuditSHA256": "715a143c9e80b0154c19a9ce595bdc56ade3c5bb19b345944843adc855207d16"
+  },
+  "evaluationLibraries": [
+    "@tanstack/react-query",
+    "@umami/react-zen",
+    "chart.js"
+  ]
 }

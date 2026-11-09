@@ -14,15 +14,42 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "@excalidraw/random-username",
+      "jotai"
+    ],
+    "preferredLibraries": [
+      "react-dom",
+      "@sentry/browser",
+      "i18next-browser-languagedetector",
+      "react",
+      "firebase",
+      "socket.io-client",
+      "uqr",
+      "vite-plugin-html",
+      "callsites",
+      "idb-keyval"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/vite/excalidraw--excalidraw/audit.json",
+      "sha256": "e8ed85f6e38575c0bfb45b4c2474ebea4ace2af5c1a1a215078dcec0cc985eb3",
+      "retainedUnobservedZeroPairLibraries": [
+        "firebase",
+        "socket.io-client",
+        "uqr",
+        "vite-plugin-html"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
-    "@excalidraw/random-username",
     "@sentry/browser",
     "callsites",
     "firebase",
     "i18next-browser-languagedetector",
     "idb-keyval",
-    "jotai",
     "react",
     "react-dom",
     "socket.io-client",
@@ -419,103 +446,6 @@
       "lockfileSnapshot": "lockfiles/30e07089a38c6e93d6978740c678fb14f82543cac8216ffcfa81e8ca142f8f96-yarn.lock"
     },
     {
-      "library": "jotai",
-      "declaredVersion": "2.11.0",
-      "origin": {
-        "kind": "npm-package",
-        "name": "jotai",
-        "version": "2.11.0",
-        "integrity": "sha512-zKfoBBD1uDw3rljwHkt0fWuja1B76R7CjznuBO+mSX6jpsO1EBeWNRKpeaQho9yPI/pvCv4recGfgOXGxwPZvQ==",
-        "shasum": "923f8351e0b2d721036af892c0ae25625049d120",
-        "tarballSHA256": "25376a30f95fb401bf33f987b07ab9e8210a9da8399677700676c6b03c6c89e3",
-        "bytes": 79900,
-        "lockfile": "yarn.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 2,
-      "parsedFunctions": 8,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "esm/babel/plugin-debug-label.mjs",
-          "source": "source-js/761bf1d0022a652b774d6908b6a611f4c66332303572e8b4b3307df0873d4134.js",
-          "sourceSHA256": "761bf1d0022a652b774d6908b6a611f4c66332303572e8b4b3307df0873d4134",
-          "span": [
-            1378,
-            2211
-          ],
-          "name": "ExportDefaultDeclaration",
-          "normalizedASTSHA256": "9541069e8a20fceaa54aee762a16b497e6b61f665ddfb9abac710380837caa17",
-          "codeSHA256": "b16802b5998c174e1d0a0a8d5a09e16410556bd75792d1ec6a4eb93d93789f3c",
-          "features": {
-            "propertyOperations": 18,
-            "distinctOperationPropertyPairs": 14,
-            "pogHash": "624e2b8d6cb5ef29",
-            "graphNodes": 19,
-            "graphEdges": 23,
-            "graphOperationOccurrences": 31,
-            "distinctGraphOperationPropertyPairs": 14,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "esm/babel/plugin-debug-label.mjs",
-          "source": "source-js/761bf1d0022a652b774d6908b6a611f4c66332303572e8b4b3307df0873d4134.js",
-          "sourceSHA256": "761bf1d0022a652b774d6908b6a611f4c66332303572e8b4b3307df0873d4134",
-          "span": [
-            2237,
-            2811
-          ],
-          "name": "VariableDeclarator",
-          "normalizedASTSHA256": "9f2d5149f4a85089c02c5e6d76c4fc4f54efe8fcd87df96df3956196e19add72",
-          "codeSHA256": "4536dcf74c143395d89833d9f90ac4711777296a3d88f87a4f7f2ff7d15445e9",
-          "features": {
-            "propertyOperations": 24,
-            "distinctOperationPropertyPairs": 15,
-            "pogHash": "f9393b154300dc5b",
-            "graphNodes": 12,
-            "graphEdges": 14,
-            "graphOperationOccurrences": 24,
-            "distinctGraphOperationPropertyPairs": 15,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "esm/babel/plugin-react-refresh.mjs",
-          "source": "source-js/8ca7743912126163d74d600736ef06db4fbdee8fc10482be51e46612b4b50fb1.js",
-          "sourceSHA256": "8ca7743912126163d74d600736ef06db4fbdee8fc10482be51e46612b4b50fb1",
-          "span": [
-            1994,
-            2630
-          ],
-          "name": "ExportDefaultDeclaration",
-          "normalizedASTSHA256": "1e72ad9ec408e071bf9f1bf90245d3d68267a2d1e1496f1b15231624958783c7",
-          "codeSHA256": "b0df604a0fdadefd1e0bd7ff6400fac21a340fcd55770aa1663cc24d7d1c1935",
-          "features": {
-            "propertyOperations": 11,
-            "distinctOperationPropertyPairs": 9,
-            "pogHash": "8db8ed04cea793e0",
-            "graphNodes": 13,
-            "graphEdges": 15,
-            "graphOperationOccurrences": 16,
-            "distinctGraphOperationPropertyPairs": 9,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/a2bd07aac8f9d58ee852",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "cea97f0609de01f9e17d7b6d5fb5716e7de6404662c56f8c286aef9c5b4ca09c"
-        }
-      ],
-      "lockfileSHA256": "30e07089a38c6e93d6978740c678fb14f82543cac8216ffcfa81e8ca142f8f96",
-      "lockfileSnapshot": "lockfiles/30e07089a38c6e93d6978740c678fb14f82543cac8216ffcfa81e8ca142f8f96-yarn.lock"
-    },
-    {
       "library": "firebase",
       "declaredVersion": "11.3.1",
       "origin": {
@@ -904,7 +834,6 @@
     "@sentry/browser",
     "i18next-browser-languagedetector",
     "react",
-    "jotai",
     "firebase",
     "socket.io-client",
     "uqr",
@@ -912,22 +841,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "8f205d668b7e09fb3c1878688d285c7ed51571434cd53caf27a556d2a5d4038b",
     "manifestRelative": "excalidraw-app/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:09.835Z",
+  "started": "2026-11-09T10:01:04.226Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:10.090Z",
+  "finished": "2026-11-09T10:01:04.325Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/excalidraw--excalidraw/qualification.json",
-  "sourceEligibilityRecordSHA256": "e12e4b408f56d49831d67997769413b6b4916910be11740e3d0b1397acf845e0",
-  "organizationSignature": "2dd617483d3f4eeb0965a8b7ffa7d02ed36d7e2145accb621d0f6b2485487437"
+  "sourceEligibilityRecordSHA256": "dad45595175a7b7dea492b0ba77ec16bd0d7695973d1047ab0eee0c237b4eb60",
+  "organizationSignature": "062979b95912b3c4858732efba97a3d26d8b4ec3a8b80df8a3db3f936e369efe"
 }

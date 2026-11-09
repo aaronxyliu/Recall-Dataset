@@ -13,9 +13,9 @@
   "repo": "micahkepe/jsongrep",
   "commit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
   "coverage": {
-    "@bytecodealliance/jco": 0,
     "react": 2,
-    "react-dom": 4
+    "react-dom": 4,
+    "@bytecodealliance/jco": 0
   },
   "pairs": [
     {
@@ -12124,6 +12124,9 @@
     "react",
     "react-dom"
   ],
+  "unscoredLibraries": [
+    "@bytecodealliance/jco"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -12146,13 +12149,32 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
     "archiveRecord": "bundling-dataset/bun/micahkepe--jsongrep/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "469b610dc8abc26051195d4c6f285f66d607b61149910a9ea0fb09f03a2e609a",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "b6c0d99bd043a77eebbd9bbacaf4bae3b0def34bb0c6a2ab273687cebaed8988",
-    "moduleScopeSHA256": "458b10c008bb0a0c537f1a71f5146434eb175228703009e34cd0df93d4c6babf"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "d325081ed94b964221776e24d9bdc4dd954746e648c23c132f6832c240b77e6c",
+    "moduleScopeSHA256": "458b10c008bb0a0c537f1a71f5146434eb175228703009e34cd0df93d4c6babf",
+    "duplicateAuditSHA256": "519b95659ef0228341a05511de892538e708c39b6436c1f3982921d9e955a672"
+  },
+  "evaluationLibraries": [
+    "react",
+    "react-dom"
+  ]
 }

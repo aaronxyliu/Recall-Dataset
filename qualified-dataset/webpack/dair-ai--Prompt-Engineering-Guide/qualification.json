@@ -14,13 +14,39 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "@fortawesome/free-solid-svg-icons",
+      "@napi-rs/simple-git",
+      "@svgr/webpack"
+    ],
+    "preferredLibraries": [
+      "@fortawesome/fontawesome-svg-core",
+      "@fortawesome/react-fontawesome",
+      "katex",
+      "next",
+      "nextra",
+      "nextra-theme-docs",
+      "react",
+      "react-dom",
+      "@vercel/analytics",
+      "clsx"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/webpack/dair-ai--Prompt-Engineering-Guide/audit.json",
+      "sha256": "aa75e4f843830a516796ab5b56c794f6692ec2f380439972cdc4d5a0e97aaff8",
+      "retainedUnobservedZeroPairLibraries": [
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "katex"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@fortawesome/fontawesome-svg-core",
-    "@fortawesome/free-solid-svg-icons",
     "@fortawesome/react-fontawesome",
-    "@napi-rs/simple-git",
-    "@svgr/webpack",
     "@vercel/analytics",
     "clsx",
     "katex",
@@ -885,22 +911,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "df251b56280d13359cc9abbf0601160217e30df6d1e5db9d016362200f025fff",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:14.094Z",
+  "started": "2026-11-09T10:01:05.284Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:14.220Z",
+  "finished": "2026-11-09T10:01:05.378Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/dair-ai--Prompt-Engineering-Guide/qualification.json",
-  "sourceEligibilityRecordSHA256": "c879ec617f3a8f24f8b80b185ba44fc53b06bc37f75a9fdeeb5a33c54cea8b8c",
-  "organizationSignature": "0ea88c7a7e765b44528c0643fbcb7cdaa6f7108c9055aea81acefcc23dd1ee41"
+  "sourceEligibilityRecordSHA256": "ba676bef64f002c3413a2e1473b970754c98d1b5dff924285deebf44f23f00c1",
+  "organizationSignature": "f8271c352b318b4ba075e981832078e30a138284cf371482ddfae40376ba2538"
 }

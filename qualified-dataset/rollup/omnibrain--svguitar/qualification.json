@@ -14,7 +14,23 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [],
+    "preferredLibraries": [
+      "@svgdotjs/svg.js",
+      "roughjs",
+      "svgdom"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/rollup/omnibrain--svguitar/audit.json",
+      "sha256": "15c574ee373362f609598badcc8c44db600de514ee99df6565ea41b88ec87451",
+      "retainedUnobservedZeroPairLibraries": [
+        "svgdom"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@svgdotjs/svg.js",
     "roughjs",
@@ -320,22 +336,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "f1e40502fd52dea08846e8a06c54ea6abcdb31b5a29cdb44be924cad9efcac9c",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:03.770Z",
+  "started": "2026-11-09T10:00:59.272Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:03.795Z",
+  "finished": "2026-11-09T10:00:59.290Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/rollup/omnibrain--svguitar/qualification.json",
-  "sourceEligibilityRecordSHA256": "abc76442745e69c5595204bcdd719944d1a7a86738aa47a4bfd29b21b19e49b2",
-  "organizationSignature": "562f8c7125cb679d18d75a004a3363a54f54e9e33b0015b207b6ea03240c7841"
+  "sourceEligibilityRecordSHA256": "6e5d1d39c84cd35a41899b3beb13f45d6ea0519f0832e3be2ed55d31bfc5d116",
+  "organizationSignature": "bb5e949d7601dd2d28238c04431dcf653f0b959fdcefd7bf418248bcc117d9b7"
 }

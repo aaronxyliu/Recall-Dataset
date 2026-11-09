@@ -1,0 +1,66 @@
+{
+  "name": "dioc",
+  "version": "3.0.2",
+  "type": "module",
+  "license": "MIT",
+  "description": "A 'too simple' and opinionated dependency injection library",
+  "author": "Andrew Bastin (andrewbastin.k@gmail.com)",
+  "homepage": "https://github.com/AndrewBastin/dioc",
+  "bugs": {
+    "url": "https://github.com/AndrewBastin/dioc/issues"
+  },
+  "keywords": [
+    "di",
+    "ioc",
+    "services"
+  ],
+  "files": [
+    "dist",
+    "index.d.ts",
+    "vue.d.ts",
+    "testing.d.ts"
+  ],
+  "main": "./dist/counter.umd.cjs",
+  "module": "./dist/counter.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./vue": {
+      "types": "./dist/vue.d.ts",
+      "require": "./dist/vue.cjs",
+      "import": "./dist/vue.js"
+    },
+    "./testing": {
+      "types": "./dist/testing.d.ts",
+      "require": "./dist/testing.cjs",
+      "import": "./dist/testing.js"
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vitest": "^1.5.0"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.1"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.25"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "test": "vitest run",
+    "do-test": "pnpm run test",
+    "test:watch": "vitest"
+  }
+}

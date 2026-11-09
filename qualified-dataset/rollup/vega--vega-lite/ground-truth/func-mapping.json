@@ -13,8 +13,8 @@
   "commit": "e415f441845e198629f2049b46849ddcfdbf6596",
   "imageID": "sha256:77ebbd8358604ab1d6fbe3b3bb45cce0707bde05a32d9062f707a8e005c68fef",
   "coverage": {
-    "tslib": 0,
     "vega-expression": 1,
+    "tslib": 0,
     "yargs": 0
   },
   "pairs": [
@@ -1537,6 +1537,10 @@
     "vega-expression",
     "yargs"
   ],
+  "unscoredLibraries": [
+    "tslib",
+    "yargs"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -1559,13 +1563,31 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "e415f441845e198629f2049b46849ddcfdbf6596",
     "archiveRecord": "bundling-dataset/rollup/vega--vega-lite/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "6c1220e0d1ae094a9450446e95dc8c80fb000d327394c50ce808813b2cd082b9",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "87c28542227ac369e5ad16efffccba2e94648a66cc14499f886413c935ed0104",
-    "moduleScopeSHA256": "9ddda889610fce2dd47a3e92de2510101dc580b433f8fe6863f1dc1c6a168b1f"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "17d7be5fe0d1d2734dbaf12e64425e20ec4ae9fdfdf3dc4aa223168e63088e2d",
+    "moduleScopeSHA256": "9ddda889610fce2dd47a3e92de2510101dc580b433f8fe6863f1dc1c6a168b1f",
+    "duplicateAuditSHA256": "6fd5188677805337e6585322da148a4ea8f0957977dd3d528a59207572b86a3e"
+  },
+  "evaluationLibraries": [
+    "vega-expression"
+  ]
 }

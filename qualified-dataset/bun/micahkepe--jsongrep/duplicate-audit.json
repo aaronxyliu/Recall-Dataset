@@ -1,0 +1,144 @@
+{
+  "provenance": {
+    "auditorSHA256": "9201afb07611ab503ece07354c3a975c61285c514068d2e6ff7ba6adc3b21d32",
+    "evidenceSHA256": "a3d84ca05349d35bc4eecd2f9f9e609a56361129da640422735c52c3de99d210",
+    "ownerResolverSHA256": "0d90d68850911a36aa45da752cbeeb147d258d720cb2b187f6d5e47483b33aeb",
+    "captureSHA256": "43eb096e479e1d38a10dd7a8c5ad1481a06354d00db4085b240e6c320583d5a5",
+    "recordSHA256": "5362f1687525e28196aac2bd13e51626d50d75c92632ed9d62507dddabf94a89",
+    "scopeSHA256": "458b10c008bb0a0c537f1a71f5146434eb175228703009e34cd0df93d4c6babf",
+    "manifestSHA256": "8e11e5f1cec9223c8ac80a69689bebefb929cb50cdd744f6620441c6cdf19bf4",
+    "sourceOwnershipSHA256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "exclusionsSHA256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "logicalPackagesSHA256": "682da03a332274256eb649be9e3c7f85e827ddbe07663092dba9e3c785c8df3e"
+  },
+  "schema": "recall.duplicate-library-audit/v1",
+  "subject": "bun/micahkepe--jsongrep",
+  "commit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
+  "scope": "all-captured-runtime-assets-including-excluded-global-copies",
+  "candidates": [
+    {
+      "library": "@bytecodealliance/jco",
+      "status": "not-observed",
+      "moduleMappedBodyPoints": 0,
+      "sources": [],
+      "reasons": [],
+      "parseFailures": [],
+      "maps": [],
+      "moduleFunctionCount": 0,
+      "observedFunctionCount": 0,
+      "sourceFileCount": 0
+    },
+    {
+      "library": "react",
+      "status": "unique-observed",
+      "moduleMappedBodyPoints": 3290,
+      "sources": [
+        {
+          "source": "../node_modules/react/cjs/react.development.js",
+          "sha256": "aea3404ac4d87323ff72f8ee176454d94bcd13a4a4947c5288dca174dbbd17db",
+          "relative": "cjs/react.development.js",
+          "logical": "react",
+          "install": "../node_modules/react",
+          "bytes": 47219,
+          "assets": [
+            {
+              "asset": "<local>/index-000bnfeg.js#8905ef94aaba2bc50c46dc352a165adf40ad4921b939bad8791137a961523489",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 107
+        },
+        {
+          "source": "../node_modules/react/cjs/react-jsx-runtime.development.js",
+          "sha256": "dd50fd0db2fba44e0eee66243a45c81cfa3774cf41e4e6c0c080a601815c694d",
+          "relative": "cjs/react-jsx-runtime.development.js",
+          "logical": "react",
+          "install": "../node_modules/react",
+          "bytes": 12452,
+          "assets": [
+            {
+              "asset": "<local>/index-000bnfeg.js#8905ef94aaba2bc50c46dc352a165adf40ad4921b939bad8791137a961523489",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 20
+        }
+      ],
+      "reasons": [],
+      "parseFailures": [],
+      "maps": [
+        "58aa5d55a960c59db1f61d74e9a35d8b3218da1d07cf6f50827102f73262abb1"
+      ],
+      "moduleFunctionCount": 127,
+      "observedFunctionCount": 127,
+      "sourceFileCount": 2
+    },
+    {
+      "library": "react-dom",
+      "status": "unique-observed",
+      "moduleMappedBodyPoints": 55115,
+      "sources": [
+        {
+          "source": "../node_modules/react-dom/cjs/react-dom.development.js",
+          "sha256": "72f984b8b4ecf17e0eeda013f23ad9bf9314d41bdca59179ebbab227d302c3bb",
+          "relative": "cjs/react-dom.development.js",
+          "logical": "react-dom",
+          "install": "../node_modules/react-dom",
+          "bytes": 17673,
+          "assets": [
+            {
+              "asset": "<local>/index-000bnfeg.js#8905ef94aaba2bc50c46dc352a165adf40ad4921b939bad8791137a961523489",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 20
+        },
+        {
+          "source": "../node_modules/react-dom/cjs/react-dom-client.development.js",
+          "sha256": "2ab293af6af1c03e785d764ff70f0f9a851238c791b5adffd5ec183e85bb0796",
+          "relative": "cjs/react-dom-client.development.js",
+          "logical": "react-dom",
+          "install": "../node_modules/react-dom",
+          "bytes": 1065698,
+          "assets": [
+            {
+              "asset": "<local>/index-000bnfeg.js#8905ef94aaba2bc50c46dc352a165adf40ad4921b939bad8791137a961523489",
+              "role": "module-build-output"
+            }
+          ],
+          "mappedFunctions": 1048
+        }
+      ],
+      "reasons": [],
+      "parseFailures": [],
+      "maps": [
+        "58aa5d55a960c59db1f61d74e9a35d8b3218da1d07cf6f50827102f73262abb1"
+      ],
+      "moduleFunctionCount": 1068,
+      "observedFunctionCount": 1068,
+      "sourceFileCount": 2
+    }
+  ],
+  "mappedOwnBodyPoints": 58405,
+  "failures": [],
+  "method": "overlapping original own-body tokens mapped into distinct generated functions; full global distribution plus imported module sources; explicit installed package versions",
+  "policy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
+  "unscoredLibraries": [
+    "@bytecodealliance/jco"
+  ],
+  "sourceOwnershipAmbiguousHashes": [],
+  "authoritativeAuditSHA256": "8406e3855672f851c896e48ab226f13404dc31bbc2d3d341bf9a67b892facb04"
+}

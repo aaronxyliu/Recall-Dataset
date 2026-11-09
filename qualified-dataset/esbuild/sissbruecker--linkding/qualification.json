@@ -14,7 +14,25 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [],
+    "preferredLibraries": [
+      "@floating-ui/dom",
+      "@hotwired/turbo",
+      "esbuild",
+      "lit"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/esbuild/sissbruecker--linkding/audit.json",
+      "sha256": "dcd15f5f3f1603758e8f18b6abddbf775497e15ba1fe672088eca33f40d6b47a",
+      "retainedUnobservedZeroPairLibraries": [
+        "esbuild",
+        "lit"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@floating-ui/dom",
     "@hotwired/turbo",
@@ -414,22 +432,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "764e56088d5cba014ea409c42427febae94fa6cf55bc70ed9fc949e41d8271e2",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:02.033Z",
+  "started": "2026-11-09T10:00:57.941Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:02.098Z",
+  "finished": "2026-11-09T10:00:57.985Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/esbuild/sissbruecker--linkding/qualification.json",
-  "sourceEligibilityRecordSHA256": "d40cfa607d0eff414a97607b5ded36503beca8cbe6d702efe253c0c69a764bcf",
-  "organizationSignature": "8908730c5f5f65a215bcc8443271bf06b3abd80fabfabbca56a7d808816f3d1f"
+  "sourceEligibilityRecordSHA256": "36a2ae6c016b8813d59570203160d09afd242acd7feefa138ec48a39fb3f7384",
+  "organizationSignature": "2f1cb1b3f491f1dbe194dd9654a235d7e5104d6974ee7016e50da691280d3210"
 }

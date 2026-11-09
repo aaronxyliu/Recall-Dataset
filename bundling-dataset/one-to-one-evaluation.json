@@ -22,18 +22,32 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
-  "repositoryCount": 41,
-  "libraryInstanceCount": 335,
-  "sourceFunctionWitnessCount": 1005,
-  "oneToOnePairs": 69580,
-  "zeroPairLibraryInstances": 107,
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
+  "repositoryCount": 39,
+  "libraryInstanceCount": 315,
+  "sourceFunctionWitnessCount": 945,
+  "oneToOnePairs": 49604,
+  "zeroPairLibraryInstances": 96,
   "subjects": [
     {
       "subject": "bun/RockwellShah--filekey",
       "repo": "RockwellShah/filekey",
       "commit": "4f148f6f55e61d8bbeed7a812f31756cdbae12af",
       "records": "../qualified-dataset/bun/RockwellShah--filekey/ground-truth/func-mapping.json",
-      "recordsSHA256": "228731f3fd128acb57dfde34232673b3ab41e70740a7006b083169e0b095de6d",
+      "recordsSHA256": "6c3f2d9bc619c73f691e34d8506a02bc11ea1ed70d0a47baa56517f1dcc9a6d1",
       "selectedLibraries": [
         "@hpke/core",
         "@noble/curves",
@@ -62,14 +76,24 @@
       "oneToOnePairs": 480,
       "imageID": null,
       "qualification": "../qualified-dataset/bun/RockwellShah--filekey/qualification.json",
-      "moduleScope": "../qualified-dataset/bun/RockwellShah--filekey/module-scope.json"
+      "moduleScope": "../qualified-dataset/bun/RockwellShah--filekey/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/bun/RockwellShah--filekey/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "@hpke/core",
+        "@noble/curves",
+        "@noble/hashes",
+        "fflate",
+        "qrcode-generator",
+        "@scure/base"
+      ]
     },
     {
       "subject": "bun/micahkepe--jsongrep",
       "repo": "micahkepe/jsongrep",
       "commit": "2c913fa21c2a264311ff8b1c44ed5fd4f68363e5",
       "records": "../qualified-dataset/bun/micahkepe--jsongrep/ground-truth/func-mapping.json",
-      "recordsSHA256": "5362f1687525e28196aac2bd13e51626d50d75c92632ed9d62507dddabf94a89",
+      "recordsSHA256": "2bdb46a1502cb451b0c40c9ceee6339e8e2f313e8029f95193101f7f81938e5a",
       "selectedLibraries": [
         "@bytecodealliance/jco",
         "react",
@@ -89,14 +113,22 @@
       "oneToOnePairs": 1208,
       "imageID": null,
       "qualification": "../qualified-dataset/bun/micahkepe--jsongrep/qualification.json",
-      "moduleScope": "../qualified-dataset/bun/micahkepe--jsongrep/module-scope.json"
+      "moduleScope": "../qualified-dataset/bun/micahkepe--jsongrep/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/bun/micahkepe--jsongrep/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@bytecodealliance/jco"
+      ],
+      "evaluationLibraries": [
+        "react",
+        "react-dom"
+      ]
     },
     {
       "subject": "esbuild/mattlewis92--angular-calendar",
       "repo": "mattlewis92/angular-calendar",
       "commit": "9ae06cf4e5bdb5ee538c0ff2e57a4ec4f7facc68",
       "records": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/ground-truth/func-mapping.json",
-      "recordsSHA256": "3315fad7822eb2180ad96e44eb2dfe7605b8ddea8e3b27d084ff48715772c653",
+      "recordsSHA256": "d288847f786e8ae8898097a5256a1a951688e3393c22af922ab8bfd3a42df264",
       "selectedLibraries": [
         "@scarf/scarf",
         "calendar-utils",
@@ -119,89 +151,74 @@
       "oneToOnePairs": 37,
       "imageID": "sha256:36e094597a8731e17370336f498020134259af1f2352948e3e1aeff99742c497",
       "qualification": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/qualification.json",
-      "moduleScope": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/module-scope.json"
-    },
-    {
-      "subject": "esbuild/primefaces--primeng",
-      "repo": "primefaces/primeng",
-      "commit": "fe82b291d6fedde177dc12c0af7ef1008dc1b1ff",
-      "records": "../qualified-dataset/esbuild/primefaces--primeng/ground-truth/func-mapping.json",
-      "recordsSHA256": "114e16b3585fb862973e6020ffcad7d42bdad7a0f8b0c2eb50a3a77149a86986",
-      "selectedLibraries": [
-        "@primeuix/styled",
-        "@primeuix/utils",
-        "@primeuix/motion"
+      "moduleScope": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/esbuild/mattlewis92--angular-calendar/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@scarf/scarf",
+        "calendar-utils",
+        "positioning"
       ],
-      "libraryCount": 3,
-      "sourceFunctionWitnesses": {
-        "@primeuix/styled": 3,
-        "@primeuix/utils": 3,
-        "@primeuix/motion": 3
-      },
-      "libraryPairs": {
-        "@primeuix/styled": 98,
-        "@primeuix/utils": 127,
-        "@primeuix/motion": 26
-      },
-      "oneToOnePairs": 251,
-      "imageID": "sha256:52f072fecbe4588bceb44ffaea4481d8956374fd61ccd094ac7e148a421bd1d8",
-      "qualification": "../qualified-dataset/esbuild/primefaces--primeng/qualification.json",
-      "moduleScope": "../qualified-dataset/esbuild/primefaces--primeng/module-scope.json"
+      "evaluationLibraries": [
+        "tslib"
+      ]
     },
     {
       "subject": "esbuild/primefaces--sakai-ng",
       "repo": "primefaces/sakai-ng",
       "commit": "96d71496d685b5c110efd2875abaa2bf89a56ad2",
       "records": "../qualified-dataset/esbuild/primefaces--sakai-ng/ground-truth/func-mapping.json",
-      "recordsSHA256": "81a5a91e92fada0d4dc44a265785ff8d2e6ec4d4bcf365e7c4a7781b13f3e8c2",
+      "recordsSHA256": "d0509897f755768cc9d8e9f9d9dc5d8e7ec5896dc12c651ce27bee89188a8c6d",
       "selectedLibraries": [
-        "@angular/common",
         "@angular/compiler",
-        "@angular/core",
-        "@angular/forms",
-        "@angular/platform-browser",
-        "@angular/router",
         "@primeuix/themes",
         "@tailwindcss/postcss",
         "chart.js",
-        "primeclt"
+        "primeclt",
+        "rxjs",
+        "tslib"
       ],
-      "libraryCount": 10,
+      "libraryCount": 7,
       "sourceFunctionWitnesses": {
-        "@angular/common": 3,
         "@angular/compiler": 3,
-        "@angular/core": 3,
-        "@angular/forms": 3,
-        "@angular/platform-browser": 3,
-        "@angular/router": 3,
         "@primeuix/themes": 3,
         "@tailwindcss/postcss": 3,
         "chart.js": 3,
-        "primeclt": 3
+        "primeclt": 3,
+        "rxjs": 3,
+        "tslib": 3
       },
       "libraryPairs": {
-        "@angular/common": 0,
         "@angular/compiler": 0,
-        "@angular/core": 0,
-        "@angular/forms": 0,
-        "@angular/platform-browser": 0,
-        "@angular/router": 0,
         "@primeuix/themes": 8,
         "@tailwindcss/postcss": 0,
         "chart.js": 1301,
-        "primeclt": 0
+        "primeclt": 0,
+        "rxjs": 313,
+        "tslib": 29
       },
-      "oneToOnePairs": 1309,
+      "oneToOnePairs": 1651,
       "imageID": "sha256:9cb7c4736a8b7a7e9b0d2d61528a0131a2767cd557b3000057bd31326f930194",
       "qualification": "../qualified-dataset/esbuild/primefaces--sakai-ng/qualification.json",
-      "moduleScope": "../qualified-dataset/esbuild/primefaces--sakai-ng/module-scope.json"
+      "moduleScope": "../qualified-dataset/esbuild/primefaces--sakai-ng/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/esbuild/primefaces--sakai-ng/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@angular/compiler",
+        "@tailwindcss/postcss",
+        "primeclt"
+      ],
+      "evaluationLibraries": [
+        "@primeuix/themes",
+        "chart.js",
+        "rxjs",
+        "tslib"
+      ]
     },
     {
       "subject": "esbuild/sissbruecker--linkding",
       "repo": "sissbruecker/linkding",
       "commit": "27b7303baf41bb28babc610ac8eaa486e1ddfab5",
       "records": "../qualified-dataset/esbuild/sissbruecker--linkding/ground-truth/func-mapping.json",
-      "recordsSHA256": "ced83b7d88085b5cbf17f271cdbc84e623a3619d4594e66f25af5d6342eb16a6",
+      "recordsSHA256": "06349ca5abd1483a36e6173026ad039c2ff734c9d4a26b940d7905bcb9b8aa61",
       "selectedLibraries": [
         "@floating-ui/dom",
         "@hotwired/turbo",
@@ -224,14 +241,23 @@
       "oneToOnePairs": 911,
       "imageID": "sha256:52efd7be978560adce36a4a95367d460da7671f9f30bf06e2d20263a6dbcf1e7",
       "qualification": "../qualified-dataset/esbuild/sissbruecker--linkding/qualification.json",
-      "moduleScope": "../qualified-dataset/esbuild/sissbruecker--linkding/module-scope.json"
+      "moduleScope": "../qualified-dataset/esbuild/sissbruecker--linkding/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/esbuild/sissbruecker--linkding/duplicate-audit.json",
+      "unscoredLibraries": [
+        "esbuild",
+        "lit"
+      ],
+      "evaluationLibraries": [
+        "@floating-ui/dom",
+        "@hotwired/turbo"
+      ]
     },
     {
       "subject": "esbuild/swimlane--ngx-charts",
       "repo": "swimlane/ngx-charts",
       "commit": "9625b8efea06a6edd1d6c7184241ded9442cf570",
       "records": "../qualified-dataset/esbuild/swimlane--ngx-charts/ground-truth/func-mapping.json",
-      "recordsSHA256": "4766a3fb7b0682a5ba85990f85459da9ca376e16fbb2fdf1230eb8e55c07debc",
+      "recordsSHA256": "a51fb6742b46dc0c98fa0330209f2f51abdc722158145aacd827f247ddf0b804",
       "selectedLibraries": [
         "d3-format",
         "d3-interpolate",
@@ -272,62 +298,79 @@
       "oneToOnePairs": 2364,
       "imageID": "sha256:ea908782be4b9f0e5c256e46bb7abdadf1bf128d7bc85bad0895d25d8a371935",
       "qualification": "../qualified-dataset/esbuild/swimlane--ngx-charts/qualification.json",
-      "moduleScope": "../qualified-dataset/esbuild/swimlane--ngx-charts/module-scope.json"
+      "moduleScope": "../qualified-dataset/esbuild/swimlane--ngx-charts/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/esbuild/swimlane--ngx-charts/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "d3-format",
+        "d3-interpolate",
+        "d3-transition",
+        "d3-scale",
+        "d3-hierarchy",
+        "zone.js",
+        "d3-selection",
+        "codemirror",
+        "d3-brush",
+        "d3-sankey"
+      ]
     },
     {
       "subject": "esbuild/swimlane--ngx-datatable",
       "repo": "swimlane/ngx-datatable",
       "commit": "2d4f8f2b383d875d3e3dec45969f0e42a117fb3f",
       "records": "../qualified-dataset/esbuild/swimlane--ngx-datatable/ground-truth/func-mapping.json",
-      "recordsSHA256": "385a488b478b4d8f0f93e5abd1bc80f841756f37a28e169f970b0e997a14f0d5",
+      "recordsSHA256": "d0e23962430391eed7455a928c5f32da2b9a750707a1cfa307329c60ffc6bed8",
       "selectedLibraries": [
         "@angular/animations",
         "@angular/cdk",
-        "@angular/common",
         "@angular/compiler",
-        "@angular/core",
         "@angular/forms",
         "@angular/platform-browser",
-        "@angular/router",
         "rxjs",
         "tslib"
       ],
-      "libraryCount": 10,
+      "libraryCount": 7,
       "sourceFunctionWitnesses": {
         "@angular/animations": 3,
         "@angular/cdk": 3,
-        "@angular/common": 3,
         "@angular/compiler": 3,
-        "@angular/core": 3,
         "@angular/forms": 3,
         "@angular/platform-browser": 3,
-        "@angular/router": 3,
         "rxjs": 3,
         "tslib": 3
       },
       "libraryPairs": {
         "@angular/animations": 0,
         "@angular/cdk": 0,
-        "@angular/common": 0,
         "@angular/compiler": 0,
-        "@angular/core": 0,
         "@angular/forms": 0,
-        "@angular/platform-browser": 0,
-        "@angular/router": 0,
+        "@angular/platform-browser": 111,
         "rxjs": 307,
         "tslib": 29
       },
-      "oneToOnePairs": 336,
+      "oneToOnePairs": 447,
       "imageID": "sha256:c7319d02aaca705ab80c652ced932244e1c963a3459779ea5db92f66fd32cb0d",
       "qualification": "../qualified-dataset/esbuild/swimlane--ngx-datatable/qualification.json",
-      "moduleScope": "../qualified-dataset/esbuild/swimlane--ngx-datatable/module-scope.json"
+      "moduleScope": "../qualified-dataset/esbuild/swimlane--ngx-datatable/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/esbuild/swimlane--ngx-datatable/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@angular/animations",
+        "@angular/cdk",
+        "@angular/compiler",
+        "@angular/forms"
+      ],
+      "evaluationLibraries": [
+        "@angular/platform-browser",
+        "rxjs",
+        "tslib"
+      ]
     },
     {
       "subject": "parcel/jonasschmedtmann--complete-javascript-course",
       "repo": "jonasschmedtmann/complete-javascript-course",
       "commit": "76b8b79b2994dd00298b2be105aa6bc721e40a22",
       "records": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/ground-truth/func-mapping.json",
-      "recordsSHA256": "6fe0b3f8dfc125a5b3729919bb28bb7d2a7c5872b6861a046ec704ccb4bac979",
+      "recordsSHA256": "3f1cda858f09a0334629d61bc8447f34e817ce6e9bda0724367014438c4db095",
       "selectedLibraries": [
         "core-js",
         "fractional",
@@ -347,25 +390,31 @@
       "oneToOnePairs": 16,
       "imageID": "sha256:de49a6724e0642d647c1c816296173e861689e551797be0f62b55a82893cddb3",
       "qualification": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/qualification.json",
-      "moduleScope": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/module-scope.json"
+      "moduleScope": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/duplicate-audit.json",
+      "unscoredLibraries": [
+        "fractional",
+        "regenerator-runtime"
+      ],
+      "evaluationLibraries": [
+        "core-js"
+      ]
     },
     {
       "subject": "parcel/parcel-bundler--website",
       "repo": "parcel-bundler/website",
       "commit": "01c63ed0cb880285db774ec7c96f88da24aeaec7",
       "records": "../qualified-dataset/parcel/parcel-bundler--website/ground-truth/func-mapping.json",
-      "recordsSHA256": "5d94bf53fe13f25bed838111de3f7e7fd4b8793d528e4c38f8e08493d95873ea",
+      "recordsSHA256": "858e90cf7d44c76fd9cff20b2006f1ea1b8235628c807521621f5eee83398022",
       "selectedLibraries": [
-        "alpinejs",
         "focus-visible",
         "marked",
         "react",
         "react-dom",
         "react-use"
       ],
-      "libraryCount": 6,
+      "libraryCount": 5,
       "sourceFunctionWitnesses": {
-        "alpinejs": 3,
         "focus-visible": 3,
         "marked": 3,
         "react": 3,
@@ -373,24 +422,33 @@
         "react-use": 3
       },
       "libraryPairs": {
-        "alpinejs": 443,
         "focus-visible": 9,
         "marked": 0,
         "react": 0,
         "react-dom": 0,
         "react-use": 0
       },
-      "oneToOnePairs": 452,
+      "oneToOnePairs": 9,
       "imageID": null,
       "qualification": "../qualified-dataset/parcel/parcel-bundler--website/qualification.json",
-      "moduleScope": "../qualified-dataset/parcel/parcel-bundler--website/module-scope.json"
+      "moduleScope": "../qualified-dataset/parcel/parcel-bundler--website/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/parcel/parcel-bundler--website/duplicate-audit.json",
+      "unscoredLibraries": [
+        "marked",
+        "react",
+        "react-dom",
+        "react-use"
+      ],
+      "evaluationLibraries": [
+        "focus-visible"
+      ]
     },
     {
       "subject": "parcel/tensorflow--tfjs",
       "repo": "tensorflow/tfjs",
       "commit": "e5d5e9371ed1fd0a4df6d7cd0b947d2a820cefd7",
       "records": "../qualified-dataset/parcel/tensorflow--tfjs/ground-truth/func-mapping.json",
-      "recordsSHA256": "6ee79515a179b5252ca70b2acc0303a078581c5824269e3c2af39ee93cc30cd9",
+      "recordsSHA256": "bd9686451039bd25e61840809484bd21b8503c817fe30617c09d7154488804b3",
       "selectedLibraries": [
         "@tensorflow/tfjs-backend-webgl",
         "@tensorflow/tfjs-converter",
@@ -410,14 +468,21 @@
       "oneToOnePairs": 2428,
       "imageID": "sha256:e0353279e647932c4a074fb1283cab6f26aa0d9a9355fa3ddd396a40fcf42908",
       "qualification": "../qualified-dataset/parcel/tensorflow--tfjs/qualification.json",
-      "moduleScope": "../qualified-dataset/parcel/tensorflow--tfjs/module-scope.json"
+      "moduleScope": "../qualified-dataset/parcel/tensorflow--tfjs/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/parcel/tensorflow--tfjs/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "@tensorflow/tfjs-backend-webgl",
+        "@tensorflow/tfjs-converter",
+        "@tensorflow/tfjs-core"
+      ]
     },
     {
       "subject": "rolldown/appwrite--appwrite",
       "repo": "appwrite/appwrite",
       "commit": "18c60abee1e2cb9d63612478f8e0e7319dfc300b",
       "records": "../qualified-dataset/rolldown/appwrite--appwrite/ground-truth/func-mapping.json",
-      "recordsSHA256": "d9de5524cd0ddf4abeb5b9675c0b5adc25ad66104408c9bde91513f3babc8a35",
+      "recordsSHA256": "f4ebd210fffc15339ee1504e5f4fdf6155bbc73755977fbdd6b1a695edb69973",
       "selectedLibraries": [
         "@appwrite.io/console",
         "@dnd-kit/core",
@@ -425,10 +490,10 @@
         "@markdoc/markdoc",
         "@radix-ui/react-scroll-area",
         "@radix-ui/react-select",
-        "@radix-ui/react-slot",
         "@radix-ui/react-tooltip",
         "@react-three/fiber",
-        "@tanstack/react-query"
+        "@tanstack/react-query",
+        "@radix-ui/react-accordion"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -438,10 +503,10 @@
         "@markdoc/markdoc": 3,
         "@radix-ui/react-scroll-area": 3,
         "@radix-ui/react-select": 3,
-        "@radix-ui/react-slot": 3,
         "@radix-ui/react-tooltip": 3,
         "@react-three/fiber": 3,
-        "@tanstack/react-query": 3
+        "@tanstack/react-query": 3,
+        "@radix-ui/react-accordion": 3
       },
       "libraryPairs": {
         "@appwrite.io/console": 2596,
@@ -450,22 +515,36 @@
         "@markdoc/markdoc": 568,
         "@radix-ui/react-scroll-area": 87,
         "@radix-ui/react-select": 123,
-        "@radix-ui/react-slot": 42,
         "@radix-ui/react-tooltip": 54,
         "@react-three/fiber": 689,
-        "@tanstack/react-query": 63
+        "@tanstack/react-query": 63,
+        "@radix-ui/react-accordion": 22
       },
-      "oneToOnePairs": 4531,
+      "oneToOnePairs": 4511,
       "imageID": "sha256:96ecf987f0f47ba16cb99de5af6d8780a017712068c49e993ef8d037db4e1a2f",
       "qualification": "../qualified-dataset/rolldown/appwrite--appwrite/qualification.json",
-      "moduleScope": "../qualified-dataset/rolldown/appwrite--appwrite/module-scope.json"
+      "moduleScope": "../qualified-dataset/rolldown/appwrite--appwrite/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/rolldown/appwrite--appwrite/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "@appwrite.io/console",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@markdoc/markdoc",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-tooltip",
+        "@react-three/fiber",
+        "@tanstack/react-query",
+        "@radix-ui/react-accordion"
+      ]
     },
     {
       "subject": "rolldown/discourse--discourse",
       "repo": "discourse/discourse",
       "commit": "3a1b1ae930e568a8c1c2f12d6e09f8e907da608b",
       "records": "../qualified-dataset/rolldown/discourse--discourse/ground-truth/func-mapping.json",
-      "recordsSHA256": "8178e361cc2c4dd6a73a6ba3458c6567576afcb4c445378a10801485f719ea01",
+      "recordsSHA256": "cf22ddf1508eb03f31bb0de4f9277ea524dc581c52ea35f6b069be068faaf75e",
       "selectedLibraries": [
         "@atlaskit/pragmatic-drag-and-drop",
         "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
@@ -474,9 +553,9 @@
         "@warp-drive/legacy",
         "@warp-drive/utilities",
         "ember-resolver",
-        "ember-source",
         "immer",
-        "moment"
+        "moment",
+        "decorator-transforms"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -487,9 +566,9 @@
         "@warp-drive/legacy": 3,
         "@warp-drive/utilities": 3,
         "ember-resolver": 3,
-        "ember-source": 3,
         "immer": 3,
-        "moment": 3
+        "moment": 3,
+        "decorator-transforms": 3
       },
       "libraryPairs": {
         "@atlaskit/pragmatic-drag-and-drop": 184,
@@ -499,48 +578,35 @@
         "@warp-drive/legacy": 542,
         "@warp-drive/utilities": 30,
         "ember-resolver": 53,
-        "ember-source": 3118,
         "immer": 106,
-        "moment": 371
+        "moment": 371,
+        "decorator-transforms": 12
       },
-      "oneToOnePairs": 5272,
+      "oneToOnePairs": 2166,
       "imageID": "sha256:fcedc0f47996cd281f5bc99bc6d9a710d6fa31747d3702aee0498874676cbed0",
       "qualification": "../qualified-dataset/rolldown/discourse--discourse/qualification.json",
-      "moduleScope": "../qualified-dataset/rolldown/discourse--discourse/module-scope.json"
-    },
-    {
-      "subject": "rollup/daybrush--scenejs",
-      "repo": "daybrush/scenejs",
-      "commit": "8db057b6be85de03c5e997b53a82cb1407d6f659",
-      "records": "../qualified-dataset/rollup/daybrush--scenejs/ground-truth/func-mapping.json",
-      "recordsSHA256": "bdc040f4b57b8b117210361fdeb0b412817e0971ff60addb2d7ffe98924d673c",
-      "selectedLibraries": [
-        "@daybrush/page",
-        "@daybrush/utils",
-        "shape-svg"
-      ],
-      "libraryCount": 3,
-      "sourceFunctionWitnesses": {
-        "@daybrush/page": 3,
-        "@daybrush/utils": 3,
-        "shape-svg": 3
-      },
-      "libraryPairs": {
-        "@daybrush/page": 28,
-        "@daybrush/utils": 76,
-        "shape-svg": 20
-      },
-      "oneToOnePairs": 124,
-      "imageID": "sha256:a4da8d94a8476a58ee0c1ea73658daa9af8680e7e9ef3c43f73b120478cfc221",
-      "qualification": "../qualified-dataset/rollup/daybrush--scenejs/qualification.json",
-      "moduleScope": "../qualified-dataset/rollup/daybrush--scenejs/module-scope.json"
+      "moduleScope": "../qualified-dataset/rolldown/discourse--discourse/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/rolldown/discourse--discourse/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "@atlaskit/pragmatic-drag-and-drop",
+        "@atlaskit/pragmatic-drag-and-drop-auto-scroll",
+        "@warp-drive/core",
+        "@warp-drive/json-api",
+        "@warp-drive/legacy",
+        "@warp-drive/utilities",
+        "ember-resolver",
+        "immer",
+        "moment",
+        "decorator-transforms"
+      ]
     },
     {
       "subject": "rollup/omnibrain--svguitar",
       "repo": "omnibrain/svguitar",
       "commit": "3b465fdc8af57a9ed948e168ada1c87c9aafd574",
       "records": "../qualified-dataset/rollup/omnibrain--svguitar/ground-truth/func-mapping.json",
-      "recordsSHA256": "dace9c15750e757a012abf715aa61c353e7b59ae8ccc5a0ca2fbe438e0853a39",
+      "recordsSHA256": "0dbb4d237659961afef31d16f2bf37d4463c4a31f1f6940741c708330408dbd4",
       "selectedLibraries": [
         "@svgdotjs/svg.js",
         "roughjs",
@@ -560,14 +626,22 @@
       "oneToOnePairs": 851,
       "imageID": "sha256:39c1ab0e890e959bcaf7aa908076e5c8708bbb43063700fa190ecb593b84db9d",
       "qualification": "../qualified-dataset/rollup/omnibrain--svguitar/qualification.json",
-      "moduleScope": "../qualified-dataset/rollup/omnibrain--svguitar/module-scope.json"
+      "moduleScope": "../qualified-dataset/rollup/omnibrain--svguitar/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/rollup/omnibrain--svguitar/duplicate-audit.json",
+      "unscoredLibraries": [
+        "svgdom"
+      ],
+      "evaluationLibraries": [
+        "@svgdotjs/svg.js",
+        "roughjs"
+      ]
     },
     {
       "subject": "rollup/vega--vega-lite",
       "repo": "vega/vega-lite",
       "commit": "e415f441845e198629f2049b46849ddcfdbf6596",
       "records": "../qualified-dataset/rollup/vega--vega-lite/ground-truth/func-mapping.json",
-      "recordsSHA256": "ffce2a602044779caa088c0a9f8fa8697cf2519e304a7f7c7f0cfcc7d585ad2e",
+      "recordsSHA256": "26c0c82cbadd6a128659b97cabe210ea3cab12cab51736d80c8ec20f30ca6aba",
       "selectedLibraries": [
         "tslib",
         "vega-expression",
@@ -587,14 +661,22 @@
       "oneToOnePairs": 87,
       "imageID": "sha256:77ebbd8358604ab1d6fbe3b3bb45cce0707bde05a32d9062f707a8e005c68fef",
       "qualification": "../qualified-dataset/rollup/vega--vega-lite/qualification.json",
-      "moduleScope": "../qualified-dataset/rollup/vega--vega-lite/module-scope.json"
+      "moduleScope": "../qualified-dataset/rollup/vega--vega-lite/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/rollup/vega--vega-lite/duplicate-audit.json",
+      "unscoredLibraries": [
+        "tslib",
+        "yargs"
+      ],
+      "evaluationLibraries": [
+        "vega-expression"
+      ]
     },
     {
       "subject": "rspack/metabase--metabase",
       "repo": "metabase/metabase",
       "commit": "0c644f3bc99d5dece16391d53135a0a7618f95bc",
       "records": "../qualified-dataset/rspack/metabase--metabase/ground-truth/func-mapping.json",
-      "recordsSHA256": "75268d5fe045b59ac07a51c7cef773bfa578b8f2dd0834d44f9c395be53eb8cc",
+      "recordsSHA256": "2ecf8feeb8d909e340b49326025a7ed87823eb07d3b419da76060510767431ec",
       "selectedLibraries": [
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
@@ -603,9 +685,9 @@
         "@emotion/react",
         "@emotion/styled",
         "@floating-ui/dom",
-        "@floating-ui/react",
         "@juggle/resize-observer",
-        "@mantine/core"
+        "@mantine/dates",
+        "@mantine/hooks"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -616,9 +698,9 @@
         "@emotion/react": 3,
         "@emotion/styled": 3,
         "@floating-ui/dom": 3,
-        "@floating-ui/react": 3,
         "@juggle/resize-observer": 3,
-        "@mantine/core": 3
+        "@mantine/dates": 3,
+        "@mantine/hooks": 3
       },
       "libraryPairs": {
         "@dnd-kit/core": 230,
@@ -628,32 +710,46 @@
         "@emotion/react": 11,
         "@emotion/styled": 11,
         "@floating-ui/dom": 34,
-        "@floating-ui/react": 163,
         "@juggle/resize-observer": 60,
-        "@mantine/core": 971
+        "@mantine/dates": 254,
+        "@mantine/hooks": 144
       },
-      "oneToOnePairs": 1509,
+      "oneToOnePairs": 773,
       "imageID": "sha256:d731ac7144aac3dea4e1871c706c5fab3e014494fe55aa8dd09fd5688b29ae3f",
       "qualification": "../qualified-dataset/rspack/metabase--metabase/qualification.json",
-      "moduleScope": "../qualified-dataset/rspack/metabase--metabase/module-scope.json"
+      "moduleScope": "../qualified-dataset/rspack/metabase--metabase/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/rspack/metabase--metabase/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@emotion/cache",
+        "@emotion/react",
+        "@emotion/styled",
+        "@floating-ui/dom",
+        "@juggle/resize-observer",
+        "@mantine/dates",
+        "@mantine/hooks"
+      ]
     },
     {
       "subject": "turbopack/CalCom--cal.com",
       "repo": "CalCom/cal.com",
       "commit": "1c193cca8682b33b9866c792186033f7ef886682",
       "records": "../qualified-dataset/turbopack/CalCom--cal.com/ground-truth/func-mapping.json",
-      "recordsSHA256": "56fc47cbdfa2a54123a0fbbb3f8647bfd9400f175e845f29d8f11a175c62790c",
+      "recordsSHA256": "b5ed4433816d769b771ec9e0d955dc5a4aaea848830ffcd8008b7e9f6a8b8e37",
       "selectedLibraries": [
         "@formkit/auto-animate",
         "@radix-ui/react-tooltip",
         "botid",
         "i18next",
-        "next",
         "next-auth",
         "react-i18next",
         "zod",
         "@boxyhq/saml-jackson",
-        "@daily-co/daily-js"
+        "@daily-co/daily-js",
+        "@hookform/resolvers"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -661,84 +757,113 @@
         "@radix-ui/react-tooltip": 3,
         "botid": 3,
         "i18next": 3,
-        "next": 3,
         "next-auth": 3,
         "react-i18next": 3,
         "zod": 3,
         "@boxyhq/saml-jackson": 3,
-        "@daily-co/daily-js": 3
+        "@daily-co/daily-js": 3,
+        "@hookform/resolvers": 3
       },
       "libraryPairs": {
         "@formkit/auto-animate": 35,
         "@radix-ui/react-tooltip": 37,
         "botid": 0,
         "i18next": 243,
-        "next": 721,
         "next-auth": 119,
         "react-i18next": 51,
         "zod": 414,
         "@boxyhq/saml-jackson": 0,
-        "@daily-co/daily-js": 0
+        "@daily-co/daily-js": 0,
+        "@hookform/resolvers": 13
       },
-      "oneToOnePairs": 1620,
+      "oneToOnePairs": 912,
       "imageID": "sha256:b4386030f0c79ce045232229afe218e5e67a3c961be492508686eb38a8f47556",
       "qualification": "../qualified-dataset/turbopack/CalCom--cal.com/qualification.json",
-      "moduleScope": "../qualified-dataset/turbopack/CalCom--cal.com/module-scope.json"
+      "moduleScope": "../qualified-dataset/turbopack/CalCom--cal.com/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/turbopack/CalCom--cal.com/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@boxyhq/saml-jackson",
+        "@daily-co/daily-js"
+      ],
+      "evaluationLibraries": [
+        "@formkit/auto-animate",
+        "@radix-ui/react-tooltip",
+        "botid",
+        "i18next",
+        "next-auth",
+        "react-i18next",
+        "zod",
+        "@hookform/resolvers"
+      ]
     },
     {
       "subject": "turbopack/CapSoftware--Cap",
       "repo": "CapSoftware/Cap",
       "commit": "bb16822e00a5b12f5fd715d6dc6683d5ba3a90ca",
       "records": "../qualified-dataset/turbopack/CapSoftware--Cap/ground-truth/func-mapping.json",
-      "recordsSHA256": "2415582a2e8f5d56515f54bb69dac45e7c5c5993c851c18f4f1bd0a487a88437",
+      "recordsSHA256": "ac21a00739de6565c70b1d6bfbdfb843cf3240a3390178287b0e73e441e8be75",
       "selectedLibraries": [
         "@fortawesome/react-fontawesome",
-        "@radix-ui/react-slot",
         "@radix-ui/react-tooltip",
         "@sentry/nextjs",
         "@tanstack/react-query",
         "framer-motion",
         "js-cookie",
-        "lucide-react",
-        "next",
-        "next-auth"
+        "next-auth",
+        "react",
+        "react-dom",
+        "sonner"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
         "@fortawesome/react-fontawesome": 3,
-        "@radix-ui/react-slot": 3,
         "@radix-ui/react-tooltip": 3,
         "@sentry/nextjs": 3,
         "@tanstack/react-query": 3,
         "framer-motion": 3,
         "js-cookie": 3,
-        "lucide-react": 3,
-        "next": 3,
-        "next-auth": 3
+        "next-auth": 3,
+        "react": 3,
+        "react-dom": 3,
+        "sonner": 3
       },
       "libraryPairs": {
         "@fortawesome/react-fontawesome": 30,
-        "@radix-ui/react-slot": 8,
         "@radix-ui/react-tooltip": 48,
         "@sentry/nextjs": 9,
         "@tanstack/react-query": 3,
         "framer-motion": 89,
         "js-cookie": 9,
-        "lucide-react": 0,
-        "next": 1060,
-        "next-auth": 119
+        "next-auth": 119,
+        "react": 0,
+        "react-dom": 0,
+        "sonner": 121
       },
-      "oneToOnePairs": 1375,
+      "oneToOnePairs": 428,
       "imageID": "sha256:5e2b15a032e2433f0177fd15edbf62bce866dfab865a46e2e1d85612c0b30326",
       "qualification": "../qualified-dataset/turbopack/CapSoftware--Cap/qualification.json",
-      "moduleScope": "../qualified-dataset/turbopack/CapSoftware--Cap/module-scope.json"
+      "moduleScope": "../qualified-dataset/turbopack/CapSoftware--Cap/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/turbopack/CapSoftware--Cap/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "@fortawesome/react-fontawesome",
+        "@radix-ui/react-tooltip",
+        "@sentry/nextjs",
+        "@tanstack/react-query",
+        "framer-motion",
+        "js-cookie",
+        "next-auth",
+        "react",
+        "react-dom",
+        "sonner"
+      ]
     },
     {
       "subject": "turbopack/DayuanJiang--next-ai-draw-io",
       "repo": "DayuanJiang/next-ai-draw-io",
       "commit": "e3d4d11d5916daf8d68a9f087b36c8ca9a79200e",
       "records": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/ground-truth/func-mapping.json",
-      "recordsSHA256": "1b35cb9235b433c5b213b1e029706efbd733e84c87b021d8824d54292a9e01d6",
+      "recordsSHA256": "1e7dff4b131ecdb2858e1cdee2525cb633c33e3601985b8b20491c241cb825ca",
       "selectedLibraries": [
         "@next/third-parties",
         "@radix-ui/react-scroll-area",
@@ -747,9 +872,9 @@
         "@radix-ui/react-tooltip",
         "ai",
         "cmdk",
-        "next",
         "pako",
-        "prism-react-renderer"
+        "prism-react-renderer",
+        "@ai-sdk/react"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -760,9 +885,9 @@
         "@radix-ui/react-tooltip": 3,
         "ai": 3,
         "cmdk": 3,
-        "next": 3,
         "pako": 3,
-        "prism-react-renderer": 3
+        "prism-react-renderer": 3,
+        "@ai-sdk/react": 3
       },
       "libraryPairs": {
         "@next/third-parties": 10,
@@ -772,21 +897,35 @@
         "@radix-ui/react-tooltip": 0,
         "ai": 0,
         "cmdk": 0,
-        "next": 1008,
         "pako": 57,
-        "prism-react-renderer": 0
+        "prism-react-renderer": 0,
+        "@ai-sdk/react": 0
       },
-      "oneToOnePairs": 1193,
+      "oneToOnePairs": 185,
       "imageID": "sha256:079245223f1ad23b1a565e0cbb50050d93249448e0fb1fce3d5c2621580d28ca",
       "qualification": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/qualification.json",
-      "moduleScope": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/module-scope.json"
+      "moduleScope": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "@next/third-parties",
+        "@radix-ui/react-scroll-area",
+        "@radix-ui/react-select",
+        "@radix-ui/react-slot",
+        "@radix-ui/react-tooltip",
+        "ai",
+        "cmdk",
+        "pako",
+        "prism-react-renderer",
+        "@ai-sdk/react"
+      ]
     },
     {
       "subject": "turbopack/Open-Dev-Society--OpenStock",
       "repo": "Open-Dev-Society/OpenStock",
       "commit": "b72306d39fa27dc55252ceecf858165ecf5a3fa3",
       "records": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/ground-truth/func-mapping.json",
-      "recordsSHA256": "8f99d66b289fdf0822779485b02c91115e610bab430b808691b653f2d8169a00",
+      "recordsSHA256": "79c9aa38722efa22e29e707a5d6bd7ad8b1b483a010f833791c272b68ad4269c",
       "selectedLibraries": [
         "@radix-ui/react-dialog",
         "@radix-ui/react-dropdown-menu",
@@ -827,66 +966,124 @@
       "oneToOnePairs": 46,
       "imageID": "sha256:07613042e0661b6bbd5274d1fe87ada90b03b0324cb47e928fd2a82f34a8b103",
       "qualification": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/qualification.json",
-      "moduleScope": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/module-scope.json"
+      "moduleScope": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/turbopack/Open-Dev-Society--OpenStock/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@radix-ui/react-dropdown-menu",
+        "@radix-ui/react-popover",
+        "@radix-ui/react-select",
+        "better-auth",
+        "cmdk",
+        "country-data-list",
+        "date-fns"
+      ],
+      "evaluationLibraries": [
+        "@radix-ui/react-dialog",
+        "@radix-ui/react-slot",
+        "@vercel/analytics"
+      ]
     },
     {
       "subject": "turbopack/colinhacks--zod",
       "repo": "colinhacks/zod",
       "commit": "b500a2ee95134f81d74da7911d7378dd2853d042",
       "records": "../qualified-dataset/turbopack/colinhacks--zod/ground-truth/func-mapping.json",
-      "recordsSHA256": "0fb55a2c702d385ec0dfbc6e3ddd9ebbf4892e002ab84659475a819507b96e81",
+      "recordsSHA256": "969de2006a20e12cbd975c115a9a77ce5bc80b7c2e197d82094c9d2caf4848ce",
       "selectedLibraries": [
         "@inkeep/cxkit-react",
-        "@radix-ui/react-accordion",
         "@vercel/analytics",
         "@vercel/og",
-        "fumadocs-core",
         "fumadocs-mdx",
-        "fumadocs-ui",
         "gray-matter",
-        "next",
-        "react"
+        "react",
+        "react-dom"
       ],
-      "libraryCount": 10,
+      "libraryCount": 7,
       "sourceFunctionWitnesses": {
         "@inkeep/cxkit-react": 3,
-        "@radix-ui/react-accordion": 3,
         "@vercel/analytics": 3,
         "@vercel/og": 3,
-        "fumadocs-core": 3,
         "fumadocs-mdx": 3,
-        "fumadocs-ui": 3,
         "gray-matter": 3,
-        "next": 3,
-        "react": 3
+        "react": 3,
+        "react-dom": 3
       },
       "libraryPairs": {
         "@inkeep/cxkit-react": 83,
-        "@radix-ui/react-accordion": 0,
         "@vercel/analytics": 13,
         "@vercel/og": 0,
-        "fumadocs-core": 15,
         "fumadocs-mdx": 0,
-        "fumadocs-ui": 42,
         "gray-matter": 0,
-        "next": 1817,
-        "react": 0
+        "react": 0,
+        "react-dom": 0
       },
-      "oneToOnePairs": 1970,
+      "oneToOnePairs": 96,
       "imageID": "sha256:bd8168d6ca27db6ba2045b773e2f38773072c02c8fcfccdf63e200a75d53cd5d",
       "qualification": "../qualified-dataset/turbopack/colinhacks--zod/qualification.json",
-      "moduleScope": "../qualified-dataset/turbopack/colinhacks--zod/module-scope.json"
+      "moduleScope": "../qualified-dataset/turbopack/colinhacks--zod/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/turbopack/colinhacks--zod/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@vercel/og",
+        "fumadocs-mdx",
+        "gray-matter"
+      ],
+      "evaluationLibraries": [
+        "@inkeep/cxkit-react",
+        "@vercel/analytics",
+        "react",
+        "react-dom"
+      ]
     },
     {
       "subject": "turbopack/jnsahaj--tweakcn",
       "repo": "jnsahaj/tweakcn",
       "commit": "a3b47b37cba97dd637de517aab52c45ec0f83456",
       "records": "../qualified-dataset/turbopack/jnsahaj--tweakcn/ground-truth/func-mapping.json",
-      "recordsSHA256": "57de9482b6bd7188efe3709d968474aa5562423475610a75618fd8b6034a7476",
+      "recordsSHA256": "b28c6e3c8385135f6396416c628dc83d1199eb4b0fbabf1cf0fa7b6d1c3bc96e",
       "selectedLibraries": [
         "@ai-sdk/google",
-        "@ai-sdk/react",
         "@base-ui-components/react",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@google/generative-ai",
+        "@hookform/resolvers",
+        "@lexical/react",
+        "@neondatabase/serverless",
+        "culori"
+      ],
+      "libraryCount": 10,
+      "sourceFunctionWitnesses": {
+        "@ai-sdk/google": 3,
+        "@base-ui-components/react": 3,
+        "@dnd-kit/core": 3,
+        "@dnd-kit/modifiers": 3,
+        "@dnd-kit/sortable": 3,
+        "@google/generative-ai": 3,
+        "@hookform/resolvers": 3,
+        "@lexical/react": 3,
+        "@neondatabase/serverless": 3,
+        "culori": 3
+      },
+      "libraryPairs": {
+        "@ai-sdk/google": 0,
+        "@base-ui-components/react": 78,
+        "@dnd-kit/core": 0,
+        "@dnd-kit/modifiers": 0,
+        "@dnd-kit/sortable": 0,
+        "@google/generative-ai": 0,
+        "@hookform/resolvers": 0,
+        "@lexical/react": 0,
+        "@neondatabase/serverless": 0,
+        "culori": 144
+      },
+      "oneToOnePairs": 222,
+      "imageID": "sha256:0db88feca9d74650b2a56bcbe34c5804c9edbec18e9f8686fa5c4c142aacd789",
+      "qualification": "../qualified-dataset/turbopack/jnsahaj--tweakcn/qualification.json",
+      "moduleScope": "../qualified-dataset/turbopack/jnsahaj--tweakcn/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/turbopack/jnsahaj--tweakcn/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@ai-sdk/google",
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
         "@dnd-kit/sortable",
@@ -895,90 +1092,80 @@
         "@lexical/react",
         "@neondatabase/serverless"
       ],
-      "libraryCount": 10,
-      "sourceFunctionWitnesses": {
-        "@ai-sdk/google": 3,
-        "@ai-sdk/react": 3,
-        "@base-ui-components/react": 3,
-        "@dnd-kit/core": 3,
-        "@dnd-kit/modifiers": 3,
-        "@dnd-kit/sortable": 3,
-        "@google/generative-ai": 3,
-        "@hookform/resolvers": 3,
-        "@lexical/react": 3,
-        "@neondatabase/serverless": 3
-      },
-      "libraryPairs": {
-        "@ai-sdk/google": 0,
-        "@ai-sdk/react": 0,
-        "@base-ui-components/react": 78,
-        "@dnd-kit/core": 0,
-        "@dnd-kit/modifiers": 0,
-        "@dnd-kit/sortable": 0,
-        "@google/generative-ai": 0,
-        "@hookform/resolvers": 0,
-        "@lexical/react": 0,
-        "@neondatabase/serverless": 0
-      },
-      "oneToOnePairs": 78,
-      "imageID": "sha256:0db88feca9d74650b2a56bcbe34c5804c9edbec18e9f8686fa5c4c142aacd789",
-      "qualification": "../qualified-dataset/turbopack/jnsahaj--tweakcn/qualification.json",
-      "moduleScope": "../qualified-dataset/turbopack/jnsahaj--tweakcn/module-scope.json"
+      "evaluationLibraries": [
+        "@base-ui-components/react",
+        "culori"
+      ]
     },
     {
       "subject": "turbopack/shadcn-ui--ui",
       "repo": "shadcn-ui/ui",
       "commit": "d549251bab2e57dbf72f7c909d6458c02c43f529",
       "records": "../qualified-dataset/turbopack/shadcn-ui--ui/ground-truth/func-mapping.json",
-      "recordsSHA256": "d88f20ec7600b31fd936420a318c6145ac0730f6a17036ba625648d16cedc3c4",
+      "recordsSHA256": "e2a588e97a560ec219bf811210cef31791c094c357169adb78ed76919c4ca2b2",
       "selectedLibraries": [
         "@ai-sdk/anthropic",
         "@ai-sdk/openai",
         "@ai-sdk/react",
-        "@base-ui/react",
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
         "@dnd-kit/sortable",
         "@faker-js/faker",
         "@formisch/react",
-        "@hookform/resolvers"
+        "@internationalized/date",
+        "@tanstack/ai"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
         "@ai-sdk/anthropic": 3,
         "@ai-sdk/openai": 3,
         "@ai-sdk/react": 3,
-        "@base-ui/react": 3,
         "@dnd-kit/core": 3,
         "@dnd-kit/modifiers": 3,
         "@dnd-kit/sortable": 3,
         "@faker-js/faker": 3,
         "@formisch/react": 3,
-        "@hookform/resolvers": 3
+        "@internationalized/date": 3,
+        "@tanstack/ai": 3
       },
       "libraryPairs": {
         "@ai-sdk/anthropic": 0,
         "@ai-sdk/openai": 0,
         "@ai-sdk/react": 0,
-        "@base-ui/react": 1424,
         "@dnd-kit/core": 132,
         "@dnd-kit/modifiers": 1,
         "@dnd-kit/sortable": 9,
         "@faker-js/faker": 0,
         "@formisch/react": 85,
-        "@hookform/resolvers": 0
+        "@internationalized/date": 0,
+        "@tanstack/ai": 82
       },
-      "oneToOnePairs": 1651,
+      "oneToOnePairs": 309,
       "imageID": "sha256:2598c37904b81c0c1ae178582c87c23a73b9e08410c457aad4c6d724e581ae59",
       "qualification": "../qualified-dataset/turbopack/shadcn-ui--ui/qualification.json",
-      "moduleScope": "../qualified-dataset/turbopack/shadcn-ui--ui/module-scope.json"
+      "moduleScope": "../qualified-dataset/turbopack/shadcn-ui--ui/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/turbopack/shadcn-ui--ui/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@ai-sdk/anthropic",
+        "@ai-sdk/openai",
+        "@faker-js/faker"
+      ],
+      "evaluationLibraries": [
+        "@ai-sdk/react",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@formisch/react",
+        "@internationalized/date",
+        "@tanstack/ai"
+      ]
     },
     {
       "subject": "turbopack/umami-software--umami",
       "repo": "umami-software/umami",
       "commit": "559e3c607c23d2c72d9bd4f6481bda428255323c",
       "records": "../qualified-dataset/turbopack/umami-software--umami/ground-truth/func-mapping.json",
-      "recordsSHA256": "800fea3f625224994e696d499a234d4993ff88ec1d136e7d49bdc0db0e7765c1",
+      "recordsSHA256": "8e11e9135cfeb08368c879d00885255d8b23f565afb6777d4e89f4134bf47293",
       "selectedLibraries": [
         "@clickhouse/client",
         "@dicebear/core",
@@ -1019,14 +1206,29 @@
       "oneToOnePairs": 796,
       "imageID": "sha256:b2b2ade88c5073f80acc4f3e1779fc53d064ad668ebbd3e20e62df8d050918c6",
       "qualification": "../qualified-dataset/turbopack/umami-software--umami/qualification.json",
-      "moduleScope": "../qualified-dataset/turbopack/umami-software--umami/module-scope.json"
+      "moduleScope": "../qualified-dataset/turbopack/umami-software--umami/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/turbopack/umami-software--umami/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@clickhouse/client",
+        "@dicebear/core",
+        "@prisma/adapter-pg",
+        "@prisma/client",
+        "@svgr/cli",
+        "bcryptjs",
+        "chalk"
+      ],
+      "evaluationLibraries": [
+        "@tanstack/react-query",
+        "@umami/react-zen",
+        "chart.js"
+      ]
     },
     {
       "subject": "vite/CorentinTh--it-tools",
       "repo": "CorentinTh/it-tools",
       "commit": "d505845f918e946ec300af7b36efc107e2f66e9e",
       "records": "../qualified-dataset/vite/CorentinTh--it-tools/ground-truth/func-mapping.json",
-      "recordsSHA256": "3c88f0b25371c4070cc807e6da4b70e207d2c38f9a8fc99c10432578f4cca063",
+      "recordsSHA256": "a4b69d5ccdd20a5cafa31086cfd5d1cbcb17dc4734218064198c913a4d8630f9",
       "selectedLibraries": [
         "naive-ui",
         "fuse.js",
@@ -1067,14 +1269,29 @@
       "oneToOnePairs": 2681,
       "imageID": "sha256:397c047c5dbc8deb82ee1861d4fcf265274c7d8cd810e41a631556f772c6d47a",
       "qualification": "../qualified-dataset/vite/CorentinTh--it-tools/qualification.json",
-      "moduleScope": "../qualified-dataset/vite/CorentinTh--it-tools/module-scope.json"
+      "moduleScope": "../qualified-dataset/vite/CorentinTh--it-tools/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/vite/CorentinTh--it-tools/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@it-tools/bip39"
+      ],
+      "evaluationLibraries": [
+        "naive-ui",
+        "fuse.js",
+        "lodash",
+        "dompurify",
+        "vue-router",
+        "@vueuse/core",
+        "marked",
+        "vue-i18n",
+        "vuedraggable"
+      ]
     },
     {
       "subject": "vite/DavidHDev--react-bits",
       "repo": "DavidHDev/react-bits",
       "commit": "4dc7b5b7772e1217c8fb8d2a7aa074302180e5b4",
       "records": "../qualified-dataset/vite/DavidHDev--react-bits/ground-truth/func-mapping.json",
-      "recordsSHA256": "380e9d6140025dac6dddac3e6ef286c9b753dd1b8e75178c4d4189703092e80d",
+      "recordsSHA256": "5f4dfdb0ff4355869c8606662f3371c96b80dbade07996bbac847c28f01241d1",
       "selectedLibraries": [
         "lucide-react",
         "nuqs",
@@ -1115,14 +1332,29 @@
       "oneToOnePairs": 881,
       "imageID": "sha256:134870a088eaa8a299c9767f15c4d4c0343a8b9ed523a8f13734745b02a39b51",
       "qualification": "../qualified-dataset/vite/DavidHDev--react-bits/qualification.json",
-      "moduleScope": "../qualified-dataset/vite/DavidHDev--react-bits/module-scope.json"
+      "moduleScope": "../qualified-dataset/vite/DavidHDev--react-bits/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/vite/DavidHDev--react-bits/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@chakra-ui/react",
+        "@emotion/react",
+        "@gsap/react"
+      ],
+      "evaluationLibraries": [
+        "lucide-react",
+        "nuqs",
+        "react",
+        "react-dom",
+        "react-haiku",
+        "react-icons",
+        "react-router-dom"
+      ]
     },
     {
       "subject": "vite/LibreChat-AI--LibreChat",
       "repo": "LibreChat-AI/LibreChat",
       "commit": "f4154b649efa37e1345ccc517a4d8d1ed2178c82",
       "records": "../qualified-dataset/vite/LibreChat-AI--LibreChat/ground-truth/func-mapping.json",
-      "recordsSHA256": "6e93af748c5cadbfcd5a1b206eaf18e6c9bb9bfde49a2a505320e896403596b3",
+      "recordsSHA256": "46b52360b91fe8b0d00d1cd4fce272e0a9b5b392ef45e98f3eaa0cf7024cb1db",
       "selectedLibraries": [
         "@mcp-ui/client",
         "react",
@@ -1163,14 +1395,28 @@
       "oneToOnePairs": 2188,
       "imageID": "sha256:ea575f1421ddb62a3e691d433170cdc24fc8d71f0c5ed4b109b33311dc36f207",
       "qualification": "../qualified-dataset/vite/LibreChat-AI--LibreChat/qualification.json",
-      "moduleScope": "../qualified-dataset/vite/LibreChat-AI--LibreChat/module-scope.json"
+      "moduleScope": "../qualified-dataset/vite/LibreChat-AI--LibreChat/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/vite/LibreChat-AI--LibreChat/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "@mcp-ui/client",
+        "react",
+        "@ariakit/react-components",
+        "swr",
+        "react-dom",
+        "framer-motion",
+        "jotai",
+        "@marsidev/react-turnstile",
+        "@modelcontextprotocol/ext-apps",
+        "@radix-ui/react-toast"
+      ]
     },
     {
       "subject": "vite/Lissy93--dashy",
       "repo": "Lissy93/dashy",
       "commit": "002c6dd559c8d7ba662aeae9228164f6cf398c75",
       "records": "../qualified-dataset/vite/Lissy93--dashy/ground-truth/func-mapping.json",
-      "recordsSHA256": "2b0aa813a19bb0aefb97b89c4f965ab323042f64e9f322150601f8cbdf712659",
+      "recordsSHA256": "8e2cfd549c23eb3f81e663614eb8acbb97afb0caa98f94f47d40fc79405a0ea5",
       "selectedLibraries": [
         "vuex",
         "crypto-js",
@@ -1211,14 +1457,28 @@
       "oneToOnePairs": 2063,
       "imageID": "sha256:7bcff2bc0274261b3a66f3a6872330c6304dfc3ebd8c945336c5903b6fe29f3c",
       "qualification": "../qualified-dataset/vite/Lissy93--dashy/qualification.json",
-      "moduleScope": "../qualified-dataset/vite/Lissy93--dashy/module-scope.json"
+      "moduleScope": "../qualified-dataset/vite/Lissy93--dashy/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/vite/Lissy93--dashy/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "vuex",
+        "crypto-js",
+        "sortablejs",
+        "dompurify",
+        "rsup-progress",
+        "js-yaml",
+        "vue-i18n",
+        "vue-select",
+        "ajv",
+        "vue-router"
+      ]
     },
     {
       "subject": "vite/drawdb-io--drawdb",
       "repo": "drawdb-io/drawdb",
       "commit": "a249c7fb730c2de9b5c2ce6e863f2ea7344ac372",
       "records": "../qualified-dataset/vite/drawdb-io--drawdb/ground-truth/func-mapping.json",
-      "recordsSHA256": "eac25d03bf6dce8268b87feb23561a79ecf2ee42029a9f431386c3dc701bd079",
+      "recordsSHA256": "eb7a81354d187fa9f0dc425ffc7a97c5ced7bf525d6de9794eb0a17c35719efe",
       "selectedLibraries": [
         "jsonschema",
         "oracle-sql-parser",
@@ -1259,32 +1519,44 @@
       "oneToOnePairs": 6206,
       "imageID": "sha256:616bebf23e313f32307d866fbcff99d7e6666e2f672567e98be4be1cdb588e12",
       "qualification": "../qualified-dataset/vite/drawdb-io--drawdb/qualification.json",
-      "moduleScope": "../qualified-dataset/vite/drawdb-io--drawdb/module-scope.json"
+      "moduleScope": "../qualified-dataset/vite/drawdb-io--drawdb/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/vite/drawdb-io--drawdb/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "jsonschema",
+        "oracle-sql-parser",
+        "lexical",
+        "react-tweet",
+        "framer-motion",
+        "react-dom",
+        "@douyinfe/semi-ui",
+        "@dagrejs/dagre",
+        "@dnd-kit/core",
+        "@dnd-kit/sortable"
+      ]
     },
     {
       "subject": "vite/excalidraw--excalidraw",
       "repo": "excalidraw/excalidraw",
       "commit": "701b901a0f1ba3d0b390d9cdf63d112e25abac4b",
       "records": "../qualified-dataset/vite/excalidraw--excalidraw/ground-truth/func-mapping.json",
-      "recordsSHA256": "e13f4072a97270291cb0dcb58067c6bf1b2cc9d71a404fda814a153a8e8812eb",
+      "recordsSHA256": "3acb24a9209fcf97e6ed0093b5a809f688863aca296c4a1bb9916d8553432530",
       "selectedLibraries": [
         "react-dom",
         "@sentry/browser",
         "i18next-browser-languagedetector",
         "react",
-        "jotai",
         "firebase",
         "socket.io-client",
         "uqr",
         "vite-plugin-html"
       ],
-      "libraryCount": 9,
+      "libraryCount": 8,
       "sourceFunctionWitnesses": {
         "react-dom": 3,
         "@sentry/browser": 3,
         "i18next-browser-languagedetector": 3,
         "react": 3,
-        "jotai": 3,
         "firebase": 3,
         "socket.io-client": 3,
         "uqr": 3,
@@ -1295,7 +1567,6 @@
         "@sentry/browser": 102,
         "i18next-browser-languagedetector": 28,
         "react": 65,
-        "jotai": 0,
         "firebase": 0,
         "socket.io-client": 0,
         "uqr": 0,
@@ -1304,110 +1575,152 @@
       "oneToOnePairs": 809,
       "imageID": "sha256:e7e4d7681ac7e1dcff8f6389714d638fbf5c038ae2fd102c0320d2ba1ee26d2d",
       "qualification": "../qualified-dataset/vite/excalidraw--excalidraw/qualification.json",
-      "moduleScope": "../qualified-dataset/vite/excalidraw--excalidraw/module-scope.json"
+      "moduleScope": "../qualified-dataset/vite/excalidraw--excalidraw/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/vite/excalidraw--excalidraw/duplicate-audit.json",
+      "unscoredLibraries": [
+        "firebase",
+        "socket.io-client",
+        "uqr",
+        "vite-plugin-html"
+      ],
+      "evaluationLibraries": [
+        "react-dom",
+        "@sentry/browser",
+        "i18next-browser-languagedetector",
+        "react"
+      ]
     },
     {
       "subject": "vite/hoppscotch--hoppscotch",
       "repo": "hoppscotch/hoppscotch",
       "commit": "55908a76a1d0555c9bbb5d74244c14173df95b06",
       "records": "../qualified-dataset/vite/hoppscotch--hoppscotch/ground-truth/func-mapping.json",
-      "recordsSHA256": "ce844a86c4326c73f73164c86dd52cb482415b364e9961ff568a36d38ce7aa53",
+      "recordsSHA256": "bce8d828c8a45d400507d8e1ea7de4181bdb0c8d360db14907bf9c0948d7b7d4",
       "selectedLibraries": [
-        "buffer",
         "workbox-window",
         "@vueuse/core",
-        "util",
         "axios",
-        "@hoppscotch/ui",
-        "@tauri-apps/api",
         "rxjs",
         "zod",
-        "@hoppscotch/common"
+        "@hoppscotch/common",
+        "@tauri-apps/plugin-dialog",
+        "@tauri-apps/plugin-fs",
+        "@tauri-apps/plugin-shell",
+        "dioc"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
-        "buffer": 3,
         "workbox-window": 3,
         "@vueuse/core": 3,
-        "util": 3,
         "axios": 3,
-        "@hoppscotch/ui": 3,
-        "@tauri-apps/api": 3,
         "rxjs": 3,
         "zod": 3,
-        "@hoppscotch/common": 3
+        "@hoppscotch/common": 3,
+        "@tauri-apps/plugin-dialog": 3,
+        "@tauri-apps/plugin-fs": 3,
+        "@tauri-apps/plugin-shell": 3,
+        "dioc": 3
       },
       "libraryPairs": {
-        "buffer": 266,
         "workbox-window": 56,
         "@vueuse/core": 217,
-        "util": 288,
         "axios": 351,
-        "@hoppscotch/ui": 1195,
-        "@tauri-apps/api": 240,
         "rxjs": 208,
         "zod": 423,
-        "@hoppscotch/common": 0
+        "@hoppscotch/common": 0,
+        "@tauri-apps/plugin-dialog": 1,
+        "@tauri-apps/plugin-fs": 3,
+        "@tauri-apps/plugin-shell": 1,
+        "dioc": 128
       },
-      "oneToOnePairs": 3244,
+      "oneToOnePairs": 1388,
       "imageID": "sha256:e59ec6b0d5cd5fd5913cb55219d74cea11fc1668e76265995c814dd7a58b3e43",
       "qualification": "../qualified-dataset/vite/hoppscotch--hoppscotch/qualification.json",
-      "moduleScope": "../qualified-dataset/vite/hoppscotch--hoppscotch/module-scope.json"
+      "moduleScope": "../qualified-dataset/vite/hoppscotch--hoppscotch/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/vite/hoppscotch--hoppscotch/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@hoppscotch/common"
+      ],
+      "evaluationLibraries": [
+        "workbox-window",
+        "@vueuse/core",
+        "axios",
+        "rxjs",
+        "zod",
+        "@tauri-apps/plugin-dialog",
+        "@tauri-apps/plugin-fs",
+        "@tauri-apps/plugin-shell",
+        "dioc"
+      ]
     },
     {
       "subject": "vite/immich-app--immich",
       "repo": "immich-app/immich",
       "commit": "037e5bc0554074bfe91e20b802a6a4ef4a6dd6f9",
       "records": "../qualified-dataset/vite/immich-app--immich/ground-truth/func-mapping.json",
-      "recordsSHA256": "838ea1c8c3d918a766424fd7cc2a8b497faf16013008e018d7a136fab6751ef7",
+      "recordsSHA256": "b3764a7a4a7146c63b43283268b3334a067afd69859af0d5ceb0f2e30cbae793",
       "selectedLibraries": [
-        "@immich/ui",
-        "@formatjs/icu-messageformat-parser",
         "tailwind-merge",
         "tabbable",
         "tailwind-variants",
         "justified-layout",
-        "intl-messageformat",
         "lodash-es",
         "luxon",
-        "socket.io-client"
+        "socket.io-client",
+        "@futo-org/backups-orchestrator-ui",
+        "media-chrome",
+        "svelte-i18n"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
-        "@immich/ui": 3,
-        "@formatjs/icu-messageformat-parser": 3,
         "tailwind-merge": 3,
         "tabbable": 3,
         "tailwind-variants": 3,
         "justified-layout": 3,
-        "intl-messageformat": 3,
         "lodash-es": 3,
         "luxon": 3,
-        "socket.io-client": 3
+        "socket.io-client": 3,
+        "@futo-org/backups-orchestrator-ui": 3,
+        "media-chrome": 3,
+        "svelte-i18n": 3
       },
       "libraryPairs": {
-        "@immich/ui": 151,
-        "@formatjs/icu-messageformat-parser": 127,
         "tailwind-merge": 113,
         "tabbable": 34,
         "tailwind-variants": 193,
         "justified-layout": 19,
-        "intl-messageformat": 69,
         "lodash-es": 176,
         "luxon": 580,
-        "socket.io-client": 96
+        "socket.io-client": 96,
+        "@futo-org/backups-orchestrator-ui": 57,
+        "media-chrome": 6,
+        "svelte-i18n": 63
       },
-      "oneToOnePairs": 1558,
+      "oneToOnePairs": 1337,
       "imageID": "sha256:d6425984f8b69f7358beab8c3e30c57a88d6bce42879e5e1f7c94c922fe0866e",
       "qualification": "../qualified-dataset/vite/immich-app--immich/qualification.json",
-      "moduleScope": "../qualified-dataset/vite/immich-app--immich/module-scope.json"
+      "moduleScope": "../qualified-dataset/vite/immich-app--immich/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/vite/immich-app--immich/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "tailwind-merge",
+        "tabbable",
+        "tailwind-variants",
+        "justified-layout",
+        "lodash-es",
+        "luxon",
+        "socket.io-client",
+        "@futo-org/backups-orchestrator-ui",
+        "media-chrome",
+        "svelte-i18n"
+      ]
     },
     {
       "subject": "webpack/PanJiaChen--vue-element-admin",
       "repo": "PanJiaChen/vue-element-admin",
       "commit": "6858a9ad67483025f6a9432a926beb9327037be3",
       "records": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/ground-truth/func-mapping.json",
-      "recordsSHA256": "60958c9fec4daffc7e1bc3d9781ef9b95bb6a92740764d9db30e364a6ac0418f",
+      "recordsSHA256": "177e4af966ab42c658417ee6994c23bdbc77af3a3d3af8a36e40b30f679570c2",
       "selectedLibraries": [
         "vue-router",
         "fuse.js",
@@ -1415,12 +1728,11 @@
         "path-to-regexp",
         "element-ui",
         "vue",
-        "core-js",
         "vuex",
         "clipboard",
         "codemirror"
       ],
-      "libraryCount": 10,
+      "libraryCount": 9,
       "sourceFunctionWitnesses": {
         "vue-router": 3,
         "fuse.js": 3,
@@ -1428,7 +1740,6 @@
         "path-to-regexp": 3,
         "element-ui": 3,
         "vue": 3,
-        "core-js": 3,
         "vuex": 3,
         "clipboard": 3,
         "codemirror": 3
@@ -1440,88 +1751,110 @@
         "path-to-regexp": 12,
         "element-ui": 4126,
         "vue": 465,
-        "core-js": 496,
         "vuex": 115,
         "clipboard": 0,
         "codemirror": 0
       },
-      "oneToOnePairs": 5578,
+      "oneToOnePairs": 5082,
       "imageID": "sha256:e6ecf7ce1479c72a71dc29b9f0f09e63fb1edca993e7e1065409a63750ec4020",
       "qualification": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/qualification.json",
-      "moduleScope": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/module-scope.json"
+      "moduleScope": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/webpack/PanJiaChen--vue-element-admin/duplicate-audit.json",
+      "unscoredLibraries": [
+        "clipboard",
+        "codemirror"
+      ],
+      "evaluationLibraries": [
+        "vue-router",
+        "fuse.js",
+        "axios",
+        "path-to-regexp",
+        "element-ui",
+        "vue",
+        "vuex"
+      ]
     },
     {
       "subject": "webpack/akveo--ngx-admin",
       "repo": "akveo/ngx-admin",
       "commit": "dc6a442704bfef34b776b5eb15faf852d9e2f75c",
       "records": "../qualified-dataset/webpack/akveo--ngx-admin/ground-truth/func-mapping.json",
-      "recordsSHA256": "a71e9fc4c81940bbd69b4a60c318a3153e7babc2502dd7289d967b953e4ae12b",
+      "recordsSHA256": "5b27b676f8e93c584b52c509cc0545e7effabfb6266a20fdc17aa89b758b0eb7",
       "selectedLibraries": [
         "web-animations-js",
         "core-js",
         "leaflet",
-        "chart.js",
-        "echarts",
         "zone.js",
-        "@angular/animations",
         "@angular/cdk",
-        "@angular/common",
-        "@angular/core"
+        "@asymmetrik/ngx-leaflet",
+        "classlist.js",
+        "ngx-echarts",
+        "tslib"
       ],
-      "libraryCount": 10,
+      "libraryCount": 9,
       "sourceFunctionWitnesses": {
         "web-animations-js": 3,
         "core-js": 3,
         "leaflet": 3,
-        "chart.js": 3,
-        "echarts": 3,
         "zone.js": 3,
-        "@angular/animations": 3,
         "@angular/cdk": 3,
-        "@angular/common": 3,
-        "@angular/core": 3
+        "@asymmetrik/ngx-leaflet": 3,
+        "classlist.js": 3,
+        "ngx-echarts": 3,
+        "tslib": 3
       },
       "libraryPairs": {
         "web-animations-js": 67,
         "core-js": 164,
         "leaflet": 858,
-        "chart.js": 708,
-        "echarts": 3817,
         "zone.js": 224,
-        "@angular/animations": 0,
         "@angular/cdk": 0,
-        "@angular/common": 0,
-        "@angular/core": 0
+        "@asymmetrik/ngx-leaflet": 71,
+        "classlist.js": 18,
+        "ngx-echarts": 31,
+        "tslib": 3
       },
-      "oneToOnePairs": 5838,
+      "oneToOnePairs": 1436,
       "imageID": "sha256:92c1e8d331293ea060730eaa634c528cec25a185807d34eb8b161c099cfe8e0f",
       "qualification": "../qualified-dataset/webpack/akveo--ngx-admin/qualification.json",
-      "moduleScope": "../qualified-dataset/webpack/akveo--ngx-admin/module-scope.json"
+      "moduleScope": "../qualified-dataset/webpack/akveo--ngx-admin/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/webpack/akveo--ngx-admin/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@angular/cdk"
+      ],
+      "evaluationLibraries": [
+        "web-animations-js",
+        "core-js",
+        "leaflet",
+        "zone.js",
+        "@asymmetrik/ngx-leaflet",
+        "classlist.js",
+        "ngx-echarts",
+        "tslib"
+      ]
     },
     {
       "subject": "webpack/bailicangdu--vue2-elm",
       "repo": "bailicangdu/vue2-elm",
       "commit": "b85ff0220366be863868269177a4abf74c7a85ca",
       "records": "../qualified-dataset/webpack/bailicangdu--vue2-elm/ground-truth/func-mapping.json",
-      "recordsSHA256": "c2111ae7441c96715283529202bfcd5e283f5e2047b6d4c4d94a9c508dce6323",
+      "recordsSHA256": "7dd63d27c7c641e216ad746d280eb282f88a5941d60065bea51121cc8d431b8c",
       "selectedLibraries": [
         "better-scroll",
         "fastclick",
         "iscroll",
         "showdown",
         "vue",
-        "vue-router",
-        "vuex"
+        "vue-router"
       ],
-      "libraryCount": 7,
+      "libraryCount": 6,
       "sourceFunctionWitnesses": {
         "better-scroll": 3,
         "fastclick": 3,
         "iscroll": 3,
         "showdown": 3,
         "vue": 3,
-        "vue-router": 3,
-        "vuex": 3
+        "vue-router": 3
       },
       "libraryPairs": {
         "better-scroll": 0,
@@ -1529,20 +1862,30 @@
         "iscroll": 0,
         "showdown": 0,
         "vue": 420,
-        "vue-router": 65,
-        "vuex": 7
+        "vue-router": 65
       },
-      "oneToOnePairs": 492,
+      "oneToOnePairs": 485,
       "imageID": "sha256:961df673d8f780ccdccba3e0ac792038bb9417fa8663420e1ab5c839d2b803b2",
       "qualification": "../qualified-dataset/webpack/bailicangdu--vue2-elm/qualification.json",
-      "moduleScope": "../qualified-dataset/webpack/bailicangdu--vue2-elm/module-scope.json"
+      "moduleScope": "../qualified-dataset/webpack/bailicangdu--vue2-elm/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/webpack/bailicangdu--vue2-elm/duplicate-audit.json",
+      "unscoredLibraries": [
+        "better-scroll",
+        "fastclick",
+        "iscroll",
+        "showdown"
+      ],
+      "evaluationLibraries": [
+        "vue",
+        "vue-router"
+      ]
     },
     {
       "subject": "webpack/dair-ai--Prompt-Engineering-Guide",
       "repo": "dair-ai/Prompt-Engineering-Guide",
       "commit": "57673726396dd94acb23bdb1e67f27c78ee85a8e",
       "records": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/ground-truth/func-mapping.json",
-      "recordsSHA256": "68e5709df9905e7441eb912dd181380994b1178cbdbd2c5a8f13510435903c0e",
+      "recordsSHA256": "c85f430c8d4c25daab8f9cd874571548d37c42fff6012830185fbfb68477ab73",
       "selectedLibraries": [
         "@fortawesome/fontawesome-svg-core",
         "@fortawesome/react-fontawesome",
@@ -1577,14 +1920,27 @@
       "oneToOnePairs": 1427,
       "imageID": "sha256:762d82fcf838c12afddeca97b5271468ad1ee5e37c74d73f448e9848ad6a1a18",
       "qualification": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/qualification.json",
-      "moduleScope": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/module-scope.json"
+      "moduleScope": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/webpack/dair-ai--Prompt-Engineering-Guide/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "katex"
+      ],
+      "evaluationLibraries": [
+        "next",
+        "nextra",
+        "nextra-theme-docs",
+        "react",
+        "react-dom"
+      ]
     },
     {
       "subject": "webpack/dokploy--dokploy",
       "repo": "dokploy/dokploy",
       "commit": "fe9ae2a7db22730ff1ab72939e10806848c7cccd",
       "records": "../qualified-dataset/webpack/dokploy--dokploy/ground-truth/func-mapping.json",
-      "recordsSHA256": "e6839fc89732e1d743f24c940c20d3e62af6bb1a82c830c07deb9ebf06f694a2",
+      "recordsSHA256": "0971d303ffee47e71821d7db06d7dc99b7689f277614ecce65875bacff0faeaf",
       "selectedLibraries": [
         "better-auth",
         "react-dom",
@@ -1613,7 +1969,7 @@
       "libraryPairs": {
         "better-auth": 58,
         "react-dom": 568,
-        "next": 104,
+        "next": 572,
         "react": 50,
         "@tanstack/react-query": 0,
         "@trpc/client": 0,
@@ -1622,17 +1978,31 @@
         "posthog-js": 0,
         "react-hook-form": 0
       },
-      "oneToOnePairs": 780,
+      "oneToOnePairs": 1248,
       "imageID": "sha256:6fdac03eee413572b38609316f90bda393b401a5651011d851368a959520fbc1",
       "qualification": "../qualified-dataset/webpack/dokploy--dokploy/qualification.json",
-      "moduleScope": "../qualified-dataset/webpack/dokploy--dokploy/module-scope.json"
+      "moduleScope": "../qualified-dataset/webpack/dokploy--dokploy/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/webpack/dokploy--dokploy/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "better-auth",
+        "react-dom",
+        "next",
+        "react",
+        "@tanstack/react-query",
+        "@trpc/client",
+        "@trpc/react-query",
+        "cmdk",
+        "posthog-js",
+        "react-hook-form"
+      ]
     },
     {
       "subject": "webpack/freeCodeCamp--freeCodeCamp",
       "repo": "freeCodeCamp/freeCodeCamp",
       "commit": "a7292b4f26e37f59ba12d670e53d8806d5c2527f",
       "records": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/ground-truth/func-mapping.json",
-      "recordsSHA256": "d7018bfe3682b98bcc2fe5d0437b4d5c66e3340320270a6f404f36a7368bce29",
+      "recordsSHA256": "b31009b34b336e1886f30796fddbbc2edd322980f6935f3b67e0abd1fc48e238",
       "selectedLibraries": [
         "react-responsive",
         "date-fns-tz",
@@ -1642,8 +2012,8 @@
         "store",
         "@fortawesome/fontawesome-svg-core",
         "@fortawesome/react-fontawesome",
-        "@gatsbyjs/reach-router",
-        "@paypal/react-paypal-js"
+        "@paypal/react-paypal-js",
+        "@loadable/component"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
@@ -1655,8 +2025,8 @@
         "store": 3,
         "@fortawesome/fontawesome-svg-core": 3,
         "@fortawesome/react-fontawesome": 3,
-        "@gatsbyjs/reach-router": 3,
-        "@paypal/react-paypal-js": 3
+        "@paypal/react-paypal-js": 3,
+        "@loadable/component": 3
       },
       "libraryPairs": {
         "react-responsive": 62,
@@ -1667,109 +2037,152 @@
         "store": 45,
         "@fortawesome/fontawesome-svg-core": 68,
         "@fortawesome/react-fontawesome": 10,
-        "@gatsbyjs/reach-router": 149,
-        "@paypal/react-paypal-js": 24
+        "@paypal/react-paypal-js": 24,
+        "@loadable/component": 4
       },
-      "oneToOnePairs": 852,
+      "oneToOnePairs": 707,
       "imageID": "sha256:ce39cccc90da044c8946872ae46536380ff8d54393ee71d4696d3c5f7055d4ee",
       "qualification": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/qualification.json",
-      "moduleScope": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/module-scope.json"
+      "moduleScope": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/webpack/freeCodeCamp--freeCodeCamp/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "react-responsive",
+        "date-fns-tz",
+        "validator",
+        "react-dom",
+        "react",
+        "store",
+        "@fortawesome/fontawesome-svg-core",
+        "@fortawesome/react-fontawesome",
+        "@paypal/react-paypal-js",
+        "@loadable/component"
+      ]
     },
     {
       "subject": "webpack/supabase--supabase",
       "repo": "supabase/supabase",
       "commit": "aa9d04e4f77447e2b6aaf317b686007aff05aa96",
       "records": "../qualified-dataset/webpack/supabase--supabase/ground-truth/func-mapping.json",
-      "recordsSHA256": "5b71025311cfafb533e2ca53421dded2f4a49526ebdff0235677c56d1be59f4a",
+      "recordsSHA256": "2dc09ad5103c755f2ba2bcd7956bdb0da996e2941eddbdc76c7827c8f4af3638",
       "selectedLibraries": [
         "recharts",
         "mdast-util-from-markdown",
-        "next",
-        "motion",
         "@sentry/nextjs",
         "typed.js",
         "@bsmnt/scrollytelling",
         "@code-hike/mdx",
         "@codesandbox/sandpack-react",
-        "@hcaptcha/react-hcaptcha"
+        "@hcaptcha/react-hcaptcha",
+        "@heroicons/react",
+        "@supabase/supabase-js"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
         "recharts": 3,
         "mdast-util-from-markdown": 3,
-        "next": 3,
-        "motion": 3,
         "@sentry/nextjs": 3,
         "typed.js": 3,
         "@bsmnt/scrollytelling": 3,
         "@code-hike/mdx": 3,
         "@codesandbox/sandpack-react": 3,
-        "@hcaptcha/react-hcaptcha": 3
+        "@hcaptcha/react-hcaptcha": 3,
+        "@heroicons/react": 3,
+        "@supabase/supabase-js": 3
       },
       "libraryPairs": {
         "recharts": 207,
         "mdast-util-from-markdown": 6,
-        "next": 660,
-        "motion": 464,
         "@sentry/nextjs": 0,
         "typed.js": 21,
         "@bsmnt/scrollytelling": 0,
         "@code-hike/mdx": 0,
         "@codesandbox/sandpack-react": 0,
-        "@hcaptcha/react-hcaptcha": 0
+        "@hcaptcha/react-hcaptcha": 0,
+        "@heroicons/react": 0,
+        "@supabase/supabase-js": 20
       },
-      "oneToOnePairs": 1358,
+      "oneToOnePairs": 254,
       "imageID": "sha256:53dce561ab2faedb349ac6a1935e293cf5ee64305dd51a0161c0e6c79f577454",
       "qualification": "../qualified-dataset/webpack/supabase--supabase/qualification.json",
-      "moduleScope": "../qualified-dataset/webpack/supabase--supabase/module-scope.json"
+      "moduleScope": "../qualified-dataset/webpack/supabase--supabase/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/webpack/supabase--supabase/duplicate-audit.json",
+      "unscoredLibraries": [
+        "@bsmnt/scrollytelling",
+        "@code-hike/mdx",
+        "@codesandbox/sandpack-react",
+        "@hcaptcha/react-hcaptcha"
+      ],
+      "evaluationLibraries": [
+        "recharts",
+        "mdast-util-from-markdown",
+        "@sentry/nextjs",
+        "typed.js",
+        "@heroicons/react",
+        "@supabase/supabase-js"
+      ]
     },
     {
       "subject": "webpack/swagger-api--swagger-ui",
       "repo": "swagger-api/swagger-ui",
       "commit": "d3296954a6b813898d298815ac3e68daa1cf7408",
       "records": "../qualified-dataset/webpack/swagger-api--swagger-ui/ground-truth/func-mapping.json",
-      "recordsSHA256": "3b101604673c707135bd7f48236f55c967813e722214d74048bd13a90859c56c",
+      "recordsSHA256": "be3bb61c412a1bf42fe0207625e047c18667d24f7259fc56a340a279d20877b2",
       "selectedLibraries": [
         "remarkable",
-        "lodash",
         "dompurify",
         "xml",
         "zenscroll",
         "@tanstack/react-virtual",
-        "buffer",
-        "immutable",
-        "js-yaml",
-        "randexp"
+        "randexp",
+        "classnames",
+        "prop-types",
+        "react-copy-to-clipboard",
+        "react-debounce-input"
       ],
       "libraryCount": 10,
       "sourceFunctionWitnesses": {
         "remarkable": 3,
-        "lodash": 3,
         "dompurify": 3,
         "xml": 3,
         "zenscroll": 3,
         "@tanstack/react-virtual": 3,
-        "buffer": 3,
-        "immutable": 3,
-        "js-yaml": 3,
-        "randexp": 3
+        "randexp": 3,
+        "classnames": 3,
+        "prop-types": 3,
+        "react-copy-to-clipboard": 3,
+        "react-debounce-input": 3
       },
       "libraryPairs": {
         "remarkable": 199,
-        "lodash": 442,
         "dompurify": 113,
         "xml": 24,
         "zenscroll": 30,
         "@tanstack/react-virtual": 14,
-        "buffer": 266,
-        "immutable": 1310,
-        "js-yaml": 318,
-        "randexp": 14
+        "randexp": 14,
+        "classnames": 5,
+        "prop-types": 5,
+        "react-copy-to-clipboard": 32,
+        "react-debounce-input": 43
       },
-      "oneToOnePairs": 2730,
+      "oneToOnePairs": 479,
       "imageID": "sha256:403cdf53b629ac3603b6e5c2f277423da6128095071086339933257dd9807f54",
       "qualification": "../qualified-dataset/webpack/swagger-api--swagger-ui/qualification.json",
-      "moduleScope": "../qualified-dataset/webpack/swagger-api--swagger-ui/module-scope.json"
+      "moduleScope": "../qualified-dataset/webpack/swagger-api--swagger-ui/module-scope.json",
+      "duplicateAudit": "../qualified-dataset/webpack/swagger-api--swagger-ui/duplicate-audit.json",
+      "unscoredLibraries": [],
+      "evaluationLibraries": [
+        "remarkable",
+        "dompurify",
+        "xml",
+        "zenscroll",
+        "@tanstack/react-virtual",
+        "randexp",
+        "classnames",
+        "prop-types",
+        "react-copy-to-clipboard",
+        "react-debounce-input"
+      ]
     }
   ],
   "pairDefinition": "reciprocal-body-mapped-v2",

@@ -14,7 +14,23 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [],
+    "preferredLibraries": [
+      "@bytecodealliance/jco",
+      "react",
+      "react-dom"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/bun/micahkepe--jsongrep/audit.json",
+      "sha256": "8406e3855672f851c896e48ab226f13404dc31bbc2d3d341bf9a67b892facb04",
+      "retainedUnobservedZeroPairLibraries": [
+        "@bytecodealliance/jco"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@bytecodealliance/jco",
     "react",
@@ -315,22 +331,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "8e11e5f1cec9223c8ac80a69689bebefb929cb50cdd744f6620441c6cdf19bf4",
     "manifestRelative": "playground/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:03:58.922Z",
+  "started": "2026-11-09T10:00:56.989Z",
   "reason": null,
-  "finished": "2026-11-09T05:03:59.018Z",
+  "finished": "2026-11-09T10:00:57.089Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/bun/micahkepe--jsongrep/qualification.json",
-  "sourceEligibilityRecordSHA256": "83861c771503e62414bec6be132670c22c71d8c39cbdfa7998c785fd8685abd6",
-  "organizationSignature": "f219673a24028f2fb36d54e809dab3275212db046ef883edc05b9dbe02bdb9d3"
+  "sourceEligibilityRecordSHA256": "8a421ef729eb96ec449b4804447eb615fd0571d106759da7a697eacce53a06b1",
+  "organizationSignature": "008c9a607cbe8cfac7e1653423aa792273e74128c060b4d825403336299a2412"
 }

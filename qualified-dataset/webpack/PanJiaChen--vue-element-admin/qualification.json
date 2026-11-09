@@ -14,35 +14,62 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "core-js",
+      "driver.js",
+      "dropzone",
+      "echarts",
+      "file-saver",
+      "jsonlint",
+      "jszip",
+      "normalize.css",
+      "script-loader",
+      "sortablejs",
+      "tui-editor",
+      "vue-count-to",
+      "vue-splitpane",
+      "vuedraggable",
+      "xlsx"
+    ],
+    "preferredLibraries": [
+      "vue-router",
+      "fuse.js",
+      "axios",
+      "path-to-regexp",
+      "element-ui",
+      "vue",
+      "vuex",
+      "clipboard",
+      "codemirror",
+      "js-cookie",
+      "nprogress",
+      "screenfull"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/webpack/PanJiaChen--vue-element-admin/audit.json",
+      "sha256": "4cbadd25726f340d19ce784b966ffd1b1cbbc3830c23407c5f88ba7e3c53a2c1",
+      "retainedUnobservedZeroPairLibraries": [
+        "clipboard",
+        "codemirror"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "axios",
     "clipboard",
     "codemirror",
-    "core-js",
-    "driver.js",
-    "dropzone",
-    "echarts",
     "element-ui",
-    "file-saver",
     "fuse.js",
     "js-cookie",
-    "jsonlint",
-    "jszip",
-    "normalize.css",
     "nprogress",
     "path-to-regexp",
     "screenfull",
-    "script-loader",
-    "sortablejs",
-    "tui-editor",
     "vue",
-    "vue-count-to",
     "vue-router",
-    "vue-splitpane",
-    "vuedraggable",
-    "vuex",
-    "xlsx"
+    "vuex"
   ],
   "libraries": [
     {
@@ -678,101 +705,6 @@
       ]
     },
     {
-      "library": "core-js",
-      "declaredVersion": "3.6.5",
-      "origin": {
-        "kind": "npm-package",
-        "name": "core-js",
-        "version": "3.6.5",
-        "integrity": "sha512-vZVEEwZoIsI+vPEuoF9Iqf5H7/M3eeQqWlQnYa8FSKKePuYTf5MWnxb5SDAzCa60b3JBRS5g9b+Dq7b1y/RCrA==",
-        "shasum": "7395dc273af37fb2e50e9bd3d9fe841285231d1a",
-        "tarballSHA256": "082bee4044f3cdc241972efc2fcb1fca66d223570c259f10d34553deda83e622",
-        "bytes": 154959,
-        "lockfile": null
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 118,
-      "parsedFunctions": 175,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "internals/array-from.js",
-          "source": "source-js/c5829d54792c1b8d39984c0c1c529e15b54e474400b23db44fce7e1b017e4f94.js",
-          "sourceSHA256": "c5829d54792c1b8d39984c0c1c529e15b54e474400b23db44fce7e1b017e4f94",
-          "span": [
-            580,
-            1841
-          ],
-          "name": "from",
-          "normalizedASTSHA256": "877aed88784ce9968a0e5cb7a2534c461c04aec306eca2d3449d4158a27a312b",
-          "codeSHA256": "e2e084618e5177f47a0c7d02129219f3129f16950435f4f57cff7a84a11a85cf",
-          "features": {
-            "propertyOperations": 13,
-            "distinctOperationPropertyPairs": 9,
-            "pogHash": "bae8b3356a294c5e",
-            "graphNodes": 30,
-            "graphEdges": 39,
-            "graphOperationOccurrences": 18,
-            "distinctGraphOperationPropertyPairs": 7,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "internals/collection-strong.js",
-          "source": "source-js/c0c88fdda48165e26f6b5a76e9d66de905f4abaee6e7e64524b920628af8ec2b.js",
-          "sourceSHA256": "c0c88fdda48165e26f6b5a76e9d66de905f4abaee6e7e64524b920628af8ec2b",
-          "span": [
-            1331,
-            2077
-          ],
-          "name": "define",
-          "normalizedASTSHA256": "2695249810b6e6d6031ea3595e2ad5b255323a0dd022f1f10411c6e9f9b9e3d0",
-          "codeSHA256": "958cfe7bef52c9c137d2078ddccb3e35624f4abdb1b1212e1260a6af1b76f723",
-          "features": {
-            "propertyOperations": 16,
-            "distinctOperationPropertyPairs": 15,
-            "pogHash": "edc3f8db11787a5b",
-            "graphNodes": 15,
-            "graphEdges": 18,
-            "graphOperationOccurrences": 18,
-            "distinctGraphOperationPropertyPairs": 14,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "internals/collection-strong.js",
-          "source": "source-js/c0c88fdda48165e26f6b5a76e9d66de905f4abaee6e7e64524b920628af8ec2b.js",
-          "sourceSHA256": "c0c88fdda48165e26f6b5a76e9d66de905f4abaee6e7e64524b920628af8ec2b",
-          "span": [
-            2557,
-            3044
-          ],
-          "name": "clear",
-          "normalizedASTSHA256": "1f3a03da2161f85d7b2bc3f9e500df4612d31cbb51b646d1f4f936dbd965fabb",
-          "codeSHA256": "1d09cc92e4e14613379ddaaeeff71bc19d17fe7ca7866b1ec2b06f34676b585f",
-          "features": {
-            "propertyOperations": 14,
-            "distinctOperationPropertyPairs": 11,
-            "pogHash": "fe00c6c40b9004de",
-            "graphNodes": 14,
-            "graphEdges": 15,
-            "graphOperationOccurrences": 17,
-            "distinctGraphOperationPropertyPairs": 11,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/a421b0bafc79bc3423c9",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "4003e24135fde907d7069bb73aad64092cfe662b26914296f2f7f1e16e1f15a6"
-        }
-      ]
-    },
-    {
       "library": "vuex",
       "declaredVersion": "3.1.0",
       "origin": {
@@ -1060,29 +992,28 @@
     "path-to-regexp",
     "element-ui",
     "vue",
-    "core-js",
     "vuex",
     "clipboard",
     "codemirror"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "147c5c3896f2df05ae76542256f69c38c0c9d2e39aa20a42d9a9002af8c382f7",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:10.846Z",
+  "started": "2026-11-09T10:01:05.034Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:10.912Z",
+  "finished": "2026-11-09T10:01:05.097Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/PanJiaChen--vue-element-admin/qualification.json",
-  "sourceEligibilityRecordSHA256": "bef840287048d53a9471b0bc6338b7096aad1d6c8b808ea3b805259c93838de8",
-  "organizationSignature": "4d9c666258ada0f1278ff8c678a2b50a6fdeaccb33b02beaee924d5737176b07"
+  "sourceEligibilityRecordSHA256": "03270f77855ff650dfe02a634bf7b7412ffc3514f770fc57b6268f3368a86e66",
+  "organizationSignature": "b2648d08be0589fb80439778c00f61f02b632bdac0693ae8e17d258aef7532ff"
 }

@@ -14,10 +14,33 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "alpinejs"
+    ],
+    "preferredLibraries": [
+      "focus-visible",
+      "marked",
+      "react",
+      "react-dom",
+      "react-use",
+      "@alpinejs/intersect"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/parcel/parcel-bundler--website/audit.json",
+      "sha256": "b1b12c84e75ae02e2874ea363af4711f6e68666b546673871a83cd1796f65042",
+      "retainedUnobservedZeroPairLibraries": [
+        "marked",
+        "react",
+        "react-dom",
+        "react-use"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@alpinejs/intersect",
-    "alpinejs",
     "focus-visible",
     "marked",
     "react",
@@ -25,98 +48,6 @@
     "react-use"
   ],
   "libraries": [
-    {
-      "library": "alpinejs",
-      "declaredVersion": "^3.10.5",
-      "origin": {
-        "kind": "npm-package",
-        "name": "alpinejs",
-        "version": "3.10.5",
-        "integrity": "sha512-qlvnal44Gof2XVfm/lef8fYpXKxR9fjdSki7aFB/9THyFvbsRKZ6lM5SjxXpIs7B0faJt7bgpK2K25gzrraXJw==",
-        "shasum": "59ca09ad42293cc8e0bbbdf4c7696fc22c6df700",
-        "tarballSHA256": "5c33f66397cebbbe06ddee54d8ea68cafaa565bab4a945f77ba818d5889097fd",
-        "bytes": 109509,
-        "lockfile": "yarn.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 10,
-      "parsedFunctions": 94,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "src/directives.js",
-          "source": "source-js/16e46c5c9d7d6793cc87f7e8963b2947e1447a222a5fdaac33c94aed6d2fb176.js",
-          "sourceSHA256": "16e46c5c9d7d6793cc87f7e8963b2947e1447a222a5fdaac33c94aed6d2fb176",
-          "span": [
-            495,
-            1699
-          ],
-          "name": "directives",
-          "normalizedASTSHA256": "7840a316e4dd660b9d6c65a31b574fb2443f4b18cae6700d0dd65b6b8df28951",
-          "codeSHA256": "fe1274a8609579260bac823c9e14137343ec09d6d90b2aa76f64ea3bf569fe99",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 7,
-            "pogHash": "8b8dd9d4905db652",
-            "graphNodes": 7,
-            "graphEdges": 6,
-            "graphOperationOccurrences": 15,
-            "distinctGraphOperationPropertyPairs": 5,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "src/directives.js",
-          "source": "source-js/16e46c5c9d7d6793cc87f7e8963b2947e1447a222a5fdaac33c94aed6d2fb176.js",
-          "sourceSHA256": "16e46c5c9d7d6793cc87f7e8963b2947e1447a222a5fdaac33c94aed6d2fb176",
-          "span": [
-            4595,
-            5145
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "b38592ca8b5696c79efae4c77b5fda94638595cc65e8461663b4aa83dc0ff58f",
-          "codeSHA256": "1ca7179dbcf57f7c4b574f810f85d9910ba1d490ab4ef12c0650e5f677eb1bc7",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 9,
-            "pogHash": "dfea6e1b322869f4",
-            "graphNodes": 14,
-            "graphEdges": 17,
-            "graphOperationOccurrences": 18,
-            "distinctGraphOperationPropertyPairs": 8,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "src/directives/x-for.js",
-          "source": "source-js/f6c2ef005c5ce0ffb369c27ae2b53584630044be6a8919b7e12c183e8943a16c.js",
-          "sourceSHA256": "f6c2ef005c5ce0ffb369c27ae2b53584630044be6a8919b7e12c183e8943a16c",
-          "span": [
-            5615,
-            5959
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "4c75e230697632937b2435dbe4959970a9232766e8698c78518bca20328fd11c",
-          "codeSHA256": "ad22f5fd533b608a60bd7f21e3a82328d6a7043142283f7f303f80b691c8d083",
-          "features": {
-            "propertyOperations": 10,
-            "distinctOperationPropertyPairs": 4,
-            "pogHash": "32d52de18d0d740f",
-            "graphNodes": 10,
-            "graphEdges": 10,
-            "graphOperationOccurrences": 13,
-            "distinctGraphOperationPropertyPairs": 4,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/ce0bb0e94f32bfcab918",
-      "licenses": [],
-      "lockfileSHA256": "41aaeab4ea9d5d71f09880946c80eefdbf8184d3449251afa36db2e5eb72a934",
-      "lockfileSnapshot": "lockfiles/41aaeab4ea9d5d71f09880946c80eefdbf8184d3449251afa36db2e5eb72a934-yarn.lock"
-    },
     {
       "library": "focus-visible",
       "declaredVersion": "^5.2.0",
@@ -604,7 +535,6 @@
     }
   ],
   "selectedLibraries": [
-    "alpinejs",
     "focus-visible",
     "marked",
     "react",
@@ -613,22 +543,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "8720cc1529d4366a7f04427bb86a238751d4c9f1d9169efbe2ca0a21a937adb1",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:02.911Z",
+  "started": "2026-11-09T10:00:58.517Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:03.003Z",
+  "finished": "2026-11-09T10:00:58.597Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/parcel/parcel-bundler--website/qualification.json",
-  "sourceEligibilityRecordSHA256": "d098fe8430091a81244c625d7ad5e17e1cd6c771b7ed3c075676e97d0d102ca7",
-  "organizationSignature": "e8c2529e0de925e407f533db05b307f25a1cd79cfd8a1e00de5050c8eda5ff9e"
+  "sourceEligibilityRecordSHA256": "02859bca8a8f4eb2a9e57672a10345e442037cef278a62648a5f055d4e8768cf",
+  "organizationSignature": "2518e41c38c0e443e1ffe0ce610ddce1501290f7545965335f9ef9b133b01a11"
 }

@@ -1,12 +1,12 @@
 # ReCall Dataset
 
-The active [organized dataset](qualified-dataset/README.md) contains **41 repositories, 335 library instances, and 69,580 one-to-one function pairs**.
+The active [organized dataset](qualified-dataset/README.md) contains **39 repositories, 315 library instances, and 49,604 one-to-one function pairs**.
 
 Each repository has **3–10 production libraries**, each with **at least three source functions containing ≥10 POG features**, using the existing own-body property-operation counter. **Initial anchors are not required.** The [source-only policy](qualification/source-functions-3/POLICY.md) is enforced before new Docker builds and applied retrospectively to existing archives.
 
 Use [qualified-dataset/index.json](qualified-dataset/index.json) for membership and artifact paths, [catalog decisions](qualification/source-functions-3/catalog-decisions.json) for exclusions and unassessed cases, and the [build/browser report](verification/hufang-builds-2026-11-08/README.md) for independent Hufang verification. Selected libraries with zero accepted function pairs remain explicit; pair counts are not a source-eligibility gate.
 
-Earlier cohorts are preserved in Git history and [historical-cohorts/](historical-cohorts/). Both active evaluation manifests point to the source-qualified v2 records, with the [module-dependency-only correspondence rule](qualification/module-dependencies/POLICY.md). The following historical catalog does not define current membership.
+Earlier cohorts are preserved in Git history and [historical-cohorts/](historical-cohorts/). Both active evaluation manifests point to the source-qualified v2 records, with the [module-dependency-only correspondence rule](qualification/module-dependencies/POLICY.md). Scored libraries additionally follow the [full-runtime duplicate-library exclusion rule](qualification/no-duplicate-libraries/POLICY.md). The following historical catalog does not define current membership.
 
 ## Historical build and capture catalog
 

@@ -8667,6 +8667,9 @@
     "roughjs",
     "svgdom"
   ],
+  "unscoredLibraries": [
+    "svgdom"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -8689,13 +8692,32 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "3b465fdc8af57a9ed948e168ada1c87c9aafd574",
     "archiveRecord": "bundling-dataset/rollup/omnibrain--svguitar/ground-truth/func-mapping.json",
     "archiveRecordSHA256": "3bf33a6c860dbb721d195b9eacca8cf71746f110f68b1119beb0c5a983d08486",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "5ba7dea0fef13f2701fab7f766109fbb6565049d08c5f6557f61cb94576849df",
-    "moduleScopeSHA256": "650d4b35e52510319f5a97e2a4e58e0a6b7b671198dcfccfe83af1ab03036ef5"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "ca9e405d31ce6d54495fe20c563e3542d26e208ccb50cdd6dff4fc58d726924d",
+    "moduleScopeSHA256": "650d4b35e52510319f5a97e2a4e58e0a6b7b671198dcfccfe83af1ab03036ef5",
+    "duplicateAuditSHA256": "e2f3ad03bed9b4aff99d7073a3f95a80213e7dea372198ed724a9cfbf3270b04"
+  },
+  "evaluationLibraries": [
+    "@svgdotjs/svg.js",
+    "roughjs"
+  ]
 }

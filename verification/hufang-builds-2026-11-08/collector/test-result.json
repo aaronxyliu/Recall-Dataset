@@ -5,15 +5,21 @@
       "command": "node --test collect.test.mjs",
       "passed": 1,
       "failed": 0,
-      "durationMs": 4509.89275,
-      "scope": "Real Chrome production-library capture and undeclared-library rejection"
+      "durationMs": 4614.232166,
+      "scope": "Real Chrome capture, original map/span verification and undeclared-library rejection"
     },
     {
       "command": "node --test module-scope.test.mjs ownership.test.mjs",
       "passed": 2,
       "failed": 0,
-      "durationMs": 329.987125,
-      "scope": "Filter duplicate global copies before one-to-one matching; output-format/filename independence; changed-map and ownership-hash rejection"
+      "scope": "Module ingress and exact source ownership"
+    },
+    {
+      "command": "node --test source-owner.test.mjs",
+      "passed": 3,
+      "failed": 0,
+      "durationMs": 40.644625,
+      "scope": "Stripped paths, named-package protection and ambiguous shared-source hashes"
     }
   ]
 }

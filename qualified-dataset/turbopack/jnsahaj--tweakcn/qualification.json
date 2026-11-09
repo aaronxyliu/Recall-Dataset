@@ -14,78 +14,121 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "@ai-sdk/react",
+      "@dnd-kit/utilities",
+      "@polar-sh/checkout",
+      "@polar-sh/nextjs",
+      "@polar-sh/sdk",
+      "@tanstack/react-query",
+      "@tanstack/react-query-devtools",
+      "@tanstack/react-table",
+      "@tiptap/extension-character-count",
+      "@tiptap/extension-mention",
+      "@tiptap/extension-placeholder",
+      "@tiptap/react",
+      "@tiptap/starter-kit",
+      "@tiptap/suggestion",
+      "@upstash/ratelimit",
+      "@vercel/kv",
+      "@vercel/og",
+      "ai",
+      "bcryptjs",
+      "better-auth",
+      "cmdk",
+      "cuid",
+      "dotenv",
+      "drizzle-orm",
+      "embla-carousel-react",
+      "idb-keyval",
+      "input-otp",
+      "isbot",
+      "lexical",
+      "lucide-react",
+      "motion",
+      "next-themes",
+      "nuqs",
+      "openai",
+      "posthog-js",
+      "radix-ui",
+      "react-dropzone",
+      "react-hook-form",
+      "react-resizable-panels",
+      "recharts",
+      "server-only",
+      "shadcn",
+      "sonner",
+      "streamdown",
+      "tailwind-merge",
+      "tippy.js",
+      "use-scramble",
+      "use-stick-to-bottom",
+      "zod"
+    ],
+    "preferredLibraries": [
+      "@ai-sdk/google",
+      "@base-ui-components/react",
+      "@dnd-kit/core",
+      "@dnd-kit/modifiers",
+      "@dnd-kit/sortable",
+      "@google/generative-ai",
+      "@hookform/resolvers",
+      "@lexical/react",
+      "@neondatabase/serverless",
+      "class-variance-authority",
+      "clsx",
+      "culori",
+      "date-fns",
+      "next",
+      "react",
+      "react-day-picker",
+      "react-dom",
+      "react-syntax-highlighter",
+      "screenfull",
+      "swr",
+      "vaul",
+      "zustand"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/turbopack/jnsahaj--tweakcn/audit.json",
+      "sha256": "e9f089b11fb9ccb8fe59a5bbf152e5afab491531d9549a78d9d0c9a819a6c51f",
+      "retainedUnobservedZeroPairLibraries": [
+        "@ai-sdk/google",
+        "@dnd-kit/core",
+        "@dnd-kit/modifiers",
+        "@dnd-kit/sortable",
+        "@google/generative-ai",
+        "@hookform/resolvers",
+        "@lexical/react",
+        "@neondatabase/serverless"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@ai-sdk/google",
-    "@ai-sdk/react",
     "@base-ui-components/react",
     "@dnd-kit/core",
     "@dnd-kit/modifiers",
     "@dnd-kit/sortable",
-    "@dnd-kit/utilities",
     "@google/generative-ai",
     "@hookform/resolvers",
     "@lexical/react",
     "@neondatabase/serverless",
-    "@polar-sh/checkout",
-    "@polar-sh/nextjs",
-    "@polar-sh/sdk",
-    "@tanstack/react-query",
-    "@tanstack/react-query-devtools",
-    "@tanstack/react-table",
-    "@tiptap/extension-character-count",
-    "@tiptap/extension-mention",
-    "@tiptap/extension-placeholder",
-    "@tiptap/react",
-    "@tiptap/starter-kit",
-    "@tiptap/suggestion",
-    "@upstash/ratelimit",
-    "@vercel/kv",
-    "@vercel/og",
-    "ai",
-    "bcryptjs",
-    "better-auth",
     "class-variance-authority",
     "clsx",
-    "cmdk",
-    "cuid",
     "culori",
     "date-fns",
-    "dotenv",
-    "drizzle-orm",
-    "embla-carousel-react",
-    "idb-keyval",
-    "input-otp",
-    "isbot",
-    "lexical",
-    "lucide-react",
-    "motion",
     "next",
-    "next-themes",
-    "nuqs",
-    "openai",
-    "posthog-js",
-    "radix-ui",
     "react",
     "react-day-picker",
     "react-dom",
-    "react-dropzone",
-    "react-hook-form",
-    "react-resizable-panels",
     "react-syntax-highlighter",
-    "recharts",
     "screenfull",
-    "server-only",
-    "shadcn",
-    "sonner",
-    "streamdown",
     "swr",
-    "tailwind-merge",
-    "tippy.js",
-    "use-scramble",
-    "use-stick-to-bottom",
     "vaul",
-    "zod",
     "zustand"
   ],
   "libraries": [
@@ -177,103 +220,6 @@
         }
       ],
       "proofDirectory": "eligibility/libraries/ff31fe2d8d92b0efb825",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "b4f9adb7c568904834d0dd6cc98d16c390d21ca32fc17ae7a267715269bd5529"
-        }
-      ],
-      "lockfileSHA256": "c886e7845b5293fad37ce91154bf9ce27d9f5f28d0fb47ff21e4d284cc67ce51",
-      "lockfileSnapshot": "lockfiles/c886e7845b5293fad37ce91154bf9ce27d9f5f28d0fb47ff21e4d284cc67ce51-pnpm-lock.yaml"
-    },
-    {
-      "library": "@ai-sdk/react",
-      "declaredVersion": "^2.0.28",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@ai-sdk/react",
-        "version": "2.0.28",
-        "integrity": "sha512-+1iINCSRvjVgCMfe05Ki1PnV9nMeQvQqCIN45KKV+QhQSItyLsuE+WWQrKt5nDRAF3LFq6cSD0tm5F50SJJh4Q==",
-        "shasum": "3fba9c277096fa33142a85fd6d0395a913e0a5d8",
-        "tarballSHA256": "a172fe93af17b06332d5407599167ddde07a2e69e668159861103c73b3078746",
-        "bytes": 26727,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 1,
-      "parsedFunctions": 60,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/index.js",
-          "source": "source-js/31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e.js",
-          "sourceSHA256": "31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e",
-          "span": [
-            6864,
-            8972
-          ],
-          "name": "useChat",
-          "normalizedASTSHA256": "b1c770f277485a381c3bf4fc26d1ab7c7f264aefcc71e70938d96231c8de7eb1",
-          "codeSHA256": "4b48af641d4eedc4ec21855c4db565df45fea1ca339575ef9f41ec11453ee0da",
-          "features": {
-            "propertyOperations": 45,
-            "distinctOperationPropertyPairs": 27,
-            "pogHash": "7ef1a2a2b37be7a9",
-            "graphNodes": 18,
-            "graphEdges": 23,
-            "graphOperationOccurrences": 81,
-            "distinctGraphOperationPropertyPairs": 27,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e.js",
-          "sourceSHA256": "31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e",
-          "span": [
-            10198,
-            10871
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "f220a8c085b7804b644d6f7ed51efadaa90f29bf2b48f6f99e55fd6daf059dce",
-          "codeSHA256": "2be9259111b451ff0bf29b49bad4f0cecd42f19b0fd2c9ffab28243d6d5dd2d1",
-          "features": {
-            "propertyOperations": 22,
-            "distinctOperationPropertyPairs": 18,
-            "pogHash": "105b90109cd62916",
-            "graphNodes": 4,
-            "graphEdges": 2,
-            "graphOperationOccurrences": 16,
-            "distinctGraphOperationPropertyPairs": 16,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/index.js",
-          "source": "source-js/31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e.js",
-          "sourceSHA256": "31b3eeefd3e9afabde594cc6caf2962c70e87d506dfdb629b441cb13def9c28e",
-          "span": [
-            9111,
-            12197
-          ],
-          "name": "useCompletion",
-          "normalizedASTSHA256": "2eed09f245e86161edf8e157bafbbc457c4c2ab73ce6214d6fd6d7e897bc711b",
-          "codeSHA256": "eef5f96b2237ebc3a453f2ed288470f3db9d847c1c634d9b10178da1cd83ad09",
-          "features": {
-            "propertyOperations": 28,
-            "distinctOperationPropertyPairs": 20,
-            "pogHash": "1e833a4ace08d3d6",
-            "graphNodes": 7,
-            "graphEdges": 6,
-            "graphOperationOccurrences": 55,
-            "distinctGraphOperationPropertyPairs": 20,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/05b478d62c53e9b2f5a2",
       "licenses": [
         {
           "path": "licenses/LICENSE",
@@ -1058,11 +1004,107 @@
       ],
       "lockfileSHA256": "c886e7845b5293fad37ce91154bf9ce27d9f5f28d0fb47ff21e4d284cc67ce51",
       "lockfileSnapshot": "lockfiles/c886e7845b5293fad37ce91154bf9ce27d9f5f28d0fb47ff21e4d284cc67ce51-pnpm-lock.yaml"
+    },
+    {
+      "library": "culori",
+      "declaredVersion": "^4.0.1",
+      "origin": {
+        "kind": "npm-package",
+        "name": "culori",
+        "version": "4.0.1",
+        "integrity": "sha512-LSnjA6HuIUOlkfKVbzi2OlToZE8OjFi667JWN9qNymXVXzGDmvuP60SSgC+e92sd7B7158f7Fy3Mb6rXS5EDPw==",
+        "shasum": "e50e4a9104bbd1201443f29acf19af6d0a988d15",
+        "tarballSHA256": "bd1f200e2eddf1d9d223a93e124db1ef13bde9f34c8004e2c74218e6b4035a02",
+        "bytes": 260556,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 6,
+      "parsedFunctions": 31,
+      "diagnostics": [],
+      "witnesses": [
+        {
+          "file": "src/a98/convertA98ToXyz65.js",
+          "source": "source-js/4c2d07b7b2f50ba96e8827af1997469ff245db1b8ae253e2d0d200d12ce33fc8.js",
+          "sourceSHA256": "4c2d07b7b2f50ba96e8827af1997469ff245db1b8ae253e2d0d200d12ce33fc8",
+          "span": [
+            356,
+            816
+          ],
+          "name": "convertA98ToXyz65",
+          "normalizedASTSHA256": "5a6203a8200b7876a9a7481f9048cb702860735844c46c6d6ab42b0b29871fc4",
+          "codeSHA256": "3f152f902d3cc67f5cfbe307b20966d6d6f42156614fe6986a7ae3bc6580b904",
+          "features": {
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 9,
+            "pogHash": "336c2519d91076df",
+            "graphNodes": 6,
+            "graphEdges": 5,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 9,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/average.js",
+          "source": "source-js/15c46a19d57509750921b8e54a06f1bc9e4b3c8969e8c43d2523a8bdb3cac20b.js",
+          "sourceSHA256": "15c46a19d57509750921b8e54a06f1bc9e4b3c8969e8c43d2523a8bdb3cac20b",
+          "span": [
+            844,
+            1258
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "08734c1553108a6dd43b6d2d5a2e398182d134d9ebb7cb2731c2f0bacc7eee50",
+          "codeSHA256": "6cba2112c77b04da4c8b46d0f960b684b12c67f2ef2ca0a264ccc05169d346f6",
+          "features": {
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "bee7537f741de7a9",
+            "graphNodes": 19,
+            "graphEdges": 23,
+            "graphOperationOccurrences": 16,
+            "distinctGraphOperationPropertyPairs": 6,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "src/blend.js",
+          "source": "source-js/a79ead601964047a56c91fe3bfd679a56b43c632b8124560440ca989361e0e3a.js",
+          "sourceSHA256": "a79ead601964047a56c91fe3bfd679a56b43c632b8124560440ca989361e0e3a",
+          "span": [
+            1666,
+            2082
+          ],
+          "name": "<anonymous>",
+          "normalizedASTSHA256": "47f9ce48f401e683c11df99af0f4a9ddc567c2617ed38b9a161f0d29fb251199",
+          "codeSHA256": "a37e0d6812bd356492bdffdff42e9b70b41ed37d959f53a9e5f1bf3a35e9559e",
+          "features": {
+            "propertyOperations": 16,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "d5f6c1b9e0c73480",
+            "graphNodes": 7,
+            "graphEdges": 7,
+            "graphOperationOccurrences": 14,
+            "distinctGraphOperationPropertyPairs": 3,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/3f5e07d856a18f4db29e",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "5e9ac3317f048184d001bd3814aed28d4874bdcac9da1d001465e52e1a0e8077"
+        }
+      ],
+      "lockfileSHA256": "c886e7845b5293fad37ce91154bf9ce27d9f5f28d0fb47ff21e4d284cc67ce51",
+      "lockfileSnapshot": "lockfiles/c886e7845b5293fad37ce91154bf9ce27d9f5f28d0fb47ff21e4d284cc67ce51-pnpm-lock.yaml"
     }
   ],
   "selectedLibraries": [
     "@ai-sdk/google",
-    "@ai-sdk/react",
     "@base-ui-components/react",
     "@dnd-kit/core",
     "@dnd-kit/modifiers",
@@ -1070,26 +1112,27 @@
     "@google/generative-ai",
     "@hookform/resolvers",
     "@lexical/react",
-    "@neondatabase/serverless"
+    "@neondatabase/serverless",
+    "culori"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "8ed5862dd25b87b8a6d6f04c428d8d0dbc24d88cd5022da86c62be36ef42045b",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:06.963Z",
+  "started": "2026-11-09T10:01:01.408Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:07.177Z",
+  "finished": "2026-11-09T10:01:01.621Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/turbopack/jnsahaj--tweakcn/qualification.json",
-  "sourceEligibilityRecordSHA256": "3dd9ff53165be7b593d48490e821fb02a6eea59d569800159395c6cc8dd26aa1",
-  "organizationSignature": "4b031e1fa8eb1a4b5681a8d15fdb70c9d395d604b73e74d18ca834a74604542d"
+  "sourceEligibilityRecordSHA256": "3c7cb1bc9fbf73150f297632ed93a315d142df4ebf398e7ed69708b6579a8b24",
+  "organizationSignature": "87d04c99edd6c23bb099fea592755d5f415838be54a9d9894f3989f001a56ae7"
 }

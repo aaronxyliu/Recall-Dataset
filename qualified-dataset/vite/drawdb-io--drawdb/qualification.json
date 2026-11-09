@@ -16,9 +16,50 @@
   },
   "selectionOverride": {
     "excludeLibraries": [
-      "@dbml/core"
+      "@dbml/core",
+      "react-router-dom"
     ],
-    "reason": "User excluded @dbml/core; replace with next source-eligible declared production library."
+    "reason": "User excluded @dbml/core; replace with next source-eligible declared production library. Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored.",
+    "preferredLibraries": [
+      "jsonschema",
+      "oracle-sql-parser",
+      "lexical",
+      "react-tweet",
+      "framer-motion",
+      "react-dom",
+      "@douyinfe/semi-ui",
+      "@dagrejs/dagre",
+      "@dnd-kit/core",
+      "@dnd-kit/sortable",
+      "@dnd-kit/utilities",
+      "@lexical/react",
+      "@monaco-editor/react",
+      "@vercel/analytics",
+      "axios",
+      "dexie",
+      "dexie-react-hooks",
+      "file-saver",
+      "html-to-image",
+      "i18next",
+      "i18next-browser-languagedetector",
+      "jspdf",
+      "jszip",
+      "lodash",
+      "luxon",
+      "nanoid",
+      "node-sql-parser",
+      "react",
+      "react-hotkeys-hook",
+      "react-i18next",
+      "usehooks-ts",
+      "uuid"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/vite/drawdb-io--drawdb/audit.json",
+      "sha256": "7575b3bdceab73f81d205aaaa47ee9dffae7781559a6c1e5209f332dab0c3191",
+      "retainedUnobservedZeroPairLibraries": [],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    }
   },
   "candidates": [
     "@dagrejs/dagre",
@@ -50,7 +91,6 @@
     "react-dom",
     "react-hotkeys-hook",
     "react-i18next",
-    "react-router-dom",
     "react-tweet",
     "usehooks-ts",
     "uuid"
@@ -1041,22 +1081,22 @@
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "b859a71d1c3d8dec2dcdb7086ec6edd04b40f66af4dd308c49846f806303d3dd",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:09.651Z",
+  "started": "2026-11-09T10:01:04.077Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:09.824Z",
+  "finished": "2026-11-09T10:01:04.217Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/vite/drawdb-io--drawdb/qualification.json",
-  "sourceEligibilityRecordSHA256": "af4d85b50f741a86592bb9ee584ed2f339a54e70fbdea020312c0f8177e912dd",
-  "organizationSignature": "3a75ed905740b836f300d358ba1d93c2181385df4aa8312b1684fad662855258"
+  "sourceEligibilityRecordSHA256": "b3d5393ed9d5c44776c4b52bce97027478f5ed4fba4162b75d5e300c13041f9f",
+  "organizationSignature": "4b270522ad68dc9f688c3e403ee30d78ca5f20645c64aeb3d58769015dd0cc08"
 }

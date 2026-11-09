@@ -1,2 +1,0 @@
-// extracted by mini-css-extract-plugin
-module.exports = {"style":{"fontFamily":"'inter', 'inter Fallback', system-ui, Helvetica Neue, Helvetica, Arial, sans-serif"},"className":"__className_53f2d8","variable":"__variable_53f2d8"};

@@ -14,30 +14,111 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "@base-ui/react",
+      "@hookform/resolvers",
+      "@hugeicons/core-free-icons",
+      "@hugeicons/react",
+      "@paper-design/shaders-react",
+      "@phosphor-icons/react",
+      "@remixicon/react",
+      "@shadcn/helpers",
+      "@shadcn/react",
+      "@streamdown/code",
+      "@tailwindcss/postcss",
+      "change-case",
+      "chrono-node",
+      "date-fns",
+      "dedent",
+      "embla-carousel-autoplay",
+      "embla-carousel-react",
+      "front-matter",
+      "fumadocs-docgen",
+      "fumadocs-mdx",
+      "fumadocs-ui",
+      "input-otp",
+      "little-date",
+      "lodash",
+      "lru-cache",
+      "motion",
+      "next",
+      "nuqs",
+      "postcss",
+      "radix-ui",
+      "react-aria-components",
+      "react-qr-code",
+      "react-resizable-panels",
+      "react-textarea-autosize",
+      "recharts",
+      "rehype-pretty-code",
+      "rimraf",
+      "server-only",
+      "shadcn",
+      "shiki",
+      "swr",
+      "ts-morph",
+      "zod"
+    ],
+    "preferredLibraries": [
+      "@ai-sdk/anthropic",
+      "@ai-sdk/openai",
+      "@ai-sdk/react",
+      "@dnd-kit/core",
+      "@dnd-kit/modifiers",
+      "@dnd-kit/sortable",
+      "@faker-js/faker",
+      "@formisch/react",
+      "@dnd-kit/utilities",
+      "@internationalized/date",
+      "@tabler/icons-react",
+      "@tanstack/ai",
+      "@tanstack/ai-client",
+      "@tanstack/ai-react",
+      "@tanstack/react-form",
+      "@tanstack/react-table",
+      "@vercel/analytics",
+      "ai",
+      "class-variance-authority",
+      "cmdk",
+      "cn",
+      "fumadocs-core",
+      "jotai",
+      "lucide-react",
+      "next-themes",
+      "react",
+      "react-day-picker",
+      "react-dom",
+      "react-hook-form",
+      "sonner",
+      "streamdown",
+      "valibot",
+      "vaul"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/turbopack/shadcn-ui--ui/audit.json",
+      "sha256": "2b81610475654f91074ab091df96ee0cce758b139a4042e7f7400d88969ddef1",
+      "retainedUnobservedZeroPairLibraries": [
+        "@ai-sdk/anthropic",
+        "@ai-sdk/openai",
+        "@faker-js/faker"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
     "@ai-sdk/react",
-    "@base-ui/react",
     "@dnd-kit/core",
     "@dnd-kit/modifiers",
     "@dnd-kit/sortable",
     "@dnd-kit/utilities",
     "@faker-js/faker",
     "@formisch/react",
-    "@hookform/resolvers",
-    "@hugeicons/core-free-icons",
-    "@hugeicons/react",
     "@internationalized/date",
-    "@paper-design/shaders-react",
-    "@phosphor-icons/react",
-    "@remixicon/react",
-    "@shadcn/helpers",
-    "@shadcn/react",
-    "@streamdown/code",
     "@tabler/icons-react",
-    "@tailwindcss/postcss",
     "@tanstack/ai",
     "@tanstack/ai-client",
     "@tanstack/ai-react",
@@ -45,53 +126,21 @@
     "@tanstack/react-table",
     "@vercel/analytics",
     "ai",
-    "change-case",
-    "chrono-node",
     "class-variance-authority",
     "cmdk",
     "cn",
-    "date-fns",
-    "dedent",
-    "embla-carousel-autoplay",
-    "embla-carousel-react",
-    "front-matter",
     "fumadocs-core",
-    "fumadocs-docgen",
-    "fumadocs-mdx",
-    "fumadocs-ui",
-    "input-otp",
     "jotai",
-    "little-date",
-    "lodash",
-    "lru-cache",
     "lucide-react",
-    "motion",
-    "next",
     "next-themes",
-    "nuqs",
-    "postcss",
-    "radix-ui",
     "react",
-    "react-aria-components",
     "react-day-picker",
     "react-dom",
     "react-hook-form",
-    "react-qr-code",
-    "react-resizable-panels",
-    "react-textarea-autosize",
-    "recharts",
-    "rehype-pretty-code",
-    "rimraf",
-    "server-only",
-    "shadcn",
-    "shiki",
     "sonner",
     "streamdown",
-    "swr",
-    "ts-morph",
     "valibot",
-    "vaul",
-    "zod"
+    "vaul"
   ],
   "libraries": [
     {
@@ -657,103 +706,6 @@
       "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
     },
     {
-      "library": "@base-ui/react",
-      "declaredVersion": "1.6.0",
-      "origin": {
-        "kind": "npm-package",
-        "name": "@base-ui/react",
-        "version": "1.6.0",
-        "integrity": "sha512-/jzjTWJYXhRFO45Bev9lc3cHbmjzCMpUqbMZ2AgKy/z25mY9B6shGSNcXcjQar9n5doM0KYW1W8fcFv2jZBuMw==",
-        "shasum": "143a892157224a57046f3f4886c025eba173c258",
-        "tarballSHA256": "583e60023a77fed45caf8a2f980813e8a75e2f2a97f59c30380d2234cc3e0423",
-        "bytes": 1574231,
-        "lockfile": "pnpm-lock.yaml"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 14,
-      "parsedFunctions": 35,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "accordion/item/AccordionItem.js",
-          "source": "source-js/f5a54dabc75e52763b6d40254f210255e92280fe53201b7f9b270b37f8724637.js",
-          "sourceSHA256": "f5a54dabc75e52763b6d40254f210255e92280fe53201b7f9b270b37f8724637",
-          "span": [
-            1307,
-            4178
-          ],
-          "name": "AccordionItem",
-          "normalizedASTSHA256": "a38705e853c0507b600fe40a3441c001b1b6e84bd7c37ed78921dee717dcba26",
-          "codeSHA256": "69a36fde2f9e4a60675941e4f94fadbbcf2f2552736f8fdd7242b702886c7343",
-          "features": {
-            "propertyOperations": 36,
-            "distinctOperationPropertyPairs": 27,
-            "pogHash": "c955b124ad554963",
-            "graphNodes": 8,
-            "graphEdges": 8,
-            "graphOperationOccurrences": 68,
-            "distinctGraphOperationPropertyPairs": 27,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "accordion/item/AccordionItem.mjs",
-          "source": "source-js/be903329ca4176decea56c4524fc42e0edd5e6371b48b3262ddbff6163eafa2a.js",
-          "sourceSHA256": "be903329ca4176decea56c4524fc42e0edd5e6371b48b3262ddbff6163eafa2a",
-          "span": [
-            1105,
-            3692
-          ],
-          "name": "AccordionItem",
-          "normalizedASTSHA256": "ec207c3feafe82d53c9de692c98ee38d80c2e8057336ec189d176fe334e7e7a0",
-          "codeSHA256": "23efc11e41686ba8144e0ca7223edafb0b90065e2df8f862e1d34f5f5a3c0b77",
-          "features": {
-            "propertyOperations": 23,
-            "distinctOperationPropertyPairs": 16,
-            "pogHash": "3d95c189cb176ec5",
-            "graphNodes": 7,
-            "graphEdges": 7,
-            "graphOperationOccurrences": 46,
-            "distinctGraphOperationPropertyPairs": 16,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "accordion/panel/AccordionPanel.js",
-          "source": "source-js/a6c54746668f63095e1f833eae3237061e75009053e590e0519e19e5b3a91975.js",
-          "sourceSHA256": "a6c54746668f63095e1f833eae3237061e75009053e590e0519e19e5b3a91975",
-          "span": [
-            1229,
-            4303
-          ],
-          "name": "AccordionPanel",
-          "normalizedASTSHA256": "ae14c9e9a7f0bb014b256a2e55620958a2f56212fb6eca9a759f83bea6a2cb20",
-          "codeSHA256": "cfd801a32d0694424b4bc22132efc7e37e239e537688ed366702962ffb35ba4e",
-          "features": {
-            "propertyOperations": 39,
-            "distinctOperationPropertyPairs": 32,
-            "pogHash": "b43274ee53fcebda",
-            "graphNodes": 26,
-            "graphEdges": 33,
-            "graphOperationOccurrences": 72,
-            "distinctGraphOperationPropertyPairs": 32,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/c76bec19a64eb27131ba",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "07fc1b39d69d14bc7d40482a628f47226258eb01265db68ae684944b916beb2a"
-        }
-      ],
-      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
-      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
-    },
-    {
       "library": "@dnd-kit/core",
       "declaredVersion": "^6.3.1",
       "origin": {
@@ -1234,97 +1186,532 @@
       "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
     },
     {
-      "library": "@hookform/resolvers",
-      "declaredVersion": "^3.10.0",
+      "library": "@internationalized/date",
+      "declaredVersion": "^3.12.3",
       "origin": {
         "kind": "npm-package",
-        "name": "@hookform/resolvers",
-        "version": "3.10.0",
-        "integrity": "sha512-79Dv+3mDF7i+2ajj7SkypSKHhl1cbln1OGavqrsF7p6mbUv11xpqpacPsGDCTRvCSjEEIez2ef1NveSVL3b0Ag==",
-        "shasum": "7bfd18113daca4e57e27e1205b7d5a2d371aa59a",
-        "tarballSHA256": "7fd61afd67da91fdbe3e64da548dee2e44e53dff795ed181b7eb5ea8649dc177",
-        "bytes": 95218,
+        "name": "@internationalized/date",
+        "version": "3.12.3",
+        "integrity": "sha512-fuLX+3ZKLsxI73y8b01EG/WjHb6gE6weCqlfawPO27kBWGMh9G1yH6Csv1uU7/cac9H2GHmOMt6CjmuQ1aia4Q==",
+        "shasum": "e11d14dbf12bf45057dd5996bac77f7c2f89ff9c",
+        "tarballSHA256": "22250f03da2d0d326589a0995d1bc4d94274ea4a41307742f045139a149c483f",
+        "bytes": 171117,
         "lockfile": "pnpm-lock.yaml"
       },
       "qualified": true,
       "eligibleFunctionLowerBound": 3,
       "completeScan": false,
       "parsedFiles": 2,
-      "parsedFunctions": 8,
-      "diagnostics": [],
+      "parsedFunctions": 89,
+      "diagnostics": [
+        {
+          "file": "src/CalendarDate.ts",
+          "error": "SyntaxError: [49:7-49:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/calendars/BuddhistCalendar.ts",
+          "error": "SyntaxError: [28:12-28:13]: Unexpected token: ':'"
+        },
+        {
+          "file": "src/calendars/EthiopicCalendar.ts",
+          "error": "SyntaxError: [27:28-27:29]: Expected ')'"
+        },
+        {
+          "file": "src/calendars/GregorianCalendar.ts",
+          "error": "SyntaxError: [22:5-22:6]: Expected ')'"
+        },
+        {
+          "file": "src/calendars/HebrewCalendar.ts",
+          "error": "SyntaxError: [34:24-34:25]: Expected ')'"
+        },
+        {
+          "file": "src/calendars/IslamicCalendar.ts",
+          "error": "SyntaxError: [25:33-25:34]: Expected ')'"
+        },
+        {
+          "file": "src/calendars/JapaneseCalendar.ts",
+          "error": "SyntaxError: [37:38-37:39]: Expected ')'"
+        },
+        {
+          "file": "src/calendars/TaiwanCalendar.ts",
+          "error": "SyntaxError: [23:27-23:28]: Expected ')'"
+        },
+        {
+          "file": "src/conversion.ts",
+          "error": "SyntaxError: [31:34-31:35]: Expected ')'"
+        },
+        {
+          "file": "src/createCalendar.ts",
+          "error": "SyntaxError: [33:35-33:36]: Expected ')'"
+        },
+        {
+          "file": "src/DateFormatter.ts",
+          "error": "SyntaxError: [13:41-13:42]: Unexpected token: '.'"
+        },
+        {
+          "file": "src/manipulation.ts",
+          "error": "SyntaxError: [41:24-41:25]: Expected ')'"
+        },
+        {
+          "file": "src/queries.ts",
+          "error": "SyntaxError: [19:27-19:28]: Expected ')'"
+        },
+        {
+          "file": "src/string.ts",
+          "error": "SyntaxError: [42:31-42:32]: Expected ')'"
+        },
+        {
+          "file": "src/utils.ts",
+          "error": "SyntaxError: [13:7-13:11]: Unexpected token: 'identifier'"
+        }
+      ],
       "witnesses": [
         {
-          "file": "ajv/dist/ajv.js",
-          "source": "source-js/aef7e572a44cd9756128a25343a69322aff5cae9e3168c68081d18e5a11eaf74.js",
-          "sourceSHA256": "aef7e572a44cd9756128a25343a69322aff5cae9e3168c68081d18e5a11eaf74",
+          "file": "dist/private/CalendarDate.cjs",
+          "source": "source-js/028dc118bbd31768d5ae5c3db1527fc4465e7f7f6ac70a427ad0df31acfe7a16.js",
+          "sourceSHA256": "028dc118bbd31768d5ae5c3db1527fc4465e7f7f6ac70a427ad0df31acfe7a16",
           "span": [
-            350,
-            591
+            1528,
+            2040
           ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "715a0c4243e1973ad754bae70a85bda660459f40599b264e26ac831d9e4dd93a",
-          "codeSHA256": "88c3575cee2f4d7afd5419b2e64f7ee51da1ff2cd7ad6a8b7d86e6224cd82841",
+          "name": "$c51b7e0106f45dea$var$shiftArgs",
+          "normalizedASTSHA256": "936f5337cf1a49cb8d9a55dcfacb38d0f5d445a925ae8a446490dd7d9a3f9d54",
+          "codeSHA256": "9e11b3a0ad708c8d0dc26d046b271fd85537ccacee7a18397cc71a0b95d7deae",
           "features": {
-            "propertyOperations": 19,
-            "distinctOperationPropertyPairs": 12,
-            "pogHash": "450ab1d756211d7d",
-            "graphNodes": 17,
-            "graphEdges": 20,
-            "graphOperationOccurrences": 23,
-            "distinctGraphOperationPropertyPairs": 12,
+            "propertyOperations": 11,
+            "distinctOperationPropertyPairs": 6,
+            "pogHash": "4544a7c1804d7a5c",
+            "graphNodes": 10,
+            "graphEdges": 10,
+            "graphOperationOccurrences": 15,
+            "distinctGraphOperationPropertyPairs": 5,
             "extractionStatus": "ok"
           }
         },
         {
-          "file": "ajv/dist/ajv.js",
-          "source": "source-js/aef7e572a44cd9756128a25343a69322aff5cae9e3168c68081d18e5a11eaf74.js",
-          "sourceSHA256": "aef7e572a44cd9756128a25343a69322aff5cae9e3168c68081d18e5a11eaf74",
+          "file": "dist/private/CalendarDate.cjs",
+          "source": "source-js/028dc118bbd31768d5ae5c3db1527fc4465e7f7f6ac70a427ad0df31acfe7a16.js",
+          "sourceSHA256": "028dc118bbd31768d5ae5c3db1527fc4465e7f7f6ac70a427ad0df31acfe7a16",
           "span": [
-            659,
-            1080
+            2739,
+            2998
           ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "46c2fbd0a3f756a90a283adddb72f385f9dd8d7c9f578e553f22174d926cbc93",
-          "codeSHA256": "d1b13a5a1d11a6cf6dce6b1c641f4da1eda5ef7dc570d5988e93057b4af76be0",
+          "name": "copy",
+          "normalizedASTSHA256": "e513b275e2f94683a6a3bc6cd2c077e28c7d8c5ad18cc6fd8a61c233f8b2180c",
+          "codeSHA256": "bcce55f7c7de4ad2f317fc135286957e2b2cc8d380cd2e3e4a5f92f0ea130ba1",
           "features": {
-            "propertyOperations": 21,
-            "distinctOperationPropertyPairs": 16,
-            "pogHash": "7e12c8c57fcda8bf",
-            "graphNodes": 15,
-            "graphEdges": 17,
-            "graphOperationOccurrences": 20,
-            "distinctGraphOperationPropertyPairs": 13,
+            "propertyOperations": 10,
+            "distinctOperationPropertyPairs": 5,
+            "pogHash": "fb7cad7c11fd60af",
+            "graphNodes": 7,
+            "graphEdges": 6,
+            "graphOperationOccurrences": 10,
+            "distinctGraphOperationPropertyPairs": 5,
             "extractionStatus": "ok"
           }
         },
         {
-          "file": "ajv/dist/ajv.mjs",
-          "source": "source-js/3f7f060c3601b351b7af2bca1b3553ab05b8eb14f42bc3634e2a2a9f9d34e480.js",
-          "sourceSHA256": "3f7f060c3601b351b7af2bca1b3553ab05b8eb14f42bc3634e2a2a9f9d34e480",
+          "file": "dist/private/CalendarDate.cjs",
+          "source": "source-js/028dc118bbd31768d5ae5c3db1527fc4465e7f7f6ac70a427ad0df31acfe7a16.js",
+          "sourceSHA256": "028dc118bbd31768d5ae5c3db1527fc4465e7f7f6ac70a427ad0df31acfe7a16",
           "span": [
-            302,
-            530
+            6583,
+            7045
           ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "974ff90569445c094c643e47da877f56b6edc28f90fca26eb42906e791354a56",
-          "codeSHA256": "45fe811c1107a9caf4cc8e67f5b4592f9143eaaf8e9de99f1d89ac875524c863",
+          "name": "constructor",
+          "normalizedASTSHA256": "e8a329816b3771cef4366937dab2194f7a30d07632d04e2114c27f71cd94c487",
+          "codeSHA256": "a1bfc03aaf485462d7e92c8314c62676741b67daaaa96f59b68e345e09bdb880",
           "features": {
-            "propertyOperations": 18,
+            "propertyOperations": 14,
             "distinctOperationPropertyPairs": 11,
-            "pogHash": "8720abd666fd6020",
-            "graphNodes": 17,
-            "graphEdges": 20,
-            "graphOperationOccurrences": 21,
+            "pogHash": "55842b89fe13db3d",
+            "graphNodes": 16,
+            "graphEdges": 18,
+            "graphOperationOccurrences": 22,
             "distinctGraphOperationPropertyPairs": 11,
             "extractionStatus": "ok"
           }
         }
       ],
-      "proofDirectory": "eligibility/libraries/a7eadb18f6f86eaaa275",
+      "proofDirectory": "eligibility/libraries/d52e05255f1c8cdc3ea2",
       "licenses": [
         {
           "path": "licenses/LICENSE",
-          "sha256": "e8eeb472f0a5889c2c51625b86a3f9b8630680adb9f49a125352e2e426392780"
+          "sha256": "7dfe6526888bac51759c99f9a51262ba2711a8c12a067f2181609dd9a4066b84"
+        }
+      ],
+      "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
+      "lockfileSnapshot": "lockfiles/5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82-pnpm-lock.yaml"
+    },
+    {
+      "library": "@tanstack/ai",
+      "declaredVersion": "0.40.0",
+      "origin": {
+        "kind": "npm-package",
+        "name": "@tanstack/ai",
+        "version": "0.40.0",
+        "integrity": "sha512-7942RQkjHccHRL9lTuqAjcgt5z+281HJEvWSSEIX9ZDgntSj5Xt9cOK8SL5tXtGrjj2ZpGnzaFdog5lE4QD07A==",
+        "shasum": "73634780c08dac0e4ff750eb518c6d7508b38aab",
+        "tarballSHA256": "76191735aa2e5a46fcf4c2615844a69944611d188f411767ac2a0a7a95e3c534",
+        "bytes": 538023,
+        "lockfile": "pnpm-lock.yaml"
+      },
+      "qualified": true,
+      "eligibleFunctionLowerBound": 3,
+      "completeScan": false,
+      "parsedFiles": 2,
+      "parsedFunctions": 27,
+      "diagnostics": [
+        {
+          "file": "src/activities/chat/adapter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/agent-loop-strategies.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/index.ts",
+          "error": "SyntaxError: [35:12-35:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/mcp/manager.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/mcp/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/messages.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/middleware/builder.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/middleware/capabilities.ts",
+          "error": "SyntaxError: [2:7-2:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/activities/chat/middleware/compose.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/middleware/define.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/middleware/sandbox-runtime.ts",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/middleware/tool-cache-middleware.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/middleware/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/middleware/validate.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/runtime-context-types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/stream/json-parser.ts",
+          "error": "SyntaxError: [12:7-12:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/activities/chat/stream/message-updaters.ts",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/stream/processor.ts",
+          "error": "SyntaxError: [41:12-41:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/stream/strategies.ts",
+          "error": "SyntaxError: [7:12-7:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/stream/types.ts",
+          "error": "SyntaxError: [8:12-8:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/tools/lazy-tool-manager.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/tools/lazy-tools.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/tools/schema-converter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/tools/tool-calls.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/chat/tools/tool-definition.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/error-payload.ts",
+          "error": "SyntaxError: [24:32-24:33]: Expected ')'"
+        },
+        {
+          "file": "src/activities/generateAudio/adapter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateAudio/index.ts",
+          "error": "SyntaxError: [18:12-18:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateImage/adapter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateImage/index.ts",
+          "error": "SyntaxError: [19:12-19:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateSpeech/adapter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateSpeech/index.ts",
+          "error": "SyntaxError: [18:12-18:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateTranscription/adapter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateTranscription/index.ts",
+          "error": "SyntaxError: [18:12-18:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateVideo/adapter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateVideo/index.ts",
+          "error": "SyntaxError: [21:12-21:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/generateVideo/snap.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/index.ts",
+          "error": "SyntaxError: [17:12-17:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/middleware/run.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/middleware/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/stream-generation-result.ts",
+          "error": "SyntaxError: [9:12-9:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/summarize/adapter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/summarize/chat-stream-summarize.ts",
+          "error": "SyntaxError: [5:12-5:13]: Expected 'from'"
+        },
+        {
+          "file": "src/activities/summarize/index.ts",
+          "error": "SyntaxError: [11:12-11:13]: Expected 'from'"
+        },
+        {
+          "file": "src/extend-adapter.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/index.ts",
+          "error": "SyntaxError: [23:7-23:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/logger/console-logger.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/logger/resolve.ts",
+          "error": "SyntaxError: [3:12-3:13]: Expected 'from'"
+        },
+        {
+          "file": "src/logger/types.ts",
+          "error": "SyntaxError: [4:7-4:16]: Unexpected token: 'interface'"
+        },
+        {
+          "file": "src/middlewares/content-guard.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/middlewares/otel.ts",
+          "error": "SyntaxError: [14:12-14:13]: Expected 'from'"
+        },
+        {
+          "file": "src/middlewares/usage-attributes.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/realtime/index.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/realtime/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/stream-to-response.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/strip-to-spec-middleware.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/system-prompts.ts",
+          "error": "SyntaxError: [39:7-39:11]: Unexpected token: 'identifier'"
+        },
+        {
+          "file": "src/tool-registry.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/tools/provider-tool.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/types.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utilities/ag-ui-wire.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utilities/chat-params.ts",
+          "error": "SyntaxError: [2:12-2:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utilities/errors.ts",
+          "error": "SyntaxError: [8:32-8:33]: Expected ')'"
+        },
+        {
+          "file": "src/utilities/media-prompt.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utilities/numbers.ts",
+          "error": "SyntaxError: [8:41-8:42]: The binding declaration is not destructible"
+        },
+        {
+          "file": "src/utilities/provider-executed.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utilities/tool-result.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utilities/usage.ts",
+          "error": "SyntaxError: [1:12-1:13]: Expected 'from'"
+        },
+        {
+          "file": "src/utils.ts",
+          "error": "SyntaxError: [18:12-18:13]: Expected ')'"
+        }
+      ],
+      "witnesses": [
+        {
+          "file": "dist/esm/activities/chat/index.js",
+          "source": "source-js/892585f73ab1ba7cb32c101b5234e10405570919d6a4fe15d61e8d1005ede3e5.js",
+          "sourceSHA256": "892585f73ab1ba7cb32c101b5234e10405570919d6a4fe15d61e8d1005ede3e5",
+          "span": [
+            7850,
+            8473
+          ],
+          "name": "emit",
+          "normalizedASTSHA256": "411c43c47ec2176f48e8993a5481d8bbb714269e5e80e615bb8a02dab2b96458",
+          "codeSHA256": "a04755fb6a0f1633366654b9a5ab00a0b7c4e101ad89d784438a52521865b2f7",
+          "features": {
+            "propertyOperations": 24,
+            "distinctOperationPropertyPairs": 16,
+            "pogHash": "4142bc648a17b309",
+            "graphNodes": 4,
+            "graphEdges": 2,
+            "graphOperationOccurrences": 24,
+            "distinctGraphOperationPropertyPairs": 16,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/esm/activities/chat/index.js",
+          "source": "source-js/892585f73ab1ba7cb32c101b5234e10405570919d6a4fe15d61e8d1005ede3e5.js",
+          "sourceSHA256": "892585f73ab1ba7cb32c101b5234e10405570919d6a4fe15d61e8d1005ede3e5",
+          "span": [
+            4048,
+            8640
+          ],
+          "name": "constructor",
+          "normalizedASTSHA256": "7d92799221dc8f62d8fb4bf9d8a6d969cc02d6bbcabe9b7e094bba729d3c94f2",
+          "codeSHA256": "36e97fc19cb2b398c04a2e7bef8dddab9b57dc57df1cd2abe26581d0b50b87ae",
+          "features": {
+            "propertyOperations": 126,
+            "distinctOperationPropertyPairs": 90,
+            "pogHash": "27edb940761bd446",
+            "graphNodes": 28,
+            "graphEdges": 34,
+            "graphOperationOccurrences": 243,
+            "distinctGraphOperationPropertyPairs": 84,
+            "extractionStatus": "ok"
+          }
+        },
+        {
+          "file": "dist/esm/activities/chat/index.js",
+          "source": "source-js/892585f73ab1ba7cb32c101b5234e10405570919d6a4fe15d61e8d1005ede3e5.js",
+          "sourceSHA256": "892585f73ab1ba7cb32c101b5234e10405570919d6a4fe15d61e8d1005ede3e5",
+          "span": [
+            9710,
+            14206
+          ],
+          "name": "run",
+          "normalizedASTSHA256": "49517d97b282c4fc37a2a0a33b7d2797752dc5cec5add7cfd5a7df6532a42f01",
+          "codeSHA256": "3e4704856013acfbb8fc7d7ebb16faf3fd7d7b3320339ffb273a960051a2f3bc",
+          "features": {
+            "propertyOperations": 141,
+            "distinctOperationPropertyPairs": 63,
+            "pogHash": "f0d9574b68ea9afd",
+            "graphNodes": 67,
+            "graphEdges": 89,
+            "graphOperationOccurrences": 162,
+            "distinctGraphOperationPropertyPairs": 59,
+            "extractionStatus": "ok"
+          }
+        }
+      ],
+      "proofDirectory": "eligibility/libraries/e2c981015c6b391b6343",
+      "licenses": [
+        {
+          "path": "licenses/LICENSE",
+          "sha256": "9fe9970f409e5b1d2067c0107ac0201761d5fddc53e9b20b66619fb0d2b4122f"
         }
       ],
       "lockfileSHA256": "5d1903905c5020aec5062fc18b4d1856a91914f9adb9226a9c069c0b4754bf82",
@@ -1335,32 +1722,32 @@
     "@ai-sdk/anthropic",
     "@ai-sdk/openai",
     "@ai-sdk/react",
-    "@base-ui/react",
     "@dnd-kit/core",
     "@dnd-kit/modifiers",
     "@dnd-kit/sortable",
     "@faker-js/faker",
     "@formisch/react",
-    "@hookform/resolvers"
+    "@internationalized/date",
+    "@tanstack/ai"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "f3692cbcc60e47d84859acecd97fbf0cf37358514b317fe05cd8be67ec98b1e9",
     "manifestRelative": "apps/v4/package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:07.418Z",
+  "started": "2026-11-09T10:01:01.860Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:07.684Z",
+  "finished": "2026-11-09T10:01:02.683Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/turbopack/shadcn-ui--ui/qualification.json",
-  "sourceEligibilityRecordSHA256": "a3f52999544147c74858360d46e62f70bd66b4c9e3cf6f7e358b8c575c33631a",
-  "organizationSignature": "7142c05039c965c9e2fd9c3b92fc69a1a811181c37a450b40793ef82a9f18172"
+  "sourceEligibilityRecordSHA256": "562927a8fd2e1ad7b85b56de3d5c5d5937e7031ff38e8e27db51d3746714b731",
+  "organizationSignature": "2696308fb470bcf2120bf6b78d24acb645b0a79e2e4d56a8d3b2733cc936611a"
 }

@@ -14,15 +14,38 @@
     "requireInitialAnchors": false,
     "requireGroundTruthPairs": false
   },
-  "selectionOverride": {},
+  "selectionOverride": {
+    "excludeLibraries": [
+      "vuex"
+    ],
+    "preferredLibraries": [
+      "better-scroll",
+      "fastclick",
+      "iscroll",
+      "showdown",
+      "vue",
+      "vue-router"
+    ],
+    "duplicateAudit": {
+      "record": "qualification/no-duplicate-libraries/results/webpack/bailicangdu--vue2-elm/audit.json",
+      "sha256": "3a4233d6745c9eefac9bf741600094885f381235d47bc340f66d8e6b118971e6",
+      "retainedUnobservedZeroPairLibraries": [
+        "better-scroll",
+        "fastclick",
+        "iscroll",
+        "showdown"
+      ],
+      "baselineCommit": "cc5df6cf50c33092cd4522e850934add762a8ede"
+    },
+    "reason": " Full-runtime duplication audit: exclude duplicated or unassessed libraries; replacements must have unique observed module code. Existing zero-pair source-only qualifications remain unscored."
+  },
   "candidates": [
     "better-scroll",
     "fastclick",
     "iscroll",
     "showdown",
     "vue",
-    "vue-router",
-    "vuex"
+    "vue-router"
   ],
   "libraries": [
     {
@@ -676,103 +699,6 @@
       ],
       "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
       "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
-    },
-    {
-      "library": "vuex",
-      "declaredVersion": "^2.0.0",
-      "origin": {
-        "kind": "npm-package",
-        "name": "vuex",
-        "version": "2.5.0",
-        "integrity": "sha512-5oJPOJySBgSgSzoeO+gZB/BbN/XsapgIF6tz34UwJqnGZMQurzIO3B4KIBf862gfc9ya+oduY5sSkq+5/oOilQ==",
-        "shasum": "20f0265ade6c9a5ac6724a405d3ffdb4726c9741",
-        "tarballSHA256": "b8161fa322cdb59333e7354c8ba26a34484d0c185ec6a7a5fe5f7803f5cbf97a",
-        "bytes": 15065,
-        "lockfile": "yarn.lock"
-      },
-      "qualified": true,
-      "eligibleFunctionLowerBound": 3,
-      "completeScan": false,
-      "parsedFiles": 2,
-      "parsedFunctions": 31,
-      "diagnostics": [],
-      "witnesses": [
-        {
-          "file": "dist/logger.js",
-          "source": "source-js/ce58f581070bc41323a2c4adf347bb61bba61e60942151ac0388d104aa852549.js",
-          "sourceSHA256": "ce58f581070bc41323a2c4adf347bb61bba61e60942151ac0388d104aa852549",
-          "span": [
-            2156,
-            3368
-          ],
-          "name": "<anonymous>",
-          "normalizedASTSHA256": "fcb696c63bbcde84ad3376f4bc79328efa5513e19b96b69811a52f801b65630d",
-          "codeSHA256": "12ef8cbaaedb93807e574746da9d1b0cfbcd6cfa7d356df509a9332574d72a90",
-          "features": {
-            "propertyOperations": 14,
-            "distinctOperationPropertyPairs": 10,
-            "pogHash": "484b76e07e1f17df",
-            "graphNodes": 9,
-            "graphEdges": 10,
-            "graphOperationOccurrences": 21,
-            "distinctGraphOperationPropertyPairs": 10,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/vuex.common.js",
-          "source": "source-js/2d519e90e2b3832cbba1fb824923e91709e5d8925db1654f6a61b62a7a354a80.js",
-          "sourceSHA256": "2d519e90e2b3832cbba1fb824923e91709e5d8925db1654f6a61b62a7a354a80",
-          "span": [
-            683,
-            1004
-          ],
-          "name": "vuexInit",
-          "normalizedASTSHA256": "d093fdbbdfa07b837030adb03d5f41321b1593808e3f9b008613da57e3f60741",
-          "codeSHA256": "d95b1d8c6c18a82e72e593dcc412b7c44808df5c519cdd0c2e1f9810ad51c2b1",
-          "features": {
-            "propertyOperations": 12,
-            "distinctOperationPropertyPairs": 5,
-            "pogHash": "a36efff5bf345749",
-            "graphNodes": 14,
-            "graphEdges": 16,
-            "graphOperationOccurrences": 13,
-            "distinctGraphOperationPropertyPairs": 5,
-            "extractionStatus": "ok"
-          }
-        },
-        {
-          "file": "dist/vuex.common.js",
-          "source": "source-js/2d519e90e2b3832cbba1fb824923e91709e5d8925db1654f6a61b62a7a354a80.js",
-          "sourceSHA256": "2d519e90e2b3832cbba1fb824923e91709e5d8925db1654f6a61b62a7a354a80",
-          "span": [
-            3011,
-            3341
-          ],
-          "name": "update",
-          "normalizedASTSHA256": "600dfa5157152fa808851a9ef7ca1ff2fdb41324e2a801597c9e13c95d4f8cf7",
-          "codeSHA256": "5d6688e36b61b855af2da35e89cca881e82c345c7ae1f6144088aa7f9e1ab325",
-          "features": {
-            "propertyOperations": 15,
-            "distinctOperationPropertyPairs": 9,
-            "pogHash": "8d08ba3c9c9be493",
-            "graphNodes": 12,
-            "graphEdges": 13,
-            "graphOperationOccurrences": 17,
-            "distinctGraphOperationPropertyPairs": 9,
-            "extractionStatus": "ok"
-          }
-        }
-      ],
-      "proofDirectory": "eligibility/libraries/89016d801741250312fc",
-      "licenses": [
-        {
-          "path": "licenses/LICENSE",
-          "sha256": "5e0e91974459a5defe390661b893209baa7b623a3baeeea60601f522f1c5d0de"
-        }
-      ],
-      "lockfileSHA256": "3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63",
-      "lockfileSnapshot": "lockfiles/3b9b0e916eb1822592ec437249aa31b5f6b12d7e4183fe10094b0787dd9cfb63-yarn.lock"
     }
   ],
   "selectedLibraries": [
@@ -781,27 +707,26 @@
     "iscroll",
     "showdown",
     "vue",
-    "vue-router",
-    "vuex"
+    "vue-router"
   ],
   "status": "passed",
   "provenance": {
-    "codeDigest": "da22affd3ea98301a3db88a99d298270ca926f035c3d78a59f0382ab2d6fae15",
+    "codeDigest": "8a04ecf7ae14d52364c08e47073719592c2a7163bc130f3d9aab189a7499d68b",
     "codeHashes": {
       "preflight.mjs": "1170ca3198c387f325d92727c1544ad1ed05bfeb55fb19a06e78937b0457798b",
       "locks.mjs": "291c317f713a8cafcb5a16d7a16fec43fe09a080599964808a35e9170ccdd68f",
       "functions.mjs": "4b3f3d634ae47fc19da679c14595020a8790576b218490e1e568bd1554a531c2",
       "policy.json": "f84080e9660022c7880abd12d59b5a1dac21d2b93cbcc0aca466cc65046bf89f",
-      "selection-overrides.json": "b9ad5ce032c8de07d12e7111db9e6e495fc0b44d2ee18fe5c6444300440f27a6"
+      "selection-overrides.json": "7a59d593e5138a6812c1a7664bf2b862ee6b31b0d9763b3cdfec418d31489d8e"
     },
     "frontendManifestSHA256": "fe7ad220760c2d27a9e3f84f5387d60c9cd35e1734c0d1813a2b89bbd490bd4f",
     "manifestRelative": "package.json",
     "runtimeSnapshotSHA256": "7a79975d38919a3e35f93d3c67a2d5bfa219fb2e5c56a99192649c6342d8534d"
   },
-  "started": "2026-11-09T05:04:14.014Z",
+  "started": "2026-11-09T10:01:05.232Z",
   "reason": null,
-  "finished": "2026-11-09T05:04:14.088Z",
+  "finished": "2026-11-09T10:01:05.277Z",
   "candidateDecisionRecord": "../../../qualification/source-functions-3/results/webpack/bailicangdu--vue2-elm/qualification.json",
-  "sourceEligibilityRecordSHA256": "ba2b48ed69084340eba270780d6bb05b21f7cff3a8c55855c15a91d262841360",
-  "organizationSignature": "194c36713743953a91ef38394bb46018852a44f4faf0ec56104530d0eafa3345"
+  "sourceEligibilityRecordSHA256": "ed34cab65ca4716a42a1e8b2790dccbf634dd4f9945f66fdf97fc8adc4973723",
+  "organizationSignature": "58b64c483f70aa0527256f78e9f12753fdd60b3825cddb2e0213421c493a7c5b"
 }

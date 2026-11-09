@@ -26959,6 +26959,9 @@
     "vuedraggable",
     "@it-tools/bip39"
   ],
+  "unscoredLibraries": [
+    "@it-tools/bip39"
+  ],
   "qualificationPolicy": {
     "schema": "recall.source-function-policy/v1",
     "productionDependenciesOnly": true,
@@ -26981,13 +26984,39 @@
     "filterBeforeCorrespondenceGraph": true,
     "requireInitialAnchors": false
   },
+  "libraryMultiplicityPolicy": {
+    "schema": "recall.no-duplicate-library-policy/v1",
+    "scope": "repository-library-instance",
+    "inspectAllCapturedRuntimeAssets": true,
+    "excludeConfirmedDuplicateLibraries": true,
+    "excludeUnassessedLibrariesFromScoring": true,
+    "newReplacementsRequireUniqueObservedModuleCode": true,
+    "retainExistingUnobservedZeroPairLibraries": true,
+    "unobservedLibrariesContributeNoEvaluationPairs": true,
+    "sourceFunctionThresholdUnchanged": true,
+    "requireInitialAnchors": false,
+    "minimumLibrariesPerRepository": 3,
+    "maximumLibrariesPerRepository": 10
+  },
   "provenance": {
     "upstreamCommit": "d505845f918e946ec300af7b36efc107e2f66e9e",
     "archiveRecord": "bundling-dataset/vite/CorentinTh--it-tools/ground-truth-v2/func-mapping.json",
     "archiveRecordSHA256": "6c1079dcd362ed5d249acb4dc27a857d531966af2e3b941d40efe032de3a3563",
-    "collectorSHA256": "7897a3fe6bc7e612508f800e3cd0bc7128cc4c09a4de2f388eb31213e7c6adfc",
-    "spanVerifierSHA256": "1cdb64b578b84c3306f7b003a1ff8a8208b6c57859b51e86e58dfd149b94d132",
-    "sourceOwnershipSHA256": "15e3367d62975e6491ba01d92c3463ab658c45fc6dff48a804ace35a4fdd57ca",
-    "moduleScopeSHA256": "3b9ae568b1e51408a8dcea88d6dd0be4940ee6cde9d926d9dab57b8be63aca93"
-  }
+    "collectorSHA256": "372dccc04291df02da9a99f6614071ba3b528954ea57c3acfeed2e06f57cbbb9",
+    "spanVerifierSHA256": "baaac067a0a23696aeeae687e137ef64f98c5f607f207284ee417cf05123c5b3",
+    "sourceOwnershipSHA256": "6788239cfab04fe950ca4024e18aa99df4e150c92a6877a9e105aa3f3d372d74",
+    "moduleScopeSHA256": "3b9ae568b1e51408a8dcea88d6dd0be4940ee6cde9d926d9dab57b8be63aca93",
+    "duplicateAuditSHA256": "de4f7325fb69273f3ff4395fdb48b9df2007a4899c7e244e7df9c646de208bdd"
+  },
+  "evaluationLibraries": [
+    "naive-ui",
+    "fuse.js",
+    "lodash",
+    "dompurify",
+    "vue-router",
+    "@vueuse/core",
+    "marked",
+    "vue-i18n",
+    "vuedraggable"
+  ]
 }

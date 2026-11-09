@@ -5,18 +5,10 @@
       "subject": "esbuild/primefaces--primeng",
       "repo": "primefaces/primeng",
       "beforePairs": 0,
-      "afterPairs": 251,
-      "selectedLibraries": [
-        "@primeuix/styled",
-        "@primeuix/utils",
-        "@primeuix/motion"
-      ],
-      "libraryPairs": {
-        "@primeuix/styled": 98,
-        "@primeuix/utils": 127,
-        "@primeuix/motion": 26
-      },
-      "causeAndRepair": "The showcase manifest declared CSS build tools. Corrected the scope to the built PrimeNG library production manifest; peer-only Angular and root dev dependencies remain excluded."
+      "afterPairs": 0,
+      "selectedLibraries": [],
+      "libraryPairs": {},
+      "causeAndRepair": "Excluded under subsequent scope/duplication rules: fewer than three source-eligible libraries remain after duplicate-safe candidate filtering"
     },
     {
       "subject": "parcel/jonasschmedtmann--complete-javascript-course",
@@ -56,7 +48,7 @@
       "subject": "rspack/metabase--metabase",
       "repo": "metabase/metabase",
       "beforePairs": 0,
-      "afterPairs": 1509,
+      "afterPairs": 773,
       "selectedLibraries": [
         "@dnd-kit/core",
         "@dnd-kit/modifiers",
@@ -65,9 +57,9 @@
         "@emotion/react",
         "@emotion/styled",
         "@floating-ui/dom",
-        "@floating-ui/react",
         "@juggle/resize-observer",
-        "@mantine/core"
+        "@mantine/dates",
+        "@mantine/hooks"
       ],
       "libraryPairs": {
         "@dnd-kit/core": 230,
@@ -77,9 +69,9 @@
         "@emotion/react": 11,
         "@emotion/styled": 11,
         "@floating-ui/dom": 34,
-        "@floating-ui/react": 163,
         "@juggle/resize-observer": 60,
-        "@mantine/core": 971
+        "@mantine/dates": 254,
+        "@mantine/hooks": 144
       },
       "causeAndRepair": "The first ten alphabetically selected CodeMirror libraries were absent from the landing page capture. Prefer source-eligible declared production libraries present in the captured maps."
     },
@@ -90,36 +82,36 @@
       "afterPairs": 0,
       "selectedLibraries": [],
       "libraryPairs": {},
-      "causeAndRepair": "Excluded by the subsequent module-only rule: standalone docs vendors do not supply three eligible module libraries."
+      "causeAndRepair": "Excluded under subsequent scope/duplication rules: Module-only scope: docs production candidates are copied standalone vendors or docs/test tooling, not imported dependencies of the built docs frontend; fewer than three eligible module libraries."
     },
     {
       "subject": "turbopack/CapSoftware--Cap",
       "repo": "CapSoftware/Cap",
       "beforePairs": 0,
-      "afterPairs": 1375,
+      "afterPairs": 428,
       "selectedLibraries": [
         "@fortawesome/react-fontawesome",
-        "@radix-ui/react-slot",
         "@radix-ui/react-tooltip",
         "@sentry/nextjs",
         "@tanstack/react-query",
         "framer-motion",
         "js-cookie",
-        "lucide-react",
-        "next",
-        "next-auth"
+        "next-auth",
+        "react",
+        "react-dom",
+        "sonner"
       ],
       "libraryPairs": {
         "@fortawesome/react-fontawesome": 30,
-        "@radix-ui/react-slot": 8,
         "@radix-ui/react-tooltip": 48,
         "@sentry/nextjs": 9,
         "@tanstack/react-query": 3,
         "framer-motion": 89,
         "js-cookie": 9,
-        "lucide-react": 0,
-        "next": 1060,
-        "next-auth": 119
+        "next-auth": 119,
+        "react": 0,
+        "react-dom": 0,
+        "sonner": 121
       },
       "causeAndRepair": "The old sample mostly selected server-side AI/AWS packages, absent from the login page. Replaced the sample with eligible declared production libraries observed in the page maps."
     },
@@ -163,10 +155,10 @@
     "replacementPairs": 62
   },
   "dataset": {
-    "repositoryCount": 41,
-    "libraryInstanceCount": 335,
-    "oneToOnePairs": 69580,
-    "zeroPairLibraryInstances": 107
+    "repositoryCount": 39,
+    "libraryInstanceCount": 315,
+    "oneToOnePairs": 49604,
+    "zeroPairLibraryInstances": 96
   },
   "zeroPairRepositories": [],
   "remainingMapDiagnostics": {
