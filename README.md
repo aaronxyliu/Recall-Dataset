@@ -183,10 +183,16 @@ The audit checks final membership, production declarations, POG witnesses and ha
 Export one subject into a new local directory:
 
 ```sh
-node tools/export-inputs.mjs webpack/PanJiaChen--vue-element-admin .work/inputs/vue-element-admin
+node tools/export-inputs.mjs webpack/PanJiaChen--vue-element-admin .work/inputs/vue-element-admin \
+  --references /path/to/independently-obtained/packages
 ```
 
-The exporter copies **only reviewed module-output JavaScript** and original reference text, preserving captured URL/import layout. It supplies stable target IDs and separates observed service-worker code from page code. Identical reference files within a library/version are canonicalized with aliases. It does **not** export source maps or correspondence labels into the inference inputs.
+The exporter copies reviewed module-output JavaScript and **independently supplied
+package implementations**, preserving captured URL/import layout and worker
+separation. Each source package retains its own name, version, root, and import/export
+metadata. It does not read dataset reference snapshots or export maps/correspondence
+labels. Package selection must come from manifests/lockfiles or another independent
+source, not ground-truth pairs.
 
 With a separate checkout of ReCall:
 
@@ -198,7 +204,7 @@ node ../ReCall/bin/recall.mjs run \
   --prepare-only --out runs/vue-element-admin-prepared
 ```
 
-The supplied configuration treats the exported source snapshots as a **fixed known reference pool** (`libraryGate: false`); it is not a blind package/version-identification experiment. For inference, use a fresh output directory, remove `--prepare-only`, and add your fixed model/validation configuration. Record the ReCall commit or implementation digest and all experiment settings.
+The supplied configuration treats the independently supplied packages as a **fixed known reference pool** (`libraryGate: false`); it is not a blind package/version-identification experiment. For inference, use a fresh output directory, remove `--prepare-only`, and add your fixed model/validation configuration. Record the ReCall commit or implementation digest and all experiment settings.
 
 **Source preparation matters.** Reference snapshots are available original texts, sometimes TypeScript/JSX or incomplete package trees. They are not guaranteed to be directly parseable by every recovery implementation. For a full-package reference experiment, obtain locked package/workspace sources using the origins recorded under `eligibility/`; do not treat map-derived snapshots as complete package distributions. Inspect preparation diagnostics and preserve original source identities when normalizing syntax. Do not substitute the three qualification witnesses for a library's full reference inventory or silently drop unsupported targets from the denominator.
 
@@ -275,5 +281,21 @@ Third-party source snapshots, witness licenses, and frozen-vendor notices retain
 
 Cohort revision (2026-11-10): OpenStock was removed at the user’s request after its zero-anchor recovery result. This post-result exclusion is recorded in `provenance/cohort-revision-2026-11-10.json` (relative to the repository root); the original eligibility policy did not require anchors. Remaining pair identities are unchanged.
 
+
+### New library-isolated ground-truth collections
+
+Use `node tools/collect.mjs REPO LIBRARIES.json HOST-README.md NEW_OUTPUT` for new
+collections. The current implementation is `provenance/collector/isolated-v1/`.
+It collects one source ownership partition at a time and retains other libraries'
+mapped body contributions as blocking evidence. Every pair carries `libraryScope`;
+`libraryReports` retain the separate accounting and package-root identity. Versions
+are recorded when explicitly supplied in source ownership metadata; unknown versions
+remain null, not guessed. Explicit stripped-path ownership may provide `packageRoot`
+or `instance` to distinguish installations.
+
+The original `provenance/collector/` entrypoints and released datasets remain frozen
+for exact historical reconstruction via `tools/rebuild-pairs.py`. They are not the
+entrypoint for new isolated collections. No released pairs or experiment scores were
+regenerated for this implementation change.
 
 Latest cohort revision: the two additional user-requested exclusions leave **35 repositories** (37 minus 2), with retained GT pair identities unchanged. See [revision record](provenance/cohort-revision-2026-11-10-latest.json).

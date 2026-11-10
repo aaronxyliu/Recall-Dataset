@@ -3,16 +3,21 @@ from unittest import mock
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 def load(name):
  spec=importlib.util.spec_from_file_location(name,ROOT/'tools'/(name+'.py'));module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module);return module
+def independent_refs(tmp):
+ refs=pathlib.Path(tmp)/'packages';refs.mkdir();(refs/'package.json').write_text(json.dumps({'name':'independent-fixture','version':'1.0.0'}));(refs/'index.ts').write_text('export function target(x:number){return x+1}');(refs/'poison.map').write_text('{invalid map never read}');return refs
 class ReleaseTools(unittest.TestCase):
  def test_export_preserves_captured_import_layout_and_excludes_oracle(self):
   with tempfile.TemporaryDirectory() as tmp:
-   out=pathlib.Path(tmp)/'inputs';subprocess.run(['node',str(ROOT/'tools/export-inputs.mjs'),'vite/DavidHDev--react-bits',str(out)],check=True,stdout=subprocess.DEVNULL)
+   out=pathlib.Path(tmp)/'inputs';subprocess.run(['node',str(ROOT/'tools/export-inputs.mjs'),'vite/DavidHDev--react-bits',str(out),'--references',str(independent_refs(tmp))],check=True,stdout=subprocess.DEVNULL)
    manifest=json.loads((out/'bundle.json').read_text());files=manifest['files'];self.assertTrue(any(pathlib.Path(f['path']).name.startswith('preload-helper-') for f in files));self.assertTrue(all('#' in f['id'] for f in files));self.assertFalse(any(p.suffix=='.map' or p.name=='func-mapping.json' for p in out.rglob('*')))
    for f in files:self.assertEqual(hashlib.sha256(pathlib.Path(f['path']).read_bytes()).hexdigest(),f['id'].rsplit('#',1)[1])
-   source=json.loads((out/'source.json').read_text())['files'];keys=[(f['library']['name'],hashlib.sha256(pathlib.Path(f['path']).read_bytes()).hexdigest()) for f in source];self.assertEqual(len(keys),len(set(keys)))
+   self.assertEqual(json.loads((out/'source.json').read_text())['referenceOrigin'],'independent-package-directory');source=json.loads((out/'source.json').read_text())['files'];self.assertTrue(all(f['library']['name']=='independent-fixture' for f in source));keys=[(f['library']['name'],hashlib.sha256(pathlib.Path(f['path']).read_bytes()).hexdigest()) for f in source];self.assertEqual(len(keys),len(set(keys)))
  def test_export_isolates_service_worker_from_page_registry(self):
   with tempfile.TemporaryDirectory() as tmp:
-   out=pathlib.Path(tmp)/'inputs';subprocess.run(['node',str(ROOT/'tools/export-inputs.mjs'),'vite/CorentinTh--it-tools',str(out)],check=True,stdout=subprocess.DEVNULL);files=json.loads((out/'bundle.json').read_text())['files'];workers=[f for f in files if f['environment'].startswith('service-worker:')];self.assertTrue(workers);self.assertTrue(any(f['environment']=='main' for f in files))
+   out=pathlib.Path(tmp)/'inputs';subprocess.run(['node',str(ROOT/'tools/export-inputs.mjs'),'vite/CorentinTh--it-tools',str(out),'--references',str(independent_refs(tmp))],check=True,stdout=subprocess.DEVNULL);files=json.loads((out/'bundle.json').read_text())['files'];workers=[f for f in files if f['environment'].startswith('service-worker:')];self.assertTrue(workers);self.assertTrue(any(f['environment']=='main' for f in files))
+ def test_export_rejects_implicit_historical_references(self):
+  with tempfile.TemporaryDirectory() as tmp:
+   out=pathlib.Path(tmp)/'inputs';result=subprocess.run(['node',str(ROOT/'tools/export-inputs.mjs'),'vite/DavidHDev--react-bits',str(out)],capture_output=True,text=True);self.assertNotEqual(result.returncode,0);self.assertIn('Dataset reference snapshots are not permitted',result.stderr);self.assertFalse(out.exists())
  def test_all_build_recipes_have_their_named_context_inputs(self):
   import shlex
   reproduce=load('reproduce');index=json.loads((ROOT/'qualified-dataset/index.json').read_text())
