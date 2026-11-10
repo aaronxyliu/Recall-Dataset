@@ -2,7 +2,7 @@
 
 This directory contains the sole final dataset. Use [index.json](index.json) for machine-readable membership and artifact paths, and the [dataset guide](../README.md) for construction, usage, and reproduction.
 
-**38 repositories · 305 repository/library instances · 58,268 one-to-one function pairs**
+**35 repositories · 282 repository/library instances · 58,128 one-to-one function pairs**
 
 Bundler groups follow descending **2025 Usage** in the [State of JavaScript build-tools survey](https://2025.stateofjs.com/en-US/libraries/build-tools/): the proportion of respondents who have used each tool. Only the seven groups in this dataset are shown. Repositories within each group are sorted by descending GitHub stars. Stars are exact counts retrieved on **2026-11-09 (UTC)** and change over time; [the metadata snapshot](../provenance/repository-popularity.json) records the values and sources.
 
@@ -65,18 +65,15 @@ Bundler groups follow descending **2025 Usage** in the [State of JavaScript buil
 | [umami-software/umami](https://github.com/umami-software/umami) · [data](turbopack/umami-software--umami/README.md) | 40,012 | 10 | 796 |
 | [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) · [data](turbopack/DayuanJiang--next-ai-draw-io/README.md) | 36,820 | 10 | 1,193 |
 | [CapSoftware/Cap](https://github.com/CapSoftware/Cap) · [data](turbopack/CapSoftware--Cap/README.md) | 24,720 | 10 | 1,375 |
-| [Open-Dev-Society/OpenStock](https://github.com/Open-Dev-Society/OpenStock) · [data](turbopack/Open-Dev-Society--OpenStock/README.md) | 21,384 | 10 | 46 |
-| [jnsahaj/tweakcn](https://github.com/jnsahaj/tweakcn) · [data](turbopack/jnsahaj--tweakcn/README.md) | 10,529 | 10 | 78 |
-| **Subtotal: 8 repositories** | — | **80** | **8,729** |
+| **Subtotal: 6 repositories** | — | **60** | **8,605** |
 
 ### Parcel — 26% survey usage
 
 | Repository | GitHub stars | Libraries | Function pairs |
 |---|---:|---:|---:|
 | [tensorflow/tfjs](https://github.com/tensorflow/tfjs) · [data](parcel/tensorflow--tfjs/README.md) | 19,155 | 3 | 2,428 |
-| [jonasschmedtmann/complete-javascript-course](https://github.com/jonasschmedtmann/complete-javascript-course) · [data](parcel/jonasschmedtmann--complete-javascript-course/README.md) | 17,281 | 3 | 16 |
 | [parcel-bundler/website](https://github.com/parcel-bundler/website) · [data](parcel/parcel-bundler--website/README.md) | 365 | 6 | 452 |
-| **Subtotal: 3 repositories** | — | **12** | **2,896** |
+| **Subtotal: 2 repositories** | — | **9** | **2,880** |
 
 ### Bun — 25% survey usage
 
@@ -85,3 +82,7 @@ Bundler groups follow descending **2025 Usage** in the [State of JavaScript buil
 | [micahkepe/jsongrep](https://github.com/micahkepe/jsongrep) · [data](bun/micahkepe--jsongrep/README.md) | 678 | 3 | 1,208 |
 | [RockwellShah/filekey](https://github.com/RockwellShah/filekey) · [data](bun/RockwellShah--filekey/README.md) | 486 | 6 | 480 |
 | **Subtotal: 2 repositories** | — | **9** | **1,688** |
+
+Cohort revision (2026-11-10): OpenStock was removed at the user’s request after its zero-anchor recovery result. This post-result exclusion is recorded in `provenance/cohort-revision-2026-11-10.json` (relative to the repository root); the original eligibility policy did not require anchors. Remaining pair identities are unchanged.
+
+Latest cohort revision: the two additional user-requested exclusions leave **35 repositories** (37 minus 2), with retained GT pair identities unchanged. See [revision record](../provenance/cohort-revision-2026-11-10-latest.json).

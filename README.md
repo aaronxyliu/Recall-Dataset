@@ -1,6 +1,6 @@
 # ReCall Dataset
 
-A fixed dataset for evaluating recovery of library functions from production JavaScript bundles. This repository contains **one final dataset: 38 repositories, 305 repository/library instances, and 58,268 one-to-one source-to-bundle function pairs**, across seven bundler groups.
+A fixed dataset for evaluating recovery of library functions from production JavaScript bundles. This repository contains **one final dataset: 35 repositories, 282 repository/library instances, and 58,128 one-to-one source-to-bundle function pairs**, across seven bundler groups.
 
 The sole membership and artifact index is [`qualified-dataset/index.json`](qualified-dataset/index.json). Recovery implementations and experiment outputs belong outside this repository. This dataset contains ground truth and reproduction inputs, not measured ReCall recovery results.
 
@@ -10,10 +10,10 @@ The sole membership and artifact index is [`qualified-dataset/index.json`](quali
 | Vite | 8 | 79 | 19,630 |
 | esbuild | 6 | 41 | 5,208 |
 | Rollup | 3 | 9 | 1,062 |
-| Turbopack | 8 | 80 | 8,729 |
-| Parcel | 3 | 12 | 2,896 |
+| Turbopack | 6 | 60 | 8,605 |
+| Parcel | 2 | 9 | 2,880 |
 | Bun | 2 | 9 | 1,688 |
-| **Total** | **38** | **305** | **58,268** |
+| **Total** | **35** | **282** | **58,128** |
 
 A library instance is one selected package in one repository; the same package in two repositories counts twice. See the [per-repository tables](qualified-dataset/README.md).
 
@@ -80,18 +80,15 @@ Bundler groups follow descending **2025 Usage** in the [State of JavaScript buil
 | [umami-software/umami](https://github.com/umami-software/umami) · [data](qualified-dataset/turbopack/umami-software--umami/README.md) | 40,012 | 10 | 796 |
 | [DayuanJiang/next-ai-draw-io](https://github.com/DayuanJiang/next-ai-draw-io) · [data](qualified-dataset/turbopack/DayuanJiang--next-ai-draw-io/README.md) | 36,820 | 10 | 1,193 |
 | [CapSoftware/Cap](https://github.com/CapSoftware/Cap) · [data](qualified-dataset/turbopack/CapSoftware--Cap/README.md) | 24,720 | 10 | 1,375 |
-| [Open-Dev-Society/OpenStock](https://github.com/Open-Dev-Society/OpenStock) · [data](qualified-dataset/turbopack/Open-Dev-Society--OpenStock/README.md) | 21,384 | 10 | 46 |
-| [jnsahaj/tweakcn](https://github.com/jnsahaj/tweakcn) · [data](qualified-dataset/turbopack/jnsahaj--tweakcn/README.md) | 10,529 | 10 | 78 |
-| **Subtotal: 8 repositories** | — | **80** | **8,729** |
+| **Subtotal: 6 repositories** | — | **60** | **8,605** |
 
 ### Parcel — 26% survey usage
 
 | Repository | GitHub stars | Libraries | Function pairs |
 |---|---:|---:|---:|
 | [tensorflow/tfjs](https://github.com/tensorflow/tfjs) · [data](qualified-dataset/parcel/tensorflow--tfjs/README.md) | 19,155 | 3 | 2,428 |
-| [jonasschmedtmann/complete-javascript-course](https://github.com/jonasschmedtmann/complete-javascript-course) · [data](qualified-dataset/parcel/jonasschmedtmann--complete-javascript-course/README.md) | 17,281 | 3 | 16 |
 | [parcel-bundler/website](https://github.com/parcel-bundler/website) · [data](qualified-dataset/parcel/parcel-bundler--website/README.md) | 365 | 6 | 452 |
-| **Subtotal: 3 repositories** | — | **12** | **2,896** |
+| **Subtotal: 2 repositories** | — | **9** | **2,880** |
 
 ### Bun — 25% survey usage
 
@@ -110,7 +107,7 @@ Bundler groups follow descending **2025 Usage** in the [State of JavaScript buil
 5. **Review module ingress.** Admit dependencies imported into the application's compiled module outputs, including UMD/IIFE output. Exclude standalone vendor scripts, global-script lists, copied standalone vendors, and unreviewed/external assets **before constructing correspondence relations**. Per-subject `module-scope.json` and `module-evidence/` record that review. Complete captured bytes remain available for provenance.
 6. **Collect reciprocal correspondences.** Decode each bundle's source map, inventory source and generated functions, and establish reciprocal function relationships using informative mappings. Boundary/structural points do not establish body identity. The `reciprocal-body-mapped-v2` collector requires reciprocal uniqueness and supporting mapped positions; an independent verifier checks captured hashes, original-source hashes, and both parsed function spans. Ambiguous, merged, split, inlined, missing-source, and insufficient-evidence cases are not forced into pairs. See the [correspondence definition](provenance/collector/relations.mjs) and [span verifier](provenance/collector/verify_pairs.mjs).
 
-**Initial anchors are not a dataset acceptance condition.** There is no minimum accepted-pair count per library. The 915 archived source-function witnesses are lower-bound qualification certificates, not the complete source-function inventory. **107 selected library instances have zero accepted pairs**; source eligibility does not guarantee that code appears on the captured page or survives transformation as a one-to-one function.
+**Initial anchors are not a dataset acceptance condition.** There is no minimum accepted-pair count per library. The 846 archived source-function witnesses are lower-bound qualification certificates, not the complete source-function inventory. **89 selected library instances have zero accepted pairs**; source eligibility does not guarantee that code appears on the captured page or survives transformation as a one-to-one function.
 
 The feature threshold qualifies libraries, not individual oracle pairs: supported pairs also include small functions below that threshold.
 
@@ -275,3 +272,8 @@ Fresh captures receive an **unreviewed module-scope template**. Asset hashes can
 - This is a curated fixed cohort, not a random or population-representative sample of JavaScript applications.
 
 Third-party source snapshots, witness licenses, and frozen-vendor notices retain their upstream licensing and copyright information.
+
+Cohort revision (2026-11-10): OpenStock was removed at the user’s request after its zero-anchor recovery result. This post-result exclusion is recorded in `provenance/cohort-revision-2026-11-10.json` (relative to the repository root); the original eligibility policy did not require anchors. Remaining pair identities are unchanged.
+
+
+Latest cohort revision: the two additional user-requested exclusions leave **35 repositories** (37 minus 2), with retained GT pair identities unchanged. See [revision record](provenance/cohort-revision-2026-11-10-latest.json).

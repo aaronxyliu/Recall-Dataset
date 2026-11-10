@@ -1,17 +1,17 @@
 {
   "schema": "recall.release-validation/v1",
   "status": "passed",
-  "repositoryCount": 38,
-  "libraryInstanceCount": 305,
-  "oneToOnePairs": 58268,
-  "sourceFunctionWitnessCount": 915,
+  "repositoryCount": 35,
+  "libraryInstanceCount": 282,
+  "oneToOnePairs": 58128,
+  "sourceFunctionWitnessCount": 846,
   "sourceAndArtifactAudit": {
     "status": "passed",
-    "repositoryCount": 38,
-    "libraryInstanceCount": 305,
-    "sourceFunctionWitnessCount": 915,
-    "oneToOnePairs": 58268,
-    "zeroPairLibraryInstances": 107,
+    "repositoryCount": 35,
+    "libraryInstanceCount": 282,
+    "sourceFunctionWitnessCount": 846,
+    "oneToOnePairs": 58128,
+    "zeroPairLibraryInstances": 89,
     "initialAnchorChecksPerformed": 0,
     "moduleDependencyScopeVerified": true,
     "finalBundlerScopeVerified": true,
@@ -20,8 +20,8 @@
   },
   "offlinePairReconstruction": {
     "status": "passed",
-    "repositories": 38,
-    "pairs": 58268,
+    "repositories": 35,
+    "pairs": 58128,
     "results": [
       {
         "subject": "bun/RockwellShah--filekey",
@@ -104,17 +104,6 @@
         "subject": "esbuild/swimlane--ngx-datatable",
         "status": "passed",
         "pairs": 336,
-        "checks": [
-          "captured bytes",
-          "frozen module-only correspondence collector",
-          "independent source/function span checks",
-          "exact released pair identities"
-        ]
-      },
-      {
-        "subject": "parcel/jonasschmedtmann--complete-javascript-course",
-        "status": "passed",
-        "pairs": 16,
         "checks": [
           "captured bytes",
           "frozen module-only correspondence collector",
@@ -211,31 +200,9 @@
         ]
       },
       {
-        "subject": "turbopack/Open-Dev-Society--OpenStock",
-        "status": "passed",
-        "pairs": 46,
-        "checks": [
-          "captured bytes",
-          "frozen module-only correspondence collector",
-          "independent source/function span checks",
-          "exact released pair identities"
-        ]
-      },
-      {
         "subject": "turbopack/colinhacks--zod",
         "status": "passed",
         "pairs": 1970,
-        "checks": [
-          "captured bytes",
-          "frozen module-only correspondence collector",
-          "independent source/function span checks",
-          "exact released pair identities"
-        ]
-      },
-      {
-        "subject": "turbopack/jnsahaj--tweakcn",
-        "status": "passed",
-        "pairs": 78,
         "checks": [
           "captured bytes",
           "frozen module-only correspondence collector",
@@ -441,7 +408,8 @@
           "exact released pair identities"
         ]
       }
-    ]
+    ],
+    "note": "Historical reconstruction checks retained for unchanged pair files in the current 35-repository subset; no pair recollection performed for this revision."
   },
   "dependencyInstall": "Both frozen runtime/collector lockfiles installed into isolated empty directories with npm ci --offline --ignore-scripts; validation repeated with those dependencies.",
   "toolTests": {
@@ -461,5 +429,20 @@
     "currentDocumentsWithLocalLinksChecked": 42
   },
   "freshDockerBuildsExecuted": false,
-  "datasetMembershipAndPairIdentitiesChanged": false
+  "datasetMembershipAndPairIdentitiesChanged": true,
+  "cohortRevision": {
+    "date": "2026-11-10",
+    "removedSubjects": [
+      "parcel/jonasschmedtmann--complete-javascript-course",
+      "turbopack/jnsahaj--tweakcn"
+    ],
+    "reason": "User-requested post-result cohort exclusions after recovery and AST-identity analysis; not failures of the original eligibility policy.",
+    "previousIndexSHA256": "33447634b2dc2c2e2e81c8b448b6c50d88a664d790e7c362ed72ba95b1f2b93a",
+    "previousRepositoryCount": 37,
+    "repositoryCount": 35,
+    "removedPairs": 94,
+    "removedLibraryInstances": 13,
+    "retainedPairIdentitiesChanged": false,
+    "previousRevision": "cohort-revision-2026-11-10.json"
+  }
 }
